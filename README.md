@@ -38,7 +38,18 @@ Observatorio_SUS_ES/
 5. **Visualizações (`dashboards/` e `maps/`)** – Códigos para construir painéis interativos e mapas georreferenciados, possibilitando a interpretação dos indicadores por diversos públicos.
 6. **Documentação (`docs/`)** – Textos descritivos sobre governança de código, convenções metodológicas e fluxo de trabalho para que novos colaboradores possam se orientar.
 
+
+## Linguagem principal e ecossistema
+
+Os pipelines reprodutíveis do Observatório SUS‑ES serão desenvolvidos prioritariamente em **R**. Scripts e funções devem aproveitar o ecossistema tidyverse e demais bibliotecas da linguagem, garantindo transparência, legibilidade e reprodutibilidade. O uso de **Python** é admitido apenas em situações específicas em que exista justificativa técnica (ausência de recurso equivalente em R), devendo ser claramente documentado.
+
+Ferramentas como Power BI e QGIS permanecem no ecossistema do projeto para visualização e georreferenciamento, mas a espinha dorsal analítica reprodutível será elaborada em R. Independente da linguagem, todos os códigos devem seguir as convenções metodológicas e de governança descritas em `docs/`.
+
 ## Como Contribuir
+
+
+
+
 
 Contribuições são bem-vindas! Para participar:
 
