@@ -1,0 +1,42 @@
+# Arquivos compilados do Python
+__pycache__/ 
+*.py[cod]
+*.pyo
+
+# Ambientes virtuais
+venv/
+.venv/
+env/
+
+# Dados brutos e intermediários (exceto arquivos de placeholder)
+data_raw/*
+!data_raw/.gitkeep
+data_interim/*
+!data_interim/.gitkeep
+data_processed/*
+!data_processed/.gitkeep
+
+# Metadados gerados
+metadata/*.json
+metadata/*.xlsx
+
+# Arquivos de log e cache
+*.log
+.cache/
+.ipynb_checkpoints/
+
+# Configurações temporárias e sistemas operacionais
+.DS_Store
+Thumbs.db
+
+# R e RStudio
+.Rhistory
+.RData
+.Rproj.user/
+
+# Node
+node_modules/
+
+# Variáveis de ambiente e credenciais
+.env
+*.env
