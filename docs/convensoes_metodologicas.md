@@ -13,12 +13,12 @@ Este documento estabelece padrões para nomenclatura de arquivos, funções e va
 ## Nomenclatura de Arquivos
 
 * Use nomes descritivos e minúsculos separados por underlines (`_`), ex.: `mortalidade_infantil_2023.csv`.
-* Scripts devem ter extensão de acordo com a linguagem (`.py` para Python, `.R` para R) e iniciar com verbo no infinitivo indicando ação: `extrair_dados_sinan.py`.
+* * Scripts de pipeline reprodutível devem, sempre que possível, ser escritos em **R** (extensão `.R`) e iniciar com verbo no infinitivo indicando ação, por exemplo: `extrair_dados_sinan.R`. O uso de scripts em **Python** (`.py`) só é admitido quando houver justificativa técnica específica.com verbo no infinitivo indicando ação, por exemplo: `extrair_dados_sinan.R`. O uso de scripts em **Python** (`.py`) só é admitido quando houver justificativa técnica específica.
 * Arquivos de relatórios em Markdown ou HTML devem incluir a data de geração: `relatorio_incidentes_2024-03-15.md`.
 
 ## Convenções de Funções e Variáveis
+* Nome de funções em **R**: `extrair_casos_notificados <- function(...)`; em **Python** (quando estritamente necessário), use `extrair_casos_notificados()`.
 
-* Nome de funções em Python: `extrair_casos_notificados()`; em R, use `extrair_casos_notificados <- function(...)`.
 * Variáveis devem ser explícitas: `numero_obitos`, `taxa_cobertura_vacinal`.
 * Evite siglas não padronizadas; quando necessário, defina a sigla no início do script ou documento.
 
