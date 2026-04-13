@@ -41,6 +41,13 @@ Este documento descreve os papéis assumidos por distintos "agentes" (humanos e 
 * **Conformidade com o Guia**: precisam aderir às convenções de codificação, nomenclatura e documentação descritas neste repositório.
 * **Direitos Autorais e Licenças**: garantem que qualquer código ou dado submetido possa ser redistribuído de acordo com a licença do projeto.
 
+## Linguagem principal
+
+O Observatório SUS‑ES adota **R** como linguagem principal para desenvolvimento de pipelines reprodutíveis. Scripts e rotinas devem ser, sempre que possível, escritos em R utilizando as melhores práticas do ecossistema tidyverse e compatíveis com os padrões de reprodução estabelecidos neste repositório.
+
+O uso de **Python** é permitido apenas quando houver justificativa técnica explícita (por exemplo, ausência de biblioteca equivalente em R) e deve ser devidamente documentado. Em todos os casos, scripts devem utilizar caminhos relativos, registrar logs de execução, manter metadados e seguir as convenções estabelecidas em `docs/convensoes_metodologicas.md`.
+
+
 ## Diretrizes para Mensagens de Commit
 
 Para promover clareza e rastreabilidade, utilize o padrão [Conventional Commits](https://www.conventionalcommits.org/pt-br/v1.0.0/) adaptado ao contexto de saúde pública:
