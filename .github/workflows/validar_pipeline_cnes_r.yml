@@ -1,0 +1,45 @@
+name: validar-pipeline-cnes-r
+
+on:
+  push:
+    branches:
+      - main
+      - work
+      - feature/**
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - 'config/dependencias_r.csv'
+      - 'scripts/instalar_dependencias_r.R'
+      - '.github/workflows/validar_pipeline_cnes_r.yml'
+      - 'docs/cnes/**'
+  pull_request:
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - 'config/dependencias_r.csv'
+      - 'scripts/instalar_dependencias_r.R'
+      - '.github/workflows/validar_pipeline_cnes_r.yml'
+      - 'docs/cnes/**'
+
+jobs:
+  teste-cnes-r:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.3'
+
+      - name: Exibir sessão R
+        run: Rscript -e 'sessionInfo()'
+
+      - name: Preparar dependências do pipeline
+        run: Rscript scripts/instalar_dependencias_r.R
+
+      - name: Executar teste piloto CNES
+        run: Rscript tests/teste_pipeline_piloto_cnes.R
