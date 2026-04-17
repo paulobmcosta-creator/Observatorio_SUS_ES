@@ -1,0 +1,5 @@
+pacote,fonte,obrigatorio,motivo
+base,built-in,sim,funcionalidades básicas da linguagem R
+utils,built-in,sim,leitura e escrita de csv no pipeline piloto
+methods,built-in,sim,métodos padrão utilizados pelo runtime R
+stats,built-in,sim,dependência padrão carregada na sessão R
