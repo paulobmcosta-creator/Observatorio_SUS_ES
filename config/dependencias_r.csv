@@ -1,0 +1,2 @@
+pacote,tipo,escopo,uso_observado,observacao
+base,builtin,tests/test_estrutura_repositorio.R,"file.exists; dir.exists; stopifnot","Pacote distribuído com R; não exige instalação externa. Na verificação de 2026-05-17 não foram encontrados scripts R em src/ ou scripts/ nem pacotes externos em uso."
