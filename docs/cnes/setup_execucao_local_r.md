@@ -57,6 +57,7 @@ Execute os testes abaixo, também a partir da raiz do repositório:
 
 ```bash
 Rscript tests/test_estrutura_repositorio.R
+Rscript tests/test_metadata_cnes.R
 Rscript tests/test_ler_arquivos_cnes.R
 Rscript tests/test_padronizar_cnes_interim.R
 Rscript tests/test_validar_pipeline_cnes.R

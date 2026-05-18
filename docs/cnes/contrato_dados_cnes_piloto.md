@@ -45,7 +45,17 @@ As saídas padrão do pipeline piloto são:
 
 Esses caminhos são os padrões da função de orquestração, mas podem ser sobrescritos em testes ou execuções controladas para evitar gravação de artefatos reais no repositório.
 
-## 7. Regras de validação
+## 7. Metadados associados
+
+A estrutura mínima da saída intermediária é documentada também em arquivos específicos de metadados:
+
+- `metadata/cnes/schema_cnes_piloto.yml`: schema YAML da versão piloto técnica da camada `data_interim`;
+- `metadata/cnes/dicionario_cnes_piloto.csv`: dicionário CSV dos campos mínimos esperados;
+- `docs/cnes/metadados_cnes_piloto.md`: documentação técnica da camada de metadados e de suas limitações.
+
+Esses arquivos complementam este contrato: o contrato descreve as regras gerais do pipeline, enquanto o schema e o dicionário descrevem formalmente cada campo esperado na saída intermediária.
+
+## 8. Regras de validação
 
 As validações atualmente implementadas verificam:
 
@@ -54,7 +64,7 @@ As validações atualmente implementadas verificam:
 - presença de colunas mínimas esperadas após transformação;
 - existência do arquivo de saída intermediária.
 
-## 8. Limitações conhecidas
+## 9. Limitações conhecidas
 
 O piloto ainda:
 
@@ -65,12 +75,13 @@ O piloto ainda:
 - não produz dashboards;
 - não substitui validação epidemiológica ou sanitária.
 
-## 9. Próximos passos
+## 10. Próximos passos
 
 Os próximos passos técnicos recomendados são:
 
 - expansão para formatos oficiais;
 - validações de negócio;
-- schema versionado em `metadata/`;
+- manutenção do schema versionado em `metadata/cnes/schema_cnes_piloto.yml`;
+- manutenção do dicionário de dados em `metadata/cnes/dicionario_cnes_piloto.csv`;
 - indicadores derivados;
 - integração futura com painéis.

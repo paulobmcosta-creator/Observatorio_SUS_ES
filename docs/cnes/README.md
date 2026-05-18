@@ -51,6 +51,16 @@ O contrato mínimo de entrada, transformação e saída do piloto está document
 
 Em testes, os caminhos de saída e log devem apontar para diretórios temporários para evitar versionamento de artefatos gerados.
 
+
+## Metadados
+
+A camada inicial de metadados do piloto CNES formaliza a estrutura mínima esperada para a saída intermediária `data_interim` e apoia auditoria, rastreabilidade e testes automatizados. Os arquivos principais são:
+
+- `metadata/cnes/schema_cnes_piloto.yml`: schema YAML versionado do piloto técnico, com tipo esperado, obrigatoriedade, origem, descrição, regra de preenchimento e observações de cada campo mínimo.
+- `metadata/cnes/dicionario_cnes_piloto.csv`: dicionário CSV coerente com o schema, adequado para leitura tabular e verificações simples.
+- `docs/cnes/metadados_cnes_piloto.md`: documentação técnica dos metadados, sua relação com o contrato de dados, limitações e próximos passos.
+- `tests/test_metadata_cnes.R`: teste em R base que valida existência dos arquivos, colunas do dicionário, campos mínimos documentados, duplicidades e presença dos campos no schema YAML.
+
 ## Fixtures sintéticas
 
 As fixtures do módulo ficam em `tests/fixtures/cnes/` e não contêm dados pessoais ou sensíveis.
@@ -91,6 +101,7 @@ A partir da raiz do repositório, execute:
 ```bash
 Rscript scripts/instalar_dependencias_r.R
 Rscript tests/test_estrutura_repositorio.R
+Rscript tests/test_metadata_cnes.R
 Rscript tests/test_ler_arquivos_cnes.R
 Rscript tests/test_padronizar_cnes_interim.R
 Rscript tests/test_validar_pipeline_cnes.R

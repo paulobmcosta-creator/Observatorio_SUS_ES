@@ -7,9 +7,11 @@ on:
       - work
       - feature/**
       - test/**
+      - metadata/**
     paths:
       - 'src/**'
       - 'tests/**'
+      - 'metadata/**'
       - 'config/dependencias_r.csv'
       - 'scripts/instalar_dependencias_r.R'
       - '.github/workflows/validar_pipeline_cnes_r.yml'
@@ -19,6 +21,7 @@ on:
     paths:
       - 'src/**'
       - 'tests/**'
+      - 'metadata/**'
       - 'config/dependencias_r.csv'
       - 'scripts/instalar_dependencias_r.R'
       - '.github/workflows/validar_pipeline_cnes_r.yml'
@@ -53,6 +56,9 @@ jobs:
 
       - name: Executar teste estrutural do repositório
         run: Rscript tests/test_estrutura_repositorio.R
+
+      - name: Executar teste de metadados CNES
+        run: Rscript tests/test_metadata_cnes.R
 
       - name: Executar teste de leitura CNES
         run: Rscript tests/test_ler_arquivos_cnes.R
