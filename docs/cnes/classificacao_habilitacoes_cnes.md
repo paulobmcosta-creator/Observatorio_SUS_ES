@@ -73,8 +73,10 @@ A presença de uma referência em determinada linha de cuidado não demonstra fu
 Os próximos passos recomendados são:
 
 - validar códigos oficiais;
-- separar regras de habilitação, serviço, equipamento, leito e estabelecimento;
-- revisar itens classificados como `outro_a_confirmar` ou `conceito_metodologico`;
-- criar função R apenas depois dessa validação;
-- gerar bases tabulares específicas por entidade;
-- criar indicadores especializados.
+- ampliar linhas de cuidado;
+- criar função R para aplicar a classificação;
+- gerar base tabular de habilitações;
+- criar indicadores de habilitações e serviços especializados;
+- cruzar com produção ambulatorial e hospitalar.
+
+A evolução desta classificação deve manter rastreabilidade das alterações, controle de versão da tabela de referência e documentação dos critérios de inclusão, exclusão e agrupamento de códigos.
