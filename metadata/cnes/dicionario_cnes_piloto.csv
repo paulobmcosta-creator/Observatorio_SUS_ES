@@ -1,0 +1,8 @@
+campo,tipo,obrigatorio,origem,descricao,regra_preenchimento,observacoes
+competencia,character,true,arquivo bruto,Competência original informada no arquivo de entrada.,Mantida a partir da entrada bruta após leitura do CSV.,Campo mínimo para derivação temporal.
+co_municipio_gestor,character,false,arquivo bruto,"Código do município gestor, quando disponível.",Preservado após padronização do nome da coluna.,"Identificador administrativo esperado, mas não obrigatório no piloto."
+co_cnes,character,false,arquivo bruto,"Código CNES do estabelecimento, quando disponível.",Preservado após padronização do nome da coluna.,Identificador do estabelecimento de saúde.
+arquivo_origem,character,true,pipeline,Nome do arquivo bruto de origem.,Criado na etapa de leitura.,Campo de rastreabilidade.
+competencia_aaaamm,character,true,pipeline,Competência padronizada no formato AAAA-MM.,Derivada da coluna competencia; valores inválidos devem resultar em NA.,Campo usado para agregações temporais.
+competencia_data_referencia,Date,true,pipeline,Primeiro dia do mês da competência.,Derivada de competencia_aaaamm; valores inválidos devem resultar em NA.,Campo auxiliar para ordenação e análise temporal.
+versao_pipeline,character,true,pipeline,Versão técnica do pipeline responsável pela transformação.,Valor fixo piloto_tecnico_v1.,Campo de controle de versão do processamento.

@@ -1,0 +1,65 @@
+schema:
+  nome: cnes_piloto_interim
+  versao: piloto_tecnico_v1
+  camada: data_interim
+  descricao: >
+    Estrutura mínima da saída intermediária do pipeline piloto CNES. Esta versão
+    documenta uma base técnica inicial para rastreabilidade e validação do
+    pipeline, ainda sem corresponder a um modelo definitivo de dados CNES ou a
+    uma camada final de indicadores.
+  campos:
+    - nome: competencia
+      tipo: character
+      obrigatorio: true
+      origem: arquivo bruto
+      descricao: Competência original informada no arquivo de entrada.
+      regra: Mantida a partir da entrada bruta após leitura do CSV.
+      observacoes: Campo mínimo para derivação temporal.
+
+    - nome: co_municipio_gestor
+      tipo: character
+      obrigatorio: false
+      origem: arquivo bruto
+      descricao: Código do município gestor, quando disponível.
+      regra: Preservado após padronização do nome da coluna.
+      observacoes: Identificador administrativo esperado, mas não obrigatório no piloto.
+
+    - nome: co_cnes
+      tipo: character
+      obrigatorio: false
+      origem: arquivo bruto
+      descricao: Código CNES do estabelecimento, quando disponível.
+      regra: Preservado após padronização do nome da coluna.
+      observacoes: Identificador do estabelecimento de saúde.
+
+    - nome: arquivo_origem
+      tipo: character
+      obrigatorio: true
+      origem: pipeline
+      descricao: Nome do arquivo bruto de origem.
+      regra: Criado na etapa de leitura.
+      observacoes: Campo de rastreabilidade.
+
+    - nome: competencia_aaaamm
+      tipo: character
+      obrigatorio: true
+      origem: pipeline
+      descricao: Competência padronizada no formato AAAA-MM.
+      regra: Derivada da coluna competencia; valores inválidos devem resultar em NA.
+      observacoes: Campo usado para agregações temporais.
+
+    - nome: competencia_data_referencia
+      tipo: Date
+      obrigatorio: true
+      origem: pipeline
+      descricao: Primeiro dia do mês da competência.
+      regra: Derivada de competencia_aaaamm; valores inválidos devem resultar em NA.
+      observacoes: Campo auxiliar para ordenação e análise temporal.
+
+    - nome: versao_pipeline
+      tipo: character
+      obrigatorio: true
+      origem: pipeline
+      descricao: Versão técnica do pipeline responsável pela transformação.
+      regra: Valor fixo piloto_tecnico_v1.
+      observacoes: Campo de controle de versão do processamento.
