@@ -1,0 +1,5 @@
+pacote,fonte,obrigatorio,motivo
+base,built-in,sim,funcionalidades básicas da linguagem R usadas nos testes e scripts
+utils,built-in,sim,leitura e escrita de arquivos CSV no pipeline piloto CNES
+methods,built-in,sim,pacote padrão do runtime R carregado na sessão
+stats,built-in,sim,pacote padrão do runtime R carregado na sessão
