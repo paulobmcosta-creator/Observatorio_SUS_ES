@@ -10,6 +10,10 @@ Este módulo ainda é um piloto técnico. Ele não cria dashboards, não calcula
 
 A visão metodológica do CNES no Observatório SUS-ES está documentada em [`docs/cnes/visao_analitica_cnes_observatorio.md`](visao_analitica_cnes_observatorio.md). Esse documento define o papel do CNES como camada estrutural de oferta instalada, habilitações, leitos, equipamentos e profissionais, distinguindo a capacidade cadastrada da produção assistencial e dos desfechos em saúde.
 
+## Produtos tabulares
+
+A arquitetura metodológica dos produtos tabulares derivados do CNES está descrita em [`docs/cnes/produtos_tabulares_cnes.md`](produtos_tabulares_cnes.md). Esse documento define os produtos de estabelecimentos, leitos, habilitações/serviços especializados, equipamentos e profissionais, indicando unidades de observação, campos mínimos, chaves, limitações e relação com futuros indicadores.
+
 ## Contrato de dados
 
 O contrato mínimo de entrada, transformação e saída do piloto está documentado em [`docs/cnes/contrato_dados_cnes_piloto.md`](contrato_dados_cnes_piloto.md). Esse documento explicita o formato esperado dos arquivos CSV, os campos mínimos, os campos derivados, as regras de validação e as limitações conhecidas.
