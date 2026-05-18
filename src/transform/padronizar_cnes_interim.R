@@ -10,8 +10,10 @@
 #' modelagem analítica final.
 #'
 #' @param dados_cnes `data.frame` de entrada já lido da camada bruta.
-#' @param coluna_competencia Nome da coluna de competência temporal.
-#' @param colunas_id Vetor com colunas de identificadores a preservar.
+#' @param coluna_competencia Nome da coluna de competência temporal. O nome
+#'   informado é padronizado pela mesma regra aplicada às colunas de entrada.
+#' @param colunas_id Vetor com colunas de identificadores a preservar. Os nomes
+#'   informados são padronizados pela mesma regra aplicada às colunas de entrada.
 #'
 #' @return `data.frame` padronizado para exportação em `data_interim/`.
 padronizar_cnes_interim <- function(
@@ -23,24 +25,31 @@ padronizar_cnes_interim <- function(
         stop("O objeto de entrada deve ser um data.frame.", call. = FALSE)
     }
 
-    nomes_originais <- names(dados_cnes)
-    nomes_padronizados <- tolower(nomes_originais)
-    nomes_padronizados <- gsub("[^a-z0-9]+", "_", nomes_padronizados)
-    nomes_padronizados <- gsub("^_|_$", "", nomes_padronizados)
+    padronizar_nome_coluna <- function(nome_coluna) {
+        nome_padronizado <- tolower(nome_coluna)
+        nome_padronizado <- iconv(nome_padronizado, to = "ASCII//TRANSLIT")
+        nome_padronizado <- gsub("[^a-z0-9]+", "_", nome_padronizado)
+        gsub("^_|_$", "", nome_padronizado)
+    }
+
+    nomes_padronizados <- padronizar_nome_coluna(names(dados_cnes))
     names(dados_cnes) <- nomes_padronizados
 
-    if (!coluna_competencia %in% names(dados_cnes)) {
+    coluna_competencia_padronizada <- padronizar_nome_coluna(coluna_competencia)
+    colunas_id_padronizadas <- padronizar_nome_coluna(colunas_id)
+
+    if (!coluna_competencia_padronizada %in% names(dados_cnes)) {
         stop(
             paste0(
-                "Coluna de competência '",
-                coluna_competencia,
+                "Coluna de competência padronizada '",
+                coluna_competencia_padronizada,
                 "' não encontrada após padronização."
             ),
             call. = FALSE
         )
     }
 
-    competencia_bruta <- as.character(dados_cnes[[coluna_competencia]])
+    competencia_bruta <- as.character(dados_cnes[[coluna_competencia_padronizada]])
     competencia_apenas_digitos <- gsub("[^0-9]", "", competencia_bruta)
     competencia_ano <- substr(competencia_apenas_digitos, 1, 4)
     competencia_mes <- substr(competencia_apenas_digitos, 5, 6)
@@ -65,7 +74,7 @@ padronizar_cnes_interim <- function(
         format = "%Y%m%d"
     )
 
-    ids_disponiveis <- intersect(colunas_id, names(dados_cnes))
+    ids_disponiveis <- intersect(colunas_id_padronizadas, names(dados_cnes))
     if (length(ids_disponiveis) == 0) {
         warning(
             "Nenhum identificador territorial/administrativo esperado foi encontrado."

@@ -41,6 +41,21 @@ executar_testes_padronizar_cnes_interim <- function() {
     stopifnot(identical(as.character(dados_padronizados$co_municipio_gestor), c("3205309", "3205309", "3205002")))
     stopifnot(identical(as.character(dados_padronizados$co_cnes), c("1234567", "7654321", "1111111")))
 
+    dados_colunas_maiusculas <- data.frame(
+        `Competência` = "202601",
+        `CO MUNICIPIO GESTOR` = "3205309",
+        `CO CNES` = "0012345",
+        check.names = FALSE
+    )
+    dados_colunas_maiusculas_padronizados <- padronizar_cnes_interim(
+        dados_colunas_maiusculas,
+        coluna_competencia = "Competência",
+        colunas_id = c("CO MUNICIPIO GESTOR", "CO CNES")
+    )
+    stopifnot("competencia" %in% names(dados_colunas_maiusculas_padronizados))
+    stopifnot(identical(dados_colunas_maiusculas_padronizados$competencia_aaaamm, "2026-01"))
+    stopifnot(identical(dados_colunas_maiusculas_padronizados$co_cnes, "0012345"))
+
     fixture_sem_competencia <- file.path("tests", "fixtures", "cnes", "cnes_sem_competencia.csv")
     dados_sem_competencia <- utils::read.csv(fixture_sem_competencia, stringsAsFactors = FALSE, check.names = FALSE)
     esperar_erro(padronizar_cnes_interim(dados_sem_competencia))
