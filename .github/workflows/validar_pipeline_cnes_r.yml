@@ -61,6 +61,9 @@ jobs:
       - name: Executar teste de metadados CNES
         run: Rscript tests/test_metadata_cnes.R
 
+      - name: Executar teste de classificação de habilitações CNES
+        run: Rscript tests/test_classificacao_habilitacoes_cnes.R
+
       - name: Executar teste de leitura CNES
         run: Rscript tests/test_ler_arquivos_cnes.R
 

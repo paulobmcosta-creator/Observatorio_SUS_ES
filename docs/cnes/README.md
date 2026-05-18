@@ -22,6 +22,10 @@ As famílias de indicadores derivadas do CNES estão descritas em [`docs/cnes/fa
 
 A sequência de desenvolvimento técnico do módulo CNES está organizada em [`docs/cnes/roadmap_tecnico_cnes.md`](roadmap_tecnico_cnes.md). Esse documento orienta ciclos futuros para produtos tabulares, indicadores, metadados, testes, cruzamentos com outras bases e preparação posterior de camadas para painéis e mapas.
 
+## Classificação de habilitações
+
+A classificação temática inicial de habilitações e serviços especializados do CNES está documentada em [`docs/cnes/classificacao_habilitacoes_cnes.md`](classificacao_habilitacoes_cnes.md) e versionada na tabela `metadata/cnes/classificacao_habilitacoes_cnes.csv`. Essa referência organiza habilitações e serviços por linha de cuidado e servirá de base para ciclos futuros de geração da base de habilitações e indicadores especializados.
+
 ## Contrato de dados
 
 O contrato mínimo de entrada, transformação e saída do piloto está documentado em [`docs/cnes/contrato_dados_cnes_piloto.md`](contrato_dados_cnes_piloto.md). Esse documento explicita o formato esperado dos arquivos CSV, os campos mínimos, os campos derivados, as regras de validação e as limitações conhecidas.
