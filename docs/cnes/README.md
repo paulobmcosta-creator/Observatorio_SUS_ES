@@ -6,6 +6,10 @@ Implementar a primeira rotina técnica controlada para dados CNES no Observatór
 
 Este módulo ainda é um piloto técnico. Ele não cria dashboards, não calcula indicadores finais e não substitui validação epidemiológica ou sanitária especializada.
 
+## Visão analítica
+
+A visão metodológica do CNES no Observatório SUS-ES está documentada em [`docs/cnes/visao_analitica_cnes_observatorio.md`](visao_analitica_cnes_observatorio.md). Esse documento define o papel do CNES como camada estrutural de oferta instalada, habilitações, leitos, equipamentos e profissionais, distinguindo a capacidade cadastrada da produção assistencial e dos desfechos em saúde.
+
 ## Contrato de dados
 
 O contrato mínimo de entrada, transformação e saída do piloto está documentado em [`docs/cnes/contrato_dados_cnes_piloto.md`](contrato_dados_cnes_piloto.md). Esse documento explicita o formato esperado dos arquivos CSV, os campos mínimos, os campos derivados, as regras de validação e as limitações conhecidas.
