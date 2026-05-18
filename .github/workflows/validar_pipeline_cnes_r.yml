@@ -6,6 +6,7 @@ on:
       - main
       - work
       - feature/**
+      - feat/**
       - test/**
       - metadata/**
     paths:
@@ -74,3 +75,6 @@ jobs:
 
       - name: Executar teste de integração CNES
         run: Rscript tests/teste_pipeline_piloto_cnes.R
+
+      - name: Executar teste de indicadores de oferta CNES
+        run: Rscript tests/test_indicadores_cnes_oferta.R

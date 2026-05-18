@@ -71,6 +71,18 @@ As fixtures do módulo ficam em `tests/fixtures/cnes/` e não contêm dados pess
 - `cnes_competencia_malformada.csv`: fixture com competências sintéticas malformadas.
 - `cnes_sem_identificadores.csv`: fixture válida quanto à competência, mas sem identificadores administrativos esperados.
 
+
+## Indicadores iniciais de oferta
+
+A primeira camada analítica simples do módulo CNES está implementada como piloto técnico de indicadores de oferta. Essa etapa opera sobre a saída intermediária já padronizada e não cria dashboards, mapas ou indicadores epidemiológicos finais.
+
+- Função: `src/indicators/calcular_indicadores_cnes_oferta.R`
+- Documentação técnica: [`docs/cnes/indicadores_cnes_oferta.md`](indicadores_cnes_oferta.md)
+- Dicionário dos indicadores: `metadata/cnes/dicionario_indicadores_cnes_oferta.csv`
+- Teste automatizado: `tests/test_indicadores_cnes_oferta.R`
+
+Os indicadores implementados incluem contagens gerais, registros por competência e estabelecimentos distintos por município gestor, sempre com tratamento explícito de valores ausentes nos recortes.
+
 ## Testes existentes
 
 Os testes são scripts R simples executáveis via `Rscript`, sem dependências externas de frameworks de teste.
@@ -107,6 +119,7 @@ Rscript tests/test_padronizar_cnes_interim.R
 Rscript tests/test_validar_pipeline_cnes.R
 Rscript tests/test_executar_pipeline_piloto_cnes.R
 Rscript tests/teste_pipeline_piloto_cnes.R
+Rscript tests/test_indicadores_cnes_oferta.R
 ```
 
 Também é possível executar o pipeline piloto diretamente, desde que existam arquivos CSV válidos no diretório de entrada configurado:
