@@ -24,7 +24,7 @@ A sequência de desenvolvimento técnico do módulo CNES está organizada em [`d
 
 ## Classificação de habilitações
 
-A classificação temática inicial de habilitações e serviços especializados do CNES está documentada em [`docs/cnes/classificacao_habilitacoes_cnes.md`](classificacao_habilitacoes_cnes.md) e versionada na tabela `metadata/cnes/classificacao_habilitacoes_cnes.csv`. Essa referência organiza habilitações e serviços por linha de cuidado e servirá de base para ciclos futuros de geração da base de habilitações e indicadores especializados.
+A classificação temática refinada de habilitações e referências CNES está documentada em [`docs/cnes/classificacao_habilitacoes_cnes.md`](classificacao_habilitacoes_cnes.md) e versionada na tabela `metadata/cnes/classificacao_habilitacoes_cnes.csv`. Essa referência distingue habilitação, serviço especializado, equipamento, leito, tipo de estabelecimento, componente de rede e conceito metodológico por linha de cuidado, servindo de base para ciclos futuros de geração da base de habilitações e indicadores especializados. As fontes a validar estão organizadas em [`docs/cnes/fontes_normativas_habilitacoes_cnes.md`](fontes_normativas_habilitacoes_cnes.md).
 
 ## Contrato de dados
 

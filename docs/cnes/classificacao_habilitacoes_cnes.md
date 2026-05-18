@@ -2,79 +2,71 @@
 
 ## 1. Finalidade
 
-Esta classificação organiza habilitações e serviços especializados do CNES por linha de cuidado para apoiar a análise da oferta especializada no Observatório SUS-ES. A tabela de referência tem função metodológica: criar uma primeira ponte entre descrições de habilitações ou serviços e categorias analíticas usadas pelo Observatório, como oncologia, cardiologia, Rede de Urgência e Emergência, UTI e cuidado crítico, diagnóstico e apoio terapêutico, terapia renal substitutiva e reabilitação.
+Esta classificação organiza referências CNES e correlatas relevantes para a análise da oferta especializada no Observatório SUS-ES. A tabela deixou de ser apenas uma lista de “habilitações” e passou a explicitar a natureza de cada referência, distinguindo habilitação, serviço especializado, equipamento, leito, tipo de estabelecimento, componente de rede, procedimento SIGTAP, ocupação CBO, conceito metodológico ou outro item ainda a confirmar.
 
-A classificação ainda não aplica regras aos dados CNES e não calcula indicadores. Ela prepara uma base de referência que poderá ser utilizada em ciclos futuros para gerar bases tabulares de habilitações e serviços especializados, produzir indicadores de oferta especializada e apoiar análises de vazios assistenciais e concentração territorial.
+O objetivo é reduzir ambiguidade antes da automação. A classificação ainda não aplica regras aos dados CNES, não calcula indicadores e não deve ser usada como mapeamento operacional definitivo sem validação normativa posterior.
 
-## 2. Relação com a visão analítica do CNES
+## 2. Por que distinguir `tipo_referencia_cnes`
 
-A classificação deriva da visão do CNES como base da oferta instalada, habilitada e potencialmente disponível ao SUS. Nesse sentido, ela deve ser lida como instrumento para qualificar a estrutura formal da rede, e não como prova de funcionamento real, acesso efetivo, produção assistencial ou qualidade do cuidado.
+Nem todo item relevante para o Observatório é uma habilitação CNES estrita. Alguns elementos necessários para analisar a oferta especializada pertencem a outras dimensões do CNES ou a bases relacionadas. Por exemplo, UTI adulto é melhor tratada como referência de leito/capacidade hospitalar; tomografia computadorizada e mamografia são equipamentos; UPA pode ser tipo de estabelecimento ou componente da rede de urgência; procedimentos endovasculares podem depender de regras SIGTAP; e “componentes habilitados da RUE” é uma categoria metodológica que ainda precisa ser traduzida em códigos e regras específicas.
 
-Esta classificação se relaciona conceitualmente com:
+A coluna `tipo_referencia_cnes` evita que esses itens sejam tratados indevidamente como se todos fossem habilitações. Ela também ajuda a planejar futuras bases tabulares específicas por entidade: habilitações, serviços, equipamentos, leitos, estabelecimentos e componentes de rede.
 
-- `docs/cnes/visao_analitica_cnes_observatorio.md`;
-- `docs/cnes/produtos_tabulares_cnes.md`;
-- `docs/cnes/familias_indicadores_cnes.md`;
-- `docs/cnes/roadmap_tecnico_cnes.md`.
-
-A visão analítica define o papel do CNES como camada estrutural. O documento de produtos tabulares define a base de habilitações e serviços especializados como produto futuro. O documento de famílias de indicadores organiza os usos analíticos esperados. O roadmap técnico recomenda esta classificação como próximo ciclo, antes da implementação da função R que aplicará a classificação às bases CNES.
-
-## 3. Escopo da classificação
-
-Esta primeira versão contempla as seguintes linhas de cuidado:
-
-- oncologia;
-- cardiologia;
-- Rede de Urgência e Emergência;
-- UTI e cuidado crítico;
-- diagnóstico e apoio terapêutico;
-- terapia renal substitutiva;
-- reabilitação.
-
-O escopo inicial foi definido por sua relevância para a atenção especializada, capacidade hospitalar, resposta à urgência e emergência, apoio diagnóstico e continuidade do cuidado. Outras linhas poderão ser incluídas em versões futuras, desde que sejam acompanhadas de documentação metodológica e validação dos códigos oficiais.
-
-## 4. Estrutura da tabela de classificação
+## 3. Estrutura da tabela
 
 A tabela de referência está no arquivo `metadata/cnes/classificacao_habilitacoes_cnes.csv`. Ela possui as seguintes colunas:
 
-- `codigo_habilitacao`: código da habilitação ou serviço especializado quando conhecido. Quando o código oficial ainda não foi confirmado, utiliza-se `codigo_a_confirmar`.
-- `descricao_habilitacao`: descrição textual da habilitação ou serviço.
-- `linha_cuidado`: linha de cuidado principal associada ao registro.
-- `grupo_tematico`: agrupamento analítico mais amplo, como atenção especializada, urgência e emergência, capacidade hospitalar, apoio diagnóstico e terapêutico ou cuidado continuado e reabilitação.
+- `id_classificacao`: identificador textual único e estável da linha de classificação, em snake_case.
+- `tipo_referencia_cnes`: natureza da referência no CNES ou em base relacionada, com valores controlados.
+- `codigo_referencia`: código oficial quando confirmado. Quando não houver confirmação segura, usa `codigo_a_confirmar`; quando o item for conceitual e não tiver código aplicável, usa `nao_aplicavel`.
+- `status_codigo`: situação do código informado.
+- `descricao_referencia`: descrição textual do item classificado.
+- `linha_cuidado`: linha de cuidado principal associada ao item.
+- `grupo_tematico`: agrupamento analítico mais amplo.
 - `subgrupo`: detalhamento interno da linha de cuidado.
-- `tipo_componente`: tipo de componente da rede ou da oferta, como habilitação, serviço especializado, componente de rede, equipamento/serviço ou leito de cuidado crítico.
+- `tipo_componente`: tipo de componente da rede ou da oferta.
 - `prioridade_observatorio`: prioridade analítica inicial para o Observatório SUS-ES, com valores `alta`, `media` ou `baixa`.
-- `fonte_referencia`: referência normativa ou metodológica utilizada ou a ser validada.
-- `observacao_metodologica`: ressalvas sobre uso, confirmação de códigos e interpretação.
+- `fonte_referencia`: fonte normativa, técnica ou metodológica usada ou ainda pendente de validação.
+- `observacao_metodologica`: ressalvas de interpretação, natureza da referência e limites para uso operacional.
 
-A coluna `codigo_habilitacao` usa `codigo_a_confirmar` nesta primeira versão quando não há segurança suficiente sobre o código oficial. Essa escolha evita inventar códigos e explicita a necessidade de refinamento futuro com documentação oficial do CNES, SIGTAP e portarias ministeriais.
+Os valores permitidos para `tipo_referencia_cnes` são: `habilitacao`, `servico_especializado`, `equipamento`, `leito`, `tipo_estabelecimento`, `componente_rede`, `procedimento_sigtap`, `ocupacao_cbo`, `conceito_metodologico` e `outro_a_confirmar`.
+
+## 4. Status do código
+
+A coluna `status_codigo` diferencia a situação do código usado na linha:
+
+- `confirmado`: código oficial validado em fonte normativa ou técnica confiável.
+- `a_confirmar`: código ainda não validado; nesses casos, `codigo_referencia` deve permanecer como `codigo_a_confirmar`.
+- `nao_aplicavel`: usado quando o item não possui código aplicável na tabela de referência proposta.
+- `conceitual`: usado quando a linha representa uma categoria metodológica, como um agrupamento analítico, e não um código CNES estrito.
+
+Nesta versão, os códigos oficiais ainda não foram confirmados. Por isso, referências operacionais permanecem com `codigo_a_confirmar` e itens conceituais usam `nao_aplicavel` quando apropriado.
 
 ## 5. Uso previsto
 
-A tabela será usada futuramente para:
+A tabela será usada futuramente para orientar:
 
-- classificar habilitações CNES por linha de cuidado;
-- gerar base tabular de habilitações e serviços especializados;
-- calcular indicadores de oferta especializada;
-- identificar vazios assistenciais;
-- analisar concentração territorial;
-- cruzar oferta habilitada com produção SIH/SUS e SIA/SUS.
+- separação entre habilitações, serviços especializados, equipamentos, leitos, tipos de estabelecimento e componentes de rede;
+- validação normativa de códigos oficiais;
+- criação de função R para aplicar a classificação apenas após validação suficiente;
+- geração de bases tabulares específicas por entidade;
+- cálculo futuro de indicadores especializados;
+- identificação de vazios assistenciais e concentração territorial.
 
-O uso operacional dependerá de uma função R futura, que deverá aplicar a classificação de forma reprodutível, preservar códigos e descrições originais, registrar a versão da tabela de referência utilizada e produzir testes automatizados.
+A tabela ainda não deve ser aplicada automaticamente a bases reais sem validação normativa posterior, especialmente nas linhas com `codigo_a_confirmar`, `conceito_metodologico` ou `outro_a_confirmar`.
 
 ## 6. Limitações
 
-Esta tabela possui limitações importantes:
+Esta classificação possui limitações importantes:
 
-- é uma primeira versão metodológica;
-- alguns códigos oficiais estão marcados como `codigo_a_confirmar`;
-- habilitação formal não garante funcionamento real;
-- habilitação formal não garante produção;
-- habilitação formal não garante acesso;
-- a classificação não substitui validação normativa posterior;
-- a tabela deve ser refinada com fontes oficiais do CNES, SIGTAP e portarias ministeriais.
+- códigos oficiais ainda precisam ser validados;
+- itens conceituais não devem ser confundidos com códigos CNES;
+- equipamentos, leitos e serviços podem exigir bases CNES diferentes;
+- componentes de rede podem depender de portarias, regras assistenciais e tabelas auxiliares;
+- a classificação não substitui documentação oficial;
+- a classificação serve como primeira camada metodológica de organização da oferta especializada.
 
-A presença de uma habilitação ou serviço em determinada linha de cuidado não deve ser interpretada como evidência isolada de suficiência da oferta, disponibilidade operacional, qualidade assistencial ou acesso oportuno. Essas conclusões exigem cruzamento com outras bases, parâmetros assistenciais e validação metodológica adicional.
+A presença de uma referência em determinada linha de cuidado não demonstra funcionamento real, produção, acesso, suficiência ou qualidade. A classificação organiza a leitura estrutural da oferta e deverá ser refinada com documentação oficial do CNES, SIGTAP, manuais técnicos e portarias ministeriais.
 
 ## 7. Próximos passos
 
