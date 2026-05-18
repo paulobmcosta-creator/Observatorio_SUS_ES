@@ -5,6 +5,8 @@ O **Observatório SUS ES** é uma iniciativa científica e educacional cujo obje
 Este repositório implementa um _pipeline_ completo de ciência de dados em saúde, desde a coleta de dados brutos até a geração de produtos de visualização. Todas as etapas são documentadas para garantir reprodutibilidade, transparência e aderência às melhores práticas de ciência aberta.
 
 ## Estrutura do Projeto
+
+```text
 Observatorio_SUS_ES/
 ├── data_raw/ # Dados brutos coletados de fontes primárias
 ├── data_interim/ # Dados parcialmente tratados durante a limpeza
@@ -25,6 +27,7 @@ Observatorio_SUS_ES/
 ├── AGENTS.md # Papéis e responsabilidades dos colaboradores
 ├── .gitignore # Arquivos e pastas ignorados pelo Git
 └── README.md # Este documento
+```
 
 ### Principais Componentes
 
@@ -33,7 +36,7 @@ Observatorio_SUS_ES/
 3. **Indicadores (`src/indicators`)** – Implementações de indicadores de saúde (incidência, prevalência, letalidade, cobertura vacinal, entre outros) com fórmulas explícitas e referências metodológicas.
 4. **Validação (`src/validation`)** – Scripts que verificam a consistência dos dados (checagem de valores extremos, comparações temporais/geográficas) e testes unitários automatizados em `tests/`.
 5. **Visualizações (`dashboards/` e `maps/`)** – Códigos para construir painéis interativos e mapas georreferenciados, possibilitando a interpretação dos indicadores por diversos públicos.
-6. **Documentação (`docs/`)** – Textos descritivos sobre governaça de código, convenções metodológicas e fluxo de trabalho para que novos colaboradores possam se orientar.
+6. **Documentação (`docs/`)** – Textos descritivos sobre governança de código, convenções metodológicas e fluxo de trabalho para que novos colaboradores possam se orientar.
 
 ## Linguagem principal e ecossistema
 

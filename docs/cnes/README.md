@@ -134,6 +134,7 @@ A partir da raiz do repositório, execute:
 Rscript scripts/instalar_dependencias_r.R
 Rscript tests/test_estrutura_repositorio.R
 Rscript tests/test_metadata_cnes.R
+Rscript tests/test_classificacao_habilitacoes_cnes.R
 Rscript tests/test_ler_arquivos_cnes.R
 Rscript tests/test_padronizar_cnes_interim.R
 Rscript tests/test_validar_pipeline_cnes.R
@@ -165,6 +166,6 @@ O workflow `.github/workflows/validar_pipeline_cnes_r.yml` configura explicitame
 
 - Expandir leitor para formatos oficiais adicionais e múltiplas competências.
 - Evoluir validações para regras de negócio específicas do CNES.
-- Definir schema versionado em `metadata/`.
+- Manter o schema versionado em `metadata/` alinhado às próximas etapas do pipeline.
 - Implementar indicadores derivados em etapa futura, após validação metodológica.
 - Integrar futuramente resultados validados a painéis, sem antecipar dashboards neste piloto técnico.
