@@ -14,6 +14,10 @@ A visão metodológica do CNES no Observatório SUS-ES está documentada em [`do
 
 A arquitetura metodológica dos produtos tabulares derivados do CNES está descrita em [`docs/cnes/produtos_tabulares_cnes.md`](produtos_tabulares_cnes.md). Esse documento define os produtos de estabelecimentos, leitos, habilitações/serviços especializados, equipamentos e profissionais, indicando unidades de observação, campos mínimos, chaves, limitações e relação com futuros indicadores.
 
+## Famílias de indicadores
+
+As famílias de indicadores derivadas do CNES estão descritas em [`docs/cnes/familias_indicadores_cnes.md`](familias_indicadores_cnes.md). Esse documento organiza indicadores de oferta geral, habilitações e serviços especializados, capacidade instalada física, força de trabalho, vazios assistenciais e compatibilidade entre oferta, produção e desfechos.
+
 ## Contrato de dados
 
 O contrato mínimo de entrada, transformação e saída do piloto está documentado em [`docs/cnes/contrato_dados_cnes_piloto.md`](contrato_dados_cnes_piloto.md). Esse documento explicita o formato esperado dos arquivos CSV, os campos mínimos, os campos derivados, as regras de validação e as limitações conhecidas.
