@@ -6,6 +6,26 @@ Implementar a primeira rotina técnica controlada para dados CNES no Observatór
 
 Este módulo ainda é um piloto técnico. Ele não cria dashboards, não calcula indicadores finais e não substitui validação epidemiológica ou sanitária especializada.
 
+## Visão analítica
+
+A visão metodológica do CNES no Observatório SUS-ES está documentada em [`docs/cnes/visao_analitica_cnes_observatorio.md`](visao_analitica_cnes_observatorio.md). Esse documento define o papel do CNES como camada estrutural de oferta instalada, habilitações, leitos, equipamentos e profissionais, distinguindo a capacidade cadastrada da produção assistencial e dos desfechos em saúde.
+
+## Produtos tabulares
+
+A arquitetura metodológica dos produtos tabulares derivados do CNES está descrita em [`docs/cnes/produtos_tabulares_cnes.md`](produtos_tabulares_cnes.md). Esse documento define os produtos de estabelecimentos, leitos, habilitações/serviços especializados, equipamentos e profissionais, indicando unidades de observação, campos mínimos, chaves, limitações e relação com futuros indicadores.
+
+## Famílias de indicadores
+
+As famílias de indicadores derivadas do CNES estão descritas em [`docs/cnes/familias_indicadores_cnes.md`](familias_indicadores_cnes.md). Esse documento organiza indicadores de oferta geral, habilitações e serviços especializados, capacidade instalada física, força de trabalho, vazios assistenciais e compatibilidade entre oferta, produção e desfechos.
+
+## Roadmap técnico
+
+A sequência de desenvolvimento técnico do módulo CNES está organizada em [`docs/cnes/roadmap_tecnico_cnes.md`](roadmap_tecnico_cnes.md). Esse documento orienta ciclos futuros para produtos tabulares, indicadores, metadados, testes, cruzamentos com outras bases e preparação posterior de camadas para painéis e mapas.
+
+## Classificação de habilitações
+
+A classificação temática inicial de habilitações e serviços especializados do CNES está documentada em [`docs/cnes/classificacao_habilitacoes_cnes.md`](classificacao_habilitacoes_cnes.md) e versionada na tabela `metadata/cnes/classificacao_habilitacoes_cnes.csv`. Essa referência organiza habilitações e serviços por linha de cuidado e servirá de base para ciclos futuros de geração da base de habilitações e indicadores especializados.
+
 ## Contrato de dados
 
 O contrato mínimo de entrada, transformação e saída do piloto está documentado em [`docs/cnes/contrato_dados_cnes_piloto.md`](contrato_dados_cnes_piloto.md). Esse documento explicita o formato esperado dos arquivos CSV, os campos mínimos, os campos derivados, as regras de validação e as limitações conhecidas.
