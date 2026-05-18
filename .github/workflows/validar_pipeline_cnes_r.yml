@@ -6,6 +6,7 @@ on:
       - main
       - work
       - feature/**
+      - test/**
     paths:
       - 'src/**'
       - 'tests/**'
@@ -13,6 +14,7 @@ on:
       - 'scripts/instalar_dependencias_r.R'
       - '.github/workflows/validar_pipeline_cnes_r.yml'
       - 'docs/cnes/**'
+      - 'docs/fluxo_trabalho.md'
   pull_request:
     paths:
       - 'src/**'
@@ -21,6 +23,7 @@ on:
       - 'scripts/instalar_dependencias_r.R'
       - '.github/workflows/validar_pipeline_cnes_r.yml'
       - 'docs/cnes/**'
+      - 'docs/fluxo_trabalho.md'
 
 jobs:
   teste-cnes-r:
@@ -35,11 +38,33 @@ jobs:
         with:
           r-version: '4.3'
 
+      - name: Verificar R e Rscript
+        run: |
+          which R
+          which Rscript
+          R --version
+          Rscript --version
+
       - name: Exibir sessão R
         run: Rscript -e 'sessionInfo()'
 
       - name: Preparar dependências do pipeline
         run: Rscript scripts/instalar_dependencias_r.R
 
-      - name: Executar teste piloto CNES
+      - name: Executar teste estrutural do repositório
+        run: Rscript tests/test_estrutura_repositorio.R
+
+      - name: Executar teste de leitura CNES
+        run: Rscript tests/test_ler_arquivos_cnes.R
+
+      - name: Executar teste de padronização CNES
+        run: Rscript tests/test_padronizar_cnes_interim.R
+
+      - name: Executar teste de validação CNES
+        run: Rscript tests/test_validar_pipeline_cnes.R
+
+      - name: Executar teste de orquestração CNES
+        run: Rscript tests/test_executar_pipeline_piloto_cnes.R
+
+      - name: Executar teste de integração CNES
         run: Rscript tests/teste_pipeline_piloto_cnes.R

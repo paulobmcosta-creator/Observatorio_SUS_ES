@@ -42,24 +42,26 @@ padronizar_cnes_interim <- function(
 
     competencia_bruta <- as.character(dados_cnes[[coluna_competencia]])
     competencia_apenas_digitos <- gsub("[^0-9]", "", competencia_bruta)
+    competencia_ano <- substr(competencia_apenas_digitos, 1, 4)
+    competencia_mes <- substr(competencia_apenas_digitos, 5, 6)
+    competencia_mes_numero <- suppressWarnings(as.integer(competencia_mes))
+    competencia_valida <- nchar(competencia_apenas_digitos) >= 6 &
+        !is.na(competencia_mes_numero) &
+        competencia_mes_numero >= 1 &
+        competencia_mes_numero <= 12
 
     dados_cnes$competencia_aaaamm <- ifelse(
-        nchar(competencia_apenas_digitos) >= 6,
-        substr(competencia_apenas_digitos, 1, 4),
+        competencia_valida,
+        paste0(competencia_ano, "-", competencia_mes),
         NA_character_
-    )
-    dados_cnes$competencia_aaaamm <- paste0(
-        dados_cnes$competencia_aaaamm,
-        "-",
-        ifelse(
-            nchar(competencia_apenas_digitos) >= 6,
-            substr(competencia_apenas_digitos, 5, 6),
-            NA_character_
-        )
     )
 
     dados_cnes$competencia_data_referencia <- as.Date(
-        paste0(gsub("-", "", dados_cnes$competencia_aaaamm), "01"),
+        ifelse(
+            competencia_valida,
+            paste0(competencia_ano, competencia_mes, "01"),
+            NA_character_
+        ),
         format = "%Y%m%d"
     )
 
