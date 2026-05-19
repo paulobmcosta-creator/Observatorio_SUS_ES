@@ -21,6 +21,7 @@ colunas_obrigatorias <- c(
   "usar_observatorio", "prioridade", "fonte_cnes", "fonte_normativa",
   "criterio_classificacao", "status_validacao", "observacao"
 )
+if (length(setdiff(unique(classificacao$linha_cuidado), linhas_validas)) > 0) stop("linha_cuidado contém valor não permitido.")
 
 faltantes <- setdiff(colunas_obrigatorias, names(classificacao))
 if (length(faltantes) > 0) stop("Colunas obrigatórias ausentes: ", paste(faltantes, collapse = ", "))
