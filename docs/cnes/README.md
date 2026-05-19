@@ -153,6 +153,16 @@ Rscript src/transform/executar_pipeline_piloto_cnes.R
 
 O workflow `.github/workflows/validar_pipeline_cnes_r.yml` configura explicitamente o R com `r-lib/actions/setup-r@v2` antes de qualquer comando `Rscript`. O job também verifica `R`, `Rscript`, suas versões e `sessionInfo()` antes de instalar/preparar as dependências declaradas em `config/dependencias_r.csv` e executar os testes de estrutura, unitários e de integração do módulo CNES.
 
+
+## Auditoria leve de consistência (referências cruzadas)
+
+Status desta revisão documental:
+
+- Referências entre `docs/cnes/README.md` e arquivos centrais do módulo CNES: **válidas** (`src/extract/`, `src/transform/`, `src/validation/`, `src/indicators/`, `metadata/cnes/` e `tests/`).
+- Coerência entre metadados do piloto e testes de metadados: **válida** (`metadata/cnes/schema_cnes_piloto.yml`, `metadata/cnes/dicionario_cnes_piloto.csv`, `docs/cnes/metadados_cnes_piloto.md` e `tests/test_metadata_cnes.R`).
+
+Esta seção deve ser atualizada sempre que houver mudança de caminho, renomeação de arquivo, inclusão de novo artefato obrigatório de metadados ou alteração de escopo dos testes do piloto.
+
 ## Limitações atuais
 
 - Piloto técnico para CSV; não cobre ainda múltiplos formatos CNES, como DBC ou DBF.
