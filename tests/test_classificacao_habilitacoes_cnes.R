@@ -1,85 +1,60 @@
-# Teste estrutural da classificação temática de habilitações CNES.
-# Usa apenas R base para evitar dependências externas.
+# Testes do Ciclo 1 - classificação de habilitações CNES
 
-arquivo_classificacao <- file.path("metadata", "cnes", "classificacao_habilitacoes_cnes.csv")
-arquivo_documentacao <- file.path("docs", "cnes", "classificacao_habilitacoes_cnes.md")
+arquivo <- file.path("metadata", "cnes", "classificacao_habilitacoes_cnes.csv")
 
-if (!file.exists(arquivo_classificacao)) {
-  stop("Arquivo de classificação de habilitações CNES não encontrado.")
-}
+if (!file.exists(arquivo)) stop("Arquivo metadata/cnes/classificacao_habilitacoes_cnes.csv não encontrado.")
 
-if (!file.exists(arquivo_documentacao)) {
-  stop("Documentação da classificação de habilitações CNES não encontrada.")
-}
-
-classificacao <- read.csv(
-  arquivo_classificacao,
-  stringsAsFactors = FALSE,
-  na.strings = c("", "NA"),
-  check.names = FALSE,
-  fileEncoding = "UTF-8"
-)
-
-colunas_obrigatorias <- c(
-  "codigo_habilitacao",
-  "descricao_habilitacao",
-  "linha_cuidado",
-  "grupo_tematico",
-  "subgrupo",
-  "tipo_componente",
-  "prioridade_observatorio",
-  "fonte_referencia",
-  "observacao_metodologica"
-)
-
-if (!identical(names(classificacao), colunas_obrigatorias)) {
-  stop(
-    "Colunas da classificação não correspondem exatamente ao contrato esperado.\n",
-    "Esperado: ", paste(colunas_obrigatorias, collapse = ", "), "\n",
-    "Encontrado: ", paste(names(classificacao), collapse = ", ")
+ler_tentativa <- function(encoding) {
+  tryCatch(
+    read.csv2(arquivo, stringsAsFactors = FALSE, fileEncoding = encoding, check.names = FALSE),
+    error = function(e) NULL
   )
 }
 
-linhas_cuidado_minimas <- c(
-  "oncologia",
-  "cardiologia",
-  "rede_urgencia_emergencia",
-  "uti_cuidado_critico",
-  "diagnostico_apoio_terapeutico",
-  "terapia_renal_substitutiva",
-  "reabilitacao"
+classificacao <- ler_tentativa("UTF-8")
+if (is.null(classificacao)) classificacao <- ler_tentativa("Latin1")
+if (is.null(classificacao)) stop("Falha ao ler arquivo de classificação (encoding).")
+
+colunas_obrigatorias <- c(
+  "codigo_habilitacao", "tipo_habilitacao", "descricao_habilitacao", "origem_habilitacao",
+  "linha_cuidado", "sublinha_cuidado", "componente_rede", "nivel_complexidade",
+  "usar_observatorio", "prioridade", "fonte_cnes", "fonte_normativa",
+  "criterio_classificacao", "status_validacao", "observacao"
 )
 
-linhas_ausentes <- setdiff(linhas_cuidado_minimas, unique(classificacao$linha_cuidado))
-if (length(linhas_ausentes) > 0) {
-  stop("Linhas de cuidado mínimas ausentes: ", paste(linhas_ausentes, collapse = ", "))
+faltantes <- setdiff(colunas_obrigatorias, names(classificacao))
+if (length(faltantes) > 0) stop("Colunas obrigatórias ausentes: ", paste(faltantes, collapse = ", "))
+
+if (any(is.na(classificacao$codigo_habilitacao) | trimws(classificacao$codigo_habilitacao) == "")) stop("codigo_habilitacao vazio encontrado.")
+if (any(is.na(classificacao$tipo_habilitacao) | trimws(classificacao$tipo_habilitacao) == "")) stop("tipo_habilitacao vazio encontrado.")
+
+chave <- paste(classificacao$codigo_habilitacao, classificacao$tipo_habilitacao, sep = "__")
+if (any(duplicated(chave))) stop("Duplicidade encontrada na chave composta codigo_habilitacao + tipo_habilitacao.")
+
+linhas_validas <- c(
+  "Oncologia", "Cardiovascular", "RUE", "UTI / cuidado crítico", "Nefrologia",
+  "Saúde mental", "Outras habilitações estratégicas", "Fora do escopo inicial", "Revisar"
+)
+if (length(setdiff(unique(classificacao$linha_cuidado), linhas_validas)) > 0) stop("linha_cuidado contém valor não permitido.")
+
+if (length(setdiff(unique(classificacao$usar_observatorio), c("Sim", "Não"))) > 0) stop("usar_observatorio inválido.")
+if (length(setdiff(unique(classificacao$prioridade), c("Alta", "Média", "Baixa"))) > 0) stop("prioridade inválida.")
+
+
+status_validacao_validos <- c("revisar", "validado")
+if (length(setdiff(unique(classificacao$status_validacao), status_validacao_validos)) > 0) stop("status_validacao inválido.")
+
+sel_sim <- classificacao$usar_observatorio == "Sim"
+req_sim <- c("linha_cuidado", "sublinha_cuidado", "criterio_classificacao", "status_validacao")
+for (c in req_sim) {
+  if (any(is.na(classificacao[sel_sim, c]) | trimws(classificacao[sel_sim, c]) == "")) {
+    stop("Registros com usar_observatorio == 'Sim' possuem campos obrigatórios vazios: ", c)
+  }
 }
 
-if (any(is.na(classificacao$descricao_habilitacao) | trimws(classificacao$descricao_habilitacao) == "")) {
-  stop("Existem linhas com descricao_habilitacao vazia.")
+sel_alta <- classificacao$prioridade == "Alta"
+if (any(is.na(classificacao$criterio_classificacao[sel_alta]) | trimws(classificacao$criterio_classificacao[sel_alta]) == "")) {
+  stop("Registros com prioridade == 'Alta' devem ter criterio_classificacao preenchido.")
 }
 
-if (any(is.na(classificacao$linha_cuidado) | trimws(classificacao$linha_cuidado) == "")) {
-  stop("Existem linhas com linha_cuidado vazia.")
-}
-
-prioridades_validas <- c("alta", "media", "baixa")
-prioridades_invalidas <- setdiff(unique(classificacao$prioridade_observatorio), prioridades_validas)
-if (length(prioridades_invalidas) > 0) {
-  stop("Valores inválidos em prioridade_observatorio: ", paste(prioridades_invalidas, collapse = ", "))
-}
-
-if (!any(classificacao$prioridade_observatorio == "alta")) {
-  stop("A classificação deve conter pelo menos uma linha com prioridade alta.")
-}
-
-if (!any(classificacao$codigo_habilitacao == "codigo_a_confirmar")) {
-  stop("A classificação deve conter pelo menos uma linha com codigo_habilitacao igual a codigo_a_confirmar.")
-}
-
-documentacao <- paste(readLines(arquivo_documentacao, warn = FALSE, encoding = "UTF-8"), collapse = "\n")
-if (!grepl("codigo_a_confirmar", documentacao, fixed = TRUE)) {
-  stop("A documentação deve mencionar explicitamente codigo_a_confirmar.")
-}
-
-message("Teste da classificação de habilitações CNES executado com sucesso.")
+message("OK: testes de classificação de habilitações CNES passaram.")
