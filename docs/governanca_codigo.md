@@ -5,7 +5,7 @@ A governança de código deste repositório visa garantir que o processo de dese
 ## Estrutura de Branches
 
 1. **`main`**: contém o código estável e pronto para produção ou divulgação. Cada commit em `main` deve corresponder a uma versão coerente e funcional do projeto.
-2. **Branches de Funcionalidade (`feature/nome-funcao`)**: usadas para desenvolver novas funcionalidades ou indicadores específicos. Devem derivar de `main` ou de um branch de desenvolvimento.
+2. **Branches de Funcionalidade (`feat/nome-funcao`)**: usadas para desenvolver novas funcionalidades ou indicadores específicos. Devem derivar de `main` ou de um branch de desenvolvimento.
 3. **Branches de Correção (`fix/nome-correção`)**: destinam-se à resolução de bugs de alta prioridade.
 4. **Branches de Manutenção (`chore/nome-tarefa`)**: para tarefas menores de manutenção (atualização de dependências, limpeza de código).
 5. **Branches de Documentação (`docs/tema`)**: dedicados a alterações na documentação.
@@ -22,6 +22,11 @@ Evite trabalhar diretamente na `main`. Ao iniciar uma nova tarefa, crie um branc
   2. A documentação foi atualizada conforme necessário?
   3. As mensagens de commit seguem o padrão estabelecido?
   4. Há novos testes cobrindo as alterações?
+
+* **Checklist documental obrigatório no PR**:
+  1. Links internos válidos (sem referências quebradas em Markdown).
+  2. Comandos executados para validação local, com resultado registrado (sucesso/falha/limitação).
+  3. Limitações de ambiente explicitadas de forma objetiva quando impedirem execução completa.
 
 Após aprovação, o autor é responsável por realizar o merge. Prefira merges *squash* para manter o histórico limpo.
 
