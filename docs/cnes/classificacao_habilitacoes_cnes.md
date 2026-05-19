@@ -1,82 +1,94 @@
-# Classificação de Habilitações e Serviços Especializados do CNES
+# Classificação de habilitações CNES/SIPAC por linha de cuidado (Ciclo 1)
 
-## 1. Finalidade
+## Objetivo do Ciclo 1
 
-Esta classificação organiza referências CNES e correlatas relevantes para a análise da oferta especializada no Observatório SUS-ES. A tabela deixou de ser apenas uma lista de “habilitações” e passou a explicitar a natureza de cada referência, distinguindo habilitação, serviço especializado, equipamento, leito, tipo de estabelecimento, componente de rede, procedimento SIGTAP, ocupação CBO, conceito metodológico ou outro item ainda a confirmar.
+O Ciclo 1 cria uma **camada de metadados analítica** para classificar habilitações CNES/SIPAC por linha de cuidado no Observatório SUS-ES. Esta camada **não é tabela oficial do Ministério da Saúde** e não produz, neste ciclo, base final de estabelecimentos habilitados nem indicadores.
 
-O objetivo é reduzir ambiguidade antes da automação. A classificação ainda não aplica regras aos dados CNES, não calcula indicadores e não deve ser usada como mapeamento operacional definitivo sem validação normativa posterior.
+## Arquivos CNES usados
 
-## 2. Por que distinguir `tipo_referencia_cnes`
+Competência de referência: **202601**.
 
-Nem todo item relevante para o Observatório é uma habilitação CNES estrita. Alguns elementos necessários para analisar a oferta especializada pertencem a outras dimensões do CNES ou a bases relacionadas. Por exemplo, UTI adulto é melhor tratada como referência de leito/capacidade hospitalar; tomografia computadorizada e mamografia são equipamentos; UPA pode ser tipo de estabelecimento ou componente da rede de urgência; procedimentos endovasculares podem depender de regras SIGTAP; e “componentes habilitados da RUE” é uma categoria metodológica que ainda precisa ser traduzida em códigos e regras específicas.
+- Domínio de habilitações: `metadata/cnes/tbSubGruposHabilitacao202601.csv`
+- Tabela relacional de habilitações por estabelecimento: `metadata/cnes/rlEstabSipac202601.csv`
 
-A coluna `tipo_referencia_cnes` evita que esses itens sejam tratados indevidamente como se todos fossem habilitações. Ela também ajuda a planejar futuras bases tabulares específicas por entidade: habilitações, serviços, equipamentos, leitos, estabelecimentos e componentes de rede.
+## Domínio x Relacional
 
-## 3. Estrutura da tabela
+- `tbSubGruposHabilitacao202601.csv` é tabela de domínio (catálogo de códigos/descrições/tipos/origem).
+- `rlEstabSipac202601.csv` é tabela relacional (vínculo entre estabelecimento CNES e habilitação no tempo).
 
-A tabela de referência está no arquivo `metadata/cnes/classificacao_habilitacoes_cnes.csv`. Ela possui as seguintes colunas:
+Neste ciclo foi construída apenas a classificação de metadados sobre o domínio.
 
-- `id_classificacao`: identificador textual único e estável da linha de classificação, em snake_case.
-- `tipo_referencia_cnes`: natureza da referência no CNES ou em base relacionada, com valores controlados.
-- `codigo_referencia`: código oficial quando confirmado. Quando não houver confirmação segura, usa `codigo_a_confirmar`; quando o item for conceitual e não tiver código aplicável, usa `nao_aplicavel`.
-- `status_codigo`: situação do código informado.
-- `descricao_referencia`: descrição textual do item classificado.
-- `linha_cuidado`: linha de cuidado principal associada ao item.
-- `grupo_tematico`: agrupamento analítico mais amplo.
-- `subgrupo`: detalhamento interno da linha de cuidado.
-- `tipo_componente`: tipo de componente da rede ou da oferta.
-- `prioridade_observatorio`: prioridade analítica inicial para o Observatório SUS-ES, com valores `alta`, `media` ou `baixa`.
-- `fonte_referencia`: fonte normativa, técnica ou metodológica usada ou ainda pendente de validação.
-- `observacao_metodologica`: ressalvas de interpretação, natureza da referência e limites para uso operacional.
+## Chave composta obrigatória
 
-Os valores permitidos para `tipo_referencia_cnes` são: `habilitacao`, `servico_especializado`, `equipamento`, `leito`, `tipo_estabelecimento`, `componente_rede`, `procedimento_sigtap`, `ocupacao_cbo`, `conceito_metodologico` e `outro_a_confirmar`.
+A identificação de habilitação **não usa apenas código**. A chave correta é composta por:
 
-## 4. Status do código
+- `codigo_habilitacao` (`CO_CODIGO_GRUPO`)
+- `tipo_habilitacao` (`TP_HABILITACAO`)
 
-A coluna `status_codigo` diferencia a situação do código usado na linha:
+Justificativa: o mesmo código pode exigir distinção por tipo para evitar colisões semânticas e erros de join na aplicação posterior da classificação ao `rlEstabSipac`.
 
-- `confirmado`: código oficial validado em fonte normativa ou técnica confiável.
-- `a_confirmar`: código ainda não validado; nesses casos, `codigo_referencia` deve permanecer como `codigo_a_confirmar`.
-- `nao_aplicavel`: usado quando o item não possui código aplicável na tabela de referência proposta.
-- `conceitual`: usado quando a linha representa uma categoria metodológica, como um agrupamento analítico, e não um código CNES estrito.
+## Arquivo gerado
 
-Nesta versão, os códigos oficiais ainda não foram confirmados. Por isso, referências operacionais permanecem com `codigo_a_confirmar` e itens conceituais usam `nao_aplicavel` quando apropriado.
+- `metadata/cnes/classificacao_habilitacoes_cnes.csv`
 
-## 5. Uso previsto
+Colunas mínimas:
 
-A tabela será usada futuramente para orientar:
+- `codigo_habilitacao`
+- `tipo_habilitacao`
+- `descricao_habilitacao`
+- `origem_habilitacao`
+- `linha_cuidado`
+- `sublinha_cuidado`
+- `componente_rede`
+- `nivel_complexidade`
+- `usar_observatorio` (Sim/Não)
+- `prioridade` (Alta/Média/Baixa)
+- `fonte_cnes`
+- `fonte_normativa`
+- `criterio_classificacao`
+- `status_validacao`
+- `observacao`
 
-- separação entre habilitações, serviços especializados, equipamentos, leitos, tipos de estabelecimento e componentes de rede;
-- validação normativa de códigos oficiais;
-- criação de função R para aplicar a classificação apenas após validação suficiente;
-- geração de bases tabulares específicas por entidade;
-- cálculo futuro de indicadores especializados;
-- identificação de vazios assistenciais e concentração territorial.
+## Linhas de cuidado utilizadas
 
-A tabela ainda não deve ser aplicada automaticamente a bases reais sem validação normativa posterior, especialmente nas linhas com `codigo_a_confirmar`, `conceito_metodologico` ou `outro_a_confirmar`.
+- Oncologia
+- Cardiovascular
+- RUE
+- UTI / cuidado crítico
+- Nefrologia
+- Saúde mental
+- Outras habilitações estratégicas
+- Fora do escopo inicial
+- Revisar
 
-## 6. Limitações
+## Critérios de classificação
 
-Esta classificação possui limitações importantes:
+Classificação inicial baseada em leitura textual da `descricao_habilitacao` e categorização conservadora:
 
-- códigos oficiais ainda precisam ser validados;
-- itens conceituais não devem ser confundidos com códigos CNES;
-- equipamentos, leitos e serviços podem exigir bases CNES diferentes;
-- componentes de rede podem depender de portarias, regras assistenciais e tabelas auxiliares;
-- a classificação não substitui documentação oficial;
-- a classificação serve como primeira camada metodológica de organização da oferta especializada.
+1. Casos com correspondência clara às linhas prioritárias recebem `usar_observatorio = Sim`.
+2. Casos sem correspondência clara ficam como `Fora do escopo inicial` ou `Revisar`.
+3. Casos ambíguos permanecem com `status_validacao = revisar`.
+4. `fonte_normativa` foi mantida como `Revisar` até validação normativa dedicada.
 
-A presença de uma referência em determinada linha de cuidado não demonstra funcionamento real, produção, acesso, suficiência ou qualidade. A classificação organiza a leitura estrutural da oferta e deverá ser refinada com documentação oficial do CNES, SIGTAP, manuais técnicos e portarias ministeriais.
+## Limitações metodológicas
 
-## 7. Próximos passos
+- Classificação preliminar, com foco analítico e rastreabilidade.
+- Não substitui referência oficial do MS.
+- Não deve ser usada para inferência substantiva sem validação normativa.
+- Não aplica, neste ciclo, regra de vigência temporal (`CMTP_INICIO`/`CMTP_FIM`) da relacional.
 
-Os próximos passos recomendados são:
+## Próximos passos
 
-- validar códigos oficiais;
-- ampliar linhas de cuidado;
-- criar função R para aplicar a classificação;
-- gerar base tabular de habilitações;
-- criar indicadores de habilitações e serviços especializados;
-- cruzar com produção ambulatorial e hospitalar.
+- **Ciclo 2**: construir base tabular de estabelecimentos CNES do ES.
+- **Ciclo 3**: aplicar esta classificação ao `rlEstabSipac` por chave composta (`codigo_habilitacao` + `tipo_habilitacao`).
 
-A evolução desta classificação deve manter rastreabilidade das alterações, controle de versão da tabela de referência e documentação dos critérios de inclusão, exclusão e agrupamento de códigos.
+
+## Refinamento analítico (Ciclo 1 - revisão)
+
+Nesta revisão do Ciclo 1, foram refinados `sublinha_cuidado`, `componente_rede`, `nivel_complexidade` e `criterio_classificacao` apenas quando a descrição da habilitação permitiu inferência segura (por exemplo: CACON, UNACON, UPA, SAMU, UTI neonatal, hemodiálise).
+
+Regras de validação metodológica nesta etapa:
+
+- manter `A definir` quando a descrição não for inequívoca;
+- manter `status_validacao = revisar` quando houver dúvida;
+- usar `status_validacao = validado` apenas em descrições explícitas e de baixa ambiguidade textual.
