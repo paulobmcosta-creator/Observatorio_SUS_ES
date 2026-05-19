@@ -21,7 +21,6 @@ colunas_obrigatorias <- c(
   "usar_observatorio", "prioridade", "fonte_cnes", "fonte_normativa",
   "criterio_classificacao", "status_validacao", "observacao"
 )
-if (length(setdiff(unique(classificacao$linha_cuidado), linhas_validas)) > 0) stop("linha_cuidado contém valor não permitido.")
 
 faltantes <- setdiff(colunas_obrigatorias, names(classificacao))
 if (length(faltantes) > 0) stop("Colunas obrigatórias ausentes: ", paste(faltantes, collapse = ", "))
@@ -41,6 +40,24 @@ if (length(setdiff(unique(classificacao$linha_cuidado), linhas_validas)) > 0) st
 if (length(setdiff(unique(classificacao$usar_observatorio), c("Sim", "Não"))) > 0) stop("usar_observatorio inválido.")
 if (length(setdiff(unique(classificacao$prioridade), c("Alta", "Média", "Baixa"))) > 0) stop("prioridade inválida.")
 
+
+status_validacao_validos <- c("revisar", "validado")
+if (length(setdiff(unique(classificacao$status_validacao), status_validacao_validos)) > 0) stop("status_validacao inválido.")
+
+
+sim <- classificacao[classificacao$usar_observatorio == "Sim", ]
+if (nrow(sim) > 0) {
+  if (!any(sim$sublinha_cuidado != "A definir")) {
+    stop("Esperado refinamento em sublinha_cuidado para ao menos um registro com usar_observatorio == 'Sim'.")
+  }
+  if (!any(sim$componente_rede != "A definir")) {
+    stop("Esperado refinamento em componente_rede para ao menos um registro com usar_observatorio == 'Sim'.")
+  }
+}
+if (!any(classificacao$status_validacao == "validado")) {
+  stop("Esperado ao menos um registro com status_validacao == 'validado'.")
+}
+
 sel_sim <- classificacao$usar_observatorio == "Sim"
 req_sim <- c("linha_cuidado", "sublinha_cuidado", "criterio_classificacao", "status_validacao")
 for (c in req_sim) {
@@ -55,3 +72,14 @@ if (any(is.na(classificacao$criterio_classificacao[sel_alta]) | trimws(classific
 }
 
 message("OK: testes de classificação de habilitações CNES passaram.")
+
+
+
+source(file.path("src", "transform", "classificar_habilitacoes_cnes.R"))
+
+base_teste <- classificacao[1:2, c("codigo_habilitacao", "tipo_habilitacao")]
+resultado_teste <- classificar_habilitacoes_cnes(base_teste, classificacao)
+campos_esperados_funcao <- c("nivel_complexidade", "criterio_classificacao", "status_validacao")
+if (length(setdiff(campos_esperados_funcao, names(resultado_teste))) > 0) {
+  stop("Função classificar_habilitacoes_cnes não retornou todos os campos adicionais esperados.")
+}

@@ -14,7 +14,7 @@ classificar_habilitacoes_cnes <- function(base_habilitacoes, classificacao) {
     stop("classificacao sem colunas obrigatórias: codigo_habilitacao e tipo_habilitacao.")
   }
 
-  colunas_retorno <- c("codigo_habilitacao", "tipo_habilitacao", "linha_cuidado", "sublinha_cuidado", "componente_rede", "usar_observatorio", "prioridade")
+  colunas_retorno <- c("codigo_habilitacao", "tipo_habilitacao", "linha_cuidado", "sublinha_cuidado", "componente_rede", "nivel_complexidade", "usar_observatorio", "prioridade", "criterio_classificacao", "status_validacao")
   ausentes_retorno <- setdiff(colunas_retorno, names(classificacao))
   if (length(ausentes_retorno) > 0) {
     stop("classificacao sem colunas esperadas para enriquecimento: ", paste(ausentes_retorno, collapse = ", "))
