@@ -43,6 +43,18 @@ Rscript -e 'sessionInfo()'
 
 Se `Rscript: command not found` aparecer, o runtime R não está instalado ou o executável não está no `PATH`. Nesse caso, corrija a instalação local antes de rodar os testes.
 
+
+## Sequência padrão de validação local (passo a passo)
+
+Execute a sequência abaixo, sempre na raiz do repositório:
+
+1. Verificar runtime R e `Rscript` no ambiente.
+2. Instalar/preparar dependências do projeto.
+3. Executar a bateria de testes unitários e de integração CNES.
+4. (Opcional) Executar manualmente o pipeline piloto com arquivos válidos em `data_raw/cnes/`.
+
+Essa ordem reduz falsos negativos e melhora rastreabilidade da validação.
+
 ## Instalação/preparo de dependências
 
 A partir da raiz do repositório, execute:
@@ -76,6 +88,14 @@ Rscript src/transform/executar_pipeline_piloto_cnes.R
 ```
 
 Essa execução manual usa os caminhos padrão documentados no contrato de dados do piloto CNES.
+
+
+## Troubleshooting rápido
+
+- **`Rscript: command not found`**: instalar R e garantir `Rscript` no `PATH`; reabrir o terminal e repetir a verificação rápida.
+- **Falha ao instalar pacotes**: revisar conectividade de rede/permissões e repetir `Rscript scripts/instalar_dependencias_r.R`.
+- **Falha em testes por caminho**: confirmar execução a partir da raiz do repositório e existência dos diretórios esperados.
+
 
 ## Execução em GitHub Actions
 
