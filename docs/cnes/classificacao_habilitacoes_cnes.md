@@ -81,14 +81,3 @@ Classificação inicial baseada em leitura textual da `descricao_habilitacao` e 
 
 - **Ciclo 2**: construir base tabular de estabelecimentos CNES do ES.
 - **Ciclo 3**: aplicar esta classificação ao `rlEstabSipac` por chave composta (`codigo_habilitacao` + `tipo_habilitacao`).
-
-
-## Refinamento analítico (Ciclo 1 - revisão)
-
-Nesta revisão do Ciclo 1, foram refinados `sublinha_cuidado`, `componente_rede`, `nivel_complexidade` e `criterio_classificacao` apenas quando a descrição da habilitação permitiu inferência segura (por exemplo: CACON, UNACON, UPA, SAMU, UTI neonatal, hemodiálise).
-
-Regras de validação metodológica nesta etapa:
-
-- manter `A definir` quando a descrição não for inequívoca;
-- manter `status_validacao = revisar` quando houver dúvida;
-- usar `status_validacao = validado` apenas em descrições explícitas e de baixa ambiguidade textual.
