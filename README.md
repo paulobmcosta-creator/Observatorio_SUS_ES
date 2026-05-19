@@ -17,8 +17,6 @@ Observatorio_SUS_ES/
 │ ├── transform/ # Rotinas de limpeza e padronização
 │ ├── indicators/ # Cálculo de métricas epidemiológicas
 │ └── validation/ # Scripts de validação e testes de consistência
-├── dashboards/ # Códigos e assets de dashboards interativos
-├── maps/ # Scripts e arquivos para mapas geoespaciais
 ├── tests/ # Testes automatizados do pipeline
 ├── docs/ # Documentação detalhada (governança, metodologia, fluxo)
 │ ├── governanca_codigo.md
@@ -35,8 +33,8 @@ Observatorio_SUS_ES/
 2. **Transformação (`src/transform`)** – Funções para limpeza, normalização e integração de diferentes bases. Resultados intermediários são salvos em `data_interim/`.
 3. **Indicadores (`src/indicators`)** – Implementações de indicadores de saúde (incidência, prevalência, letalidade, cobertura vacinal, entre outros) com fórmulas explícitas e referências metodológicas.
 4. **Validação (`src/validation`)** – Scripts que verificam a consistência dos dados (checagem de valores extremos, comparações temporais/geográficas) e testes unitários automatizados em `tests/`.
-5. **Visualizações (`dashboards/` e `maps/`)** – Códigos para construir painéis interativos e mapas georreferenciados, possibilitando a interpretação dos indicadores por diversos públicos.
-6. **Documentação (`docs/`)** – Textos descritivos sobre governança de código, convenções metodológicas e fluxo de trabalho para que novos colaboradores possam se orientar.
+5. **Documentação (`docs/`)** – Textos descritivos sobre governança de código, convenções metodológicas, fluxo de trabalho e documentação técnica do CNES.
+6. **Metadados (`metadata/`)** – Dicionários e esquemas usados para garantir padronização e rastreabilidade dos dados.
 
 ## Linguagem principal e ecossistema
 
@@ -51,6 +49,20 @@ Para o piloto CNES em R, consulte:
 - guia de setup local: `docs/cnes/setup_execucao_local_r.md`;
 - dependências declaradas: `config/dependencias_r.csv`;
 - workflow de validação contínua: `.github/workflows/validar_pipeline_cnes_r.yml`.
+
+
+## Status atual do pipeline CNES
+
+O repositório já possui um piloto funcional em R para o CNES, com componentes de extração, transformação, indicadores e validação, além de testes automatizados específicos. Para detalhes do escopo e artefatos do piloto, consulte `docs/cnes/README.md`.
+
+Arquivos centrais do piloto:
+
+- `src/extract/ler_arquivos_cnes.R`
+- `src/transform/padronizar_cnes_interim.R`
+- `src/transform/executar_pipeline_piloto_cnes.R`
+- `src/indicators/calcular_indicadores_cnes_oferta.R`
+- `src/validation/validar_pipeline_cnes.R`
+- `tests/` (testes unitários e integração do piloto CNES)
 
 ## Como Contribuir
 
