@@ -11,8 +11,8 @@ ler_tentativa <- function(encoding) {
   )
 }
 
-classificacao <- ler_tentativa("Latin1")
-if (is.null(classificacao)) classificacao <- ler_tentativa("UTF-8")
+classificacao <- ler_tentativa("UTF-8")
+if (is.null(classificacao)) classificacao <- ler_tentativa("Latin1")
 if (is.null(classificacao)) stop("Falha ao ler arquivo de classificação (encoding).")
 
 colunas_obrigatorias <- c(
