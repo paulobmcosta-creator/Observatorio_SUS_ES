@@ -40,10 +40,6 @@ if (length(setdiff(unique(classificacao$linha_cuidado), linhas_validas)) > 0) st
 if (length(setdiff(unique(classificacao$usar_observatorio), c("Sim", "Não"))) > 0) stop("usar_observatorio inválido.")
 if (length(setdiff(unique(classificacao$prioridade), c("Alta", "Média", "Baixa"))) > 0) stop("prioridade inválida.")
 
-
-status_validacao_validos <- c("revisar", "validado")
-if (length(setdiff(unique(classificacao$status_validacao), status_validacao_validos)) > 0) stop("status_validacao inválido.")
-
 sel_sim <- classificacao$usar_observatorio == "Sim"
 req_sim <- c("linha_cuidado", "sublinha_cuidado", "criterio_classificacao", "status_validacao")
 for (c in req_sim) {
