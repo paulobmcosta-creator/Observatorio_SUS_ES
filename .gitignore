@@ -9,8 +9,6 @@ venv/
 env/
 
 # Dados brutos e intermediários (exceto arquivos de placeholder)
-data_raw/*
-!data_raw/.gitkeep
 data_interim/*
 !data_interim/.gitkeep
 data_processed/*
