@@ -11,6 +11,9 @@ env/
 # Dados brutos e intermediários (exceto arquivos de placeholder)
 data_interim/*
 !data_interim/.gitkeep
+!data_interim/cnes/
+!data_interim/cnes/estabelecimentos/
+!data_interim/cnes/estabelecimentos/cnes_estabelecimentos_es_202601.csv
 data_processed/*
 !data_processed/.gitkeep
 
