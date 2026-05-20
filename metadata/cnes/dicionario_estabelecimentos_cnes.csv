@@ -1,0 +1,18 @@
+nome_campo,descricao,fonte_original,transformacao_aplicada,observacao_metodologica
+competencia,Competência de referência do CNES,parâmetro competencia,Cópia direta,Formato AAAAMM
+cnes,Código CNES do estabelecimento,tbEstabelecimento,Preservado como texto,Uma linha por CNES
+nome_estabelecimento,Nome fantasia do estabelecimento,tbEstabelecimento,Mapeamento de coluna equivalente,Campo pode variar conforme layout
+razao_social,Razão social,tbEstabelecimento,Mapeamento de coluna equivalente,Pode estar ausente em alguns layouts
+cod_municipio,Código do município de gestão,tbEstabelecimento,Preservado como texto e usado no filtro territorial,Filtro ES aplicado antes de qualquer join
+municipio,Nome do município,tbMunicipio,Join por código do município,Somente municípios do ES
+uf,Sigla da UF,parâmetro uf_interesse,Valor fixo da execução,Esperado ES no Ciclo 2
+tipo_estabelecimento,Descrição do tipo,tbTipoEstabelecimento,Join por código de tipo,NA quando sem correspondência
+subtipo_estabelecimento,Descrição agregada de subtipos,rlEstabSubTipo + tbSubTipo,Agregação de valores únicos por CNES com separador |,Evita duplicidade por relacionamento N:N
+natureza_juridica,Descrição da natureza jurídica,tbNaturezaJuridica,Join por código,NA quando não informado
+gestao,Descrição da gestão,tbGestao,Join por código,NA quando não informado
+atende_sus,Indicador categórico de vínculo SUS,rlEstabAtendPrestConv + dicionários,Regra categórica Sim/Revisar,Não usado valor Não por ausência de regra robusta explícita
+atendimento_prestado,Descrição agregada de atendimentos,rlEstabAtendPrestConv + tbAtendimentoPrestado,Agregação de valores únicos por CNES,NA quando sem relacionamento
+convenio,Descrição agregada de convênios,rlEstabAtendPrestConv + tbConvenio,Agregação de valores únicos por CNES,NA quando sem relacionamento
+fonte,Fonte do dataset,derivado,Valor fixo CNES,Rastreabilidade
+arquivo_origem,Tabela mãe do ciclo,derivado,Valor fixo tbEstabelecimento202601,Rastreabilidade
+data_processamento,Data da geração,derivado,Sys.Date,Dependente do dia da execução
