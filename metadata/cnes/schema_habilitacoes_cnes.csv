@@ -1,0 +1,32 @@
+nome_campo,tipo,obrigatorio,descricao,regra_preenchimento,exemplo,origem
+competencia,texto,sim,Competência CNES no formato AAAAMM,Parâmetro da função preparar_habilitacoes_cnes,202601,parâmetro
+cnes,texto,sim,Código CNES do estabelecimento,Filtrado para CNES presentes na base ES,1234567,rlEstabSipac + base_estabelecimentos
+nome_estabelecimento,texto,sim,Nome do estabelecimento,Join por cnes com base de estabelecimentos,Hospital X,base_estabelecimentos
+cod_municipio,texto,sim,Código do município,Join por cnes com base de estabelecimentos,3205309,base_estabelecimentos
+municipio,texto,sim,Nome do município,Join por cnes com base de estabelecimentos,Vitória,base_estabelecimentos
+uf,texto,sim,UF do estabelecimento,Esperado ES no ciclo 3,ES,base_estabelecimentos
+tipo_estabelecimento,texto,nao,Tipo do estabelecimento,Join por cnes com base de estabelecimentos,Hospital Geral,base_estabelecimentos
+subtipo_estabelecimento,texto,nao,Subtipo do estabelecimento,Join por cnes com base de estabelecimentos,Hospital Especializado,base_estabelecimentos
+natureza_juridica,texto,nao,Natureza jurídica,Join por cnes com base de estabelecimentos,Administração Pública,base_estabelecimentos
+gestao,texto,nao,Gestão do estabelecimento,Join por cnes com base de estabelecimentos,Municipal,base_estabelecimentos
+atende_sus,texto,nao,Classificação do atendimento SUS,Cópia da base de estabelecimentos,Sim,base_estabelecimentos
+codigo_habilitacao,texto,sim,Código da habilitação,COD_SUB_GRUPO_HABILITACAO preservado como texto,9306,rlEstabSipac
+tipo_habilitacao,texto,sim,Tipo da habilitação,TP_HABILITACAO preservado como texto,R,rlEstabSipac
+descricao_habilitacao,texto,nao,Descrição oficial da habilitação,Join por chave composta,tbSubGruposHabilitacao,tbSubGruposHabilitacao
+origem_habilitacao,texto,nao,Origem da habilitação,Join por chave composta, ,tbSubGruposHabilitacao
+linha_cuidado,texto,sim,Linha de cuidado analítica,Join por chave composta; fallback Não classificada,RUE,classificação ciclo 1
+sublinha_cuidado,texto,nao,Sublinha de cuidado,Join por chave composta,UPA,classificação ciclo 1
+componente_rede,texto,nao,Componente de rede,Join por chave composta,Unidade de Pronto Atendimento,classificação ciclo 1
+nivel_complexidade,texto,nao,Nível de complexidade,Join por chave composta,Média/Alta,classificação ciclo 1
+usar_observatorio,texto,sim,Flag para uso analítico,Join por chave composta; fallback Não,Sim,classificação ciclo 1
+prioridade,texto,nao,Prioridade analítica,Join por chave composta,Alta,classificação ciclo 1
+criterio_classificacao,texto,nao,Critério da classificação analítica,Join por chave composta,Descrição contém UPA,classificação ciclo 1
+status_validacao,texto,sim,Status de validação,Join por chave composta; fallback revisar,validado,classificação ciclo 1
+competencia_inicio,texto,nao,Competência de início da habilitação,CMTP_INICIO,012024,rlEstabSipac
+competencia_fim,texto,nao,Competência fim da habilitação,CMTP_FIM,999999,rlEstabSipac
+numero_leitos,texto,nao,Número de leitos informado no registro,NU_LEITOS,10,rlEstabSipac
+portaria,texto,nao,Portaria associada à habilitação,NO_PORTARIA,PORTARIA 123,rlEstabSipac
+data_atualizacao,texto,nao,Data de atualização do registro,TO_CHAR(DT_ATUALIZACAO,'DD/MM/YYYY'),20/01/2026,rlEstabSipac
+fonte,texto,sim,Fonte dos dados,Valor fixo CNES,CNES,derivado
+arquivo_origem,texto,sim,Arquivo relacional principal,Valor fixo rlEstabSipacAAAAMM,rlEstabSipac202601,derivado
+data_processamento,texto,sim,Data do processamento,Sys.Date no momento da execução,2026-05-21,derivado

@@ -4,8 +4,18 @@ source(script)
 if (!exists("preparar_estabelecimentos_cnes")) stop("Função preparar_estabelecimentos_cnes não encontrada.")
 
 raw_hash_before <- tools::md5sum(list.files(file.path("data_raw", "cnes", "202601"), full.names = TRUE))
+base_real_path <- file.path("data_interim", "cnes", "estabelecimentos", "cnes_estabelecimentos_es_202601.csv")
+base_real_hash_before <- if (file.exists(base_real_path)) tools::md5sum(base_real_path) else NA
 
-resultado <- preparar_estabelecimentos_cnes(dir_raw = file.path("tests", "fixtures", "cnes"), competencia = "202601", uf_interesse = "ES")
+dir_interim_teste <- file.path(tempdir(), "cnes_interim_teste")
+if (dir.exists(dir_interim_teste)) unlink(dir_interim_teste, recursive = TRUE, force = TRUE)
+
+resultado <- preparar_estabelecimentos_cnes(
+  dir_raw = file.path("tests", "fixtures", "cnes"),
+  competencia = "202601",
+  uf_interesse = "ES",
+  dir_interim = dir_interim_teste
+)
 if (!is.data.frame(resultado)) stop("Resultado da função não é data.frame.")
 if (nrow(resultado) <= 0) stop("Resultado sem linhas.")
 
@@ -34,6 +44,16 @@ if (length(setdiff(names(resultado), dic_df$nome_campo)) > 0) stop("Nem todos os
 
 raw_hash_after <- tools::md5sum(list.files(file.path("data_raw", "cnes", "202601"), full.names = TRUE))
 if (!identical(raw_hash_before, raw_hash_after)) stop("Arquivos brutos foram alterados indevidamente.")
+
+arquivo_teste <- file.path(dir_interim_teste, "estabelecimentos", "cnes_estabelecimentos_es_202601.csv")
+if (!file.exists(arquivo_teste)) stop("Saída de teste não foi escrita no diretório temporário.")
+
+if (file.exists(base_real_path)) {
+  base_real_hash_after <- tools::md5sum(base_real_path)
+  if (!identical(base_real_hash_before, base_real_hash_after)) {
+    stop("Teste alterou indevidamente a base real de estabelecimentos em data_interim.")
+  }
+}
 
 nacional <- list.files(file.path("data_interim", "cnes"), pattern = "nacional|brasil", recursive = TRUE, ignore.case = TRUE)
 if (length(nacional) > 0) stop("Detectado indício de base nacional em data_interim.")
