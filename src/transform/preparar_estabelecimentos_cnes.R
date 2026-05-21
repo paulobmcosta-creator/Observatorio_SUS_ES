@@ -33,7 +33,6 @@ ler_csv_cnes <- function(caminho_base_sem_ext) {
     con <- if (grepl("\\.gz$", path)) gzfile(path, open = "rt") else file(path, open = "rt")
     on.exit(close(con), add = TRUE)
     sep <- detectar_sep(con)
-    close(con)
     if (sep == "LFS") stop("Arquivo ", basename(path), " é ponteiro Git LFS sem conteúdo tabular real.")
     utils::read.csv(path, sep = sep, stringsAsFactors = FALSE, check.names = FALSE, colClasses = "character", fileEncoding = "Latin1")
   }
@@ -122,12 +121,58 @@ preparar_estabelecimentos_cnes <- function(dir_raw, competencia = "202601", uf_i
   col_tbco_cod <- primeira_coluna_existente(tb_conv, c("co_convenio"))
   col_tbco_ds <- primeira_coluna_existente(tb_conv, c("ds_convenio"))
 
-  atagg <- data.frame(cnes = character(0), atendimento_prestado = character(0), convenio = character(0), stringsAsFactors = FALSE)
+  atagg <- data.frame(
+    cnes = character(0),
+    atendimento_prestado = character(0),
+    convenio = character(0),
+    possui_relacao_atend_convenio = logical(0),
+    possui_join_incompleto = logical(0),
+    possui_evidencia_sus = logical(0),
+    possui_evidencia_nao_sus = logical(0),
+    possui_evidencia_ambigua = logical(0),
+    stringsAsFactors = FALSE
+  )
   if (!any(is.na(c(col_rlat_cnes, col_rlat_at, col_rlat_conv, col_tbat_cod, col_tbat_ds, col_tbco_cod, col_tbco_ds)))) {
     rl_at$ds_atendimento <- tb_at[[col_tbat_ds]][match(rl_at[[col_rlat_at]], tb_at[[col_tbat_cod]])]
     rl_at$ds_convenio <- tb_conv[[col_tbco_ds]][match(rl_at[[col_rlat_conv]], tb_conv[[col_tbco_cod]])]
-    atagg <- aggregate(cbind(ds_atendimento, ds_convenio) ~ cnes, data = data.frame(cnes = rl_at[[col_rlat_cnes]], ds_atendimento = rl_at$ds_atendimento, ds_convenio = rl_at$ds_convenio, stringsAsFactors = FALSE), FUN = agregar_unicos)
-    names(atagg)[2:3] <- c("atendimento_prestado", "convenio")
+    rl_at_aux <- data.frame(
+      cnes = rl_at[[col_rlat_cnes]],
+      ds_atendimento = rl_at$ds_atendimento,
+      ds_convenio = rl_at$ds_convenio,
+      stringsAsFactors = FALSE
+    )
+    rl_at_aux$txt_atendimento <- toupper(trimws(ifelse(is.na(rl_at_aux$ds_atendimento), "", rl_at_aux$ds_atendimento)))
+    rl_at_aux$txt_convenio <- toupper(trimws(ifelse(is.na(rl_at_aux$ds_convenio), "", rl_at_aux$ds_convenio)))
+    rl_at_aux$join_incompleto <- rl_at_aux$txt_atendimento == "" | rl_at_aux$txt_convenio == ""
+    rl_at_aux$evidencia_sus <- grepl("(^|[^A-Z0-9])SUS([^A-Z0-9]|$)", rl_at_aux$txt_atendimento) |
+      grepl("(^|[^A-Z0-9])SUS([^A-Z0-9]|$)", rl_at_aux$txt_convenio)
+    rl_at_aux$evidencia_nao_sus <- rl_at_aux$txt_convenio %in% c(
+      "PARTICULAR",
+      "PLANO / SEGURO PROPRIO",
+      "PLANO / SEGURO TERCEIRO",
+      "PLANO DE SAUDE PRIVADO"
+    )
+    rl_at_aux$evidencia_ambigua <- rl_at_aux$txt_convenio %in% c(
+      "PLANO DE SAUDE PUBLICO",
+      "GRATUIDADE"
+    )
+
+    atagg_txt <- aggregate(cbind(ds_atendimento, ds_convenio) ~ cnes, data = rl_at_aux, FUN = agregar_unicos)
+    names(atagg_txt)[2:3] <- c("atendimento_prestado", "convenio")
+    atagg_flags <- aggregate(
+      cbind(join_incompleto, evidencia_sus, evidencia_nao_sus, evidencia_ambigua) ~ cnes,
+      data = rl_at_aux,
+      FUN = function(x) any(as.logical(x), na.rm = TRUE)
+    )
+    names(atagg_flags) <- c(
+      "cnes",
+      "possui_join_incompleto",
+      "possui_evidencia_sus",
+      "possui_evidencia_nao_sus",
+      "possui_evidencia_ambigua"
+    )
+    atagg_flags$possui_relacao_atend_convenio <- TRUE
+    atagg <- merge(atagg_txt, atagg_flags, by = "cnes", all = TRUE, sort = FALSE)
   }
 
   getcol <- function(df, cand) primeira_coluna_existente(df, cand)
@@ -161,14 +206,22 @@ preparar_estabelecimentos_cnes <- function(dir_raw, competencia = "202601", uf_i
   out <- merge(out, subagg, by = "cnes", all.x = TRUE, sort = FALSE)
   out <- merge(out, atagg, by = "cnes", all.x = TRUE, sort = FALSE)
 
-  out$atende_sus <- ifelse(grepl("SUS", toupper(paste(out$atendimento_prestado, out$convenio))), "Sim", ifelse(is.na(out$atendimento_prestado) & is.na(out$convenio), NA_character_, "Revisar"))
-  out$atende_sus[is.na(out$atende_sus)] <- "Revisar"
+  out$atende_sus <- "Revisar"
+  criterio_sim <- out$possui_relacao_atend_convenio & out$possui_evidencia_sus
+  criterio_nao <- out$possui_relacao_atend_convenio &
+    !out$possui_join_incompleto &
+    !out$possui_evidencia_sus &
+    !out$possui_evidencia_ambigua &
+    out$possui_evidencia_nao_sus
+  out$atende_sus[which(criterio_sim %in% TRUE)] <- "Sim"
+  out$atende_sus[which(criterio_nao %in% TRUE)] <- "Não"
 
   out$fonte <- "CNES"
   out$arquivo_origem <- "tbEstabelecimento202601"
   out$data_processamento <- as.character(Sys.Date())
 
   out <- out[!duplicated(out$cnes) & !is.na(out$cnes) & trimws(out$cnes) != "", ]
+  out <- out[, setdiff(names(out), c("possui_relacao_atend_convenio", "possui_join_incompleto", "possui_evidencia_sus", "possui_evidencia_nao_sus", "possui_evidencia_ambigua")), drop = FALSE]
 
   dir_saida <- file.path("data_interim", "cnes", "estabelecimentos")
   if (!dir.exists(dir_saida)) dir.create(dir_saida, recursive = TRUE)
