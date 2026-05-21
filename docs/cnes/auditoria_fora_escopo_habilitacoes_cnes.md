@@ -61,3 +61,21 @@ Classificação heurística conservadora baseada em texto de `descricao_habilita
 
 ## Limite de escopo desta entrega
 Esta entrega é uma **auditoria metodológica diagnóstica**. Não produz indicadores, dashboards, mapas, rankings ou inferências gerenciais finais.
+
+## Atualização Ciclo 3C — correção manual de falsos negativos (2026-05-21)
+- Foi aplicada correção pontual/manual em chaves compostas priorizadas (Oncologia, RUE, Cardiovascular, Nefrologia e UTI/cuidado crítico), com regeneração da base de habilitações e da auditoria.
+- Após a correção, o total de registros em `Fora do escopo inicial` reduziu para **465**.
+- A categoria `Falso negativo do escopo atual` ficou restrita a **4** registros ainda pendentes de revisão manual fina.
+- As habilitações **1901-H (Laqueadura)** e **1902-H (Vasectomia)** permaneceram fora do escopo atual como `Saúde sexual e reprodutiva / tema futuro`.
+- As habilitações **0403-H** e **0405-H** não permanecem mais no conjunto fora do escopo (foram reclassificadas para linha priorizada nesta rodada).
+
+Distribuição atual da auditoria por categoria (`n_registros`):
+- Programático/incentivo: **195**
+- Outro tema futuro: **94**
+- Saúde sexual e reprodutiva / tema futuro: **80**
+- Componente hospitalar genérico: **59**
+- Transplantes: **19**
+- Reabilitação/deficiência: **14**
+- Falso negativo do escopo atual: **4**
+
+Esta revisão permanece metodológica e diagnóstica, sem criação de indicadores e sem início do Ciclo 4.

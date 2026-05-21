@@ -85,3 +85,22 @@ Distribuição por `usar_observatorio`:
 - Sim: **401**
 
 Confirmação metodológica: o produto permanece uma **base intermediária tabular** de habilitações por estabelecimento, sem agregações analíticas finais e sem criação de indicadores.
+
+## 15) Atualização de resultados após correção de falsos negativos (Ciclo 3C)
+Após a correção pontual da classificação (Ciclo 3C), a distribuição da base de habilitações (`202601`) passou a:
+
+- Não classificada: **1.081**
+- Fora do escopo inicial: **465**
+- RUE: **220**
+- UTI / cuidado crítico: **68**
+- Nefrologia: **49**
+- Outras habilitações estratégicas: **49**
+- Oncologia: **28**
+- Saúde mental: **2**
+- Cardiovascular: **1**
+
+Distribuição por `usar_observatorio`:
+- Não: **1.546**
+- Sim: **417**
+
+Confirmação: o produto continua sendo base intermediária tabular do Ciclo 3, sem indicadores e sem avanço para Ciclo 4.
