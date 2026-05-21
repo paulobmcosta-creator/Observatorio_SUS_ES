@@ -1,0 +1,32 @@
+nome_campo,descricao,fonte_original,transformacao_aplicada,observacao_metodologica
+competencia,Competência de referência,parâmetro competencia,Cópia direta,Formato AAAAMM
+cnes,Identificador CNES do estabelecimento,rlEstabSipac + base estabelecimentos,Filtrado para CNES da base ES,Sem base nacional no ciclo 3
+nome_estabelecimento,Nome do estabelecimento,base estabelecimentos,Join por cnes,Enriquecimento territorial
+cod_municipio,Código do município,base estabelecimentos,Join por cnes,Preservado como texto
+municipio,Nome do município,base estabelecimentos,Join por cnes,Enriquecimento territorial
+uf,Sigla da UF,base estabelecimentos,Join por cnes,Esperado apenas ES
+tipo_estabelecimento,Tipo de estabelecimento,base estabelecimentos,Join por cnes,Campo descritivo
+subtipo_estabelecimento,Subtipo de estabelecimento,base estabelecimentos,Join por cnes,Campo pode ser agregado no ciclo 2
+natureza_juridica,Natureza jurídica,base estabelecimentos,Join por cnes,Campo descritivo
+gestao,Gestão do estabelecimento,base estabelecimentos,Join por cnes,Campo descritivo
+atende_sus,Classificação de atendimento SUS,base estabelecimentos,Cópia da base do ciclo 2,Sem reclassificação no ciclo 3
+codigo_habilitacao,Código da habilitação,rlEstabSipac,Renomeado de COD_SUB_GRUPO_HABILITACAO,Parte da chave composta
+tipo_habilitacao,Tipo da habilitação,rlEstabSipac,Renomeado de TP_HABILITACAO,Parte da chave composta
+descricao_habilitacao,Descrição da habilitação,tbSubGruposHabilitacao,Join por codigo_habilitacao + tipo_habilitacao,Não usar join por código isolado
+origem_habilitacao,Origem da habilitação,tbSubGruposHabilitacao,Join por codigo_habilitacao + tipo_habilitacao,Campo de domínio
+linha_cuidado,Linha de cuidado,classificacao_habilitacoes_cnes,Join por chave composta; fallback Não classificada,Habilitações não classificadas são mantidas
+sublinha_cuidado,Sublinha de cuidado,classificacao_habilitacoes_cnes,Join por chave composta,Campo analítico
+componente_rede,Componente de rede,classificacao_habilitacoes_cnes,Join por chave composta,Campo analítico
+nivel_complexidade,Nível de complexidade,classificacao_habilitacoes_cnes,Join por chave composta,Campo analítico
+usar_observatorio,Flag de uso no observatório,classificacao_habilitacoes_cnes,Join por chave composta; fallback Não,Padrão conservador
+prioridade,Prioridade,classificacao_habilitacoes_cnes,Join por chave composta,Campo analítico
+criterio_classificacao,Critério de classificação,classificacao_habilitacoes_cnes,Join por chave composta,Rastreabilidade
+status_validacao,Status de validação,classificacao_habilitacoes_cnes,Join por chave composta; fallback revisar,Rastreabilidade
+competencia_inicio,Competência de início,rlEstabSipac,Renomeado de CMTP_INICIO,Formato de competência CNES
+competencia_fim,Competência de fim,rlEstabSipac,Renomeado de CMTP_FIM,Formato de competência CNES
+numero_leitos,Número de leitos do registro,rlEstabSipac,Renomeado de NU_LEITOS,Sem processamento de leitos no ciclo 3
+portaria,Portaria da habilitação,rlEstabSipac,Renomeado de NO_PORTARIA,Campo textual
+data_atualizacao,Data de atualização do registro,rlEstabSipac,Renomeado de TO_CHAR(DT_ATUALIZACAO,'DD/MM/YYYY'),Disponível quando presente
+fonte,Fonte de dados,derivado,Valor fixo CNES,Rastreabilidade
+arquivo_origem,Arquivo principal de origem,derivado,Valor fixo rlEstabSipacAAAAMM,Rastreabilidade
+data_processamento,Data de geração,derivado,Sys.Date,Dependente da execução

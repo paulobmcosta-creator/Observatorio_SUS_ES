@@ -62,7 +62,7 @@ agregar_unicos <- function(x) {
   paste(vals, collapse = " | ")
 }
 
-preparar_estabelecimentos_cnes <- function(dir_raw, competencia = "202601", uf_interesse = "ES") {
+preparar_estabelecimentos_cnes <- function(dir_raw, competencia = "202601", uf_interesse = "ES", dir_interim = file.path("data_interim", "cnes")) {
   base <- file.path(dir_raw, competencia)
 
   tb_municipio <- ler_csv_cnes(file.path(base, paste0("tbMunicipio", competencia)))
@@ -223,7 +223,7 @@ preparar_estabelecimentos_cnes <- function(dir_raw, competencia = "202601", uf_i
   out <- out[!duplicated(out$cnes) & !is.na(out$cnes) & trimws(out$cnes) != "", ]
   out <- out[, setdiff(names(out), c("possui_relacao_atend_convenio", "possui_join_incompleto", "possui_evidencia_sus", "possui_evidencia_nao_sus", "possui_evidencia_ambigua")), drop = FALSE]
 
-  dir_saida <- file.path("data_interim", "cnes", "estabelecimentos")
+  dir_saida <- file.path(dir_interim, "estabelecimentos")
   if (!dir.exists(dir_saida)) dir.create(dir_saida, recursive = TRUE)
   caminho_saida <- file.path(dir_saida, paste0("cnes_estabelecimentos_", tolower(uf_interesse), "_", competencia, ".csv"))
   utils::write.csv(out, caminho_saida, row.names = FALSE, fileEncoding = "UTF-8")
