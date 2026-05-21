@@ -10,7 +10,7 @@ tipo_estabelecimento,texto,nao,Descrição do tipo de estabelecimento,Join de c�
 subtipo_estabelecimento,texto,nao,Subtipo agregado do estabelecimento,Agregação única por CNES em rlEstabSubTipo + tbSubTipo,UBS Tradicional,rlEstabSubTipo/tbSubTipo
 natureza_juridica,texto,nao,Descrição da natureza jurídica,Join de código com tbNaturezaJuridica,Administração Pública,tbNaturezaJuridica
 gestao,texto,nao,Descrição da esfera de gestão,Join de código com tbGestao,Municipal,tbGestao
-atende_sus,texto,sim,Classificação de vínculo SUS,Sim se atendimento_prestado ou convenio contiver SUS; Revisar nos demais casos,Sim,regras derivadas
+atende_sus,texto,sim,Classificação de vínculo SUS,Sim quando há evidência relacional explícita de SUS; Não quando há apenas evidência relacional não-SUS sem ambiguidade; Revisar em ausência/incompletude/ambiguidade,Sim,regras derivadas
 atendimento_prestado,texto,nao,Lista de atendimentos prestados,Agregação única por CNES via rlEstabAtendPrestConv + tbAtendimentoPrestado,Atendimento SUS,rlEstabAtendPrestConv/tbAtendimentoPrestado
 convenio,texto,nao,Lista de convênios associados,Agregação única por CNES via rlEstabAtendPrestConv + tbConvenio,SUS,rlEstabAtendPrestConv/tbConvenio
 fonte,texto,sim,Fonte do dado,Valor fixo CNES,CNES,derivado

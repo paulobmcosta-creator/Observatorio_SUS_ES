@@ -10,7 +10,7 @@ tipo_estabelecimento,Descrição do tipo,tbTipoEstabelecimento,Join por código 
 subtipo_estabelecimento,Descrição agregada de subtipos,rlEstabSubTipo + tbSubTipo,Agregação de valores únicos por CNES com separador |,Evita duplicidade por relacionamento N:N
 natureza_juridica,Descrição da natureza jurídica,tbNaturezaJuridica,Join por código,NA quando não informado
 gestao,Descrição da gestão,tbGestao,Join por código,NA quando não informado
-atende_sus,Indicador categórico de vínculo SUS,rlEstabAtendPrestConv + dicionários,Regra categórica Sim/Revisar,Não usado valor Não por ausência de regra robusta explícita
+atende_sus,Indicador categórico de vínculo SUS,rlEstabAtendPrestConv + tbConvenio + tbAtendimentoPrestado,Regra categórica Sim/Não/Revisar com critério conservador,Ausência de evidência não é classificada automaticamente como Não
 atendimento_prestado,Descrição agregada de atendimentos,rlEstabAtendPrestConv + tbAtendimentoPrestado,Agregação de valores únicos por CNES,NA quando sem relacionamento
 convenio,Descrição agregada de convênios,rlEstabAtendPrestConv + tbConvenio,Agregação de valores únicos por CNES,NA quando sem relacionamento
 fonte,Fonte do dataset,derivado,Valor fixo CNES,Rastreabilidade
