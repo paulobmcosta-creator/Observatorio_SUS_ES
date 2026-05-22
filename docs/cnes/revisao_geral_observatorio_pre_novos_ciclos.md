@@ -12,10 +12,10 @@ Foram revisados: `README.md`, `docs/`, `src/`, `tests/`, `metadata/`, `data_inte
 - Ambiente R habilitado nesta complementação (`R`/`Rscript` versão 4.3.3) e testes obrigatórios executados com sucesso.
 
 ## 4. Síntese dos Ciclos 1, 2, 3 e 3C
-- Ciclo 1: ingestão e padronização inicial CNES.
-- Ciclo 2: consolidação da base de estabelecimentos ES.
-- Ciclo 3: classificação de habilitações.
-- Ciclo 3C: correções, reclassificação complementar e auditoria de fora do escopo.
+- Ciclo 1: construção e refinamento da classificação analítica das habilitações CNES por linha de cuidado.
+- Ciclo 2: consolidação da base de estabelecimentos CNES do Espírito Santo.
+- Ciclo 3: construção da base intermediária de habilitações por estabelecimento, com vínculo à base de estabelecimentos e à classificação analítica.
+- Ciclo 3C: revisão de falsos negativos, reclassificações pontuais e auditoria das habilitações fora do escopo inicial.
 
 ## 5. Principais produtos gerados
 - Base intermediária de estabelecimentos (`12.548` linhas; `78` municípios; UF `ES`).
@@ -44,8 +44,8 @@ Foram revisados: `README.md`, `docs/`, `src/`, `tests/`, `metadata/`, `data_inte
 - Integridade referencial habilitações→estabelecimentos sem faltantes.
 
 ## 10. Produtos OK apenas com ressalva
-- Testes em R executados (`test_classificacao_habilitacoes_cnes.R`, `test_base_estabelecimentos_cnes.R`, `test_base_habilitacoes_cnes.R`) com status OK.
 - Auditoria linguística: gerada por triagem automática e requer validação humana final.
+- Validação automatizada em R: executada com sucesso nesta revisão, mas recomenda-se repetição em CI.
 
 ## 11. Produtos que exigem revisão automática
 - Verificação contínua de duplicidade, domínios, vazios e cobertura schema/dicionário.
@@ -66,7 +66,7 @@ Foram revisados: `README.md`, `docs/`, `src/`, `tests/`, `metadata/`, `data_inte
 - Arquivos brutos (`data_raw/`) devem ser preservados sem uso analítico direto.
 
 ## 16. Riscos técnicos identificados
-- Ausência de R no ambiente de auditoria bloqueia validação executável dos testes.
+- Dependência de ambiente R/Rscript para reprodutibilidade dos testes; recomenda-se documentar instalação mínima de R ou incorporar validação em CI.
 - Cobertura de LFS possivelmente insuficiente para outros arquivos grandes futuros.
 
 ## 17. Riscos metodológicos identificados
@@ -82,8 +82,8 @@ Foram revisados: `README.md`, `docs/`, `src/`, `tests/`, `metadata/`, `data_inte
 - Recomendação: fluxo em duas etapas (triagem IA + validação humana por mantenedor metodológico).
 
 ## 20. Pendências antes do Ciclo 4
-1. Confirmar em CI a repetibilidade dos 3 testes obrigatórios já aprovados localmente nesta complementação.
-2. Validar manualmente ocorrências de inglês marcadas como “Avaliar”.
+1. Pendência técnica recomendada antes do Ciclo 4: confirmar em CI a repetibilidade dos 3 testes obrigatórios já aprovados localmente.
+2. Pendência documental/linguística não bloqueante para desenvolvimento técnico do Ciclo 4: validar manualmente ocorrências de inglês marcadas como “Avaliar”, priorizando documentos críticos.
 
 ## 21. Pendências antes de ciclos futuros
 - Fortalecer política de LFS para novos brutos/intermediários volumosos.
@@ -97,9 +97,9 @@ Foram revisados: `README.md`, `docs/`, `src/`, `tests/`, `metadata/`, `data_inte
 
 ## 23. Checklist final antes de iniciar o Ciclo 4
 - [x] Testes R executados e aprovados nesta complementação.
-- [ ] Integridade referencial confirmada.
-- [ ] Sem “Não classificada”.
-- [ ] Auditoria fora do escopo conciliada com total real.
+- [x] Integridade referencial confirmada.
+- [x] Sem “Não classificada”.
+- [x] Auditoria fora do escopo conciliada com total real.
 - [ ] Revisão linguística mínima concluída em docs críticos.
 
 ## 24. Checklist geral antes de uso público
