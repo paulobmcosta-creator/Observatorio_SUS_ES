@@ -69,5 +69,37 @@ A base de estabelecimentos é a base-mãe do módulo CNES porque centraliza o CN
 - Registros com `cod_municipio` vazio: **0**.
 - Tamanho aproximado do arquivo final: **3.058.707 bytes** (~3,1 MB).
 
-## Próximo ciclo
-No Ciclo 3, a classificação de habilitações será aplicada ao `rlEstabSipac` e cruzada com esta base de estabelecimentos.
+## Critérios de validação
+- contém apenas estabelecimentos do Espírito Santo;
+- possui uma linha por CNES;
+- não possui `cnes` vazio;
+- não possui `cod_municipio` vazio;
+- representa os 78 municípios do Espírito Santo;
+- mantém valores de `atende_sus` restritos a `Sim`, `Não` e `Revisar`;
+- não é gerada a partir de ponteiro Git LFS;
+- não contém registros nacionais ou de outras UFs;
+- passa nos testes automatizados do módulo de estabelecimentos.
+
+## Execução do pipeline
+```r
+source("src/transform/preparar_estabelecimentos_cnes.R")
+
+preparar_estabelecimentos_cnes(
+  dir_raw = "data_raw/cnes",
+  dir_interim = "data_interim/cnes",
+  competencia = "202601",
+  uf_interesse = "ES"
+)
+```
+
+```bash
+Rscript tests/test_base_estabelecimentos_cnes.R
+```
+
+
+## Encadeamento com ciclos posteriores
+Esta base foi utilizada no Ciclo 3 como referência territorial e cadastral para a construção da base intermediária de habilitações CNES por estabelecimento, a partir do cruzamento com `rlEstabSipac`.
+
+Nos ciclos posteriores, especialmente na construção de indicadores, esta base deve ser utilizada como referência para identificação dos estabelecimentos, vinculação municipal, UF, tipo de estabelecimento, natureza jurídica, gestão, subtipo e regra conservadora de `atende_sus`.
+
+A base não deve ser interpretada como indicador final. Trata-se de produto intermediário estruturante do módulo CNES.
