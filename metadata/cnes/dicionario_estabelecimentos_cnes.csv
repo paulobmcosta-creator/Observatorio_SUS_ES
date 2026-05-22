@@ -1,6 +1,7 @@
 nome_campo,descricao,fonte_original,transformacao_aplicada,observacao_metodologica
 competencia,Competência de referência do CNES,parâmetro competencia,Cópia direta,Formato AAAAMM
-cnes,Código CNES do estabelecimento,tbEstabelecimento,Preservado como texto,Uma linha por CNES
+co_unidade,Chave operacional do estabelecimento,tbEstabelecimento,Preservado como texto,Usada em joins relacionais com rlEstab*
+cnes,Código CNES público do estabelecimento,tbEstabelecimento,Preservado como texto,Não confundir com co_unidade
 nome_estabelecimento,Nome fantasia do estabelecimento,tbEstabelecimento,Mapeamento de coluna equivalente,Campo pode variar conforme layout
 razao_social,Razão social,tbEstabelecimento,Mapeamento de coluna equivalente,Pode estar ausente em alguns layouts
 cod_municipio,Código do município vinculado ao estabelecimento no cadastro CNES,tbEstabelecimento,Preservado como texto e usado no filtro territorial,Filtro ES aplicado antes de qualquer join

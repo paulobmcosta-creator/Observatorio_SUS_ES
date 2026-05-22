@@ -1,14 +1,15 @@
 nome_campo,descricao,fonte_original,transformacao_aplicada,observacao_metodologica
 competencia,Competência de referência,parâmetro competencia,Cópia direta,Formato AAAAMM
+co_unidade,Chave operacional do estabelecimento CNES,rlEstabSipac + base estabelecimentos,Filtrado e relacionado por CO_UNIDADE,Chave correta para joins relacionais CNES
 cnes,Identificador CNES do estabelecimento,rlEstabSipac + base estabelecimentos,Filtrado para CNES da base ES,Sem base nacional no ciclo 3
-nome_estabelecimento,Nome do estabelecimento,base estabelecimentos,Join por cnes,Enriquecimento territorial
-cod_municipio,Código do município,base estabelecimentos,Join por cnes,Preservado como texto
-municipio,Nome do município,base estabelecimentos,Join por cnes,Enriquecimento territorial
-uf,Sigla da UF,base estabelecimentos,Join por cnes,Esperado apenas ES
-tipo_estabelecimento,Tipo de estabelecimento,base estabelecimentos,Join por cnes,Campo descritivo
-subtipo_estabelecimento,Subtipo de estabelecimento,base estabelecimentos,Join por cnes,Campo pode ser agregado no ciclo 2
-natureza_juridica,Natureza jurídica,base estabelecimentos,Join por cnes,Campo descritivo
-gestao,Gestão do estabelecimento,base estabelecimentos,Join por cnes,Campo descritivo
+nome_estabelecimento,Nome do estabelecimento,base estabelecimentos,Join por co_unidade,Enriquecimento territorial
+cod_municipio,Código do município,base estabelecimentos,Join por co_unidade,Preservado como texto
+municipio,Nome do município,base estabelecimentos,Join por co_unidade,Enriquecimento territorial
+uf,Sigla da UF,base estabelecimentos,Join por co_unidade,Esperado apenas ES
+tipo_estabelecimento,Tipo de estabelecimento,base estabelecimentos,Join por co_unidade,Campo descritivo
+subtipo_estabelecimento,Subtipo de estabelecimento,base estabelecimentos,Join por co_unidade,Campo pode ser agregado no ciclo 2
+natureza_juridica,Natureza jurídica,base estabelecimentos,Join por co_unidade,Campo descritivo
+gestao,Gestão do estabelecimento,base estabelecimentos,Join por co_unidade,Campo descritivo
 atende_sus,Classificação de atendimento SUS,base estabelecimentos,Cópia da base do ciclo 2,Sem reclassificação no ciclo 3
 codigo_habilitacao,Código da habilitação,rlEstabSipac,Renomeado de COD_SUB_GRUPO_HABILITACAO,Parte da chave composta
 tipo_habilitacao,Tipo da habilitação,rlEstabSipac,Renomeado de TP_HABILITACAO,Parte da chave composta

@@ -19,15 +19,18 @@ resultado <- preparar_estabelecimentos_cnes(
 if (!is.data.frame(resultado)) stop("Resultado da função não é data.frame.")
 if (nrow(resultado) <= 0) stop("Resultado sem linhas.")
 
-cols_min <- c("competencia", "cnes", "nome_estabelecimento", "cod_municipio", "municipio", "uf", "tipo_estabelecimento", "subtipo_estabelecimento", "natureza_juridica", "gestao", "atende_sus", "fonte", "arquivo_origem", "data_processamento")
+cols_min <- c("competencia", "co_unidade", "cnes", "nome_estabelecimento", "cod_municipio", "municipio", "uf", "tipo_estabelecimento", "subtipo_estabelecimento", "natureza_juridica", "gestao", "atende_sus", "fonte", "arquivo_origem", "data_processamento")
 miss <- setdiff(cols_min, names(resultado))
 if (length(miss) > 0) stop("Colunas mínimas ausentes: ", paste(miss, collapse = ", "))
 
-if (any(is.na(resultado$cnes) | trimws(resultado$cnes) == "")) stop("cnes vazio encontrado.")
+if (any(is.na(resultado$co_unidade) | trimws(resultado$co_unidade) == "")) stop("co_unidade vazio encontrado.")
+if ("cnes" %in% names(resultado) && !all(is.na(resultado$cnes) | trimws(resultado$cnes)=="")) {
+  if (any(is.na(resultado$cnes) | trimws(resultado$cnes) == "")) stop("cnes vazio encontrado quando domínio existe.")
+}
 if (any(is.na(resultado$cod_municipio) | trimws(resultado$cod_municipio) == "")) stop("cod_municipio vazio encontrado.")
 if (!all(resultado$cod_municipio %in% c("3200102"))) stop("Base contém município fora do ES na fixture.")
 if ("uf" %in% names(resultado) && !all(resultado$uf == "ES")) stop("Campo uf contém valor diferente de ES.")
-if (any(duplicated(resultado$cnes))) stop("Duplicidade de cnes encontrada.")
+if (any(duplicated(resultado$co_unidade))) stop("Duplicidade de co_unidade encontrada.")
 if (length(setdiff(unique(na.omit(resultado$atende_sus)), c("Sim", "Não", "Revisar"))) > 0) stop("atende_sus fora do conjunto permitido.")
 
 schema <- file.path("metadata", "cnes", "schema_estabelecimentos_cnes.csv")

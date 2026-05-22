@@ -1,6 +1,7 @@
 nome_campo,tipo,obrigatorio,descricao,regra_preenchimento,exemplo,origem
 competencia,texto,sim,Competência CNES no formato AAAAMM,Parâmetro da função preparar_estabelecimentos_cnes,202601,parâmetro
-cnes,texto,sim,Identificador CNES do estabelecimento,Lido de tbEstabelecimento e mantido como texto,0000001,tbEstabelecimento
+co_unidade,texto,sim,Chave operacional do estabelecimento CNES,Lido de CO_UNIDADE e mantido como texto,3205303112195,tbEstabelecimento
+cnes,texto,sim,Código CNES público do estabelecimento,Lido de CO_CNES e mantido como texto (7 dígitos),0000001,tbEstabelecimento
 nome_estabelecimento,texto,sim,Nome fantasia ou nome do estabelecimento,NO_FANTASIA quando disponível,UBS Centro,tbEstabelecimento
 razao_social,texto,nao,Razão social do estabelecimento,NO_RAZAO_SOCIAL quando disponível,Prefeitura,tbEstabelecimento
 cod_municipio,texto,sim,Código do município vinculado ao estabelecimento no cadastro CNES,Lido de tbEstabelecimento e filtrado para municípios do ES,3200102,tbEstabelecimento/tbMunicipio

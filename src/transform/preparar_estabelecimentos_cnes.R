@@ -80,9 +80,10 @@ preparar_estabelecimentos_cnes <- function(dir_raw, competencia = "202601", uf_i
   if (length(municipios_es) == 0) stop("Não foi possível identificar municípios da UF de interesse em tbMunicipio.")
 
   tb_estab <- ler_csv_cnes(file.path(base, paste0("tbEstabelecimento", competencia)))
-  col_cnes <- primeira_coluna_existente(tb_estab, c("co_unidade", "cnes"))
+  col_co_unidade <- primeira_coluna_existente(tb_estab, c("co_unidade"))
+  col_cnes_publico <- primeira_coluna_existente(tb_estab, c("co_cnes", "cnes"))
   col_mun_est <- primeira_coluna_existente(tb_estab, c("co_municipio_gestor", "co_municipio", "cod_municipio"))
-  if (is.na(col_cnes) || is.na(col_mun_est)) stop("tbEstabelecimento sem colunas mínimas de CNES/município.")
+  if (is.na(col_co_unidade) || is.na(col_mun_est)) stop("tbEstabelecimento sem colunas mínimas de chave/município.")
 
   tb_estab <- tb_estab[trimws(tb_estab[[col_mun_est]]) %in% municipios_es, , drop = FALSE]
   if (nrow(tb_estab) == 0) stop("Nenhum estabelecimento encontrado para a UF de interesse.")
@@ -96,7 +97,7 @@ preparar_estabelecimentos_cnes <- function(dir_raw, competencia = "202601", uf_i
   tb_at <- ler_csv_cnes(file.path(base, paste0("tbAtendimentoPrestado", competencia)))
   tb_conv <- ler_csv_cnes(file.path(base, paste0("tbConvenio", competencia)))
 
-  # joins auxiliares agregados por cnes
+  # joins auxiliares agregados por co_unidade
   col_sub_cnes <- primeira_coluna_existente(rl_sub, c("co_unidade", "cnes"))
   col_sub_tipo <- primeira_coluna_existente(rl_sub, c("co_tipo_unidade"))
   col_sub_sub <- primeira_coluna_existente(rl_sub, c("co_sub_tipo_unidade", "co_sub_tipo"))
@@ -104,12 +105,12 @@ preparar_estabelecimentos_cnes <- function(dir_raw, competencia = "202601", uf_i
   col_tbsub_sub <- primeira_coluna_existente(tb_sub, c("co_sub_tipo"))
   col_tbsub_ds <- primeira_coluna_existente(tb_sub, c("ds_sub_tipo"))
 
-  subagg <- data.frame(cnes = character(0), subtipo_estabelecimento = character(0), stringsAsFactors = FALSE)
+  subagg <- data.frame(co_unidade = character(0), subtipo_estabelecimento = character(0), stringsAsFactors = FALSE)
   if (!any(is.na(c(col_sub_cnes, col_sub_tipo, col_sub_sub, col_tbsub_tipo, col_tbsub_sub, col_tbsub_ds)))) {
     chave_rl <- paste(rl_sub[[col_sub_tipo]], rl_sub[[col_sub_sub]], sep = "__")
     chave_tb <- paste(tb_sub[[col_tbsub_tipo]], tb_sub[[col_tbsub_sub]], sep = "__")
     rl_sub$ds_sub_tipo <- tb_sub[[col_tbsub_ds]][match(chave_rl, chave_tb)]
-    subagg <- aggregate(rl_sub$ds_sub_tipo, by = list(cnes = rl_sub[[col_sub_cnes]]), FUN = agregar_unicos)
+    subagg <- aggregate(rl_sub$ds_sub_tipo, by = list(co_unidade = rl_sub[[col_sub_cnes]]), FUN = agregar_unicos)
     names(subagg)[2] <- "subtipo_estabelecimento"
   }
 
@@ -122,7 +123,7 @@ preparar_estabelecimentos_cnes <- function(dir_raw, competencia = "202601", uf_i
   col_tbco_ds <- primeira_coluna_existente(tb_conv, c("ds_convenio"))
 
   atagg <- data.frame(
-    cnes = character(0),
+    co_unidade = character(0),
     atendimento_prestado = character(0),
     convenio = character(0),
     possui_relacao_atend_convenio = logical(0),
@@ -136,7 +137,7 @@ preparar_estabelecimentos_cnes <- function(dir_raw, competencia = "202601", uf_i
     rl_at$ds_atendimento <- tb_at[[col_tbat_ds]][match(rl_at[[col_rlat_at]], tb_at[[col_tbat_cod]])]
     rl_at$ds_convenio <- tb_conv[[col_tbco_ds]][match(rl_at[[col_rlat_conv]], tb_conv[[col_tbco_cod]])]
     rl_at_aux <- data.frame(
-      cnes = rl_at[[col_rlat_cnes]],
+      co_unidade = rl_at[[col_rlat_cnes]],
       ds_atendimento = rl_at$ds_atendimento,
       ds_convenio = rl_at$ds_convenio,
       stringsAsFactors = FALSE
@@ -157,38 +158,40 @@ preparar_estabelecimentos_cnes <- function(dir_raw, competencia = "202601", uf_i
       "GRATUIDADE"
     )
 
-    atagg_txt <- aggregate(cbind(ds_atendimento, ds_convenio) ~ cnes, data = rl_at_aux, FUN = agregar_unicos)
+    atagg_txt <- aggregate(cbind(ds_atendimento, ds_convenio) ~ co_unidade, data = rl_at_aux, FUN = agregar_unicos)
     names(atagg_txt)[2:3] <- c("atendimento_prestado", "convenio")
     atagg_flags <- aggregate(
-      cbind(join_incompleto, evidencia_sus, evidencia_nao_sus, evidencia_ambigua) ~ cnes,
+      cbind(join_incompleto, evidencia_sus, evidencia_nao_sus, evidencia_ambigua) ~ co_unidade,
       data = rl_at_aux,
       FUN = function(x) any(as.logical(x), na.rm = TRUE)
     )
     names(atagg_flags) <- c(
-      "cnes",
+      "co_unidade",
       "possui_join_incompleto",
       "possui_evidencia_sus",
       "possui_evidencia_nao_sus",
       "possui_evidencia_ambigua"
     )
     atagg_flags$possui_relacao_atend_convenio <- TRUE
-    atagg <- merge(atagg_txt, atagg_flags, by = "cnes", all = TRUE, sort = FALSE)
+    atagg <- merge(atagg_txt, atagg_flags, by = "co_unidade", all = TRUE, sort = FALSE)
   }
 
   getcol <- function(df, cand) primeira_coluna_existente(df, cand)
   out <- data.frame(
     competencia = competencia,
-    cnes = tb_estab[[col_cnes]],
+    co_unidade = tb_estab[[col_co_unidade]],
+    cnes = if (!is.na(col_cnes_publico)) tb_estab[[col_cnes_publico]] else NA_character_,
     nome_estabelecimento = tb_estab[[getcol(tb_estab, c("no_fantasia", "nome_fantasia", "nome_estabelecimento"))]],
     razao_social = tb_estab[[getcol(tb_estab, c("no_razao_social", "razao_social"))]],
     cod_municipio = tb_estab[[col_mun_est]],
     stringsAsFactors = FALSE
   )
 
+  out$nome_estabelecimento <- ifelse(is.na(out$nome_estabelecimento) | trimws(out$nome_estabelecimento) == "", out$razao_social, out$nome_estabelecimento)
   out$municipio <- tb_municipio[[col_nome_mun]][match(out$cod_municipio, tb_municipio[[col_codmun]])]
   out$uf <- uf_interesse
 
-  col_tipo_est <- getcol(tb_estab, c("co_tipo_unidade", "co_tipo_estabelecimento"))
+  col_tipo_est <- getcol(tb_estab, c("co_tipo_estabelecimento", "co_tipo_unidade"))
   col_tb_tipo_cod <- getcol(tb_tipo, c("co_tipo_estabelecimento", "co_tipo_unidade"))
   col_tb_tipo_ds <- getcol(tb_tipo, c("ds_tipo_estabelecimento"))
   out$tipo_estabelecimento <- if (!any(is.na(c(col_tipo_est, col_tb_tipo_cod, col_tb_tipo_ds)))) tb_tipo[[col_tb_tipo_ds]][match(tb_estab[[col_tipo_est]], tb_tipo[[col_tb_tipo_cod]])] else NA_character_
@@ -198,13 +201,13 @@ preparar_estabelecimentos_cnes <- function(dir_raw, competencia = "202601", uf_i
   col_nat_ds <- getcol(tb_nat, c("ds_natureza_jur"))
   out$natureza_juridica <- if (!any(is.na(c(col_nat_est, col_nat_cod, col_nat_ds)))) tb_nat[[col_nat_ds]][match(tb_estab[[col_nat_est]], tb_nat[[col_nat_cod]])] else NA_character_
 
-  col_ges_est <- getcol(tb_estab, c("co_gestao"))
+  col_ges_est <- getcol(tb_estab, c("co_gestao", "tp_gestao"))
   col_ges_cod <- getcol(tb_gest, c("co_gestao"))
   col_ges_ds <- getcol(tb_gest, c("ds_gestao"))
   out$gestao <- if (!any(is.na(c(col_ges_est, col_ges_cod, col_ges_ds)))) tb_gest[[col_ges_ds]][match(tb_estab[[col_ges_est]], tb_gest[[col_ges_cod]])] else NA_character_
 
-  out <- merge(out, subagg, by = "cnes", all.x = TRUE, sort = FALSE)
-  out <- merge(out, atagg, by = "cnes", all.x = TRUE, sort = FALSE)
+  out <- merge(out, subagg, by = "co_unidade", all.x = TRUE, sort = FALSE)
+  out <- merge(out, atagg, by = "co_unidade", all.x = TRUE, sort = FALSE)
 
   out$atende_sus <- "Revisar"
   criterio_sim <- out$possui_relacao_atend_convenio & out$possui_evidencia_sus
@@ -220,7 +223,7 @@ preparar_estabelecimentos_cnes <- function(dir_raw, competencia = "202601", uf_i
   out$arquivo_origem <- "tbEstabelecimento202601"
   out$data_processamento <- as.character(Sys.Date())
 
-  out <- out[!duplicated(out$cnes) & !is.na(out$cnes) & trimws(out$cnes) != "", ]
+  out <- out[!duplicated(out$co_unidade) & !is.na(out$co_unidade) & trimws(out$co_unidade) != "", ]
   out <- out[, setdiff(names(out), c("possui_relacao_atend_convenio", "possui_join_incompleto", "possui_evidencia_sus", "possui_evidencia_nao_sus", "possui_evidencia_ambigua")), drop = FALSE]
 
   dir_saida <- file.path(dir_interim, "estabelecimentos")

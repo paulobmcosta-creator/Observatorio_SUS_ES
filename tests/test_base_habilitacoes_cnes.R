@@ -11,16 +11,17 @@ out_path <- file.path("data_interim", "cnes", "habilitacoes", "cnes_habilitacoes
 if (!file.exists(out_path)) stop("Base final não foi gerada.")
 out <- tryCatch(read.csv(out_path, stringsAsFactors = FALSE, fileEncoding = "UTF-8"), error = function(e) stop("Falha de leitura/encoding da base final."))
 
-cols_min <- c("competencia","cnes","nome_estabelecimento","cod_municipio","municipio","uf","tipo_estabelecimento","subtipo_estabelecimento","natureza_juridica","gestao","atende_sus","codigo_habilitacao","tipo_habilitacao","descricao_habilitacao","origem_habilitacao","linha_cuidado","sublinha_cuidado","componente_rede","nivel_complexidade","usar_observatorio","prioridade","criterio_classificacao","status_validacao","competencia_inicio","competencia_fim","numero_leitos","portaria","fonte","arquivo_origem","data_processamento")
+cols_min <- c("competencia","co_unidade","cnes","nome_estabelecimento","cod_municipio","municipio","uf","tipo_estabelecimento","subtipo_estabelecimento","natureza_juridica","gestao","atende_sus","codigo_habilitacao","tipo_habilitacao","descricao_habilitacao","origem_habilitacao","linha_cuidado","sublinha_cuidado","componente_rede","nivel_complexidade","usar_observatorio","prioridade","criterio_classificacao","status_validacao","competencia_inicio","competencia_fim","numero_leitos","portaria","fonte","arquivo_origem","data_processamento")
 if (length(setdiff(cols_min, names(out))) > 0) stop("Colunas mínimas ausentes.")
 if (nrow(out) <= 0) stop("Base final sem linhas.")
+if (any(is.na(out$co_unidade) | trimws(out$co_unidade) == "")) stop("co_unidade vazio encontrado.")
 if (any(is.na(out$cnes) | trimws(out$cnes) == "")) stop("cnes vazio encontrado.")
 if (any(is.na(out$codigo_habilitacao) | trimws(out$codigo_habilitacao) == "")) stop("codigo_habilitacao vazio encontrado.")
 if (any(is.na(out$tipo_habilitacao) | trimws(out$tipo_habilitacao) == "")) stop("tipo_habilitacao vazio encontrado.")
 if (!all(out$uf == "ES")) stop("UF diferente de ES encontrada.")
 
 estab <- read.csv(file.path("data_interim", "cnes", "estabelecimentos", "cnes_estabelecimentos_es_202601.csv"), stringsAsFactors = FALSE)
-if (!all(out$cnes %in% estab$cnes)) stop("CNES fora da base de estabelecimentos ES.")
+if (!all(out$co_unidade %in% estab$co_unidade)) stop("Chave fora da base de estabelecimentos ES.")
 
 if (any(out$usar_observatorio == "Sim" & (is.na(out$linha_cuidado) | trimws(out$linha_cuidado) == ""))) stop("linha_cuidado vazia com usar_observatorio=Sim.")
 classif <- read.csv(file.path("metadata", "cnes", "classificacao_habilitacoes_cnes.csv"), stringsAsFactors = FALSE, sep = ";")
