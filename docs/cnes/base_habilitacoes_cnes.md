@@ -39,15 +39,17 @@ Não são descartadas. Recebem fallback:
 - `usar_observatorio = "Não"`
 - `status_validacao = "revisar"`
 
+Essa regra funciona como mecanismo de segurança para impedir descarte silencioso de registros. Na execução final da competência 202601, após correções do Ciclo 3C, não restaram registros com `linha_cuidado = "Não classificada"`.
+
 ## 11) Limitações metodológicas
 - Dependência de consistência entre base de estabelecimentos e `rlEstabSipac` para interseção de CNES.
 - Campos textuais podem sofrer variação de encoding entre fontes.
 - Se o filtro territorial resultar em 0 linhas, o script interrompe com erro e não grava produto vazio.
 
 ## 12) Próximos passos
-No Ciclo 4 serão gerados indicadores tabulares por município, região, linha de cuidado e estabelecimento.
+No Ciclo 4, esta base poderá ser utilizada como insumo para construção de indicadores tabulares por município, região, linha de cuidado e estabelecimento. A geração desses indicadores deve preservar a distinção entre base intermediária, classificação metodológica e produto analítico agregado.
 
-## 13) Resultado da execução no ambiente atual
+## 13) Histórico de bloqueio inicial
 Diagnóstico da execução real em 2026-05-21:
 - linhas em `rlEstabSipac202601`: **115.103**
 - CNES únicos em `rlEstabSipac202601`: **69.446**
@@ -58,10 +60,10 @@ Diagnóstico da execução real em 2026-05-21:
 - chaves com match no domínio `tbSubGruposHabilitacao`: **371**
 - chaves com match na classificação do Ciclo 1: **371**
 
-Interpretação: a base de estabelecimentos ES atualmente versionada está em formato de fixture/placeholder (1 CNES) e não representa o produto real do Ciclo 2. Com isso, não é possível concluir o Ciclo 3 com base final válida (>0 registros) neste ambiente sem disponibilizar a base real de estabelecimentos ES.
+Interpretação histórica: em execução anterior, o Ciclo 3 ficou bloqueado porque a base de estabelecimentos ES disponível estava em formato de fixture/placeholder (1 CNES) e não representava o produto real do Ciclo 2. Esse bloqueio foi superado após restauração/regeneração da base real do Ciclo 2B.
 
 
-## 14) Execução real após restauração do Ciclo 2B (2026-05-21)
+## 14) Primeira execução real após restauração do Ciclo 2B (2026-05-21)
 - Registros na base final de habilitações ES: **1.963**.
 - Estabelecimentos com pelo menos uma habilitação: **1.283**.
 - Municípios representados: **78**.
@@ -84,23 +86,60 @@ Distribuição por `usar_observatorio`:
 - Não: **1.562**
 - Sim: **401**
 
-Confirmação metodológica: o produto permanece uma **base intermediária tabular** de habilitações por estabelecimento, sem agregações analíticas finais e sem criação de indicadores.
+Confirmação histórica: estes resultados representam a primeira execução real após a restauração do Ciclo 2B e foram posteriormente superados por correções metodológicas do Ciclo 3C.
 
-## 15) Atualização de resultados após correção de falsos negativos (Ciclo 3C)
-Após a correção pontual da classificação (Ciclo 3C), a distribuição da base de habilitações (`202601`) passou a:
+## 15) Resultado final validado após Ciclo 3C e reclassificação 1708-H
+- Registros na base final de habilitações ES: **1.963**.
+- Estabelecimentos com pelo menos uma habilitação: **1.283**.
+- Municípios representados: **78**.
+- Registros sem classificação analítica: **0**.
+- CNES da base de habilitações não encontrados na base de estabelecimentos ES: **0**.
+- Duplicidades exatas removidas: **0**.
+- Tamanho aproximado do arquivo final: **899.389 bytes** (~0,90 MB).
 
-- Não classificada: **1.081**
-- Fora do escopo inicial: **465**
+Distribuição final por `linha_cuidado`:
+- Fora do escopo inicial: **1.462**
 - RUE: **220**
 - UTI / cuidado crítico: **68**
 - Nefrologia: **49**
 - Outras habilitações estratégicas: **49**
-- Oncologia: **28**
-- Saúde mental: **2**
-- Cardiovascular: **1**
+- Saúde mental: **41**
+- Oncologia: **41**
+- Cardiovascular: **33**
 
-Distribuição por `usar_observatorio`:
-- Não: **1.546**
-- Sim: **417**
+Distribuição final por `usar_observatorio`:
+- Sim: **501**
+- Não: **1.462**
 
-Confirmação: o produto continua sendo base intermediária tabular do Ciclo 3, sem indicadores e sem avanço para Ciclo 4.
+Auditoria fora do escopo conciliada com a base final:
+- auditoria fora do escopo: soma `n_registros = 1.462`.
+
+Confirmação metodológica: o produto permanece uma **base intermediária tabular** de habilitações por estabelecimento, sem agregações analíticas finais e sem criação de indicadores.
+
+## Critérios de validação
+- base final com mais de zero registros;
+- apenas CNES pertencentes à base de estabelecimentos ES;
+- ausência de `cnes` vazio;
+- ausência de `codigo_habilitacao` vazio;
+- ausência de `tipo_habilitacao` vazio;
+- ausência de registros “Não classificada” na execução final;
+- chave composta `codigo_habilitacao + tipo_habilitacao` preservada como texto;
+- uso de join por chave composta, nunca apenas por código;
+- auditoria fora do escopo conciliada com a base final;
+- testes automatizados executados e aprovados.
+
+## Execução do pipeline
+```r
+source("src/transform/preparar_habilitacoes_cnes.R")
+
+preparar_habilitacoes_cnes(
+  dir_raw = "data_raw/cnes",
+  dir_interim = "data_interim/cnes",
+  dir_metadata = "metadata/cnes",
+  competencia = "202601"
+)
+```
+
+```bash
+Rscript tests/test_base_habilitacoes_cnes.R
+```

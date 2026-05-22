@@ -3,16 +3,16 @@ competencia,Competência de referência do CNES,parâmetro competencia,Cópia di
 cnes,Código CNES do estabelecimento,tbEstabelecimento,Preservado como texto,Uma linha por CNES
 nome_estabelecimento,Nome fantasia do estabelecimento,tbEstabelecimento,Mapeamento de coluna equivalente,Campo pode variar conforme layout
 razao_social,Razão social,tbEstabelecimento,Mapeamento de coluna equivalente,Pode estar ausente em alguns layouts
-cod_municipio,Código do município de gestão,tbEstabelecimento,Preservado como texto e usado no filtro territorial,Filtro ES aplicado antes de qualquer join
+cod_municipio,Código do município vinculado ao estabelecimento no cadastro CNES,tbEstabelecimento,Preservado como texto e usado no filtro territorial,Filtro ES aplicado antes de qualquer join
 municipio,Nome do município,tbMunicipio,Join por código do município,Somente municípios do ES
 uf,Sigla da UF,parâmetro uf_interesse,Valor fixo da execução,Esperado ES no Ciclo 2
-tipo_estabelecimento,Descrição do tipo,tbTipoEstabelecimento,Join por código de tipo,NA quando sem correspondência
+tipo_estabelecimento,Descrição do tipo,tbTipoEstabelecimento,Join por código de tipo,Pode permanecer vazio/ausente quando sem correspondência
 subtipo_estabelecimento,Descrição agregada de subtipos,rlEstabSubTipo + tbSubTipo,Agregação de valores únicos por CNES com separador |,Evita duplicidade por relacionamento N:N
-natureza_juridica,Descrição da natureza jurídica,tbNaturezaJuridica,Join por código,NA quando não informado
-gestao,Descrição da gestão,tbGestao,Join por código,NA quando não informado
-atende_sus,Indicador categórico de vínculo SUS,rlEstabAtendPrestConv + tbConvenio + tbAtendimentoPrestado,Regra categórica Sim/Não/Revisar com critério conservador,Ausência de evidência não é classificada automaticamente como Não
-atendimento_prestado,Descrição agregada de atendimentos,rlEstabAtendPrestConv + tbAtendimentoPrestado,Agregação de valores únicos por CNES,NA quando sem relacionamento
-convenio,Descrição agregada de convênios,rlEstabAtendPrestConv + tbConvenio,Agregação de valores únicos por CNES,NA quando sem relacionamento
+natureza_juridica,Descrição da natureza jurídica,tbNaturezaJuridica,Join por código,Pode permanecer vazio/ausente quando não informado
+gestao,Descrição da gestão,tbGestao,Join por código,Pode permanecer vazio/ausente quando não informado
+atende_sus,Classificação categórica conservadora de vínculo SUS,rlEstabAtendPrestConv + tbConvenio + tbAtendimentoPrestado,Regra categórica Sim/Não/Revisar com critério conservador,"Ausência de evidência não é classificada automaticamente como Não; o valor Não indica ausência de evidência SUS nas relações utilizadas, não prova absoluta de inexistência de relação com o SUS."
+atendimento_prestado,Descrição agregada de atendimentos,rlEstabAtendPrestConv + tbAtendimentoPrestado,Agregação de valores únicos por CNES,Pode permanecer vazio/ausente quando sem relacionamento
+convenio,Descrição agregada de convênios,rlEstabAtendPrestConv + tbConvenio,Agregação de valores únicos por CNES,Pode permanecer vazio/ausente quando sem relacionamento
 fonte,Fonte do dataset,derivado,Valor fixo CNES,Rastreabilidade
 arquivo_origem,Tabela mãe do ciclo,derivado,Valor fixo tbEstabelecimento202601,Rastreabilidade
 data_processamento,Data da geração,derivado,Sys.Date,Dependente do dia da execução
