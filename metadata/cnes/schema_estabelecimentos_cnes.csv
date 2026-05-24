@@ -1,18 +1,19 @@
 nome_campo,tipo,obrigatorio,descricao,regra_preenchimento,exemplo,origem
 competencia,texto,sim,Competência CNES no formato AAAAMM,Parâmetro da função preparar_estabelecimentos_cnes,202601,parâmetro
-cnes,texto,sim,Identificador CNES do estabelecimento,Lido de tbEstabelecimento e mantido como texto,0000001,tbEstabelecimento
-nome_estabelecimento,texto,sim,Nome fantasia ou nome do estabelecimento,NO_FANTASIA quando disponível,UBS Centro,tbEstabelecimento
-razao_social,texto,nao,Razão social do estabelecimento,NO_RAZAO_SOCIAL quando disponível,Prefeitura,tbEstabelecimento
-cod_municipio,texto,sim,Código do município vinculado ao estabelecimento no cadastro CNES,Lido de tbEstabelecimento e filtrado para municípios do ES,3200102,tbEstabelecimento/tbMunicipio
-municipio,texto,sim,Nome do município do estabelecimento,Join de cod_municipio com tbMunicipio,Afonso Cláudio,tbMunicipio
-uf,texto,sim,Unidade federativa de interesse,Parâmetro uf_interesse fixado em ES,ES,parâmetro
-tipo_estabelecimento,texto,nao,Descrição do tipo de estabelecimento,Join de código de tipo com tbTipoEstabelecimento,Unidade Básica,tbTipoEstabelecimento
-subtipo_estabelecimento,texto,nao,Subtipo agregado do estabelecimento,Agregação única por CNES em rlEstabSubTipo + tbSubTipo,UBS Tradicional,rlEstabSubTipo/tbSubTipo
-natureza_juridica,texto,nao,Descrição da natureza jurídica,Join de código com tbNaturezaJuridica,Administração Pública,tbNaturezaJuridica
-gestao,texto,nao,Descrição da esfera de gestão,Join de código com tbGestao,Municipal,tbGestao
-atende_sus,texto,sim,Classificação de vínculo SUS,"Sim quando há evidência relacional explícita de SUS; Não quando há apenas evidência relacional não-SUS válida e sem ambiguidade; Revisar em ausência, incompletude ou ambiguidade.",Sim,regras derivadas
-atendimento_prestado,texto,nao,Lista de atendimentos prestados,Agregação única por CNES via rlEstabAtendPrestConv + tbAtendimentoPrestado,Atendimento SUS,rlEstabAtendPrestConv/tbAtendimentoPrestado
-convenio,texto,nao,Lista de convênios associados,Agregação única por CNES via rlEstabAtendPrestConv + tbConvenio,SUS,rlEstabAtendPrestConv/tbConvenio
-fonte,texto,sim,Fonte do dado,Valor fixo CNES,CNES,derivado
-arquivo_origem,texto,sim,Arquivo principal de origem,Nome lógico da tabela mãe tbEstabelecimento,tbEstabelecimento202601,derivado
-data_processamento,texto,sim,Data de geração do arquivo final,Sys.Date no momento da execução,2026-05-20,derivado
+co_unidade,texto,sim,Chave operacional do estabelecimento no layout CNES originada de CO_UNIDADE,Preservada como texto e usada nos relacionamentos com tabelas rl*,3205303112195,tbEstabelecimento
+cnes,texto,sim,Código público CNES do estabelecimento originado de CO_CNES,Preservado como texto com zeros à esquerda,0311219,tbEstabelecimento
+nome_estabelecimento,texto,sim,Nome do estabelecimento para exibição,NO_FANTASIA quando preenchido; fallback para razao_social quando vazio,UBS Centro,tbEstabelecimento
+razao_social,texto,nao,Razão social do estabelecimento,Mapeada de NO_RAZAO_SOCIAL sem alteração semântica,Prefeitura Municipal,tbEstabelecimento
+cod_municipio,texto,sim,Código do município do estabelecimento no cadastro CNES,Preservado como texto e filtrado para municípios da UF alvo,3205309,tbEstabelecimento/tbMunicipio
+municipio,texto,sim,Nome do município do estabelecimento,Join de cod_municipio com domínio municipal,Vitória,tbMunicipio
+uf,texto,sim,Unidade federativa de interesse,Valor do parâmetro uf_interesse fixado na execução,ES,parâmetro
+tipo_estabelecimento,texto,nao,Descrição do tipo de estabelecimento,Join por chave compatível CO_TIPO_ESTABELECIMENTO quando houver domínio compatível,Unidade Básica de Saúde,tbTipoEstabelecimento
+subtipo_estabelecimento,texto,nao,Subtipo agregado do estabelecimento,Agregação de valores únicos por co_unidade em rlEstabSubTipo + tbSubTipo,UBS Tradicional,rlEstabSubTipo/tbSubTipo
+natureza_juridica,texto,nao,Descrição da natureza jurídica do estabelecimento,Join por código de natureza jurídica com domínio correspondente,Administração Pública,tbNaturezaJuridica
+gestao,texto,nao,Descrição da gestão no domínio CNES,Na competência 202601 não há preenchimento artificial quando TP_GESTAO não é estruturalmente compatível com CO_GESTAO,,tbGestao/tbEstabelecimento
+atende_sus,texto,sim,Classificação categórica conservadora de vínculo SUS,Valores restritos a Sim/Não/Revisar conforme evidências relacionais sem inferência de indicador final,Sim,regras derivadas
+atendimento_prestado,texto,nao,Lista agregada de atendimentos prestados,Agregação única por co_unidade via rlEstabAtendPrestConv + tbAtendimentoPrestado,Atendimento SUS,rlEstabAtendPrestConv/tbAtendimentoPrestado
+convenio,texto,nao,Lista agregada de convênios associados,Agregação única por co_unidade via rlEstabAtendPrestConv + tbConvenio,SUS,rlEstabAtendPrestConv/tbConvenio
+fonte,texto,sim,Fonte declarada do dado,Valor fixo CNES,CNES,derivado
+arquivo_origem,texto,sim,Arquivo lógico principal de origem,Valor fixo da tabela mãe tbEstabelecimento202601,tbEstabelecimento202601,derivado
+data_processamento,texto,sim,Data de processamento da saída,Sys.Date na execução,2026-05-23,derivado

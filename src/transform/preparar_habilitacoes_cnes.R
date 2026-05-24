@@ -32,7 +32,7 @@ preparar_habilitacoes_cnes <- function(
   classif <- ler_csv_generico(caminho_class, sep = ";", encoding = "UTF-8")
 
   map_rl <- c(
-    co_unidade = "cnes",
+    co_unidade = "co_unidade",
     cod_sub_grupo_habilitacao = "codigo_habilitacao",
     tp_habilitacao = "tipo_habilitacao",
     cmtp_inicio = "competencia_inicio",
@@ -51,27 +51,27 @@ preparar_habilitacoes_cnes <- function(
   )
   for (k in names(map_dom)) if (k %in% names(dom)) names(dom)[names(dom) == k] <- map_dom[[k]]
 
-  obrig_rl <- c("cnes", "codigo_habilitacao", "tipo_habilitacao")
+  obrig_rl <- c("co_unidade", "codigo_habilitacao", "tipo_habilitacao")
   obrig_dom <- c("codigo_habilitacao", "tipo_habilitacao", "descricao_habilitacao", "origem_habilitacao")
   obrig_class <- c("codigo_habilitacao", "tipo_habilitacao", "linha_cuidado", "sublinha_cuidado", "componente_rede", "nivel_complexidade", "usar_observatorio", "prioridade", "criterio_classificacao", "status_validacao")
-  obrig_estab <- c("cnes", "nome_estabelecimento", "cod_municipio", "municipio", "uf", "tipo_estabelecimento", "subtipo_estabelecimento", "natureza_juridica", "gestao", "atende_sus")
+  obrig_estab <- c("co_unidade", "cnes", "nome_estabelecimento", "cod_municipio", "municipio", "uf", "tipo_estabelecimento", "subtipo_estabelecimento", "natureza_juridica", "gestao", "atende_sus")
 
   if (length(setdiff(obrig_rl, names(rl))) > 0) stop("rlEstabSipac sem colunas obrigatórias.")
   if (length(setdiff(obrig_dom, names(dom))) > 0) stop("tbSubGruposHabilitacao sem colunas obrigatórias.")
   if (length(setdiff(obrig_class, names(classif))) > 0) stop("Classificação sem colunas obrigatórias.")
   if (length(setdiff(obrig_estab, names(estab))) > 0) stop("Base de estabelecimentos sem colunas obrigatórias.")
 
-  txt_cols <- intersect(c("cnes", "codigo_habilitacao", "tipo_habilitacao", "cod_municipio"), names(estab))
+  txt_cols <- intersect(c("co_unidade", "cnes", "codigo_habilitacao", "tipo_habilitacao", "cod_municipio"), names(estab))
   for (col in txt_cols) estab[[col]] <- trimws(as.character(estab[[col]]))
-  for (col in c("cnes", "codigo_habilitacao", "tipo_habilitacao")) {
+  for (col in c("co_unidade", "codigo_habilitacao", "tipo_habilitacao")) {
     if (col %in% names(rl)) rl[[col]] <- trimws(as.character(rl[[col]]))
     if (col %in% names(dom)) dom[[col]] <- trimws(as.character(dom[[col]]))
     if (col %in% names(classif)) classif[[col]] <- trimws(as.character(classif[[col]]))
   }
 
-  cnes_es <- unique(estab$cnes)
-  rl_filtrado <- rl[rl$cnes %in% cnes_es, , drop = FALSE]
-  cnes_fora_base <- sum(!(unique(rl$cnes) %in% cnes_es))
+  co_unidade_es <- unique(estab$co_unidade)
+  rl_filtrado <- rl[rl$co_unidade %in% co_unidade_es, , drop = FALSE]
+  cnes_fora_base <- sum(!(unique(rl$co_unidade) %in% co_unidade_es))
 
   if (nrow(rl_filtrado) == 0) {
     stop(
@@ -85,7 +85,7 @@ preparar_habilitacoes_cnes <- function(
 
   base <- merge(rl_filtrado, dom[, obrig_dom], by = c("codigo_habilitacao", "tipo_habilitacao"), all.x = TRUE, sort = FALSE)
   base <- merge(base, classif[, c("codigo_habilitacao", "tipo_habilitacao", "linha_cuidado", "sublinha_cuidado", "componente_rede", "nivel_complexidade", "usar_observatorio", "prioridade", "criterio_classificacao", "status_validacao")], by = c("codigo_habilitacao", "tipo_habilitacao"), all.x = TRUE, sort = FALSE)
-  base <- merge(base, estab[, obrig_estab], by = "cnes", all.x = TRUE, sort = FALSE)
+  base <- merge(base, estab[, obrig_estab], by = "co_unidade", all.x = TRUE, sort = FALSE)
 
   base$competencia <- competencia
   base$linha_cuidado[is.na(base$linha_cuidado) | trimws(base$linha_cuidado) == ""] <- "Não classificada"
@@ -96,7 +96,7 @@ preparar_habilitacoes_cnes <- function(
   base$data_processamento <- as.character(Sys.Date())
 
   campos_finais <- c(
-    "competencia", "cnes", "nome_estabelecimento", "cod_municipio", "municipio", "uf",
+    "competencia", "co_unidade", "cnes", "nome_estabelecimento", "cod_municipio", "municipio", "uf",
     "tipo_estabelecimento", "subtipo_estabelecimento", "natureza_juridica", "gestao", "atende_sus",
     "codigo_habilitacao", "tipo_habilitacao", "descricao_habilitacao", "origem_habilitacao",
     "linha_cuidado", "sublinha_cuidado", "componente_rede", "nivel_complexidade", "usar_observatorio",
