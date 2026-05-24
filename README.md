@@ -38,9 +38,14 @@ Observatorio_SUS_ES/
 
 ## Linguagem principal e ecossistema
 
-Os pipelines reprodutíveis do Observatório SUS‑ES serão desenvolvidos prioritariamente em **R**. Scripts e funções devem aproveitar o ecossistema tidyverse e demais bibliotecas da linguagem, garantindo transparência, legibilidade e reprodutibilidade. O uso de **Python** é admitido apenas em situações específicas em que exista justificativa técnica (ausência de recurso equivalente em R), devendo ser claramente documentado.
+O Observatório SUS‑ES adota uma **arquitetura híbrida R–Python**.
 
-Ferramentas como Power BI e QGIS permanecem no ecossistema do projeto para visualização e georreferenciamento, mas a espinha dorsal analítica reprodutível será elaborada em R. Independente da linguagem, todos os códigos devem seguir as convenções metodológicas e de governança descritas em `docs/`.
+- **Python/PySUS** passa a ser a camada preferencial para extração, cache, engenharia de dados, organização de bases brutas/intermediárias, uso de Parquet e automação operacional.
+- **R** permanece preservado para validação metodológica, análise estatística, indicadores, produtos acadêmicos e como oráculo temporário durante a transição por paridade.
+- **Metadados, schemas, dicionários, testes e documentação** são contratos transversais independentes de linguagem.
+- **Nenhum componente R sensível** será removido sem paridade Python validada e decisão documentada.
+
+Ferramentas como Power BI e QGIS permanecem no ecossistema do projeto para visualização e georreferenciamento. Independente da linguagem, todos os códigos devem seguir as convenções metodológicas e de governança descritas em `docs/`.
 
 ## Execução de pipelines em R
 
@@ -49,7 +54,6 @@ Para o piloto CNES em R, consulte:
 - guia de setup local: `docs/cnes/setup_execucao_local_r.md`;
 - dependências declaradas: `config/dependencias_r.csv`;
 - workflow de validação contínua: `.github/workflows/validar_pipeline_cnes_r.yml`.
-
 
 ## Status atual do pipeline CNES
 

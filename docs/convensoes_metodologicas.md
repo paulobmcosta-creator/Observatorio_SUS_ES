@@ -13,7 +13,7 @@ Este documento estabelece padrões para nomenclatura de arquivos, funções e va
 ## Nomenclatura de Arquivos
 
 * Use nomes descritivos e minúsculos separados por underlines (`_`), ex.: `mortalidade_infantil_2023.csv`.
-* **Scripts de pipeline reprodutível** devem, sempre que possível, ser escritos em **R** (extensão `.R`) e iniciar com verbo no infinitivo indicando a ação, por exemplo: `extrair_dados_sinan.R`. O uso de scripts em Python (`.py`) só é admitido quando houver **justificativa técnica específica**.
+* **Scripts de pipeline reprodutível** devem seguir a arquitetura híbrida R–Python/PySUS definida neste repositório. Rotinas de extração, cache, engenharia de dados, organização de bases brutas/intermediárias, serialização técnica e automação operacional devem ser preferencialmente implementadas em Python quando houver aderência técnica, especialmente quando utilizarem PySUS ou bibliotecas equivalentes. Rotinas de validação metodológica, análise estatística, indicadores, exploração analítica e produtos acadêmicos podem permanecer em R, sobretudo quando atuarem como oráculo metodológico ou componente analítico validado. Em todos os casos, o nome do arquivo deve iniciar com verbo no infinitivo e explicitar a ação realizada, por exemplo: `extrair_dados_cnes.py`, `validar_pipeline_cnes.R`, `calcular_indicadores_cnes_oferta.R`.
 * Arquivos de relatórios em Markdown ou HTML devem incluir a data de geração: `relatorio_incidentes_2026-04-13.md`.
 
 ## Convenções de Funções e Variáveis
@@ -54,3 +54,17 @@ calcular_taxa_incidencia <- function(casos, populacao) {
 ## Idioma
 
 Adote o português para nomes, comentários e documentação. Termos técnicos em inglês podem ser utilizados quando não houver tradução consagrada ou quando se referirem à nomenclatura de funções de bibliotecas.
+
+## Arquitetura híbrida R–Python/PySUS
+
+A governança técnica do Observatório SUS-ES passa a adotar arquitetura híbrida com separação explícita de camadas:
+
+- **Extração e engenharia de dados**: preferencialmente em Python/PySUS (ingestão, cache, organização por competência, serialização técnica como Parquet e automação operacional).
+- **Análise e validação metodológica**: preservadas em R enquanto não houver paridade Python validada para componentes sensíveis.
+
+Diretrizes metodológicas obrigatórias para CNES:
+- `co_unidade` é a **chave operacional**.
+- `cnes` é o **código público**.
+- Produtos em `data_interim` devem ser tratados como **produto gerável** (não fonte primária de verdade).
+- Contratos de dados (metadados, schemas, dicionários e documentação metodológica) devem ser independentes de linguagem.
+- Substituição de script R sensível exige paridade funcional e metodológica previamente documentada.

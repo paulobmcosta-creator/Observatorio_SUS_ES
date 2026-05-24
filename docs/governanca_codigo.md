@@ -54,3 +54,18 @@ Revisões devem focar em:
 ## Licenciamento e Citação
 
 Todo código deste repositório é disponibilizado sob licença MIT, salvo indicação em contrário. Ao reutilizar ou adaptar trechos deste trabalho, cite o repositório e os autores como forma de reconhecimento ao esforço coletivo.
+
+## Governança de código na arquitetura híbrida R–Python/PySUS
+
+Na transição para arquitetura híbrida, toda mudança de código em R e/ou Python deve preservar contratos de dados, schemas, dicionários e decisões metodológicas vigentes.
+
+Diretrizes:
+
+1. Scripts R classificados como oráculos metodológicos não devem ser removidos sem decisão documentada em artefato de migração.
+2. Novas implementações Python devem vir acompanhadas de testes e documentação correspondente.
+3. PRs de migração devem declarar explicitamente se alteram:
+   - regra metodológica;
+   - implementação operacional;
+   - somente documentação/governança.
+4. A migração deve ocorrer por componente e por paridade validada, e não por reescrita geral orientada apenas por linguagem.
+5. Mudanças que afetem extração/engenharia em Python não podem implicitamente alterar regra analítica/metodológica sem registro e validação comparativa.
