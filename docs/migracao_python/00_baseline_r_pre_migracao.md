@@ -3,11 +3,14 @@
 ## 1. Objetivo do baseline
 Este documento registra o estado técnico-metodológico atual do repositório **antes** de qualquer migração, substituição, refatoração ou descarte da camada operacional em R para Python/PySUS. O foco desta etapa é exclusivamente de **congelamento de referência** (inventário, validação observacional e mapeamento de riscos), sem alterar lógica, dados, metadados ou scripts existentes.
 
+Após a complementação desta etapa, este documento também registra uma leitura interpretativa dos achados, especialmente a distinção entre produtos históricos observados, regras metodológicas vigentes, limitações operacionais de Git LFS e critérios provisórios de fonte de verdade para orientar a Etapa 1.
+
 ## 2. Identificação do repositório e commit de referência
 - **Repositório:** `Observatorio_SUS_ES`
 - **Branch atual:** `work`
-- **HEAD atual (`git rev-parse HEAD`):** `8e759b17449de9b2d27d6fb48b2a12df6152dfb0`
+- **Commit do estado analisado (`git rev-parse HEAD` no início da baseline):** `8e759b17449de9b2d27d6fb48b2a12df6152dfb0`
 - **Último commit (`git log -1 --oneline`):** `8e759b1 Merge pull request #42 from paulobmcosta-creator/codex/refactor-cnes-module-pr-without-versioning-intermediate-prod`
+- **Commit documental posterior da baseline:** houve complementação documental posterior no histórico de trabalho, porém o hash `8431129` não pôde ser confirmado no histórico local atual desta sessão.
 - **Data/hora da inspeção (UTC):** 2026-05-24 (execução local nesta sessão; baseline atualizado após instalação efêmera de R para validação)
 - **Estado de `git status --short` no início da inspeção:** sem alterações rastreadas no momento do levantamento.
 - **Havia arquivos modificados antes da tarefa?** Não foram identificadas modificações rastreadas no snapshot inicial.
@@ -142,6 +145,16 @@ Arquivos observados em `docs/cnes/` incluem contrato de dados, decisões metodol
   - `codigo_habilitacao`: **0**
   - `tipo_habilitacao`: **0**
 
+
+### 5.5 Leitura interpretativa dos produtos data_interim
+
+- Os CSVs atualmente observados em `data_interim` são úteis como referência histórica de cardinalidade.
+- Os CSVs de estabelecimentos e habilitações capturados na baseline não apresentam `co_unidade` ou não permitem aferição de `co_unidade` no export atual.
+- Isso cria desalinhamento com a decisão metodológica mais recente, segundo a qual `co_unidade` é chave operacional e `cnes` é código público.
+- Por esse motivo, esses CSVs não devem ser tratados como contrato estrutural vigente para a migração.
+- Para a Etapa 1, esses arquivos devem ser classificados como produtos intermediários históricos ou possivelmente defasados em relação à arquitetura metodológica atual.
+- O contrato estrutural futuro deve ser orientado por código, metadados, documentação metodológica e regras de chave, não pelos CSVs históricos sem `co_unidade`.
+
 ## 6. Regras metodológicas já consolidadas
 Regras identificadas no código/documentação e que devem ser preservadas durante migração:
 
@@ -153,6 +166,8 @@ Regras identificadas no código/documentação e que devem ser preservadas duran
 - `atende_sus` é classificação conservadora, **não** indicador final.
 - `data_interim` é produto gerável/reconstruível, não fonte permanente de verdade.
 - `metadata/cnes/classificacao_habilitacoes_cnes.csv` é patrimônio metodológico e deve ser preservado.
+
+Estas regras têm precedência interpretativa sobre os CSVs intermediários históricos atualmente observados. Em caso de divergência entre produto data_interim antigo e decisão metodológica documentada, a Etapa 1 deve tomar como referência principal a regra metodológica vigente, especialmente a distinção co_unidade/cnes.
 
 ## 7. Testes existentes
 Testes R mapeados em `tests/`:
@@ -292,6 +307,7 @@ Conclusão da complementação:
 
 - A limitação de Git LFS **persistiu** nesta sessão.
 - Os dois testes de base real foram reexecutados, mas continuam bloqueados por indisponibilidade do conteúdo LFS do arquivo bruto necessário.
+- A persistência da limitação de Git LFS deve ser interpretada como risco operacional de reprodutibilidade da arquitetura atual de dados brutos, e não como evidência direta de falha lógica dos scripts R. Esse achado reforça a necessidade de uma futura camada de extração reprodutível em Python/PySUS ou mecanismo equivalente.
 
 ## 9. Estado de versionamento de dados
 ### 9.1 `.gitignore`
@@ -321,8 +337,8 @@ Leitura preliminar:
 
 | produto | caminho | linhas | colunas | chaves principais | cardinalidade de chaves | domínios relevantes | observações | status do baseline |
 |---|---|---:|---:|---|---|---|---|---|
-| Estabelecimentos ES 202601 | `data_interim/cnes/estabelecimentos/cnes_estabelecimentos_es_202601.csv` | 12.548 | 17 | `cnes` (pública) | `cnes` distintos: 12.548 | `atende_sus` = {Sim, Não, Revisar} | sem vazios em `cnes`; `co_unidade` não presente no export atual | capturado |
-| Habilitações ES 202601 | `data_interim/cnes/habilitacoes/cnes_habilitacoes_es_202601.csv` | 1.963 | 31 | `cnes` + (`codigo_habilitacao`,`tipo_habilitacao`) | `cnes`: 1.283; `codigo_habilitacao`: 172; `tipo_habilitacao`: 7 | `atende_sus` = {Sim, Não, Revisar}; `usar_observatorio` = {Sim, Não}; 8 valores em `linha_cuidado` | sem vazios em `cnes`, `codigo_habilitacao`, `tipo_habilitacao`; `co_unidade` não presente no export atual | capturado |
+| Estabelecimentos ES 202601 | `data_interim/cnes/estabelecimentos/cnes_estabelecimentos_es_202601.csv` | 12.548 | 17 | `cnes` (pública) | `cnes` distintos: 12.548 | `atende_sus` = {Sim, Não, Revisar} | sem vazios em `cnes`; `co_unidade` não presente no export atual; cardinalidade histórica, não contrato estrutural vigente | capturado com ressalva estrutural |
+| Habilitações ES 202601 | `data_interim/cnes/habilitacoes/cnes_habilitacoes_es_202601.csv` | 1.963 | 31 | `cnes` + (`codigo_habilitacao`,`tipo_habilitacao`) | `cnes`: 1.283; `codigo_habilitacao`: 172; `tipo_habilitacao`: 7 | `atende_sus` = {Sim, Não, Revisar}; `usar_observatorio` = {Sim, Não}; 8 valores em `linha_cuidado` | sem vazios em `cnes`, `codigo_habilitacao`, `tipo_habilitacao`; `co_unidade` não presente/aferível no export atual; cardinalidade histórica, não contrato estrutural vigente | capturado com ressalva estrutural |
 | Classificação de habilitações | `metadata/cnes/classificacao_habilitacoes_cnes.csv` | não aferido nesta etapa | não aferido nesta etapa | `codigo_habilitacao` + `tipo_habilitacao` | não aferido nesta etapa | campos metodológicos de classificação | patrimônio metodológico explícito | mapeado |
 | Documentação metodológica CNES | `docs/cnes/` | n/a | n/a | n/a | n/a | n/a | múltiplos documentos de contrato/decisão/produto | mapeado |
 
@@ -352,6 +368,11 @@ Classificação preliminar (sem mover/alterar):
 - **Arquivar/deprecar futuramente**
   - scripts estritamente transitórios de piloto, após validação de paridade R vs Python e aceite formal.
 
+
+Observação transversal desta classificação preliminar:
+
+- Os produtos `data_interim` observados devem ser preservados apenas como referência histórica de cardinalidade e comparação preliminar, não como fonte normativa de estrutura para a migração.
+
 ## 12. Riscos identificados antes da migração
 1. Dependência de `Rscript` para execução local e CI de testes legados.
 2. Dependência de dados reais em `data_raw/cnes/202601` para testes de base real.
@@ -362,8 +383,44 @@ Classificação preliminar (sem mover/alterar):
 7. Fragilidade de encoding e delimitador (UTF-8/Latin1, `;`/`,`), mitigada parcialmente no legado R.
 8. Risco de divergência entre documentação e código efetivamente executado.
 9. Risco de cobertura incompleta em PySUS para todas as tabelas CNES atualmente usadas.
+10. Desalinhamento entre produtos data_interim históricos e decisão metodológica vigente: os CSVs observados não incorporam `co_unidade`, embora a arquitetura metodológica atual estabeleça `co_unidade` como chave operacional. Esse desalinhamento deve ser resolvido por regeneração futura ou substituição controlada na camada Python/PySUS, não por edição manual dos CSVs.
 
-## 13. Critérios de aceite para avançar à Etapa 1
+## 13. Fonte de verdade provisória para a Etapa 1
+Para a Etapa 1, a fonte de verdade provisória deve seguir a seguinte hierarquia:
+
+1. Código R atual, especialmente scripts com regras metodológicas sensíveis.
+2. Metadados versionados, especialmente classificações, schemas e dicionários.
+3. Documentação metodológica em `docs/cnes`.
+4. Testes R que passaram.
+5. Decisões metodológicas sobre chaves, joins, escopo e classificação.
+
+Fonte secundária:
+- CSVs `data_interim` atuais, apenas como referência histórica de cardinalidade e comparação preliminar.
+
+Não considerar como fonte suficiente:
+- arquivo bruto LFS não materializado;
+- CSV intermediário sem `co_unidade` como contrato estrutural atualizado.
+
+## 14. Orientação interpretativa para a Etapa 1
+A Etapa 1 deve classificar o legado R em dois eixos:
+
+1. **Valor metodológico**
+   - contém regra que deve sobreviver à migração?
+   - contém decisão sanitária, territorial, classificatória ou de chave?
+
+2. **Valor operacional futuro**
+   - deve continuar executando no pipeline final?
+   - deve ser substituído por Python/PySUS?
+   - deve servir apenas como oráculo temporário?
+
+Diretrizes explícitas:
+- Não classificar um componente como descartável apenas porque está em R.
+- Diferenciar código operacional substituível de regra metodológica preservável.
+- Tratar extração e orquestração piloto como candidatos fortes à substituição.
+- Tratar classificação, chaves, joins e regras de integração como patrimônio metodológico até existir paridade Python.
+- Tratar CSVs `data_interim` sem `co_unidade` como produtos históricos, não como contrato vigente.
+
+## 15. Critérios de aceite para avançar à Etapa 1
 Checklist objetivo da Etapa 0:
 
 - [x] Documento de baseline criado em `docs/migracao_python/00_baseline_r_pre_migracao.md`.
@@ -373,10 +430,14 @@ Checklist objetivo da Etapa 0:
 - [x] Testes existentes mapeados.
 - [x] Execução de testes registrada **ou** limitação de ambiente documentada (nesta inspeção: limitação documentada).
 - [x] Regras metodológicas centrais registradas.
+- [x] Orientações interpretativas para a Etapa 1 registradas.
+- [x] Fonte de verdade provisória para a Etapa 1 definida.
+- [x] Desalinhamento entre data_interim e co_unidade explicitado.
+- [x] Leitura interpretativa dos produtos data_interim registrada.
 - [x] Componentes candidatos a descarte classificados preliminarmente.
 - [x] Nenhum código, dado ou metadado existente alterado nesta etapa.
 
-## 14. Conclusão
+## 16. Conclusão
 Este baseline deve ser tratado como referência obrigatória antes de:
 
 1. classificar formalmente o legado R;
@@ -386,3 +447,12 @@ Este baseline deve ser tratado como referência obrigatória antes de:
 5. deprecar qualquer script R.
 
 A Etapa 0 encerra-se com foco em rastreabilidade e proteção metodológica do estado atual, sem iniciar Etapa 1 e sem alterar ativos existentes fora deste documento.
+
+Síntese conclusiva para transição à Etapa 1:
+- A Etapa 0 está concluída com ressalva operacional de Git LFS.
+- Não é necessário resolver Git LFS antes da Etapa 1.
+- Os CSVs `data_interim` atuais não devem ser tomados como contrato estrutural vigente.
+- `co_unidade` deve orientar a classificação do legado e a futura migração.
+- A classificação de habilitações em `metadata/cnes` deve ser preservada como patrimônio metodológico.
+- Scripts R de extração/orquestração podem ser candidatos a substituição.
+- Scripts R de transformação/classificação devem ser preservados como oráculo e fonte de regra até existir paridade Python.
