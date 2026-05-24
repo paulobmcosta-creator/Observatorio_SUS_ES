@@ -1,18 +1,19 @@
 nome_campo,descricao,fonte_original,transformacao_aplicada,observacao_metodologica
 competencia,Competência de referência do CNES,parâmetro competencia,Cópia direta,Formato AAAAMM
-cnes,Código CNES do estabelecimento,tbEstabelecimento,Preservado como texto,Uma linha por CNES
-nome_estabelecimento,Nome fantasia do estabelecimento,tbEstabelecimento,Mapeamento de coluna equivalente,Campo pode variar conforme layout
-razao_social,Razão social,tbEstabelecimento,Mapeamento de coluna equivalente,Pode estar ausente em alguns layouts
-cod_municipio,Código do município vinculado ao estabelecimento no cadastro CNES,tbEstabelecimento,Preservado como texto e usado no filtro territorial,Filtro ES aplicado antes de qualquer join
-municipio,Nome do município,tbMunicipio,Join por código do município,Somente municípios do ES
-uf,Sigla da UF,parâmetro uf_interesse,Valor fixo da execução,Esperado ES no Ciclo 2
-tipo_estabelecimento,Descrição do tipo,tbTipoEstabelecimento,Join por código de tipo,Pode permanecer vazio/ausente quando sem correspondência
-subtipo_estabelecimento,Descrição agregada de subtipos,rlEstabSubTipo + tbSubTipo,Agregação de valores únicos por CNES com separador |,Evita duplicidade por relacionamento N:N
-natureza_juridica,Descrição da natureza jurídica,tbNaturezaJuridica,Join por código,Pode permanecer vazio/ausente quando não informado
-gestao,Descrição da gestão,tbGestao,Join por código,Pode permanecer vazio/ausente quando não informado
-atende_sus,Classificação categórica conservadora de vínculo SUS,rlEstabAtendPrestConv + tbConvenio + tbAtendimentoPrestado,Regra categórica Sim/Não/Revisar com critério conservador,"Ausência de evidência não é classificada automaticamente como Não; o valor Não indica ausência de evidência SUS nas relações utilizadas, não prova absoluta de inexistência de relação com o SUS."
-atendimento_prestado,Descrição agregada de atendimentos,rlEstabAtendPrestConv + tbAtendimentoPrestado,Agregação de valores únicos por CNES,Pode permanecer vazio/ausente quando sem relacionamento
-convenio,Descrição agregada de convênios,rlEstabAtendPrestConv + tbConvenio,Agregação de valores únicos por CNES,Pode permanecer vazio/ausente quando sem relacionamento
+co_unidade,Chave operacional CNES do estabelecimento,tbEstabelecimento.CO_UNIDADE,Preservada como texto e usada como chave de relacionamento relacional,NÃO equivale ao código público CNES
+cnes,Código público CNES do estabelecimento,tbEstabelecimento.CO_CNES,Preservado como texto com zeros à esquerda,Usado para identificação pública
+nome_estabelecimento,Nome de exibição do estabelecimento,tbEstabelecimento.NO_FANTASIA e NO_RAZAO_SOCIAL,Fallback para razao_social quando nome fantasia está vazio,Evita vazio quando há razão social
+razao_social,Razão social do estabelecimento,tbEstabelecimento.NO_RAZAO_SOCIAL,Mapeamento direto,Pode permanecer vazio quando ausente na fonte
+cod_municipio,Código do município de vínculo CNES,tbEstabelecimento,Preservado como texto e filtrado para ES,Filtro territorial aplicado antes dos joins
+municipio,Nome do município,tbMunicipio,Join por cod_municipio,Esperado total de 78 municípios no ES
+uf,Sigla da UF,parâmetro uf_interesse,Valor fixo da execução,Esperado ES
+tipo_estabelecimento,Descrição do tipo de estabelecimento,tbTipoEstabelecimento,Join por chave compatível CO_TIPO_ESTABELECIMENTO,Preenchido somente quando há domínio compatível
+subtipo_estabelecimento,Descrição agregada de subtipos,rlEstabSubTipo + tbSubTipo,Agregação de únicos por co_unidade com separador |,Evita duplicidade N:N
+natureza_juridica,Descrição da natureza jurídica,tbNaturezaJuridica,Join por código,Pode ficar vazio quando fonte não informa
+gestao,Descrição de gestão,tbEstabelecimento.TP_GESTAO + tbGestao.CO_GESTAO,Sem preenchimento artificial quando não há compatibilidade estrutural entre chaves,Limitação metodológica documentada para competência 202601
+atende_sus,Classificação conservadora de vínculo SUS,rlEstabAtendPrestConv + domínios de atendimento e convênio,Regra categórica Sim/Não/Revisar baseada em evidência relacional,Não é indicador final
+atendimento_prestado,Atendimentos agregados do estabelecimento,rlEstabAtendPrestConv + tbAtendimentoPrestado,Agregação de únicos por co_unidade,Pode ficar vazio sem relacionamento
+convenio,Convênios agregados do estabelecimento,rlEstabAtendPrestConv + tbConvenio,Agregação de únicos por co_unidade,Pode ficar vazio sem relacionamento
 fonte,Fonte do dataset,derivado,Valor fixo CNES,Rastreabilidade
-arquivo_origem,Tabela mãe do ciclo,derivado,Valor fixo tbEstabelecimento202601,Rastreabilidade
-data_processamento,Data da geração,derivado,Sys.Date,Dependente do dia da execução
+arquivo_origem,Tabela principal de origem,derivado,Valor fixo tbEstabelecimento202601,Rastreabilidade
+data_processamento,Data de geração da saída,derivado,Sys.Date,Dependente da execução
