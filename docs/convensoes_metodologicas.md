@@ -54,3 +54,17 @@ calcular_taxa_incidencia <- function(casos, populacao) {
 ## Idioma
 
 Adote o português para nomes, comentários e documentação. Termos técnicos em inglês podem ser utilizados quando não houver tradução consagrada ou quando se referirem à nomenclatura de funções de bibliotecas.
+
+## Arquitetura híbrida R–Python/PySUS
+
+A governança técnica do Observatório SUS-ES passa a adotar arquitetura híbrida com separação explícita de camadas:
+
+- **Extração e engenharia de dados**: preferencialmente em Python/PySUS (ingestão, cache, organização por competência, serialização técnica como Parquet e automação operacional).
+- **Análise e validação metodológica**: preservadas em R enquanto não houver paridade Python validada para componentes sensíveis.
+
+Diretrizes metodológicas obrigatórias para CNES:
+- `co_unidade` é a **chave operacional**.
+- `cnes` é o **código público**.
+- Produtos em `data_interim` devem ser tratados como **produto gerável** (não fonte primária de verdade).
+- Contratos de dados (metadados, schemas, dicionários e documentação metodológica) devem ser independentes de linguagem.
+- Substituição de script R sensível exige paridade funcional e metodológica previamente documentada.
