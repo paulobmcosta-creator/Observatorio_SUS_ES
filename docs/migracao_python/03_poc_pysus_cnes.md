@@ -223,3 +223,64 @@ Reforços finais:
 - PySUS foi apenas avaliado;
 - R permanece como oráculo;
 - a próxima etapa só deve avançar para desenho de contratos/extração quando houver pelo menos suficiência parcial comprovada.
+
+## 15. Auditoria posterior de ambiente e resolução de versão PySUS
+
+Esta auditoria curta foi executada após a Etapa 3 para esclarecer a divergência entre a versão instalada na POC (`0.11.0`) e a linha atual esperada do PySUS (`2.0.4`).
+
+### 15.1 Python/pip efetivamente usados na Etapa 3
+Comandos de auditoria no ambiente padrão (fora de venv):
+- `python --version` -> `Python 3.14.4`
+- `which python` -> `/root/.pyenv/shims/python`
+- `python -c "import sys; print(sys.executable); print(sys.version)"` -> executável `/root/.pyenv/versions/3.14.4/bin/python`
+- `python -m pip --version` -> `pip 26.1 (python 3.14)`
+
+Implicação: a Etapa 3 foi executada com Python 3.14 e, nesse contexto, o resolvedor do pip selecionou a versão mais nova compatível com esse interpretador (PySUS `0.11.0`).
+
+### 15.2 Versões disponíveis de PySUS observadas na auditoria
+Comando:
+- `python -m pip index versions pysus`
+
+Resultado resumido:
+- índice exibiu `0.11.0` como versão instalada/listada no contexto ativo;
+- versões `2.0.0`–`2.1.0` aparecem como **ignoradas** por requisito de Python (`>=3.10,<3.14`) quando consultadas a partir do Python 3.14.
+
+### 15.3 Tentativa de instalar PySUS 2.x no Python da Etapa 3 (3.14)
+Comando:
+- `python -m pip install --dry-run --no-cache-dir "pysus>=2.0.4,<2.1"`
+
+Resultado:
+- falha com `No matching distribution found` para a faixa `>=2.0.4,<2.1` no Python 3.14;
+- causa explícita informada pelo pip: versões 2.x exigem `Requires-Python >=3.10,<3.14`.
+
+Conclusão parcial: em Python 3.14, a instalação de PySUS 2.x é bloqueada por restrição declarada de compatibilidade.
+
+### 15.4 Auditoria em ambiente efêmero Python 3.12
+Comandos executados:
+- `python3.12 --version` -> `Python 3.12.3`
+- `which python3.12` -> `/root/.pyenv/shims/python3.12`
+- `python3.12 -m venv .venv-pysus-2x`
+- `. .venv-pysus-2x/bin/activate`
+- `python --version` -> `Python 3.12.3`
+- `python -m pip --version` -> `pip 24.0` (atualizado para `26.1.1`)
+- `python -m pip install --no-cache-dir "pysus>=2.0.4,<2.1" pandas pyarrow pytest duckdb`
+- `python -c "import pysus, sys; print(sys.version); print(getattr(pysus, '__version__', 'sem __version__'))"`
+- `python -m pip show pysus`
+
+Resultado:
+- instalação bem-sucedida de `pysus-2.0.4` em Python `3.12.3`;
+- import bem-sucedido e versão confirmada como `2.0.4`.
+
+### 15.5 Implicação para a classificação da Etapa 3
+A classificação original da Etapa 3 (`INSUFICIENTE_NESTA_POC`) permanece válida para o **recorte executado** (Python 3.14 + PySUS 0.11.0), mas a auditoria demonstra que a POC **não avaliou a linha atual do PySUS** em um Python compatível.
+
+Portanto, para decisão sobre adoção do PySUS atual, a evidência da Etapa 3 deve ser tratada como **inconclusiva quanto ao PySUS 2.x**.
+
+### 15.6 Recomendação para próxima etapa
+Recomenda-se repetir a POC controlada com:
+- ambiente fixado em Python 3.12 ou 3.13 (sempre `<3.14`);
+- instalação explícita de `pysus>=2.0.4,<2.1`;
+- mesmas salvaguardas contra download massivo;
+- revalidação objetiva de recorte por UF/competência e presença de `CO_UNIDADE`/`CO_CNES`.
+
+Somente após essa repetição será possível concluir adequadamente sobre suficiência do PySUS **atual** como camada principal/parcial de extração CNES.
