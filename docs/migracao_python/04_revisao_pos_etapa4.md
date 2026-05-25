@@ -226,6 +226,7 @@ Conforme matriz: comparação contratos vs metadata, cobertura por tabela, campo
 ## 12. Pendências classificadas
 
 ### 12.1 Pendências bloqueantes antes da Etapa 5
+Nota de atualização: as pendências bloqueantes acima foram deliberadas em `docs/migracao_python/04_deliberacao_humana_pre_etapa5.md`.
 - Deliberação humana formal sobre suficiência metodológica da lista de tabelas/campos contratados.
 - Deliberação humana sobre escopo inicial da Etapa 5 (estabelecimentos, habilitações ou ambas).
 - Definição institucional de política de fallback e limites de rede/download em tentativa controlada.
@@ -246,6 +247,7 @@ Conforme matriz: comparação contratos vs metadata, cobertura por tabela, campo
 - Documentar fallback com matriz de decisão mais detalhada.
 
 ## 13. Revisão humana recomendada antes da Etapa 5
+Revisão humana realizada. As decisões estão registradas em `docs/migracao_python/04_deliberacao_humana_pre_etapa5.md`.
 1. Conferir se a lista de tabelas CNES contratadas é metodologicamente suficiente.
 2. Conferir se os campos críticos por tabela estão corretos.
 3. Conferir se a Etapa 5 deve iniciar por estabelecimentos, por habilitações ou por ambos.
@@ -275,7 +277,7 @@ Perfis humanos recomendados:
 10. Preparar documentação operacional sem decisão metodológica substantiva.
 
 ## 15. Decisão sobre avanço para Etapa 5
-**Decisão:** **2. Aprovada para Etapa 5 com revisão humana prévia.**
+**Decisão:** **2. Aprovada para Etapa 5 após revisão humana, sob escopo estrito definido em `docs/migracao_python/04_deliberacao_humana_pre_etapa5.md`.**
 
 Justificativa:
 - contratos: definidos e aderentes em nível estrutural;
@@ -325,7 +327,7 @@ Avaliação da Etapa 4: consistente com escopo de contratos e diagnóstico contr
 
 Classificação da Etapa 4: **mantida** como `CONTRATOS_DEFINIDOS_E_VALIDACAO_OPERACIONAL_PARCIAL`.
 
-Necessidade de revisão humana: permanece mandatória para mérito metodológico e decisão institucional de fallback/rede.
+Necessidade de revisão humana: a revisão humana prévia foi realizada e registrada. Permanecem necessárias validações humanas futuras para decisões substantivas adicionais, mas a condição prévia para planejar a Etapa 5 foi cumprida.
 
 Revisão por IA: adequada para auditoria técnica, consistência estrutural, checklist e preparação de evidências.
 
