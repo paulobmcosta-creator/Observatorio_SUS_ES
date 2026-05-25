@@ -28,7 +28,7 @@ Fica explicitado que:
 | 4. CO_CNES | `CO_CNES` precisa ser preservado como texto. | Ausência, truncamento ou conversão indevida de `CO_CNES` deve ser tratada como falha crítica para estabelecimentos. |
 | 5. Preservação textual de códigos | Aceitar conversão apenas se houver evidência de que zeros à esquerda não foram perdidos. | A Etapa 5 deve documentar evidência de preservação de zeros à esquerda para códigos críticos. |
 | 6. Fallback | Fallback pode ser testado somente se PySUS falhar. | PySUS é a via principal; fallback é condicionado e deve ser justificado. |
-| 7. Recorte autorizado | Permitir download temporário apenas se houver recorte por UF=ES e competência=2025 inteiro. | O ano de 2025 deve ser operacionalizado preferencialmente por competências mensais de 202501 a 202512, evitando download amplo. |
+| 7. Recorte autorizado | Para CNES, autorizar apenas download temporário controlado por tabela/arquivo e competência mensal. O recorte UF=ES deve ocorrer após leitura temporária. A ausência de recorte UF pré-download não é, isoladamente, motivo de bloqueio. | O ano de 2025 deve continuar operacionalizado por competências mensais de 202501 a 202512. A segurança será avaliada por tabela/competência/tamanho/diretório temporário/exclusão, com filtro UF=ES pós-leitura. |
 | 8. Diretório temporário | Autorizar uso de diretório temporário, desde que registre nome, tamanho, origem e exclusão no relatório. | Qualquer arquivo temporário deve ser rastreado e removido ao final. |
 | 9. Escrita em dados versionados | É totalmente proibido escrever em `data_raw`, `data_interim` e `data_processed`. | Toda saída de dados deve permanecer em diretório temporário e não versionado. |
 | 10. Scripts R | Pode gerar pseudocódigo comparativo, mas não código funcional de transformação. | `preparar_estabelecimentos_cnes.R`, `preparar_habilitacoes_cnes.R` e `classificar_habilitacoes_cnes.R` não podem ser portados nem substituídos. |
@@ -84,7 +84,7 @@ Gate 2 — Habilitações:
 - PySUS deve ser tentado primeiro;
 - fallback só pode ser testado se PySUS falhar ou não expuser tabela necessária;
 - fallback deve usar diretório temporário;
-- fallback deve respeitar UF=ES e competências mensais de 2025, se tecnicamente possível;
+- fallback deve operar por tabela/arquivo e competências mensais de 2025, com filtro UF=ES aplicado após leitura temporária;
 - fallback deve registrar nome do arquivo, tamanho, origem, caminho temporário e exclusão;
 - fallback não pode persistir dados no repositório;
 - se não houver recorte seguro, abortar e registrar fallback necessário.
@@ -152,7 +152,7 @@ O prompt da Etapa 5 deve:
 A revisão humana pré-Etapa 5 foi realizada e a Etapa 5 está autorizada, desde que:
 - comece por estabelecimentos;
 - condicione habilitações à confirmação de `CO_UNIDADE` e `CO_CNES`;
-- use recorte UF=ES e competências mensais de 2025;
+- use competências mensais de 2025 e aplique filtro UF=ES após leitura temporária;
 - utilize somente diretório temporário;
 - não escreva dados versionados;
 - não substitua scripts R;
