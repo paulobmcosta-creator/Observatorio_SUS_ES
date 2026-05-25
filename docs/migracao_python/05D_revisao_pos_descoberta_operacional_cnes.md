@@ -41,8 +41,8 @@ Esta revisão:
 
 ## 3. Ambiente de revisão
 - Branch: `work`
-- Commit HEAD: `9b451ebe2b4ef685f8460efd73cde740ae6a2617`
-- Último commit: `9b451eb Merge pull request #62 from paulobmcosta-creator/codex/remove-etapa-5p-e-cria-5d`
+- Commit HEAD (início desta revisão): `9b451ebe2b4ef685f8460efd73cde740ae6a2617`
+- Último commit (início desta revisão): `9b451eb Merge pull request #62 from paulobmcosta-creator/codex/remove-etapa-5p-e-cria-5d`
 - Status inicial: limpo (sem alterações)
 - Python usado: `3.12.3`
 - Caminho Python: `.venv-review-5d-cnes/bin/python`
@@ -185,3 +185,9 @@ A Etapa 5D é aprovada como descoberta operacional **parcial**, com mapeamento c
 Assim, há base **parcial** para planejar nova 5P, mas ainda há necessidade de investigação manual complementar (5D.1) e possível deliberação humana (5M) antes de qualquer download/leitura temporária.
 
 Reafirma-se que não houve migração nem substituição de R nesta revisão.
+
+## 16. Conformidade final de arquivos alterados
+- `git status --short` final: sem alterações pendentes após commit.
+- Arquivo criado nesta revisão: `docs/migracao_python/05D_revisao_pos_descoberta_operacional_cnes.md`.
+- Arquivos adicionais editados: nenhum.
+- Confirmação de escopo: não houve alteração em scripts R, testes R, `data_raw`, `data_interim`, `data_processed`, `metadata/`, `docs/cnes/`, workflows, `.gitignore` ou `.gitattributes`.
