@@ -427,3 +427,136 @@ Impacto:
 - reduz ambiguidade documental;
 - alinha convenções metodológicas à arquitetura híbrida formalizada na Etapa 2;
 - não altera contratos de dados nem lógica de pipeline.
+
+## 17. Revisão pós-Etapa 3.2
+
+### 1. Objetivo da revisão
+Auditar criticamente a Etapa 3.2 antes de qualquer avanço de fase, verificando ambiente, dependências, script de diagnóstico, testes, consistência documental, aderência metodológica CNES e respeito estrito ao escopo de não migração.
+
+### 2. Arquivos verificados
+Foram verificados os seguintes arquivos:  
+`docs/migracao_python/00_baseline_r_pre_migracao.md`;  
+`docs/migracao_python/01_classificacao_legado_r.md`;  
+`docs/migracao_python/02_governanca_arquitetura_hibrida.md`;  
+`docs/migracao_python/03_poc_pysus_cnes.md`;  
+`requirements-python-poc.txt`;  
+`python/observatorio_sus/extract/avaliar_pysus_cnes.py`;  
+`python/observatorio_sus/utils/normalizacao.py`;  
+`python/observatorio_sus/io/manifestos.py`;  
+`tests/python/test_estrutura_python_minima.py`;  
+`tests/python/test_avaliar_pysus_cnes_cli.py` (não encontrado);  
+`docs/convensoes_metodologicas.md`;  
+`README.md`;  
+`docs/governanca_codigo.md`;  
+`docs/cnes/decisoes_metodologicas_cnes.md`;  
+`docs/cnes/base_estabelecimentos_cnes.md`;  
+`docs/cnes/base_habilitacoes_cnes.md`;  
+`docs/cnes/classificacao_habilitacoes_cnes.md`;  
+`metadata/cnes/schema_estabelecimentos_cnes.csv`;  
+`metadata/cnes/schema_habilitacoes_cnes.csv`;  
+`metadata/cnes/dicionario_estabelecimentos_cnes.csv`;  
+`metadata/cnes/dicionario_habilitacoes_cnes.csv`.
+
+### 3. Verificação de ambiente
+Evidências da auditoria de execução:
+- `python3.12 --version`: Python 3.12.3.
+- `which python3.12`: `/root/.pyenv/shims/python3.12`.
+- venv efêmero de revisão ativo: `.venv-review-pysus2-cnes/bin/python`.
+- `python -m pip --version`: pip 24.0 (antes de upgrade), atualizado para 26.1.1.
+- instalação via `requirements-python-poc.txt` concluída com `pysus-2.0.4`.
+- inspeção direta: versão PySUS `2.0.4`, pacote em `.venv-review-pysus2-cnes/lib/python3.12/site-packages/pysus/__init__.py`.
+
+Classificação da verificação de ambiente: **OK** (Python 3.12 + PySUS >=2.0.4,<2.1; sem uso de Python 3.14 nesta revisão).
+
+### 4. Verificação de requirements
+`requirements-python-poc.txt` contém os itens exigidos:
+- `pysus>=2.0.4,<2.1`
+- `pandas`
+- `pyarrow`
+- `pytest`
+- `duckdb`
+
+Resultado: pinning de PySUS 2.x está adequado; não permanece `pysus` solto sem faixa de versão.
+
+### 5. Verificação do script de diagnóstico
+A revisão do script `python/observatorio_sus/extract/avaliar_pysus_cnes.py` e sua execução em modo diagnóstico confirmou:
+- registro de versão Python e `sys.executable` no JSON de saída;
+- registro de versão e caminho do pacote PySUS;
+- separação de evidências por categoria;
+- presença de detecção de objeto CNES e interfaces FTP/datasus relacionadas;
+- execução controlada com bloqueio preventivo de download amplo (`execucao_controlada` marcada como não executada por risco).
+
+Fragilidades identificadas:
+- `modulos_ignorados_tests` retornou lista vazia na execução atual (não evidencia explicitamente descarte de módulos `.tests` nesta rodada);
+- persistem lacunas sem validação prática de `CO_UNIDADE`, `CO_CNES`, recorte estrito de competência e tabelas relacionais por chamada real controlada;
+- diagnóstico segue majoritariamente estático (introspecção), sem prova operacional de retorno tabular.
+
+Retorno de execução: o script concluiu com código 0 na execução controlada sem erro inesperado.
+
+### 6. Verificação dos testes Python
+Comandos executados:
+- `python -m pytest tests/python`
+- resultado: `9 passed`.
+
+Avaliação:
+- `tests/python/test_estrutura_python_minima.py` segue passando;
+- `tests/python/test_avaliar_pysus_cnes_cli.py` não foi localizado;
+- não foi observado teste dedicado de `--help` no diretório de testes (a verificação do CLI ocorreu via execução direta de comando, fora de teste unitário);
+- suíte executada não exigiu rede para aprovação.
+
+Resultado da seção D: **aprovado com ressalvas**.
+
+### 7. Verificação documental
+O relatório da Etapa 3.2 (seção 16 deste documento) contém: objetivo, contexto herdado, ambiente, alterações, diagnóstico PySUS 2.x, execução controlada, testes, perguntas obrigatórias, classificação final, implicações, riscos, critérios de aceite e conclusão.
+
+Pendência documental residual: reforçar no próprio texto da Etapa 3.2 a ausência de evidência empírica de tabelas relacionais/chaves em extração real, para evitar leitura excessivamente otimista de "PARCIALMENTE_SUFICIENTE".
+
+### 8. Verificação da classificação final
+Classificação registrada na Etapa 3.2: `PARCIALMENTE_SUFICIENTE`.
+
+Avaliação desta revisão: classificação **mantida, porém qualificada com ressalva**. As evidências sustentam compatibilidade de ambiente e sinal de interface CNES, mas ainda sem comprovação operacional completa de recortes/chaves/relacionais em download controlado real.
+
+### 9. Verificação metodológica CNES
+A Etapa 3.2 permaneceu aderente às diretrizes centrais:
+- manutenção do entendimento `co_unidade` como chave operacional;
+- `cnes` como código público;
+- preservação de joins relacionais por `co_unidade` e classificação por chave composta `codigo_habilitacao + tipo_habilitacao` como contrato metodológico;
+- manutenção de `data_interim` como produto gerável, sem promover CSV histórico sem `co_unidade` a contrato vigente;
+- preservação da classificação de habilitações como patrimônio metodológico.
+
+Sem desvio metodológico crítico identificado.
+
+### 10. Verificação de escopo
+Nesta revisão, o único arquivo editado foi este relatório (`docs/migracao_python/03_poc_pysus_cnes.md`). Não houve alteração em scripts R, dados, metadados, workflows, `.gitignore` ou `.gitattributes`.
+
+### 11. Pendências encontradas
+- **Bloqueante:** nenhuma.
+- **Relevante, mas não bloqueante:**
+  1. ausência de teste Python dedicado para CLI (`test_avaliar_pysus_cnes_cli.py` inexistente);
+  2. ausência de validação empírica de extração controlada com comprovação de `CO_UNIDADE`, `CO_CNES` e tabelas relacionais;
+  3. ausência de evidência explícita, nesta rodada, de módulos `.tests` efetivamente ignorados na inspeção interna.
+- **Melhoria futura:** fortalecer logs de critério de abortamento para qualquer tentativa de operação com risco de download amplo.
+
+### 12. Decisão sobre próxima etapa
+Decisão recomendada: **avançar para Etapa 4 — Contratos de dados e extração controlada CNES com PySUS/fallback**.
+
+Justificativa: a POC 3.2 permanece `PARCIALMENTE_SUFICIENTE`; há base mínima para avançar com critérios estritos de validação operacional e fallback planejado.
+
+### 13. Conclusão
+Situação da Etapa 3.2 após revisão crítica: **aprovada com ressalvas**.
+
+Critérios de aceite da revisão:
+- [x] Todos os arquivos obrigatórios foram verificados.
+- [x] Ambiente Python/PySUS foi auditado.
+- [x] requirements foi conferido.
+- [x] script de diagnóstico foi revisado.
+- [x] testes Python foram executados ou limitação registrada.
+- [x] relatório da Etapa 3.2 foi avaliado.
+- [x] classificação final da POC foi examinada.
+- [x] aderência metodológica CNES foi conferida.
+- [x] escopo de arquivos alterados foi verificado.
+- [x] decisão sobre próxima etapa foi registrada.
+- [x] Nenhum script R foi alterado.
+- [x] Nenhum dado foi alterado.
+- [x] Nenhum metadado foi alterado.
+- [x] Nenhum workflow foi alterado.
