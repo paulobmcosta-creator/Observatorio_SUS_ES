@@ -62,10 +62,11 @@ def executar_diagnostico(uf: str, competencia: str, modo: str) -> int:
             "modulos_internos_relacionados": [],
             "interfaces_download_listagem": [],
             "objetos_relacionados_cnes": [],
-            "suporte_uf": [],
-            "suporte_competencia": [],
-            "retorno_dataframe_parquet": [],
-            "tabelas_relacionais": [],
+            "evidencias_colunas_chave": [],
+            "evidencias_suporte_uf": [],
+            "evidencias_suporte_competencia": [],
+            "evidencias_dataframe_parquet": [],
+            "evidencias_tabelas_relacionais": [],
         },
         "modulos_ignorados_tests": [],
         "execucao_controlada": {
@@ -126,13 +127,15 @@ def executar_diagnostico(uf: str, competencia: str, modo: str) -> int:
                 if any(k in baixo for k in KEYWORDS_IO):
                     resultado["evidencias"]["interfaces_download_listagem"].append(full)
                 if any(k in baixo for k in KEYWORDS_UF):
-                    resultado["evidencias"]["suporte_uf"].append(full)
+                    resultado["evidencias"]["evidencias_suporte_uf"].append(full)
                 if any(k in baixo for k in KEYWORDS_COMP):
-                    resultado["evidencias"]["suporte_competencia"].append(full)
+                    resultado["evidencias"]["evidencias_suporte_competencia"].append(full)
                 if any(k in baixo for k in KEYWORDS_DF):
-                    resultado["evidencias"]["retorno_dataframe_parquet"].append(full)
+                    resultado["evidencias"]["evidencias_dataframe_parquet"].append(full)
                 if any(k in baixo for k in KEYWORDS_REL):
-                    resultado["evidencias"]["tabelas_relacionais"].append(full)
+                    resultado["evidencias"]["evidencias_tabelas_relacionais"].append(full)
+                if any(k in baixo for k in ["co_unidade", "co_cnes", "tbestabelecimento", "tbmunicipio", "rlestabsipac", "tbsubgruposhabilitacao", "estabele", "unidade", "habilitacao", "habilitação"]):
+                    resultado["evidencias"]["evidencias_colunas_chave"].append(full)
 
         for k in resultado["evidencias"]:
             if isinstance(resultado["evidencias"][k], list):

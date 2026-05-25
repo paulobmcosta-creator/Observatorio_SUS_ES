@@ -55,3 +55,14 @@ def test_script_help_funciona_sem_falha():
     proc = subprocess.run(cmd, capture_output=True, text=True)
     assert proc.returncode == 0
     assert "--uf" in proc.stdout
+
+
+def test_normalizar_competencia_mes_invalido():
+    import pytest
+
+    with pytest.raises(ValueError):
+        normalizar_competencia("2026-13")
+
+
+def test_normalizar_nome_coluna_none():
+    assert normalizar_nome_coluna(None) == ""

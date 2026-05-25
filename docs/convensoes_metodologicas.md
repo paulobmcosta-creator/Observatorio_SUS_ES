@@ -18,7 +18,7 @@ Este documento estabelece padrões para nomenclatura de arquivos, funções e va
 
 ## Convenções de Funções e Variáveis
 
-* **Nome de funções em R**: `extrair_casos_notificados <- function(...)`; em **Python** (quando estritamente necessário), use `extrair_casos_notificados()`.
+* **Nome de funções em R**: `extrair_casos_notificados <- function(...)`; em **Python**, quando a rotina pertencer à camada definida para Python/PySUS ou quando houver justificativa técnica registrada, use `extrair_casos_notificados()`.
 * Variáveis devem ser explícitas e autoexplicativas: `numero_obitos`, `taxa_cobertura_vacinal`.
 * Evite siglas não padronizadas; quando necessário, defina a sigla no início do script ou documento.
 

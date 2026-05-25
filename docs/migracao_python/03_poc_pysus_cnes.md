@@ -415,3 +415,15 @@ A reexecução corrigiu a limitação ambiental da Etapa 3 (agora com Python 3.1
 Conclusão final da Etapa 3.2: **PARCIALMENTE_SUFICIENTE**.
 
 Próximo passo recomendado: Etapa 4 com contrato de dados e experimento de extração controlada estrita, sem migração plena e sem substituição do pipeline R nesta fase.
+
+### 16.14 Ajuste documental adicional de governança metodológica
+Conforme autorizado no escopo da Etapa 3.2, foi realizada correção pontual em `docs/convensoes_metodologicas.md` para remover a redação residual que tratava Python apenas como exceção estrita na seção de convenções de funções.
+
+Trecho atualizado:
+- de: "em Python (quando estritamente necessário)"
+- para: "em Python, quando a rotina pertencer à camada definida para Python/PySUS ou quando houver justificativa técnica registrada"
+
+Impacto:
+- reduz ambiguidade documental;
+- alinha convenções metodológicas à arquitetura híbrida formalizada na Etapa 2;
+- não altera contratos de dados nem lógica de pipeline.
