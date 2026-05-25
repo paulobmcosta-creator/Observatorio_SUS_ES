@@ -33,8 +33,8 @@ Resumo das decisões aplicadas:
 
 ## 3. Ambiente usado
 - Branch: `work`
-- HEAD: `cd45951ff387f2efeb3b348cffaf9124c96d3449`
-- Último commit: `cd45951 Merge pull request #55 from paulobmcosta-creator/codex/registrar-revisao-humana-pre-etapa-5`
+- HEAD: `b00f36bc35f8c66ed964924ca60ad60acf65be1a`
+- Último commit: `b00f36b fix(migracao): aplicar checagem dinamica de recorte seguro`
 - Python: `3.12.3`
 - Executável Python: `/workspace/Observatorio_SUS_ES/.venv-etapa5-cnes/bin/python`
 - Pip: `26.1.1`
@@ -58,6 +58,17 @@ Confirmação: não houve alteração em scripts R, dados versionados, `metadata
 - Fallback: somente se PySUS falhar/não expuser tabela
 - Diretório temporário: obrigatório
 - Sem escrita em diretórios versionados
+
+
+## 5.1 Correção aplicada após revisão
+Antes do merge, foi aplicada correção no script para remover bloqueio hardcoded de segurança.
+
+A decisão de segurança agora é dinâmica e auditável, baseada em inspeção do PySUS:
+- varredura de módulos `pysus.*` com foco em CNES;
+- inspeção de assinaturas para identificar parâmetros de recorte (`uf/state` + `competencia/competence/year`);
+- registro explícito em JSON de `recorte_seguro_confirmado`, `motivo_recorte`, `candidatos_com_recorte` e `ambiente.checagem_recorte_seguro`.
+
+Nesta execução, não foram identificados candidatos com recorte explícito por assinatura, portanto o bloqueio por segurança permaneceu, porém com justificativa técnica dinâmica (não hardcoded).
 
 ## 6. Gate 1 — Estabelecimentos
 - `tbEstabelecimento`: não extraída nesta execução (bloqueio de segurança por ausência de recorte seguro confirmado)
