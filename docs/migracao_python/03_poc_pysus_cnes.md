@@ -284,3 +284,134 @@ Recomenda-se repetir a POC controlada com:
 - revalidação objetiva de recorte por UF/competência e presença de `CO_UNIDADE`/`CO_CNES`.
 
 Somente após essa repetição será possível concluir adequadamente sobre suficiência do PySUS **atual** como camada principal/parcial de extração CNES.
+
+## 16. Etapa 3.2 — Reexecução dirigida com Python 3.12 e PySUS 2.x
+
+### 16.1 Objetivo
+Reexecutar a POC CNES em ambiente compatível com a linha atual do PySUS (2.x), corrigindo a limitação ambiental da Etapa 3 original (Python 3.14 + PySUS 0.11.0).
+
+### 16.2 Contexto herdado
+- Etapa 3 original: Python 3.14.4 + `pysus==0.11.0`.
+- PySUS 2.x exige `Python >=3.10,<3.14`.
+- Auditoria anterior já havia demonstrado instalação de `pysus==2.0.4` em Python 3.12.3.
+- Portanto, a suficiência do PySUS 2.x permanecia inconclusiva até esta reexecução.
+
+### 16.3 Ambiente usado na reexecução
+- branch: `work`
+- HEAD inicial: `919cfb5feb345a071d53eccb31ccafc97532ea05`
+- último commit inicial: `919cfb5 POC: add PySUS/CNES migration doc, minimal Python package and tests`
+- Python global: `3.14.4` (`/root/.pyenv/shims/python`)
+- Python de execução da Etapa 3.2: `3.12.3` (`/workspace/Observatorio_SUS_ES/.venv-pysus2-cnes/bin/python`)
+- pip no venv: `26.1.1`
+- PySUS instalado: `2.0.4`
+- caminho do pacote PySUS: `/workspace/Observatorio_SUS_ES/.venv-pysus2-cnes/lib/python3.12/site-packages/pysus/__init__.py`
+- status inicial do repositório: limpo
+
+### 16.4 Alterações realizadas nesta etapa
+- `python/observatorio_sus/extract/avaliar_pysus_cnes.py`
+  - adiciona registro explícito de versão/caminho do Python e do PySUS;
+  - ignora módulos contendo `.tests`;
+  - organiza evidências por categorias (API pública, módulos internos, download/listagem, CNES, UF, competência, DataFrame/Parquet, relacionais);
+  - mantém política de segurança para não executar download amplo.
+- `requirements-python-poc.txt`
+  - atualizado para `pysus>=2.0.4,<2.1`.
+- `tests/python/test_estrutura_python_minima.py`
+  - mantém testes existentes e adiciona teste do `--help` do CLI sem depender de rede.
+- `docs/migracao_python/03_poc_pysus_cnes.md`
+  - registro consolidado da Etapa 3.2.
+
+Confirmação de escopo preservado: nenhum script R, dado, metadado, workflow de CI ou teste R foi alterado.
+
+### 16.5 Diagnóstico PySUS 2.x (resultado)
+Comando executado:
+- `python python/observatorio_sus/extract/avaliar_pysus_cnes.py --uf ES --competencia 202601 --modo diagnostico`
+
+Achados principais:
+- import de PySUS: sucesso;
+- versão: `2.0.4`;
+- evidência de interface CNES encontrada: `pysus.api.ftp.databases.CNES`;
+- API pública aparente encontrada no namespace `pysus.api.ftp.*`;
+- módulos de teste do pacote: ignorados por regra do script;
+- evidência explícita de suporte UF: presença de `pysus.api.ftp.models.State`;
+- evidência explícita de competência mensal: não confirmada por assinatura/objeto no diagnóstico estático;
+- evidência explícita de retorno DataFrame/Parquet: não confirmada no diagnóstico estático;
+- evidência explícita de tabelas relacionais CNES: não confirmada no diagnóstico estático.
+
+### 16.6 Execução controlada CNES
+Nesta etapa **não houve chamada real de extração CNES**.
+
+Motivo registrado no diagnóstico:
+- API potencial existe, porém sem garantia imediata de recorte estrito UF/competência e com risco de download amplo; por segurança metodológica da POC, execução foi abortada preventivamente como “não executado por risco de download inadequado”.
+
+Consequência:
+- não foi possível observar colunas reais (`CO_UNIDADE`, `CO_CNES/cnes`) nem confirmar formato de retorno em dataset CNES efetivamente carregado.
+
+### 16.7 Testes executados
+- `python -m pytest tests/python`
+- resultado: `7 passed`
+- testes sem exigência de rede para sucesso.
+
+### 16.8 Perguntas obrigatórias respondidas (Etapa 3.2)
+| Pergunta | Resposta | Evidência | Implicação |
+|---|---|---|---|
+| 1. PySUS 2.x instala no Python 3.12? | Sim | Instalação concluída no venv 3.12.3 com `pysus==2.0.4`. | Ambiente compatível confirmado. |
+| 2. PySUS 2.x importa corretamente? | Sim | `python -c "import pysus"` executado com sucesso. | Uso básico do pacote viável. |
+| 3. PySUS 2.x fornece interface CNES? | Parcialmente confirmado | Objeto `pysus.api.ftp.databases.CNES` detectado por introspecção. | Há pista concreta de suporte, mas sem execução real de extração. |
+| 4. PySUS 2.x permite recorte por UF? | Parcialmente confirmado | Evidência de `pysus.api.ftp.models.State`. | Recorte UF parece possível, mas não validado em download real controlado. |
+| 5. PySUS 2.x permite recorte por competência mensal? | Não confirmado nesta POC | Sem evidência inequívoca em assinatura/objeto com competência no diagnóstico estático. | Exige teste dirigido adicional. |
+| 6. PySUS 2.x retorna pandas DataFrame ou objeto conversível? | Não confirmado nesta POC | Sem chamada real de extração nesta etapa. | Etapa 4 deve validar contrato de retorno. |
+| 7. PySUS 2.x preserva ou permite preservar códigos como texto? | Não confirmado nesta POC | Sem dataset retornado para inspecionar dtype. | Risco de coerção de códigos permanece aberto. |
+| 8. PySUS 2.x fornece CO_UNIDADE? | Não confirmado nesta POC | Sem extração efetiva para inspeção de colunas. | Chave operacional ainda não validada. |
+| 9. PySUS 2.x fornece CO_CNES? | Não confirmado nesta POC | Sem extração efetiva para inspeção de colunas. | Código público ainda não validado. |
+| 10. PySUS 2.x permite acessar tabelas relacionais CNES necessárias? | Não confirmado nesta POC | Sem evidência relacional inequívoca no diagnóstico estático. | Pode requerer fallback complementar. |
+| 11. PySUS 2.x reduz dependência de Git LFS? | Sim, potencialmente | Instalação e exploração de API independem de LFS local. | Redução real depende da confirmação de extração útil. |
+| 12. PySUS 2.x parece adequado como camada principal de extração CNES? | PARCIALMENTE_SUFICIENTE (provisório) | Interface CNES aparente confirmada, mas sem validação de chaves/competência/retorno final. | Pode avançar para Etapa 4 com desenho de contratos + teste controlado real. |
+| 13. Será necessário fallback complementar fora do PySUS? | Provavelmente sim | Lacunas em competência, colunas-chave e relacionais nesta POC. | Planejar fallback desde o desenho da Etapa 4. |
+
+### 16.9 Classificação da POC 3.2
+Classificação desta reexecução: **PARCIALMENTE_SUFICIENTE**.
+
+Justificativa:
+- houve confirmação de ambiente compatível e presença de interface CNES no PySUS 2.x;
+- porém não houve confirmação prática de extração controlada com UF+competência+colunas-chave (`CO_UNIDADE`, `CO_CNES`) e tabelas relacionais.
+
+### 16.10 Implicações para a próxima etapa
+Recomendação: avançar para Etapa 4 com foco em:
+1. contrato explícito de tipos/chaves (`CO_UNIDADE`, `CO_CNES/cnes`);
+2. teste de extração real estritamente controlado (UF ES + competência específica), com limite de volume e abortos de segurança;
+3. validação do formato de retorno (DataFrame/Parquet) e preservação textual de códigos;
+4. desenho de fallback complementar caso a API não cubra todas as tabelas relacionais.
+
+Restrições mantidas:
+- não autorizar substituição de scripts R sensíveis;
+- não autorizar alteração de `data_interim`;
+- manter R como oráculo metodológico.
+
+### 16.11 Riscos remanescentes
+- mudança de API PySUS entre versões;
+- documentação parcial/insuficiente para CNES;
+- incerteza sobre tabelas relacionais completas;
+- risco de coerção numérica de códigos;
+- dependência de rede e disponibilidade de origem;
+- duplicação de lógica R/Python;
+- necessidade de fallback.
+
+### 16.12 Critérios de aceite da Etapa 3.2
+- [x] Python 3.12 usado.
+- [x] PySUS 2.x instalado.
+- [x] Script de diagnóstico ajustado para ignorar testes do pacote.
+- [x] Diagnóstico executado.
+- [x] Testes Python executados.
+- [x] Resultado classificado.
+- [x] Nenhum script R alterado.
+- [x] Nenhum dado alterado.
+- [x] Nenhum metadado alterado.
+- [x] Nenhum workflow alterado.
+- [x] Ambiente virtual removido ou não versionado.
+
+### 16.13 Conclusão da Etapa 3.2
+A reexecução corrigiu a limitação ambiental da Etapa 3 (agora com Python 3.12 + PySUS 2.0.4) e encontrou evidência concreta de interface CNES no pacote atual. Ainda assim, por restrição deliberada de segurança contra download amplo, a etapa não validou empiricamente as colunas-chave e relacionais em extração real.
+
+Conclusão final da Etapa 3.2: **PARCIALMENTE_SUFICIENTE**.
+
+Próximo passo recomendado: Etapa 4 com contrato de dados e experimento de extração controlada estrita, sem migração plena e sem substituição do pipeline R nesta fase.

@@ -1,8 +1,8 @@
+import subprocess
 import sys
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "python"))
 
-from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "python"))
 
 from observatorio_sus.io.manifestos import criar_manifesto_execucao
 from observatorio_sus.utils.normalizacao import (
@@ -48,3 +48,10 @@ def test_criar_manifesto_execucao():
 def test_script_avaliacao_existe():
     caminho = Path("python/observatorio_sus/extract/avaliar_pysus_cnes.py")
     assert caminho.exists()
+
+
+def test_script_help_funciona_sem_falha():
+    cmd = [sys.executable, "python/observatorio_sus/extract/avaliar_pysus_cnes.py", "--help"]
+    proc = subprocess.run(cmd, capture_output=True, text=True)
+    assert proc.returncode == 0
+    assert "--uf" in proc.stdout
