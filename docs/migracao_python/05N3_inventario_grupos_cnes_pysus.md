@@ -111,3 +111,39 @@ A autorização de 5N.4 é **exploratória** e **parcial** para LT e SR. Escopo:
 
 ## 17. Conclusão
 Grupos testados: ST, LT e SR. DataFrame retornou para LT e SR; ST foi inconclusivo por falha de rede (ReadTimeout). Grupos recomendados para 5N.4: LT e SR, em natureza exploratória. 5N.3A permanece recomendável caso seja necessário ampliar investigação de grupos oficiais no PySUS.
+
+## 18. Atualização posterior — resultado da Etapa 5N.3R
+Após a conclusão da 5N.3, foi executada a Etapa 5N.3R, documentada em:
+
+`docs/migracao_python/05N3R_reteste_controlado_st_cnes_pysus.md`
+
+A 5N.3R retestou exclusivamente o grupo ST com os seguintes parâmetros:
+
+- UF = ES;
+- ano = 2024;
+- mês = 1;
+- grupo = ST;
+- 5 tentativas;
+- backoff maior;
+- jitter maior;
+- isolamento de ambiente;
+- sem persistência de dados.
+
+Resultado da 5N.3R:
+
+- ST retornou DataFrame;
+- 8867 linhas;
+- 208 colunas;
+- causa: GRUPO_ACEITO_COM_RETORNO;
+- classificação da 5N.3R: RETESTE_ST_CONCLUIDO_COM_SUCESSO;
+- a falha anterior foi interpretada como instabilidade transitória de rede.
+
+Implicação metodológica da atualização posterior:
+
+- A recomendação original da seção 10 da 5N.3, que autorizava 5N.4 apenas para LT e SR, foi superada pela evidência posterior da 5N.3R.
+- A recomendação atualizada é que a Etapa 5N.4 pode incluir ST, LT e SR.
+- A inclusão de ST, LT e SR na 5N.4 permanece exploratória.
+- A 5N.4 não deve ser tratada como validação contratual plena.
+- A 5N.4 não deve gerar base versionada.
+- A 5N.4 não deve substituir R.
+- R permanece como oráculo metodológico.
