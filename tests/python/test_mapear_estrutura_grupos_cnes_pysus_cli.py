@@ -37,6 +37,10 @@ def test_planejamento_json_defaults() -> None:
     assert payload["usa_api_publica_pysus"]["ativo"] is True
     assert "from pysus import cnes" in payload["usa_api_publica_pysus"]["caminho_funcional"]
     assert payload["usa_api_publica_pysus"]["importa_pysus_no_planejamento"] is False
+    assert "contratos_cnes" in payload
+    assert "carregado" in payload["contratos_cnes"]
+    assert "quantidade_campos_criticos" in payload["contratos_cnes"]
+    assert "origem" in payload["contratos_cnes"]
 
 
 def test_planejamento_nao_escreve_data_dirs() -> None:
