@@ -1,0 +1,29 @@
+grupo_pysus,descricao_grupo,coluna_pysus,campo_contrato_cnes,campo_legado_r,tipo_equivalencia,status_equivalencia,papel_metodologico,preservar_como_texto,risco_coercao,observacao
+ST,estabelecimentos,CNES,CO_CNES,cnes,NOMINAL_APROXIMADA,POTENCIAL_A_CONFIRMAR,CHAVE_PUBLICA,True,True,Código público; não equivale automaticamente a CO_UNIDADE.
+ST,estabelecimentos,CODUFMUN,CO_MUNICIPIO_GESTOR,co_municipio_gestor,SEMANTICA_POTENCIAL,POTENCIAL_A_CONFIRMAR,TERRITORIO,True,True,Código territorial potencial.
+ST,estabelecimentos,COMPETEN,competencia,competencia,NOMINAL_APROXIMADA,CONFIRMADA_NOMINALMENTE,COMPETENCIA,True,True,Competência nominalmente estável em 5N.5.
+ST,estabelecimentos,TPGESTAO,TP_GESTAO,tp_gestao,NOMINAL_APROXIMADA,POTENCIAL_A_CONFIRMAR,GESTAO,True,True,Regra de preservação textual.
+ST,estabelecimentos,NAT_JUR,natureza_juridica,nat_jur,NOMINAL_APROXIMADA,POTENCIAL_A_CONFIRMAR,NATUREZA_JURIDICA,True,True,Exige validação com contratos R.
+ST,estabelecimentos,CPF_CNPJ,cpf_cnpj,cpf_cnpj,NOMINAL_APROXIMADA,POTENCIAL_A_CONFIRMAR,IDENTIFICADOR_PESSOA_JURIDICA,True,True,Identificador administrativo sensível a zeros à esquerda.
+ST,estabelecimentos,CNPJ_MAN,cnpj_mantenedora,cnpj_man,NOMINAL_APROXIMADA,POTENCIAL_A_CONFIRMAR,IDENTIFICADOR_PESSOA_JURIDICA,True,True,Identificador de mantenedora.
+LT,leitos,CNES,CO_CNES,cnes,NOMINAL_APROXIMADA,POTENCIAL_A_CONFIRMAR,CHAVE_PUBLICA,True,True,Código público do estabelecimento.
+LT,leitos,CODUFMUN,CO_MUNICIPIO_GESTOR,co_municipio_gestor,SEMANTICA_POTENCIAL,POTENCIAL_A_CONFIRMAR,TERRITORIO,True,True,Território de gestão.
+LT,leitos,COMPETEN,competencia,competencia,NOMINAL_APROXIMADA,CONFIRMADA_NOMINALMENTE,COMPETENCIA,True,True,Competência mensal.
+LT,leitos,TPGESTAO,TP_GESTAO,tp_gestao,NOMINAL_APROXIMADA,POTENCIAL_A_CONFIRMAR,GESTAO,True,True,Tipo de gestão.
+LT,leitos,NAT_JUR,natureza_juridica,nat_jur,NOMINAL_APROXIMADA,POTENCIAL_A_CONFIRMAR,NATUREZA_JURIDICA,True,True,Natureza jurídica.
+LT,leitos,CODLEITO,codigo_leito,codleito,NOMINAL_APROXIMADA,POTENCIAL_A_CONFIRMAR,OFERTA_LEITOS,True,True,Classificação de leito.
+LT,leitos,TP_LEITO,tipo_leito,tp_leito,NOMINAL_APROXIMADA,POTENCIAL_A_CONFIRMAR,OFERTA_LEITOS,True,True,Tipo de leito.
+LT,leitos,QT_EXIST,qt_existente,qt_exist,NOMINAL_APROXIMADA,POTENCIAL_A_CONFIRMAR,OFERTA_LEITOS,False,False,Quantidade de leitos existentes.
+LT,leitos,QT_SUS,qt_sus,qt_sus,NOMINAL_APROXIMADA,POTENCIAL_A_CONFIRMAR,OFERTA_LEITOS,False,False,Oferta SUS.
+LT,leitos,QT_NSUS,qt_nsus,qt_nsus,NOMINAL_APROXIMADA,POTENCIAL_A_CONFIRMAR,OFERTA_LEITOS,False,False,Oferta não SUS.
+SR,serviços/classificação,CNES,CO_CNES,cnes,NOMINAL_APROXIMADA,POTENCIAL_A_CONFIRMAR,CHAVE_PUBLICA,True,True,Código público do estabelecimento.
+SR,serviços/classificação,CODUFMUN,CO_MUNICIPIO_GESTOR,co_municipio_gestor,SEMANTICA_POTENCIAL,POTENCIAL_A_CONFIRMAR,TERRITORIO,True,True,Território.
+SR,serviços/classificação,COMPETEN,competencia,competencia,NOMINAL_APROXIMADA,CONFIRMADA_NOMINALMENTE,COMPETENCIA,True,True,Competência mensal.
+SR,serviços/classificação,TPGESTAO,TP_GESTAO,tp_gestao,NOMINAL_APROXIMADA,POTENCIAL_A_CONFIRMAR,GESTAO,True,True,Tipo de gestão.
+SR,serviços/classificação,NAT_JUR,natureza_juridica,nat_jur,NOMINAL_APROXIMADA,POTENCIAL_A_CONFIRMAR,NATUREZA_JURIDICA,True,True,Natureza jurídica.
+SR,serviços/classificação,SERV_ESP,servico_especializado,serv_esp,NOMINAL_APROXIMADA,POTENCIAL_A_CONFIRMAR,OFERTA_SERVICOS,True,True,Serviço especializado.
+SR,serviços/classificação,CLASS_SR,classificacao_servico,class_sr,NOMINAL_APROXIMADA,POTENCIAL_A_CONFIRMAR,CLASSIFICACAO_SERVICO,True,True,Classificação do serviço.
+SR,serviços/classificação,AMB_SUS,amb_sus,amb_sus,NOMINAL_APROXIMADA,POTENCIAL_A_CONFIRMAR,OFERTA_SERVICOS,False,False,Indicador de oferta ambulatorial SUS.
+SR,serviços/classificação,HOSP_SUS,hosp_sus,hosp_sus,NOMINAL_APROXIMADA,POTENCIAL_A_CONFIRMAR,OFERTA_SERVICOS,False,False,Indicador de oferta hospitalar SUS.
+SR,serviços/classificação,CNESTERC,cnes_terceiro,cnesterc,NOMINAL_APROXIMADA,POTENCIAL_A_CONFIRMAR,IDENTIFICADOR_PESSOA_JURIDICA,True,True,CNES de terceiro; manter textual.
+ST,estabelecimentos,CO_UNIDADE,CO_UNIDADE,co_unidade,AUSENTE_NO_PYSUS,INCONCLUSIVA,CHAVE_OPERACIONAL_POTENCIAL,True,True,CO_UNIDADE não apareceu literalmente em 5N.4/5N.5; joins por co_unidade não podem ser substituídos; R permanece oráculo.
