@@ -32,10 +32,20 @@ def test_planejamento_json_e_defaults_sem_escrita_data_dirs() -> None:
     assert payload["grupos_candidatos_iniciais"]["grupos"] == ["ST", "LT", "SR"]
     assert "não" in payload["grupos_candidatos_iniciais"]["observacao"].lower() or "nao" in payload["grupos_candidatos_iniciais"]["observacao"].lower()
     assert payload["retry"]["tentativas"] == 3
-    assert "isolamento" in payload
     assert payload["parametros"]["uf"] == "ES"
     assert payload["parametros"]["ano"] == 2024
     assert payload["parametros"]["mes"] == 1
+    assert "isolamento" in payload
+
+    assert "decisao_5n4" in payload
+    assert "exploratório" in payload["decisao_5n4"]["natureza_da_autorizacao"] or "exploratorio" in payload["decisao_5n4"]["natureza_da_autorizacao"]
+
+    estrutura = payload["estrutura_resultado_por_grupo"]
+    assert "nivel_evidencia_interesse" in estrutura
+    assert "relacao_com_contratos_tipo" in estrutura
+    assert "cobertura_contratos_status" in estrutura
+    assert "justificativa_interesse_metodologico" in estrutura
+    assert "recomendado_para_5n4" in estrutura
 
     after = {d: sorted(str(p.relative_to(d)) for p in d.rglob("*") if p.is_file()) for d in data_dirs if d.exists()}
     assert before == after
