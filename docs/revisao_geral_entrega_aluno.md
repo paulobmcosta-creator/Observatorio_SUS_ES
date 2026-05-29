@@ -470,3 +470,7 @@ Resumo desta revisão:
 - Recomendações de limpeza: criar guias do aluno, índice do repositório, glossário CNES, roteiro de leitura e eventual arquivo histórico para subetapas de migração.
 - Proposta de pacote pedagógico: README, AGENTS, governança, convenções, documentação CNES consolidada, contratos, metadados, dicionários, encerramento 5N e esta revisão.
 - Confirmação: nenhum código, dado, metadado existente, documento em `docs/cnes`, script R, script Python, teste ou workflow foi alterado nesta rodada.
+
+## 19. Nota posterior — Revisão Geral 02
+
+Após esta auditoria, foi realizada limpeza documental agressiva e reversível. A documentação histórica da migração Python/PySUS foi arquivada em `docs/arquivo_historico/migracao_python/`, e o pacote pedagógico mínimo para aluno foi criado em `docs/guias_aluno/`.
