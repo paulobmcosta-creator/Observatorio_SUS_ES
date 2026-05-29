@@ -4,7 +4,7 @@
 
 O Observatório SUS-ES é um repositório científico e educacional voltado à organização, documentação, análise e validação de dados de saúde pública, com foco no Espírito Santo. Ele reúne documentação metodológica, contratos de dados, metadados, scripts e testes para apoiar análises reprodutíveis.
 
-A prioridade do aluno é compreender a estrutura do projeto e produzir leitura técnica organizada antes de executar ou modificar qualquer componente.
+A prioridade do aluno é compreender a estrutura do projeto e produzir revisão humana assistida antes de executar ou modificar qualquer componente.
 
 ## 2. Qual é o foco atual no CNES
 
@@ -22,7 +22,7 @@ Por ser uma base complexa, com muitos campos e regras próprias, o CNES exige cu
 
 R permanece como oráculo metodológico do projeto. Isso significa que os scripts R existentes são a referência principal para comportamento esperado, validação, transformação e cálculo no piloto CNES.
 
-O aluno não deve alterar nem substituir scripts R sem autorização. A leitura dos scripts pode ser indicada pelo orientador, mas a execução e modificação dependem de supervisão.
+O aluno não deve alterar nem substituir scripts R sem autorização expressa. A leitura dos scripts pode ser indicada pelo orientador, mas a execução e modificação dependem de supervisão.
 
 ## 5. Papel do Python/PySUS
 
@@ -48,7 +48,7 @@ A sequência inicial recomendada é:
 
 ## 8. O que o aluno não deve fazer
 
-- Não executar scripts R ou Python sem autorização.
+- Não executar scripts R ou Python sem autorização expressa.
 - Não alterar código em `src/`, `scripts/` ou `python/`.
 - Não alterar testes.
 - Não editar metadados existentes.
@@ -56,10 +56,13 @@ A sequência inicial recomendada é:
 - Não gerar bases.
 - Não tentar resolver `CO_UNIDADE` sem orientação.
 - Não substituir o pipeline R por Python.
+- Não transformar dúvidas em alterações diretas de arquivos técnicos.
 
-## 9. Produto inicial esperado: fichamento técnico
+## 9. Produto inicial esperado: revisão humana e fichamento técnico
 
-O primeiro produto esperado é um fichamento técnico curto, com linguagem própria do aluno, contendo:
+O primeiro produto esperado é uma revisão humana assistida, registrada em fichamento técnico curto, com linguagem própria do aluno. O objetivo não é executar scripts, gerar dados ou programar pipelines, mas organizar a compreensão inicial do repositório.
+
+O fichamento deve conter:
 
 - documentos lidos;
 - objetivo de cada documento;
@@ -67,10 +70,12 @@ O primeiro produto esperado é um fichamento técnico curto, com linguagem próp
 - dúvidas metodológicas;
 - campos CNES que exigem cuidado;
 - riscos de execução indevida;
+- trechos ou termos que parecem confusos;
+- inconsistências documentais percebidas;
 - síntese de como o aluno entende o papel do CNES no Observatório.
 
-O fichamento deve ser usado para uma conversa inicial com o orientador antes de qualquer etapa prática.
+O fichamento deve ser usado para uma conversa inicial com o orientador antes de qualquer etapa prática. Nenhuma execução de script está autorizada por este guia.
 
 ## 10. Conclusão
 
-O aluno deve entrar no projeto pela documentação pedagógica, compreender o núcleo CNES/R, reconhecer que Python/PySUS é experimental e respeitar as áreas restritas. A primeira contribuição esperada não é código, mas leitura, síntese e formulação de dúvidas qualificadas.
+O aluno deve entrar no projeto pela documentação pedagógica, compreender o núcleo CNES/R, reconhecer que Python/PySUS é experimental e respeitar as áreas restritas. A primeira contribuição esperada não é código nem execução, mas revisão humana assistida, leitura, fichamento, síntese e formulação de dúvidas qualificadas.

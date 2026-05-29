@@ -1,144 +1,259 @@
-# Plano de trabalho inicial do aluno — CNES
+# Roteiro de revisão humana assistida — CNES / Observatório SUS-ES
 
-Este plano organiza as quatro primeiras semanas de entrada do aluno no Observatório SUS-ES. O objetivo é formar compreensão metodológica antes de qualquer execução de script, alteração de código ou geração de base.
+## 1. Finalidade do roteiro
 
-## Semana 1 — Ambientação e leitura
+Este documento orienta a entrada do aluno no projeto como revisor humano assistido, não como executor autônomo. A finalidade é apoiar uma leitura cuidadosa do repositório, ajudando o aluno a compreender o Observatório SUS-ES, reconhecer os limites técnicos atuais e registrar dúvidas que possam orientar conversas com o pesquisador/orientador.
 
-### Tarefas
+Nesta fase:
 
-- Ler `README.md`.
-- Ler `docs/indice_repositorio.md`.
-- Ler todos os documentos em `docs/guias_aluno/`.
-- Identificar as áreas que o aluno não deve alterar.
-- Registrar dúvidas iniciais sobre CNES, R, Python/PySUS e dados.
+- não há prazo rígido;
+- o roteiro não é cronograma obrigatório;
+- as etapas são progressivas e dependem de orientação;
+- o objetivo é compreender, revisar e levantar dúvidas;
+- o aluno não deve executar scripts nem gerar dados.
 
-### Entregáveis
+O roteiro deve ser entendido como apoio à compreensão e à revisão documental, não como lista de tarefas técnicas a serem cumpridas de forma independente.
 
-- Lista dos documentos lidos.
-- Fichamento técnico inicial de uma página.
-- Lista de dúvidas para reunião com o orientador.
+## 2. Papel do aluno nesta fase
 
-### O que não fazer
+O papel do aluno é:
+
+- ler documentos orientados;
+- compreender o objetivo do Observatório SUS-ES;
+- identificar conceitos fundamentais do CNES;
+- revisar clareza documental;
+- apontar ambiguidades;
+- listar dúvidas metodológicas;
+- verificar se os guias são compreensíveis;
+- apoiar a organização conceitual do repositório;
+- produzir fichamentos e sínteses;
+- discutir achados com o orientador.
+
+O aluno não será responsável, nesta fase, por:
+
+- programar pipelines;
+- executar extrações;
+- validar scripts;
+- alterar metadados;
+- gerar base;
+- tomar decisões sobre R ou Python;
+- resolver `CO_UNIDADE`.
+
+## 3. Princípios da revisão humana assistida
+
+1. Ler antes de executar.
+2. Perguntar antes de alterar.
+3. Registrar dúvidas em vez de corrigir diretamente arquivos técnicos.
+4. Diferenciar documentação consolidada de documentação histórica.
+5. Não tratar scripts experimentais como instrução operacional.
+6. Não interpretar CNES como `CO_UNIDADE`.
+7. Não modificar metadados.
+8. Não gerar dados.
+9. Não substituir decisões metodológicas do orientador.
+10. Priorizar clareza, rastreabilidade e compreensão.
+
+## 4. O que o aluno deve compreender
+
+### 4.1 O projeto Observatório SUS-ES
+
+O aluno deve compreender a finalidade geral do Observatório SUS-ES, com foco em monitoramento, análise da atenção especializada e organização de dados secundários do SUS. A entrada no projeto deve privilegiar leitura, contextualização e entendimento das regras de governança.
+
+### 4.2 O papel do CNES
+
+O CNES é um eixo inicial importante para compreender estabelecimentos, leitos, serviços e profissionais. Ele ajuda a organizar a leitura da oferta de saúde, mas exige cuidado com campos, códigos, identificadores e competências temporais.
+
+### 4.3 O papel do R
+
+R permanece oráculo metodológico do projeto. Isso significa que os scripts R existentes são referência para comportamento esperado, validação e paridade metodológica. O aluno não deve propor substituição do R nem modificar scripts sem autorização expressa.
+
+### 4.4 O papel do Python/PySUS
+
+Python/PySUS é uma trilha experimental/prototípica, encerrada com ressalvas na Etapa 5N. Essa trilha demonstrou viabilidade parcial para acesso e mapeamento estrutural, mas não autoriza pipeline produtivo, geração de bases ou substituição do fluxo em R.
+
+### 4.5 A pendência `CO_UNIDADE`
+
+`CO_UNIDADE` é uma pendência crítica. O aluno deve entender que CNES não deve ser tratado automaticamente como `CO_UNIDADE`, e que qualquer interpretação, correção ou tentativa de resolução desse ponto depende de decisão metodológica do orientador.
+
+## 5. Roteiro progressivo de revisão
+
+Os blocos abaixo não têm prazo rígido. Eles são momentos de revisão que podem ser retomados, reorganizados ou aprofundados conforme orientação do pesquisador/orientador.
+
+### Bloco 1 — Ambientação
+
+Objetivo:
+Entender o que é o projeto e como o repositório está organizado.
+
+Leituras:
+
+- `docs/guias_aluno/README.md`
+- `docs/guias_aluno/guia_inicio_observatorio_sus.md`
+- `docs/guias_aluno/mapa_repositorio_observatorio_sus.md`
+- `docs/indice_repositorio.md`
+- `README.md`
+
+Produto esperado:
+
+- síntese inicial do que o aluno entendeu;
+- lista de dúvidas gerais;
+- identificação de termos desconhecidos.
+
+### Bloco 2 — Compreensão do CNES
+
+Objetivo:
+Entender por que o CNES é central no projeto.
+
+Leituras:
+
+- `docs/guias_aluno/glossario_minimo_cnes_observatorio.md`
+- documentos CNES indicados pelo orientador em `docs/cnes/`
+- `metadata/cnes/` apenas como consulta, sem edição.
+
+Produto esperado:
+
+- fichamento técnico sobre CNES;
+- quadro com termos-chave;
+- dúvidas sobre campos, códigos e identificadores.
+
+### Bloco 3 — Revisão da governança e das regras de segurança
+
+Objetivo:
+Entender o que pode e não pode ser alterado.
+
+Leituras:
+
+- `docs/governanca_codigo.md`
+- `docs/convensoes_metodologicas.md`
+- `docs/revisao_geral_entrega_aluno.md`
+- `docs/migracao_python/README.md`
+
+Produto esperado:
+
+- lista de regras que o aluno compreendeu;
+- lista de pontos que ainda parecem ambíguos;
+- indicação de documentos que precisam de linguagem mais clara.
+
+### Bloco 4 — Revisão humana dos guias
+
+Objetivo:
+Avaliar se os guias criados são compreensíveis para um aluno.
+
+Leituras:
+
+- todos os arquivos em `docs/guias_aluno/`.
+
+Produto esperado:
+
+- apontamentos sobre trechos confusos;
+- sugestões de melhoria de linguagem;
+- termos que precisam entrar no glossário;
+- dúvidas sobre ordem de leitura.
+
+### Bloco 5 — Síntese para reunião com orientador
+
+Objetivo:
+Preparar uma conversa qualificada com o orientador.
+
+Produto esperado:
+
+- síntese do que entendeu;
+- lista de dúvidas priorizadas;
+- lista de riscos percebidos;
+- sugestões de melhorias documentais;
+- indicação do que o aluno acredita que ainda não deve executar.
+
+## 6. Modelo de fichamento técnico
+
+| Campo                                        | Preenchimento                                     |
+| -------------------------------------------- | ------------------------------------------------- |
+| Documento lido                               |                                                   |
+| Tipo de documento                            | guia / metodologia / histórico / metadado / outro |
+| Objetivo do documento                        |                                                   |
+| Conceitos principais                         |                                                   |
+| Campos ou bases citadas                      |                                                   |
+| Relação com CNES                             |                                                   |
+| Relação com atenção especializada            |                                                   |
+| O que entendi                                |                                                   |
+| O que não entendi                            |                                                   |
+| Dúvidas para o orientador                    |                                                   |
+| Pontos de possível confusão para outro aluno |                                                   |
+| Sugestões de melhoria documental             |                                                   |
+
+## 7. Quadro de revisão humana
+
+| Item revisado | Tipo de problema | Descrição | Gravidade | Sugestão |
+| ------------- | ---------------- | --------- | --------- | -------- |
+|               |                  |           |           |          |
+
+Tipos de problema:
+
+- termo confuso;
+- orientação ambígua;
+- risco de execução indevida;
+- documento difícil de localizar;
+- contradição aparente;
+- necessidade de exemplo;
+- dúvida metodológica;
+- outro.
+
+Gravidade:
+
+- baixa;
+- média;
+- alta.
+
+## 8. O que o aluno não deve fazer
 
 - Não executar scripts.
-- Não alterar arquivos.
-- Não acessar dados como área de trabalho.
-- Não propor substituição de R por Python.
+- Não editar scripts.
+- Não editar `metadata/cnes`.
+- Não alterar `docs/cnes` sem autorização.
+- Não mover documentos.
+- Não apagar arquivos.
+- Não criar bases.
+- Não escrever em `data_raw`, `data_interim` ou `data_processed`.
+- Não alterar workflows.
+- Não tratar Python/PySUS como pipeline produtivo.
+- Não tratar CNES como `CO_UNIDADE`.
+- Não decidir substituição do R.
 
-### Critérios de avaliação
+## 9. Como o aluno deve registrar dúvidas
 
-- Clareza na distinção entre entrada pedagógica, núcleo CNES e arquivo histórico.
-- Capacidade de explicar por que Python/PySUS está classificado como experimental.
-- Identificação correta das áreas restritas.
+As dúvidas devem ser registradas em documento próprio, ou em quadro separado a ser criado posteriormente pelo orientador, sem alterar arquivos técnicos. O registro deve separar dúvida, contexto, documento de origem e possível risco de interpretação.
 
-## Semana 2 — CNES e documentação metodológica
+Categorias sugeridas:
 
-### Tarefas
+- dúvidas conceituais;
+- dúvidas sobre CNES;
+- dúvidas sobre repositório;
+- dúvidas sobre R/Python;
+- dúvidas sobre metadados;
+- dúvidas sobre próximos passos;
+- dúvidas sobre o que não pode ser feito.
 
-- Ler os documentos CNES indicados pelo orientador em `docs/cnes/`.
-- Identificar objetivo, escopo e limites do piloto CNES.
-- Mapear os principais campos CNES citados no glossário.
-- Relacionar os documentos CNES aos metadados existentes.
+## 10. Critérios de boa revisão humana
 
-### Entregáveis
+- Clareza na leitura.
+- Capacidade de diferenciar documento pedagógico e histórico.
+- Cuidado com termos técnicos.
+- Identificação de ambiguidades.
+- Respeito às regras de segurança.
+- Organização das dúvidas.
+- Prudência antes de sugerir execução.
+- Atenção à rastreabilidade.
 
-- Fichamento técnico dos documentos CNES lidos.
-- Tabela simples com campos CNES importantes e cuidados associados.
-- Lista de pontos que precisam de explicação do orientador.
+## 11. Produtos esperados da revisão
 
-### O que não fazer
+| Produto | Finalidade | Observação |
+| ------- | ---------- | ---------- |
+| Fichamento técnico | Registrar leitura, compreensão e dúvidas sobre documentos orientados. | Não substitui reunião com orientador. |
+| Lista de dúvidas | Organizar perguntas conceituais, metodológicas e operacionais. | Deve priorizar pontos que bloqueiam entendimento. |
+| Quadro de termos confusos | Identificar palavras, siglas ou campos que dificultam a leitura. | Pode alimentar melhoria futura do glossário. |
+| Sugestões de melhoria documental | Apontar trechos que precisam de linguagem mais clara. | Não implica editar arquivos técnicos diretamente. |
+| Síntese para reunião | Preparar conversa qualificada com o orientador. | Deve incluir limites do que o aluno não deve executar. |
+| Glossário complementar, se autorizado | Registrar novos termos identificados durante a revisão. | Só deve ser criado ou incorporado com autorização. |
 
-- Não editar `docs/cnes/`.
-- Não editar `metadata/cnes/`.
-- Não executar pipeline R.
-- Não baixar dados CNES.
+## 12. Conclusão
 
-### Critérios de avaliação
+A função do aluno, nesta fase, é ajudar a qualificar a documentação e compreender os próximos passos do projeto, não executar sozinho. A revisão humana assistida deve produzir leitura crítica, dúvidas organizadas, identificação de ambiguidades e sugestões de melhoria documental para discussão com o orientador.
 
-- Compreensão do papel do CNES no Observatório.
-- Reconhecimento dos limites de campos sensíveis como `CO_UNIDADE`.
-- Uso correto de termos como contrato, metadado, chave e rastreabilidade.
-
-## Semana 3 — Metadados, contratos e rastreabilidade
-
-### Tarefas
-
-- Ler os dicionários, schemas e contratos indicados pelo orientador.
-- Comparar a documentação CNES com os metadados correspondentes.
-- Identificar quais arquivos funcionam como contrato de dados.
-- Descrever como a rastreabilidade é preservada no repositório.
-
-### Entregáveis
-
-- Fichamento técnico sobre metadados e contratos.
-- Mapa conceitual simples conectando documentação, metadados, scripts e testes.
-- Lista de inconsistências percebidas, se houver, sem editar arquivos.
-
-### O que não fazer
-
-- Não corrigir metadados diretamente.
-- Não alterar schemas.
-- Não modificar testes.
-- Não gerar base intermediária ou final.
-
-### Critérios de avaliação
-
-- Capacidade de explicar a função de metadados e dicionários.
-- Atenção a preservação textual e coerção de tipo.
-- Separação entre observação de problema e alteração técnica.
-
-## Semana 4 — Síntese, dúvidas e apresentação curta
-
-### Tarefas
-
-- Consolidar os fichamentos das semanas anteriores.
-- Preparar apresentação curta para o orientador.
-- Indicar dúvidas que bloqueiam avanço técnico.
-- Sugerir uma possível tarefa futura de baixo risco, sem executá-la.
-
-### Entregáveis
-
-- Documento final de síntese com 3 a 5 páginas.
-- Apresentação curta de 5 a 7 minutos.
-- Lista priorizada de dúvidas.
-- Proposta de próxima tarefa supervisionada.
-
-### O que não fazer
-
-- Não transformar a síntese em alteração de código.
-- Não abrir PR técnico sem orientação.
-- Não mover arquivos.
-- Não mexer em dados.
-
-### Critérios de avaliação
-
-- Síntese fiel ao estado atual do repositório.
-- Reconhecimento explícito de que R permanece oráculo metodológico.
-- Compreensão de que Python/PySUS permanece experimental.
-- Clareza sobre riscos de execução indevida.
-
-## Modelo de fichamento técnico
-
-Use o modelo abaixo para cada documento ou conjunto de documentos lidos.
-
-```text
-Título do documento:
-Caminho no repositório:
-Data da leitura:
-
-1. Objetivo do documento
-
-2. Principais conceitos ou campos citados
-
-3. Decisões metodológicas registradas
-
-4. Relação com CNES
-
-5. Relação com R, Python/PySUS, metadados ou testes
-
-6. Dúvidas do aluno
-
-7. Cuidados operacionais identificados
-
-8. Síntese em até cinco linhas
-```
+Nesta fase, o aluno atua como revisor humano assistido do repositório. Sua contribuição principal é ler, compreender, fichar, apontar dúvidas e identificar riscos de interpretação. Nenhuma execução técnica, alteração de código, modificação de metadados ou geração de base deve ser feita sem autorização expressa do orientador.
