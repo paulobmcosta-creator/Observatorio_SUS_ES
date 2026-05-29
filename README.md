@@ -4,6 +4,16 @@ O **Observatório SUS ES** é uma iniciativa científica e educacional cujo obje
 
 Este repositório implementa um _pipeline_ completo de ciência de dados em saúde, desde a coleta de dados brutos até a geração de produtos de visualização. Todas as etapas são documentadas para garantir reprodutibilidade, transparência e aderência às melhores práticas de ciência aberta.
 
+
+## Orientação inicial para alunos
+
+Antes de navegar por scripts, dados ou documentação histórica, alunos devem começar por:
+
+- [Índice do repositório](docs/indice_repositorio.md)
+- [Guias do aluno](docs/guias_aluno/README.md)
+
+Scripts R/Python não devem ser executados sem orientação do pesquisador ou orientador. As pastas `data_raw/`, `data_interim/` e `data_processed/` não são áreas livres de escrita e não devem receber arquivos, bases intermediárias ou produtos finais sem autorização explícita.
+
 ## Estrutura do Projeto
 
 ```text
