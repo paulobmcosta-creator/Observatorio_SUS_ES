@@ -1,0 +1,15 @@
+"linha_cuidado","usar_observatorio","status_validacao","n_registros_observados","soma_vinculos_estabelecimento_habilitacao","n_combinacoes_classificacao"
+"Fora do escopo inicial","Não","revisar",1462,1462,352
+"Cardiovascular","Sim","revisar",30,30,11
+"Nefrologia","Sim","revisar",13,13,6
+"Oncologia","Sim","revisar",37,37,17
+"Outras habilitações estratégicas","Sim","revisar",49,49,37
+"RUE","Sim","revisar",36,36,10
+"Saúde mental","Sim","revisar",6,6,14
+"UTI / cuidado crítico","Sim","revisar",26,26,12
+"Cardiovascular","Sim","validado",3,3,7
+"Nefrologia","Sim","validado",36,36,3
+"Oncologia","Sim","validado",4,4,7
+"RUE","Sim","validado",184,184,59
+"Saúde mental","Sim","validado",35,35,7
+"UTI / cuidado crítico","Sim","validado",42,42,13

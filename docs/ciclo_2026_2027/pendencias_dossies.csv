@@ -1,0 +1,22 @@
+id,documento,localizacao,pendencia_original,encaminhamento_original,tarefa_vinculada,estado,evidencia_fechamento
+D1-P01,D1,Quadro 18,Cobertura plena do PySUS para todas as famílias CNES necessárias,Continuar validação controlada em Python 3.12/PySUS 2.x; manter fallback e paridade com implementação validada.,R08;R19,pendente,nao_disponivel
+D1-P02,D1,Quadro 18,Estratégia definitiva de aquisição para sistemas/famílias não cobertos,Documentar método alternativo de acesso oficial e integrar ao mesmo contrato de manifestos/proveniência.,R08;R19,pendente,nao_disponivel
+D1-P03,D1,Quadro 18,Implementação histórica do SIGTAP,"Definir rotina de aquisição mensal, versionamento e tabelas relacionais necessárias.",R17,pendente,nao_disponivel
+D1-P04,D1,Quadro 18,Série populacional institucional,Selecionar e documentar a série harmonizada adotada pelo Observatório.,R18,pendente,nao_disponivel
+D1-P05,D1,Quadro 18,Tabela territorial canônica vigente,"Congelar composição oficial, data de referência e regras de atualização.",R06;T01,pendente,nao_disponivel
+D1-P06,D1,Quadro 18,Matriz mínima de indicadores,Executar o processo de validação previsto no plano PIBIC/PIVIC antes de tratá-la como definitiva.,R02;R09,pendente,nao_disponivel
+D1-P07,D1,Quadro 18,Limiares de qualidade,"Definir, por variável e finalidade, quando um indicador pode ser publicado, publicado com ressalva ou suprimido.",R20,pendente,nao_disponivel
+D1-P08,D1,Quadro 18,Paridade R–Python,Migrar componentes sensíveis apenas após testes e equivalência documentada.,R19,pendente,nao_disponivel
+D1-P09,D1,Quadro 18,Ética/regulação institucional,Confirmar o enquadramento de cada produto/estudo segundo normas vigentes do Ifes e do sistema CEP/CONEP quando aplicável.,R21,pendente,nao_disponivel
+D2-P01,D2,Quadro 25,Definição CID final do IAM,Fechar a regra e registrar no dicionário analítico antes da extração final.,T02,pendente,nao_disponivel
+D2-P02,D2,Quadro 25,Whitelist histórica SIA,Confirmar códigos e vigência por competência no SIGTAP.,T03;R17,pendente,nao_disponivel
+D2-P03,D2,Quadro 25,Whitelist histórica de alta complexidade,Validar presença mensal de todos os códigos e mudanças de descrição.,T03;R17,pendente,nao_disponivel
+D2-P04,D2,Quadro 25,Habilitações cardiovasculares CNES,Confirmar códigos/descrições/validade histórica e forma de representação.,T04,pendente,nao_disponivel
+D2-P05,D2,Quadro 25,CBOs cardiovasculares,Verificar semântica e consistência histórica no CNES.,T04,pendente,nao_disponivel
+D2-P06,D2,Quadro 25,Tipos de leito/UCO,Confirmar códigos e mudanças de classificação ao longo de 2014–2024.,T04,pendente,nao_disponivel
+D2-P07,D2,Quadro 25,Equipamentos,"Confirmar códigos, campos de uso SUS e estabilidade histórica.",T04,pendente,nao_disponivel
+D2-P08,D2,Quadro 25,Composição do Noroeste 1,Congelar a lista municipal oficial usada no recorte focal.,R06;T01,pendente,nao_disponivel
+D2-P09,D2,Quadro 25,Série populacional,"Congelar a fonte, versão e data de extração da série harmonizada.",R18;T01,pendente,nao_disponivel
+D2-P10,D2,Quadro 25,Fluxos SIA,Medir completude de residência antes de decidir inclusão no núcleo.,T05,pendente,nao_disponivel
+D2-P11,D2,Quadro 25,Limiares para pequenos números,Definir após inspeção da distribuição empírica.,R20,pendente,nao_disponivel
+D2-P12,D2,Quadro 25,Aspectos éticos,Confirmar formalmente o enquadramento institucional aplicável.,R21,pendente,nao_disponivel

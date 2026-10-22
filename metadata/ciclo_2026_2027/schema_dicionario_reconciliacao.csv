@@ -1,0 +1,83 @@
+arquivo,campo,tipo,regra
+config/institucional.csv,escopo,texto,institucional ou tcc_cardiovascular; não propagar parâmetros temáticos ao núcleo
+config/institucional.csv,chave,texto,Nome estável do parâmetro declarativo
+config/institucional.csv,valor,texto,Valor textual; vazio significa pendência explícita conforme estado
+config/institucional.csv,estado,texto,Decisão consolidada ou pendência; não comprova implementação/validação científica
+config/institucional.csv,referencia,texto,Seção/quadro no dossiê ou complemento
+config/estudos/tcc_cardiovascular.csv,escopo,texto,institucional ou tcc_cardiovascular; não propagar parâmetros temáticos ao núcleo
+config/estudos/tcc_cardiovascular.csv,chave,texto,Nome estável do parâmetro declarativo
+config/estudos/tcc_cardiovascular.csv,valor,texto,Valor textual; vazio significa pendência explícita conforme estado
+config/estudos/tcc_cardiovascular.csv,estado,texto,Decisão consolidada ou pendência; não comprova implementação/validação científica
+config/estudos/tcc_cardiovascular.csv,referencia,texto,Seção/quadro no dossiê ou complemento
+config/estudos/grupos_cid_tcc_cardiovascular.csv,grupo,texto,Identificador do grupo/traçador; G0 contém grupos específicos
+config/estudos/grupos_cid_tcc_cardiovascular.csv,cid_inicio,texto,Categoria CID de três caracteres; vazio para IAM pendente
+config/estudos/grupos_cid_tcc_cardiovascular.csv,cid_fim,texto,Última categoria inclusiva; vazio para IAM pendente
+config/estudos/grupos_cid_tcc_cardiovascular.csv,descricao,texto,Descrição do conceito conforme dossiê
+config/estudos/grupos_cid_tcc_cardiovascular.csv,status,texto,Principal/aprofundamento ou pendência conforme documento
+config/estudos/grupos_cid_tcc_cardiovascular.csv,ressalva,texto,Limite de interpretação ou nota preservada
+config/estudos/grupos_cid_tcc_cardiovascular.csv,referencia,texto,Seção/quadro no dossiê ou complemento
+config/estudos/grupos_cid_tcc_cardiovascular.csv,nivel_codigo,texto,Categoria de três caracteres; subcategorias herdam categoria; não é seletor implementado
+config/estudos/familias_ac_tcc.csv,familia_original,texto,Identificação e título literal da família AC
+config/estudos/familias_ac_tcc.csv,status_original,texto,Status literal no Quadro 15
+config/estudos/familias_ac_tcc.csv,definicao_original,texto,Definição literal; implementação histórica ainda pendente
+config/estudos/familias_ac_tcc.csv,referencia,texto,Seção/quadro no dossiê ou complemento
+config/estudos/familias_ac_tcc.csv,relacao_inclusao,texto,Relação entre famílias que impede soma indiscriminada
+config/estudos/familias_ac_tcc.csv,validacao_codigos,texto,Estado da verificação histórica
+metadata/estudos/tcc_cardiovascular/candidatos_codigos.csv,documento,texto,Dossiê e versão de origem
+metadata/estudos/tcc_cardiovascular/candidatos_codigos.csv,localizacao,texto,Quadro e linha de dados; nota é explicitada
+metadata/estudos/tcc_cardiovascular/candidatos_codigos.csv,conceito,texto,Conceito analítico de trabalho
+metadata/estudos/tcc_cardiovascular/candidatos_codigos.csv,codigo_original,texto,Texto original; preservar pontuação/zeros e contexto
+metadata/estudos/tcc_cardiovascular/candidatos_codigos.csv,codigo_normalizado,texto,Somente remoção de pontuação tipográfica; vazio se documento não forneceu código
+metadata/estudos/tcc_cardiovascular/candidatos_codigos.csv,descricao_original,texto,Descrição recebida; não substitui a descrição oficial histórica
+metadata/estudos/tcc_cardiovascular/candidatos_codigos.csv,dominio,texto,SIGTAP; CBO; CNES habilitação; item sem código
+metadata/estudos/tcc_cardiovascular/candidatos_codigos.csv,nivel,texto,Principal/aprofundamento/excluído do núcleo conforme dossiê
+metadata/estudos/tcc_cardiovascular/candidatos_codigos.csv,regra_adicional,texto,Condição de uso; consulta genérica exige CBO; tipo histórico pode permanecer desconhecido
+metadata/estudos/tcc_cardiovascular/candidatos_codigos.csv,ressalva,texto,Limite de interpretação ou nota preservada
+metadata/estudos/tcc_cardiovascular/candidatos_codigos.csv,status_historico,texto,preliminar_nao_verificado; nunca promovido por transcrição
+metadata/estudos/tcc_cardiovascular/candidatos_codigos.csv,competencia_inicio,texto,Vazia enquanto vigência histórica não verificada
+metadata/estudos/tcc_cardiovascular/candidatos_codigos.csv,competencia_fim,texto,Vazia enquanto vigência histórica não verificada
+metadata/estudos/tcc_cardiovascular/candidatos_codigos.csv,fonte_oficial_por_competencia,texto,Vazia até efetiva consulta primária
+metadata/estudos/tcc_cardiovascular/candidatos_codigos.csv,habilitado_selecao_final,texto,nao para todos os candidatos nesta rodada
+metadata/estudos/tcc_cardiovascular/motivos_exclusao.csv,codigo,texto,EX01–EX07; não identifica perdas mutuamente exclusivas
+metadata/estudos/tcc_cardiovascular/motivos_exclusao.csv,motivo_original,texto,Motivo literal de D2 Q21
+metadata/estudos/tcc_cardiovascular/motivos_exclusao.csv,escopo,texto,institucional ou tcc_cardiovascular; não propagar parâmetros temáticos ao núcleo
+metadata/estudos/tcc_cardiovascular/motivos_exclusao.csv,referencia,texto,Seção/quadro no dossiê ou complemento
+metadata/ciclo_2026_2027/execucoes/reconciliacao_dossies_20261022/manifesto_derivados.csv,sistema,texto,Sistema administrativo científico de origem
+metadata/ciclo_2026_2027/execucoes/reconciliacao_dossies_20261022/manifesto_derivados.csv,familia,texto,Tabela/família efetivamente processada
+metadata/ciclo_2026_2027/execucoes/reconciliacao_dossies_20261022/manifesto_derivados.csv,abrangencia_fonte,texto,Abrangência da entrada antes do recorte
+metadata/ciclo_2026_2027/execucoes/reconciliacao_dossies_20261022/manifesto_derivados.csv,recorte_derivado,texto,Filtro territorial e temporal aplicado; gestor não é localização comprovada
+metadata/ciclo_2026_2027/execucoes/reconciliacao_dossies_20261022/manifesto_derivados.csv,competencia,texto,AAAA-MM do processamento cadastral; não confundir com data de execução
+metadata/ciclo_2026_2027/execucoes/reconciliacao_dossies_20261022/manifesto_derivados.csv,arquivo_original,texto,Nome lógico do arquivo bruto original
+metadata/ciclo_2026_2027/execucoes/reconciliacao_dossies_20261022/manifesto_derivados.csv,origem_primaria,texto,Endereço oficial de aquisição ou ausência documental explícita
+metadata/ciclo_2026_2027/execucoes/reconciliacao_dossies_20261022/manifesto_derivados.csv,data_hora_obtencao_primaria,texto,Data/hora primária ou não documentada; não substituída pela recuperação
+metadata/ciclo_2026_2027/execucoes/reconciliacao_dossies_20261022/manifesto_derivados.csv,origem_recuperacao,texto,Origem local ou Git LFS comprovada; não é fonte primária científica
+metadata/ciclo_2026_2027/execucoes/reconciliacao_dossies_20261022/manifesto_derivados.csv,inicio_processamento_utc,texto,Instante real do processamento novo em UTC
+metadata/ciclo_2026_2027/execucoes/reconciliacao_dossies_20261022/manifesto_derivados.csv,fim_processamento_utc,texto,Instante real de término em UTC
+metadata/ciclo_2026_2027/execucoes/reconciliacao_dossies_20261022/manifesto_derivados.csv,arquivo_derivado,texto,Caminho local do CSV isolado
+metadata/ciclo_2026_2027/execucoes/reconciliacao_dossies_20261022/manifesto_derivados.csv,tamanho_bytes,inteiro,Bytes do derivado; fonte original identificada pelo manifesto de insumos/fonte
+metadata/ciclo_2026_2027/execucoes/reconciliacao_dossies_20261022/manifesto_derivados.csv,sha256_derivado,texto,Hash dos bytes do derivado
+metadata/ciclo_2026_2027/execucoes/reconciliacao_dossies_20261022/manifesto_derivados.csv,n_registros_fonte,inteiro,Linhas lidas da tabela antes do filtro ES
+metadata/ciclo_2026_2027/execucoes/reconciliacao_dossies_20261022/manifesto_derivados.csv,n_registros_recorte,inteiro,Linhas após filtro do recorte e antes de transformação final
+metadata/ciclo_2026_2027/execucoes/reconciliacao_dossies_20261022/manifesto_derivados.csv,n_registros_derivado,inteiro,Linhas efetivamente persistidas
+metadata/ciclo_2026_2027/execucoes/reconciliacao_dossies_20261022/manifesto_derivados.csv,schema,texto,Caminho do schema versionado do derivado
+metadata/ciclo_2026_2027/execucoes/reconciliacao_dossies_20261022/manifesto_derivados.csv,versao_pipeline_base,texto,Commit-base do checkout; não afirma que o diff está commitado
+metadata/ciclo_2026_2027/execucoes/reconciliacao_dossies_20261022/manifesto_derivados.csv,versao_pipeline_efetiva,texto,Hash do manifesto de insumos que inclui hashes dos códigos usados
+metadata/ciclo_2026_2027/execucoes/reconciliacao_dossies_20261022/manifesto_derivados.csv,responsavel,texto,Executor real identificado; automação não é revisão humana
+metadata/ciclo_2026_2027/execucoes/reconciliacao_dossies_20261022/manifesto_derivados.csv,observacoes,texto,Limitações e caráter da nova execução
+metadata/ciclo_2026_2027/execucoes/reconciliacao_dossies_20261022/comparacao_rodada02.csv,escopo,texto,estabelecimentos ou habilitacoes; comparação da nova saída com rodada 2
+metadata/ciclo_2026_2027/execucoes/reconciliacao_dossies_20261022/comparacao_rodada02.csv,medida,texto,Campo comparado ou contagem de chaves adicionadas/removidas
+metadata/ciclo_2026_2027/execucoes/reconciliacao_dossies_20261022/comparacao_rodada02.csv,valor,inteiro,Número de diferenças por campo ou chaves adicionadas/removidas; zero na comparação realizada
+retorno_de_territorializar_municipios,codigo_municipal_original,texto,Código recebido preservado byte a byte; seis/sete dígitos não convertidos por inferência
+retorno_de_territorializar_municipios,cod_municipio_ibge,texto,Código canônico obtido por correspondência explícita ou NA
+retorno_de_territorializar_municipios,regiao_id,texto,Identificador da região na versão selecionada ou NA
+retorno_de_territorializar_municipios,regiao_nome,texto,Nome na mesma versão ou NA
+retorno_de_territorializar_municipios,data_evento,texto,Data original do evento/lote; não alterada pela harmonização
+retorno_de_territorializar_municipios,data_classificacao,texto,Data utilizada para consultar vigência; congelada no modo retrospectivo
+retorno_de_territorializar_municipios,versao_territorial,texto,Versão exata da tabela central escolhida pelo estudo
+retorno_de_territorializar_municipios,papel_territorial,texto,residencia;atendimento;municipio_gestor;localizacao_oferta; exige semântica comprovada pelo chamador
+retorno_de_territorializar_municipios,modo_territorial,texto,contemporaneo ou retrospectivo_congelado; nenhuma escolha por data mais recente
+retorno_de_territorializar_municipios,estado,texto,associado_no_contrato_tecnico; sem_correspondencia; fora_vigencia; codigo_ausente_ou_invalido; nunca homologação normativa
+preservacao_reconciliacao_sha256.csv,arquivo,texto,Caminho do arquivo inventariado
+preservacao_reconciliacao_sha256.csv,sha256_inicio,texto,Hash anterior à reconciliação
+preservacao_reconciliacao_sha256.csv,sha256_fim,texto,Hash ao término da reconciliação
+preservacao_reconciliacao_sha256.csv,situacao,texto,preservado ou alteracao_intencional; alterações justificadas na matriz

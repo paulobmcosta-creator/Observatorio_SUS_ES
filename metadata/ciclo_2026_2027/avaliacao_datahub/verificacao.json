@@ -1,0 +1,38 @@
+{
+  "data_utc": "2026-10-22T20:25:40.592248+00:00",
+  "estado": "conferencias_aprovadas; não é homologação do candidato",
+  "casos_poc": 6,
+  "referencia_r": {
+    "linhas": 12548,
+    "colunas": 18,
+    "celulas_diferentes": 0
+  },
+  "limites_reproduzidos": [
+    "PA a/b rejeitados no fetch",
+    "campo novo PA perdido",
+    "revisão com tamanho igual ignorada",
+    "linha CSV malformada descartada",
+    "ausentes principal/fallback divergentes"
+  ],
+  "arquivos_anteriores": 304,
+  "preservados": 294,
+  "documentos_atualizados_com_backup": 10,
+  "checkout_original_arquivos_inalterados": 122,
+  "fontes_originais_com_hash": 37,
+  "manifestos_insumos_produtos_conferidos": {
+    "metadata/ciclo_2026_2027/avaliacao_ferramentas/poc_20261022_v2/insumos_sha256.json": 33,
+    "metadata/ciclo_2026_2027/avaliacao_ferramentas/poc_20261022_v2/produtos_sha256.json": 12,
+    "metadata/ciclo_2026_2027/avaliacao_datahub/poc_20261022/insumos_sha256.json": 4,
+    "metadata/ciclo_2026_2027/avaliacao_datahub/poc_20261022/produtos_sha256.json": 5
+  },
+  "ambiente_base_identico": true,
+  "matriz_candidatos": 13,
+  "cobertura_linhas": 14,
+  "links_locais_conferidos": 105,
+  "python_ast": "válido",
+  "git_diff_check": "aprovado",
+  "testes_python_r_anteriores": "não repetidos; nenhum código produtivo alterado nesta complementação",
+  "relatorio_2025_2026": "nenhuma escrita; arquivos anteriores fora dos dez documentos preservados",
+  "aquisicao_oficial_kaggle": "não executada",
+  "equivalencia_metodologica_datahub": "não demonstrada"
+}

@@ -1,0 +1,655 @@
+0001: INSTITUTO FEDERAL DO ESPÍRITO SANTOCAMPUS BARRA DE SÃO FRANCISCO
+0002: 
+0003: 
+0004: 
+0005: 
+0006: 
+0007: OBSERVATÓRIO SUS-ES
+0008: DOSSÊ METODOLÓGICO E TÉCNICO DO PROJETO 2026–2027
+0009: Consolidação metodológica do Observatório SUS-ES: validação e atualização de indicadores da atenção especializada no Espírito Santo
+0010: 
+0011: 
+0012: 
+0013: 
+0014: 
+0015: Versão 1.0 – 3 de outubro de 2026
+0016: Coordenação: Paulo Borges Mathias Costa
+0017: 
+0018: 
+0019: 
+0020: Barra de São Francisco – ES2026
+0021: 
+0022: CONTROLE DO DOCUMENTO
+0023: Quadro 1 – Identificação e controle do dossiê
+0024: Elemento
+0025: Registro
+0026: Documento
+0027: Dossiê Metodológico e Técnico do Observatório SUS-ES – Projeto 2026–2027
+0028: Projeto institucional
+0029: Consolidação metodológica do Observatório SUS-ES: validação e atualização de indicadores da atenção especializada no Espírito Santo
+0030: Período do projeto
+0031: 1º de setembro de 2026 a 31 de agosto de 2027
+0032: Versão deste dossiê
+0033: 1.0
+0034: Data de consolidação
+0035: 3 de outubro de 2026
+0036: Responsável pela coordenação
+0037: Paulo Borges Mathias Costa
+0038: Natureza do documento
+0039: Documento interno de governança metodológica, técnica e científica; não substitui o cadastro institucional do projeto nem os protocolos específicos dos estudos temáticos.
+0040: Fonte: elaboração própria com base no Projeto de Pesquisa 2026–2027, no Relatório Técnico-Científico Integrado do primeiro ano e no repositório Observatorio_SUS_ES.
+0041: REGRA DE ESCOPO
+0042: Este dossiê reúne somente decisões reutilizáveis e institucionais do Observatório SUS-ES. Decisões específicas do TCC de Cardiologia — como período 2014–2024, CID-10 I00–I99, grupos cardiovasculares, Noroeste 1 como território focal, whitelists cardiovasculares, mortalidade padronizada e Prais-Winsten — pertencem ao dossiê próprio do TCC e não são incorporadas aqui como regras gerais do projeto.
+0043: 
+0044: 
+0045: SUMÁRIO
+0046: 1 FINALIDADE, ESCOPO E POSIÇÃO DO DOSSIÊ1
+0047: 2 BASE DOCUMENTAL E CONTINUIDADE ENTRE OS CICLOS1
+0048: 2.1 Primeiro ano de execução1
+0049: 2.2 Projeto 2026–20272
+0050: 3 PRINCÍPIOS METODOLÓGICOS E DE GOVERNANÇA3
+0051: 4 ARQUITETURA DE DADOS E ORGANIZAÇÃO DO REPOSITÓRIO3
+0052: 4.1 Camadas de dados3
+0053: 4.2 Arquitetura híbrida R–Python4
+0054: 4.3 Situação do PySUS e regra de adoção5
+0055: 5 PROVENIÊNCIA, MANIFESTOS E CONTROLE DE VERSÕES5
+0056: 6 FONTES E FAMÍLIAS DE ARQUIVOS6
+0057: 7 TERRITORIALIZAÇÃO E DENOMINADORES6
+0058: 7.1 Chave territorial canônica6
+0059: 7.2 Residência, atendimento e localização da oferta7
+0060: 7.3 População7
+0061: 8 REGRAS SEMÂNTICAS POR SISTEMA DE INFORMAÇÃO7
+0062: 8.1 SIM7
+0063: 8.2 SIH/SUS8
+0064: 8.3 SIA/SUS8
+0065: 8.4 CNES8
+0066: 9 MODELO TEMPORAL DO CNES9
+0067: 10 SIGTAP E SEMÂNTICA HISTÓRICA DOS PROCEDIMENTOS9
+0068: 11 TRATAMENTO, EXCLUSÕES E QUALIDADE DOS DADOS10
+0069: 11.1 Duplicidade e exclusões10
+0070: 11.2 Indicadores de qualidade11
+0071: 11.3 Validação sentinela11
+0072: 12 MATRIZ MÍNIMA DE INDICADORES DO OBSERVATÓRIO11
+0073: 12.1 Dimensões gerais da matriz12
+0074: 13 ESTRATÉGIA ANALÍTICA GERAL12
+0075: 14 PAINEL, VISUALIZAÇÃO E COMUNICAÇÃO13
+0076: 15 DIVISÃO DE RESPONSABILIDADES NO CICLO 2026–202713
+0077: 16 ÉTICA, RESPONSABILIDADE E LIMITES DE INTERPRETAÇÃO14
+0078: 17 INTERFACE ENTRE O PROJETO E ESTUDOS TEMÁTICOS14
+0079: 17.1 Elementos que deliberadamente NÃO integram este dossiê15
+0080: 18 DECISÕES CONSOLIDADAS E PENDÊNCIAS15
+0081: 19 CONTROLE DE MUDANÇAS E VERSIONAMENTO DO DOSSIÊ16
+0082: 20 SÍNTESE OPERACIONAL17
+0083: REFERÊNCIAS17
+0084: APÊNDICE A – REGISTRO DE DECISÕES POR RESPONSABILIDADE18
+0085: 
+0086: 
+0087: 1 FINALIDADE, ESCOPO E POSIÇÃO DO DOSSIÊ
+0088: Este dossiê consolida as decisões metodológicas e técnicas de caráter institucional do Observatório SUS-ES para o ciclo 2026–2027. Sua função é transformar o novo projeto de pesquisa, os aprendizados do primeiro ano e a documentação executável do repositório em um protocolo único de trabalho, capaz de orientar aquisição, tratamento, validação, atualização, análise e comunicação de dados da atenção especializada no Espírito Santo.
+0089: O documento não substitui o projeto submetido ao Ifes. O cadastro institucional define objetivos, justificativa, metodologia, resultados esperados e planos de trabalho; este dossiê detalha como esses compromissos serão operacionalizados. Também não substitui os protocolos temáticos específicos, que devem herdar a infraestrutura comum e acrescentar apenas as definições próprias de cada objeto empírico.
+0090: A primeira etapa do Observatório produziu formação, padrões de documentação, contrato de dados, curadoria do CNES, bases intermediárias, scripts, testes, um MVP e experiências temáticas em Oncologia, Cardiologia e Rede de Urgência e Emergência. O novo projeto desloca o foco para consolidação metodológica, validação de uma matriz mínima de indicadores, atualização reprodutível e qualificação dos produtos técnico-científicos. Essa mudança de fase é o fundamento deste dossiê (IFES, 2026a; IFES, 2026b).
+0091: Quadro 2 – Hierarquia documental do Observatório SUS-ES
+0092: Nível
+0093: Documento/artefato
+0094: Função
+0095: Institucional
+0096: Projeto de Pesquisa 2026–2027
+0097: Define problema, objetivos, metodologia geral, cronograma e resultados esperados.
+0098: Governança metodológica
+0099: Este dossiê
+0100: Consolida regras comuns de dados, qualidade, territorialização, reprodutibilidade, análise e documentação.
+0101: Execução técnica
+0102: Repositório GitHub Observatorio_SUS_ES
+0103: Contém código, schemas, dicionários, testes, workflows, documentação e histórico de versões.
+0104: Estudo temático
+0105: Dossiê específico do TCC ou módulo
+0106: Define objeto, período, taxonomias, indicadores e métodos estatísticos particulares.
+0107: Produto público
+0108: Painel, nota técnica, relatório, comunicação
+0109: Apresenta resultados validados com fonte, período, território, unidade e limitações.
+0110: Fonte: elaboração própria, com base nos documentos institucionais e nas decisões metodológicas consolidadas neste dossiê.
+0111: 2 BASE DOCUMENTAL E CONTINUIDADE ENTRE OS CICLOS
+0112: 2.1 Primeiro ano de execução
+0113: O Relatório Técnico-Científico Integrado do primeiro ano registra o período de 1º de setembro de 2025 a 31 de agosto de 2026 e apresenta o ciclo como fase de implantação metodológica e produção aplicada. Foram definidos padrões de preservação de dados brutos, registro de filtros, logs de extração, dicionários, documentação e controle de versão. O relatório também registra a construção de contrato mínimo de integração, modelo dimensional para o painel e matriz de curadoria do CNES, além da distinção entre produtos individuais e ativos institucionais coletivos (IFES, 2026a).
+0114: Esse primeiro ciclo demonstrou que a infraestrutura metodológica precisa existir independentemente de qualquer eixo temático. A experiência da Cardiologia, por exemplo, foi reconhecida como um percurso ainda incompleto de integração entre oferta, utilização e mortalidade, enquanto o módulo CNES e o trabalho de Painéis avançaram de maneira mais institucional. Para o ciclo seguinte, portanto, a prioridade deve ser consolidar ativos reutilizáveis e evitar que cada estudante recrie regras próprias de extração, território, chaves, documentação e validação.
+0115: 2.2 Projeto 2026–2027
+0116: O projeto “Consolidação metodológica do Observatório SUS-ES: validação e atualização de indicadores da atenção especializada no Espírito Santo” foi concebido como pesquisa aplicada, quantitativa, documental e metodológica. Seu objetivo geral é consolidar o Observatório mediante validação, atualização, documentação e qualificação de indicadores, fortalecendo a capacidade de produzir informações regionais consistentes, reprodutíveis e úteis ao planejamento, monitoramento, avaliação e comunicação pública no SUS (IFES, 2026b).
+0117: A proposta está organizada em três planos independentes e complementares: validação metodológica dos indicadores; automação e documentação do fluxo reprodutível; e curadoria/comunicação científica. Esta arquitetura de trabalho deve ser preservada no dossiê e no repositório para que decisões científicas, decisões de engenharia e tarefas de apoio sejam distinguíveis, ainda que articuladas.
+0118: Quadro 3 – Correspondência entre o novo projeto e as camadas deste dossiê
+0119: Compromisso do projeto
+0120: Operacionalização no dossiê
+0121: Inventariar produtos da primeira etapa
+0122: Registro de ativos, situação, documentação e possibilidade de incorporação.
+0123: Selecionar e validar matriz mínima
+0124: Critérios explícitos de validação e governança dos indicadores.
+0125: Atualizar e padronizar bases
+0126: Arquitetura de aquisição, camadas de dados e regras por sistema.
+0127: Ampliar rastreabilidade e auditabilidade
+0128: Manifestos, hashes, logs, schemas, dicionários, testes e versionamento.
+0129: Revisar painel-piloto
+0130: Regra de que visualização consome apenas produtos analíticos validados.
+0131: Produzir nota técnica, manual e relatório
+0132: Padrões de comunicação e documentação definidos como produtos do projeto.
+0133: Fonte: elaboração própria com base nos objetivos específicos e na metodologia do Projeto de Pesquisa 2026–2027 (IFES, 2026b).
+0134: 3 PRINCÍPIOS METODOLÓGICOS E DE GOVERNANÇA
+0135: O Observatório deverá operar segundo princípios comuns a todas as linhas temáticas. Esses princípios têm precedência sobre conveniências de uma análise isolada e devem ser refletidos tanto na documentação quanto no código.
+0136: Fonte oficial e proveniência explícita: a fonte científica é o sistema oficial responsável pelo dado; bibliotecas, pacotes e espelhos são ferramentas de aquisição ou processamento, não fontes substitutivas.
+0137: Imutabilidade do dado bruto: arquivos obtidos das fontes oficiais não devem ser editados manualmente; qualquer transformação deve ocorrer em camada posterior e ser reproduzível.
+0138: Separação entre dado, regra e produto: dados brutos, transformações, conceitos analíticos e visualizações devem permanecer distinguíveis.
+0139: Rastreabilidade integral: toda transformação relevante deve poder ser reconstituída por código, metadados, logs e versões.
+0140: Semântica própria de cada sistema: SIM, SIH/SUS, SIA/SUS e CNES possuem unidades de observação e finalidades administrativas diferentes e não devem ser homogeneizados artificialmente.
+0141: Territorialização explícita: residência, local de atendimento e localização da oferta são dimensões diferentes e devem ser nomeadas corretamente.
+0142: Parcimônia analítica: a matriz institucional deve conter indicadores úteis, atualizáveis e interpretáveis, evitando acúmulo de medidas sem função gerencial ou científica clara.
+0143: Não causalidade por padrão: análises descritivas e ecológicas não autorizam atribuição causal entre oferta, utilização e desfechos.
+0144: Documentação como produto científico: dicionários, schemas, fichas de indicadores, registros de extração e decisões de tratamento integram os resultados do projeto.
+0145: Modularidade temática: o Observatório fornece infraestrutura comum; cada estudo temático define seu recorte substantivo sem transformar escolhas locais em regras gerais.
+0146: 4 ARQUITETURA DE DADOS E ORGANIZAÇÃO DO REPOSITÓRIO
+0147: 4.1 Camadas de dados
+0148: A arquitetura geral deve preservar a separação entre origem, preparação, produto analítico e saída de comunicação. A nomenclatura do repositório atual utiliza data_raw, data_interim e data_processed. Conceitualmente, o dossiê adota quatro funções, mesmo quando duas delas compartilham diretórios físicos: RAW, INTERIM/STAGING, ANALYTIC/PROCESSED e OUTPUT.
+0149: Quadro 4 – Arquitetura de camadas de dados
+0150: Camada
+0151: Conteúdo
+0152: Regra principal
+0153: RAW
+0154: Arquivo exatamente como obtido da fonte oficial, acompanhado de proveniência.
+0155: Imutável; sem filtros substantivos, recodificação, deduplicação ou edição manual.
+0156: INTERIM / STAGING
+0157: Tipos, nomes, datas, códigos e estruturas preparados para processamento.
+0158: Pode normalizar formato, mas não deve ocultar decisões nem eliminar informação sem registro.
+0159: ANALYTIC / PROCESSED
+0160: Bases resultantes de filtros, classificações, territorialização, vínculos e regras metodológicas.
+0161: Toda regra deve ser documentada e reproduzível.
+0162: OUTPUT
+0163: Tabelas, gráficos, mapas, painéis, fichas e produtos comunicacionais.
+0164: Somente resultados validados; fonte, período, território, unidade e limitações devem estar explícitos.
+0165: Fonte: elaboração própria; arquitetura compatível com o Projeto de Pesquisa 2026–2027 e com as convenções vigentes no repositório Observatorio_SUS_ES.
+0166: 4.2 Arquitetura híbrida R–Python
+0167: O repositório atual formaliza uma arquitetura híbrida. Python/PySUS é a direção preferencial para aquisição, cache, engenharia de dados, organização de bases brutas/intermediárias, serialização e automação operacional. R permanece disponível para validação metodológica, análise estatística, indicadores, exploração analítica e produtos acadêmicos, sobretudo quando houver implementação validada que funcione como referência de paridade. Metadados, schemas, dicionários e testes constituem contratos independentes da linguagem utilizada (OBSERVATÓRIO SUS-ES, 2026a).
+0168: A migração de componentes sensíveis não deve ocorrer por substituição abrupta. Regra de negócio sanitária, chave relacional, cardinalidade e interpretação precisam ser preservadas. Componentes em R somente devem ser retirados quando a implementação alternativa tiver paridade funcional e metodológica demonstrada e documentada.
+0169: Quadro 5 – Responsabilidade preferencial por camada tecnológica
+0170: Camada/função
+0171: Ferramenta preferencial
+0172: Observação
+0173: Aquisição e cache
+0174: Python/PySUS ou rotina equivalente validada
+0175: A biblioteca é ferramenta; a fonte permanece o sistema oficial.
+0176: Conversão e armazenamento colunar
+0177: Python + PyArrow/Parquet
+0178: Conversão deve preservar campos e códigos como texto quando necessário.
+0179: Consulta de grandes volumes
+0180: DuckDB e/ou bibliotecas colunares
+0181: Uso voltado a filtros, agregações e auditoria eficiente.
+0182: Validação metodológica e estatística
+0183: R e/ou Python
+0184: A escolha depende da implementação validada e da reprodutibilidade.
+0185: Mapas
+0186: QGIS/GeoPandas ou solução equivalente
+0187: Territorialização deve consumir chave canônica documentada.
+0188: Painéis
+0189: Power BI ou solução institucional equivalente
+0190: Não deve atuar como camada de transformação não documentada.
+0191: Fonte: elaboração própria com base no README e nas convenções metodológicas vigentes do repositório Observatorio_SUS_ES.
+0192: 4.3 Situação do PySUS e regra de adoção
+0193: O PySUS deve ser tratado como camada preferencial de aquisição quando sua cobertura operacional estiver comprovada para o sistema e a família de arquivos em questão. O histórico do repositório mostra que a primeira prova de conceito foi insuficiente para confirmar todos os requisitos do CNES; etapas posteriores, já em Python 3.12 e PySUS 2.0.4, avançaram na inspeção controlada e no mapeamento de grupos, mantendo fallback planejado e R como oráculo metodológico durante a transição (OBSERVATÓRIO SUS-ES, 2026b).
+0194: Consequentemente, este dossiê não transforma “usar PySUS” em requisito científico. A regra institucional é mais geral: obter os dados de fonte oficial de forma automatizada, controlada, auditável e reproduzível. Se PySUS não atender integralmente a determinado arquivo ou chave, deverá ser utilizado método alternativo documentado, preferencialmente acesso direto ao repositório oficial, sem perda de proveniência.
+0195: 5 PROVENIÊNCIA, MANIFESTOS E CONTROLE DE VERSÕES
+0196: A proveniência deverá acompanhar cada arquivo de origem e cada produto gerado. A finalidade é permitir que outro integrante consiga identificar exatamente o que foi obtido, quando, de onde, com quais parâmetros e por qual versão do pipeline.
+0197: Quadro 6 – Conteúdo mínimo do manifesto de aquisição/processamento
+0198: Campo
+0199: Conteúdo mínimo
+0200: sistema
+0201: SIM, SIH, SIA, CNES, SIGTAP, população ou outra fonte.
+0202: subtipo/família
+0203: Ex.: DO, RD, PA, ST, PF, LT, EQ, HB, SR.
+0204: abrangência
+0205: UF, período e demais parâmetros de recorte.
+0206: competência
+0207: AAAA-MM quando aplicável; ano quando a base for anual.
+0208: arquivo_origem
+0209: Nome original ou identificador inequívoco do arquivo obtido.
+0210: origem
+0211: Servidor, endpoint ou endereço oficial utilizado.
+0212: data_hora_obtencao
+0213: Registro temporal da extração.
+0214: tamanho_bytes
+0215: Tamanho do objeto obtido, quando aplicável.
+0216: sha256
+0217: Hash do arquivo bruto preservado.
+0218: n_registros
+0219: Número de registros lidos antes e, quando pertinente, após cada etapa.
+0220: schema
+0221: Lista/tipos de campos ou referência ao schema versionado.
+0222: versao_pipeline
+0223: Commit, tag ou versão do código responsável.
+0224: responsavel
+0225: Pessoa ou processo responsável pela execução.
+0226: observacoes
+0227: Erros, lacunas, indisponibilidades e decisões excepcionais.
+0228: Fonte: elaboração própria, com base nos documentos institucionais e nas decisões metodológicas consolidadas neste dossiê.
+0229: O hash SHA-256 deve ser preferido para congelar a identidade do arquivo bruto. Bases intermediárias podem ser regeneráveis e, portanto, não precisam ser tratadas como fonte primária de verdade. O elemento essencial é que código, parâmetros, contratos e arquivo bruto permitam reconstruir a camada seguinte.
+0230: 6 FONTES E FAMÍLIAS DE ARQUIVOS
+0231: A infraestrutura do Observatório deve ser capaz de trabalhar, no mínimo, com SIM, SIH/SUS, SIA/SUS, CNES, SIGTAP, série populacional e uma dimensão territorial canônica. O projeto institucional não fixa uma janela temporal única para todas as linhas temáticas; cada módulo ou estudo deverá declarar seu período, enquanto o pipeline preserva a granularidade necessária à atualização.
+0232: Quadro 7 – Fontes estruturantes e papel institucional
+0233: Fonte
+0234: Família prioritária
+0235: Papel no Observatório
+0236: Status
+0237: SIM
+0238: DO
+0239: Mortalidade e desfechos populacionais.
+0240: Estruturante
+0241: SIH/SUS
+0242: RD; outros layouts sob demanda
+0243: Internações, utilização hospitalar, procedimentos e valores aprovados.
+0244: Estruturante
+0245: SIA/SUS
+0246: PA; outros layouts sob demanda
+0247: Produção ambulatorial especializada.
+0248: Estruturante
+0249: CNES
+0250: ST, PF, LT, EQ, HB e SR
+0251: Estabelecimentos, profissionais, leitos, equipamentos, habilitações e serviços.
+0252: Estruturante
+0253: SIGTAP
+0254: Pacote/tabelas por competência
+0255: Semântica histórica de procedimentos, ocupações, habilitações e relações.
+0256: Estruturante
+0257: População
+0258: Série harmonizada por município, sexo e idade quando necessário
+0259: Denominadores e agregações territoriais.
+0260: Estruturante
+0261: Território
+0262: Município + código IBGE + Região de Saúde vigente + agregações
+0263: Chave comum para integração e análise regional.
+0264: Estruturante
+0265: Outras bases
+0266: ANS, normativas, IBGE e outras conforme problema
+0267: Contextualização ou indicadores complementares.
+0268: Condicional
+0269: Fonte: elaboração própria, com base nos documentos institucionais e nas decisões metodológicas consolidadas neste dossiê.
+0270: 7 TERRITORIALIZAÇÃO E DENOMINADORES
+0271: 7.1 Chave territorial canônica
+0272: O município é a unidade territorial elementar do Observatório. Os territórios supramunicipais devem ser derivados por tabela canônica versionada que associe código IBGE, município e Região de Saúde vigente, permitindo também macrorregião ou outra agregação oficial quando necessária. A classificação territorial deve ser centralizada: nenhum módulo temático deve manter, isoladamente, uma tabela própria de municípios e regiões.
+0273: O primeiro ano utilizou diferentes agrupamentos em análises específicas, o que deve ser tratado como legado histórico e não como regra do segundo ciclo. Para novas análises, a composição territorial oficial utilizada deve ser registrada com data/versão. Quando um estudo histórico optar por aplicar a regionalização vigente retrospectivamente, essa será uma escolha do estudo e deverá ser declarada no protocolo temático.
+0274: 7.2 Residência, atendimento e localização da oferta
+0275: Quadro 8 – Semântica territorial por tipo de informação
+0276: Dimensão
+0277: Território de referência
+0278: Uso
+0279: População/mortalidade populacional
+0280: Residência
+0281: Denominadores e taxas populacionais.
+0282: Internação por utilização
+0283: Residência do usuário
+0284: Uso dos serviços pelos residentes de determinado território.
+0285: Produção hospitalar
+0286: Local do estabelecimento
+0287: Volume efetivamente produzido no território prestador.
+0288: Produção ambulatorial
+0289: Local do estabelecimento; residência quando a qualidade do campo permitir
+0290: Produção e fluxos, sem confundir as duas perspectivas.
+0291: CNES
+0292: Localização do estabelecimento/recurso
+0293: Oferta e capacidade cadastrada.
+0294: Fluxo assistencial
+0295: Residência → atendimento
+0296: Dependência, deslocamento, atração e circulação entre territórios.
+0297: Fonte: elaboração própria, com base nos documentos institucionais e nas decisões metodológicas consolidadas neste dossiê.
+0298: 7.3 População
+0299: Deve-se utilizar uma única série harmonizada de população municipal ao longo do período de cada análise, sempre que tecnicamente possível, evitando trocar o denominador no meio de uma série por conveniência. Agregações por Região de Saúde ou macrorregião devem ser obtidas pela soma dos municípios da tabela territorial canônica. O Censo pode funcionar como referência de validação, sem obrigar a substituição do denominador de uma série já harmonizada.
+0300: A população residente total será o denominador padrão dos indicadores populacionais do Observatório. Não se deve subtrair automaticamente beneficiários de planos de saúde para criar um denominador “SUS”, porque ausência ou presença de cobertura privada não equivale a uso exclusivo ou não uso do SUS. Indicadores específicos por sexo, idade ou outro estrato exigem denominador correspondente.
+0301: 8 REGRAS SEMÂNTICAS POR SISTEMA DE INFORMAÇÃO
+0302: 8.1 SIM
+0303: A unidade de observação é o óbito. Indicadores de causa devem utilizar a variável correspondente à causa básica/subjacente conforme a definição do estudo. Município de residência e município de ocorrência são dimensões distintas. Registros com idade, sexo ou residência ausentes não devem ser eliminados indiscriminadamente: a elegibilidade depende do indicador que será calculado.
+0304: 8.2 SIH/SUS
+0305: A unidade analítica é a internação/AIH registrada, e não uma pessoa única. O mesmo indivíduo pode gerar mais de uma internação. Assim, relatórios e painéis devem usar “internações”, “AIH” ou formulação equivalente, evitando chamar a contagem de “pacientes” sem procedimento válido de identificação individual. A distinção entre residência e localização do estabelecimento é obrigatória.
+0306: Valores financeiros do SIH devem ser denominados valores aprovados, pagos ou de reembolso conforme a semântica do campo utilizado. Eles não devem ser apresentados como custo econômico real do cuidado. Quando houver análise longitudinal monetária, a necessidade de deflacionamento deve ser definida no estudo específico.
+0307: 8.3 SIA/SUS
+0308: A unidade observada é produção de procedimentos, não pessoas. Quantidade de procedimentos não deve ser convertida em número de usuários. A quantidade aprovada será a medida preferencial de produção quando a estrutura da base assim permitir, mantendo quantidade apresentada para auditoria e análises administrativas específicas.
+0309: A seleção de produção especializada deve ser orientada prioritariamente por procedimentos e demais atributos pertinentes, e não depender de diagnóstico quando a completude deste campo for insuficiente. Fluxos ambulatoriais por residência somente poderão ser produzidos quando a qualidade do município de residência for conhecida e considerada aceitável para a finalidade do indicador.
+0310: 8.4 CNES
+0311: O CNES deve ser interpretado como cadastro administrativo de oferta/capacidade registrada por competência. Não mede, por si só, produção, acesso, qualidade, disponibilidade real em todos os dias ou suficiência assistencial. A existência de estrutura ou habilitação deve ser descrita como presença cadastral, salvo quando houver evidência complementar que autorize interpretação mais ampla.
+0312: As entidades principais devem permanecer separadas: estabelecimento, habilitação/serviço, leito, equipamento e profissional. Para profissionais, pessoa, vínculo e carga horária são unidades diferentes. A contagem de pessoas deve deduplicar o identificador individual no nível territorial analisado; a soma de vínculos não pode ser apresentada como número de profissionais únicos.
+0313: 9 MODELO TEMPORAL DO CNES
+0314: Todas as dimensões de oferta e capacidade instalada provenientes do CNES devem ser preservadas em periodicidade mensal. A competência é parte da chave analítica. Valores mensais de estoque nunca serão somados para representar quantidade anual de recursos.
+0315: Quadro 9 – Síntese anual de variáveis de estoque do CNES
+0316: Medida
+0317: Regra
+0318: Função
+0319: Média mensal anual
+0320: Média das competências válidas do ano.
+0321: Medida principal de estoque anual quando a variável for quantitativa.
+0322: Última competência válida
+0323: Valor do último mês disponível.
+0324: Fotografia de encerramento do ano; complementar.
+0325: Mínimo e máximo mensal
+0326: Extremos das competências válidas.
+0327: Evidenciar variação/instabilidade cadastral ou operacional.
+0328: Meses ativos
+0329: Número ou proporção de competências em que o recurso esteve ativo.
+0330: Especialmente útil para habilitações e recursos raros.
+0331: Número de competências válidas
+0332: Contagem de meses efetivamente observados.
+0333: Controle de completude temporal.
+0334: Fonte: elaboração própria, com base nos documentos institucionais e nas decisões metodológicas consolidadas neste dossiê.
+0335: Para profissionais, a síntese anual deve preservar separadamente o número médio mensal de profissionais distintos e a carga horária SUS registrada. Para leitos, equipamentos e habilitações, devem ser diferenciados campos de oferta SUS, existência e situação de uso conforme o layout efetivamente disponível. Nenhum significado deverá ser atribuído por analogia sem consulta ao dicionário da competência correspondente.
+0336: 10 SIGTAP E SEMÂNTICA HISTÓRICA DOS PROCEDIMENTOS
+0337: O SIGTAP deve ser tratado como infraestrutura histórica versionada por competência. Uma lista de códigos atual não pode ser aplicada retroativamente a toda uma série sem verificar a existência e a semântica do procedimento em cada competência. Esta regra é transversal e deve servir a todas as linhas temáticas.
+0338: Quadro 10 – Regra de processamento histórico do SIGTAP
+0339: Etapa
+0340: Procedimento institucional
+0341: 1
+0342: Carregar a tabela correspondente à competência analisada.
+0343: 2
+0344: Verificar se o código estava ativo e qual descrição/atributo possuía naquela competência.
+0345: 3
+0346: Aplicar classificação temática somente aos códigos válidos no período.
+0347: 4
+0348: Registrar alterações de código, descrição ou atributo relevantes à comparabilidade.
+0349: 5
+0350: Quando necessário, mapear diferentes códigos administrativos para um conceito analítico estável e documentado.
+0351: 6
+0352: Preservar a relação entre conceito analítico, código administrativo, competência e fonte de referência.
+0353: Fonte: elaboração própria, com base nos documentos institucionais e nas decisões metodológicas consolidadas neste dossiê.
+0354: A infraestrutura institucional deve manter, quando necessário, tabelas de procedimento, habilitação, ocupação, serviço/classificação e relações entre esses domínios. Entretanto, as whitelists temáticas — por exemplo, quais códigos representam um conjunto clínico específico — pertencem ao módulo ou estudo que formula o conceito analítico, não ao núcleo geral do Observatório.
+0355: 11 TRATAMENTO, EXCLUSÕES E QUALIDADE DOS DADOS
+0356: 11.1 Duplicidade e exclusões
+0357: Não haverá deduplicação genérica aplicada indistintamente às bases. Uma duplicidade física introduzida por importação pode ser removida quando inequívoca e registrada; eventos administrativos legítimos devem ser mantidos; possíveis duplicidades sem evidência suficiente devem ser auditadas antes de qualquer exclusão.
+0358: A exclusão deve ser específica à análise. Um registro pode ser válido para um total geral e inválido para uma análise estratificada. Dessa forma, o pipeline não deve apagar antecipadamente linhas apenas porque um campo está ausente. Devem ser mantidos códigos de motivo de exclusão e contagem do impacto de cada regra.
+0359: Quadro 11 – Categorias institucionais de tratamento
+0360: Categoria
+0361: Regra
+0362: Válido
+0363: Registro reúne informação suficiente para o indicador considerado.
+0364: Ausente
+0365: Campo necessário não informado.
+0366: Ignorado
+0367: Categoria prevista pelo sistema para informação ignorada.
+0368: Inválido
+0369: Código/valor incompatível com o domínio ou regra definida.
+0370: Não aplicável
+0371: Campo não se aplica à unidade observada ou ao indicador.
+0372: Duplicidade física confirmada
+0373: Registro redundante introduzido pelo processo técnico; remoção deve ser registrada.
+0374: Evento repetido legítimo
+0375: Ocorrência administrativa/assistencial distinta; deve ser preservada.
+0376: Fonte: elaboração própria, com base nos documentos institucionais e nas decisões metodológicas consolidadas neste dossiê.
+0377: 11.2 Indicadores de qualidade
+0378: Quadro 12 – Núcleo mínimo de qualidade e integridade
+0379: Indicador de controle
+0380: Conteúdo
+0381: Completude de diagnóstico
+0382: Percentual válido/ausente segundo a base e o módulo.
+0383: Completude de residência
+0384: Proporção de registros com município de residência utilizável.
+0385: Completude de idade
+0386: Proporção de registros elegíveis para análises etárias.
+0387: Completude de sexo
+0388: Proporção de registros elegíveis para análises por sexo.
+0389: Integridade temporal
+0390: Competências/anos esperados versus encontrados.
+0391: Validade territorial
+0392: Proporção de códigos municipais vinculados à tabela canônica.
+0393: Consistência de produção
+0394: Relação apresentada/aprovada quando aplicável.
+0395: Continuidade temporal
+0396: Rupturas abruptas, mudanças de layout ou lacunas que exijam investigação.
+0397: Impacto das exclusões
+0398: Percentual de registros não elegíveis por análise e motivo.
+0399: Integridade do pipeline
+0400: Arquivo legível, hash, schema, registros e execução documentada.
+0401: Fonte: elaboração própria, com base nos documentos institucionais e nas decisões metodológicas consolidadas neste dossiê.
+0402: 11.3 Validação sentinela
+0403: A comparação com TABNET ou outra interface oficial não será tratada como validação de uma fonte contra ela própria. Quando útil, será executada como teste sentinela do pipeline: um conjunto pequeno de totalizações simples será reproduzido para verificar se extração, campo, competência, território e filtros foram interpretados corretamente. Depois de validada a rotina, não se exige conferência manual de cada resultado.
+0404: 12 MATRIZ MÍNIMA DE INDICADORES DO OBSERVATÓRIO
+0405: A matriz mínima é um produto institucional do projeto 2026–2027 e não deve ser confundida com matrizes temáticas extensas. Seu objetivo é selecionar um conjunto enxuto de indicadores regionais que possa ser atualizado periodicamente e compreendido por gestores, pesquisadores e estudantes. Indicadores adicionais poderão existir como módulos temáticos ou de aprofundamento, mas não devem ser incorporados automaticamente ao núcleo institucional.
+0406: Quadro 13 – Critérios de validação da matriz mínima institucional
+0407: Critério
+0408: Pergunta de validação
+0409: Relevância sanitária
+0410: O indicador representa dimensão relevante da atenção especializada?
+0411: Aderência ao Observatório
+0412: Contribui para os objetivos e produtos institucionais?
+0413: Disponibilidade oficial
+0414: Pode ser obtido de fonte pública e documentada?
+0415: Clareza operacional
+0416: Numerador, denominador, filtros e unidade são explicitáveis?
+0417: Estabilidade conceitual
+0418: A definição é comparável no tempo ou suas mudanças podem ser mapeadas?
+0419: Completude
+0420: Os campos necessários possuem qualidade suficiente para o uso pretendido?
+0421: Consistência
+0422: O indicador resiste a checagens internas e sentinelas?
+0423: Comparabilidade territorial
+0424: Pode ser interpretado de forma coerente entre municípios/regiões?
+0425: Periodicidade
+0426: É atualizável em frequência compatível com a finalidade do Observatório?
+0427: Inteligibilidade
+0428: Pode ser explicado sem depender de conhecimento tácito?
+0429: Utilidade gerencial
+0430: Acrescenta informação relevante ao planejamento, monitoramento ou comunicação?
+0431: Fonte: elaboração própria a partir dos critérios explicitados no Projeto de Pesquisa 2026–2027 (IFES, 2026b).
+0432: 12.1 Dimensões gerais da matriz
+0433: A matriz institucional poderá incluir dimensões de oferta/capacidade, produção, utilização, fluxos, desfechos e qualidade da informação. A definição concreta dos indicadores deverá resultar do processo de validação previsto no plano PIBIC/PIVIC. Este dossiê, portanto, não antecipa uma lista definitiva nem transforma indicadores cardiovasculares, oncológicos ou de urgência em obrigações gerais do Observatório.
+0434: DISTINÇÃO TERMINOLÓGICA
+0435: No projeto institucional, recomenda-se usar “matriz mínima validada” para o conjunto regular do Observatório e “indicadores complementares/temáticos” para medidas acionadas por módulos específicos. A terminologia “indicadores principais” e “indicadores de aprofundamento” pode ser utilizada nos estudos temáticos, mas não precisa estruturar a governança geral do projeto.
+0436: 
+0437: 13 ESTRATÉGIA ANALÍTICA GERAL
+0438: A análise institucional será predominantemente descritiva e exploratória, conforme o projeto aprovado. Serão utilizadas frequências absolutas, proporções, taxas, razões, distribuições temporais, comparações territoriais e medidas pertinentes à natureza de cada indicador. A escolha do denominador deverá ser explicitada em ficha metodológica.
+0439: Métodos inferenciais ou de séries temporais mais específicos não serão obrigatórios para todo o Observatório. Prais-Winsten, Joinpoint, regressões, correlações, padronização por idade e demais técnicas devem ser definidas no protocolo temático quando a pergunta científica exigir. O projeto geral deve garantir dados e metadados adequados para essas análises, sem impor o mesmo método a todos os módulos.
+0440: Integrações entre oferta, produção, utilização, fluxos e desfechos podem ser realizadas, mas a interpretação deve preservar a natureza ecológica e administrativa das bases. A ocorrência conjunta de baixa oferta e alta evasão, por exemplo, pode justificar investigação de dependência territorial, mas não autoriza concluir causalidade sem desenho apropriado.
+0441: 14 PAINEL, VISUALIZAÇÃO E COMUNICAÇÃO
+0442: O painel deve ser entendido como camada de apresentação, não como fonte de verdade nem local de regras metodológicas ocultas. Toda medida exibida deve corresponder a uma base analítica versionada e a uma ficha metodológica. Filtros, agregações e unidades precisam reproduzir a mesma lógica utilizada fora do painel.
+0443: Quadro 14 – Requisitos mínimos para indicadores publicados
+0444: Elemento
+0445: Exigência
+0446: Título
+0447: Identificar claramente o fenômeno mensurado.
+0448: Período
+0449: Informar competência, ano ou intervalo de referência.
+0450: Território
+0451: Explicitar residência, atendimento ou localização da oferta.
+0452: Unidade
+0453: n, %, taxa, razão, R$, horas ou outra unidade pertinente.
+0454: Fonte
+0455: Sistema oficial e, quando útil, data de extração/versão.
+0456: Definição
+0457: Numerador, denominador e filtros disponíveis em ficha.
+0458: Limitação
+0459: Advertência principal para evitar interpretação indevida.
+0460: Proveniência
+0461: Identificador do produto analítico e versão do pipeline.
+0462: Fonte: elaboração própria, com base nos documentos institucionais e nas decisões metodológicas consolidadas neste dossiê.
+0463: A comunicação deverá adaptar linguagem ao público sem omitir fonte, território, período, denominador e limitações. Nota técnica, síntese visual e materiais de divulgação são produtos do projeto, não meros subprodutos gráficos. O primeiro ano já consolidou diretrizes de comunicação e um template de nota técnica, que devem ser reaproveitados e revisados quando necessário.
+0464: 15 DIVISÃO DE RESPONSABILIDADES NO CICLO 2026–2027
+0465: Quadro 15 – Função dos três planos de trabalho
+0466: Plano
+0467: Foco
+0468: Entregas relacionadas a este dossiê
+0469: PIBIC/PIVIC – Validação metodológica
+0470: Mérito científico e analítico dos indicadores.
+0471: Revisão, critérios de validação, matriz mínima, fichas metodológicas, interpretação territorial e apoio à nota técnica.
+0472: PIBIT/PIVIT – Automação e documentação
+0473: Infraestrutura tecnológica e reprodutibilidade.
+0474: Aquisição, atualização, arquitetura de dados, scripts, Parquet, manifestos, testes, repositório, documentação e painel.
+0475: PIBIC-Jr./PIVIC-Jr. – Curadoria e comunicação
+0476: Conferência e organização de produtos.
+0477: Checagem de nomes/códigos/períodos, quadros, documentação, materiais de comunicação e apoio à qualidade.
+0478: Fonte: elaboração própria a partir dos planos de trabalho constantes do Projeto de Pesquisa 2026–2027 (IFES, 2026b).
+0479: A independência dos planos deve ser preservada. O bolsista de iniciação científica não deve ser convertido em responsável por engenharia avançada; o estudante de desenvolvimento tecnológico não deve arbitrar sozinho definições sanitárias; o estudante júnior não deve executar validação metodológica complexa. A integração ocorre por contratos e entregas compartilhadas, sob coordenação do projeto.
+0480: 16 ÉTICA, RESPONSABILIDADE E LIMITES DE INTERPRETAÇÃO
+0481: O projeto utiliza dados secundários públicos, administrativos e agregados ou passíveis de agregação territorial. Isso reduz a exposição direta de indivíduos, mas não elimina a obrigação de tratamento responsável. Devem ser observados os requisitos éticos, normativos e institucionais aplicáveis à pesquisa, sem presumir automaticamente dispensa de apreciação quando a instituição ou o desenho específico exigir verificação adicional.
+0482: Produtos públicos devem evitar exposição indevida de indivíduos, profissionais, estabelecimentos ou territórios. Resultados que possam ser interpretados como desempenho, insuficiência, ociosidade, resolutividade ou qualidade precisam de base conceitual e dados compatíveis com a afirmação. Contagem cadastral isolada, ausência de produção em uma base ou diferença territorial não autoriza, por si só, juízo sobre falha assistencial.
+0483: 17 INTERFACE ENTRE O PROJETO E ESTUDOS TEMÁTICOS
+0484: A infraestrutura institucional deverá ser reutilizada por TCCs, artigos, notas técnicas e módulos temáticos. Esses estudos não devem copiar toda a engenharia do Observatório em suas metodologias; precisam explicar apenas o suficiente para que o leitor compreenda fonte, tratamento e reprodutibilidade, remetendo ao protocolo institucional quando pertinente.
+0485: Quadro 16 – O que o projeto fornece e o que o estudo temático acrescenta
+0486: Projeto/Observatório fornece
+0487: Estudo temático acrescenta
+0488: Aquisição, proveniência e camadas de dados.
+0489: Problema de pesquisa e objeto substantivo.
+0490: Tabela territorial canônica.
+0491: Recorte territorial focal e regra histórica, se houver.
+0492: Bases genéricas SIM, SIH, SIA, CNES e SIGTAP.
+0493: CIDs, procedimentos, CBOs, habilitações e recursos relevantes ao tema.
+0494: Regras gerais de qualidade e exclusão.
+0495: Critérios específicos de elegibilidade analítica.
+0496: Série populacional harmonizada.
+0497: Denominadores e estratos específicos.
+0498: Infraestrutura de indicadores e documentação.
+0499: Matriz analítica específica e hipóteses interpretativas.
+0500: Painel e comunicação institucional.
+0501: Resultados, discussão e conclusões científicas do estudo.
+0502: Fonte: elaboração própria, com base nos documentos institucionais e nas decisões metodológicas consolidadas neste dossiê.
+0503: 17.1 Elementos que deliberadamente NÃO integram este dossiê
+0504: Para impedir mistura entre o projeto e o TCC de Cardiologia, ficam expressamente fora do escopo institucional deste dossiê: a janela 2014–2024; Noroeste 1 como território focal; CID-10 I00–I99 e seus grupos; traçadores cardiovasculares; whitelists de angioplastia, revascularização, marcapasso e cirurgia vascular; seleção de cardiologistas/cirurgiões; recursos cardiovasculares específicos; mortalidade prematura; padronização etária específica; Prais-Winsten; e matrizes analíticas próprias do estudo cardiovascular. Esses elementos serão documentados no Dossiê 2.
+0505: 18 DECISÕES CONSOLIDADAS E PENDÊNCIAS
+0506: Quadro 17 – Registro de decisões consolidadas
+0507: Tema
+0508: Decisão consolidada
+0509: Status
+0510: Fonte dos dados
+0511: Sistemas oficiais permanecem como fonte; bibliotecas são ferramentas.
+0512: Definitiva
+0513: Arquitetura
+0514: RAW → INTERIM/STAGING → ANALYTIC/PROCESSED → OUTPUT.
+0515: Definitiva
+0516: Dado bruto
+0517: Preservação imutável e rastreável.
+0518: Definitiva
+0519: Tecnologia
+0520: Arquitetura híbrida R–Python; Python preferencial em engenharia quando validado.
+0521: Definitiva com migração gradual
+0522: CNES
+0523: Periodicidade mensal para estoque e capacidade.
+0524: Definitiva
+0525: Estoque anual CNES
+0526: Não somar competências; usar média mensal e medidas complementares.
+0527: Definitiva
+0528: Território
+0529: Município como unidade elementar e tabela canônica de regiões.
+0530: Definitiva
+0531: Residência × atendimento
+0532: Devem permanecer separados.
+0533: Definitiva
+0534: População
+0535: Uma série harmonizada por estudo; agregações obtidas dos municípios.
+0536: Definitiva
+0537: SIGTAP
+0538: Validade e semântica verificadas por competência.
+0539: Definitiva
+0540: Duplicidades
+0541: Sem deduplicação genérica; regras específicas por sistema.
+0542: Definitiva
+0543: Qualidade
+0544: Completude, integridade temporal/territorial e impacto das exclusões devem ser medidos.
+0545: Definitiva
+0546: TABNET
+0547: Uso apenas como checagem sentinela do pipeline quando útil.
+0548: Definitiva
+0549: Indicadores
+0550: Matriz mínima institucional + complementares/temáticos.
+0551: Definitiva
+0552: Causalidade
+0553: Não inferir causalidade por padrão a partir de integrações ecológicas/administrativas.
+0554: Definitiva
+0555: Fonte: elaboração própria, com base nos documentos institucionais e nas decisões metodológicas consolidadas neste dossiê.
+0556: Quadro 18 – Pendências técnicas e metodológicas a resolver durante o ciclo
+0557: Pendência
+0558: Encaminhamento
+0559: Cobertura plena do PySUS para todas as famílias CNES necessárias
+0560: Continuar validação controlada em Python 3.12/PySUS 2.x; manter fallback e paridade com implementação validada.
+0561: Estratégia definitiva de aquisição para sistemas/famílias não cobertos
+0562: Documentar método alternativo de acesso oficial e integrar ao mesmo contrato de manifestos/proveniência.
+0563: Implementação histórica do SIGTAP
+0564: Definir rotina de aquisição mensal, versionamento e tabelas relacionais necessárias.
+0565: Série populacional institucional
+0566: Selecionar e documentar a série harmonizada adotada pelo Observatório.
+0567: Tabela territorial canônica vigente
+0568: Congelar composição oficial, data de referência e regras de atualização.
+0569: Matriz mínima de indicadores
+0570: Executar o processo de validação previsto no plano PIBIC/PIVIC antes de tratá-la como definitiva.
+0571: Limiares de qualidade
+0572: Definir, por variável e finalidade, quando um indicador pode ser publicado, publicado com ressalva ou suprimido.
+0573: Paridade R–Python
+0574: Migrar componentes sensíveis apenas após testes e equivalência documentada.
+0575: Ética/regulação institucional
+0576: Confirmar o enquadramento de cada produto/estudo segundo normas vigentes do Ifes e do sistema CEP/CONEP quando aplicável.
+0577: Fonte: elaboração própria, com base nos documentos institucionais e nas decisões metodológicas consolidadas neste dossiê.
+0578: 19 CONTROLE DE MUDANÇAS E VERSIONAMENTO DO DOSSIÊ
+0579: Este documento deve ser versionado. Alterações que modifiquem definição de indicador, semântica de campo, chave relacional, territorialização, regra de exclusão, fonte, periodicidade, classificação temática ou arquitetura de aquisição devem registrar justificativa e impacto. Mudanças meramente editoriais podem ser consolidadas em revisão menor.
+0580: Quadro 19 – Convenção proposta de versões
+0581: Tipo de alteração
+0582: Exemplo
+0583: Versão
+0584: Estrutural/metodológica
+0585: Mudança de fonte, unidade analítica, regra territorial ou arquitetura.
+0586: Incremento principal: 1.0 → 2.0
+0587: Aditiva compatível
+0588: Novo campo de manifesto, nova checagem ou esclarecimento sem quebrar regra anterior.
+0589: Incremento secundário: 1.0 → 1.1
+0590: Editorial
+0591: Correção de texto, referência, forma ou erro sem efeito metodológico.
+0592: Revisão: 1.0 → 1.0.1
+0593: Fonte: elaboração própria, com base nos documentos institucionais e nas decisões metodológicas consolidadas neste dossiê.
+0594: 20 SÍNTESE OPERACIONAL
+0595: O ciclo 2026–2027 deverá ser conduzido como consolidação de uma infraestrutura metodológica e tecnológica, e não como soma de análises temáticas independentes. O projeto organiza os contratos comuns; os módulos temáticos utilizam esses contratos e devolvem achados, problemas de qualidade e requisitos que podem aperfeiçoar a infraestrutura institucional.
+0596: REGRA OPERACIONAL FINAL
+0597: Nenhum módulo deve criar uma nova verdade de dados. A fonte oficial, a camada bruta, a tabela territorial, os contratos, a qualidade e a proveniência pertencem ao Observatório. O estudo temático define o que perguntar aos dados, quais conceitos selecionar, quais técnicas aplicar e como interpretar os resultados dentro de seu objeto específico.
+0598: 
+0599: REFERÊNCIAS
+0600: IFES – INSTITUTO FEDERAL DO ESPÍRITO SANTO. Observatório SUS-ES: Relatório Técnico-Científico Integrado do Primeiro Ano de Execução: desenvolvimento de plataforma de monitoramento e análise da atenção especializada no SUS do Espírito Santo: subsídios para a gestão estadual em saúde. Barra de São Francisco, 2026a.
+0601: IFES – INSTITUTO FEDERAL DO ESPÍRITO SANTO. Consolidação metodológica do Observatório SUS-ES: validação e atualização de indicadores da atenção especializada no Espírito Santo. Cadastro de Proposta de Projeto de Pesquisa – 2026. Barra de São Francisco, 2026b.
+0602: OBSERVATÓRIO SUS-ES. Observatorio_SUS_ES. GitHub, 2026. Disponível em: https://github.com/paulobmcosta-creator/Observatorio_SUS_ES. Acesso em: 3 out. 2026.
+0603: OBSERVATÓRIO SUS-ES. Convenções Metodológicas e Nomenclatura. GitHub, 2026a. Disponível no repositório Observatorio_SUS_ES, pasta docs. Acesso em: 3 out. 2026.
+0604: OBSERVATÓRIO SUS-ES. Roadmap Técnico do Módulo CNES no Observatório SUS-ES. GitHub, 2026b. Disponível no repositório Observatorio_SUS_ES, pasta docs/cnes. Acesso em: 3 out. 2026.
+0605: OBSERVATÓRIO SUS-ES. Documentação histórica de migração R–Python/PySUS para o módulo CNES. GitHub, 2026c. Disponível no repositório Observatorio_SUS_ES, pasta docs/arquivo_historico/migracao_python. Acesso em: 3 out. 2026.
+0606: ALERTADENGUE. PySUS: tools for downloading and handling Brazilian public health datasets. GitHub, 2026. Disponível em: https://github.com/AlertaDengue/PySUS. Acesso em: 3 out. 2026.
+0607: SALDANHA, Raphael de Freitas. microdatasus: download and preprocess DataSUS files. GitHub, 2026. Disponível em: https://github.com/rfsaldanha/microdatasus. Acesso em: 3 out. 2026.
+0608: APÊNDICE A – REGISTRO DE DECISÕES POR RESPONSABILIDADE
+0609: O quadro a seguir funciona como índice de governança. “Projeto” significa que a decisão deve ser mantida e versionada institucionalmente; “Estudo temático” significa que o Observatório fornece apenas infraestrutura; “Compartilhada” indica regra institucional aplicada de forma específica em cada estudo.
+0610: Quadro 20 – Índice de responsabilidade das decisões
+0611: Decisão
+0612: Responsabilidade
+0613: Fonte oficial e proveniência
+0614: Projeto
+0615: Arquitetura RAW/INTERIM/PROCESSED/OUTPUT
+0616: Projeto
+0617: PySUS/fallback e engenharia de aquisição
+0618: Projeto
+0619: Hashes, manifestos e logs
+0620: Projeto
+0621: Schemas, dicionários e testes
+0622: Projeto
+0623: Tabela territorial canônica
+0624: Projeto
+0625: Série populacional harmonizada
+0626: Projeto
+0627: Semântica de SIM/SIH/SIA/CNES
+0628: Projeto
+0629: CNES mensal e síntese de estoque
+0630: Projeto
+0631: Infraestrutura histórica SIGTAP
+0632: Projeto
+0633: Regras gerais de qualidade/exclusão
+0634: Projeto
+0635: Matriz mínima institucional
+0636: Projeto
+0637: Painel, manual e nota técnica institucional
+0638: Projeto
+0639: Janela temporal específica
+0640: Estudo temático
+0641: CIDs e grupos clínicos
+0642: Estudo temático
+0643: Whitelist temática de procedimentos
+0644: Estudo temático
+0645: CBOs, habilitações e equipamentos temáticos
+0646: Estudo temático
+0647: Método estatístico específico
+0648: Estudo temático
+0649: Aplicação retrospectiva da regionalização
+0650: Compartilhada
+0651: Regras de publicação condicionadas à qualidade
+0652: Compartilhada
+0653: Integração oferta–produção–fluxo–desfecho
+0654: Compartilhada, com interpretação no estudo
+0655: Fonte: elaboração própria, com base nos documentos institucionais e nas decisões metodológicas consolidadas neste dossiê.

@@ -1,0 +1,126 @@
+{
+  "dbc_sintetico": {
+    "sintetico": true,
+    "dbf_sha256": "7dcb84cd8e058ddd6a8e119f8094c75f14223105ade8e9b4117479fcf8a44eeb",
+    "leitores": {
+      "principal": {
+        "resultado": "converteu",
+        "linhas": 2,
+        "valores": {
+          "CODE": [
+            "001",
+            "010"
+          ],
+          "VALUE": [
+            "1.5",
+            "nan"
+          ],
+          "WHEN": [
+            "2020-01-02",
+            "nan"
+          ]
+        },
+        "igual_lexico_raw_pysus": false,
+        "preserva_CODE": true
+      },
+      "fallback_dbfread": {
+        "resultado": "converteu",
+        "linhas": 2,
+        "valores": {
+          "CODE": [
+            "001",
+            "010"
+          ],
+          "VALUE": [
+            "1.5",
+            null
+          ],
+          "WHEN": [
+            "2020-01-02",
+            null
+          ]
+        },
+        "igual_lexico_raw_pysus": false,
+        "preserva_CODE": true
+      }
+    },
+    "referencia_lexica_pysus": {
+      "CODE": [
+        "001",
+        "010"
+      ],
+      "VALUE": [
+        "1.500000000000000",
+        "*******************"
+      ],
+      "WHEN": [
+        "20200102",
+        "00000000"
+      ]
+    },
+    "referencia_teste_r": "CODE=001/010; VALUE=1.5/NA; WHEN=2020-01-02/NA",
+    "limite": "Teste original microdatasus consultado; pacote R não executado. Não é DBC oficial."
+  },
+  "pa_nomes": {
+    "PAES2401.dbc": {
+      "aceito_fetch": true,
+      "competencia_process": "202401"
+    },
+    "PASP2401a.dbc": {
+      "aceito_fetch": false,
+      "competencia_process": "202401"
+    },
+    "PASP2401b.dbc": {
+      "aceito_fetch": false,
+      "competencia_process": "202401"
+    }
+  },
+  "manifesto_tamanho": {
+    "sintetico": true,
+    "hash_antes": "63c1dd951ffedf6f7fd968ad4efa39b8ed584f162f46e715114ee184f8de9201",
+    "hash_depois": "4a8d8134f29b0b7b60c126f5532bc9f5d9bb73037373cf6fb872d81f1dcefdfd",
+    "tamanho_ambos": 4,
+    "downloads_selecionados": []
+  },
+  "pa_schema": {
+    "sintetico": true,
+    "leitor_e_descompressor": "doubles sem rede",
+    "linhas": 2,
+    "campos_saida": [
+      "CNES",
+      "VALOR",
+      "_ARQUIVO_ORIGEM"
+    ],
+    "campo_novo_preservado": false,
+    "origens": [
+      "PAES2401.dbc",
+      "PASP2401.dbc"
+    ]
+  },
+  "referencia_r": {
+    "fonte": ".cache/cnes/execucoes/reconciliacao_dossies_20261022/estabelecimentos/cnes_estabelecimentos_es_202601.csv",
+    "sha256": "24b6eda70bbbf502fea9e987ac15be4a7b521dfaacc96e93c670066766ca7c7a",
+    "query": "SELECT * FROM read_csv('/workspace/Observatorio_SUS_ES/.cache/cnes/execucoes/reconciliacao_dossies_20261022/estabelecimentos/cnes_estabelecimentos_es_202601.csv', delim=',', header=true, encoding='utf-8', all_varchar=true, ignore_errors=true)",
+    "linhas_entrada": 12548,
+    "linhas_saida": 12548,
+    "colunas": 18,
+    "schema_ordem_linhas_dimensoes_iguais": true,
+    "celulas_diferentes": 0,
+    "vazios_para_null": 0,
+    "chaves_identicas": {
+      "co_unidade": true,
+      "cnes": true,
+      "cod_municipio": true,
+      "competencia": true
+    },
+    "limite": "Compara derivado R existente; não executa preparadores nem demonstra equivalência metodológica de dados Kaggle."
+  },
+  "csv_malformado": {
+    "sintetico": true,
+    "schema_explicito_para_isolar_ignore_errors": true,
+    "linhas_entrada": 31,
+    "linhas_saida": 30,
+    "modo_estrito": "rejeitou",
+    "query": "SELECT * FROM read_csv('/workspace/Observatorio_SUS_ES/.cache/avaliacao_datahub/poc_20261022/sintetico_malformado.csv', delim=';', header=true, columns={'CNES':'VARCHAR','VALOR':'VARCHAR'}, ignore_errors=true)"
+  }
+}

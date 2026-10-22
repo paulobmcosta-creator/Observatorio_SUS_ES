@@ -1,0 +1,57 @@
+{
+  "pysus-2.0.4": {
+    "commit": "363029b550eaf5ae56a64f46641ab25dd47a0f12",
+    "data_commit": "2026-05-18T19:58:36Z",
+    "url": "https://github.com/AlertaDengue/PySUS"
+  },
+  "pysus": {
+    "commit": "47e8371ab85cd00a1373af5965216852c0b11cad",
+    "data_commit": "2026-10-11T15:12:23-03:00",
+    "url": "https://github.com/AlertaDengue/PySUS"
+  },
+  "microdatasus": {
+    "commit": "7109ec2c42cf674ba453e0d7a20d2f464890b543",
+    "data_commit": "2026-07-29T09:55:07-03:00",
+    "url": "https://github.com/rfsaldanha/microdatasus"
+  },
+  "arrow": {
+    "commit": "272715f6df2a042d69881ffa03d5078c58e4b345",
+    "data_commit": "2025-02-11T14:16:06-08:00",
+    "url": "https://github.com/apache/arrow"
+  },
+  "duckdb-python": {
+    "commit": "802a345bb627435d2a05d63cb74454fa98b60b5e",
+    "data_commit": "2026-09-27T20:54:40+02:00",
+    "url": "https://github.com/duckdb/duckdb-python"
+  },
+  "pandas": {
+    "commit": "9c8bc3e55188c8aff37207a74f1dd144980b8874",
+    "data_commit": "2025-09-30T00:12:09+02:00",
+    "url": "https://github.com/pandas-dev/pandas"
+  },
+  "dbfread": {
+    "commit": "300b2d7d907388cc3578d3fa4472e0419ccd34b9",
+    "data_commit": "2016-11-24T18:53:35+01:00",
+    "url": "https://github.com/olemb/dbfread"
+  },
+  "read.dbc": {
+    "commit": "52e0b15e79b8917e7814b0f8c20c14ae25b9f87e",
+    "data_commit": "2025-11-20T21:14:07Z",
+    "url": "https://github.com/danicat/read.dbc"
+  },
+  "geopandas": {
+    "commit": "e9b58ce57a238b28ebf5eddd83d437db92c314b5",
+    "data_commit": "nao_consultada",
+    "url": "https://github.com/geopandas/geopandas"
+  },
+  "qgis": {
+    "commit": "5d9ba037df19afd6ff0822d5e4aeef2db5ea2045",
+    "data_commit": "nao_consultada",
+    "url": "https://github.com/qgis/QGIS"
+  },
+  "healthbR": {
+    "commit": "6b73ba953561564add07e448c5095b673a75c307",
+    "data_commit": "2026-10-17T09:58:35-03:00",
+    "url": "https://github.com/SidneyBissoli/healthbR"
+  }
+}

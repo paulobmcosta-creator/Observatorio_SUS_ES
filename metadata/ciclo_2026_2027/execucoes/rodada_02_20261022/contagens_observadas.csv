@@ -1,0 +1,15 @@
+"medida","valor"
+"estabelecimentos",12548
+"municipios",78
+"cnes_publicos_7_digitos",12548
+"cnes_publicos_com_zero_inicial",1297
+"habilitacoes",1963
+"habilitacoes_no_escopo",501
+"no_escopo_validado_interno",304
+"no_escopo_revisar",197
+"fora_escopo",1462
+"checks_passou",115
+"checks_falhou",0
+"checks_nao_executado",0
+"bytes_csv",284224999
+"bytes_gzip",85482494

@@ -1,0 +1,36 @@
+Instante inicial UTC: 2026-10-22T03:55:14Z
+Rscript (R) version 4.5.0 (2025-04-11)
+COMANDO: Rscript tests/test_estrutura_repositorio.R
+COMANDO: Rscript tests/test_metadata_cnes.R
+Testes de metadados CNES executados com sucesso.
+COMANDO: Rscript tests/test_classificacao_habilitacoes_cnes.R
+OK: testes de classificação de habilitações CNES passaram.
+COMANDO: Rscript tests/test_ler_arquivos_cnes.R
+Testes unitários de ler_arquivos_cnes executados com sucesso.
+COMANDO: Rscript tests/test_padronizar_cnes_interim.R
+Testes unitários de padronizar_cnes_interim executados com sucesso.
+COMANDO: Rscript tests/test_validar_pipeline_cnes.R
+Testes unitários de validar_pipeline_cnes executados com sucesso.
+COMANDO: Rscript tests/test_executar_pipeline_piloto_cnes.R
+Testes unitários de executar_pipeline_piloto_cnes executados com sucesso.
+COMANDO: Rscript tests/teste_pipeline_piloto_cnes.R
+Teste do pipeline piloto CNES executado com sucesso.
+COMANDO: Rscript tests/test_indicadores_cnes_oferta.R
+Testes de indicadores CNES de oferta executados com sucesso.
+COMANDO: Rscript tests/test_conferir_contrato_snapshot_cnes.R
+OK: caso sintético completo atende ao contrato
+OK: fixture histórica não é presumida equivalente ao contrato atual
+OK: zeros à esquerda preservados no CSV
+OK: não inventar co_unidade nem usar cnes como chave substituta
+OK: identificador numérico não é silenciosamente convertido
+OK: código público longo é reprovado
+OK: chave duplicada bloqueia relação muitos-para-um
+OK: habilitação órfã é detectada
+OK: município divergente não é convertido
+OK: ausência e competência incorreta não viram zeros
+OK: divergência da classificação é detectada sem reclassificar
+OK: chave composta da classificação inclui tipo
+OK: base vazia não passa por ausência de violações
+OK: CSV malformado não cria campos falsos
+14 cenários de contrato executados com sucesso.
+Instante final UTC: 2026-10-22T03:55:16Z

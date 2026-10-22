@@ -1,0 +1,48 @@
+plano,atividade,mes_inicio,mes_fim,pagina_pdf,natureza,verificacao,execucao
+geral,inventário,1,2,20,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+geral,revisão aplicada,1,3,20,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+geral,critérios e seleção preliminar,2,4,20,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+geral,aplicação dos critérios,4,6,20,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+geral,atualização das bases,3,6,21,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+geral,padronização territorial e temporal,3,7,21,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+geral,consistência,4,8,21,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+geral,dicionários e fichas,5,9,21,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+geral,repositório e fluxo,5,10,21,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+geral,painel,6,9,21,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+geral,nota manual comunicação resumo,8,11,21,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+geral,consolidação e relatório final,10,12,21,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+geral,orientação e acompanhamento,1,12,21,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P1,revisão bibliográfica e normativa,1,3,26,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P1,inventário analítico,1,3,26,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P1,critérios,2,4,26,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P1,aplicação dos critérios,4,6,26,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P1,seleção da matriz,5,7,26,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P1,análise descritiva e territorial,6,8,26,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P1,fichas metodológicas,7,9,26,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P1,nota técnica,8,10,26,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P1,resumo e apresentação,9,11,26,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P1,seção analítica do relatório final,10,12,26,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P1,orientação,1,12,26,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P2,mapear arquitetura,1,2,28,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P2,padrão organização,2,3,28,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P2,fontes e procedimentos,2,4,28,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P2,atualização de bases,3,6,28,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P2,padronização,3,7,28,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P2,rotinas de tratamento e conferência,4,8,28,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P2,registros e dicionários,5,9,28,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P2,testes base indicador visualização,6,9,28,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P2,painel,7,10,28,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P2,manual técnico,8,11,28,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P2,organização final e relatório,10,12,28,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P3,formação inicial,1,2,31,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P3,apoio ao inventário,2,3,31,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P3,planilhas e registros,2,5,31,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P3,conferência territorial e temporal,3,7,31,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P3,glossário e dicionário auxiliar,4,8,31,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P3,conferência visual,6,9,31,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P3,quadros e comunicação,7,10,31,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P3,apresentação,8,11,31,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P3,revisão final,10,12,31,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P3,seção formativa do relatório,11,12,31,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P3,orientação,1,12,31,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma
+P2,orientação,1,12,29,previsto_na_proposta; aprovação administrativa não comprovada,tabela conferida visualmente em 2026-10-22,não inferida a partir do cronograma

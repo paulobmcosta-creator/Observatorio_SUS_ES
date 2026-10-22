@@ -1,0 +1,74 @@
+$ Rscript tests/test_estrutura_repositorio.R
+exit=0
+
+$ Rscript tests/test_metadata_cnes.R
+Testes de metadados CNES executados com sucesso.
+exit=0
+
+$ Rscript tests/test_classificacao_habilitacoes_cnes.R
+OK: testes de classificação de habilitações CNES passaram.
+exit=0
+
+$ Rscript tests/test_ler_arquivos_cnes.R
+Testes unitários de ler_arquivos_cnes executados com sucesso.
+exit=0
+
+$ Rscript tests/test_padronizar_cnes_interim.R
+Testes unitários de padronizar_cnes_interim executados com sucesso.
+exit=0
+
+$ Rscript tests/test_validar_pipeline_cnes.R
+Testes unitários de validar_pipeline_cnes executados com sucesso.
+exit=0
+
+$ Rscript tests/test_executar_pipeline_piloto_cnes.R
+Testes unitários de executar_pipeline_piloto_cnes executados com sucesso.
+exit=0
+
+$ Rscript tests/teste_pipeline_piloto_cnes.R
+Teste do pipeline piloto CNES executado com sucesso.
+exit=0
+
+$ Rscript tests/test_indicadores_cnes_oferta.R
+Testes de indicadores CNES de oferta executados com sucesso.
+exit=0
+
+$ Rscript tests/test_conferir_contrato_snapshot_cnes.R
+OK: caso sintético completo atende ao contrato
+OK: fixture histórica não é presumida equivalente ao contrato atual
+OK: zeros à esquerda preservados no CSV
+OK: não inventar co_unidade nem usar cnes como chave substituta
+OK: identificador numérico não é silenciosamente convertido
+OK: código público longo é reprovado
+OK: chave duplicada bloqueia relação muitos-para-um
+OK: habilitação órfã é detectada
+OK: município divergente não é convertido
+OK: ausência e competência incorreta não viram zeros
+OK: divergência da classificação é detectada sem reclassificar
+OK: chave composta da classificação inclui tipo
+OK: base vazia não passa por ausência de violações
+OK: CSV malformado não cria campos falsos
+OK: schema real de habilitações é CSV retangular e legível
+15 cenários de contrato executados com sucesso.
+exit=0
+
+$ Rscript tests/test_cache_cnes.R
+OK: importação CSV, reimportação gzip e reutilização idêntica; caminhos com espaços e aspas
+OK: seleção explícita ignora ponteiro; transformação preserva zeros e separa as chaves
+
+gzip: /tmp/Rtmp2sj47h/cache cnes '1d471cdd7b59/cache/ad4492419e7f322c5b4606036acdad3e03ff33f0387929607695d74eb5782b19.csv.gz: not in gzip format
+OK: fonte ausente, hash/tamanho divergentes e cache corrompido rejeitados sem substituição
+exit=0
+
+$ Rscript tests/test_correspondencia_territorial.R
+OK: correspondência explícita preserva zeros e papel territorial
+OK: lacunas e código de sete dígitos não viram região nem código convertido
+OK: correspondência vazia explícita; tipos e datas inválidos rejeitados
+OK: mudança temporal respeitada; sobreposição inclusive nos extremos rejeitada
+OK: cardinalidade, identidade regional, proveniência mínima e intervalo conferidos
+exit=0
+
+$ Rscript tests/test_fila_revisao_habilitacoes.R
+OK: chave composta; contagens reconciliadas; zero apenas na base; status interno não vira parecer documental
+OK: duplicidade, código sem classificação e perda de tipo rejeitados; base vazia explícita
+exit=0

@@ -1,0 +1,27 @@
+{
+  "inicio_utc": "2026-10-22T20:18:02.297160+00:00",
+  "fim_utc": "2026-10-22T20:18:03.786580+00:00",
+  "argv": [
+    "scripts/executar_poc_datahub.py",
+    "/workspace/.cache/avaliacao-ferramentas/kaggle-datahub",
+    ".cache/avaliacao_datahub/poc_20261022",
+    "metadata/ciclo_2026_2027/avaliacao_datahub/poc_20261022"
+  ],
+  "commit_datahub": "60aa9cbd82509e0595d5c99ec74794e6be1588bd",
+  "python": "3.12.14",
+  "versoes": {
+    "datasus-dbc": "0.1.3",
+    "simpledbf": "0.2.6",
+    "pandas": "2.3.3",
+    "pyarrow": "19.0.1",
+    "duckdb": "1.5.6",
+    "dbfread": "2.0.7",
+    "numpy": "1.26.4",
+    "boto3": "1.43.117"
+  },
+  "aquisicao": "não executada; somente insumos locais",
+  "publicacao": "não executada",
+  "integridade": "ver resultados por caso; converter não basta para preservar células e schema",
+  "equivalencia_metodologica": "não demonstrada para produtos oficiais/Kaggle; referências R preservadas",
+  "fontes_e_insumos_inalterados": true
+}

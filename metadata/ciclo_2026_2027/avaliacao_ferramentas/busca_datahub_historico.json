@@ -1,0 +1,20 @@
+{
+  "commits_pesquisados": 227,
+  "datahub_historico": [],
+  "github_urls": [],
+  "escopo": "227 commits alcançáveis por git rev-list --all; checkout textual; D1/D2; prompts; pdftotext da proposta",
+  "query": "data[ _-]?hub (case insensitive); URLs github.com para recuperar candidatos",
+  "datahub_checkout": [
+    {
+      "arquivo": "docs/ciclo_2026_2027/referencias/dossie2_leitura_integral.txt",
+      "paragrafo": 876,
+      "identidade": "somente nome; sem URL/organizacao"
+    }
+  ],
+  "datahub_pdf": [],
+  "repositorios_citados_novos_dossies": [
+    "https://github.com/AlertaDengue/PySUS",
+    "https://github.com/rfsaldanha/microdatasus"
+  ],
+  "limite": "Drive/relatório externo indisponíveis; nenhum projeto homônimo atribuído"
+}

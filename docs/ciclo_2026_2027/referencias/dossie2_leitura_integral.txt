@@ -1,0 +1,1108 @@
+0001: INSTITUTO FEDERAL DO ESPÍRITO SANTOCAMPUS BARRA DE SÃO FRANCISCO
+0002: 
+0003: 
+0004: 
+0005: 
+0006: TCC – CAMILA MOREIRA DOS SANTOS
+0007: DOSSÊ METODOLÓGICO DO ESTUDO CARDIOVASCULAR
+0008: Modelo analítico para avaliação da atenção cardiovascular especializada no Espírito Santo: oferta, utilização assistencial e mortalidade como subsídios à gestão em saúde
+0009: 
+0010: 
+0011: 
+0012: 
+0013: Versão 1.0 – 3 de outubro de 2026
+0014: Discente: Camila Moreira dos Santos
+0015: Orientação: Paulo Borges Mathias Costa
+0016: 
+0017: 
+0018: 
+0019: Barra de São Francisco – ES2026
+0020: 
+0021: CONTROLE DO DOCUMENTO
+0022: Quadro 1 – Identificação e controle do Dossiê 2
+0023: Elemento
+0024: Registro
+0025: Documento
+0026: Dossiê Metodológico do TCC – Atenção Cardiovascular Especializada no Espírito Santo
+0027: Discente
+0028: Camila Moreira dos Santos
+0029: Orientação
+0030: Paulo Borges Mathias Costa
+0031: Título de trabalho
+0032: Modelo analítico para avaliação da atenção cardiovascular especializada no Espírito Santo: oferta, utilização assistencial e mortalidade como subsídios à gestão em saúde
+0033: Período empírico
+0034: 2014–2024
+0035: Versão
+0036: 1.0
+0037: Data de consolidação
+0038: 3 de outubro de 2026
+0039: Natureza
+0040: Documento de decisões metodológicas e protocolo analítico do TCC; não corresponde à versão redacional final do trabalho.
+0041: Fonte: elaboração própria com base nas decisões de orientação, no Relatório Técnico-Científico Integrado do Observatório SUS-ES, no projeto institucional 2026–2027 e no Boletim 04 da Rede de Atenção Cardiovascular do COSEMS-RJ/CEPESC.
+0042: REGRA DE ESCOPO
+0043: Este dossiê contém somente as escolhas científicas e analíticas específicas do TCC cardiovascular. A infraestrutura geral de aquisição, versionamento, proveniência, governança de código, armazenamento, testes e atualização das bases pertence ao Dossiê 1 do Observatório SUS-ES e é aqui apenas referenciada quando necessário à reprodutibilidade do estudo.
+0044: 
+0045: STATUS DAS DECISÕES
+0046: As decisões classificadas como “consolidadas” devem orientar a execução do TCC. As decisões marcadas como “pendentes de verificação histórica/operacional” não podem ser apresentadas como definitivas até conferência nas tabelas oficiais correspondentes, especialmente SIGTAP e CNES por competência.
+0047: 
+0048: 
+0049: SUMÁRIO
+0050: 1 FINALIDADE E POSIÇÃO DO DOSSIÊ1
+0051: 2 IDENTIDADE DA PESQUISA1
+0052: 3 PROBLEMA, OBJETIVOS E PRESSUPOSTOS2
+0053: 4 DESENHO METODOLÓGICO4
+0054: 5 DELIMITAÇÃO TEMPORAL4
+0055: 6 TERRITORIALIZAÇÃO5
+0056: 7 FONTES DE DADOS E UNIDADES DE OBSERVAÇÃO6
+0057: 8 POPULAÇÃO E DENOMINADORES7
+0058: 9 UNIVERSO CARDIOVASCULAR E GRUPOS ANALÍTICOS7
+0059: 10 INDICADORES PRINCIPAIS E DE APROFUNDAMENTO8
+0060: 11 MORTALIDADE – SIM9
+0061: 12 MORBIDADE E UTILIZAÇÃO HOSPITALAR – SIH/SUS10
+0062: 13 PRODUÇÃO AMBULATORIAL – SIA/SUS11
+0063: 14 ALTA COMPLEXIDADE CARDIOVASCULAR12
+0064: 15 CAPACIDADE INSTALADA – CNES13
+0065: 16 FLUXOS ASSISTENCIAIS15
+0066: 17 DESIGUALDADES TERRITORIAIS16
+0067: 18 INTEGRAÇÃO ENTRE CARGA, OFERTA, UTILIZAÇÃO E FLUXO16
+0068: 19 ESTRATÉGIA ESTATÍSTICA E TEMPORAL17
+0069: 20 QUALIDADE, TRATAMENTO E REGRAS DE EXCLUSÃO18
+0070: 21 PANDEMIA, PEQUENOS NÚMEROS E INCERTEZA19
+0071: 22 ASPECTOS ÉTICOS E RESPONSABILIDADE ANALÍTICA20
+0072: 23 LIMITAÇÕES DO ESTUDO20
+0073: 24 PRODUTOS E APLICABILIDADE21
+0074: 25 DECISÕES CONSOLIDADAS E PENDÊNCIAS21
+0075: 26 ELEMENTOS EXCLUÍDOS DO DOSSIÊ DO TCC22
+0076: REFERÊNCIAS23
+0077: APÊNDICE A – WHITELISTS E CÓDIGOS OPERACIONAIS PRELIMINARES24
+0078: APÊNDICE B – MATRIZ DE EXECUÇÃO DO TCC26
+0079: 
+0080: 
+0081: 1 FINALIDADE E POSIÇÃO DO DOSSIÊ
+0082: Este dossiê consolida o protocolo científico e analítico do Trabalho de Conclusão de Curso de Camila Moreira dos Santos, dedicado à atenção cardiovascular especializada no Espírito Santo. O documento registra as decisões tomadas durante a orientação, explicita as escolhas consolidadas, identifica pontos ainda dependentes de verificação e estabelece a especificação técnica que deverá orientar a extração, o cálculo, a análise e a interpretação dos indicadores.
+0083: O TCC é um desdobramento acadêmico do eixo de Cardiologia do Observatório SUS-ES. O primeiro ano do Observatório preservou extrações exploratórias, registros e um desenho de integração entre oferta, utilização e mortalidade, mas não concluiu a integração CNES–SIH–SIM. O presente estudo transforma essa continuidade em objeto próprio, com recorte cardiovascular, janela temporal, territorialização, indicadores e estratégia estatística específicos (IFES, 2026a).
+0084: A relação com o Observatório deve ser assimétrica: o projeto institucional fornece infraestrutura de dados, governança e rastreabilidade; o TCC define o problema científico, seleciona o universo cardiovascular, escolhe os indicadores, estabelece as comparações e interpreta os achados. O TCC não deve reproduzir o manual de engenharia do Observatório, mas deve informar de modo suficiente como as bases oficiais foram obtidas, tratadas e transformadas em evidência.
+0085: Quadro 2 – Fronteira entre infraestrutura institucional e protocolo do TCC
+0086: Observatório SUS-ES – herdado pelo TCC
+0087: TCC cardiovascular – definido neste dossiê
+0088: Aquisição e preservação de bases oficiais; proveniência e versionamento.
+0089: Período 2014–2024 e seleção do universo cardiovascular.
+0090: Bases genéricas SIM, SIH, SIA, CNES, SIGTAP e população.
+0091: CID-10 I00–I99, grupos clínicos, traçadores e whitelists cardiovasculares.
+0092: Tabela territorial canônica e contratos de dados.
+0093: Aplicação retrospectiva da regionalização atual e Noroeste 1 como recorte focal.
+0094: Regras gerais de qualidade e semântica das fontes.
+0095: Indicadores principais, aprofundamentos e estratégia estatística.
+0096: Infraestrutura de painel e documentação.
+0097: Resultados, discussão e conclusão sobre atenção cardiovascular.
+0098: Fonte: elaboração própria, com base nas decisões metodológicas consolidadas e nos documentos de referência do estudo.
+0099: 2 IDENTIDADE DA PESQUISA
+0100: Quadro 3 – Identidade e delimitação do TCC
+0101: Elemento
+0102: Decisão consolidada
+0103: Tema
+0104: Atenção cardiovascular especializada no Sistema Único de Saúde do Espírito Santo.
+0105: Objeto
+0106: Articulação analítica entre carga epidemiológica, utilização assistencial, capacidade instalada e fluxos territoriais da atenção cardiovascular.
+0107: Título de trabalho
+0108: Modelo analítico para avaliação da atenção cardiovascular especializada no Espírito Santo: oferta, utilização assistencial e mortalidade como subsídios à gestão em saúde.
+0109: Período
+0110: 2014–2024.
+0111: Escala principal
+0112: Espírito Santo e quatro Regiões de Saúde vigentes.
+0113: Recorte focal
+0114: Noroeste 1, comparado à Região Norte e ao Espírito Santo.
+0115: Universo epidemiológico
+0116: CID-10 I00–I99 – doenças do aparelho circulatório.
+0117: Abordagem
+0118: Quantitativa, observacional/ecológica, longitudinal e descritivo-analítica, baseada em dados secundários.
+0119: Finalidade aplicada
+0120: Produzir um modelo analítico reprodutível capaz de subsidiar leitura territorial e gestão da atenção cardiovascular.
+0121: Fonte: elaboração própria, com base nas decisões metodológicas consolidadas e nos documentos de referência do estudo.
+0122: A opção por “atenção cardiovascular” é deliberada. “Cardiologia” não abrange adequadamente todas as dimensões que o estudo pretende observar, sobretudo doenças cerebrovasculares, cirurgia vascular, procedimentos endovasculares e outros componentes que integram o cuidado cardiovascular sem depender exclusivamente da oferta de cardiologistas. Da mesma forma, o estudo não será apresentado como avaliação integral de uma “linha de cuidado”, pois as bases utilizadas não permitem observar longitudinalmente a trajetória individual dos usuários, a regulação, a coordenação clínica e a continuidade entre atenção primária, especializada e hospitalar.
+0123: FORMULAÇÃO A EVITAR
+0124: Não afirmar que o estudo mede integralmente a “linha de cuidado cardiovascular”, a “resolutividade” da rede ou a “suficiência” da oferta. As bases permitem observar dimensões agregadas da carga, oferta, utilização, produção e fluxos, mas não reconstituem trajetórias clínicas individuais nem necessidades não atendidas.
+0125: 
+0126: 3 PROBLEMA, OBJETIVOS E PRESSUPOSTOS
+0127: 3.1 Problema de pesquisa
+0128: PROBLEMA DE PESQUISA – FORMULAÇÃO DE TRABALHO
+0129: Como se configuraram e evoluíram, entre 2014 e 2024, a carga epidemiológica, a oferta, a utilização e os fluxos assistenciais da atenção cardiovascular especializada no Espírito Santo, e quais desigualdades territoriais e desalinhamentos entre essas dimensões podem ser identificados?
+0130: 
+0131: A formulação evita atribuir causalidade entre capacidade instalada, produção e mortalidade. O interesse é descrever e integrar dimensões observáveis do sistema, identificando concordâncias, dependências territoriais, vazios de oferta registrada e situações que mereçam aprofundamento gerencial ou científico.
+0132: 3.2 Objetivo geral
+0133: OBJETIVO GERAL – FORMULAÇÃO DE TRABALHO
+0134: Analisar a atenção cardiovascular especializada no Espírito Santo, entre 2014 e 2024, por meio da integração de indicadores de carga epidemiológica, utilização assistencial, capacidade instalada e fluxos territoriais, identificando desigualdades e padrões de alinhamento ou desalinhamento relevantes ao planejamento e à gestão em saúde.
+0135: 
+0136: 3.3 Objetivos específicos
+0137: Caracterizar a mortalidade e as internações por doenças do aparelho circulatório e por grupos cardiovasculares selecionados, considerando evolução temporal e distribuição territorial.
+0138: Analisar a produção ambulatorial e os procedimentos cardiovasculares de maior complexidade selecionados, distinguindo volume assistencial, localização da oferta e utilização pelos residentes.
+0139: Descrever a capacidade instalada da atenção cardiovascular, considerando habilitações, leitos, profissionais e equipamentos registrados no CNES.
+0140: Examinar os fluxos assistenciais entre território de residência e território de atendimento, identificando dependência, evasão, atração e destinos de referência quando a qualidade da informação permitir.
+0141: Comparar as quatro Regiões de Saúde e aprofundar a situação do território Noroeste 1 em relação à Região Norte e ao Espírito Santo.
+0142: Integrar indicadores de carga epidemiológica, oferta, produção e fluxos para identificar padrões de concordância ou desalinhamento sem atribuir relações causais não sustentadas pelo desenho do estudo.
+0143: 3.4 Hipóteses e pressupostos
+0144: Não será formulada hipótese causal obrigatória. O estudo é aplicado e predominantemente descritivo-analítico. A análise parte do pressuposto de que dimensões distintas da atenção cardiovascular podem apresentar distribuição territorial e evolução temporal não coincidentes, e que a leitura integrada dessas dimensões pode revelar dependências assistenciais e desigualdades relevantes para a gestão. Esse pressuposto orienta a organização dos indicadores, mas não antecipa o resultado empírico.
+0145: 4 DESENHO METODOLÓGICO
+0146: Quadro 4 – Caracterização metodológica
+0147: Dimensão
+0148: Caracterização
+0149: Natureza
+0150: Pesquisa aplicada.
+0151: Abordagem
+0152: Quantitativa.
+0153: Desenho
+0154: Observacional e ecológico, com observações repetidas de territórios ao longo do tempo.
+0155: Finalidade
+0156: Descritivo-analítica; integra descrição, comparação territorial e avaliação de tendência em séries selecionadas.
+0157: Procedimentos
+0158: Análise documental e de bases secundárias oficiais do SUS e de estimativas populacionais.
+0159: Unidade territorial elementar
+0160: Município, posteriormente agregado conforme a regionalização atual.
+0161: Unidade temporal
+0162: Ano para a maior parte dos resultados; competência mensal preservada em SIA, SIH e CNES quando necessária.
+0163: Unidade de observação
+0164: Depende da fonte: óbito, internação/AIH, produção de procedimento, estoque cadastral por competência.
+0165: Inferência
+0166: Sem desenho causal; associações e desalinhamentos serão interpretados em nível ecológico.
+0167: Fonte: elaboração própria, com base nas decisões metodológicas consolidadas e nos documentos de referência do estudo.
+0168: O termo “longitudinal” refere-se à observação da evolução dos territórios entre 2014 e 2024. Não significa acompanhamento longitudinal de indivíduos. Os sistemas analisados possuem unidades de registro distintas e não serão vinculados em nível de pessoa; a integração ocorrerá por território e período.
+0169: REGRA DE INTEGRAÇÃO
+0170: Utilizar a expressão “articulação analítica de indicadores derivados de bases distintas, agregados por território e período”. Evitar “linkage” ou “integração de indivíduos” quando não houver chave individual e desenho específico para esse fim.
+0171: 
+0172: 5 DELIMITAÇÃO TEMPORAL
+0173: O período empírico principal será 2014–2024. A escolha permite construir uma série de onze anos, longa o suficiente para descrever mudanças e estimar tendência em indicadores selecionados, ao mesmo tempo em que permanece compatível com a disponibilidade histórica das bases e com o escopo de um TCC.
+0174: Quadro 5 – Granularidade temporal das fontes
+0175: Fonte/dimensão
+0176: Granularidade preservada
+0177: Apresentação principal
+0178: SIM
+0179: Registro individual com ano/data do óbito.
+0180: Anual.
+0181: SIH/SUS
+0182: Registro de internação/AIH e competência.
+0183: Anual, com mês preservado para auditoria/aprofundamento.
+0184: SIA/SUS
+0185: Competência mensal.
+0186: Anual, com mês preservado para qualidade e rupturas.
+0187: CNES
+0188: Competência mensal.
+0189: Mensal na base; síntese anual de estoque.
+0190: SIGTAP
+0191: Competência mensal.
+0192: Usado para validade histórica dos códigos.
+0193: População
+0194: Anual.
+0195: Anual.
+0196: Fonte: elaboração própria, com base nas decisões metodológicas consolidadas e nos documentos de referência do estudo.
+0197: 6 TERRITORIALIZAÇÃO
+0198: 6.1 Estrutura territorial principal
+0199: A análise regional utilizará a configuração vigente do Plano Diretor de Regionalização da Saúde do Espírito Santo como classificação comum para toda a série histórica. A estrutura principal compreende as Regiões de Saúde Norte, Central, Metropolitana e Sul. O objetivo não é reconstruir a governança regional vigente em cada ano, mas comparar retrospectivamente a evolução dos municípios que hoje compõem cada região sob uma classificação territorial estável (ESPÍRITO SANTO, 2024).
+0200: Essa escolha deve ser explicitada como harmonização retrospectiva. Um evento ocorrido em 2015 será atribuído à região atual do município correspondente. Portanto, a pergunta regional é: “como evoluíram, entre 2014 e 2024, os municípios que atualmente compõem a Região X?”, e não “qual era a configuração regional administrativa vigente em 2015?”.
+0201: 6.2 Noroeste 1 como território focal
+0202: O Noroeste 1 não será denominado Região de Saúde. Trata-se de um recorte sub-regional utilizado em materiais operacionais recentes da Secretaria de Estado da Saúde no interior da Região Norte. Barra de São Francisco aparece nesse recorte. No TCC, o Noroeste 1 será empregado como território focal de aprofundamento e será comparado à Região Norte e ao conjunto do Espírito Santo; sua composição municipal deverá ser congelada em tabela de referência antes da execução das análises (ESPÍRITO SANTO, 2026).
+0203: Quadro 6 – Hierarquia territorial do TCC
+0204: Nível
+0205: Uso
+0206: Espírito Santo
+0207: Referência estadual e síntese global.
+0208: Quatro Regiões de Saúde atuais
+0209: Comparação regional principal.
+0210: Noroeste 1
+0211: Recorte focal de aprofundamento, inserido na Região Norte.
+0212: Município
+0213: Unidade territorial elementar e base para mapas, fluxos e agregações.
+0214: Macrorregião
+0215: Uso complementar quando agregar valor à interpretação.
+0216: Fonte: elaboração própria; regionalização principal baseada no PDR/ES 2024 e recorte Noroeste 1 em documentação operacional da SESA/ES.
+0217: 6.3 Regra de residência e local de atendimento
+0218: A territorialização deverá respeitar o significado de cada numerador. Indicadores populacionais de mortalidade e utilização serão prioritariamente atribuídos ao território de residência. Indicadores de oferta e produção serão atribuídos ao local do estabelecimento ou recurso. Quando ambos os campos estiverem disponíveis e apresentarem qualidade adequada, a relação residência → atendimento será usada para analisar fluxos.
+0219: 7 FONTES DE DADOS E UNIDADES DE OBSERVAÇÃO
+0220: O TCC utilizará a infraestrutura reprodutível do Observatório SUS-ES, mas a fonte científica permanecerá sendo os sistemas oficiais. O Dossiê 1 documenta aquisição, proveniência, armazenamento, versionamento e testes. Este dossiê registra apenas os componentes necessários ao estudo cardiovascular.
+0221: Quadro 7 – Fontes e significado analítico
+0222: Fonte
+0223: Arquivo/família
+0224: Unidade e função no TCC
+0225: SIM
+0226: DO
+0227: Óbito; carga de mortalidade e perfil epidemiológico.
+0228: SIH/SUS
+0229: RD
+0230: Internação/AIH; morbidade hospitalar, utilização, letalidade, permanência, fluxo e alta complexidade hospitalar.
+0231: SIA/SUS
+0232: PA
+0233: Produção de procedimentos; consultas e exames cardiovasculares ambulatoriais.
+0234: CNES
+0235: ST, PF, LT, EQ, HB e, se necessário, SR
+0236: Estoque cadastral de estabelecimentos, profissionais, leitos, equipamentos e habilitações por competência.
+0237: SIGTAP
+0238: Tabelas mensais
+0239: Validade histórica, descrição e relações de procedimentos por competência.
+0240: População
+0241: Série harmonizada municipal por sexo e idade
+0242: Denominadores das taxas.
+0243: Tabela territorial
+0244: Códigos IBGE + regionalização atual
+0245: Agregação territorial reprodutível.
+0246: Fonte: elaboração própria, com base nas decisões metodológicas consolidadas e nos documentos de referência do estudo.
+0247: UNIDADES NÃO INTERCAMBIÁVEIS
+0248: SIM = óbitos; SIH = internações/AIH; SIA = quantidade de procedimentos produzidos/aprovados; CNES = estoque cadastral por competência. Nenhuma dessas contagens deve ser automaticamente reinterpretada como número de pessoas ou demanda real.
+0249: 
+0250: 8 POPULAÇÃO E DENOMINADORES
+0251: Será utilizada uma única série harmonizada de estimativas populacionais municipais por sexo e idade para 2014–2024. Os territórios supramunicipais serão reconstruídos pela soma dos municípios segundo a regionalização atual. A população total será o denominador principal das medidas per capita, sem exclusão automática de beneficiários da saúde suplementar.
+0252: A série deverá conservar sexo e idade em grupos quinquenais para permitir padronização direta e taxas específicas. O Censo 2022 e outras estimativas poderão ser utilizados como validação externa, mas não deverão ser inseridos no meio da série como denominadores de metodologia diferente.
+0253: Quadro 8 – Denominadores populacionais
+0254: Código
+0255: Denominador
+0256: Uso
+0257: POP1
+0258: População residente total
+0259: Taxas gerais por território.
+0260: POP2
+0261: População por sexo
+0262: Taxas específicas por sexo.
+0263: POP3
+0264: População por faixa etária de apresentação
+0265: Taxas específicas e perfil.
+0266: POP4
+0267: População de 30 a 69 anos
+0268: Mortalidade cardiovascular prematura.
+0269: POP5
+0270: População quinquenal por idade/sexo
+0271: Padronização direta.
+0272: POP6
+0273: População da Região de Saúde atual
+0274: Taxas regionais derivadas da soma municipal.
+0275: POP7
+0276: População da macrorregião atual
+0277: Análises complementares.
+0278: Fonte: elaboração própria, com base nas decisões metodológicas consolidadas e nos documentos de referência do estudo.
+0279: 9 UNIVERSO CARDIOVASCULAR E GRUPOS ANALÍTICOS
+0280: O universo epidemiológico do estudo será constituído pelas doenças do aparelho circulatório, capítulo IX da CID-10, códigos I00–I99. Esse universo permite uma visão ampla da carga cardiovascular, enquanto grupos analíticos específicos oferecem maior interpretabilidade clínica e gerencial.
+0281: Quadro 9 – Grupos cardiovasculares do estudo
+0282: Grupo
+0283: CID-10
+0284: Status
+0285: Função analítica
+0286: G0 – Doenças do aparelho circulatório
+0287: I00–I99
+0288: Principal
+0289: Universo cardiovascular geral.
+0290: G1 – Doenças isquêmicas do coração
+0291: I20–I25
+0292: Principal
+0293: Carga coronariana; articulação com cardiologia intervencionista e cirurgia cardíaca.
+0294: G2 – Insuficiência cardíaca
+0295: I50
+0296: Principal
+0297: Traçador clínico relevante para internação e mortalidade.
+0298: G3 – Doenças cerebrovasculares
+0299: I60–I69
+0300: Principal epidemiológico
+0301: Carga cardiovascular/cerebrovascular; não deve ser vinculada automaticamente à oferta de cardiologistas.
+0302: G4 – Doenças hipertensivas
+0303: I10–I15
+0304: Principal com ressalva
+0305: Interface entre APS e atenção especializada; não representa exclusivamente desempenho especializado.
+0306: G5 – Doenças arteriais/arteriolares/capilares
+0307: I70–I79
+0308: Principal
+0309: Integra cirurgia vascular e procedimentos endovasculares.
+0310: Demais grupos I00–I99
+0311: Outros intervalos
+0312: Aprofundamento
+0313: Ativados quando resultados principais justificarem detalhamento.
+0314: Fonte: elaboração própria, com base nas decisões metodológicas consolidadas e nos documentos de referência do estudo.
+0315: 9.1 Traçadores e subgrupos de aprofundamento
+0316: Quadro 10 – Traçadores previamente definidos
+0317: Traçador/subgrupo
+0318: Código
+0319: Regra
+0320: Acidente vascular cerebral agudo
+0321: I60–I64
+0322: Aprofundamento do G3; pode ser desagregado em hemorrágico (I60–I62), isquêmico (I63) e não especificado (I64).
+0323: I64 – AVC não especificado
+0324: I64
+0325: Também funciona como marcador potencial de qualidade diagnóstica.
+0326: Hipertensão essencial
+0327: I10
+0328: Traçador da interface entre condições sensíveis ao cuidado contínuo e atenção especializada.
+0329: Infarto agudo do miocárdio
+0330: Pendente de definição final
+0331: O conjunto CID exato deverá ser fechado antes da extração definitiva e documentado no script.
+0332: Arritmias, cardiomiopatias, valvopatias, embolia pulmonar, aneurisma/dissecção
+0333: Códigos específicos
+0334: Aprofundamento condicionado aos achados principais.
+0335: Fonte: elaboração própria, com base nas decisões metodológicas consolidadas e nos documentos de referência do estudo.
+0336: 10 INDICADORES PRINCIPAIS E DE APROFUNDAMENTO
+0337: A análise será organizada em dois níveis. Indicadores principais são necessários para responder diretamente aos objetivos e serão sistematicamente calculados e examinados. Indicadores de aprofundamento serão empregados seletivamente para esclarecer diferenças territoriais, mudanças temporais, padrões de fluxo, discrepâncias entre capacidade instalada e produção ou problemas de qualidade identificados nos indicadores principais.
+0338: REGRA DEFINITIVA
+0339: Indicador principal não significa “teste estatístico obrigatório”. Um indicador pode ser principal e receber apenas descrição e comparação territorial. A análise estatística formal de tendência será restrita a poucas séries centrais previamente justificadas.
+0340: 
+0341: Quadro 11 – Lógica principal/aprofundamento por dimensão
+0342: Dimensão
+0343: Principais
+0344: Aprofundamento
+0345: Mortalidade
+0346: I00–I99; taxa padronizada; prematura; G1–G5; evolução.
+0347: Sexo, ocorrência, traçadores específicos e causas adicionais.
+0348: Hospitalização
+0349: I00–I99; taxa; G1–G5; idade; sexo; permanência; letalidade.
+0350: IAM/IC isolados, estabelecimento, valores, detalhes adicionais.
+0351: Ambulatório
+0352: Consultas e procedimentos cardiovasculares selecionados; produção por população/território.
+0353: ECG, Holter, MAPA, outros exames, estabelecimento e fluxos detalhados.
+0354: Alta complexidade
+0355: Famílias de intervencionismo, revascularização, marcapasso e vascular.
+0356: Procedimentos específicos e subtipos.
+0357: Capacidade
+0358: Habilitações, leitos, profissionais e equipamentos cardiovasculares selecionados.
+0359: UTI geral, equipamentos de apoio e outras especialidades.
+0360: Fluxos
+0361: Atendimento na própria região, evasão, atração e destino principal.
+0362: OD municipal, estabelecimentos receptores e procedimento específico.
+0363: Integração
+0364: Carga × oferta; oferta × produção; oferta × fluxo; carga × utilização.
+0365: Componentes específicos acionados para explicar desalinhamentos.
+0366: Fonte: elaboração própria, com base nas decisões metodológicas consolidadas e nos documentos de referência do estudo.
+0367: 11 MORTALIDADE – SIM
+0368: Os óbitos cardiovasculares serão identificados pela causa básica de morte. O território de residência será a referência principal para as taxas populacionais. O município de ocorrência será preservado apenas para aprofundamentos relativos a deslocamento do evento e concentração de serviços.
+0369: Quadro 12 – Indicadores de mortalidade
+0370: Código
+0371: Indicador
+0372: Status
+0373: Operacionalização
+0374: M1
+0375: Óbitos cardiovasculares
+0376: Principal
+0377: Número de óbitos de residentes com causa básica I00–I99.
+0378: M2
+0379: Taxa bruta de mortalidade cardiovascular
+0380: Principal
+0381: Óbitos I00–I99 / população residente × 100.000.
+0382: M3
+0383: Taxa de mortalidade padronizada por idade
+0384: Principal
+0385: Método direto; grupos quinquenais; padrão Brasil 2010.
+0386: M4
+0387: Mortalidade por G1–G5
+0388: Principal
+0389: Contagem e taxas por grupo.
+0390: M5
+0391: Mortalidade cardiovascular prematura
+0392: Principal
+0393: Óbitos I00–I99 de 30–69 anos / população 30–69 × 100.000.
+0394: M5P
+0395: Mortalidade prematura padronizada
+0396: Principal
+0397: Padronização direta de 30–69 anos com padrão Brasil 2010.
+0398: M6
+0399: Perfil etário
+0400: Principal
+0401: Faixas <30; 30–39; 40–49; 50–59; 60–69; 70–79; ≥80.
+0402: M7
+0403: Perfil por sexo
+0404: Aprofundamento
+0405: Taxas específicas masculina/feminina quando interpretativamente útil.
+0406: M8
+0407: Traçadores específicos
+0408: Aprofundamento
+0409: IAM, AVC agudo e outros grupos ativados por resultado principal.
+0410: M9
+0411: Residência × ocorrência
+0412: Aprofundamento
+0413: Análise territorial complementar, sem substituir taxas por residência.
+0414: M10
+0415: Tendência temporal
+0416: Principal restrito
+0417: Prais-Winsten para taxa padronizada e mortalidade prematura; demais séries seletivamente.
+0418: Fonte: elaboração própria, com base nas decisões metodológicas consolidadas e nos documentos de referência do estudo.
+0419: 11.1 Padronização por idade
+0420: As taxas brutas serão mantidas porque representam a carga observada e possuem utilidade para planejamento. Para comparação territorial e temporal, entretanto, a taxa padronizada por idade será priorizada, reduzindo a influência das diferenças de estrutura etária. A padronização adotará o método direto e a população brasileira do Censo 2010 como padrão, em alinhamento com práticas do monitoramento nacional de doenças crônicas (BRASIL, 2021; BRASIL, 2023).
+0421: As faixas quinquenais deverão ser mantidas na base analítica: 0–4, 5–9, sucessivamente, até 80–84 e 85 anos ou mais. Para a mortalidade prematura, serão preservadas as faixas 30–34, 35–39, 40–44, 45–49, 50–54, 55–59, 60–64 e 65–69.
+0422: DISTINÇÃO CONCEITUAL
+0423: A taxa cardiovascular de 30–69 anos utilizada neste estudo não deve ser chamada de indicador internacional ODS 3.4.1. O indicador da OMS é uma probabilidade de morte entre 30 e 70 anos para quatro grupos de DCNT e utiliza metodologia própria. O TCC trabalhará com taxa cardiovascular específica de 30–69 anos, alinhada ao monitoramento brasileiro, e registrará essa diferença.
+0424: 
+0425: 12 MORBIDADE E UTILIZAÇÃO HOSPITALAR – SIH/SUS
+0426: A unidade de observação hospitalar será a internação/AIH registrada no SIH/SUS. Não será empregada a palavra “paciente” para descrever contagens de AIH, pois uma mesma pessoa pode ser internada mais de uma vez. O diagnóstico principal será usado para caracterizar a morbidade hospitalar I00–I99 e os grupos selecionados.
+0427: Quadro 13 – Indicadores hospitalares
+0428: Código
+0429: Indicador
+0430: Status
+0431: Regra
+0432: H1
+0433: Internações cardiovasculares
+0434: Principal
+0435: AIH com diagnóstico principal I00–I99.
+0436: H2
+0437: Taxa de internação
+0438: Principal
+0439: Internações de residentes / população × 100.000.
+0440: H3
+0441: Internações por G1–G5
+0442: Principal
+0443: Número e taxa por grupo.
+0444: H4
+0445: Perfil etário
+0446: Principal
+0447: Mesmas faixas de apresentação do SIM.
+0448: H5
+0449: Perfil por sexo
+0450: Principal descritivo
+0451: Contagem e taxas específicas.
+0452: H6
+0453: Permanência hospitalar
+0454: Principal
+0455: Média; mediana/intervalo interquartil como aprofundamento quando assimetria justificar.
+0456: H7
+0457: Letalidade hospitalar
+0458: Principal
+0459: Internações com saída por óbito / internações do grupo × 100.
+0460: H8
+0461: IAM
+0462: Aprofundamento
+0463: Após fechamento da definição CID.
+0464: H9
+0465: Insuficiência cardíaca
+0466: Aprofundamento
+0467: Detalhamento I50 quando necessário.
+0468: H10
+0469: Estabelecimento
+0470: Aprofundamento
+0471: Produção por CNES; não usar para ranking de desempenho sem ajuste de risco.
+0472: H11
+0473: Valores aprovados
+0474: Aprofundamento
+0475: Valor aprovado/reembolso; nunca “custo real”.
+0476: H12
+0477: Tendência da taxa I00–I99
+0478: Principal restrito
+0479: Prais-Winsten se a série atender critérios de estabilidade.
+0480: Fonte: elaboração própria, com base nas decisões metodológicas consolidadas e nos documentos de referência do estudo.
+0481: CAUTELAS DO SIH
+0482: Internações observadas não equivalem à demanda total nem a necessidade não atendida. Letalidade hospitalar não equivale a mortalidade populacional. Valor aprovado não equivale a custo econômico. Comparações entre hospitais não devem ser interpretadas como desempenho sem ajuste adequado de risco e caso-mix.
+0483: 
+0484: 13 PRODUÇÃO AMBULATORIAL – SIA/SUS
+0485: A análise ambulatorial utilizará prioritariamente o SIA-PA e a quantidade aprovada. O objeto é produção de procedimentos, não número de pessoas. A seleção cardiovascular será feita por código SIGTAP e, quando necessário, por combinação procedimento + CBO. O diagnóstico do SIA terá papel complementar devido às limitações de preenchimento já observadas em experiências de referência.
+0486: Quadro 14 – Indicadores ambulatoriais principais
+0487: Código
+0488: Indicador
+0489: Regra de identificação
+0490: A1
+0491: Consultas especializadas em cardiologia
+0492: Consulta especializada genérica + CBO de cardiologista.
+0493: A2
+0494: Consultas especializadas em cirurgia vascular
+0495: Consulta especializada genérica + CBO de cirurgião vascular.
+0496: A3
+0497: Ecocardiografia transtorácica
+0498: Código SIGTAP correspondente.
+0499: A4
+0500: Teste ergométrico
+0501: Código SIGTAP correspondente.
+0502: A5
+0503: Cateterismo cardíaco
+0504: Código SIGTAP correspondente.
+0505: A6
+0506: Cintilografia de perfusão miocárdica
+0507: Componentes de esforço/repouso preservados; não somar como pacientes.
+0508: A7
+0509: Doppler vascular
+0510: Procedimento selecionado como marcador de capacidade diagnóstica vascular.
+0511: A8
+0512: Produção por 100 mil habitantes
+0513: Quantidade aprovada / população × 100.000.
+0514: A9
+0515: Distribuição territorial
+0516: Produção por local de estabelecimento; residência quando completa.
+0517: A10
+0518: Evolução temporal
+0519: Série anual 2014–2024; análise formal apenas quando apropriada.
+0520: Fonte: elaboração própria, com base nas decisões metodológicas consolidadas e nos documentos de referência do estudo.
+0521: ECG, Holter, MAPA, ecocardiogramas adicionais e outros testes cardiovasculares serão indicadores de aprofundamento. A análise de fluxo ambulatorial por residência será condicionada à completude do município de residência. Ausência dessa informação não será convertida em evasão ou origem externa.
+0522: REGRA DE CONTAGEM
+0523: 1.000 ecocardiogramas registrados representam 1.000 procedimentos aprovados, não necessariamente 1.000 usuários distintos. Componentes de um mesmo estudo, como cintilografia em esforço e repouso, não devem ser somados e apresentados como número de pacientes.
+0524: 
+0525: 14 ALTA COMPLEXIDADE CARDIOVASCULAR
+0526: Os procedimentos de alta complexidade serão organizados por conceitos clínico-assistenciais estáveis, e não por códigos administrativos isolados. A tabela SIGTAP de cada competência deverá confirmar quais códigos estavam ativos e qual era sua descrição. Mudanças históricas de código serão documentadas sem projetar retrospectivamente a tabela atual sobre todo o período.
+0527: Quadro 15 – Famílias analíticas de alta complexidade
+0528: Família
+0529: Status
+0530: Definição operacional
+0531: AC1 – Cardiologia intervencionista
+0532: Principal
+0533: Conjunto dinâmico dos procedimentos ativos da forma de organização 04.06.03 em cada competência.
+0534: AC2 – Angioplastia coronariana
+0535: Principal
+0536: Whitelist específica de angioplastias coronarianas e de enxerto, validada mensalmente no SIGTAP.
+0537: AC3 – Revascularização do miocárdio
+0538: Principal
+0539: Procedimentos de revascularização miocárdica com e sem circulação extracorpórea.
+0540: AC4 – Marcapasso permanente
+0541: Principal
+0542: Implantes permanentes convencionais e multissítio; excluir marcapasso temporário do núcleo.
+0543: AC5 – Cirurgia arterial aberta
+0544: Principal
+0545: Procedimentos arteriais não traumáticos selecionados, excluindo varizes, acessos dialíticos e procedimentos venosos não aderentes.
+0546: AC6 – Tratamento arterial endovascular
+0547: Principal
+0548: Angioplastias/stents e tratamentos endovasculares arteriais selecionados.
+0549: AC7 – Outros procedimentos
+0550: Aprofundamento
+0551: Válvulas, dispositivos, revisões, TAVI e outros itens ativados por necessidade analítica.
+0552: Fonte: elaboração própria, com base nas decisões metodológicas consolidadas e nos documentos de referência do estudo.
+0553: 14.1 Regra histórica SIGTAP
+0554: Para cada competência de janeiro de 2014 a dezembro de 2024, o pipeline deverá carregar a versão correspondente do SIGTAP, verificar a presença do código, preservar a descrição vigente e aplicar a whitelist somente entre códigos ativos. Se um conceito clínico mudar de código, diferentes códigos poderão ser mapeados para uma mesma chave analítica estável, desde que a equivalência seja documentada.
+0555: NÃO CONGELAR O PRESENTE NO PASSADO
+0556: Uma lista de procedimentos válida em 2026 não deve ser aplicada automaticamente a 2014. A validade histórica mensal é requisito metodológico do TCC.
+0557: 
+0558: 15 CAPACIDADE INSTALADA – CNES
+0559: A capacidade instalada será observada em quatro dimensões: institucional (habilitações), hospitalar (leitos), profissional e tecnológica (equipamentos). Todas serão tratadas mensalmente, de janeiro de 2014 a dezembro de 2024, respeitando a natureza de estoque do CNES.
+0560: Quadro 16 – Síntese temporal de estoques CNES
+0561: Medida
+0562: Uso
+0563: Valor mensal
+0564: Unidade básica de observação da capacidade.
+0565: Média mensal anual
+0566: Medida principal do estoque anual.
+0567: Última competência válida
+0568: Fotografia de encerramento do ano; complementar.
+0569: Mínimo e máximo mensal
+0570: Variação intra-anual.
+0571: Meses/percentual de competências ativo
+0572: Continuidade de habilitações e recursos raros.
+0573: Fonte: elaboração própria, com base nas decisões metodológicas consolidadas e nos documentos de referência do estudo.
+0574: REGRA DE ESTOQUE
+0575: Valores mensais de leitos, profissionais, equipamentos ou habilitações não serão somados para representar quantidade anual. A soma de estoques mensais cria uma unidade sem significado.
+0576: 
+0577: 15.1 Habilitações
+0578: Serão selecionadas habilitações relacionadas à alta complexidade cardiovascular, cardiologia intervencionista, cirurgia cardiovascular e cirurgia vascular. Os códigos candidatos já mapeados permanecem preliminares até validação na tabela histórica do CNES e em normativos correspondentes. O indicador deverá registrar estabelecimento, território, competência, tipo de habilitação e meses ativos.
+0579: 15.2 Leitos
+0580: O núcleo de oferta hospitalar deverá considerar leitos SUS de cardiologia clínica, cardiologia cirúrgica e, quando historicamente identificáveis de forma consistente, unidades coronarianas UCO II e UCO III. UTI geral e outros leitos de suporte serão aprofundamentos, não substitutos dos leitos cardiovasculares selecionados.
+0581: 15.3 Profissionais
+0582: Serão analisados cardiologistas, cirurgiões cardiovasculares e cirurgiões vasculares registrados no CNES com atendimento ao SUS. O estudo distinguirá profissionais distintos, vínculos com estabelecimentos e carga horária. Um profissional vinculado a três estabelecimentos não será contado como três pessoas no mesmo território; a deduplicação deverá ser refeita em cada nível territorial de análise.
+0583: Profissionais distintos ≠ vínculos profissionais; carga horária = soma das horas dos vínculos SUS válidos.
+0584: 15.4 Equipamentos
+0585: A análise priorizará equipamentos com aderência direta ao cuidado cardiovascular especializado: hemodinâmica, circulação extracorpórea, balão intra-aórtico e Doppler colorido. O núcleo utilizará equipamentos registrados como em uso/disponíveis ao SUS conforme o layout histórico. Gama-câmara poderá ser incorporada como aprofundamento quando a análise de cintilografia exigir avaliação da capacidade instalada.
+0586: 16 FLUXOS ASSISTENCIAIS
+0587: A análise de fluxos utilizará a combinação entre território de residência e território de atendimento. No SIH, essa informação deverá sustentar o núcleo do estudo. No SIA, o fluxo será calculado somente se a completude do município de residência for suficiente para uma análise territorial defensável.
+0588: Quadro 17 – Indicadores de fluxo
+0589: Código
+0590: Indicador
+0591: Status
+0592: Definição
+0593: F1
+0594: Atendimento na própria Região de Saúde
+0595: Principal
+0596: Internações/atendimentos de residentes realizados na própria região ÷ total de residentes atendidos × 100.
+0597: F2
+0598: Evasão regional
+0599: Principal
+0600: 100 − F1, ou cálculo equivalente diretamente sobre destinos externos.
+0601: F3
+0602: Atração regional
+0603: Principal
+0604: Volume/proporção de atendimentos a residentes de outros territórios.
+0605: F4
+0606: Principal destino externo
+0607: Principal descritivo
+0608: Região que recebe maior parcela dos residentes que saem do território.
+0609: F5
+0610: Matriz origem–destino municipal
+0611: Aprofundamento
+0612: Utilizada quando necessário para identificar polos e dependências.
+0613: F6
+0614: Estabelecimento receptor
+0615: Aprofundamento
+0616: Identifica unidades receptoras sem transformá-las automaticamente em ranking de qualidade.
+0617: Fonte: elaboração própria, com base nas decisões metodológicas consolidadas e nos documentos de referência do estudo.
+0618: F_própria = atendimentos de residentes realizados na própria região / atendimentos totais dos residentes × 100
+0619: F_evasão = 100 − F_própria
+0620: TERMO PREFERIDO
+0621: Utilizar “atendimento na própria região” ou “proporção atendida no próprio território”. Evitar chamar automaticamente essa proporção de “resolutividade”, pois o indicador não observa qualidade, adequação, desfecho clínico ou necessidade não atendida.
+0622: 
+0623: 17 DESIGUALDADES TERRITORIAIS
+0624: A desigualdade territorial será apresentada por valores observados e medidas simples, transparentes e interpretáveis. Não será criado um índice sintético único de desigualdade. A comparação principal será entre as quatro Regiões de Saúde, complementada pelo recorte Noroeste 1.
+0625: Quadro 18 – Estratégia de comparação territorial
+0626: Indicador
+0627: Status
+0628: Operacionalização
+0629: D1 – Valores regionais
+0630: Principal
+0631: Apresentar os valores das quatro Regiões de Saúde para os indicadores selecionados.
+0632: D2 – Diferença absoluta entre extremos
+0633: Principal
+0634: máximo regional − mínimo regional.
+0635: D3 – Razão entre extremos
+0636: Principal quando válida
+0637: máximo regional / mínimo regional; não calcular com denominador zero ou sem sentido substantivo.
+0638: D4 – Noroeste 1 × Região Norte
+0639: Principal focal
+0640: Diferença e/ou razão, conforme o indicador.
+0641: D5 – Noroeste 1 × Espírito Santo
+0642: Principal focal
+0643: Diferença e/ou razão.
+0644: D6 – Ausência de oferta selecionada
+0645: Principal
+0646: Territórios sem determinada habilitação, recurso, profissional ou produção marcador.
+0647: CV, Gini, extremos municipais e concentração por estabelecimento
+0648: Aprofundamento
+0649: Somente quando acrescentarem interpretação substantiva.
+0650: Fonte: elaboração própria, com base nas decisões metodológicas consolidadas e nos documentos de referência do estudo.
+0651: Uma diferença territorial não será rotulada automaticamente como “melhor” ou “pior”. O significado depende do indicador: maior mortalidade, maior disponibilidade de profissionais e maior número de internações têm interpretações distintas. A discussão deverá explicitar o que cada direção representa e quais interpretações alternativas são plausíveis.
+0652: 18 INTEGRAÇÃO ENTRE CARGA, OFERTA, UTILIZAÇÃO E FLUXO
+0653: A contribuição distintiva do TCC está na integração entre dimensões que usualmente aparecem isoladas. Essa integração será descritivo-analítica e não causal. O estudo procurará reconhecer padrões de concordância ou desalinhamento que indiquem necessidade de investigação ou planejamento.
+0654: Quadro 19 – Matrizes integradoras principais
+0655: Código
+0656: Integração
+0657: Exemplo de leitura permitida
+0658: I1
+0659: Capacidade × produção
+0660: Habilitação, equipamento e profissionais presentes com produção correspondente; ou discrepância que merece investigação.
+0661: I2
+0662: Oferta × fluxo
+0663: Menor disponibilidade local coexistindo com maior atendimento fora da região.
+0664: I3
+0665: Carga epidemiológica × oferta
+0666: Carga relativamente elevada coexistindo com menor disponibilidade de recursos selecionados.
+0667: I4
+0668: Carga epidemiológica × utilização
+0669: Carga relativamente elevada com baixa produção/utilização registrada, exigindo interpretação contextual.
+0670: Fonte: elaboração própria, com base nas decisões metodológicas consolidadas e nos documentos de referência do estudo.
+0671: As matrizes poderão usar a referência estadual do mesmo ano para organizar quadrantes descritivos, mas não produzirão ranking geral ou escore ponderado. Uma região com valor acima ou abaixo da referência estadual não será classificada automaticamente como adequada ou inadequada; o quadrante serve para triagem analítica.
+0672: INTERPRETAÇÃO SEGURA
+0673: Habilitação + estrutura + produção = concordância estrutural-assistencial observada. Habilitação + estrutura + baixa produção = possível subutilização ou problema cadastral/operacional a investigar, não “capacidade ociosa” comprovada. Produção elevada + estrutura registrada reduzida = possível inconsistência cadastral ou concentração operacional a investigar. Ausência local + evasão elevada = dependência territorial observada, sem implicar causalidade isolada.
+0674: 
+0675: 19 ESTRATÉGIA ESTATÍSTICA E TEMPORAL
+0676: 19.1 Estatística descritiva
+0677: Todos os indicadores principais serão descritos por medidas adequadas à sua natureza: contagens, proporções, taxas por 100 mil habitantes, médias, medianas e medidas de dispersão quando pertinentes. A série anual completa deverá ser visualizada antes de qualquer interpretação de tendência.
+0678: Δ absoluto = X_2024 − X_2014
+0679: Δ% = [(X_2024 − X_2014) / X_2014] × 100, quando X_2014 ≠ 0
+0680: A variação entre 2014 e 2024 não será denominada “tendência” isoladamente. Dois pontos resumem mudança acumulada, mas não descrevem a trajetória intermediária.
+0681: 19.2 Tendência por Prais-Winsten
+0682: A regressão de Prais-Winsten será reservada a um conjunto restrito de séries anuais centrais, prioritariamente taxa padronizada de mortalidade cardiovascular, mortalidade cardiovascular prematura e taxa de internação cardiovascular. Outras séries poderão ser incluídas se apresentarem continuidade, comparabilidade histórica e numeradores suficientes.
+0683: log10(Y_t) = β0 + β1t + ε_t
+0684: VPA = (10^β1 − 1) × 100
+0685: A Variação Percentual Anual (VPA) será apresentada com intervalo de confiança de 95%. Se o intervalo contiver zero, a série não será classificada como crescente ou decrescente com base nesse modelo. Não será aplicada regressão de tendência a séries binárias, com muitos zeros, recursos raros, quebras de definição ou poucas observações válidas.
+0686: 19.3 Métodos não rotineiros
+0687: Joinpoint não integrará o núcleo do TCC; poderá ser considerado apenas como aprofundamento excepcional diante de uma ruptura substantiva claramente identificada. Da mesma forma, não será executada uma bateria de correlações de Pearson/Spearman entre oferta e mortalidade. A combinação de poucos territórios com observações repetidas no tempo criaria dependência, risco de pseudo-replicação e interpretações ecológicas frágeis.
+0688: REGRA DE PARCIMÔNIA
+0689: O TCC não será transformado em estudo econométrico. A estratégia estatística deve responder ao problema de pesquisa com o menor grau de complexidade necessário, preservando interpretabilidade, reprodutibilidade e coerência com o desenho ecológico.
+0690: 
+0691: 20 QUALIDADE, TRATAMENTO E REGRAS DE EXCLUSÃO
+0692: A qualidade dos dados será tratada como condição de interpretação, não como etapa invisível. O TCC herdará a arquitetura de camadas do Observatório, mas deverá registrar as regras específicas que alterem numeradores ou denominadores cardiovasculares.
+0693: Quadro 20 – Regras específicas por sistema
+0694: Sistema
+0695: Regra de tratamento
+0696: SIM
+0697: Causa básica I00–I99; residência como referência; idade ignorada exclui análises etárias/padronização, mas não necessariamente o total; sexo ignorado exclui taxa específica.
+0698: SIH
+0699: AIH/internação como unidade; diagnóstico principal; residência para utilização e estabelecimento para produção; óbito hospitalar separado do SIM.
+0700: SIA
+0701: Quantidade aprovada; seleção por procedimento/CBO; residência usada em fluxos apenas se qualidade suficiente.
+0702: CNES
+0703: Estoque mensal; pessoa, vínculo e carga horária separados; recursos SUS priorizados; nenhuma soma de estoques mensais.
+0704: SIGTAP
+0705: Whitelist aplicada apenas a códigos ativos na competência; mudanças históricas registradas.
+0706: Território
+0707: Código municipal canônico; residência ignorada não será imputada por estabelecimento ou CEP.
+0708: Fonte: elaboração própria, com base nas decisões metodológicas consolidadas e nos documentos de referência do estudo.
+0709: 20.1 Duplicidades
+0710: Não haverá deduplicação genérica. Registros idênticos por acidente de importação poderão ser removidos mediante evidência e log. Eventos legitimamente repetidos serão mantidos. Possíveis duplicidades administrativas serão auditadas antes de qualquer exclusão.
+0711: 20.2 Motivos de exclusão
+0712: Quadro 21 – Códigos de exclusão analítica
+0713: Código
+0714: Motivo
+0715: EX01
+0716: CID inválido para a análise diagnóstica específica.
+0717: EX02
+0718: Município inválido/ignorado para análise territorial.
+0719: EX03
+0720: Idade inválida/ignorada para análise etária e padronização.
+0721: EX04
+0722: Procedimento fora da validade SIGTAP da competência.
+0723: EX05
+0724: Duplicidade física confirmada de processamento/importação.
+0725: EX06
+0726: Registro fora do período 2014–2024.
+0727: EX07
+0728: Registro fora do território definido, quando aplicável.
+0729: Fonte: elaboração própria, com base nas decisões metodológicas consolidadas e nos documentos de referência do estudo.
+0730: Um mesmo registro pode participar de uma análise e ser excluído de outra. Por exemplo, um óbito cardiovascular com idade ignorada poderá compor o total I00–I99, mas não a taxa por faixa etária nem a padronização. Essa lógica preserva informação e evita exclusões excessivas.
+0731: 20.3 Indicadores de qualidade
+0732: Quadro 22 – Qualidade a ser monitorada
+0733: Indicador
+0734: Aplicação
+0735: Completude/validade do diagnóstico
+0736: SIM, SIH e, quando utilizado, SIA.
+0737: Completude do município de residência
+0738: Essencial para taxas territoriais e fluxos.
+0739: Completude de idade
+0740: Essencial para perfil etário e padronização.
+0741: Completude de sexo
+0742: Taxas específicas.
+0743: Integridade temporal
+0744: Competências esperadas versus disponíveis.
+0745: Validade da chave territorial
+0746: Proporção de registros mapeados corretamente.
+0747: Percentual excluído por módulo
+0748: Transparência sobre perdas analíticas.
+0749: Continuidade/rupturas cadastrais
+0750: Mudanças abruptas, tabelas, layouts ou definições.
+0751: Fonte: elaboração própria, com base nas decisões metodológicas consolidadas e nos documentos de referência do estudo.
+0752: 21 PANDEMIA, PEQUENOS NÚMEROS E INCERTEZA
+0753: 21.1 Período pandêmico
+0754: Os anos de 2020–2022 serão mantidos na série e identificados visualmente como período epidemiológica e assistencialmente atípico. Não serão excluídos e não serão modelados automaticamente como intervenção causal. Comparações pré-pandemia, período pandêmico e período recente serão usadas apenas como aprofundamento quando a série principal mostrar mudança que justifique essa leitura.
+0755: 21.2 Pequenos números
+0756: Taxas municipais anuais de eventos raros poderão ser calculadas, mas não serão interpretadas isoladamente quando a instabilidade for evidente. As alternativas incluem agregação de anos, agregação municipal para região, apresentação de números absolutos ou supressão interpretativa. Não será fixado previamente um limiar universal de 10 ou 20 eventos sem examinar o comportamento empírico dos numeradores e denominadores.
+0757: 21.3 Intervalos de confiança
+0758: Intervalos de confiança de 95% serão obrigatórios para a VPA de Prais-Winsten e poderão ser utilizados nas principais taxas quando a incerteza for substantiva para a comparação. O TCC não deverá sobrecarregar todas as tabelas descritivas com intervalos quando isso não acrescentar informação relevante.
+0759: 22 ASPECTOS ÉTICOS E RESPONSABILIDADE ANALÍTICA
+0760: O estudo utilizará dados secundários oficiais, públicos e administrativos. A situação ética não será resumida automaticamente como “dispensada de CEP”. Antes da versão final, o enquadramento deverá ser verificado à luz das normas vigentes do sistema CEP/CONEP e das regras institucionais do Ifes, registrando-se a decisão aplicável ao tipo de dado efetivamente utilizado.
+0761: Independentemente de exigência formal de apreciação ética, o estudo deverá evitar reidentificação, divulgação indevida de pequenas células, estigmatização territorial e conclusões que excedam a capacidade das bases. Estabelecimentos poderão ser identificados quando necessário para análise de oferta/produção e quando a informação for pública, mas não deverão ser ranqueados em desempenho clínico sem ajuste metodológico adequado.
+0762: 23 LIMITAÇÕES DO ESTUDO
+0763: Quadro 23 – Limitações previstas e implicações
+0764: Limitação
+0765: Implicação
+0766: Bases administrativas
+0767: Registros refletem finalidades de vigilância, cadastro e faturamento; não equivalem integralmente à necessidade de saúde.
+0768: Desenho ecológico
+0769: Não permite inferência individual nem causal entre oferta e desfechos.
+0770: SIH
+0771: Capta internações financiadas pelo SUS; AIH não equivale a pessoa única.
+0772: SIA
+0773: Produção de procedimentos; campos de residência/diagnóstico podem ser incompletos.
+0774: CNES
+0775: Cadastro de estrutura não prova disponibilidade efetiva, agenda, funcionamento, qualidade ou suficiência.
+0776: Mortalidade
+0777: Diferenças etárias exigem padronização; qualidade diagnóstica pode variar.
+0778: Regionalização retrospectiva
+0779: Representa os territórios atuais ao longo do passado, não a governança histórica vigente em cada ano.
+0780: Pandemia
+0781: Produz ruptura epidemiológica e assistencial que dificulta leitura estrutural de tendências.
+0782: Pequenos territórios
+0783: Taxas podem ser instáveis e exigir agregação.
+0784: Integração entre bases
+0785: Ocorre por território/período, não por trajetória individual de usuário.
+0786: Fonte: elaboração própria, com base nas decisões metodológicas consolidadas e nos documentos de referência do estudo.
+0787: 24 PRODUTOS E APLICABILIDADE
+0788: O produto acadêmico principal será o TCC. Como produto aplicado, o estudo poderá gerar uma matriz cardiovascular documentada, tabelas e mapas reprodutíveis e uma síntese técnico-gerencial incorporável ao Observatório SUS-ES. O valor aplicado está na combinação entre protocolo replicável e interpretação territorial, e não na criação de um índice opaco ou de uma plataforma paralela ao Observatório.
+0789: Os resultados do TCC poderão alimentar o painel institucional e a nota técnica do Observatório, mas esses produtos pertencem ao projeto e não precisam ser desenvolvidos integralmente pela discente para que o TCC seja considerado completo. O fluxo é bidirecional: o Observatório fornece infraestrutura; o TCC devolve validações, requisitos, achados e eventuais correções ao módulo cardiovascular.
+0790: 25 DECISÕES CONSOLIDADAS E PENDÊNCIAS
+0791: Quadro 24 – Decisões consolidadas do TCC
+0792: Tema
+0793: Decisão
+0794: Status
+0795: Objeto
+0796: Atenção cardiovascular especializada; não “linha de cuidado” completa.
+0797: Consolidada
+0798: Período
+0799: 2014–2024.
+0800: Consolidada
+0801: CID
+0802: I00–I99 como universo; G1–G5 como grupos principais.
+0803: Consolidada
+0804: Território
+0805: Quatro Regiões de Saúde atuais; Noroeste 1 como recorte focal.
+0806: Consolidada
+0807: Regionalização histórica
+0808: Aplicar retrospectivamente a regionalização atual.
+0809: Consolidada
+0810: Denominadores
+0811: Uma única série populacional harmonizada por sexo e idade.
+0812: Consolidada
+0813: Mortalidade
+0814: Taxa bruta + padronizada; prematura 30–69.
+0815: Consolidada
+0816: Padronização
+0817: Método direto; Brasil 2010 como padrão.
+0818: Consolidada
+0819: CNES
+0820: Mensal; média mensal anual como síntese principal de estoque.
+0821: Consolidada
+0822: SIA
+0823: Quantidade aprovada; produção ≠ pacientes.
+0824: Consolidada
+0825: SIH
+0826: Internações/AIH; valor aprovado ≠ custo.
+0827: Consolidada
+0828: SIGTAP
+0829: Validação por competência; não congelar lista atual no passado.
+0830: Consolidada
+0831: Indicadores
+0832: Principais + aprofundamento orientado por achados.
+0833: Consolidada
+0834: Tendência
+0835: Prais-Winsten apenas para séries centrais adequadas.
+0836: Consolidada
+0837: Pandemia
+0838: Manter 2020–2022 e interpretar como período atípico.
+0839: Consolidada
+0840: Integração
+0841: Desalinhamentos descritivos; sem inferência causal.
+0842: Consolidada
+0843: Índice composto
+0844: Não criar escore ponderado arbitrário.
+0845: Consolidada
+0846: Fonte: elaboração própria, com base nas decisões metodológicas consolidadas e nos documentos de referência do estudo.
+0847: Quadro 25 – Pendências técnicas antes da análise definitiva
+0848: Pendência
+0849: Ação necessária
+0850: Definição CID final do IAM
+0851: Fechar a regra e registrar no dicionário analítico antes da extração final.
+0852: Whitelist histórica SIA
+0853: Confirmar códigos e vigência por competência no SIGTAP.
+0854: Whitelist histórica de alta complexidade
+0855: Validar presença mensal de todos os códigos e mudanças de descrição.
+0856: Habilitações cardiovasculares CNES
+0857: Confirmar códigos/descrições/validade histórica e forma de representação.
+0858: CBOs cardiovasculares
+0859: Verificar semântica e consistência histórica no CNES.
+0860: Tipos de leito/UCO
+0861: Confirmar códigos e mudanças de classificação ao longo de 2014–2024.
+0862: Equipamentos
+0863: Confirmar códigos, campos de uso SUS e estabilidade histórica.
+0864: Composição do Noroeste 1
+0865: Congelar a lista municipal oficial usada no recorte focal.
+0866: Série populacional
+0867: Congelar a fonte, versão e data de extração da série harmonizada.
+0868: Fluxos SIA
+0869: Medir completude de residência antes de decidir inclusão no núcleo.
+0870: Limiares para pequenos números
+0871: Definir após inspeção da distribuição empírica.
+0872: Aspectos éticos
+0873: Confirmar formalmente o enquadramento institucional aplicável.
+0874: Fonte: elaboração própria, com base nas decisões metodológicas consolidadas e nos documentos de referência do estudo.
+0875: 26 ELEMENTOS EXCLUÍDOS DO DOSSIÊ DO TCC
+0876: Para preservar a identidade da pesquisa e evitar que a metodologia de engenharia se torne maior que o problema científico, ficam fora deste dossiê, exceto por referência resumida: estratégia completa de migração R–Python; política de branches e pull requests; Git LFS; arquitetura de CI; comparação detalhada entre PySUS, microdatasus, DataHub e outras bibliotecas; regras gerais do painel institucional; planos de trabalho dos bolsistas do projeto; indicadores de Oncologia, RUE e outros módulos; e decisões de armazenamento que não alterem o resultado científico do TCC.
+0877: PRINCÍPIO DE REDAÇÃO FINAL
+0878: Na versão do TCC, descrever apenas a infraestrutura de dados necessária para permitir reprodução científica. A discussão de engenharia detalhada deve permanecer no Dossiê 1 e no repositório do Observatório SUS-ES.
+0879: 
+0880: REFERÊNCIAS
+0881: BRASIL. Ministério da Saúde. Plano de ações estratégicas para o enfrentamento das doenças crônicas e agravos não transmissíveis no Brasil 2021–2030. Brasília, DF: Ministério da Saúde, 2021.
+0882: BRASIL. Ministério da Saúde. Caderno de indicadores do Plano de Dant 2021–2030. Brasília, DF: Ministério da Saúde, 2023.
+0883: COSEMS-RJ; CEPESC. Boletim 04: Rede de Atenção Cardiovascular no Estado do Rio de Janeiro. Rio de Janeiro, jul. 2022.
+0884: DONABEDIAN, Avedis. The definition of quality and approaches to its assessment. Ann Arbor: Health Administration Press, 1980.
+0885: ESPÍRITO SANTO. Secretaria de Estado da Saúde. Plano Diretor de Regionalização da Saúde do Espírito Santo – PDR 2024. Vitória: SESA, 2024.
+0886: ESPÍRITO SANTO. Secretaria de Estado da Saúde. Edital de Credenciamento nº 003/2026 – Serviços de Cintilografias: documentação territorial do novo PDR. Vitória: SESA, 2026.
+0887: HARTZ, Zulmira Maria de Araújo; VIEIRA-DA-SILVA, Ligia Maria. Avaliação em saúde: dos modelos teóricos à prática na avaliação de programas e sistemas de saúde. Salvador: EDUFBA; Rio de Janeiro: Editora Fiocruz, 2005.
+0888: IFES – INSTITUTO FEDERAL DO ESPÍRITO SANTO. Observatório SUS-ES: Relatório Técnico-Científico Integrado do Primeiro Ano de Execução. Barra de São Francisco, 2026a.
+0889: IFES – INSTITUTO FEDERAL DO ESPÍRITO SANTO. Consolidação metodológica do Observatório SUS-ES: validação e atualização de indicadores da atenção especializada no Espírito Santo. Cadastro de Proposta de Projeto de Pesquisa – 2026. Barra de São Francisco, 2026b.
+0890: MENDES, Eugênio Vilaça. As redes de atenção à saúde. 2. ed. Brasília, DF: Organização Pan-Americana da Saúde, 2011.
+0891: ORGANIZAÇÃO PAN-AMERICANA DA SAÚDE. Indicadores de saúde: elementos conceituais e práticos. Washington, DC: OPAS, 2018.
+0892: VIACAVA, Francisco et al. Avaliação de desempenho de sistemas de saúde: um modelo de análise. Ciência & Saúde Coletiva, Rio de Janeiro, v. 17, n. 4, p. 921–934, 2012.
+0893: APÊNDICE A – WHITELISTS E CÓDIGOS OPERACIONAIS PRELIMINARES
+0894: Este apêndice preserva as listas já definidas durante a orientação. Elas funcionam como especificação de trabalho e não como confirmação normativa definitiva. A vigência e a semântica histórica deverão ser verificadas competência a competência antes da análise final.
+0895: Quadro A1 – Procedimentos ambulatoriais cardiovasculares previamente selecionados
+0896: Grupo
+0897: Código SIGTAP
+0898: Descrição/uso
+0899: Consulta – cardiologia
+0900: 03.01.01.007-2 + CBO
+0901: Consulta médica em atenção especializada; cardiologia identificada pelo CBO, não pelo código isolado.
+0902: Consulta – cirurgia vascular
+0903: 03.01.01.007-2 + CBO
+0904: Mesmo procedimento genérico combinado ao CBO vascular.
+0905: Ecocardiografia
+0906: 02.05.01.003-2
+0907: Ecocardiografia transtorácica.
+0908: Teste ergométrico
+0909: 02.11.02.006-0
+0910: Teste de esforço.
+0911: Cateterismo
+0912: 02.11.02.001-0
+0913: Cateterismo cardíaco.
+0914: Cintilografia – esforço
+0915: 02.08.01.002-5
+0916: Perfusão miocárdica sob estresse; componente do estudo.
+0917: Cintilografia – repouso
+0918: 02.08.01.003-3
+0919: Perfusão miocárdica em repouso; componente do estudo.
+0920: Doppler vascular
+0921: 02.05.01.004-0
+0922: Ultrassonografia Doppler colorido de vasos.
+0923: ECG
+0924: 02.11.02.003-6
+0925: Aprofundamento.
+0926: Holter
+0927: 02.11.02.004-4
+0928: Aprofundamento.
+0929: MAPA
+0930: 02.11.02.005-2
+0931: Aprofundamento.
+0932: Fonte: lista de trabalho consolidada na orientação; todos os códigos devem ser conferidos no SIGTAP histórico.
+0933: Quadro A2 – Angioplastia coronariana – AC2
+0934: Código
+0935: Descrição analítica de trabalho
+0936: 0406030014
+0937: Angioplastia coronariana
+0938: 0406030022
+0939: Angioplastia coronariana com 2 stents
+0940: 0406030030
+0941: Angioplastia coronariana com stent
+0942: 0406030049
+0943: Angioplastia coronariana primária
+0944: 0406030065
+0945: Angioplastia de enxerto coronariano
+0946: 0406030073
+0947: Angioplastia de enxerto coronariano com stent
+0948: Fonte: lista preliminar; validar vigência mensal e descrição no SIGTAP.
+0949: Quadro A3 – Revascularização do miocárdio – AC3
+0950: Código
+0951: Descrição analítica de trabalho
+0952: 0406010927
+0953: Revascularização miocárdica com circulação extracorpórea
+0954: 0406010935
+0955: Revascularização com circulação extracorpórea, dois ou mais enxertos
+0956: 0406010943
+0957: Revascularização miocárdica sem circulação extracorpórea
+0958: 0406010951
+0959: Revascularização sem circulação extracorpórea, dois ou mais enxertos
+0960: Fonte: lista preliminar; validar vigência mensal e descrição no SIGTAP.
+0961: Quadro A4 – Implante de marcapasso permanente – AC4
+0962: Código
+0963: Descrição analítica de trabalho
+0964: 0406010617
+0965: Multissítio endocavitário → epimiocárdico / revisão conforme descrição histórica
+0966: 0406010625
+0967: Multissítio epimiocárdico
+0968: 0406010633
+0969: Multissítio transvenoso
+0970: 0406010641
+0971: Dupla câmara epimiocárdico
+0972: 0406010650
+0973: Dupla câmara transvenoso
+0974: 0406010668
+0975: Câmara única epimiocárdico
+0976: 0406010676
+0977: Câmara única transvenoso
+0978: Fonte: lista preliminar; código 0406010684 (marcapasso temporário transvenoso) permanece excluído do núcleo.
+0979: Quadro A5 – Cirurgia arterial aberta – AC5
+0980: Código
+0981: Descrição analítica de trabalho
+0982: 0406020043
+0983: Aneurismectomia de aorta abdominal infrarrenal
+0984: 0406020051
+0985: Aneurismectomia toracoabdominal
+0986: 0406020124
+0987: Embolectomia arterial
+0988: 0406020302
+0989: Plastia arterial com remendo
+0990: 0406020310
+0991: Derivação axilo-bifemoral
+0992: 0406020329
+0993: Derivação axilo-femoral
+0994: 0406020337
+0995: Derivação de troncos supra-aórticos
+0996: 0406020345
+0997: Derivação femoro-femoral cruzada
+0998: 0406020353
+0999: Derivação/endarterectomia aorto-femoral
+1000: 0406020361
+1001: Derivação/endarterectomia aorto-ilíaca
+1002: 0406020370
+1003: Derivação/endarterectomia carotídea
+1004: 0406020388
+1005: Derivação/endarterectomia ilíaco-femoral
+1006: 0406020418
+1007: Revascularização de artéria visceral
+1008: 0406020426
+1009: Revascularização de membro superior
+1010: 0406020434
+1011: Revascularização de outras artérias distais
+1012: 0406020442
+1013: Derivação femoro-poplítea distal
+1014: 0406020450
+1015: Derivação femoro-poplítea proximal
+1016: 0406020485
+1017: Tratamento cirúrgico de aneurismas de artérias viscerais
+1018: 0406020582
+1019: Substituição de aorta descendente, incluindo segmento abdominal
+1020: Fonte: lista preliminar. Permanecem excluídos do núcleo procedimentos venosos, varizes, acesso dialítico, cateteres e lesões vasculares traumáticas.
+1021: Quadro A6 – Tratamento arterial endovascular – AC6
+1022: Código
+1023: Descrição analítica de trabalho
+1024: 0406040052
+1025: Angioplastia de extremidade sem stent
+1026: 0406040060
+1027: Angioplastia de extremidade com stent não coberto
+1028: 0406040079
+1029: Angioplastia de extremidade com stent coberto
+1030: 0406040087
+1031: Pescoço/supra-aórtico sem stent
+1032: 0406040095
+1033: Pescoço/supra-aórtico com stent não coberto
+1034: 0406040109
+1035: Artéria visceral com stent não coberto
+1036: 0406040117
+1037: Artéria visceral com stent coberto
+1038: 0406040125
+1039: Angioplastia visceral/renal
+1040: 0406040133
+1041: Pescoço/supra-aórtico com stent coberto
+1042: 0406040150
+1043: Tratamento endovascular de aneurisma/dissecção de aorta abdominal
+1044: 0406040168
+1045: Aorta abdominal + ilíacas
+1046: 0406040176
+1047: Aorta torácica
+1048: 0406040184
+1049: Artéria ilíaca
+1050: 0406040281
+1051: Reconstrução da bifurcação aorto-ilíaca com angioplastia/stents
+1052: Fonte: lista preliminar; procedimentos mistos ou de indicação não exclusivamente arterial permanecem em aprofundamento condicional.
+1053: Quadro A7 – Habilitações, profissionais, leitos e equipamentos candidatos
+1054: Dimensão
+1055: Códigos/itens de trabalho
+1056: Status
+1057: Habilitações
+1058: 08.01, 08.02, 08.03, 08.05, 08.06, 08.07; 08.04, 08.15 e 24.11 como candidatos de aprofundamento.
+1059: Verificação histórica obrigatória.
+1060: Profissionais
+1061: CBO 225120 – cardiologista; 225210 – cirurgião cardiovascular; 225203 – cirurgião vascular.
+1062: Verificar semântica e consistência histórica.
+1063: Leitos
+1064: Cardiologia clínica; cardiologia cirúrgica; UCO II e UCO III.
+1065: Confirmar códigos e representação histórica.
+1066: Equipamentos
+1067: Hemodinâmica; circulação extracorpórea; balão intra-aórtico; Doppler colorido.
+1068: Confirmar códigos/atributos de uso SUS.
+1069: Equipamentos de aprofundamento
+1070: Gama-câmara, ECG, desfibrilador, marcapasso temporário, monitorização e imagem de suporte.
+1071: Ativação condicionada aos resultados.
+1072: Fonte: decisões de orientação. Os códigos/descrições CNES não devem ser apresentados como definitivos antes da conferência nas competências históricas.
+1073: APÊNDICE B – MATRIZ DE EXECUÇÃO DO TCC
+1074: Quadro B1 – Sequência recomendada de execução
+1075: Etapa
+1076: Produto mínimo
+1077: 1. Congelar contratos
+1078: Período, território, população, CID, grupos e versões das fontes.
+1079: 2. Validar aquisição
+1080: Competências disponíveis, schemas, campos necessários e logs.
+1081: 3. Construir SIM
+1082: Mortalidade geral, grupos, idade e padronização.
+1083: 4. Construir SIH
+1084: Internações, grupos, letalidade, permanência, fluxo e alta complexidade.
+1085: 5. Construir SIA
+1086: Procedimentos selecionados, qualidade da residência e produção territorial.
+1087: 6. Construir CNES
+1088: Habilitações, leitos, profissionais e equipamentos mensalmente.
+1089: 7. Integrar denominadores/território
+1090: Taxas, regionalização atual e recorte Noroeste 1.
+1091: 8. Descrição temporal/territorial
+1092: Tabelas e gráficos anuais dos indicadores principais.
+1093: 9. Tendências selecionadas
+1094: Prais-Winsten apenas nas séries previamente aprovadas.
+1095: 10. Fluxos
+1096: Origem–destino hospitalar e ambulatorial se qualidade permitir.
+1097: 11. Integração analítica
+1098: Matrizes carga–oferta–utilização–fluxo.
+1099: 12. Aprofundamentos
+1100: Somente quando os indicadores principais levantarem pergunta específica.
+1101: 13. Redação
+1102: Resultados → discussão → conclusão; limitações explícitas.
+1103: 14. Devolução ao Observatório
+1104: Documentar requisitos/correções descobertos durante o TCC.
+1105: Fonte: elaboração própria, com base nas decisões metodológicas consolidadas e nos documentos de referência do estudo.
+1106: CRITÉRIO DE CONCLUSÃO
+1107: O TCC estará metodologicamente completo quando conseguir responder ao problema com os indicadores principais, explicitar a qualidade e as limitações das fontes e realizar a integração analítica prevista. Não é necessário esgotar todos os indicadores de aprofundamento nem construir o painel institucional completo.
+1108: 

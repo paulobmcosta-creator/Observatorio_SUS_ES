@@ -1,0 +1,24 @@
+{
+  "inicio_utc": "2026-10-22T16:27:29.797211+00:00",
+  "fim_utc": "2026-10-22T16:27:32.056523+00:00",
+  "pysus_versao": "2.0.4",
+  "chamada": "pysus.cnes('ES',2024,1,group='LT')",
+  "origem_transporte_catalogo": "https://nbg1.your-objectstorage.com/pysus/public/catalog.db",
+  "tentativa": {
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "h PySUS() as pysus:\n               ^^^^^^^\n  File \"/workspace/Observatorio_SUS_ES/.venv/lib/python3.12/site-packages/pysus/api/client.py\", line 90, in __aenter__\n    await self._ducklake._load_catalog()\n  File \"/workspace/Observatorio_SUS_ES/.venv/lib/python3.12/site-packages/pysus/api/ducklake/client.py\", line 314, in _load_catalog\n    await self._download_catalog(client)\n  File \"/workspace/Observatorio_SUS_ES/.venv/lib/python3.12/site-packages/pysus/api/ducklake/client.py\", line 269, in _download_catalog\n    async with client.stream(\"GET\", self._catalog_url) as r:\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/contextlib.py\", line 210, in __aenter__\n    return await anext(self.gen)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/Observatorio_SUS_ES/.venv/lib/python3.12/site-packages/httpx/_client.py\", line 1583, in stream\n    response = await self.send(\n               ^^^^^^^^^^^^^^^^\n  File \"/workspace/Observatorio_SUS_ES/.venv/lib/python3.12/site-packages/httpx/_client.py\", line 1629, in send\n    response = await self._send_handling_auth(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/Observatorio_SUS_ES/.venv/lib/python3.12/site-packages/httpx/_client.py\", line 1657, in _send_handling_auth\n    response = await self._send_handling_redirects(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/Observatorio_SUS_ES/.venv/lib/python3.12/site-packages/httpx/_client.py\", line 1694, in _send_handling_redirects\n    response = await self._send_single_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/Observatorio_SUS_ES/.venv/lib/python3.12/site-packages/httpx/_client.py\", line 1730, in _send_single_request\n    response = await transport.handle_async_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/Observatorio_SUS_ES/.venv/lib/python3.12/site-packages/httpx/_transports/default.py\", line 393, in handle_async_request\n    with map_httpcore_exceptions():\n         ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/contextlib.py\", line 158, in __exit__\n    self.gen.throw(value)\n  File \"/workspace/Observatorio_SUS_ES/.venv/lib/python3.12/site-packages/httpx/_transports/default.py\", line 118, in map_httpcore_exceptions\n    raise mapped_exc(message) from exc\nhttpx.ProxyError: 403 Forbidden\n",
+    "status": "falhou_antes_de_validar_download"
+  },
+  "sondagem_oficial": {
+    "url": "https://ftp.datasus.gov.br/dissemin/publicos/CNES/200508_/Dados/LT/LTES2401.dbc",
+    "metodo": "HEAD",
+    "erro": "ProxyError",
+    "mensagem": "403 Forbidden",
+    "sucesso_download": false
+  },
+  "conversao": "não avaliada por este teste",
+  "equivalencia_metodologica": "não avaliada por este teste",
+  "rede": "restrita; proxy herdado; TCP/FTP sem concessão; sem mudança de política ou rota",
+  "fonte": "CNES/DATASUS; biblioteca e espelho não substituem proveniência oficial"
+}

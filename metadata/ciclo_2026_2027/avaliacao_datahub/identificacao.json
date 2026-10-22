@@ -1,0 +1,17 @@
+{
+  "nome": "DataHub Brasil",
+  "autor_declarado": "Rafael Trindade",
+  "url": "https://github.com/rafa-trindade/kaggle-datahub",
+  "commit": "60aa9cbd82509e0595d5c99ec74794e6be1588bd",
+  "identificado_por": "URL fornecida explicitamente pelo usuário em 2026-10-22",
+  "versao": "commit; sem versão de pacote identificada",
+  "data_commit": "2026-10-09T15:36:06-03:00",
+  "licenca_codigo": "GPL-3.0; LICENSE original",
+  "licenca_curadoria_declarada": "CC0-1.0; não substitui condições das fontes primárias",
+  "dataset_principal": "https://www.kaggle.com/datasets/rafatrindade/brazilian-kaggle-datahub",
+  "dataset_pa": "https://www.kaggle.com/datasets/rafatrindade/sia-producao-ambulatorial",
+  "busca_previa_preservada": "../avaliacao_ferramentas/busca_datahub_historico.json",
+  "aquisicao_codigo": "git clone --depth 25; sucesso",
+  "aquisicao_microdados": "não tentada; acesso a Kaggle não validado; rede oficial previamente recusada",
+  "automacao_testes_ci": "Nenhum teste/CI localizado na árvore examinada; não mede qualidade por si só."
+}

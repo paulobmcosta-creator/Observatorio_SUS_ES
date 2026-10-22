@@ -1,0 +1,5 @@
+{
+  "status": "interrompida_no_teste_dbc; não é execução aprovada",
+  "causa": "Expectativa inicial incorreta de strings vazias nos marcadores DBC. O resultado observado contém asteriscos e 00000000, interpretados como NA na referência R. Nenhum dado foi corrigido; a segunda execução explicita o contrato léxico e o limite semântico.",
+  "reexecucao": "poc_20261022_v2"
+}

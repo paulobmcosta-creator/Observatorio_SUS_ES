@@ -1,0 +1,19 @@
+{
+  "sintetico": true,
+  "padrao": {
+    "CODMUNRES": [
+      12345
+    ],
+    "IDADE": [
+      1
+    ]
+  },
+  "parse_false": {
+    "CODMUNRES": [
+      "012345"
+    ],
+    "IDADE": [
+      "001"
+    ]
+  }
+}

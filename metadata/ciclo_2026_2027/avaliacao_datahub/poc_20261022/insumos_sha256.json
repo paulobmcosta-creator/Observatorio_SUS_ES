@@ -1,0 +1,6 @@
+{
+  ".cache/cnes/execucoes/reconciliacao_dossies_20261022/estabelecimentos/cnes_estabelecimentos_es_202601.csv": "24b6eda70bbbf502fea9e987ac15be4a7b521dfaacc96e93c670066766ca7c7a",
+  "tests/fixtures/ferramentas/microdatasus_sintetico.dbc": "2086c600b509d3554db9aaeeb26878046a3e7f9177544d38678e347f92bb2811",
+  "metadata/ciclo_2026_2027/avaliacao_ferramentas/poc_20261022_v2/dbc_sintetico.json": "925d10c38c5ce772736215f6664c6183c5e12a71f54a7876ecd356922a975b73",
+  "/workspace/Observatorio_SUS_ES/scripts/executar_poc_datahub.py": "5a6b2f60048b9c8162e4ac0384273a7165681e18708c4e7c49f6cc45efc3c4ba"
+}

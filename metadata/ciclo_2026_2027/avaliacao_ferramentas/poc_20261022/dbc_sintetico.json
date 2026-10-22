@@ -1,0 +1,36 @@
+{
+  "fixture": "tests/fixtures/ferramentas/microdatasus_sintetico.dbc",
+  "sha256": "2086c600b509d3554db9aaeeb26878046a3e7f9177544d38678e347f92bb2811",
+  "sintetica": true,
+  "referencia": "microdatasus tests/testthat/test-read_dbc.R; CODE 001/010; VALUE 1.5/NA; WHEN 2020-01-02/NA",
+  "esperado_lexico_dbf": {
+    "CODE": [
+      "001",
+      "010"
+    ],
+    "VALUE": [
+      "1.500000000000000",
+      ""
+    ],
+    "WHEN": [
+      "20200102",
+      ""
+    ]
+  },
+  "observado": {
+    "CODE": [
+      "001",
+      "010"
+    ],
+    "VALUE": [
+      "1.500000000000000",
+      "*******************"
+    ],
+    "WHEN": [
+      "20200102",
+      "00000000"
+    ]
+  },
+  "campos_linhas_lexico_iguais": false,
+  "limite": "Não valida conversão de DBC oficial nem séries históricas; tipos e ausentes R/Python distintos."
+}

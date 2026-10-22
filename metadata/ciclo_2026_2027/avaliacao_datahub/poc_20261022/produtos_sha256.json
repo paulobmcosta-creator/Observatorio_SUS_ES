@@ -1,0 +1,7 @@
+{
+  "/workspace/Observatorio_SUS_ES/.cache/avaliacao_datahub/poc_20261022/malformado.parquet": "ae5b911f60fe774422bd6405a9c6bfc69459d98a1d8475073f5ccf1c5bba0503",
+  "/workspace/Observatorio_SUS_ES/.cache/avaliacao_datahub/poc_20261022/sintetico_malformado.csv": "c3c5f73772d1ecc5e694d88f147c0a6c231be52278d6b0981e9fd30b53a703f5",
+  "/workspace/Observatorio_SUS_ES/.cache/avaliacao_datahub/poc_20261022/producao_ambulatorial_202401.parquet": "62b1ded7ded30d90303c72db7acc021b0475366617a771f76aa7809da398cff7",
+  "/workspace/Observatorio_SUS_ES/.cache/avaliacao_datahub/poc_20261022/microdatasus_sintetico.dbf": "7dcb84cd8e058ddd6a8e119f8094c75f14223105ade8e9b4117479fcf8a44eeb",
+  "/workspace/Observatorio_SUS_ES/.cache/avaliacao_datahub/poc_20261022/referencia_r.parquet": "39ff6b7463dc8db072400e36bee64caf97a1f0bf0804d3df53da5f19481685f0"
+}

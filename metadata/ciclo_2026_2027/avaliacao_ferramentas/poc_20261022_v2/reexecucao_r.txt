@@ -1,0 +1,7 @@
+           produto linhas_referencia linhas_novas
+1 estabelecimentos             12548        12548
+2     habilitacoes              1963         1963
+  campos_ordem_valores_identicos
+1                           TRUE
+2                           TRUE
+Contrato: 115 verificações aprovadas.

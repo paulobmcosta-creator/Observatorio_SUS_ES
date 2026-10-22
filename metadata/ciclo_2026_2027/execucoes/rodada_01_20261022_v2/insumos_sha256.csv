@@ -1,0 +1,10 @@
+"papel","caminho","sha256","bytes"
+"estabelecimentos","data_interim/cnes/estabelecimentos/cnes_estabelecimentos_es_202601.csv","786fbccc3188ad48920b9e9563dee58805e5617bda5cf74eb8adfe1a1a7d4de6",3058707
+"habilitacoes","data_interim/cnes/habilitacoes/cnes_habilitacoes_es_202601.csv","24a63fbba68c53cf2f88d9299a86df08932307686b4aa3a5fd2da8ab1e5422c5",899389
+"classificacao","metadata/cnes/classificacao_habilitacoes_cnes.csv","5d3cdb16845ddd95b6402588d9d76615ba780c91cd68f1cc9792eefb46df4ce7",217625
+"schema_estabelecimentos","metadata/cnes/schema_estabelecimentos_cnes.csv","2c8a859f0f542f020f1ac8d12d5c1a586731b922de70355e9c00b98a4a49824f",2982
+"schema_habilitacoes","metadata/cnes/schema_habilitacoes_cnes.csv","3f677bdba68ac1b21255f5bcd777c9ce5bda009e644ada373486ddc1f10df43f",4096
+"auditoria","metadata/cnes/auditoria_fora_escopo_habilitacoes_cnes_202601.csv","a4f16cd514d7d31099a363e6c932db5f7c57203cbe7b67a987a707041167b12a",24484
+"codigo","src/validation/conferir_contrato_snapshot_cnes.R","71035398c0e9a5f5af7e9e431c2edc2f1894769127abe7b0ed9b142de21862f3",9043
+"executor","scripts/conferir_snapshot_cnes.R","ee39c4c68001752a56659510797dde1a3c28619b4daac1296d72ccea06572826",6753
+"teste","tests/test_conferir_contrato_snapshot_cnes.R","16db3bef6175603e87c8e05f797fe3c7420bfacd8d39edf5fdf1059da84cd2ca",5347

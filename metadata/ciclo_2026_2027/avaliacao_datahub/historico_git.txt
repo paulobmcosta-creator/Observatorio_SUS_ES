@@ -1,0 +1,25 @@
+60aa9cbd82509e0595d5c99ec74794e6be1588bd 2026-10-09T15:36:06-03:00 feat: lake configurável via DATAHUB_STORAGE (minio|local), usando a pasta de publicação do Kaggle
+fafdf19b310065e660179e10d9e7b2b85fd55303 2026-10-09T15:35:21-03:00 docs: adiciona lake configurável ao ao .env.example
+4069df74df4a0c72ff298c03f860e86273d762a7 2026-10-09T12:36:31-03:00 feat: adiciona ANS (12 bases), SRAG/SIVEP-Gripe e CNES serviços especializados/equipes.
+7f3d66522827d40f0296d2515236d896bd1d1c8c 2026-10-09T12:36:00-03:00 docs: atualiza metadados DataHub Brasil
+470abaa7a4f453178c21e678f9cb1fbf4d05c7f8 2026-10-09T12:15:15-03:00 feat: consolida documentação principal do projeto
+0e10e6ae10a1f43b0fa92223d583fd0b667b7acf 2026-10-01T07:57:17-03:00 docs: atualiza metadados DataHub Brasil
+205686e68ec267b1059b8c2d4d540ff6099466d8 2026-10-01T07:56:51-03:00 chore: ajusta parâmetros de carregamento do Kaggle Datahub
+e8fa894bf90eb3ed31e87cda6259deb6edf1478b 2026-10-01T07:55:00-03:00 fix: adiciona gravação atômica e limpeza prévia de arquivos temporários
+a94be6be5e7726c41775ce679e13a3119fb8e71b 2026-08-25T08:59:40-03:00 docs: atualiza metadados DataHub Brasil
+0d5fb27f0e48b6ef8e37176b256329c24a713c4f 2026-08-17T21:25:32-03:00 docs: atualiza metadados DataHub Brasil
+1173af0ffc410ce1beb8338a1fc2032f4cdd6ee2 2026-08-12T21:58:49-03:00 docs: atualiza metadados DataHub Brasil
+7fb60244fb2ffb44d1c1c9bd583f2d4b38d31d1c 2026-08-12T07:40:02-03:00 feat(pa): margem de reprocessamento configurável via env (default 0)
+7591251a7c96f430e6f645df9c2e8c7f24e0a944 2026-08-12T07:39:46-03:00 fix(pa): fetch usa o manifesto próprio do PA na otimização de skip
+cc5d199ec2a60283cc57ab5b9cdf2ff66f1db92c 2026-08-12T07:39:36-03:00 perf(ftp): verifica arquivos recentes em lote numa só conexão
+06b6ed29385ee100e898964c6222c1b4de1fe5ff 2026-08-12T07:14:20-03:00 docs: adiciona PA_COMPETENCIAS_MARGEM ao .env.example
+e9baa6c8a3d00e63f38fd9f4915ac54d58e599e7 2026-08-12T07:14:12-03:00 feat(pa): margem de reprocessamento configurável via env (default 0)
+ee2f0155cc8cd182c3e926985627cf6193b9c755 2026-08-12T07:14:06-03:00 perf(ftp): verifica arquivos recentes em lote numa só conexão
+31d3ded598e1e284457926091996e117e7bc7b10 2026-08-10T08:41:20-03:00 docs: atualiza metadados do arquivo CSV
+80322f84bb80ce07842e066ea236f2c68fede87f 2026-08-07T09:55:03-03:00 feat: adiciona script e guia para download dos datasets do projeto
+339a80bc79476cfa432a9849edd5f9b7ce5a2ef6 2026-08-07T09:54:11-03:00 feat: CIHA, SIA - DATASUS
+80a6ea2f28446025ed1f9055e46b7b25d56862d7 2026-08-06T12:29:12-03:00 feat: CIHA, SIA - DATASUS
+3fc8b297c80c5f10c98d97d099a332a8c89010e5 2026-08-06T10:50:23-03:00 feat: adiciona script e guia para download dos datasets do projeto
+3390445a4bf98c5cf072267b3c198630ee6f93c5 2026-08-06T10:47:24-03:00 feat: consolida documentação principal do projeto
+f772384ff03426b7c09081a493bcc35a849890a3 2026-08-06T06:08:53-03:00 feat: consolida documentação principal do projeto
+3c15e3be13ad78869d0f85835b6814ec1cb4e17b 2026-08-06T06:06:44-03:00 feat: consolida documentação principal do projeto

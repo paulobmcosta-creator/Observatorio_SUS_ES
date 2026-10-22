@@ -1,0 +1,64 @@
+arquivo,campo,tipo,descricao_regra
+fila_revisao_habilitacoes.csv,codigo_habilitacao,texto,Código textual da classificação original; zeros preservados
+fila_revisao_habilitacoes.csv,tipo_habilitacao,texto,Tipo textual; integra a chave composta com código
+fila_revisao_habilitacoes.csv,descricao_habilitacao,texto,Descrição original da classificação preservada
+fila_revisao_habilitacoes.csv,linha_cuidado,texto,Linha atribuída na classificação original; não reclassificada
+fila_revisao_habilitacoes.csv,usar_observatorio,texto,Sim ou Não conforme classificação original
+fila_revisao_habilitacoes.csv,status_validacao,texto,validado ou revisar conforme status interno; não equivale a parecer documental
+fila_revisao_habilitacoes.csv,fonte_normativa,texto,Valor original do metadado; Revisar em todas as linhas nesta rodada
+fila_revisao_habilitacoes.csv,criterio_classificacao,texto,Justificativa local original; não é confirmação da norma
+fila_revisao_habilitacoes.csv,n_registros_observados,inteiro,Registros no snapshot por combinação; zero significa não observado apenas nesta base
+fila_revisao_habilitacoes.csv,n_estabelecimentos_observados,inteiro,CO_UNIDADE distintos por combinação; não somar como estabelecimentos distintos por linha
+fila_revisao_habilitacoes.csv,grupo_revisao,texto,Grupo de trabalho proposto; sem pontuação sanitária ou decisão de inclusão
+fila_revisao_habilitacoes.csv,parecer_documental,texto,pendente_consulta_primaria nesta rodada
+fila_revisao_habilitacoes.csv,decisao_nesta_rodada,texto,classificacao_preservada
+execucao.csv,instante_utc,texto,Instante efetivo do registro em UTC
+execucao.csv,responsavel,texto,Executor real; automação identificada explicitamente
+execucao.csv,competencia,texto,Competência cadastral 202601; não derivar da data de execução
+execucao.csv,execucao_origem,texto,Identificador da comparação isolada cujos produtos foram conferidos por hash
+execucao.csv,versao_r,texto,Versão efetiva do R
+execucao.csv,status_r06,texto,pendente_fonte_oficial
+execucao.csv,status_r07,texto,triagem_concluida_normas_pendentes
+execucao.csv,resultado,texto,diagnostico_de_lacunas_sem_homologacao
+insumos_sha256.csv,arquivo,texto,Caminho do insumo ou produto; arquivos em cache são locais e descartáveis
+insumos_sha256.csv,sha256,texto,Hash SHA-256 dos bytes; não comprova autenticidade legal da fonte
+inventario_territorial.csv,cod_municipio_gestor,texto,Código textual observado no snapshot; seis dígitos; papel administrativo preservado
+inventario_territorial.csv,cod_municipio_ibge,texto,Código de sete dígitos explicitamente relacionado; vazio enquanto não houver fonte oficial
+inventario_territorial.csv,regiao_do_municipio_gestor,texto,Região pela correspondência explícita; vazio no diagnóstico desta rodada
+inventario_territorial.csv,nome_regiao,texto,Nome da região na correspondência; vazio enquanto não associado
+inventario_territorial.csv,data_referencia,texto,Data ISO explícita; nesta execução apenas cenário negativo de mapa vazio; não é regra temporal aprovada
+inventario_territorial.csv,papel_territorial,texto,municipio_gestor; não representa residência ou cobertura de atendimento
+inventario_territorial.csv,estado,texto,sem_correspondencia; fora_vigencia; codigo_ausente_ou_invalido; associado_no_contrato_tecnico; não equivale a validação normativa
+inventario_territorial.csv,municipio_no_snapshot,texto,Nome municipal observado na base de entrada
+inventario_territorial.csv,n_estabelecimentos_snapshot,inteiro,Número de linhas de estabelecimentos por código municipal; reconcilia a base de entrada
+produtos_sha256.csv,arquivo,texto,Caminho do insumo ou produto; arquivos em cache são locais e descartáveis
+produtos_sha256.csv,sha256,texto,Hash SHA-256 dos bytes; não comprova autenticidade legal da fonte
+resumo_revisao_habilitacoes.csv,linha_cuidado,texto,Linha atribuída na classificação original; não reclassificada
+resumo_revisao_habilitacoes.csv,usar_observatorio,texto,Sim ou Não conforme classificação original
+resumo_revisao_habilitacoes.csv,status_validacao,texto,validado ou revisar conforme status interno; não equivale a parecer documental
+resumo_revisao_habilitacoes.csv,n_registros_observados,inteiro,Registros no snapshot por combinação; zero significa não observado apenas nesta base
+resumo_revisao_habilitacoes.csv,soma_vinculos_estabelecimento_habilitacao,inteiro,Soma das contagens por combinação; pode repetir estabelecimento; não é total distinto da linha
+resumo_revisao_habilitacoes.csv,n_combinacoes_classificacao,inteiro,Combinações código/tipo na classificação; inclui não observadas
+fichas_preparatorias_r07.csv,codigo_habilitacao,texto,Código textual da classificação original; zeros preservados
+fichas_preparatorias_r07.csv,tipo_habilitacao,texto,Tipo textual; integra a chave composta com código
+fichas_preparatorias_r07.csv,descricao_habilitacao,texto,Descrição original da classificação preservada
+fichas_preparatorias_r07.csv,linha_cuidado,texto,Linha atribuída na classificação original; não reclassificada
+fichas_preparatorias_r07.csv,status_validacao,texto,validado ou revisar conforme status interno; não equivale a parecer documental
+fichas_preparatorias_r07.csv,n_registros_observados,inteiro,Registros no snapshot por combinação; zero significa não observado apenas nesta base
+fichas_preparatorias_r07.csv,criterio_classificacao,texto,Justificativa local original; não é confirmação da norma
+fichas_preparatorias_r07.csv,questao_documental,texto,Pergunta de revisão proposta a partir da evidência local
+fichas_preparatorias_r07.csv,risco_interpretativo,texto,Problema a conferir; não é conclusão clínica ou normativa validada
+fichas_preparatorias_r07.csv,ato_consultado,texto,nao_consultado_acesso_bloqueado nesta rodada
+fichas_preparatorias_r07.csv,vigencia_conferida,texto,nao nesta rodada
+fichas_preparatorias_r07.csv,parecer,texto,pendente_consulta_primaria
+fichas_preparatorias_r07.csv,decisao,texto,classificacao_preservada
+fichas_preparatorias_r07.csv,responsavel_revisao,texto,Responsável funcional a designar; não presume participação de pessoa
+acessos_fontes_rodada03.csv,url,texto,URL exata tentada; não representa documento efetivamente consultado
+acessos_fontes_rodada03.csv,consulta_utc,texto,Instante da tentativa de acesso em UTC
+acessos_fontes_rodada03.csv,curl_exit,inteiro,Código de saída do curl; 56 nesta rodada
+acessos_fontes_rodada03.csv,http,texto,000 indica ausência de resposta HTTP do destino
+acessos_fontes_rodada03.csv,diagnostico,texto,Mensagem efetiva do cliente; CONNECT 403 é recusa do proxy
+preservacao_rodada03_sha256.csv,arquivo,texto,Arquivo existente no início da rodada 3
+preservacao_rodada03_sha256.csv,sha256_inicio,texto,Hash anterior à rodada 3
+preservacao_rodada03_sha256.csv,sha256_fim,texto,Hash após a rodada 3
+preservacao_rodada03_sha256.csv,situacao,texto,preservado ou alteracao_intencional; somente índice e workflow alterados

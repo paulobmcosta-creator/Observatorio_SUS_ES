@@ -1,0 +1,23 @@
+{
+  "observado": {
+    "estabelecimentos": 12548,
+    "chaves_operacionais_distintas": 12548,
+    "codigos_publicos_zero_inicial": 1297,
+    "municipios_gestores": 78,
+    "habilitacoes": 1963,
+    "selecionadas": 501,
+    "selecionadas_validado_interno": 304,
+    "selecionadas_revisar": 197
+  },
+  "referencia_r": {
+    "estabelecimentos": 12548,
+    "chaves_operacionais_distintas": 12548,
+    "codigos_publicos_zero_inicial": 1297,
+    "municipios_gestores": 78,
+    "habilitacoes": 1963,
+    "selecionadas": 501,
+    "selecionadas_validado_interno": 304,
+    "selecionadas_revisar": 197
+  },
+  "iguais": true
+}

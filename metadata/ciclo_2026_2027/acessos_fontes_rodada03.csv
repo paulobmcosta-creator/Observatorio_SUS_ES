@@ -1,0 +1,5 @@
+url,consulta_utc,curl_exit,http,diagnostico
+https://saude.es.gov.br/,2026-10-22T04:22:54.666388+00:00,56,000,"curl: (56) CONNECT tunnel failed, response 403"
+https://cnes.datasus.gov.br/,2026-10-22T04:22:54.674649+00:00,56,000,"curl: (56) CONNECT tunnel failed, response 403"
+https://bvsms.saude.gov.br/,2026-10-22T04:22:54.672382+00:00,56,000,"curl: (56) CONNECT tunnel failed, response 403"
+https://servicodados.ibge.gov.br/api/v1/localidades/estados/32/municipios,2026-10-22T04:22:54.673466+00:00,56,000,"curl: (56) CONNECT tunnel failed, response 403"

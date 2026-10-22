@@ -1,0 +1,9 @@
+2026-10-22 20:18:03,191 [WARNING] [PA 202401] coluna nova 'CAMPO_NOVO' em PASP2401.dbc -- anexada ao schema.
+2026-10-22 20:18:03,223 [INFO] [PA 202401] 2 parte(s), 2 linha(s) no parquet.
+PyTables is not installed. No support for HDF output.
+[VERIFICA-LOTE] 1 arquivo(s) recente(s) conferido(s) numa unica conexao (tamanho bate com o manifesto) -- sem download.
+Processando e salvando dados em: referencia_r.parquet ...
+✔ Arquivo Parquet gerado com sucesso!
+Processando e salvando dados em: malformado.parquet ...
+✔ Arquivo Parquet gerado com sucesso!
+{"evidencias": "metadata/ciclo_2026_2027/avaliacao_datahub/poc_20261022", "casos_executados": 6, "fontes_e_insumos_inalterados": true}

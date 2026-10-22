@@ -1,0 +1,39 @@
+arquivo,campo,tipo,obrigatorio,descricao_regra
+metadata/cnes/fontes/tbEstabelecimento202601.csv,id,texto,sim,Identificação lógica da tabela fonte
+metadata/cnes/fontes/tbEstabelecimento202601.csv,competencia,texto,sim,AAAAMM sem inferência pela data de processamento
+metadata/cnes/fontes/tbEstabelecimento202601.csv,sha256_csv,texto,sim,SHA-256 dos bytes originais descomprimidos; 64 hexadecimais
+metadata/cnes/fontes/tbEstabelecimento202601.csv,bytes_csv,inteiro,sim,Tamanho exato do CSV original em bytes
+metadata/cnes/fontes/tbEstabelecimento202601.csv,encoding,texto,sim,Codificação usada no leitor do layout
+metadata/cnes/fontes/tbEstabelecimento202601.csv,separador,texto,sim,Delimitador observado do CSV fonte
+metadata/cnes/fontes/tbEstabelecimento202601.csv,origem_verificada,texto,sim,Origem de recuperação comprovada; não equivale à extração primária
+metadata/cnes/fontes/tbEstabelecimento202601.csv,ref_git,texto,sim,Commit que contém o ponteiro histórico
+metadata/cnes/fontes/tbEstabelecimento202601.csv,caminho_git,texto,sim,Caminho do ponteiro no commit
+metadata/cnes/fontes/tbEstabelecimento202601.csv,url_download_primario,texto,sim,URL documentada ou nao_documentada
+metadata/cnes/fontes/tbEstabelecimento202601.csv,data_extracao_primaria,texto,sim,Data documentada ou nao_documentada
+comparacao_legado.csv,escopo,texto,sim,estabelecimentos ou habilitacoes
+comparacao_legado.csv,medida,texto,sim,Ausência de chaves ou diferenças de campo após associação explícita do cnes legado ao co_unidade novo
+comparacao_legado.csv,valor,inteiro,sim,Contagem de linhas divergentes; não indica automaticamente erro ou mudança clínica
+execucao.csv,inicio_utc,texto,sim,Início da execução em UTC
+execucao.csv,fim_utc,texto,sim,Fim da execução em UTC
+execucao.csv,responsavel,texto,sim,Executor real; automação identificada como tal
+execucao.csv,competencia,texto,sim,Competência 202601 nesta comparação
+execucao.csv,finalidade,texto,sim,comparacao_isolada_sem_promocao
+execucao.csv,versao_r,texto,sim,Versão local do R
+execucao.csv,cache,texto,sim,Caminho local descartável do gzip; não é endereço de recuperação remota
+execucao.csv,sha256_gzip,texto,sim,SHA-256 dos bytes comprimidos usados nesta execução
+execucao.csv,saida_dados,texto,sim,Diretório local ignorado das bases de comparação
+contagens_observadas.csv,medida,texto,sim,Contagem técnica ou tamanho em bytes identificado pelo nome; sem validade analítica implícita
+contagens_observadas.csv,valor,inteiro,sim,Contagem ou bytes conforme medida
+insumos_sha256.csv,arquivo,texto,sim,Caminho do insumo local ou código utilizado
+insumos_sha256.csv,sha256,texto,sim,SHA-256 antes e depois da execução; igualdade exigida
+produtos_sha256.csv,arquivo,texto,sim,Produto local; inclui bases em cache e evidências versionáveis
+produtos_sha256.csv,sha256,texto,sim,SHA-256 do produto; o próprio manifesto não se inclui
+verificacoes.csv,escopo,texto,sim,Base ou relação conferida
+verificacoes.csv,regra,texto,sim,Nome da regra conferida
+verificacoes.csv,estado,enum,sim,passou;falhou;nao_executado
+verificacoes.csv,ocorrencias,inteiro ou vazio,nao,Violações da regra; vazio se não executada; unidades distintas não somáveis
+verificacoes.csv,detalhe,texto,nao,Contexto técnico sem dados individuais
+preservacao_rodada02_sha256.csv,arquivo,texto,sim,Caminho do arquivo existente no início da rodada 2
+preservacao_rodada02_sha256.csv,sha256_inicio,texto,sim,SHA-256 no início da rodada 2
+preservacao_rodada02_sha256.csv,sha256_fim,texto,sim,SHA-256 ao concluir a rodada 2
+preservacao_rodada02_sha256.csv,situacao,enum,sim,preservado;alteracao_intencional; seis alterações discriminadas

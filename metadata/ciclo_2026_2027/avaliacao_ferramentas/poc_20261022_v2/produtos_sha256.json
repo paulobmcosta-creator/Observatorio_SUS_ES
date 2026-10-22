@@ -1,0 +1,14 @@
+{
+  ".cache/avaliacao_ferramentas/poc_20261022_v2/sintetico.dbc": "2086c600b509d3554db9aaeeb26878046a3e7f9177544d38678e347f92bb2811",
+  ".cache/avaliacao_ferramentas/poc_20261022_v2/tbEstabelecimento202601_restituido.csv": "96f728f68f7a5385721ed73248ba3da55a431eb03724ea02c928239f28c9cf30",
+  ".cache/avaliacao_ferramentas/poc_20261022_v2/sentinela.parquet": "5a5635f84bb9f7c7d104a9fd33ca4a23fac810ffbfe51468f529bc5107425eda",
+  ".cache/avaliacao_ferramentas/poc_20261022_v2/sintetico.parquet": "0831ae10c26a9cd257c0c6d023c1d7633a62715848f56373d786419cdbc755d5",
+  ".cache/avaliacao_ferramentas/poc_20261022_v2/estabelecimentos/dados.parquet": "b89f1811bfdc48243d2057aefa6f683a9b00ceab374c33349b43a40a98ea0300",
+  ".cache/avaliacao_ferramentas/poc_20261022_v2/estabelecimentos/manifesto.json": "5a2f322b023385841f91f0521b192fbc443f283ef0c1f46dbf85b3763b7e9a8f",
+  ".cache/avaliacao_ferramentas/poc_20261022_v2/habilitacoes/dados.parquet": "415a58991f059486aab1c3af0a801584a6a16781b14bb4a2bb6b8a703bd31e60",
+  ".cache/avaliacao_ferramentas/poc_20261022_v2/habilitacoes/manifesto.json": "288770ca627530274cc8734807fe2a66ca928a08c10b36d458f80a84e72577db",
+  ".cache/avaliacao_ferramentas/poc_20261022_v2/raw_parquet/dados.parquet": "3673373564658ab24a215142d119aef420d00293473e82c9b8aa4272f6466c90",
+  ".cache/avaliacao_ferramentas/poc_20261022_v2/raw_parquet/manifesto.json": "438f05862edeadfb451ccf381b6bb622c136cfe79baef7fcb93e97faea2b603d",
+  ".cache/avaliacao_ferramentas/poc_20261022_v2/reexecucao_r/estabelecimentos/cnes_estabelecimentos_es_202601.csv": "24b6eda70bbbf502fea9e987ac15be4a7b521dfaacc96e93c670066766ca7c7a",
+  ".cache/avaliacao_ferramentas/poc_20261022_v2/reexecucao_r/habilitacoes/cnes_habilitacoes_es_202601.csv": "2a02077f69029b08af79994eb7faa0ded6a1cb1ad8badb6705dde0b32f6a9042"
+}

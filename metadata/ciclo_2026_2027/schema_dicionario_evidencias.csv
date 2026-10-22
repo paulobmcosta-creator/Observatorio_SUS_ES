@@ -1,0 +1,21 @@
+arquivo,campo,tipo,obrigatorio,descricao_regra
+verificacoes.csv,escopo,texto,sim,base/relação/classificação
+verificacoes.csv,regra,texto,sim,nome da regra; campos após dois-pontos quando aplicável
+verificacoes.csv,estado,enum,sim,passou;falhou;nao_executado
+verificacoes.csv,ocorrencias,inteiro ou NA,sim,contagem de violações da regra; NA indica não executado; não somar unidades distintas
+verificacoes.csv,detalhe,texto opcional,nao,contexto sem dados individuais
+contagens_observadas.csv,medida,texto,sim,nome descritivo incluindo unidade: linhas; códigos; combinações; registros
+contagens_observadas.csv,valor,inteiro,sim,contagem observada; não certifica identidade nem validade analítica
+insumos_sha256.csv,papel,texto,sim,papel do insumo/código/schema/teste
+insumos_sha256.csv,caminho,texto,sim,caminho relativo à raiz do checkout
+insumos_sha256.csv,sha256,texto hexadecimal 64,sim,hash dos bytes efetivamente lidos
+insumos_sha256.csv,bytes,inteiro,sim,tamanho local em bytes
+execucao.csv,campo,texto,sim,chave de metadado de execução
+execucao.csv,valor,texto,sim,valor explícito ou ausência documentada; instante_utc ISO 8601; responsável real; versão; competência; filtros; campos; resultado
+produtos_sha256.csv,arquivo,texto,sim,nome relativo ao diretório da execução; não inclui manifesto próprio
+produtos_sha256.csv,sha256,texto hexadecimal 64,sim,hash do produto
+preservacao_sha256.csv,arquivo,texto,sim,caminho relativo do versionado ou nome do anexo
+preservacao_sha256.csv,categoria,enum,sim,preexistente_versionado;anexo_original
+preservacao_sha256.csv,sha256_antes,texto hexadecimal 64,sim,hash anterior ao trabalho
+preservacao_sha256.csv,sha256_depois,texto hexadecimal 64,sim,hash após o trabalho
+preservacao_sha256.csv,estado,enum,sim,preservado;alteracao_intencional_ci

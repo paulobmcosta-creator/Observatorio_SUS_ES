@@ -1,0 +1,34 @@
+{
+  "inicio_utc": "2026-10-22T16:29:06.585201+00:00",
+  "fim_utc": "2026-10-22T16:34:15.601860+00:00",
+  "python": "3.12.14",
+  "plataforma": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "versoes": {
+    "pysus": "2.0.4",
+    "pyreaddbc": "2.0.4",
+    "pyarrow": "19.0.1",
+    "duckdb": "1.5.6",
+    "pandas": "2.3.3",
+    "dbfread": "2.0.7"
+  },
+  "argv": [
+    "scripts/executar_poc_ferramentas.py",
+    "/workspace/.cache/observatorio-cnes-lfs/objects/a6/dd/a6dd87e847e2905949dd160f1d88ddd5e7f088fdf61b1124404cf566297d36d6",
+    ".cache/avaliacao_ferramentas/poc_20261022_v2",
+    "metadata/ciclo_2026_2027/avaliacao_ferramentas/poc_20261022_v2"
+  ],
+  "comando_r": [
+    "Rscript",
+    "scripts/conferir_paridade_parquet_r.R",
+    ".cache/avaliacao_ferramentas/poc_20261022_v2/tbEstabelecimento202601_restituido.csv",
+    ".cache/avaliacao_ferramentas/poc_20261022_v2/reexecucao_r",
+    ".cache/cnes/execucoes/reconciliacao_dossies_20261022",
+    "metadata/ciclo_2026_2027/avaliacao_ferramentas/poc_20261022_v2"
+  ],
+  "aquisicao_remota": "nao_executada_neste_script",
+  "integridade": "CSV/Parquet todas as células e fixture DBC aprovados",
+  "paridade": "R após roundtrip do CSV nacional; mesmos preparadores, sem migração analítica",
+  "responsavel": "Codex sob solicitação do pesquisador",
+  "base_commit": "6478f93a50d03270a78959730221f2ea5a643658",
+  "codigo_efetivo": "insumos_sha256.json; diff local não commitado"
+}
