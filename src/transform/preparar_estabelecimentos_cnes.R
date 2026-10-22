@@ -8,13 +8,18 @@ normalizar_nome_coluna <- function(x) {
   x
 }
 
-ler_csv_cnes <- function(caminho_base_sem_ext) {
+ler_csv_cnes <- function(caminho_base_sem_ext, arquivo = NULL) {
   candidatos <- c(
     paste0(caminho_base_sem_ext, ".csv"),
     paste0(caminho_base_sem_ext, ".csv.gz"),
     paste0(caminho_base_sem_ext, ".zip")
   )
-  arquivo <- candidatos[file.exists(candidatos)][1]
+  # A seleção explícita permite usar cache comprimido sem tocar no ponteiro histórico.
+  if (is.null(arquivo)) arquivo <- candidatos[file.exists(candidatos)][1]
+  if (length(arquivo) != 1L || is.na(arquivo) || !file.exists(arquivo)) {
+    stop("Arquivo não encontrado para base: ", basename(caminho_base_sem_ext))
+  }
+  if (!grepl("\\.(csv|csv\\.gz|zip)$", arquivo)) stop("Formato CNES não suportado: ", arquivo)
   if (is.na(arquivo)) stop("Arquivo não encontrado para base: ", basename(caminho_base_sem_ext))
 
   detectar_sep <- function(con) {
@@ -62,7 +67,7 @@ agregar_unicos <- function(x) {
   paste(vals, collapse = " | ")
 }
 
-preparar_estabelecimentos_cnes <- function(dir_raw, competencia = "202601", uf_interesse = "ES", dir_interim = file.path("data_interim", "cnes")) {
+preparar_estabelecimentos_cnes <- function(dir_raw, competencia = "202601", uf_interesse = "ES", dir_interim = file.path("data_interim", "cnes"), arquivo_estabelecimentos = NULL) {
   base <- file.path(dir_raw, competencia)
 
   tb_municipio <- ler_csv_cnes(file.path(base, paste0("tbMunicipio", competencia)))
@@ -79,7 +84,8 @@ preparar_estabelecimentos_cnes <- function(dir_raw, competencia = "202601", uf_i
   municipios_es <- municipios_es[municipios_es != ""]
   if (length(municipios_es) == 0) stop("Não foi possível identificar municípios da UF de interesse em tbMunicipio.")
 
-  tb_estab <- ler_csv_cnes(file.path(base, paste0("tbEstabelecimento", competencia)))
+  tb_estab <- ler_csv_cnes(file.path(base, paste0("tbEstabelecimento", competencia)), arquivo = arquivo_estabelecimentos)
+  n_registros_fonte <- nrow(tb_estab)
   col_co_unidade <- primeira_coluna_existente(tb_estab, c("co_unidade"))
   col_cnes_publico <- primeira_coluna_existente(tb_estab, c("co_cnes", "cnes"))
   col_mun_est <- primeira_coluna_existente(tb_estab, c("co_municipio_gestor", "co_municipio", "cod_municipio"))
@@ -87,6 +93,12 @@ preparar_estabelecimentos_cnes <- function(dir_raw, competencia = "202601", uf_i
 
   tb_estab <- tb_estab[trimws(tb_estab[[col_mun_est]]) %in% municipios_es, , drop = FALSE]
   if (nrow(tb_estab) == 0) stop("Nenhum estabelecimento encontrado para a UF de interesse.")
+  if (anyNA(tb_estab[[col_co_unidade]]) || any(trimws(tb_estab[[col_co_unidade]]) == "")) {
+    stop("CO_UNIDADE ausente no recorte; auditar antes de qualquer exclusão.")
+  }
+  if (anyDuplicated(tb_estab[[col_co_unidade]])) {
+    stop("CO_UNIDADE duplicado no recorte; nenhuma linha foi descartada. Auditar a origem.")
+  }
 
   tb_tipo <- ler_csv_cnes(file.path(base, paste0("tbTipoEstabelecimento", competencia)))
   tb_nat <- ler_csv_cnes(file.path(base, paste0("tbNaturezaJuridica", competencia)))
@@ -223,12 +235,14 @@ preparar_estabelecimentos_cnes <- function(dir_raw, competencia = "202601", uf_i
   out$data_processamento <- as.character(Sys.Date())
 
   out$nome_estabelecimento <- ifelse(is.na(out$nome_estabelecimento) | trimws(out$nome_estabelecimento)=="", out$razao_social, out$nome_estabelecimento)
-  out <- out[!duplicated(out$co_unidade) & !is.na(out$co_unidade) & trimws(out$co_unidade) != "", ]
+  if (anyDuplicated(out$co_unidade)) stop("Join multiplicou CO_UNIDADE; não deduplicar a saída.")
   out <- out[, setdiff(names(out), c("possui_relacao_atend_convenio", "possui_join_incompleto", "possui_evidencia_sus", "possui_evidencia_nao_sus", "possui_evidencia_ambigua")), drop = FALSE]
 
   dir_saida <- file.path(dir_interim, "estabelecimentos")
   if (!dir.exists(dir_saida)) dir.create(dir_saida, recursive = TRUE)
   caminho_saida <- file.path(dir_saida, paste0("cnes_estabelecimentos_", tolower(uf_interesse), "_", competencia, ".csv"))
   utils::write.csv(out, caminho_saida, row.names = FALSE, fileEncoding = "UTF-8")
+  attr(out, "n_registros_fonte") <- n_registros_fonte
+  attr(out, "n_registros_recorte") <- nrow(tb_estab)
   out
 }

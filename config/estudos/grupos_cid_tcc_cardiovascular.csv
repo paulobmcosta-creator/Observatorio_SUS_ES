@@ -1,0 +1,13 @@
+grupo,cid_inicio,cid_fim,descricao,status,ressalva,referencia,nivel_codigo
+G0,I00,I99,Doenças do aparelho circulatório,principal,contém G1–G5; não somar com subgrupos,D2 Q9/Q10,categoria_CID_3_caracteres;subcategorias_herdam_categoria
+G1,I20,I25,Doenças isquêmicas do coração,principal,subgrupo de G0,D2 Q9/Q10,categoria_CID_3_caracteres;subcategorias_herdam_categoria
+G2,I50,I50,Insuficiência cardíaca,principal,subgrupo de G0,D2 Q9/Q10,categoria_CID_3_caracteres;subcategorias_herdam_categoria
+G3,I60,I69,Doenças cerebrovasculares,principal epidemiológico,não vincular automaticamente à oferta de cardiologistas,D2 Q9/Q10,categoria_CID_3_caracteres;subcategorias_herdam_categoria
+G4,I10,I15,Doenças hipertensivas,principal com ressalva,interface APS; não desempenho exclusivo da atenção especializada,D2 Q9/Q10,categoria_CID_3_caracteres;subcategorias_herdam_categoria
+G5,I70,I79,Doenças arteriais/arteriolares/capilares,principal,subgrupo de G0; G1–G5 não esgotam G0,D2 Q9/Q10,categoria_CID_3_caracteres;subcategorias_herdam_categoria
+AVC_AGUDO,I60,I64,Acidente vascular cerebral agudo,aprofundamento,subgrupo G3,D2 Q9/Q10,categoria_CID_3_caracteres;subcategorias_herdam_categoria
+AVC_HEMORRAGICO,I60,I62,AVC hemorrágico,aprofundamento,subgrupo AVC agudo,D2 Q9/Q10,categoria_CID_3_caracteres;subcategorias_herdam_categoria
+AVC_ISQUEMICO,I63,I63,AVC isquêmico,aprofundamento,subgrupo AVC agudo,D2 Q9/Q10,categoria_CID_3_caracteres;subcategorias_herdam_categoria
+AVC_NAO_ESPECIFICADO,I64,I64,AVC não especificado,aprofundamento,também marcador potencial de qualidade,D2 Q9/Q10,categoria_CID_3_caracteres;subcategorias_herdam_categoria
+HIPERTENSAO_ESSENCIAL,I10,I10,Hipertensão essencial,aprofundamento,subgrupo G4,D2 Q9/Q10,categoria_CID_3_caracteres;subcategorias_herdam_categoria
+IAM,,,Infarto agudo do miocárdio,pendente definição CID,nenhum código inferido,D2 Q9/Q10,categoria_CID_3_caracteres;subcategorias_herdam_categoria

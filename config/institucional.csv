@@ -1,0 +1,17 @@
+escopo,chave,valor,estado,referencia
+institucional,arquitetura,hibrida_R_Python,consolidada,D1 §4.2–4.3
+institucional,engenharia_preferencial,Python_quando_validado,consolidada,D1 Q5
+institucional,paridade,R_preservado_nos_componentes_validados,consolidada,D1 §4.2
+institucional,fontes_estruturantes,SIM;SIH;SIA;CNES;SIGTAP;populacao;territorio,consolidada,D1 Q7
+institucional,periodo_empirico,definido_por_estudo,consolidada,D1 §6
+institucional,filtro_cid,definido_por_estudo,consolidada,D1 §17
+institucional,territorio_tabela_central,metadata/territorio/correspondencia_municipio_regiao_v2.csv,pendente_fonte_oficial,D1 §7.1
+institucional,denominador_populacional,populacao_residente_total,consolidada,D1 §7.3
+institucional,subtrair_beneficiarios_ANS,nao,consolidada,D1 §7.3
+institucional,estoque_cnes_anual,media_mensal_competencias_validas,consolidada,D1 Q9
+institucional,competencias_ausentes,nao_imputar_zero,consolidada,D1 §9; complemento §6.4
+institucional,deduplicacao_generica,proibida,consolidada,D1 §11.1
+institucional,sigtap_historico,validar_por_competencia,consolidada,D1 §10
+institucional,matriz_minima,selecao_por_validacao_institucional,pendente_metodologica,D1 §12
+institucional,limiar_publicacao,,pendente_metodologica,D1 Q18
+institucional,etica,verificar_por_desenho,pendente_institucional,D1 §16

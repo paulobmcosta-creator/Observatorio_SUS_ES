@@ -1,0 +1,31 @@
+name: validar-serializacao-python
+
+on:
+  push:
+    paths:
+      - 'python/observatorio_sus/transform/converter_csv_parquet.py'
+      - 'tests/python/test_converter_csv_parquet.py'
+      - '.github/workflows/validar_serializacao_python.yml'
+  pull_request:
+    paths:
+      - 'python/observatorio_sus/transform/converter_csv_parquet.py'
+      - 'tests/python/test_converter_csv_parquet.py'
+      - '.github/workflows/validar_serializacao_python.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  preservar-campos-csv-parquet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Instalar bibliotecas da serialização validada
+        run: python -m pip install numpy==1.26.4 pyarrow==19.0.1 pytest==9.1.1
+      - name: Testar integridade sem dados oficiais ou rede DATASUS
+        env:
+          PYTHONPATH: python
+        run: python -m pytest tests/python/test_converter_csv_parquet.py -q

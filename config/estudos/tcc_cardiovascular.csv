@@ -1,0 +1,61 @@
+escopo,chave,valor,estado,referencia
+tcc_cardiovascular,estudo_id,tcc_camila_cardiovascular,consolidada,D2 Q1
+tcc_cardiovascular,discente,Camila Moreira dos Santos,identificacao_documental,D2 Q1
+tcc_cardiovascular,objeto,atencao_cardiovascular_especializada,consolidada,D2 §2
+tcc_cardiovascular,ano_inicio,2014,consolidada,D2 §5
+tcc_cardiovascular,ano_fim,2024,consolidada,D2 §5
+tcc_cardiovascular,granularidade_preservada,SIH;SIA;CNES;SIGTAP:mensal,consolidada,D2 Q5
+tcc_cardiovascular,apresentacao_principal,anual,consolidada,D2 Q5
+tcc_cardiovascular,cid_universo,I00-I99,consolidada,D2 Q9
+tcc_cardiovascular,cid_iam,,pendente_metodologica,D2 Q10/Q25
+tcc_cardiovascular,territorio_tabela_central,metadata/territorio/correspondencia_municipio_regiao_v2.csv,pendente_fonte_oficial,D1 §7; D2 §6
+tcc_cardiovascular,territorio_versao,,pendente_fonte_oficial,D2 §6/Q25
+tcc_cardiovascular,territorio_sha256,,pendente_fonte_oficial,D2 §6; complemento §7
+tcc_cardiovascular,territorio_data_classificacao,,pendente_fonte_oficial,D2 §6
+tcc_cardiovascular,territorio_modo,retrospectivo_congelado,consolidada,D2 §6.1
+tcc_cardiovascular,referencia_territorial_documental,PDR ES 2024; nao_consultado,referencia_a_verificar,D2 §6.1/referências
+tcc_cardiovascular,regioes_principais,Norte;Central;Metropolitana;Sul,consolidada,D2 §6.1
+tcc_cardiovascular,recorte_focal,Noroeste 1,consolidada,D2 §6.2
+tcc_cardiovascular,recorte_focal_nivel,subregional,consolidada,D2 Q6
+tcc_cardiovascular,recorte_focal_regiao_pai,Norte,consolidada,D2 §6.2
+tcc_cardiovascular,recorte_focal_municipios_ref,,pendente_fonte_oficial,D2 Q25
+tcc_cardiovascular,comparacoes_focais,Noroeste 1:Norte;Noroeste 1:ES,consolidada,D2 Q18
+tcc_cardiovascular,conjuntos_focais,sobrepostos_nao_somaveis_nao_independentes,consolidada,complemento §7
+tcc_cardiovascular,populacao_fonte_versao,,pendente_fonte_oficial,D2 Q25
+tcc_cardiovascular,populacao_denominador,residente_total;estratos_compativeis,consolidada,D2 §8
+tcc_cardiovascular,subtrair_ANS,nao,consolidada,D2 §8
+tcc_cardiovascular,mortalidade_campo,causa_basica,consolidada,D2 §11
+tcc_cardiovascular,mortalidade_territorio,residencia,consolidada,D2 §11
+tcc_cardiovascular,padronizacao_metodo,direto,consolidada,D2 §11.1
+tcc_cardiovascular,padronizacao_padrao,Brasil_Censo_2010,consolidada,D2 §11.1
+tcc_cardiovascular,padrao_pesos_fonte_hash,,pendente_fonte_oficial,D2 §11.1
+tcc_cardiovascular,estratos_calculo,0-4;5-9;10-14;15-19;20-24;25-29;30-34;35-39;40-44;45-49;50-54;55-59;60-64;65-69;70-74;75-79;80-84;85+,consolidada,D2 §11.1
+tcc_cardiovascular,faixas_apresentacao,<30;30-39;40-49;50-59;60-69;70-79;80+,consolidada,D2 Q12
+tcc_cardiovascular,mortalidade_prematura_idades,30-69,consolidada,D2 §11.1
+tcc_cardiovascular,pesos_prematura,normalizar_no_intervalo_30_69,consolidada,complemento §7
+tcc_cardiovascular,mortalidade_prematura_ODS_3_4_1,nao,consolidada,D2 §11.1
+tcc_cardiovascular,sih_unidade,internacao_AIH_nao_pessoa,consolidada,D2 §12
+tcc_cardiovascular,sih_campo_cid,diagnostico_principal,consolidada,D2 §12
+tcc_cardiovascular,sih_regra_tipo_continuidade_reapresentacao,,pendente_layout_e_regra,complemento §6.3
+tcc_cardiovascular,sih_valores,aprovados_reembolso_nao_custo_economico,consolidada,D2 §12
+tcc_cardiovascular,sia_quantidade,aprovada;apresentada_preservada_auditoria,consolidada,D1 §8.3;D2 §13
+tcc_cardiovascular,sia_consulta_generica,exige_procedimento_e_CBO_pertinente,consolidada,D2 §13/A1
+tcc_cardiovascular,cintilografia,esforco_e_repouso_separados_nao_usuarios,consolidada,D2 §13
+tcc_cardiovascular,cnes_sintese_anual,media_mensal_competencias_validas;numero_meses;ultima_valida;minimo;maximo;meses_ativos,consolidada,D2 §15/Q16
+tcc_cardiovascular,profissionais,pessoas;vinculos;horas_SUS_separados;recalcular_distintos_por_territorio,consolidada,D2 §15.3
+tcc_cardiovascular,fluxos_ignorado,categoria_explicita_nao_externo,consolidada,complemento §7
+tcc_cardiovascular,evasao_regional,calculo_direto_destinos_externos;complemento_apenas_sem_destinos_ignorados,consolidada_condicional,D2 §16/Q17; complemento §7
+tcc_cardiovascular,cobertura_fluxos,residentes_ES_atendidos_fora_ES_e_nao_residentes_atendidos_ES,requisito_de_aquisicao,complemento §7
+tcc_cardiovascular,prais_winsten,restrito_series_centrais_elegiveis,consolidada,D2 §19.2
+tcc_cardiovascular,prais_transformacao,log10_sem_constante_para_zeros,consolidada,D2 §19.2; complemento §7
+tcc_cardiovascular,vpa_formula,(10^beta1-1)*100,consolidada,D2 §19.2
+tcc_cardiovascular,vpa_ic,95%,consolidada,D2 §19.2
+tcc_cardiovascular,prematura_variante_tendencia,,pendente_metodologica,complemento §7
+tcc_cardiovascular,joinpoint_rotineiro,nao,consolidada,D2 §19.3
+tcc_cardiovascular,bateria_correlacoes,nao,consolidada,D2 §19.3
+tcc_cardiovascular,indice_ponderado,nao,consolidada,D2 §17
+tcc_cardiovascular,integracao,territorio_periodo_sem_linkage_individual_sem_causalidade,consolidada,D2 §18
+tcc_cardiovascular,anos_atipicos_mantidos,2020;2021;2022,consolidada,D2 §21.1
+tcc_cardiovascular,limiar_pequenos_numeros,,pendente_empirica,D2 §21.2
+tcc_cardiovascular,enquadramento_etico,,pendente_institucional,D2 §22
+tcc_cardiovascular,painel_completo_condicao_TCC,nao,consolidada,D2 §24/Apêndice B

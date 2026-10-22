@@ -1,0 +1,8 @@
+familia_original,status_original,definicao_original,referencia,relacao_inclusao,validacao_codigos
+AC1 – Cardiologia intervencionista,Principal,Conjunto dinâmico dos procedimentos ativos da forma de organização 04.06.03 em cada competência.,D2 §14/Q15,AC2_contida_em_AC1,pendente_por_competencia
+AC2 – Angioplastia coronariana,Principal,"Whitelist específica de angioplastias coronarianas e de enxerto, validada mensalmente no SIGTAP.",D2 §14/Q15,AC2_contida_em_AC1,pendente_por_competencia
+AC3 – Revascularização do miocárdio,Principal,Procedimentos de revascularização miocárdica com e sem circulação extracorpórea.,D2 §14/Q15,conferir_sobreposicoes_antes_de_totalizar,pendente_por_competencia
+AC4 – Marcapasso permanente,Principal,Implantes permanentes convencionais e multissítio; excluir marcapasso temporário do núcleo.,D2 §14/Q15,conferir_sobreposicoes_antes_de_totalizar,pendente_por_competencia
+AC5 – Cirurgia arterial aberta,Principal,"Procedimentos arteriais não traumáticos selecionados, excluindo varizes, acessos dialíticos e procedimentos venosos não aderentes.",D2 §14/Q15,conferir_sobreposicoes_antes_de_totalizar,pendente_por_competencia
+AC6 – Tratamento arterial endovascular,Principal,Angioplastias/stents e tratamentos endovasculares arteriais selecionados.,D2 §14/Q15,conferir_sobreposicoes_antes_de_totalizar,pendente_por_competencia
+AC7 – Outros procedimentos,Aprofundamento,"Válvulas, dispositivos, revisões, TAVI e outros itens ativados por necessidade analítica.",D2 §14/Q15,conferir_sobreposicoes_antes_de_totalizar,pendente_por_competencia

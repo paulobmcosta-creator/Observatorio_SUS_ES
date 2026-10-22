@@ -1,0 +1,8 @@
+codigo,motivo_original,escopo,referencia
+EX01,CID inválido para a análise diagnóstica específica.,analise_especifica;motivos_podem_sobrepor,D2 §20.2/Q21
+EX02,Município inválido/ignorado para análise territorial.,analise_especifica;motivos_podem_sobrepor,D2 §20.2/Q21
+EX03,Idade inválida/ignorada para análise etária e padronização.,analise_especifica;motivos_podem_sobrepor,D2 §20.2/Q21
+EX04,Procedimento fora da validade SIGTAP da competência.,analise_especifica;motivos_podem_sobrepor,D2 §20.2/Q21
+EX05,Duplicidade física confirmada de processamento/importação.,analise_especifica;motivos_podem_sobrepor,D2 §20.2/Q21
+EX06,Registro fora do período 2014–2024.,analise_especifica;motivos_podem_sobrepor,D2 §20.2/Q21
+EX07,"Registro fora do território definido, quando aplicável.",analise_especifica;motivos_podem_sobrepor,D2 §20.2/Q21

@@ -27,7 +27,7 @@ competencia_inicio,texto,nao,Competência de início da habilitação,CMTP_INICI
 competencia_fim,texto,nao,Competência fim da habilitação,CMTP_FIM preservado como texto,999999,rlEstabSipac
 numero_leitos,texto,nao,Número de leitos informado no registro,NU_LEITOS preservado como texto,10,rlEstabSipac
 portaria,texto,nao,Portaria associada à habilitação,NO_PORTARIA textual,PORTARIA 123,rlEstabSipac
-data_atualizacao,texto,nao,Data de atualização no relacional,TO_CHAR(DT_ATUALIZACAO,'DD/MM/YYYY'),20/01/2026,rlEstabSipac
+data_atualizacao,texto,nao,Data de atualização no relacional,"TO_CHAR(DT_ATUALIZACAO,'DD/MM/YYYY')",20/01/2026,rlEstabSipac
 fonte,texto,sim,Fonte do dado,Valor fixo CNES,CNES,derivado
 arquivo_origem,texto,sim,Arquivo relacional principal de origem,Valor fixo rlEstabSipacAAAAMM,rlEstabSipac202601,derivado
 data_processamento,texto,sim,Data de processamento da saída,Sys.Date,2026-05-23,derivado

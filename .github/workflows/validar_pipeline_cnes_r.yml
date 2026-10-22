@@ -13,8 +13,12 @@ on:
       - 'src/**'
       - 'tests/**'
       - 'metadata/**'
-      - 'config/dependencias_r.csv'
+      - 'config/**'
       - 'scripts/instalar_dependencias_r.R'
+      - 'scripts/conferir_snapshot_cnes.R'
+      - 'scripts/preparar_cache_cnes.R'
+      - 'scripts/comparar_reprocessamento_cnes.R'
+      - 'scripts/auditar_territorio_habilitacoes.R'
       - '.github/workflows/validar_pipeline_cnes_r.yml'
       - 'docs/cnes/**'
       - 'docs/fluxo_trabalho.md'
@@ -23,8 +27,12 @@ on:
       - 'src/**'
       - 'tests/**'
       - 'metadata/**'
-      - 'config/dependencias_r.csv'
+      - 'config/**'
       - 'scripts/instalar_dependencias_r.R'
+      - 'scripts/conferir_snapshot_cnes.R'
+      - 'scripts/preparar_cache_cnes.R'
+      - 'scripts/comparar_reprocessamento_cnes.R'
+      - 'scripts/auditar_territorio_habilitacoes.R'
       - '.github/workflows/validar_pipeline_cnes_r.yml'
       - 'docs/cnes/**'
       - 'docs/fluxo_trabalho.md'
@@ -81,3 +89,24 @@ jobs:
 
       - name: Executar teste de indicadores de oferta CNES
         run: Rscript tests/test_indicadores_cnes_oferta.R
+
+      - name: Conferir proteção contra divergências de contrato dos snapshots
+        run: Rscript tests/test_conferir_contrato_snapshot_cnes.R
+
+      - name: Validar cache comprimido e identificadores CNES sem Git LFS
+        run: Rscript tests/test_cache_cnes.R
+
+      - name: Validar contrato de correspondência territorial
+        run: Rscript tests/test_correspondencia_territorial.R
+
+      - name: Validar fila de revisão sem alterar classificação
+        run: Rscript tests/test_fila_revisao_habilitacoes.R
+
+      - name: Verificar preparadores sem descarte implícito
+        run: Rscript tests/test_preparadores_sem_descarte.R
+
+      - name: Verificar classificação territorial congelada
+        run: Rscript tests/test_territorio_congelado.R
+
+      - name: Verificar separação de escopos e códigos preliminares dos dossiês
+        run: Rscript tests/test_configuracao_dossies.R

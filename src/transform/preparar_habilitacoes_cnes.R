@@ -106,9 +106,12 @@ preparar_habilitacoes_cnes <- function(
   for (c in setdiff(campos_finais, names(base))) base[[c]] <- NA_character_
   base <- base[, campos_finais, drop = FALSE]
 
-  dup_antes <- nrow(base)
-  base <- unique(base)
-  attr(base, "duplicidades_exatas_removidas") <- dup_antes - nrow(base)
+  if (anyDuplicated(base)) {
+    stop("Linhas idênticas em habilitações; causa não comprovada. Nenhuma deduplicação foi aplicada.")
+  }
+  attr(base, "duplicidades_exatas_removidas") <- 0L
+  attr(base, "n_registros_fonte") <- nrow(rl)
+  attr(base, "n_registros_recorte") <- nrow(rl_filtrado)
   attr(base, "cnes_fora_base_estabelecimentos") <- cnes_fora_base
 
   dir_saida <- file.path(dir_interim, "habilitacoes")

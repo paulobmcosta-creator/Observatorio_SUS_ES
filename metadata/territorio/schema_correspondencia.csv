@@ -1,0 +1,10 @@
+nome_campo,tipo,obrigatorio,descricao
+cod_municipio_cnes,texto,sim,Código de seis dígitos explicitamente relacionado na fonte ou correspondência oficial; não derivar do IBGE
+cod_municipio_ibge,texto,sim,Código de sete dígitos da correspondência oficial; não completar CNES
+regiao_id,texto,sim,Identificador da região conforme ato consultado
+regiao_nome,texto,sim,Nome da região conforme ato consultado
+vigencia_inicio,data ISO textual,sim,Primeiro dia de vigência documentada e inclusiva
+vigencia_fim,data ISO textual,sim,Último dia de validade coberta pela evidência consultada; não presumir validade futura
+fonte_url,texto,sim,Endereço HTTPS do documento primário efetivamente consultado
+ato_referencia,texto,sim,Identificação do ato e localização da tabela no documento
+sha256_fonte,texto,sim,SHA-256 dos bytes do documento preservado; presença não equivale a autenticidade

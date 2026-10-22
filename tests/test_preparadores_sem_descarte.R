@@ -1,0 +1,31 @@
+source("src/transform/preparar_estabelecimentos_cnes.R")
+source("src/transform/preparar_habilitacoes_cnes.R")
+local({
+  tmp <- tempfile("sem_descarte_"); dir.create(tmp); on.exit(unlink(tmp, recursive = TRUE))
+  fixture <- "tests/fixtures/cnes/202601/tbEstabelecimento202601.csv"
+  linhas <- readLines(fixture)
+  alterado <- file.path(tmp,"duplicado.csv")
+  writeLines(c(linhas, linhas[2]),alterado)
+  falha <- function(expr, texto) {
+    e <- tryCatch({force(expr); NULL},error=identity)
+    stopifnot(inherits(e,"error"),grepl(texto,conditionMessage(e),fixed=TRUE))
+  }
+  destino <- file.path(tmp,"saida_invalida")
+  falha(preparar_estabelecimentos_cnes("tests/fixtures/cnes",dir_interim=destino,arquivo_estabelecimentos=alterado),"duplicado")
+  stopifnot(!dir.exists(destino))
+  writeLines(sub('"0001"','""',linhas,fixed=TRUE),alterado)
+  falha(preparar_estabelecimentos_cnes("tests/fixtures/cnes",dir_interim=destino,arquivo_estabelecimentos=alterado),"ausente")
+  stopifnot(!dir.exists(destino))
+  message("OK: duplicidade e chave ausente não descartam estabelecimento silenciosamente")
+  interim <- file.path(tmp,"interim")
+  invisible(preparar_estabelecimentos_cnes("tests/fixtures/cnes",dir_interim=interim))
+  raw <- file.path(tmp,"raw"); dir.create(file.path(raw,"202601"),recursive=TRUE)
+  # Relação sintética sem dados de pessoas; dupla idêntica não é considerada EX05 comprovada.
+  rl <- data.frame(CO_UNIDADE=c("0001","0001"),COD_SUB_GRUPO_HABILITACAO="9303",TP_HABILITACAO="R")
+  dom <- data.frame(CO_CODIGO_GRUPO="9303",NO_DESCRICAO_GRUPO="Teste sintético",TP_ORIGEM="Teste",TP_HABILITACAO="R")
+  write.table(rl,file.path(raw,"202601/rlEstabSipac202601.csv"),sep=";",row.names=FALSE)
+  write.table(dom,file.path(raw,"202601/tbSubGruposHabilitacao202601.csv"),sep=";",row.names=FALSE)
+  falha(preparar_habilitacoes_cnes(dir_raw=raw,dir_interim=interim),"Nenhuma deduplicação")
+  stopifnot(!dir.exists(file.path(interim,"habilitacoes")))
+  message("OK: habilitações idênticas exigem auditoria antes da escrita; eventos não são apagados")
+})
