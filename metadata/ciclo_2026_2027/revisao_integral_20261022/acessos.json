@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-22T21:24:26.703051+00:00",
+  "politica": "restricted",
+  "google_drive_e_docs": "domínios não permitidos; política sem alteração; nenhum conector disponível; recusas anteriores preservadas; sem repetição",
+  "relatorio_url": "https://docs.google.com/document/d/1gmVyMUhK3o2CtsTEaeqVgk4lj08es5TlWbklIQGekWQ/edit",
+  "acervo_url": "https://drive.google.com/drive/folders/1mi6rvQeHxuCfcMJfOJtGmWRKL358WjZD",
+  "api_github": "não permitida na política atual; rascunho anterior não aplicado",
+  "pagina_actions": "HTTP200 pelo proxy herdado",
+  "consulta_git": "ls-remote HTTPS permitido; pins PySUS/DataHub/microdatasus sem alteração",
+  "github_hosts": {
+    "github.com": true,
+    "api.github.com": false,
+    "drive.google.com": false,
+    "docs.google.com": false
+  }
+}

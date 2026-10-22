@@ -1,5 +1,7 @@
 # Reconciliação de D1/D2 com o trabalho realizado
 
+> Registro histórico da reconciliação, preservado em seu escopo. Estado vigente: [revisão integral](parecer_revisao_integral_2026-10-22.md) e [continuidade](continuidade_2026-10-22.md). As entregas anteriores foram publicadas em e75e81c/47bc932/937056a. Os workflows R e Python tiveram sucesso em47bc932, conforme [evidência remota](../../metadata/ciclo_2026_2027/revisao_integral_20261022/ci_remoto.json); isso atualiza a indicação histórica de CI não executado abaixo. A próxima etapa é REV01, não a implementação ampla.
+
 Rodada de 22/10/2026. Dossiês v1.0 de 03/10/2026, incorporados por solicitação explícita do usuário juntamente com o prompt complementar. Branch `feat/ciclo-2026-2027-transicao`; commit-base `6478f93a50d03270a78959730221f2ea5a643658`. As mudanças das rodadas anteriores e desta permanecem no diff local, sem merge ou publicação.
 
 ## Fontes e estado encontrado

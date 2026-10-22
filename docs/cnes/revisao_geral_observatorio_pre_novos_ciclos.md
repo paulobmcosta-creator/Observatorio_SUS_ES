@@ -1,5 +1,8 @@
 # Revisão geral do repositório Observatório SUS-ES (pré-novos ciclos)
 
+> Referência técnica histórica: o estado e a ordem de ciclos abaixo não representam o planejamento vigente de 2026–2027. Consultar o [plano integral](../ciclo_2026_2027/plano_operacional.md) e o [inventário atualizado](../ciclo_2026_2027/inventario_transicao.csv). Afirmações de disponibilidade e validação devem ser lidas no escopo do registro original.
+
+
 ## 1. Objetivo da revisão
 Realizar revisão transversal técnica, metodológica, documental, operacional e linguística do repositório antes de novos ciclos CNES.
 

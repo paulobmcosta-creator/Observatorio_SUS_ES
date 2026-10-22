@@ -1,0 +1,31 @@
+{
+  "consulta": {
+    "url": "https://github.com/paulobmcosta-creator/Observatorio_SUS_ES/actions?query=branch%3Afeat%2Fciclo-2026-2027-transicao",
+    "status": 200,
+    "bytes": 221035,
+    "utc": "2026-10-22T21:22:37.288754+00:00"
+  },
+  "pagina_sha256": "8850dce140964d00a2cbf5465a9658886c50634ac7f9c49783e823e31f7b45d0",
+  "runs": [
+    {
+      "url": "https://github.com/paulobmcosta-creator/Observatorio_SUS_ES/actions/runs/39852178778",
+      "workflow": "validar-pipeline-cnes-r",
+      "commit": "47bc932fe3955ac3759d4b7bc5094c016db03cd3",
+      "estado_observado": "completed successfully",
+      "tipo_evidencia": "observado_diretamente_na_listagem_web",
+      "extrato_aria_label": "completed successfully: Run 145 of validar-pipeline-cnes-r. docs(ciclo): incorporar dossiês, evidências e avaliação de ferramentas",
+      "limite": "Não equivale à leitura do log completo nem execução em outro commit"
+    },
+    {
+      "url": "https://github.com/paulobmcosta-creator/Observatorio_SUS_ES/actions/runs/39852178938",
+      "workflow": "validar-serializacao-python",
+      "commit": "47bc932fe3955ac3759d4b7bc5094c016db03cd3",
+      "estado_observado": "completed successfully",
+      "tipo_evidencia": "observado_diretamente_na_listagem_web",
+      "extrato_aria_label": "completed successfully: Run 1 of validar-serializacao-python. docs(ciclo): incorporar dossiês, evidências e avaliação de ferramentas",
+      "limite": "Não equivale à leitura do log completo nem execução em outro commit"
+    }
+  ],
+  "head_revisado": "937056af0af34b81d27ec38b608f5356488b46a7",
+  "execucao_no_head_revisado": "não localizada na listagem consultada; não inferir falha ou execução"
+}

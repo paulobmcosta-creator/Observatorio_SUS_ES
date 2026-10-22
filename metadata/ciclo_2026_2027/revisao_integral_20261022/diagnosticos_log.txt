@@ -1,0 +1,1 @@
+Três comportamentos reproduzidos; limitações confirmadas, nenhuma correção produtiva aplicada.

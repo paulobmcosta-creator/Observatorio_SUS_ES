@@ -1,5 +1,8 @@
 # Índice do repositório — Observatório SUS-ES
 
+**Estado corrente 2026–2027:** começar pelo [parecer de revisão integral](ciclo_2026_2027/parecer_revisao_integral_2026-10-22.md) e pelo [plano operacional](ciclo_2026_2027/plano_operacional.md). Inventários e roadmaps anteriores permanecem referências históricas, com escopo próprio.
+
+
 Este documento é o índice geral do repositório após a limpeza documental. Ele orienta a navegação inicial, separando entrada pedagógica, núcleo metodológico, histórico arquivado, áreas experimentais e áreas restritas.
 
 ## 1. Entrada para aluno

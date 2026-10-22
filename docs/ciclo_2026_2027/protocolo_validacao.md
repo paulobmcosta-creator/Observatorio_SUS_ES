@@ -1,6 +1,6 @@
 # Matriz preliminar e protocolo de validação
 
-Versão reconciliada de trabalho de 22/10/2026; incorpora D1/D2 v1.0 (03/10/2026). Base: proposta pp. 12–16, especialmente a definição da validação documental, operacional e analítica nas pp. 13–14. Não há homologação nesta rodada.
+Versão de trabalho atualizada na revisão integral de 22/10/2026; incorpora D1/D2 v1.0 (03/10/2026) e o [parecer vigente](parecer_revisao_integral_2026-10-22.md). Base: proposta pp. 12–16, especialmente a definição da validação documental, operacional e analítica nas pp. 13–14. Não há homologação nesta rodada.
 
 ## Seleção proposta e organização dos arquivos
 
@@ -9,19 +9,22 @@ A [matriz](matriz_indicadores_preliminar.csv) funciona como ficha por candidato:
 | Grupo | Itens | Decisão preliminar |
 |---|---|---|
 | T01–T06 | Seis medidas existentes do piloto R | Manter como diagnóstico de processamento e descrição cadastral; não contar como matriz substantiva regional validada |
-| S01 | Estabelecimentos com habilitação selecionada por linha de cuidado | Candidato prioritário; saída isolada tecnicamente conferida; localização da oferta e normas ainda em revisão |
-| S02 | Registros de habilitação selecionados | Medida complementar para reconciliar unidades; avaliar se ficará na matriz final ou apenas como apoio a S01 |
-| S03 | Internações SUS de residentes por território | Candidato de utilização, após verificar layout, período e regra de contagem de AIH |
-| S04 | Proporção de internações fora da região de residência | Candidato de fluxos; depende de S03 e correspondência territorial oficial |
-| S05–S06 | Produção ambulatorial selecionada e óbitos por causas selecionadas | Candidatos da matriz mínima ainda sujeitos à seleção; SIA/SIM são fontes estruturantes da infraestrutura comum (D1 Q7) |
+| S01 | Estabelecimentos com habilitação selecionada por linha de cuidado | Núcleo de oferta condicionado: saída isolada tecnicamente conferida; localização física e normas ainda em revisão |
+| S02 | Registros de habilitação selecionados | Controle complementar de registros, proposto como apoio a S01; não compõe automaticamente o núcleo substantivo |
+| S03 | AIH normais aprovadas de residentes por território | Primeiro percurso proposto, após verificar layout, competência de processamento e regra AIH |
+| S04 | Proporção de internações fora da região de residência | Primeiro percurso com S03: cobertura nacional, correspondência oficial, destinos conhecidos e ignorados explícitos |
+| S05–S06 | Produção ambulatorial selecionada e óbitos por causas selecionadas | Expansão por pergunta: produção requer seleção/quantidade e mortalidade é complementar institucional; D2 mantém suas prioridades. Fontes estruturantes não tornam toda medida parte do núcleo |
+| S07–S08 | Leitos e equipamentos | Expansão da oferta: estoques mensais, existentes/em uso/SUS separados e cobertura anual explícita |
+| S09 | Pessoas profissionais, vínculos e horas | Família a desdobrar em três fichas; identificador válido para pessoas, sem soma territorial de distinct |
+| S10 | ICSAP | Complementar da rede APS-hospital; lista, residência, regra AIH e população verificadas; taxa/proporção distintas |
 
-O número de linhas é uma escolha operacional desta proposta preliminar, **não uma meta quantitativa do projeto**. A primeira matriz candidata concentrou-se em oferta cadastrada, utilização e fluxo. Isso não limita a infraestrutura comum: SIM/SIA, SIGTAP, população e território devem ser incorporados progressivamente (D1 Q7), sem tornar cada indicador temático obrigatório no núcleo institucional. S02 poderá ser absorvido como controle de S01, com justificativa registrada.
+O número de linhas é uma escolha operacional desta proposta preliminar, **não uma meta quantitativa do projeto**. A primeira matriz candidata concentrou-se em oferta cadastrada, utilização e fluxo. Isso não limita a infraestrutura comum: SIM/SIA, SIGTAP, população e território devem ser incorporados progressivamente (D1 Q7), sem tornar cada indicador temático obrigatório no núcleo institucional. S02 é proposto como apoio de S01, com justificativa registrada. A ordem atual é S03/S04, S01 quando elegível e expansão conforme [plano](plano_operacional.md); não houve homologação dos candidatos.
 
 As seis medidas do piloto também não são as seis famílias analíticas futuras do roadmap. Elas podem excluir `NA` mas contar strings vazias; T02/T06 não impõem recorte mensal e podem reunir competências. Esses limites constam da matriz; não houve mudança no código histórico para fazê-lo coincidir com uma definição futura.
 
 ## Dimensões e evidências
 
-A [avaliação preliminar](avaliacao_preliminar.csv) aplica qualitativamente as dimensões abaixo a cada uma das 12 linhas da matriz. As células descrevem evidência ou lacuna, sem pontuações. A leitura territorial e temporal foi separada para não ocultar que uma única competência não comprova comparabilidade temporal.
+A [avaliação preliminar](avaliacao_preliminar.csv) aplica qualitativamente as dimensões abaixo a cada uma das 16 linhas da matriz. As células descrevem evidência ou lacuna, sem pontuações. A leitura territorial e temporal foi separada para não ocultar que uma única competência não comprova comparabilidade temporal.
 
 | Dimensão | Pergunta de avaliação | Evidência exigida |
 |---|---|---|
@@ -71,7 +74,7 @@ Cadastro não comprova funcionamento, acesso, suficiência, qualidade ou vazio a
 
 ## Regras incorporadas pelos dossiês
 
-O [registro de reconciliação](reconciliacao_dossies.md) distingue método decidido de implementação comprovada. A arquitetura é híbrida: Python preferencial para aquisição/engenharia quando validado; R permanece referência nos componentes já conferidos. As rotinas R existentes e o cache íntegro são reutilizados. PySUS não é requisito científico e sua cobertura é demonstrada por família, sem generalizar sucesso ou falha. Não houve migração nem alteração de AGENTS.md para contornar instruções.
+O [registro de reconciliação](reconciliacao_dossies.md) distingue método decidido de implementação comprovada. A arquitetura é híbrida: Python preferencial para aquisição/engenharia quando validado; R permanece referência nos componentes já conferidos. As rotinas R existentes e o cache íntegro são reutilizados. PySUS não é requisito científico e sua cobertura é demonstrada por família, sem generalizar sucesso ou falha. Não houve migração; AGENTS.md foi alinhado às decisões híbridas já autorizadas, preservando os controles. R permanece onde adequado, sem obrigação de substituição futura.
 
 A configuração institucional não tem período empírico nem CID global. O perfil do TCC separa 2014–2024, grupos cardiovasculares, padronização Brasil 2010, recorte focal e tendência seletiva. A tabela territorial é central; o estudo congela versão/hash e a aplica retrospectivamente. Os quatro nomes regionais e Noroeste 1 como focal já são decisões do D2; sua composição e a data/versão da fonte ainda devem ser verificadas. O contrato antigo de município gestor continua útil para o diagnóstico de 202601 e não é apresentado como localização da oferta.
 

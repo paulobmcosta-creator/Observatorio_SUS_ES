@@ -2,7 +2,9 @@
 
 O **Observatório SUS ES** é uma iniciativa científica e educacional cujo objetivo é monitorar, analisar e divulgar informações sobre a saúde pública no estado do Espírito Santo. A partir de fontes oficiais (SUS, IBGE, ANVISA e outras), desenvolvemos indicadores epidemiológicos, dashboards interativos e mapas temáticos para subsidiar gestores, profissionais de saúde, pesquisadores e a sociedade civil.
 
-Este repositório implementa um _pipeline_ completo de ciência de dados em saúde, desde a coleta de dados brutos até a geração de produtos de visualização. Todas as etapas são documentadas para garantir reprodutibilidade, transparência e aderência às melhores práticas de ciência aberta.
+Este repositório contém um piloto CNES em R, contratos de dados, testes, derivados técnicos conferidos e componentes Python de engenharia. A serialização CSV/Parquet e a paridade com os preparadores R foram verificadas em escopo delimitado. A matriz mínima de indicadores, a aquisição histórica por família e a qualificação do painel ainda dependem de validação e execução próprias; não há um pipeline institucional completo homologado.
+
+O estado vigente está na [revisão crítica e planejamento integral 2026–2027](docs/ciclo_2026_2027/parecer_revisao_integral_2026-10-22.md), com [plano único](docs/ciclo_2026_2027/plano_operacional.md) e [passagem para a segunda revisão](docs/ciclo_2026_2027/segunda_revisao_chatgpt.md). O relatório 2025–2026 permanece encerrado e preservado. O MVP e a variante v2 são produtos externos ainda não reinspecionados; a ausência de seus arquivos neste checkout não significa inexistência.
 
 
 ## Orientação inicial para alunos
@@ -41,7 +43,7 @@ Observatorio_SUS_ES/
 
 1. **Coleta de Dados (`src/extract`)** – Scripts para baixar ou consultar dados em APIs, portais governamentais e bases institucionais. Os dados são armazenados em `data_raw/` com preservação da estrutura original.
 2. **Transformação (`src/transform`)** – Funções para limpeza, normalização e integração de diferentes bases. Resultados intermediários são salvos em `data_interim/`.
-3. **Indicadores (`src/indicators`)** – Implementações de indicadores de saúde (incidência, prevalência, letalidade, cobertura vacinal, entre outros) com fórmulas explícitas e referências metodológicas.
+3. **Indicadores (`src/indicators`)** – Seis medidas técnicas do piloto CNES. Os indicadores substantivos estão especificados na matriz preliminar e dependem de validação documental, operacional e analítica; não se presumem implementações de incidência, prevalência ou desempenho.
 4. **Validação (`src/validation`)** – Scripts que verificam a consistência dos dados (checagem de valores extremos, comparações temporais/geográficas) e testes unitários automatizados em `tests/`.
 5. **Documentação (`docs/`)** – Textos descritivos sobre governança de código, convenções metodológicas, fluxo de trabalho e documentação técnica do CNES.
 6. **Metadados (`metadata/`)** – Dicionários e esquemas usados para garantir padronização e rastreabilidade dos dados.
@@ -50,8 +52,8 @@ Observatorio_SUS_ES/
 
 O Observatório SUS‑ES adota uma **arquitetura híbrida R–Python**.
 
-- **Python/PySUS** passa a ser a camada preferencial para extração, cache, engenharia de dados, organização de bases brutas/intermediárias, uso de Parquet e automação operacional.
-- **R** permanece preservado para validação metodológica, análise estatística, indicadores, produtos acadêmicos e como oráculo temporário durante a transição por paridade.
+- **Python/PySUS** é preferencial para aquisição, cache e engenharia quando a cobertura operacional estiver validada por sistema/família. Parquet e automação preservam a fonte e os contratos; não dispensam prova de equivalência.
+- **R** permanece para validação, análise, indicadores e componentes adequados com manutenção justificável. Não há migração total obrigatória; mudanças são decididas por função e evidência de paridade.
 - **Metadados, schemas, dicionários, testes e documentação** são contratos transversais independentes de linguagem.
 - **Nenhum componente R sensível** será removido sem paridade Python validada e decisão documentada.
 

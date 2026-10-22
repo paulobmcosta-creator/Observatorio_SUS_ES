@@ -41,11 +41,15 @@ Este documento descreve os papéis assumidos por distintos "agentes" (humanos e 
 * **Conformidade com o Guia**: precisam aderir às convenções de codificação, nomenclatura e documentação descritas neste repositório.
 * **Direitos Autorais e Licenças**: garantem que qualquer código ou dado submetido possa ser redistribuído de acordo com a licença do projeto.
 
-## Linguagem principal
+## Arquitetura e escolha de linguagem
 
-O Observatório SUS‑ES adota **R** como linguagem principal para desenvolvimento de pipelines reprodutíveis. Scripts e rotinas devem ser, sempre que possível, escritos em R utilizando as melhores práticas do ecossistema tidyverse e compatíveis com os padrões de reprodução estabelecidos neste repositório.
+O Observatório SUS‑ES adota arquitetura híbrida, conforme Dossiê 1 §§4.2–4.3 e orientação expressa do pesquisador. **Python/PySUS é preferencial para aquisição, cache e engenharia quando houver cobertura operacional validada por sistema e família de arquivos.** A fonte permanece oficial; a preferência não dispensa proveniência, preservação de campos/chaves e comparação metodológica.
 
-O uso de **Python** é permitido apenas quando houver justificativa técnica explícita (por exemplo, ausência de biblioteca equivalente em R) e deve ser devidamente documentado. Em todos os casos, scripts devem utilizar caminhos relativos, registrar logs de execução, manter metadados e seguir as convenções estabelecidas em `docs/convensoes_metodologicas.md`.
+**R permanece onde a implementação é adequada e sua manutenção se justifica**, incluindo validação, análise e componentes de referência. Não há obrigação de migração total. Uma substituição deve demonstrar benefício, custo de adaptação/manutenção e paridade, preservando o componente anterior como referência até a decisão documentada.
+
+Contratos, dicionários, testes e regras sanitárias independem da linguagem. Scripts devem usar caminhos relativos, registrar execução/proveniência e seguir `docs/convensoes_metodologicas.md`. A avaliação por função e as condições de adoção estão em [avaliação de ferramentas](docs/ciclo_2026_2027/avaliacao_ferramentas_2026-10-22.md); a sequência vigente está no [plano operacional](docs/ciclo_2026_2027/plano_operacional.md).
+
+Esta atualização formaliza decisões já autorizadas; preserva revisão metodológica, restrições sobre dados e demais controles. A rodada de revisão integral termina na segunda revisão com o coordenador, antes da implementação ampla, conforme [parecer](docs/ciclo_2026_2027/parecer_revisao_integral_2026-10-22.md).
 
 
 ## Diretrizes para Mensagens de Commit

@@ -1,0 +1,62 @@
+{
+  "data_local": "2026-10-22",
+  "timezone_comunicacao": "America/Sao_Paulo",
+  "instantes_evidencias": "UTC",
+  "base_revisao": "937056af0af34b81d27ec38b608f5356488b46a7",
+  "branch": "feat/ciclo-2026-2027-transicao",
+  "alteracoes_efetivas": "Documentação/governança/matrizes/plano; cópia fiel do prompt; três diagnósticos sintéticos e registros. Nenhum código de produção, configuração analítica, dependência ou dado histórico alterado.",
+  "arquivos_rastreados_alterados": [
+    "AGENTS.md",
+    "README.md",
+    "docs/ciclo_2026_2027/README.md",
+    "docs/ciclo_2026_2027/avaliacao_datahub_2026-10-22.md",
+    "docs/ciclo_2026_2027/avaliacao_ferramentas_2026-10-22.md",
+    "docs/ciclo_2026_2027/avaliacao_preliminar.csv",
+    "docs/ciclo_2026_2027/continuidade_2026-10-22.md",
+    "docs/ciclo_2026_2027/inventario_transicao.csv",
+    "docs/ciclo_2026_2027/matriz_indicadores_preliminar.csv",
+    "docs/ciclo_2026_2027/plano_operacional.md",
+    "docs/ciclo_2026_2027/produtos_recalculo_dossies.csv",
+    "docs/ciclo_2026_2027/protocolo_validacao.md",
+    "docs/ciclo_2026_2027/publicacao/descricao_pull_request.md",
+    "docs/ciclo_2026_2027/publicacao/estado_publicacao.md",
+    "docs/ciclo_2026_2027/reconciliacao_dossies.md",
+    "docs/ciclo_2026_2027/tarefas_operacionais.csv",
+    "docs/cnes/revisao_geral_observatorio_pre_novos_ciclos.md",
+    "docs/cnes/roadmap_tecnico_cnes.md",
+    "docs/indice_repositorio.md"
+  ],
+  "diagnosticos": {
+    "comando_executado": "/workspace/.setup-observatorio/bin/Rscript metadata/ciclo_2026_2027/revisao_integral_20261022/diagnosticos_delimitados.R metadata/ciclo_2026_2027/revisao_integral_20261022/diagnosticos.csv",
+    "saida": 0,
+    "casos": 3,
+    "resultado": "Limitações reproduzidas: origem fixa, gestor prioritário, branco/distinct entre meses; não correções ou validação sanitária."
+  },
+  "consultas_executadas": [
+    "inspeção local de documentos/código/contratos/logs/histórico",
+    "cabeçalho RAW recuperado",
+    "git ls-remote: repositório e pins PySUS/microdatasus/DataHub",
+    "HTTP200 da listagem pública GitHub Actions",
+    "política de rede e conectores disponíveis"
+  ],
+  "resultados_anteriores_reutilizados_sem_reexecucao": [
+    "115 verificações e paridade12.548/1.963",
+    "serialização602.160x56 e auditoria DuckDB",
+    "16 scripts R e55 testes Python locais",
+    "seis casos DataHub"
+  ],
+  "ci_remoto": "R/Python sucesso observado na listagem no commit47bc932; sem leitura do log integral ou atribuição a937056a/final",
+  "codigo_workflows_47bc932_ate_base": "sem diferenças nos caminhos examinados; não equivale a nova execução de CI",
+  "nao_executado": [
+    "aquisição histórica/ampla",
+    "cálculo de novos indicadores substantivos",
+    "migração de linguagem/dependências",
+    "correção produtiva R22/R23",
+    "recálculo de séries",
+    "implantação de painel",
+    "merge",
+    "escrita no relatório encerrado ou originais",
+    "mensagens externas"
+  ],
+  "limite": "Revisão concluída no acervo acessível; O1 externo, referências operacionais e capacidade permanecem pendentes; parar em REV01."
+}

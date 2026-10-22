@@ -1,0 +1,37 @@
+{
+  "head_inicio": "937056af0af34b81d27ec38b608f5356488b46a7",
+  "base_historica": "6478f93a50d03270a78959730221f2ea5a643658",
+  "refs_relacionadas": [
+    {
+      "sha": "937056af0af34b81d27ec38b608f5356488b46a7",
+      "ref": "refs/heads/feat/ciclo-2026-2027-transicao"
+    }
+  ],
+  "main": [
+    {
+      "sha": "6478f93a50d03270a78959730221f2ea5a643658",
+      "ref": "refs/heads/main"
+    }
+  ],
+  "pins_verificados_por_ls_remote": {
+    "DataHub": {
+      "url": "https://github.com/rafa-trindade/kaggle-datahub.git",
+      "head_remoto_observado_em_20261022": "60aa9cbd82509e0595d5c99ec74794e6be1588bd",
+      "igual_pin_anterior": true,
+      "atualizacao_dependencias": false
+    },
+    "PySUS": {
+      "url": "https://github.com/AlertaDengue/PySUS.git",
+      "head_remoto_observado_em_20261022": "47e8371ab85cd00a1373af5965216852c0b11cad",
+      "igual_pin_anterior": true,
+      "atualizacao_dependencias": false
+    },
+    "microdatasus": {
+      "url": "https://github.com/rfsaldanha/microdatasus.git",
+      "head_remoto_observado_em_20261022": "7109ec2c42cf674ba453e0d7a20d2f464890b543",
+      "igual_pin_anterior": true,
+      "atualizacao_dependencias": false
+    }
+  },
+  "pr": "nenhum head de PR coincide com as entregas na consulta; API indisponível, não inferir outros PRs"
+}

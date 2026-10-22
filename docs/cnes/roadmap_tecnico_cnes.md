@@ -1,5 +1,8 @@
 # Roadmap Técnico do Módulo CNES no Observatório SUS-ES
 
+> Referência técnica histórica: o estado e a ordem de ciclos abaixo não representam o planejamento vigente de 2026–2027. Consultar o [plano integral](../ciclo_2026_2027/plano_operacional.md) e o [inventário atualizado](../ciclo_2026_2027/inventario_transicao.csv). Afirmações de disponibilidade e validação devem ser lidas no escopo do registro original.
+
+
 ## 1. Finalidade do roadmap
 
 Este roadmap técnico organiza a evolução do módulo CNES no repositório do Observatório SUS-ES. Ele traduz a visão analítica, os produtos tabulares e as famílias de indicadores do CNES em uma sequência racional de ciclos futuros de desenvolvimento, distinguindo o que deve ser documentado, implementado, testado, versionado em metadados e integrado a outras bases.

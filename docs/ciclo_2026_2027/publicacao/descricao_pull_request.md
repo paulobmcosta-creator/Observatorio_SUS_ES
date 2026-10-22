@@ -1,3 +1,5 @@
+A branch organiza a continuidade do ciclo 2026–2027 com contratos e evidências verificáveis e uma revisão integral de O1–O6 e da agenda herdada. O planejamento encerra em REV01, segunda revisão no ChatGPT com o coordenador, antes de implementação ampla; parecer, tarefas, especificação do primeiro percurso e limites estão em `docs/ciclo_2026_2027/segunda_revisao_chatgpt.md`. O relatório 2025–2026 permanece intacto.
+
 O ciclo 2026–2027 precisava de contratos verificáveis e de uma reconciliação entre o projeto, os dois dossiês e os produtos existentes. Esta mudança incorpora o plano de continuidade, separa o perfil institucional do TCC cardiovascular e acrescenta validações que interrompem o processamento diante de chaves ausentes, duplicidades ou divergências territoriais, preservando o relatório 2025–2026.
 
 ## Entregas
