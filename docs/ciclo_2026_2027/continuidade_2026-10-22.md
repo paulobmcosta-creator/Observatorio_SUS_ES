@@ -1,6 +1,6 @@
 # Continuidade atual — reconciliação e avaliação de ferramentas, 22/10/2026
 
-Branch `feat/ciclo-2026-2027-transicao`; commit-base `6478f93a50d03270a78959730221f2ea5a643658`. O diff local contém as rodadas 1–3, a reconciliação e a avaliação de ferramentas; não houve commit, merge, publicação nem alteração no relatório 2025–2026. Não reiniciar o inventário nem desfazer trabalho anterior.
+Branch `feat/ciclo-2026-2027-transicao`; commit-base `6478f93a50d03270a78959730221f2ea5a643658`. As rodadas 1–3, a reconciliação e a avaliação de ferramentas foram consolidadas e enviadas ao GitHub nos commits `e75e81c` e `47bc932`, após autorização do usuário. O [registro de publicação](publicacao/estado_publicacao.md) distingue branch publicada, PR pendente e ausência de merge. O relatório 2025–2026 permanece intacto. Não reiniciar o inventário nem desfazer trabalho anterior.
 
 ## Ponto exato de retomada
 

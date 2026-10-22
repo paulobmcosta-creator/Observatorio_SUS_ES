@@ -1,5 +1,7 @@
 # Continuidade do Observatório SUS-ES — ciclo 2026–2027
 
+**Publicação:** entregas enviadas à branch `feat/ciclo-2026-2027-transicao`; [estado do envio e preparação do pull request](publicacao/estado_publicacao.md).
+
 Rodada executada em **22/10/2026**, M2 do projeto. Referência: proposta com vigência de 01/09/2026 a 31/08/2027. Os documentos desta pasta são entregas de transição e trabalho preliminar; não são o relatório final nem a matriz regional validada.
 
 **Atualização posterior — rodada 2:** [fonte recuperada, alternativa ao LFS e comparação isolada](rodada_02_armazenamento_cnes.md). R04/R05 foram executadas: cache gzip verificado, schema/fixture corrigidos e 115 verificações aprovadas na nova saída de comparação. Os diagnósticos e evidências da primeira rodada abaixo foram preservados como registro do estado anterior. O próximo trabalho metodológico é R06/R07.
