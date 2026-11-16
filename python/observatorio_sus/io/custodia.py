@@ -85,14 +85,52 @@ def validar_versao(diretorio, identidade=None):
     return calculada, canonico
 
 
+class ErroPromocao(OSError):
+    """Falha com estado observado após a operação; não implica rollback automático."""
+
+    def __init__(self, resultado, causa):
+        super().__init__(f"Promoção {resultado['promocao']}: {type(causa).__name__}")
+        self.resultado = resultado
+
+
+def inspecionar_ponteiro(raiz):
+    """Observar ponteiro e integridade sem modificar estado ou inferir durabilidade."""
+    try:
+        ponteiro = json.loads((Path(raiz) / "CURRENT.json").read_text())
+        identidade = ponteiro["conteudo_id"]
+        if len(identidade) != 64 or any(c not in "0123456789abcdef" for c in identidade):
+            raise ValueError("ID inválido.")
+        validar_versao(Path(raiz) / "versoes" / identidade, identidade)
+        return {"estado": "versao_integra", "conteudo_id": identidade}
+    except FileNotFoundError:
+        return {"estado": "ausente_ou_incompleto", "conteudo_id": None}
+    except (ValueError, KeyError, TypeError, OSError) as erro:
+        return {"estado": "indeterminado", "conteudo_id": None, "erro": type(erro).__name__}
+
+
 def promover(raiz, identidade):
     """Trocar ponteiro somente para versão integral validada, sob lock do chamador."""
     validar_versao(raiz / "versoes" / identidade, identidade)
     temporario = raiz / ("CURRENT." + uuid.uuid4().hex + ".tmp")
+    antes = inspecionar_ponteiro(raiz)
+    fase = "antes_replace"
     try:
         escrever_json(temporario, {"schema": 1, "conteudo_id": identidade})
+        fase = "replace_iniciado"
         os.replace(temporario, raiz / "CURRENT.json")
+        fase = "replace_retornou"
         sincronizar_diretorio(raiz)
+        return {"promocao": "realizada", "durabilidade": "fsync_solicitado_com_sucesso",
+                "ponteiro_ativo": inspecionar_ponteiro(raiz), "rollback_automatico": False}
+    except BaseException as erro:
+        depois = inspecionar_ponteiro(raiz)
+        novo_ativo = depois["estado"] == "versao_integra" and depois["conteudo_id"] == identidade
+        resultado = {"promocao": "versao_integra_ativa" if novo_ativo else
+                     ("nao_realizada" if depois == antes else "indeterminada"),
+                     "durabilidade": "indeterminada" if fase != "antes_replace" else "nao_avaliada",
+                     "fase": fase, "ponteiro_anterior": antes, "ponteiro_ativo": depois,
+                     "rollback_automatico": False}
+        raise ErroPromocao(resultado, erro) from erro
     finally:
         temporario.unlink(missing_ok=True)
 
@@ -157,8 +195,8 @@ def adquirir_conjunto(raiz, esperados, adaptador, *, validar_objeto=None, antes_
             sincronizar_diretorio(eventos)
             if antes_promocao is not None:
                 antes_promocao(versao)
-            promover(raiz, identidade)
-            return {"conteudo_id": identidade, "manifesto": manifesto, "recibo_sha256": sha256_arquivo(arquivo_recibo)}
+            promocao = promover(raiz, identidade)
+            return {"conteudo_id": identidade, "manifesto": manifesto, "recibo_sha256": sha256_arquivo(arquivo_recibo), "promocao": promocao}
         except BaseException as erro:
             # Não apaga a trilha de falha ao remover staging. Nenhum conteúdo de linha é logado.
             eventos = raiz / "recibos"; eventos.mkdir(exist_ok=True)
@@ -166,7 +204,9 @@ def adquirir_conjunto(raiz, esperados, adaptador, *, validar_objeto=None, antes_
             falho = objeto["id"] if "objeto" in locals() else None
             escrever_json(eventos / (uuid.uuid4().hex + ".falha.json"), {
                 "schema": 1, "utc": datetime.now(timezone.utc).isoformat(),
-                "status": "falha_sem_promocao_parcial", "erro": type(erro).__name__,
+                "status": "falha_estado_observado", "erro": type(erro).__name__,
+                "promocao": erro.resultado if isinstance(erro, ErroPromocao) else {
+                    "promocao": "nao_iniciada", "ponteiro_ativo": inspecionar_ponteiro(raiz), "rollback_automatico": False},
                 "motivo": str(erro)[:500], "objetos": [validados.get(o["id"], {
                     "id": o["id"], "status": "falha" if o["id"] == falho else "esperado",
                     "evidencia": "excecao_local; nao_prova_inexistencia_oficial"}) for o in esperados]})

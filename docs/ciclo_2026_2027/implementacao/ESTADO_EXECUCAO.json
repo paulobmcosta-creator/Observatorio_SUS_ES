@@ -1,9 +1,9 @@
 {
   "run_id": "SUSES-IMP-20261116",
-  "mandato_versao": "1.0",
+  "mandato_versao": "1.0 + continuidade cloud v1.1",
   "zip_sha256": "7de4bc9ec44b5891758565a858466f91bd681e51f8584c39ee29d0056da11372",
   "base": "68aa9d084cb7cf3d90c141776ed9f44f378e1372",
-  "checkpoint": "CP-IMP-012",
+  "checkpoint": "CP-IMP-013",
   "tentativas": [
     {
       "problema": "refs_git",
@@ -34,12 +34,12 @@
     "integridade ZIP e 68 hashes verificados"
   ],
   "instrucao_retomada": "Usar RETOMADA.md e a mesma fila; avançar automaticamente; não reabrir investigação encerrada.",
-  "timestamp": "2026-11-16T18:03:38.902180+00:00",
-  "ultima_unidade_confirmada": "Implementação elegível consolidada; PR draft82; CI R/Python aprovado em 954d89f; bloqueios por fonte/artefato/gate humano registrados",
+  "timestamp": "2026-11-16T20:36:34.408675+00:00",
+  "ultima_unidade_confirmada": "Ponte validada 8/8; HEAD remoto confirmado; A01 corrigido e 27 testes aprovados; A07 journal/lock testados",
   "proximas": [
-    "R24: receber layout/DEF/CNV RD202401 e um DBC oficial com manifesto por meio legítimo; validar IDENT e dois leitores antes de S03; não repetir 403 sem nova evidência"
+    "A02 vincular aceite SIH a dataset/manifests/evidências e A03/A04 território/matriz"
   ],
-  "head_observado": "954d89f0a6f9bbaa72ff4afa53b61ab1971873ec",
+  "head_observado": "cd8f43436496bc28f890d77b5a1a868b95a73a56",
   "branch": "feat/implementacao-2026-2027-autonomia",
   "tarefas": {
     "R01": {
@@ -356,6 +356,7 @@
     }
   },
   "commits_confirmados": [
+    "cd8f43436496bc28f890d77b5a1a868b95a73a56 chore(ciclo): selar CP-IMP-012 e registrar PR draft e CI por SHA",
     "954d89f0a6f9bbaa72ff4afa53b61ab1971873ec docs(ciclo): consolidar R11 R13 R14 R26 R33 R37 e pendências dos 52 IDs",
     "d457d073d48afa6184fb5ea1ec9a1b44d3cca2d5 feat(custodia): implementar R08 R16 R19 e ensaiar recuperação REV-A03",
     "230961eb35fc8abb62f090606d9deab2d16f7458 feat(ciclo): integrar CP09, corrigir R22 e reproduzir ponte RUE R28"
@@ -590,6 +591,8 @@
     "docs/ciclo_2026_2027/implementacao/RETOMADA.md",
     "docs/ciclo_2026_2027/implementacao/ROTEIRO_APRESENTACAO.md",
     "docs/ciclo_2026_2027/implementacao/VALIDACAO_PACOTE.json",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/REFERENCIAS_PONTE.csv",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/VALIDACAO_PONTE.json",
     "docs/ciclo_2026_2027/implementacao/evidencias/acessos_oficiais.json",
     "docs/ciclo_2026_2027/implementacao/evidencias/ci_954d89f_concluido.json",
     "docs/ciclo_2026_2027/implementacao/evidencias/ci_954d89f_primeira_consulta.json",
@@ -629,6 +632,7 @@
     "docs/ciclo_2026_2027/tarefas_operacionais.csv",
     "python/observatorio_sus/extract/adquirir_objetos.py",
     "python/observatorio_sus/extract/inventariar_sih_rd.py",
+    "python/observatorio_sus/io/checkpoints.py",
     "python/observatorio_sus/io/custodia.py",
     "python/observatorio_sus/io/manifestos.py",
     "python/observatorio_sus/transform/validar_partes_csv.py",
@@ -649,6 +653,8 @@
     "tests/python/test_custodia.py",
     "tests/python/test_inventario_sih_rd.py",
     "tests/python/test_qualidade_partes_csv.py",
+    "tests/python/test_revisao_a01_promocao.py",
+    "tests/python/test_revisao_a07_checkpoint.py",
     "tests/test_dimensao_rue.R",
     "tests/test_percurso_sih.R",
     "tests/test_proveniencia_temporal_cnes.R"
@@ -660,7 +666,13 @@
     "ci_sha": "954d89f0a6f9bbaa72ff4afa53b61ab1971873ec",
     "ci": "sucesso R/Python observado; não extrapolar HEAD posterior"
   },
-  "status_global": "PARCIAL_COM_BLOQUEIOS",
-  "motivo_interrupcao": "Unidades críticas remanescentes dependem de fontes oficiais negadas, artefatos externos ausentes ou gates humanos/institucionais; preparações independentes entregues.",
-  "pacote_previsto": "/workspace/entregas/Observatorio_SUS_ES_Implementacao_CPIMP012.zip"
+  "status_global": "EM_EXECUCAO",
+  "motivo_interrupcao": null,
+  "pacote_previsto": "/workspace/entregas/Observatorio_SUS_ES_Implementacao_CPIMP012.zip",
+  "continuidade_cloud": {
+    "ponte_sha256": "850ad09dcbecc2ed688641d7f817afd65b092d96079395040caaed27c9bcb5ec",
+    "head_retomada": "cd8f43436496bc28f890d77b5a1a868b95a73a56",
+    "protocolo": "Work cuida de aquisição; Codex implementa sem repetir acessos negados",
+    "mvp_v2_sha256": "8fa73c6a9b00efeda20cfaaffe56e96dc038326af16f3b9a8fa7eb97efc749b1"
+  }
 }

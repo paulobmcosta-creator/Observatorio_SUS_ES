@@ -11,6 +11,10 @@ import json
 import os
 from pathlib import Path
 import subprocess
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "python"))
+from observatorio_sus.io.checkpoints import aplicar_lote, recuperar_lote, conferir_nucleo, hash_bytes
+from observatorio_sus.io.custodia import escritor_unico
 from datetime import datetime, timezone
 
 RAIZ = Path(__file__).resolve().parents[1]
@@ -39,8 +43,11 @@ def serializar_csv(linhas, campos):
     return stream.getvalue()
 
 
-def registrar(checkpoint, unidade, proxima, estados=(), bloqueios=()):
+def _preparar_registro(checkpoint, unidade, proxima, estados=(), bloqueios=()):
     """Atualizar plano/estado e manter cópia anterior; retornar estado validado."""
+    escritas = {}
+    def guardar(caminho, texto):
+        escritas[str(caminho.relative_to(RAIZ))] = texto.encode("utf-8")
     caminho = DOC / "ESTADO_EXECUCAO.json"
     estado = json.loads(caminho.read_text())
     plano = list(csv.DictReader(PLANO.open(encoding="utf-8")))
@@ -54,13 +61,13 @@ def registrar(checkpoint, unidade, proxima, estados=(), bloqueios=()):
     for valor in bloqueios:
         chave, motivo = valor.split("=", 1)
         por_id[chave]["bloqueio_execucao"] = motivo
-    atomico(PLANO, serializar_csv(plano, list(plano[0])))
+    guardar(PLANO, serializar_csv(plano, list(plano[0])))
     campos = ["id", "prioridade", "objetivos", "planos", "tarefa", "dependencias_ids",
               "criterios_aceite", "evidencia_work", "estado_execucao", "bloqueio_execucao",
               "realizacao_implementacao", "parte_restante", "evidencia_implementacao"]
-    atomico(DOC / "FILA_IMPLEMENTACAO.csv", serializar_csv(
+    guardar(DOC / "FILA_IMPLEMENTACAO.csv", serializar_csv(
         [{k: r[k] for k in campos} for r in plano], campos))
-    atomico(DOC / "ESTADO_EXECUCAO.anterior.json", caminho.read_text())
+    guardar(DOC / "ESTADO_EXECUCAO.anterior.json", caminho.read_text())
     estado.update(checkpoint=checkpoint, timestamp=datetime.now(timezone.utc).isoformat(),
                   ultima_unidade_confirmada=unidade, proximas=[proxima],
                   head_observado=subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=RAIZ, text=True).strip(),
@@ -78,12 +85,11 @@ def registrar(checkpoint, unidade, proxima, estados=(), bloqueios=()):
     alterados = subprocess.check_output(["git", "diff", "--name-only", estado["base"]], cwd=RAIZ, text=True).splitlines()
     novos = subprocess.check_output(["git", "ls-files", "--others", "--exclude-standard"], cwd=RAIZ, text=True).splitlines()
     estado["arquivos_implementacao"] = sorted(set(alterados + novos))
-    atomico(caminho, json.dumps(estado, ensure_ascii=False, indent=2) + "\n")
-    assert json.loads(caminho.read_text())["checkpoint"] == checkpoint
+    guardar(caminho, json.dumps(estado, ensure_ascii=False, indent=2) + "\n")
+    assert json.loads(escritas[str(caminho.relative_to(RAIZ))])["checkpoint"] == checkpoint
     log = DOC / "LOG_EXECUCAO.md"
-    with log.open("a", encoding="utf-8") as stream:
-        stream.write(f"\n- {estado['timestamp']} — **{checkpoint}**: {unidade}. Próxima: {proxima}.\n")
-    atomico(DOC / "RETOMADA.md", f"""# Retomada — {checkpoint}
+    guardar(log, log.read_text() + f"\n- {estado['timestamp']} — **{checkpoint}**: {unidade}. Próxima: {proxima}.\n")
+    guardar(DOC / "RETOMADA.md", f"""# Retomada — {checkpoint}
 
 Leia `ESTADO_EXECUCAO.json`, `LOG_EXECUCAO.md` e a fila derivada do plano canônico.
 Confira `git status`, `git log -5 --oneline` e o HEAD observado `{estado['head_observado']}`.
@@ -101,21 +107,54 @@ Gate científico/humano não é substituído por teste sintético.
 Checkpoint: `python scripts/registrar_checkpoint_implementacao.py --checkpoint CP-IMP-NNN --unidade 'resultado comprovado' --proxima 'ação concreta'`.
 Atualize estados com `--estado ID=PARCIAL` e bloqueio com `--bloqueio 'ID=motivo'`.
 """)
-    alvos = sorted({RAIZ / nome for nome in estado["arquivos_implementacao"]
-                    if (RAIZ / nome).is_file() and Path(nome).name != "MANIFESTO_ENTREGAS.csv"})
-    atomico(DOC / "MANIFESTO_ENTREGAS.csv", serializar_csv([
-        {"arquivo": str(p.relative_to(RAIZ)), "bytes": p.stat().st_size,
-         "sha256": hashlib.sha256(p.read_bytes()).hexdigest()} for p in alvos],
-        ["arquivo", "bytes", "sha256"]))
+    ledger = {"schema": 1, "checkpoint": checkpoint, "sha256": {n: hash_bytes(data) for n, data in escritas.items()}}
+    guardar(DOC / "CHECKPOINT_INTEGRIDADE.json", json.dumps(ledger, ensure_ascii=False, indent=2) + "\n")
+    nomes = set(estado["arquivos_implementacao"]) | set(escritas)
+    nomes.discard(str((DOC / "MANIFESTO_ENTREGAS.csv").relative_to(RAIZ)))
+    linhas = []
+    for nome in sorted(nomes):
+        if nome in escritas:
+            data = escritas[nome]
+        elif (RAIZ / nome).is_file():
+            data = (RAIZ / nome).read_bytes()
+        else:
+            continue
+        linhas.append({"arquivo": nome, "bytes": len(data), "sha256": hash_bytes(data)})
+    guardar(DOC / "MANIFESTO_ENTREGAS.csv", serializar_csv(linhas, ["arquivo", "bytes", "sha256"]))
+    aplicar_lote(RAIZ, RAIZ / ".cache/checkpoints", escritas)
+
     return estado
+
+
+def registrar(checkpoint, unidade, proxima, estados=(), bloqueios=(), aceitar_plano_atualizado=False):
+    """Proteger preflight e lote recuperável com lock único de escritor."""
+    with escritor_unico(RAIZ / ".cache/checkpoints"):
+        if (RAIZ / ".cache/checkpoints/ATIVA.json").exists():
+            raise RuntimeError("Checkpoint interrompido: executar --recuperar.")
+        conferir_nucleo(RAIZ, DOC, PLANO, aceitar_plano_atualizado)
+        resultado = _preparar_registro(checkpoint, unidade, proxima, estados, bloqueios)
+        conferir_nucleo(RAIZ, DOC, PLANO)
+        return resultado
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     for nome in ["checkpoint", "unidade", "proxima"]:
-        parser.add_argument("--" + nome, required=True)
+        parser.add_argument("--" + nome, required=False)
     parser.add_argument("--estado", action="append", default=[])
     parser.add_argument("--bloqueio", action="append", default=[])
+    parser.add_argument("--recuperar", action="store_true")
+    parser.add_argument("--verificar", action="store_true")
+    parser.add_argument("--aceitar-plano-atualizado", action="store_true")
     args = parser.parse_args()
-    registrar(args.checkpoint, args.unidade, args.proxima, args.estado, args.bloqueio)
+    if args.recuperar or args.verificar:
+        with escritor_unico(RAIZ / ".cache/checkpoints"):
+            if args.recuperar:
+                recuperar_lote(RAIZ, RAIZ / ".cache/checkpoints")
+            conferir_nucleo(RAIZ, DOC, PLANO)
+        print("Checkpoint coerente e hashes conferidos.")
+        raise SystemExit(0)
+    if not all([args.checkpoint, args.unidade, args.proxima]):
+        parser.error("Informe checkpoint, unidade e próxima ação.")
+    registrar(args.checkpoint, args.unidade, args.proxima, args.estado, args.bloqueio, args.aceitar_plano_atualizado)
     print(args.checkpoint)

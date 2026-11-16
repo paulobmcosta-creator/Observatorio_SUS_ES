@@ -1,0 +1,11 @@
+achado,tarefas,estado,teste_evidencia,resultado,commit,pendencia
+A01,R16|R19,CORRIGIDO_TESTADO,tests/python/test_revisao_a01_promocao.py,27 custódia/3 fronteiras A01; 2 A07 aprovados,a registrar após commit,ensaio real/queda de energia não inferido
+A02,R24|R09|R20,EM_VALIDACAO,,,a registrar após commit,confirmar hipótese e implementar unidade vinculada
+A03,R06|R09,EM_VALIDACAO,,,a registrar após commit,confirmar hipótese e implementar unidade vinculada
+A04,R09|R20,EM_VALIDACAO,,,a registrar após commit,confirmar hipótese e implementar unidade vinculada
+A05,R08|REV-A02,EM_VALIDACAO,,,a registrar após commit,confirmar hipótese e implementar unidade vinculada
+A06,R19|R16,EM_VALIDACAO,,,a registrar após commit,confirmar hipótese e implementar unidade vinculada
+A07,R16|REV-A03,CORRIGIDO_TESTADO,tests/python/test_revisao_a07_checkpoint.py,27 custódia/3 fronteiras A01; 2 A07 aprovados,a registrar após commit,ensaio real/queda de energia não inferido
+A08,R22|R23,EM_VALIDACAO,,,a registrar após commit,confirmar hipótese e implementar unidade vinculada
+A09,R19,EM_VALIDACAO,,,a registrar após commit,confirmar hipótese e implementar unidade vinculada
+A10,REV-A03,EM_VALIDACAO,,,a registrar após commit,confirmar hipótese e implementar unidade vinculada

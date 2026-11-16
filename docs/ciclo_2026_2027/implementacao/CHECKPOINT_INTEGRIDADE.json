@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "checkpoint": "CP-IMP-013",
+  "sha256": {
+    "docs/ciclo_2026_2027/tarefas_operacionais.csv": "1ddab2051dc714bcd8e1f2b2284903db18561dd28950a0fa4aed794daffafdd6",
+    "docs/ciclo_2026_2027/implementacao/FILA_IMPLEMENTACAO.csv": "ad45d5115cae917605ab3f5166cdd4fe065be6c0295e4aa396b67a423778a38c",
+    "docs/ciclo_2026_2027/implementacao/ESTADO_EXECUCAO.anterior.json": "a0326d66e5b4819aa6fab1ed1ede52cd4baafa280e19d0350bb857a327807f69",
+    "docs/ciclo_2026_2027/implementacao/ESTADO_EXECUCAO.json": "34bee9dee2f4ca8c1dea52843b0e886372bbcea5868870a18730bcf63058fd11",
+    "docs/ciclo_2026_2027/implementacao/LOG_EXECUCAO.md": "4e3a2be3f8a5a6beaa9e4f7703708dc41c0c21abb9579c0c5db89e05d03d3e4c",
+    "docs/ciclo_2026_2027/implementacao/RETOMADA.md": "5c480f36196b670a2688c65a0bbdba1c1b105c4bffea8f288fe2d7f6b1dd5b9f"
+  }
+}
