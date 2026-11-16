@@ -29,3 +29,21 @@
 - 2026-11-16T20:36:34.408675+00:00 — **CP-IMP-013**: Ponte validada 8/8; HEAD remoto confirmado; A01 corrigido e 27 testes aprovados; A07 journal/lock testados. Próxima: A02 vincular aceite SIH a dataset/manifests/evidências e A03/A04 território/matriz.
 
 - 2026-11-16T20:43:49.161194+00:00 — **CP-IMP-014**: A02 recusa flags/fixture e exige provas vinculadas; A03 domínio temporal corrigido; A04 OD identificável reconciliada; testes R e SQL aprovados. Próxima: Concluir FTP/esquema/competência e integrar cópia seletiva do MVP V2 com build/testes.
+
+- 2026-11-16T20:45:27.849420+00:00 — **CP-IMP-015**: A05 FTP fake e A06 esquemas testados; A08 aliases exigem evidência; A10 classificação de rede corrigida e isolamento sondado. Próxima: MVP V2: incorporar apenas código/licença compatível, materializar dados locais e executar build/QA.
+
+- 2026-11-16T20:54:39.443969+00:00 — **CP-IMP-016**: MVP V2 seletivo: 21 testes/build aprovados; export e contrato corrigidos; zero percentual separado de ausência para QA; preflight local pronto. Próxima: Executar navegador cloud desktop/mobile e integrar testes R/SQL/Node ao CI.
+
+- 2026-11-16T20:56:18.914274+00:00 — **CP-IMP-017**: CI explícito preparado para A01–A10, R/SQL sem skip e MVP sintético/build; diagnóstico local aprovado; início QA cloud. Próxima: Concluir QA visual e instalação local por armazenamento limitado; executar integração abrangente.
+
+- 2026-11-16T21:07:13.920863+00:00 — **CP-IMP-018**: QA desktop/mobile concluído; 23 testes Node; perfil DBC novo executor em fixture com independência não demonstrada; candidato territorial não promovido. Próxima: Salvar unidades A05 A06 A08 A10 e ambiente/MVP em commits; executar integração abrangente e revisar resultados.
+
+- 2026-11-16T21:08:06.710805+00:00 — **CP-IMP-019**: Fluxo local reusa cache exato e bloqueia antes de rede; crash abrupto de checkpoint recuperável testado; antes de commits de correções. Próxima: Consolidar A08/A10, operação local e MVP com evidências; rodar integração final.
+
+- 2026-11-16T21:09:17.945132+00:00 — **CP-IMP-020**: A08 e A10 preservados em commit; MVP visual ajustado sem alterar fonte; preparação de DBC/candidato territorial testada em escopo técnico. Próxima: Concluir guias locais/contratos, executar integração, atualizar plano e PR #82.
+
+- 2026-11-16T21:11:35.254977+00:00 — **CP-IMP-021**: Guias cloud/local e proveniência MVP preparados; A09 CI ampliado com escopo explícito; antes da integração abrangente. Próxima: Executar suíte Python/R, Node, baselines e build atuais; corrigir somente falhas introduzidas.
+
+- 2026-11-16T21:19:42.304641+00:00 — **CP-IMP-022**: Integração cloud 116 Python e 21 R; V2 23 Node, build e QA aprovados; CLI SIH preparado; mesmos 52 IDs atualizados. Próxima: Commit e push seguro da candidata e CI; consultar novo SHA e gerar recuperação.
+
+- 2026-11-16T21:20:16.112213+00:00 — **CP-IMP-023**: V2 candidata em c97bee0 e CI R SQL Node em 564b7af; provas integradas e plano de 52 IDs consolidados. Próxima: Conferir CI por SHA publicado; resolver falhas reais; gerar ZIP novo com recibo final.

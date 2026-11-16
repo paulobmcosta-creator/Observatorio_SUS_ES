@@ -1,0 +1,10 @@
+{
+  "repositorio": "paulobmcosta-creator/Observatorio_SUS_ES",
+  "branch": "feat/implementacao-2026-2027-autonomia",
+  "base": "feat/ciclo-2026-2027-transicao",
+  "pr": 82,
+  "draft": true,
+  "head_funcional": "564b7af",
+  "ci_novo": "AGUARDANDO_PUSH_CONSULTA_SHA_EXATO",
+  "nota": "CI histórico de cd8f434 não prova novo HEAD; recibo externo do pacote registra SHA publicado e consulta final sem autorreferência."
+}

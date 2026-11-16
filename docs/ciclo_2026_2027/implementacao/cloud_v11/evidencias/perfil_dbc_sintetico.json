@@ -1,0 +1,38 @@
+{
+  "natureza": "fixture_sintetica",
+  "sha256_dbc": "2086c600b509d3554db9aaeeb26878046a3e7f9177544d38678e347f92bb2811",
+  "sha256_dbf": "7dcb84cd8e058ddd6a8e119f8094c75f14223105ade8e9b4117479fcf8a44eeb",
+  "sha256_csv": "a8bdb6df33e8446337e339651d8053de859587a79975cc0e6ad24e437a4bd0a8",
+  "registros_cabecalho": 2,
+  "contagens": {
+    "ativo": 2,
+    "excluido": 0
+  },
+  "perfil_ident": {},
+  "campos": [
+    {
+      "nome": "CODE",
+      "tipo": "C",
+      "tamanho": 4,
+      "decimais": 0
+    },
+    {
+      "nome": "VALUE",
+      "tipo": "N",
+      "tamanho": 19,
+      "decimais": 15
+    },
+    {
+      "nome": "WHEN",
+      "tipo": "D",
+      "tamanho": 8,
+      "decimais": 0
+    }
+  ],
+  "pyreaddbc": "2.0.4",
+  "dbfread": "2.0.7",
+  "encoding_declarado": "latin-1",
+  "preservacao": "células DBF lexicais com padding/marcadores; ativos seguidos de excluídos; estado explícito; sem deduplicação",
+  "independencia": "NAO_DEMONSTRADA; pyreaddbc e wrappers PySUS podem compartilhar descendência blast",
+  "estado": "PERFIL_TECNICO; NAO_APROVA_LAYOUT_COORTE_OU_COBERTURA_NACIONAL"
+}

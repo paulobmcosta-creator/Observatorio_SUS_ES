@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "checkpoint": "CP-IMP-014",
+  "checkpoint": "CP-IMP-023",
   "sha256": {
-    "docs/ciclo_2026_2027/tarefas_operacionais.csv": "1ddab2051dc714bcd8e1f2b2284903db18561dd28950a0fa4aed794daffafdd6",
-    "docs/ciclo_2026_2027/implementacao/FILA_IMPLEMENTACAO.csv": "ad45d5115cae917605ab3f5166cdd4fe065be6c0295e4aa396b67a423778a38c",
-    "docs/ciclo_2026_2027/implementacao/ESTADO_EXECUCAO.anterior.json": "34bee9dee2f4ca8c1dea52843b0e886372bbcea5868870a18730bcf63058fd11",
-    "docs/ciclo_2026_2027/implementacao/ESTADO_EXECUCAO.json": "6ec556a71dd95b35bce336a51c3e169bbb234b9ed4accbd22f46b174b462a273",
-    "docs/ciclo_2026_2027/implementacao/LOG_EXECUCAO.md": "649b398e82b11657ebb870b7db3a1fc6d623064281c26197381eb17c1b58031b",
-    "docs/ciclo_2026_2027/implementacao/RETOMADA.md": "27bb2cb4e631a519b5bbafca5375266c4193d2f232b9d5d6e4b0e367575b49fc"
+    "docs/ciclo_2026_2027/tarefas_operacionais.csv": "3eaf882e2761e0c10b28aca968b0e49dbf68fd1f14ef2e1f959734d286635b8d",
+    "docs/ciclo_2026_2027/implementacao/FILA_IMPLEMENTACAO.csv": "3775da2dff39578efa7ffd1cea08f65eef734718ddcf8bab07876860352394b9",
+    "docs/ciclo_2026_2027/implementacao/ESTADO_EXECUCAO.anterior.json": "b9a7240ce08e4d8a018ec08810231a31686e960bd18e74890271eb162a2bc243",
+    "docs/ciclo_2026_2027/implementacao/ESTADO_EXECUCAO.json": "8be8e68387e29d08aeb35611c17951e4f5ed6fc892f9bb346d907bfa16864102",
+    "docs/ciclo_2026_2027/implementacao/LOG_EXECUCAO.md": "5ff369480d15593a4c63a3d11eee358e50c89c48dcef18829fa0658c0b72fa3e",
+    "docs/ciclo_2026_2027/implementacao/RETOMADA.md": "913b11491db8e2bafbf91f23e80d04508a2878f0d24cfcb8b2c63a7849939e84"
   }
 }

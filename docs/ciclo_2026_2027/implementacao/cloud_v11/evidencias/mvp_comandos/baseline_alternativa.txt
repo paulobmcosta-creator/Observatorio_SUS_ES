@@ -1,0 +1,221 @@
+{
+  "baseline": "baseline-aggregate-requested-without-row-lineage",
+  "status": "REPROVADO",
+  "differences": [
+    {
+      "path": "byCareLine.RUE.validated",
+      "actual": 184,
+      "expected": 94
+    },
+    {
+      "path": "byCareLine.RUE.review",
+      "actual": 36,
+      "expected": 56
+    },
+    {
+      "path": "byCareLine.RUE.total",
+      "actual": 220,
+      "expected": 150
+    },
+    {
+      "path": "byCareLine.UTI / cuidado crítico.validated",
+      "actual": 42,
+      "expected": 74
+    },
+    {
+      "path": "byCareLine.UTI / cuidado crítico.review",
+      "actual": 26,
+      "expected": 45
+    },
+    {
+      "path": "byCareLine.UTI / cuidado crítico.total",
+      "actual": 68,
+      "expected": 119
+    },
+    {
+      "path": "byCareLine.Nefrologia.validated",
+      "actual": 36,
+      "expected": 48
+    },
+    {
+      "path": "byCareLine.Nefrologia.review",
+      "actual": 13,
+      "expected": 29
+    },
+    {
+      "path": "byCareLine.Nefrologia.total",
+      "actual": 49,
+      "expected": 77
+    },
+    {
+      "path": "byCareLine.Oncologia.validated",
+      "actual": 4,
+      "expected": 40
+    },
+    {
+      "path": "byCareLine.Oncologia.review",
+      "actual": 37,
+      "expected": 25
+    },
+    {
+      "path": "byCareLine.Oncologia.total",
+      "actual": 41,
+      "expected": 65
+    },
+    {
+      "path": "byCareLine.Saúde mental.validated",
+      "actual": 35,
+      "expected": 28
+    },
+    {
+      "path": "byCareLine.Saúde mental.review",
+      "actual": 6,
+      "expected": 18
+    },
+    {
+      "path": "byCareLine.Saúde mental.total",
+      "actual": 41,
+      "expected": 46
+    },
+    {
+      "path": "byCareLine.Cardiovascular.validated",
+      "actual": 3,
+      "expected": 14
+    },
+    {
+      "path": "byCareLine.Cardiovascular.review",
+      "actual": 30,
+      "expected": 11
+    },
+    {
+      "path": "byCareLine.Cardiovascular.total",
+      "actual": 33,
+      "expected": 25
+    },
+    {
+      "path": "byCareLine.Outras habilitações estratégicas.validated",
+      "actual": 0,
+      "expected": 6
+    },
+    {
+      "path": "byCareLine.Outras habilitações estratégicas.review",
+      "actual": 49,
+      "expected": 13
+    },
+    {
+      "path": "byCareLine.Outras habilitações estratégicas.total",
+      "actual": 49,
+      "expected": 19
+    },
+    {
+      "path": "byIntermediateRegion.Vitória.total",
+      "actual": 263,
+      "expected": 188
+    },
+    {
+      "path": "byIntermediateRegion.Vitória.validationRate",
+      "actual": 52.47148288973384,
+      "expected": 60.2
+    },
+    {
+      "path": "byIntermediateRegion.Cachoeiro de Itapemirim.total",
+      "actual": null,
+      "expected": 132
+    },
+    {
+      "path": "byIntermediateRegion.Cachoeiro de Itapemirim.validationRate",
+      "actual": null,
+      "expected": 59.8
+    },
+    {
+      "path": "byIntermediateRegion.Colatina.total",
+      "actual": 73,
+      "expected": 106
+    },
+    {
+      "path": "byIntermediateRegion.Colatina.validationRate",
+      "actual": 65.75342465753425,
+      "expected": 61.3
+    },
+    {
+      "path": "byIntermediateRegion.São Mateus.total",
+      "actual": 68,
+      "expected": 75
+    },
+    {
+      "path": "byIntermediateRegion.São Mateus.validationRate",
+      "actual": 72.05882352941177,
+      "expected": 60
+    },
+    {
+      "path": "featuredMunicipalities.Vitória.total",
+      "actual": 102,
+      "expected": 62
+    },
+    {
+      "path": "featuredMunicipalities.Vitória.validated",
+      "actual": 45,
+      "expected": 38
+    },
+    {
+      "path": "featuredMunicipalities.Vitória.validationRate",
+      "actual": 44.11764705882353,
+      "expected": 61.3
+    },
+    {
+      "path": "featuredMunicipalities.Vila Velha.total",
+      "actual": 56,
+      "expected": 38
+    },
+    {
+      "path": "featuredMunicipalities.Vila Velha.validated",
+      "actual": 23,
+      "expected": 24
+    },
+    {
+      "path": "featuredMunicipalities.Vila Velha.validationRate",
+      "actual": 41.07142857142857,
+      "expected": 63.2
+    },
+    {
+      "path": "featuredMunicipalities.Serra.validated",
+      "actual": 25,
+      "expected": 20
+    },
+    {
+      "path": "featuredMunicipalities.Serra.validationRate",
+      "actual": 73.52941176470588,
+      "expected": 58.8
+    },
+    {
+      "path": "featuredMunicipalities.Cachoeiro de Itapemirim.total",
+      "actual": 44,
+      "expected": 27
+    },
+    {
+      "path": "featuredMunicipalities.Cachoeiro de Itapemirim.validated",
+      "actual": 25,
+      "expected": 16
+    },
+    {
+      "path": "featuredMunicipalities.Cachoeiro de Itapemirim.validationRate",
+      "actual": 56.81818181818182,
+      "expected": 59.3
+    },
+    {
+      "path": "featuredMunicipalities.São Mateus.total",
+      "actual": 12,
+      "expected": 23
+    },
+    {
+      "path": "featuredMunicipalities.São Mateus.validated",
+      "actual": 10,
+      "expected": 14
+    },
+    {
+      "path": "featuredMunicipalities.São Mateus.validationRate",
+      "actual": 83.33333333333333,
+      "expected": 60.9
+    }
+  ]
+}

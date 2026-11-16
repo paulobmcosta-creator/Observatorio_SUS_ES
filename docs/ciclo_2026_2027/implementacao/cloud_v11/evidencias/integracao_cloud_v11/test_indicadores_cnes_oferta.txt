@@ -1,0 +1,1 @@
+Testes de indicadores CNES de oferta executados com sucesso.

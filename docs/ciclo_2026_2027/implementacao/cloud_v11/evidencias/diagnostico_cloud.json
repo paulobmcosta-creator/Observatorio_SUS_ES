@@ -1,0 +1,85 @@
+{
+  "sistema": "Linux",
+  "versao_so": "6.18.57",
+  "arquitetura": "x86_64",
+  "cpu_logicos": 3,
+  "ram_total_bytes": 10452459520,
+  "runtimes": {
+    "python": {
+      "caminho": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "versao": "Python 3.12.14",
+      "exit_code": 0
+    },
+    "Rscript": {
+      "caminho": null,
+      "versao": null
+    },
+    "git": {
+      "caminho": "/usr/local/bin/git",
+      "versao": "git version 2.52.0",
+      "exit_code": 0
+    },
+    "node": {
+      "caminho": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "versao": "v24.19.0",
+      "exit_code": 0
+    },
+    "npm": {
+      "caminho": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/npm",
+      "versao": "11.9.0",
+      "exit_code": 0
+    }
+  },
+  "dependencias": {
+    "pyarrow": "19.0.1",
+    "duckdb": "1.5.6",
+    "pandas": "2.3.3",
+    "pysus": "2.0.4",
+    "dbfread": "2.0.7",
+    "pytest": "9.1.1"
+  },
+  "volumes": [
+    {
+      "caminho_configurado": "/workspace/Observatorio_SUS_ES",
+      "ancestral_medido": "/workspace/Observatorio_SUS_ES",
+      "filesystem_id": "27",
+      "total_bytes": 67586535424,
+      "livre_bytes": 63819280384
+    }
+  ],
+  "processos_do_projeto": [
+    {
+      "pid": "636",
+      "nome": "git"
+    },
+    {
+      "pid": "1122",
+      "nome": "git"
+    },
+    {
+      "pid": "2104",
+      "nome": "git"
+    },
+    {
+      "pid": "2257",
+      "nome": "git"
+    },
+    {
+      "pid": "2361",
+      "nome": "git"
+    },
+    {
+      "pid": "2830",
+      "nome": "git"
+    },
+    {
+      "pid": "3015",
+      "nome": "git"
+    },
+    {
+      "pid": "3430",
+      "nome": "python"
+    }
+  ],
+  "escopo": "somente caminhos configurados e nomes de runtimes; sem argumentos/processos pessoais ou busca de arquivos"
+}

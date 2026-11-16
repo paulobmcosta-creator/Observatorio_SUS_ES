@@ -1,0 +1,5 @@
+{
+  "baseline": "cnes-es-202601-packaged-source-v1",
+  "status": "APROVADO",
+  "differences": []
+}

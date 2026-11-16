@@ -46,3 +46,7 @@ Alternativas materiais: receber arquivos oficiais e seus manifestos por meio ins
 Estado, último checkpoint, commits e próxima unidade exata: `ESTADO_EXECUCAO.json` e `RETOMADA.md`. Manifesto de entregas inclui hashes de código, testes, configs e documentos modificados, exceto autorreferência. Branch de trabalho: `feat/implementacao-2026-2027-autonomia`; destino autorizado do PR draft: `feat/ciclo-2026-2027-transicao`. Sem merge ou implantação. O PR draft real é https://github.com/paulobmcosta-creator/Observatorio_SUS_ES/pull/82. Os workflows R e Python retornaram sucesso para o SHA `954d89f0a6f9bbaa72ff4afa53b61ab1971873ec` (evidência `ci_954d89f_concluido.json`). Um checkpoint/documentação posterior terá outro HEAD, sem extrapolação desse sucesso.
 
 O checkpoint final é ponto de recuperação, não declaração de conclusão científica. A suspensão é justificada quando todas as unidades críticas elegíveis dependem de fontes, artefatos ou atos humanos ausentes, após concluir as preparações independentes. A retomada usa os mesmos 52 IDs, sem reiniciar a investigação CP09.
+
+## Continuidade cloud v1.1
+
+Resultados posteriores e limites atuais em [RELATORIO_CLOUD_V11.md](cloud_v11/RELATORIO_CLOUD_V11.md); MVP/QA, revisão A01–A10 e roteiro local no mesmo diretório. A evidência anterior permanece histórica, sem implicar CI do novo SHA.

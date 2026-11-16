@@ -1,0 +1,33 @@
+{
+  "origem_zip_sha256": "8fa73c6a9b00efeda20cfaaffe56e96dc038326af16f3b9a8fa7eb97efc749b1",
+  "natureza": "MVP V2 original preservado fora de Git; cópia selecionada autorizada pelo mandato cloud v1.1",
+  "licenca_original": "sem arquivo LICENSE e sem campo license no pacote; autorização expressa do usuário para integração; dependências seguem suas licenças",
+  "arquivos_origem": {
+    "package.json": "fdfcd6afd4d050657c748527288e80ea41592363c06453af0f711e4c1b2fd087",
+    "package-lock.json": "9fc06a2bf259a057f454f92cc362b0706e39585889645d241ff981356e0beb9f",
+    "vite.config.js": "645d255dc2c536b38cb0c1e2aaa5754263715388b612aed407ef1818b24bd9dd",
+    "index.html": "9e7a9b23d706ee7af2ef4ddce865308d52f13a0dc631866ba2025f5366cc0351",
+    ".nvmrc": "7e8a2fa94951112b894a3dbe3d05efef5e9263741fa49125f0a70f40fedab4cc",
+    "requirements.txt": "507e5cb774b0f36c4ac9ea3494553824e86ea1c747825a8272afe5f6323ee5e3",
+    "src/styles.css": "e1ec37c6a117263b4966ba784f0196035f3ec90d9be5961e83c4431740883db4",
+    "src/metrics.js": "e633e6299a5a2bbb984f7603ea72742d4bb573e8013cb1c1917d501faba610b0",
+    "src/main.jsx": "6e570319ad62606875d35416c0009dddb1811454c21b48528a0a1e35ac74f300",
+    "src/App.jsx": "f5cb6af64d2091ab893a5111f612a2717fad7fdb6db93b2ecfd93fb6b3f2e0cc",
+    "tests/baseline.test.mjs": "d9350ba3035c8b89fbbb90db385acaf97c0ebb88fc96682e70456dfc0b0af474",
+    "tests/metrics.test.mjs": "8ec442ac9c82b368d859950348bb1899757aa55e9cea76f7de0e5161de6e9085",
+    "tests/filters.test.mjs": "5aa3bd05d90b95b0d7ebdd136cecc15e5d0159e4adfba6f8dac6955e3230ab2b",
+    "tests/load-data.mjs": "ea2caa127e89029a6b06c8a59670a212c4f7461d96dd78ada3647bc6a179bc72",
+    "config/baseline_canonical_202601.json": "f285317e698498095780929125bb254bfb7326b666fadb71ea96f68090b5e8a9",
+    "config/baseline_requested_202601.json": "1d72cf9dc7797e54b97f8d44380b18996058926a7aa0e88ae50b86d1d5ed7b9a",
+    "scripts/audit_hardcoding.mjs": "8279d649a2edb6bb4439c630188f05e3b2788bef6cd671493ae5fd2cab326a41",
+    "scripts/check_baseline.mjs": "7f18a37bd5a0770711e495dcf2d994975c8dea752a640f940e14fd2b22da35c1",
+    "scripts/metrics.py": "c37aeb533e357d701e48a065bb274ed96764e3fefc0be6761f61542fa10e4d1c",
+    "scripts/build_manifest.py": "d1aaaaa5c1aad070dce8e841f9a40e7acfa391d5ca551193606745ecb700c3a5",
+    "scripts/process_data.py": "b2d7898d64c3dcf4424d6e900a5e30f0f838ad6e6d0fcdc2b4f256e708509bfb"
+  },
+  "dados_locais": {
+    "caminho": "public/data/mvp-data.json",
+    "sha256": "ffe7e9040dc37799503e3546c4d4e11ad3fee6c137f6420e0eb153058180926a",
+    "versionado_no_git": false
+  }
+}

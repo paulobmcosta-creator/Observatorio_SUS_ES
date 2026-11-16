@@ -1,0 +1,85 @@
+{
+  "utc": "2026-11-16T21:12:07.196187+00:00",
+  "browser_path": "Browser js tool não disponível; autorização cloud do mandato v1.1; Playwright Python + Chromium cloud",
+  "playwright": "1.62.0",
+  "url": "http://127.0.0.1:5173/",
+  "checks": {
+    "mapa_ocupa_viewbox": true,
+    "identidade": true,
+    "nao_vazia": true,
+    "sem_overlay": true,
+    "extensao_completa_sem_mudar_dados": true,
+    "export_tela_tabela": true,
+    "zero_percentual_distinto_de_ausencia": true,
+    "vazio_zero_e_percentual_indefinido": true,
+    "navegacao_metodologia": true,
+    "mobile_sem_transbordamento": true,
+    "console_sem_erros_relevantes": true,
+    "dados_ausentes_estado_explicito": true,
+    "interacao": true,
+    "capturas": true
+  },
+  "interacoes": [
+    "Todos → RUE: 501 → 220; CSV 220 linhas; distintos CSV iguais ao cartão",
+    "RUE → Validado: 184; interseção dos filtros preservada",
+    "Mapa por teclado Enter em Vitória → filtro municipal e cartão reconciliados",
+    "Combinação sem registros → contagem zero, percentual indefinido e estado vazio sem erro"
+  ],
+  "capturas": [
+    {
+      "arquivo": "/workspace/.cache/observatorio-cloud-v11/qa_apos/desktop_inicial.png",
+      "sha256": "bafb028d35ed8e285f46a01d6c53cd799203cebbd0c4ee28abdae3cab59fc5ed"
+    },
+    {
+      "arquivo": "/workspace/.cache/observatorio-cloud-v11/qa_apos/desktop_rue_validado.png",
+      "sha256": "12aaac31e9d15aca5f3985e284c86541b2016a7df7890604f833f66cb4bf0bd5"
+    },
+    {
+      "arquivo": "/workspace/.cache/observatorio-cloud-v11/qa_apos/desktop_vazio.png",
+      "sha256": "9b3ae2b343c219e5f1648803096846edadf22a6cd356e4d4342041f1c8eab5c1"
+    },
+    {
+      "arquivo": "/workspace/.cache/observatorio-cloud-v11/qa_apos/mobile_oncologia.png",
+      "sha256": "82d76c0225698bbd2ecd4773c7beedc5ddb0a13b4e6a29fb921c9de6ecf116aa"
+    }
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ],
+  "pageerrors": [],
+  "mapa_geometria": {
+    "largura": 414,
+    "altura": 108.28001403808594,
+    "viewBox": [
+      3.668800000000001,
+      221.52880000000002,
+      78.7424,
+      116.94239999999996
+    ]
+  },
+  "titulo": "Observatório SUS-ES — Habilitações estratégicas CNES",
+  "mobile_larguras": {
+    "scroll": 390,
+    "client": 390
+  },
+  "console_fluxo_normal": [],
+  "console_teste_ausencia": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ],
+  "nota_console": "404 final deliberado para testar ausência de dados; fluxo normal previamente sem erros",
+  "resultado": "APROVADO"
+}

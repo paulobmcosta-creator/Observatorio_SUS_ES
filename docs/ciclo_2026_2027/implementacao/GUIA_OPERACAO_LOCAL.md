@@ -15,7 +15,7 @@ OBS_RSCRIPT=/workspace/.setup-observatorio/bin/Rscript PYTHONPATH=python .venv/b
 /workspace/.setup-observatorio/bin/Rscript tests/test_percurso_sih.R
 ```
 
-Em instalação nova autorizada, usar Python 3.12, criar venv com `python3.12 -m venv .venv` e instalar `requirements-implementacao.txt` de wheelhouse institucional ou índice permitido: `.venv/bin/python -m pip install -r requirements-implementacao.txt`. Isso **não foi necessário nem executado** nesta rodada; não confundir instrução com ensaio. O roteiro de recuperação abaixo usa apenas stdlib e venv, sem pip ou rede durante o comando. R, PyArrow e OS completos não são reconstruídos por esse roteiro mínimo.
+Em instalação nova autorizada, usar Python 3.12, criar venv com `python3.12 -m venv .venv` e instalar `requirements-implementacao.txt` de wheelhouse institucional ou índice permitido: `.venv/bin/python -m pip install -r requirements-implementacao.txt`. Isso **não foi necessário nem executado** nesta rodada; não confundir instrução com ensaio. O roteiro de recuperação abaixo usa apenas stdlib e venv, sem pip nem dependência de rede identificada por inspeção. **Errata A10/cloud v1.1:** a prova histórica não mediu nem isolou rede; não demonstra ausência de tráfego. `--exigir-isolamento-rede` agora exige isolamento efetivo e falha quando indisponível. R, PyArrow e OS completos não são reconstruídos por esse roteiro mínimo.
 
 ## Backup e ensaio realizado
 
@@ -35,7 +35,7 @@ O destino deve estar ausente ou vazio; o programa recusa sobrescrita. Se houver 
 
 ## Falhas e retorno
 
-Não remover `versoes/` para liberar espaço sem política de retenção. Em falha de parte, consultar `recibos/*.falha.json`; o ponteiro anterior e suas versões permanecem disponíveis. Em erro após selar versão e antes do ponteiro, pode existir versão íntegra sem promoção, o que é recuperável. `retornar_versao(raiz, id)` confere integridade e troca apenas o ponteiro, sob lock; não altera dados históricos.
+Não remover `versoes/` para liberar espaço sem política de retenção. Em falha de parte, consultar `recibos/*.falha.json`; as versões anteriores permanecem disponíveis. **Errata A01:** se a falha ocorrer após `os.replace`, o ponteiro novo pode já estar ativo com versão íntegra e durabilidade indeterminada. Consultar o estado observado no recibo; não presumir rollback automático. Em erro após selar versão e antes do ponteiro, pode existir versão íntegra sem promoção, o que é recuperável. `retornar_versao(raiz, id)` confere integridade e troca apenas o ponteiro, sob lock; não altera dados históricos.
 
 Lock remanescente: ler `escritor.lock/owner.json`, verificar host/PID e confirmar ausência de escritor ativo. Não inferir abandono apenas pela idade ou por PID inexistente em outro host. Só depois de comprovar abandono, mover o diretório do lock para quarentena local com nome novo e registrar a ação. Staging de crash permanece fora do dataset corrente; validar ou quarentenar sem misturar com nova versão. Os testes cobrem crash abrupto antes da promoção e exclusão entre processos; não falta de energia.
 

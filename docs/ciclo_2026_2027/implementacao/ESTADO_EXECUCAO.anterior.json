@@ -3,7 +3,7 @@
   "mandato_versao": "1.0 + continuidade cloud v1.1",
   "zip_sha256": "7de4bc9ec44b5891758565a858466f91bd681e51f8584c39ee29d0056da11372",
   "base": "68aa9d084cb7cf3d90c141776ed9f44f378e1372",
-  "checkpoint": "CP-IMP-013",
+  "checkpoint": "CP-IMP-022",
   "tentativas": [
     {
       "problema": "refs_git",
@@ -34,12 +34,12 @@
     "integridade ZIP e 68 hashes verificados"
   ],
   "instrucao_retomada": "Usar RETOMADA.md e a mesma fila; avançar automaticamente; não reabrir investigação encerrada.",
-  "timestamp": "2026-11-16T20:36:34.408675+00:00",
-  "ultima_unidade_confirmada": "Ponte validada 8/8; HEAD remoto confirmado; A01 corrigido e 27 testes aprovados; A07 journal/lock testados",
+  "timestamp": "2026-11-16T21:19:42.304641+00:00",
+  "ultima_unidade_confirmada": "Integração cloud 116 Python e 21 R; V2 23 Node, build e QA aprovados; CLI SIH preparado; mesmos 52 IDs atualizados",
   "proximas": [
-    "A02 vincular aceite SIH a dataset/manifests/evidências e A03/A04 território/matriz"
+    "Commit e push seguro da candidata e CI; consultar novo SHA e gerar recuperação"
   ],
-  "head_observado": "cd8f43436496bc28f890d77b5a1a868b95a73a56",
+  "head_observado": "2c2cedab5892a58d21ae7b9492a82983e265f670",
   "branch": "feat/implementacao-2026-2027-autonomia",
   "tarefas": {
     "R01": {
@@ -74,9 +74,9 @@
     },
     "R06": {
       "estado": "BLOQUEADA",
-      "bloqueio": "Ato/eficácia/composição municipal oficiais; CONNECT 403",
-      "evidencia": "evidencias/acessos_oficiais.json",
-      "parte_restante": "Ato/eficácia/composição municipal oficiais; CONNECT 403"
+      "bloqueio": "Atos integrais; eficácia; catálogo e correspondência CNES comprovados",
+      "evidencia": "evidencias/acessos_oficiais.json;cloud_v11/RELATORIO_CLOUD_V11.md;cloud_v11/REVISAO_A01_A10.csv",
+      "parte_restante": "Atos integrais; eficácia; catálogo e correspondência CNES comprovados"
     },
     "R07": {
       "estado": "BLOQUEADA",
@@ -86,27 +86,27 @@
     },
     "R08": {
       "estado": "PARCIAL",
-      "bloqueio": "Aquisição DBC oficial e catálogo real das 27 UFs",
-      "evidencia": "CONTRATO_CUSTODIA.md",
-      "parte_restante": "Aquisição DBC oficial e catálogo real das 27 UFs"
+      "bloqueio": "Transporte oficial legítimo; DBC e inventário observado 27 UFs",
+      "evidencia": "CONTRATO_CUSTODIA.md;cloud_v11/RELATORIO_CLOUD_V11.md;cloud_v11/REVISAO_A01_A10.csv",
+      "parte_restante": "Transporte oficial legítimo; DBC e inventário observado 27 UFs"
     },
     "R09": {
       "estado": "PARCIAL",
-      "bloqueio": "Layout/coorte/conversão/cobertura real; S04 também território",
-      "evidencia": "evidencias/integracao_v1/execucao.json",
-      "parte_restante": "Layout/coorte/conversão/cobertura real; S04 também território"
+      "bloqueio": "Layout/coorte; DBC e segunda leitura independente; cobertura nacional; S04 também território",
+      "evidencia": "evidencias/integracao_v1/execucao.json;cloud_v11/RELATORIO_CLOUD_V11.md;cloud_v11/REVISAO_A01_A10.csv",
+      "parte_restante": "Layout/coorte; DBC e segunda leitura independente; cobertura nacional; S04 também território"
     },
     "R10": {
-      "estado": "BLOQUEADA",
-      "bloqueio": "ZIPs MVP v1/v2 não disponíveis localmente",
-      "evidencia": "REQUISITOS_PAINEL.md",
-      "parte_restante": "ZIPs MVP v1/v2 não disponíveis localmente"
+      "estado": "PARCIAL",
+      "bloqueio": "V1 é lacuna arquivística sob busca limitada do Work; não bloqueia V2",
+      "evidencia": "REQUISITOS_PAINEL.md;cloud_v11/RELATORIO_CLOUD_V11.md;cloud_v11/REVISAO_A01_A10.csv",
+      "parte_restante": "V1 é lacuna arquivística sob busca limitada do Work; não bloqueia V2"
     },
     "R11": {
       "estado": "PARCIAL",
-      "bloqueio": "Segundo leitor/operador humano e configuração institucional",
-      "evidencia": "GUIA_OPERACAO_LOCAL.md",
-      "parte_restante": "Segundo leitor/operador humano e configuração institucional"
+      "bloqueio": "Ensaio Windows/local e segundo operador humano; configuração institucional",
+      "evidencia": "GUIA_OPERACAO_LOCAL.md;cloud_v11/RELATORIO_CLOUD_V11.md;cloud_v11/REVISAO_A01_A10.csv",
+      "parte_restante": "Ensaio Windows/local e segundo operador humano; configuração institucional"
     },
     "R12": {
       "estado": "BLOQUEADA",
@@ -134,9 +134,9 @@
     },
     "R16": {
       "estado": "PARCIAL",
-      "bloqueio": "Proveniência/linhagem de primeiro lote DBC oficial real",
-      "evidencia": "CONTRATO_CUSTODIA.md",
-      "parte_restante": "Proveniência/linhagem de primeiro lote DBC oficial real"
+      "bloqueio": "Primeiro lote oficial; contratos/regras documentados por edição",
+      "evidencia": "CONTRATO_CUSTODIA.md;cloud_v11/RELATORIO_CLOUD_V11.md;cloud_v11/REVISAO_A01_A10.csv",
+      "parte_restante": "Primeiro lote oficial; contratos/regras documentados por edição"
     },
     "R17": {
       "estado": "BLOQUEADA",
@@ -152,15 +152,15 @@
     },
     "R19": {
       "estado": "PARCIAL",
-      "bloqueio": "Dois leitores sobre DBC oficial; cobertura real por família",
-      "evidencia": "evidencias/verificacao_custodia/execucao.json",
-      "parte_restante": "Dois leitores sobre DBC oficial; cobertura real por família"
+      "bloqueio": "DBC oficial e dois decodificadores independentes; validação real por família",
+      "evidencia": "evidencias/verificacao_custodia/execucao.json;cloud_v11/RELATORIO_CLOUD_V11.md;cloud_v11/REVISAO_A01_A10.csv",
+      "parte_restante": "DBC oficial e dois decodificadores independentes; validação real por família"
     },
     "R20": {
       "estado": "PARCIAL",
-      "bloqueio": "Limiares por finalidade após dados; pequenas células e divulgação",
-      "evidencia": "CONTRATO_CUSTODIA.md",
-      "parte_restante": "Limiares por finalidade após dados; pequenas células e divulgação"
+      "bloqueio": "Limiares por finalidade e política institucional de pequenas células",
+      "evidencia": "CONTRATO_CUSTODIA.md;cloud_v11/RELATORIO_CLOUD_V11.md;cloud_v11/REVISAO_A01_A10.csv",
+      "parte_restante": "Limiares por finalidade e política institucional de pequenas células"
     },
     "R21": {
       "estado": "BLOQUEADA",
@@ -231,8 +231,8 @@
     "R22": {
       "estado": "CONCLUIDA",
       "bloqueio": "",
-      "evidencia": "evidencias/integracao_v1/test_proveniencia_temporal_cnes.txt",
-      "parte_restante": "Nenhuma no escopo delimitado; snapshot histórico preservado"
+      "evidencia": "evidencias/integracao_v1/test_proveniencia_temporal_cnes.txt;cloud_v11/RELATORIO_CLOUD_V11.md;cloud_v11/REVISAO_A01_A10.csv",
+      "parte_restante": "Nenhuma no escopo delimitado; não demonstra localização física"
     },
     "R23": {
       "estado": "BLOQUEADA",
@@ -242,9 +242,9 @@
     },
     "R24": {
       "estado": "BLOQUEADA",
-      "bloqueio": "Layout/DEF/CNV 202401, domínio IDENT real e documentação",
-      "evidencia": "R24_CONTRATO_SIH_PENDENTE.md",
-      "parte_restante": "Layout/DEF/CNV 202401, domínio IDENT real e documentação"
+      "bloqueio": "Layout/DEF/CNV; domínio IDENT e coorte documentados; inventário 27 UFs; DBC real e paridade independente",
+      "evidencia": "R24_CONTRATO_SIH_PENDENTE.md;cloud_v11/RELATORIO_CLOUD_V11.md;cloud_v11/REVISAO_A01_A10.csv",
+      "parte_restante": "Layout/DEF/CNV; domínio IDENT e coorte documentados; inventário 27 UFs; DBC real e paridade independente"
     },
     "R25": {
       "estado": "BLOQUEADA",
@@ -296,27 +296,27 @@
     },
     "R33": {
       "estado": "PARCIAL",
-      "bloqueio": "Pactuação humana e contratos de dados válidos",
-      "evidencia": "REQUISITOS_PAINEL.md",
-      "parte_restante": "Pactuação humana e contratos de dados válidos"
+      "bloqueio": "Pactuação de perguntas gestoras e contratos científicos válidos",
+      "evidencia": "REQUISITOS_PAINEL.md;cloud_v11/RELATORIO_CLOUD_V11.md;cloud_v11/REVISAO_A01_A10.csv",
+      "parte_restante": "Pactuação de perguntas gestoras e contratos científicos válidos"
     },
     "R34": {
-      "estado": "BLOQUEADA",
-      "bloqueio": "ZIPs MVP e fonte/semântica; baseline divergente",
-      "evidencia": "REQUISITOS_PAINEL.md",
-      "parte_restante": "ZIPs MVP e fonte/semântica; baseline divergente"
+      "estado": "PARCIAL",
+      "bloqueio": "Regionalização sanitária validada e divergência da baseline alternativa",
+      "evidencia": "REQUISITOS_PAINEL.md;cloud_v11/RELATORIO_CLOUD_V11.md;cloud_v11/REVISAO_A01_A10.csv",
+      "parte_restante": "Regionalização sanitária validada e divergência da baseline alternativa"
     },
     "R35": {
-      "estado": "BLOQUEADA",
-      "bloqueio": "Build/browser/código disponível e usabilidade humana real",
-      "evidencia": "REQUISITOS_PAINEL.md",
-      "parte_restante": "Build/browser/código disponível e usabilidade humana real"
+      "estado": "PARCIAL",
+      "bloqueio": "Usabilidade com usuários reais e homologação institucional",
+      "evidencia": "REQUISITOS_PAINEL.md;cloud_v11/RELATORIO_CLOUD_V11.md;cloud_v11/REVISAO_A01_A10.csv",
+      "parte_restante": "Usabilidade com usuários reais e homologação institucional"
     },
     "R36": {
       "estado": "PARCIAL",
-      "bloqueio": "Atualização real e retorno de interface/dados do painel",
-      "evidencia": "evidencias/restauracao_operacional_rue.json",
-      "parte_restante": "Atualização real e retorno de interface/dados do painel"
+      "bloqueio": "Atualização real em segunda competência e retorno de interface/dados validado",
+      "evidencia": "evidencias/restauracao_operacional_rue.json;cloud_v11/RELATORIO_CLOUD_V11.md;cloud_v11/REVISAO_A01_A10.csv",
+      "parte_restante": "Atualização real em segunda competência e retorno de interface/dados validado"
     },
     "R37": {
       "estado": "PARCIAL",
@@ -344,24 +344,243 @@
     },
     "REV-A02": {
       "estado": "PARCIAL",
-      "bloqueio": "Transporte oficial/DBC real e cobertura nacional",
-      "evidencia": "CONTRATO_CUSTODIA.md",
-      "parte_restante": "Transporte oficial/DBC real e cobertura nacional"
+      "bloqueio": "Servidor/DBC oficiais; inventário nacional e segundo mecanismo independente",
+      "evidencia": "CONTRATO_CUSTODIA.md;cloud_v11/RELATORIO_CLOUD_V11.md;cloud_v11/REVISAO_A01_A10.csv",
+      "parte_restante": "Servidor/DBC oficiais; inventário nacional e segundo mecanismo independente"
     },
     "REV-A03": {
       "estado": "PARCIAL",
-      "bloqueio": "Segundo operador humano e ambiente/custódia institucionais",
-      "evidencia": "evidencias/restauracao_operacional_rue.json",
-      "parte_restante": "Segundo operador humano e ambiente/custódia institucionais"
+      "bloqueio": "Segundo operador humano; custódia institucional; isolamento quando exigido",
+      "evidencia": "evidencias/restauracao_operacional_rue.json;cloud_v11/RELATORIO_CLOUD_V11.md;cloud_v11/REVISAO_A01_A10.csv",
+      "parte_restante": "Segundo operador humano; custódia institucional; isolamento quando exigido"
     }
   },
   "commits_confirmados": [
+    "2c2cedab5892a58d21ae7b9492a82983e265f670 feat(autonomia): preparar diagnóstico e lotes locais com limite de armazenamento",
+    "ad1b875ae3ba7419fdd9319c3d4b1139be4dc81f fix(cnes): exigir proveniência de aliases A08 e corrigir evidência de rede A10",
+    "67068019faec4b89bce554aa3c278d6f9986cd55 feat(extract): adicionar FTP nativo A05 e explicitar esquemas distintos A06",
+    "aa144202144207bd406a77fe35150d1c4400c12b fix(sih): vincular evidências A02 e corrigir território e matriz A03 A04",
+    "312ef5c9714cd7e791dbe39f46ba3dd9718fb86b fix(custodia): distinguir promoção incerta A01 e recuperar checkpoints A07",
     "cd8f43436496bc28f890d77b5a1a868b95a73a56 chore(ciclo): selar CP-IMP-012 e registrar PR draft e CI por SHA",
     "954d89f0a6f9bbaa72ff4afa53b61ab1971873ec docs(ciclo): consolidar R11 R13 R14 R26 R33 R37 e pendências dos 52 IDs",
     "d457d073d48afa6184fb5ea1ec9a1b44d3cca2d5 feat(custodia): implementar R08 R16 R19 e ensaiar recuperação REV-A03",
     "230961eb35fc8abb62f090606d9deab2d16f7458 feat(ciclo): integrar CP09, corrigir R22 e reproduzir ponte RUE R28"
   ],
   "comandos_verificados": [
+    {
+      "comando": [
+        "/workspace/Observatorio_SUS_ES/.venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/python",
+        "-q"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_estrutura_repositorio.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_metadata_cnes.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_classificacao_habilitacoes_cnes.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_ler_arquivos_cnes.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_padronizar_cnes_interim.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_validar_pipeline_cnes.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_executar_pipeline_piloto_cnes.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/teste_pipeline_piloto_cnes.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_indicadores_cnes_oferta.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_conferir_contrato_snapshot_cnes.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_cache_cnes.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_correspondencia_territorial.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_fila_revisao_habilitacoes.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_preparadores_sem_descarte.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_dimensao_rue.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_percurso_sih.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_proveniencia_temporal_cnes.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_revisao_a08_cnes.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_territorio_congelado.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_configuracao_dossies.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_revisao_a02_a04_sih.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/execucao.json"
+    },
+    {
+      "comando": [
+        "npm",
+        "test"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/mvp_comandos/execucao.json"
+    },
+    {
+      "comando": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/mvp_comandos/execucao.json"
+    },
+    {
+      "comando": [
+        "node",
+        "scripts/check_baseline.mjs",
+        "config/baseline_canonical_202601.json"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/mvp_comandos/execucao.json"
+    },
+    {
+      "comando": [
+        "node",
+        "scripts/check_baseline.mjs",
+        "config/baseline_requested_202601.json"
+      ],
+      "exit_code": 1,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/mvp_comandos/execucao.json"
+    },
     {
       "comando": [
         "/workspace/Observatorio_SUS_ES/.venv/bin/python",
@@ -566,9 +785,38 @@
   "arquivos_implementacao": [
     ".github/workflows/validar_pipeline_cnes_r.yml",
     ".github/workflows/validar_serializacao_python.yml",
+    "config/operacao_local_linux.exemplo.json",
+    "config/operacao_local_windows.exemplo.json",
+    "dashboards/cnes_habilitacoes_mvp/.gitignore",
+    "dashboards/cnes_habilitacoes_mvp/.nvmrc",
+    "dashboards/cnes_habilitacoes_mvp/README.md",
+    "dashboards/cnes_habilitacoes_mvp/config/baseline_canonical_202601.json",
+    "dashboards/cnes_habilitacoes_mvp/config/baseline_requested_202601.json",
+    "dashboards/cnes_habilitacoes_mvp/index.html",
+    "dashboards/cnes_habilitacoes_mvp/package-lock.json",
+    "dashboards/cnes_habilitacoes_mvp/package.json",
+    "dashboards/cnes_habilitacoes_mvp/public/.gitkeep",
+    "dashboards/cnes_habilitacoes_mvp/requirements.txt",
+    "dashboards/cnes_habilitacoes_mvp/scripts/audit_hardcoding.mjs",
+    "dashboards/cnes_habilitacoes_mvp/scripts/build_manifest.py",
+    "dashboards/cnes_habilitacoes_mvp/scripts/check_baseline.mjs",
+    "dashboards/cnes_habilitacoes_mvp/scripts/materializar_dados_locais.py",
+    "dashboards/cnes_habilitacoes_mvp/scripts/metrics.py",
+    "dashboards/cnes_habilitacoes_mvp/scripts/process_data.py",
+    "dashboards/cnes_habilitacoes_mvp/src/App.jsx",
+    "dashboards/cnes_habilitacoes_mvp/src/main.jsx",
+    "dashboards/cnes_habilitacoes_mvp/src/metrics.js",
+    "dashboards/cnes_habilitacoes_mvp/src/styles.css",
+    "dashboards/cnes_habilitacoes_mvp/tests/baseline.test.mjs",
+    "dashboards/cnes_habilitacoes_mvp/tests/contract.synthetic.test.mjs",
+    "dashboards/cnes_habilitacoes_mvp/tests/filters.test.mjs",
+    "dashboards/cnes_habilitacoes_mvp/tests/load-data.mjs",
+    "dashboards/cnes_habilitacoes_mvp/tests/metrics.test.mjs",
+    "dashboards/cnes_habilitacoes_mvp/vite.config.js",
     "docs/ciclo_2026_2027/README.md",
     "docs/ciclo_2026_2027/implementacao/ACERVO_RECUPERADO_IMPLEMENTACAO.csv",
     "docs/ciclo_2026_2027/implementacao/APROPRIACAO_TECNOLOGICA.csv",
+    "docs/ciclo_2026_2027/implementacao/CHECKPOINT_INTEGRIDADE.json",
     "docs/ciclo_2026_2027/implementacao/CONTRATO_CUSTODIA.md",
     "docs/ciclo_2026_2027/implementacao/DECISOES_R15.md",
     "docs/ciclo_2026_2027/implementacao/ESTADO_EXECUCAO.anterior.json",
@@ -591,8 +839,48 @@
     "docs/ciclo_2026_2027/implementacao/RETOMADA.md",
     "docs/ciclo_2026_2027/implementacao/ROTEIRO_APRESENTACAO.md",
     "docs/ciclo_2026_2027/implementacao/VALIDACAO_PACOTE.json",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/A01_A07.md",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/GUIA_LOCAL_BAIXO_ARMAZENAMENTO.md",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/MVP_PROVENIENCIA.json",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/MVP_QA.md",
     "docs/ciclo_2026_2027/implementacao/cloud_v11/REFERENCIAS_PONTE.csv",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/RELATORIO_CLOUD_V11.md",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/REVISAO_A01_A10.csv",
     "docs/ciclo_2026_2027/implementacao/cloud_v11/VALIDACAO_PONTE.json",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/A10_isolamento.json",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/diagnostico_cloud.json",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/execucao.json",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/python_integracao.txt",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/test_cache_cnes.txt",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/test_classificacao_habilitacoes_cnes.txt",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/test_conferir_contrato_snapshot_cnes.txt",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/test_configuracao_dossies.txt",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/test_correspondencia_territorial.txt",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/test_dimensao_rue.txt",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/test_estrutura_repositorio.txt",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/test_executar_pipeline_piloto_cnes.txt",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/test_fila_revisao_habilitacoes.txt",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/test_indicadores_cnes_oferta.txt",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/test_ler_arquivos_cnes.txt",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/test_metadata_cnes.txt",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/test_padronizar_cnes_interim.txt",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/test_percurso_sih.txt",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/test_preparadores_sem_descarte.txt",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/test_proveniencia_temporal_cnes.txt",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/test_revisao_a02_a04_sih.txt",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/test_revisao_a08_cnes.txt",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/test_territorio_congelado.txt",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/test_validar_pipeline_cnes.txt",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/teste_pipeline_piloto_cnes.txt",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/mvp_comandos/baseline_alternativa.txt",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/mvp_comandos/baseline_canonica.txt",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/mvp_comandos/build.txt",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/mvp_comandos/execucao.json",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/mvp_comandos/node_testes.txt",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/perfil_dbc_sintetico.json",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/qa_mvp_resultado.json",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/sih_cli_negativo.json",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/territorio_candidato_limites.json",
     "docs/ciclo_2026_2027/implementacao/evidencias/acessos_oficiais.json",
     "docs/ciclo_2026_2027/implementacao/evidencias/ci_954d89f_concluido.json",
     "docs/ciclo_2026_2027/implementacao/evidencias/ci_954d89f_primeira_consulta.json",
@@ -632,15 +920,25 @@
     "docs/ciclo_2026_2027/tarefas_operacionais.csv",
     "python/observatorio_sus/extract/adquirir_objetos.py",
     "python/observatorio_sus/extract/inventariar_sih_rd.py",
+    "python/observatorio_sus/io/aceite_sih.py",
     "python/observatorio_sus/io/checkpoints.py",
     "python/observatorio_sus/io/custodia.py",
     "python/observatorio_sus/io/manifestos.py",
+    "python/observatorio_sus/io/operacao_local.py",
     "python/observatorio_sus/transform/validar_partes_csv.py",
     "requirements-implementacao.txt",
+    "scripts/adquirir_lote_controlado.py",
+    "scripts/comparar_reprocessamento_cnes.R",
     "scripts/conferir_celula_oncologia.py",
+    "scripts/conferir_paridade_parquet_r.R",
+    "scripts/diagnosticar_ambiente_local.py",
     "scripts/ensaiar_restauracao_operacional.py",
+    "scripts/executar_percurso_sih_validado.R",
     "scripts/executar_sentinela_rue_sem_dependencias.py",
     "scripts/inventariar_sih_rd.py",
+    "scripts/perfilar_dbc_recebido.py",
+    "scripts/preparar_aceite_sih.py",
+    "scripts/preparar_candidato_territorial.py",
     "scripts/registrar_checkpoint_implementacao.py",
     "scripts/reproduzir_ponte_rue.R",
     "scripts/restaurar_snapshot.py",
@@ -648,16 +946,26 @@
     "src/indicators/calcular_percurso_sih.R",
     "src/indicators/reproduzir_dimensao_rue.R",
     "src/transform/preparar_estabelecimentos_cnes.R",
+    "src/validation/validar_vinculos_sih.R",
     "tests/fixtures/sih/rd_sintetico.csv",
     "tests/python/test_contraprova_sih_sql.py",
     "tests/python/test_custodia.py",
     "tests/python/test_inventario_sih_rd.py",
+    "tests/python/test_lote_controlado.py",
+    "tests/python/test_operacao_local.py",
     "tests/python/test_qualidade_partes_csv.py",
     "tests/python/test_revisao_a01_promocao.py",
+    "tests/python/test_revisao_a02_aceite.py",
+    "tests/python/test_revisao_a05_ftp.py",
+    "tests/python/test_revisao_a06_esquemas.py",
     "tests/python/test_revisao_a07_checkpoint.py",
+    "tests/test_cache_cnes.R",
     "tests/test_dimensao_rue.R",
     "tests/test_percurso_sih.R",
-    "tests/test_proveniencia_temporal_cnes.R"
+    "tests/test_preparadores_sem_descarte.R",
+    "tests/test_proveniencia_temporal_cnes.R",
+    "tests/test_revisao_a02_a04_sih.R",
+    "tests/test_revisao_a08_cnes.R"
   ],
   "publicacao_git": {
     "pr": "https://github.com/paulobmcosta-creator/Observatorio_SUS_ES/pull/82",

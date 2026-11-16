@@ -1,12 +1,12 @@
-# Retomada — CP-IMP-014
+# Retomada — CP-IMP-023
 
 Leia `ESTADO_EXECUCAO.json`, `LOG_EXECUCAO.md` e a fila derivada do plano canônico.
-Confira `git status`, `git log -5 --oneline` e o HEAD observado `312ef5c9714cd7e791dbe39f46ba3dd9718fb86b`.
+Confira `git status`, `git log -5 --oneline` e o HEAD observado `564b7af05fec57f3a71f31d7c1015f893aec3c37`.
 Branch: `feat/implementacao-2026-2027-autonomia`. Não recriar branch nem repetir frentes concluídas.
 
-Última unidade confirmada: A02 recusa flags/fixture e exige provas vinculadas; A03 domínio temporal corrigido; A04 OD identificável reconciliada; testes R e SQL aprovados.
+Última unidade confirmada: V2 candidata em c97bee0 e CI R SQL Node em 564b7af; provas integradas e plano de 52 IDs consolidados.
 
-Próxima unidade exata: **Concluir FTP/esquema/competência e integrar cópia seletiva do MVP V2 com build/testes**.
+Próxima unidade exata: **Conferir CI por SHA publicado; resolver falhas reais; gerar ZIP novo com recibo final**.
 
 Insumos originais e cache autorizado: `/workspace/.cache/observatorio-mandato-cp09/`.
 O ZIP anexado permanece intacto fora da árvore Git. O estado registra seu SHA-256.

@@ -1,11 +1,11 @@
 achado,tarefas,estado,teste_evidencia,resultado,commit,pendencia
-A01,R16|R19,CORRIGIDO_TESTADO,tests/python/test_revisao_a01_promocao.py,27 custódia/3 fronteiras A01; 2 A07 aprovados,a registrar após commit,ensaio real/queda de energia não inferido
-A02,R24|R09|R20,EM_VALIDACAO,,,a registrar após commit,confirmar hipótese e implementar unidade vinculada
-A03,R06|R09,EM_VALIDACAO,,,a registrar após commit,confirmar hipótese e implementar unidade vinculada
-A04,R09|R20,EM_VALIDACAO,,,a registrar após commit,confirmar hipótese e implementar unidade vinculada
-A05,R08|REV-A02,EM_VALIDACAO,,,a registrar após commit,confirmar hipótese e implementar unidade vinculada
-A06,R19|R16,EM_VALIDACAO,,,a registrar após commit,confirmar hipótese e implementar unidade vinculada
-A07,R16|REV-A03,CORRIGIDO_TESTADO,tests/python/test_revisao_a07_checkpoint.py,27 custódia/3 fronteiras A01; 2 A07 aprovados,a registrar após commit,ensaio real/queda de energia não inferido
-A08,R22|R23,EM_VALIDACAO,,,a registrar após commit,confirmar hipótese e implementar unidade vinculada
-A09,R19,EM_VALIDACAO,,,a registrar após commit,confirmar hipótese e implementar unidade vinculada
-A10,REV-A03,EM_VALIDACAO,,,a registrar após commit,confirmar hipótese e implementar unidade vinculada
+A01,R16|R19,CORRIGIDO_TESTADO,tests/python/test_revisao_a01_promocao.py,27 custódia/3 fronteiras A01; 2 A07 aprovados,312ef5c,ensaio real/queda de energia não inferido
+A02,R24|R09|R20,CORRIGIDO_TESTADO_SINTETICO,tests/test_revisao_a02_a04_sih.R;tests/python/test_revisao_a02_aceite.py;tests/python/test_contraprova_sih_sql.py,R e SQL aprovados; fixture/flags/uma UF recusadas; domínio temporal e OD conciliados,aa14420,Leitura DBC e documentos reais ainda indisponíveis; não homologa validade científica
+A03,R06|R09,CORRIGIDO_TESTADO_SINTETICO,tests/test_revisao_a02_a04_sih.R;tests/python/test_revisao_a02_aceite.py;tests/python/test_contraprova_sih_sql.py,R e SQL aprovados; fixture/flags/uma UF recusadas; domínio temporal e OD conciliados,aa14420,Leitura DBC e documentos reais ainda indisponíveis; não homologa validade científica
+A04,R09|R20,CORRIGIDO_TESTADO_SINTETICO,tests/test_revisao_a02_a04_sih.R;tests/python/test_revisao_a02_aceite.py;tests/python/test_contraprova_sih_sql.py,R e SQL aprovados; fixture/flags/uma UF recusadas; domínio temporal e OD conciliados,aa14420,Leitura DBC e documentos reais ainda indisponíveis; não homologa validade científica
+A05,R08|REV-A02,CORRIGIDO_COM_LIMITE_EXPLICITO,tests/python/test_revisao_a05_ftp.py,"FTP fake: multipartes, falha e revisão testadas sem rede oficial",6706801,FTP oficial real não validado; aguardar nova condição legítima
+A06,R19|R16,CORRIGIDO_COM_LIMITE_EXPLICITO,tests/python/test_revisao_a06_esquemas.py,ausência opcional e sobreposição sob esquema desigual registradas sem deduplicar,6706801,Esquemas/edições oficiais exigem documentação real
+A07,R16|REV-A03,CORRIGIDO_TESTADO,tests/python/test_revisao_a07_checkpoint.py,recuperação entre arquivos; conflito preservado; crash subprocesso testado (3 casos),312ef5c;2c2ceda,ensaio real/queda de energia não inferido
+A08,R22|R23,CORRIGIDO_COM_LIMITE_EXPLICITO,tests/test_revisao_a08_cnes.R,alias sem evidência recusado; manifesto/competência; escopo ES protegido,ad1b875,Não amplia a outras UFs nem prova localização física
+A09,R19,IMPLEMENTADO_AGUARDA_CI,.github/workflows/validar_serializacao_python.yml,"Jobs explícitos Python, R/SQL e Node sintético/build; sem afirmar suíte integral no CI",564b7af,Consultar SHA exato após push; QA visual e 17 testes com dados originais são locais
+A10,REV-A03,CORRIGIDO_COM_LIMITE_EXPLICITO,evidencias/A10_isolamento.json,classificação corrigida; unshare indisponível: Operation not permitted; sem escalada,ad1b875,Isolamento técnico e segundo operador humano não demonstrados
