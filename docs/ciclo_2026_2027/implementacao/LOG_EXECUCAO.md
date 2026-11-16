@@ -17,3 +17,5 @@
 - 2026-11-16T17:48:41.262587+00:00 — **CP-IMP-007**: SIH sintético R/SQL conciliado; inventário preserva partes/revisões e não simula consulta oficial; CI ampliado proporcionalmente. Próxima: Documentar interface/ambiente e executar integração; recuperar célula oncológica e modelos de comunicação.
 
 - 2026-11-16T17:53:09.156418+00:00 — **CP-IMP-008**: Integração aprovada: 99 testes Python e 19 scripts R; guia, licenças e contrato documentados; antes de commit. Próxima: Consolidar frentes temáticas e produtos de comunicação; preservar branch remota sem dados.
+
+- 2026-11-16T18:00:01.908763+00:00 — **CP-IMP-009**: Frentes e O1–O6 registradas nos 52 IDs; rascunhos O6 e requisitos MVP prontos; recuperação por CLI e célula oncológica conferidas. Próxima: Revisar materiais publicáveis, commitar R11 R13 R14 R26 R33 R37 e enviar branch/PR draft autorizados.

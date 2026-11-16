@@ -56,7 +56,8 @@ def registrar(checkpoint, unidade, proxima, estados=(), bloqueios=()):
         por_id[chave]["bloqueio_execucao"] = motivo
     atomico(PLANO, serializar_csv(plano, list(plano[0])))
     campos = ["id", "prioridade", "objetivos", "planos", "tarefa", "dependencias_ids",
-              "criterios_aceite", "evidencia_work", "estado_execucao", "bloqueio_execucao"]
+              "criterios_aceite", "evidencia_work", "estado_execucao", "bloqueio_execucao",
+              "realizacao_implementacao", "parte_restante", "evidencia_implementacao"]
     atomico(DOC / "FILA_IMPLEMENTACAO.csv", serializar_csv(
         [{k: r[k] for k in campos} for r in plano], campos))
     atomico(DOC / "ESTADO_EXECUCAO.anterior.json", caminho.read_text())
@@ -64,7 +65,8 @@ def registrar(checkpoint, unidade, proxima, estados=(), bloqueios=()):
                   ultima_unidade_confirmada=unidade, proximas=[proxima],
                   head_observado=subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=RAIZ, text=True).strip(),
                   branch=subprocess.check_output(["git", "branch", "--show-current"], cwd=RAIZ, text=True).strip(),
-                  tarefas={r["id"]: {"estado": r["estado_execucao"], "bloqueio": r["bloqueio_execucao"]} for r in plano})
+                  tarefas={r["id"]: {"estado": r["estado_execucao"], "bloqueio": r["bloqueio_execucao"],
+                           "evidencia": r["evidencia_implementacao"], "parte_restante": r["parte_restante"]} for r in plano})
     estado["commits_confirmados"] = subprocess.check_output(
         ["git", "log", "--format=%H %s", estado["base"] + "..HEAD"], cwd=RAIZ, text=True).splitlines()
     comandos = []
