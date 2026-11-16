@@ -3,7 +3,7 @@
   "mandato_versao": "1.0 + continuidade cloud v1.1",
   "zip_sha256": "7de4bc9ec44b5891758565a858466f91bd681e51f8584c39ee29d0056da11372",
   "base": "68aa9d084cb7cf3d90c141776ed9f44f378e1372",
-  "checkpoint": "CP-IMP-022",
+  "checkpoint": "CP-IMP-023",
   "tentativas": [
     {
       "problema": "refs_git",
@@ -34,12 +34,12 @@
     "integridade ZIP e 68 hashes verificados"
   ],
   "instrucao_retomada": "Usar RETOMADA.md e a mesma fila; avançar automaticamente; não reabrir investigação encerrada.",
-  "timestamp": "2026-11-16T21:19:42.304641+00:00",
-  "ultima_unidade_confirmada": "Integração cloud 116 Python e 21 R; V2 23 Node, build e QA aprovados; CLI SIH preparado; mesmos 52 IDs atualizados",
+  "timestamp": "2026-11-16T21:20:16.112213+00:00",
+  "ultima_unidade_confirmada": "V2 candidata em c97bee0 e CI R SQL Node em 564b7af; provas integradas e plano de 52 IDs consolidados",
   "proximas": [
-    "Commit e push seguro da candidata e CI; consultar novo SHA e gerar recuperação"
+    "Conferir CI por SHA publicado; resolver falhas reais; gerar ZIP novo com recibo final"
   ],
-  "head_observado": "2c2cedab5892a58d21ae7b9492a82983e265f670",
+  "head_observado": "564b7af05fec57f3a71f31d7c1015f893aec3c37",
   "branch": "feat/implementacao-2026-2027-autonomia",
   "tarefas": {
     "R01": {
@@ -356,6 +356,8 @@
     }
   },
   "commits_confirmados": [
+    "564b7af05fec57f3a71f31d7c1015f893aec3c37 test(ci): explicitar contraprova R SQL e contrato sintético do MVP",
+    "c97bee0194a616bbdaf611810e5d09460d766c84 feat(painel): integrar V2 candidata com contrato filtros e exportação testados",
     "2c2cedab5892a58d21ae7b9492a82983e265f670 feat(autonomia): preparar diagnóstico e lotes locais com limite de armazenamento",
     "ad1b875ae3ba7419fdd9319c3d4b1139be4dc81f fix(cnes): exigir proveniência de aliases A08 e corrigir evidência de rede A10",
     "67068019faec4b89bce554aa3c278d6f9986cd55 feat(extract): adicionar FTP nativo A05 e explicitar esquemas distintos A06",
@@ -843,6 +845,7 @@
     "docs/ciclo_2026_2027/implementacao/cloud_v11/GUIA_LOCAL_BAIXO_ARMAZENAMENTO.md",
     "docs/ciclo_2026_2027/implementacao/cloud_v11/MVP_PROVENIENCIA.json",
     "docs/ciclo_2026_2027/implementacao/cloud_v11/MVP_QA.md",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/PUBLICACAO_CLOUD.json",
     "docs/ciclo_2026_2027/implementacao/cloud_v11/REFERENCIAS_PONTE.csv",
     "docs/ciclo_2026_2027/implementacao/cloud_v11/RELATORIO_CLOUD_V11.md",
     "docs/ciclo_2026_2027/implementacao/cloud_v11/REVISAO_A01_A10.csv",

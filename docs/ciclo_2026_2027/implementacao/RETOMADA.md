@@ -1,12 +1,12 @@
-# Retomada — CP-IMP-023
+# Retomada — CP-IMP-024
 
 Leia `ESTADO_EXECUCAO.json`, `LOG_EXECUCAO.md` e a fila derivada do plano canônico.
-Confira `git status`, `git log -5 --oneline` e o HEAD observado `564b7af05fec57f3a71f31d7c1015f893aec3c37`.
+Confira `git status`, `git log -5 --oneline` e o HEAD observado `92ffe551f20e0ef85b62bef48fe2dc7c67e9300c`.
 Branch: `feat/implementacao-2026-2027-autonomia`. Não recriar branch nem repetir frentes concluídas.
 
-Última unidade confirmada: V2 candidata em c97bee0 e CI R SQL Node em 564b7af; provas integradas e plano de 52 IDs consolidados.
+Última unidade confirmada: A01–A10 implementados com limites; V2 e preparo local testados; quatro runs CI success no SHA 92ffe55; servidor QA encerrado.
 
-Próxima unidade exata: **Conferir CI por SHA publicado; resolver falhas reais; gerar ZIP novo com recibo final**.
+Próxima unidade exata: **Receber do Work lote oficial e documentos com origem/hash/inventário; validar custódia e preflight e executar perfil/segunda leitura independente antes de aceite nacional; ou conferir atos territoriais recebidos antes de promover mapa**.
 
 Insumos originais e cache autorizado: `/workspace/.cache/observatorio-mandato-cp09/`.
 O ZIP anexado permanece intacto fora da árvore Git. O estado registra seu SHA-256.

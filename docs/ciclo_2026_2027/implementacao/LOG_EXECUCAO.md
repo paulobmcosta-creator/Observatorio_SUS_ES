@@ -47,3 +47,5 @@
 - 2026-11-16T21:19:42.304641+00:00 — **CP-IMP-022**: Integração cloud 116 Python e 21 R; V2 23 Node, build e QA aprovados; CLI SIH preparado; mesmos 52 IDs atualizados. Próxima: Commit e push seguro da candidata e CI; consultar novo SHA e gerar recuperação.
 
 - 2026-11-16T21:20:16.112213+00:00 — **CP-IMP-023**: V2 candidata em c97bee0 e CI R SQL Node em 564b7af; provas integradas e plano de 52 IDs consolidados. Próxima: Conferir CI por SHA publicado; resolver falhas reais; gerar ZIP novo com recibo final.
+
+- 2026-11-16T21:22:53.244170+00:00 — **CP-IMP-024**: A01–A10 implementados com limites; V2 e preparo local testados; quatro runs CI success no SHA 92ffe55; servidor QA encerrado. Próxima: Receber do Work lote oficial e documentos com origem/hash/inventário; validar custódia e preflight e executar perfil/segunda leitura independente antes de aceite nacional; ou conferir atos territoriais recebidos antes de promover mapa.

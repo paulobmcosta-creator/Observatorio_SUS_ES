@@ -3,7 +3,7 @@
   "mandato_versao": "1.0 + continuidade cloud v1.1",
   "zip_sha256": "7de4bc9ec44b5891758565a858466f91bd681e51f8584c39ee29d0056da11372",
   "base": "68aa9d084cb7cf3d90c141776ed9f44f378e1372",
-  "checkpoint": "CP-IMP-023",
+  "checkpoint": "CP-IMP-024",
   "tentativas": [
     {
       "problema": "refs_git",
@@ -28,18 +28,34 @@
       "comando": "leitura do DOCX recuperado; busca curta e consulta à pasta do acervo",
       "erro": "cadeia original não recuperada; pais não retornados",
       "resultado": "aritmética delimitada aprovada; não repetir busca ampla sem nova pista"
+    },
+    {
+      "problema": "npm_cache_padrao",
+      "erro": "EACCES /home/agent/.npm",
+      "resolucao": "cache explícito /workspace/.cache/npm-observatorio; npm ci concluído; sem alterar permissão global"
+    },
+    {
+      "problema": "isolamento_rede_A10",
+      "comando": "unshare --net -- true",
+      "erro": "Operation not permitted",
+      "proxima_tentativa": "somente ambiente com isolamento autorizado disponível; sem escalada"
+    },
+    {
+      "problema": "hash_fixture_DBC_digitado",
+      "erro": "hash informado divergente, perfil recusado",
+      "resolucao": "medição SHA dos mesmos bytes e nova chamada correta; fixture de 2 registros, não empírica"
     }
   ],
   "evidencias": [
     "integridade ZIP e 68 hashes verificados"
   ],
   "instrucao_retomada": "Usar RETOMADA.md e a mesma fila; avançar automaticamente; não reabrir investigação encerrada.",
-  "timestamp": "2026-11-16T21:20:16.112213+00:00",
-  "ultima_unidade_confirmada": "V2 candidata em c97bee0 e CI R SQL Node em 564b7af; provas integradas e plano de 52 IDs consolidados",
+  "timestamp": "2026-11-16T21:22:53.244170+00:00",
+  "ultima_unidade_confirmada": "A01–A10 implementados com limites; V2 e preparo local testados; quatro runs CI success no SHA 92ffe55; servidor QA encerrado",
   "proximas": [
-    "Conferir CI por SHA publicado; resolver falhas reais; gerar ZIP novo com recibo final"
+    "Receber do Work lote oficial e documentos com origem/hash/inventário; validar custódia e preflight e executar perfil/segunda leitura independente antes de aceite nacional; ou conferir atos territoriais recebidos antes de promover mapa"
   ],
-  "head_observado": "564b7af05fec57f3a71f31d7c1015f893aec3c37",
+  "head_observado": "92ffe551f20e0ef85b62bef48fe2dc7c67e9300c",
   "branch": "feat/implementacao-2026-2027-autonomia",
   "tarefas": {
     "R01": {
@@ -356,6 +372,7 @@
     }
   },
   "commits_confirmados": [
+    "92ffe551f20e0ef85b62bef48fe2dc7c67e9300c docs(ciclo): consolidar CP-IMP-023 evidências cloud e operação local",
     "564b7af05fec57f3a71f31d7c1015f893aec3c37 test(ci): explicitar contraprova R SQL e contrato sintético do MVP",
     "c97bee0194a616bbdaf611810e5d09460d766c84 feat(painel): integrar V2 candidata com contrato filtros e exportação testados",
     "2c2cedab5892a58d21ae7b9492a82983e265f670 feat(autonomia): preparar diagnóstico e lotes locais com limite de armazenamento",
@@ -851,6 +868,7 @@
     "docs/ciclo_2026_2027/implementacao/cloud_v11/REVISAO_A01_A10.csv",
     "docs/ciclo_2026_2027/implementacao/cloud_v11/VALIDACAO_PONTE.json",
     "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/A10_isolamento.json",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/ci_92ffe55.json",
     "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/diagnostico_cloud.json",
     "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/execucao.json",
     "docs/ciclo_2026_2027/implementacao/cloud_v11/evidencias/integracao_cloud_v11/python_integracao.txt",
@@ -971,15 +989,16 @@
     "tests/test_revisao_a08_cnes.R"
   ],
   "publicacao_git": {
-    "pr": "https://github.com/paulobmcosta-creator/Observatorio_SUS_ES/pull/82",
+    "branch": "feat/implementacao-2026-2027-autonomia",
+    "pr": 82,
     "draft": true,
-    "merge": false,
-    "ci_sha": "954d89f0a6f9bbaa72ff4afa53b61ab1971873ec",
-    "ci": "sucesso R/Python observado; não extrapolar HEAD posterior"
+    "sha_ci_comprovado": "92ffe551f20e0ef85b62bef48fe2dc7c67e9300c",
+    "resultado_ci": "SUCESSO_4_RUNS",
+    "nota": "HEAD do commit final e CI final no recibo externo do ZIP; não autorreferente"
   },
-  "status_global": "EM_EXECUCAO",
-  "motivo_interrupcao": null,
-  "pacote_previsto": "/workspace/entregas/Observatorio_SUS_ES_Implementacao_CPIMP012.zip",
+  "status_global": "INTERROMPIDA_SEGURA_POR_INSUMOS_E_ACEITES",
+  "motivo_interrupcao": "Unidades cloud independentes implementadas/testadas; restante depende de insumos oficiais/revisão documental e participação humana já especificados na fila. Sem novas tentativas aos hosts negados.",
+  "pacote_previsto": "Observatorio_SUS_ES_Cloud_v11_CPIMP024.zip",
   "continuidade_cloud": {
     "ponte_sha256": "850ad09dcbecc2ed688641d7f817afd65b092d96079395040caaed27c9bcb5ec",
     "head_retomada": "cd8f43436496bc28f890d77b5a1a868b95a73a56",

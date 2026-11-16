@@ -5,6 +5,9 @@
   "pr": 82,
   "draft": true,
   "head_funcional": "564b7af",
-  "ci_novo": "AGUARDANDO_PUSH_CONSULTA_SHA_EXATO",
-  "nota": "CI histórico de cd8f434 não prova novo HEAD; recibo externo do pacote registra SHA publicado e consulta final sem autorreferência."
+  "ci_novo": "SUCESSO_NO_SHA_CONSULTADO",
+  "nota": "CI histórico de cd8f434 não prova novo HEAD; recibo externo do pacote registra SHA publicado e consulta final sem autorreferência.",
+  "sha_enviado": "92ffe551f20e0ef85b62bef48fe2dc7c67e9300c",
+  "evidencia_ci": "evidencias/ci_92ffe55.json",
+  "observacao": "Commit seguinte altera somente checkpoint/documentação; consultar recibo externo do pacote para o HEAD final e seu CI. Não extrapolar estes checks."
 }
