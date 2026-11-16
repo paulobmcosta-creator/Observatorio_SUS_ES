@@ -1,0 +1,36 @@
+{
+  "id": "baseline-aggregate-requested-without-row-lineage",
+  "status": "reconciliation_target_not_canonical",
+  "competencia": "202601",
+  "global": {
+    "selectedRecords": 501,
+    "distinctEstablishments": 238,
+    "distinctMunicipalities": 78,
+    "distinctQualificationTypes": 91,
+    "validatedRecords": 304,
+    "reviewRecords": 197,
+    "validationRate": 60.7
+  },
+  "byCareLine": {
+    "RUE": { "validated": 94, "review": 56, "total": 150 },
+    "UTI / cuidado crítico": { "validated": 74, "review": 45, "total": 119 },
+    "Nefrologia": { "validated": 48, "review": 29, "total": 77 },
+    "Oncologia": { "validated": 40, "review": 25, "total": 65 },
+    "Saúde mental": { "validated": 28, "review": 18, "total": 46 },
+    "Cardiovascular": { "validated": 14, "review": 11, "total": 25 },
+    "Outras habilitações estratégicas": { "validated": 6, "review": 13, "total": 19 }
+  },
+  "byIntermediateRegion": {
+    "Vitória": { "total": 188, "validationRate": 60.2 },
+    "Cachoeiro de Itapemirim": { "total": 132, "validationRate": 59.8 },
+    "Colatina": { "total": 106, "validationRate": 61.3 },
+    "São Mateus": { "total": 75, "validationRate": 60.0 }
+  },
+  "featuredMunicipalities": {
+    "Vitória": { "total": 62, "validated": 38, "validationRate": 61.3 },
+    "Vila Velha": { "total": 38, "validated": 24, "validationRate": 63.2 },
+    "Serra": { "total": 34, "validated": 20, "validationRate": 58.8 },
+    "Cachoeiro de Itapemirim": { "total": 27, "validated": 16, "validationRate": 59.3 },
+    "São Mateus": { "total": 23, "validated": 14, "validationRate": 60.9 }
+  }
+}

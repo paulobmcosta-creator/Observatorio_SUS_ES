@@ -1,0 +1,37 @@
+{
+  "id": "cnes-es-202601-packaged-source-v1",
+  "status": "canonical_for_supplied_row_level_data",
+  "competencia": "202601",
+  "source_commit": "6478f93a50d03270a78959730221f2ea5a643658",
+  "global": {
+    "selectedRecords": 501,
+    "distinctEstablishments": 238,
+    "distinctMunicipalities": 78,
+    "distinctQualificationTypes": 91,
+    "validatedRecords": 304,
+    "reviewRecords": 197,
+    "validationRate": 60.7
+  },
+  "byCareLine": {
+    "RUE": { "validated": 184, "review": 36, "total": 220 },
+    "UTI / cuidado crítico": { "validated": 42, "review": 26, "total": 68 },
+    "Nefrologia": { "validated": 36, "review": 13, "total": 49 },
+    "Oncologia": { "validated": 4, "review": 37, "total": 41 },
+    "Saúde mental": { "validated": 35, "review": 6, "total": 41 },
+    "Cardiovascular": { "validated": 3, "review": 30, "total": 33 },
+    "Outras habilitações estratégicas": { "validated": 0, "review": 49, "total": 49 }
+  },
+  "byIntermediateRegion": {
+    "Vitória": { "total": 263, "validationRate": 52.5 },
+    "Cachoeiro do Itapemirim": { "total": 97, "validationRate": 71.1 },
+    "Colatina": { "total": 73, "validationRate": 65.8 },
+    "São Mateus": { "total": 68, "validationRate": 72.1 }
+  },
+  "featuredMunicipalities": {
+    "Vitória": { "total": 102, "validated": 45, "validationRate": 44.1 },
+    "Vila Velha": { "total": 56, "validated": 23, "validationRate": 41.1 },
+    "Serra": { "total": 34, "validated": 25, "validationRate": 73.5 },
+    "Cachoeiro de Itapemirim": { "total": 44, "validated": 25, "validationRate": 56.8 },
+    "São Mateus": { "total": 12, "validated": 10, "validationRate": 83.3 }
+  }
+}
