@@ -43,13 +43,18 @@ def serializar_csv(linhas, campos):
     return stream.getvalue()
 
 
-def _preparar_registro(checkpoint, unidade, proxima, estados=(), bloqueios=()):
+def _preparar_registro(checkpoint, unidade, proxima, estados=(), bloqueios=(), metadados=None):
     """Atualizar plano/estado e manter cópia anterior; retornar estado validado."""
     escritas = {}
     def guardar(caminho, texto):
         escritas[str(caminho.relative_to(RAIZ))] = texto.encode("utf-8")
     caminho = DOC / "ESTADO_EXECUCAO.json"
     estado = json.loads(caminho.read_text())
+    if metadados:
+        permitidos = {"status_global", "motivo_interrupcao", "publicacao_git", "pacote_previsto", "tentativas", "continuidade_cloud", "mandato_versao"}
+        if set(metadados) - permitidos:
+            raise ValueError("Metadados não podem substituir tarefas/identidade de checkpoint.")
+        estado.update(metadados)
     plano = list(csv.DictReader(PLANO.open(encoding="utf-8")))
     por_id = {r["id"]: r for r in plano}
     assert len(por_id) == len(plano) == 52
@@ -126,13 +131,13 @@ Atualize estados com `--estado ID=PARCIAL` e bloqueio com `--bloqueio 'ID=motivo
     return estado
 
 
-def registrar(checkpoint, unidade, proxima, estados=(), bloqueios=(), aceitar_plano_atualizado=False):
+def registrar(checkpoint, unidade, proxima, estados=(), bloqueios=(), aceitar_plano_atualizado=False, metadados=None):
     """Proteger preflight e lote recuperável com lock único de escritor."""
     with escritor_unico(RAIZ / ".cache/checkpoints"):
         if (RAIZ / ".cache/checkpoints/ATIVA.json").exists():
             raise RuntimeError("Checkpoint interrompido: executar --recuperar.")
         conferir_nucleo(RAIZ, DOC, PLANO, aceitar_plano_atualizado)
-        resultado = _preparar_registro(checkpoint, unidade, proxima, estados, bloqueios)
+        resultado = _preparar_registro(checkpoint, unidade, proxima, estados, bloqueios, metadados)
         conferir_nucleo(RAIZ, DOC, PLANO)
         return resultado
 
@@ -146,6 +151,7 @@ if __name__ == "__main__":
     parser.add_argument("--recuperar", action="store_true")
     parser.add_argument("--verificar", action="store_true")
     parser.add_argument("--aceitar-plano-atualizado", action="store_true")
+    parser.add_argument("--metadados", type=Path, help="JSON de campos operacionais permitidos, aplicado na mesma geração")
     args = parser.parse_args()
     if args.recuperar or args.verificar:
         with escritor_unico(RAIZ / ".cache/checkpoints"):
@@ -156,5 +162,6 @@ if __name__ == "__main__":
         raise SystemExit(0)
     if not all([args.checkpoint, args.unidade, args.proxima]):
         parser.error("Informe checkpoint, unidade e próxima ação.")
-    registrar(args.checkpoint, args.unidade, args.proxima, args.estado, args.bloqueio, args.aceitar_plano_atualizado)
+    registrar(args.checkpoint, args.unidade, args.proxima, args.estado, args.bloqueio, args.aceitar_plano_atualizado,
+              json.loads(args.metadados.read_text()) if args.metadados else None)
     print(args.checkpoint)

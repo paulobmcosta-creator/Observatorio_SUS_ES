@@ -95,7 +95,8 @@ def conferir_nucleo(raiz, doc, plano, aceitar_plano_atualizado=False):
     p = list(csv.DictReader(plano.open(encoding="utf-8")))
     q = list(csv.DictReader((doc / "FILA_IMPLEMENTACAO.csv").open(encoding="utf-8")))
     estado = json.loads((doc / "ESTADO_EXECUCAO.json").read_text())
-    if len(p) != 52 or len({r["id"] for r in p}) != 52 or {r["id"] for r in p} != {r["id"] for r in q}:
+    esperados = {f"R{i:02}" for i in range(1, 39)} | {f"T{i:02}" for i in range(1, 11)} | {"REV01", "REV-A01", "REV-A02", "REV-A03"}
+    if len(p) != 52 or len(q) != 52 or {r["id"] for r in p} != esperados or {r["id"] for r in q} != esperados:
         raise ValueError("Plano/fila devem preservar exatamente 52 IDs únicos.")
     if not aceitar_plano_atualizado and {r["id"]: r["estado_execucao"] for r in p} != {r["id"]: r["estado_execucao"] for r in q}:
         raise ValueError("Plano/fila divergentes; declarar edição canônica ou recuperar geração.")

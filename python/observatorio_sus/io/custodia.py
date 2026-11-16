@@ -25,11 +25,14 @@ def sha256_arquivo(caminho):
 
 def sincronizar_diretorio(caminho):
     """Solicitar fsync de diretório POSIX; erro impede afirmar sucesso durável."""
+    if os.name == "nt":
+        return False  # stdlib não fornece fsync portátil de diretório Windows.
     fd = os.open(caminho, os.O_RDONLY | os.O_DIRECTORY)
     try:
         os.fsync(fd)
     finally:
         os.close(fd)
+    return True
 
 
 def escrever_json(caminho, valor):
@@ -100,12 +103,15 @@ def inspecionar_ponteiro(raiz):
         identidade = ponteiro["conteudo_id"]
         if len(identidade) != 64 or any(c not in "0123456789abcdef" for c in identidade):
             raise ValueError("ID inválido.")
-        validar_versao(Path(raiz) / "versoes" / identidade, identidade)
-        return {"estado": "versao_integra", "conteudo_id": identidade}
     except FileNotFoundError:
-        return {"estado": "ausente_ou_incompleto", "conteudo_id": None}
+        return {"estado": "ponteiro_ausente", "conteudo_id": None}
     except (ValueError, KeyError, TypeError, OSError) as erro:
         return {"estado": "indeterminado", "conteudo_id": None, "erro": type(erro).__name__}
+    try:
+        validar_versao(Path(raiz) / "versoes" / identidade, identidade)
+        return {"estado": "versao_integra", "conteudo_id": identidade}
+    except (OSError, ValueError, KeyError, TypeError) as erro:
+        return {"estado": "versao_nao_integra_ou_ausente", "conteudo_id": identidade, "erro": type(erro).__name__}
 
 
 def promover(raiz, identidade):
@@ -119,8 +125,8 @@ def promover(raiz, identidade):
         fase = "replace_iniciado"
         os.replace(temporario, raiz / "CURRENT.json")
         fase = "replace_retornou"
-        sincronizar_diretorio(raiz)
-        return {"promocao": "realizada", "durabilidade": "fsync_solicitado_com_sucesso",
+        sincronizado = sincronizar_diretorio(raiz)
+        return {"promocao": "realizada", "durabilidade": "nao_comprovada_nesta_plataforma" if sincronizado is False else "fsync_solicitado_com_sucesso",
                 "ponteiro_ativo": inspecionar_ponteiro(raiz), "rollback_automatico": False}
     except BaseException as erro:
         depois = inspecionar_ponteiro(raiz)
@@ -135,7 +141,7 @@ def promover(raiz, identidade):
         temporario.unlink(missing_ok=True)
 
 
-def adquirir_conjunto(raiz, esperados, adaptador, *, validar_objeto=None, antes_promocao=None):
+def adquirir_conjunto(raiz, esperados, adaptador, *, validar_objeto=None, antes_promocao=None, antes_objeto=None):
     """Adquirir cada objeto por adaptador.abrir(objeto), validar e promover integralmente.
 
     esperados: objetos do contrato com bytes/sha256 opcionais (None), URIs e
@@ -154,6 +160,8 @@ def adquirir_conjunto(raiz, esperados, adaptador, *, validar_objeto=None, antes_
         objetos, recibos = [], []
         try:
             for objeto in sorted(esperados, key=lambda o: o["id"]):
+                if antes_objeto:
+                    antes_objeto(objeto)
                 arquivo = staging / "objetos" / objeto["caminho"]
                 arquivo.parent.mkdir(parents=True, exist_ok=True)
                 digest, tamanho = hashlib.sha256(), 0

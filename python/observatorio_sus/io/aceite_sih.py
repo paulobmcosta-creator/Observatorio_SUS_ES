@@ -77,7 +77,8 @@ def conferir_provas(arquivo):
     for papel, prova in [("conversão", conversao), ("paridade", paridade)]:
         if set(prova["raw_ids"]) != ids or prova["csv_sha256"] != plano["derivado"]["sha256"]:
             raise ValueError(papel + " não cobre todas as partes/derivado.")
-    if paridade.get("resultado") != "COINCIDE" or len(set(paridade["mecanismos_leitura"])) < 2:
+    if (paridade.get("resultado") != "COINCIDE" or len(set(paridade["mecanismos_leitura"])) < 2 or
+        len(set(paridade.get("decodificadores", []))) < 2):
         raise ValueError("Paridade deve identificar dois mecanismos de leitura e reconciliar os mesmos bytes.")
     for r in paridade["balancos_por_parte"]:
         if r["cabecalho"] != r["ativos"] + r["excluidos"] or r["perdas_nao_explicadas"] != 0:
