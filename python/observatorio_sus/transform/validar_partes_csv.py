@@ -42,7 +42,7 @@ def avaliar_regra(id, versao, universo, violacoes, *, criterio, limite=0, aplica
                 violacoes=violacoes, criterio=criterio, limite=limite, estado=estado, motivo=motivo)
 
 
-def validar_partes_csv(partes, campos_obrigatorios, campos_aprovados, *, encoding="utf-8", delimitador=","):
+def validar_partes_csv(partes, campos_obrigatorios, campos_aprovados, *, encoding="utf-8", delimitador=",", contrato_edicao=None, dir_temporario=None):
     """Perfilar CSVs por parte; comparar esquema e linhas inteiras entre partes.
 
     partes: dict ID→Path. Retorna contagens, campos novos e estado de sobreposição.
@@ -52,10 +52,12 @@ def validar_partes_csv(partes, campos_obrigatorios, campos_aprovados, *, encodin
     """
     if not partes or not campos_obrigatorios or not set(campos_obrigatorios).issubset(campos_aprovados):
         raise ValueError("Partes ou contrato de campos obrigatório ausente.")
-    resumo, total, sobrepostas = [], 0, 0
-    with tempfile.TemporaryDirectory(prefix="observatorio_sobreposicao_") as temporario:
+    resumo, total, sobrepostas, potenciais = [], 0, 0, 0
+    dominios = set()
+    with tempfile.TemporaryDirectory(prefix="observatorio_sobreposicao_", dir=dir_temporario) as temporario:
         with sqlite3.connect(Path(temporario) / "linhas.sqlite") as banco:
             banco.execute("CREATE TABLE linhas (hash TEXT PRIMARY KEY, parte TEXT NOT NULL)")
+            banco.execute("CREATE TABLE projecoes (hash TEXT, parte TEXT, schema TEXT, UNIQUE(hash, parte, schema))")
             for parte, arquivo in sorted(partes.items()):
                 antes = sha256(arquivo)
                 with abrir_csv(arquivo, encoding) as stream:
@@ -67,6 +69,16 @@ def validar_partes_csv(partes, campos_obrigatorios, campos_aprovados, *, encodin
                     novos = sorted(set(campos) - set(campos_aprovados))
                     if faltantes or novos:
                         raise ValueError(f"Esquema exige decisão: parte={parte}; faltantes={faltantes}; novos={novos}")
+                    esquema = tuple(sorted(campos)); dominios.add(esquema)
+                    ausentes_opcionais = sorted(set(campos_aprovados) - set(campos))
+                    decisao = None
+                    if contrato_edicao is not None:
+                        if not contrato_edicao.get("id") or not contrato_edicao.get("evidencia"):
+                            raise ValueError("Contrato por edição exige ID/evidência.")
+                        decisao = contrato_edicao["partes"].get(parte)
+                        if not decisao or sorted(decisao["campos"]) != sorted(campos):
+                            raise ValueError("Esquema diverge do contrato da edição: " + parte)
+                    schema_digest = hashlib.sha256(json_canonico(esquema)).hexdigest()
                     n, sobreposicao = 0, 0
                     ordem = sorted(range(len(campos)), key=lambda i: campos[i])
                     for linha in leitor:
@@ -78,13 +90,26 @@ def validar_partes_csv(partes, campos_obrigatorios, campos_aprovados, *, encodin
                         if existe and existe[0] != parte:
                             sobreposicao += 1
                         banco.execute("INSERT OR IGNORE INTO linhas VALUES (?, ?)", (digest, parte))
+                        comuns = hashlib.sha256(json_canonico([[c, linha[campos.index(c)]] for c in sorted(campos_obrigatorios)])).hexdigest()
+                        potenciais += banco.execute("SELECT COUNT(*) FROM projecoes WHERE hash=? AND parte!=? AND schema!=?",
+                                                   (comuns, parte, schema_digest)).fetchone()[0]
+                        banco.execute("INSERT OR IGNORE INTO projecoes VALUES (?,?,?)", (comuns, parte, schema_digest))
                         n += 1
                 if sha256(arquivo) != antes:
                     raise ValueError("Fonte alterada durante perfilamento.")
                 banco.commit()
                 resumo.append(dict(id=parte, linhas=n, campos=campos, sha256=antes,
+                                   campos_opcionais_ausentes=ausentes_opcionais,
+                                   edicao=contrato_edicao["id"] if contrato_edicao else None,
+                                   decisao_esquema=decisao,
                                    linhas_sobrepostas_com_parte_anterior=sobreposicao))
                 total += n; sobrepostas += sobreposicao
-    return dict(partes=resumo, linhas=total, sobreposicoes=sobrepostas,
-                estado="PENDENTE" if sobrepostas else "APROVADO",
-                motivo="Sobreposição requer classificação documental; nenhuma linha removida." if sobrepostas else "Sem sobreposição exata entre partes.")
+    heterogeneo = len(dominios) > 1
+    return dict(partes=resumo, linhas=total, sobreposicoes=sobrepostas, esquemas_heterogeneos=heterogeneo,
+                potenciais_sobreposicoes_sob_esquemas_distintos=potenciais,
+                estado="PENDENTE" if sobrepostas or potenciais or (heterogeneo and contrato_edicao is None) else "APROVADO",
+                escopo="conformidade_tecnica; equivalencia_semantica_nao_inferida",
+                motivo=("Sobreposição requer classificação documental; nenhuma linha removida." if sobrepostas else
+                        "Projeções coincidentes sob esquemas distintos exigem análise; não são duplicatas confirmadas." if potenciais else
+                        "Esquemas heterogêneos sem contrato da edição exigem decisão." if heterogeneo and contrato_edicao is None else
+                        "Conformidade técnica no contrato declarado; equivalência não inferida."))

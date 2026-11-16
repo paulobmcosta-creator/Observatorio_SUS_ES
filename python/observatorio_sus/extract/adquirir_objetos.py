@@ -9,6 +9,9 @@ from contextlib import contextmanager
 from datetime import datetime, timezone
 from pathlib import Path
 import platform
+import ftplib
+from contextlib import closing
+from urllib.parse import unquote, quote
 from urllib.parse import urlparse
 from urllib.request import HTTPRedirectHandler, Request, build_opener
 
@@ -81,3 +84,83 @@ class HTTPSOficial:
                     if valor is not None and valor != depois.headers.get(chave):
                         raise ValueError("Objeto oficial mudou durante aquisição: " + chave)
             metadata["verificacao_revisao"] = "HEAD_depois; sem_headers_nao_prova_estabilidade"
+
+
+class FTPOficial:
+    """FTP stdlib pela rota explícita do inventário, sem conversão presumida a HTTPS.
+
+    Começa sequencial e sem retries. A injeção de fábrica permite ensaio sem rede.
+    FTP anônimo não oferece autenticação criptográfica do servidor/conteúdo.
+    """
+
+    def __init__(self, hosts_oficiais=("ftp.datasus.gov.br",), timeout=30, fabrica=ftplib.FTP):
+        self.hosts = frozenset(hosts_oficiais)
+        self.timeout, self.fabrica = timeout, fabrica
+
+    def _uri(self, uri):
+        p = urlparse(uri)
+        caminho = unquote(p.path)
+        if (p.scheme != "ftp" or p.hostname not in self.hosts or p.username or p.password or p.query or p.fragment or
+            not caminho.startswith("/") or ".." in caminho.split("/") or any(c in caminho for c in "\r\n\x00")):
+            raise ValueError("URI FTP fora da origem/caminho documentados.")
+        return p, caminho
+
+    @contextmanager
+    def _conectar(self, partes):
+        cliente = self.fabrica()
+        try:
+            cliente.connect(partes.hostname, partes.port or 21, timeout=self.timeout)
+            cliente.login("anonymous", "anonymous@")
+            cliente.voidcmd("TYPE I")
+            yield cliente
+        finally:
+            cliente.close()
+
+    def _revisao(self, cliente, caminho):
+        def observar(funcao):
+            try:
+                return funcao()
+            except ftplib.error_perm as erro:
+                if str(erro).startswith(("500", "502")):
+                    return None  # Servidor não oferece esse metadado; não afirmar estabilidade.
+                raise
+        return {"size": observar(lambda: cliente.size(caminho)),
+                "mdtm": observar(lambda: cliente.sendcmd("MDTM " + caminho))}
+
+    @contextmanager
+    def abrir(self, objeto):
+        uri = objeto["uri_oficial"]
+        partes, caminho = self._uri(uri)
+        with self._conectar(partes) as cliente:
+            antes = self._revisao(cliente, caminho)
+            metadata = dict(uri_oficial=uri, uri_efetiva=uri, transporte="ftp_nativo", cliente="ftplib",
+                            versao_cliente=platform.python_version(), data_utc=datetime.now(timezone.utc).isoformat(),
+                            revisao_antes=antes, origem_autenticada=False,
+                            evidencia_origem=objeto.get("evidencia_origem", "pendente"),
+                            headers={"Content-Length": str(antes["size"])} if antes["size"] is not None else {})
+            with closing(cliente.transfercmd("RETR " + caminho)) as socket_dados:
+                with socket_dados.makefile("rb") as stream:
+                    yield stream, metadata
+            cliente.voidresp()
+            depois = self._revisao(cliente, caminho)
+            if antes != depois:
+                raise ValueError("Arquivo FTP mudou durante aquisição.")
+            metadata["revisao_depois"] = depois
+            metadata["estabilidade"] = "metadados_iguais; nao_autentica_bytes" if any(v is not None for v in antes.values()) else "nao_observavel"
+
+    def descobrir_rd(self, uri_diretorio, competencia):
+        """Usar MLSD observado; preservar partes e metadados sem inventar ausência."""
+        import re
+        partes, caminho = self._uri(uri_diretorio)
+        if not re.fullmatch(r"20\d{2}(0[1-9]|1[0-2])", competencia):
+            raise ValueError("Competência inválida.")
+        encontrados = []
+        with self._conectar(partes) as cliente:
+            for nome, fatos in cliente.mlsd(caminho, facts=["type", "size", "modify"]):
+                if fatos.get("type") != "file" or not re.fullmatch(r"RD[A-Z]{2}" + competencia[2:] + r"[A-Za-z0-9_-]*\.dbc", nome, re.I):
+                    continue
+                if not fatos.get("size", "").isdigit():
+                    raise ValueError("Catálogo sem tamanho observado; requer tratamento documentado.")
+                encontrados.append(dict(nome=nome, uri_oficial=uri_diretorio.rstrip("/") + "/" + quote(nome),
+                                        bytes=int(fatos["size"]), revisao=fatos.get("modify") or "nao_informada_no_catalogo"))
+        return encontrados
