@@ -1,0 +1,35 @@
+
+> mvp-observatorio-sus-es-cnes@2.0.0 test
+> node --test --test-isolation=none tests/*.test.mjs
+
+✔ baseline canônica 202601 reconcilia com as 501 chaves fornecidas (2.382662ms)
+✔ totais globais e identidades de validação fecham (0.465851ms)
+✔ linhas, regiões e municípios particionam o mesmo conjunto (0.163246ms)
+✔ join do mapa contém 78 municípios únicos e nenhuma perda (0.490978ms)
+✔ baseline agregada solicitada falha de modo explícito, sem alterar registros (0.51856ms)
+✔ resumo canônico é obrigatório e completo (1.102187ms)
+✔ domínio regional cobre registro e município, sem converter em região de saúde (0.618565ms)
+✔ resumo divergente é recusado antes de exibir cartões (0.203957ms)
+✔ export usa exatamente o subconjunto e preserva identificadores textuais (0.482735ms)
+✔ zero por cento com registros tem faixa própria e não significa ausência de registro (0.244648ms)
+✔ enquadramento continental conserva dados e permite extensão completa (1.224261ms)
+✔ filtro: apenas Validado (2.175781ms)
+✔ filtro: apenas Revisar (0.875066ms)
+✔ filtro: linha RUE (0.785511ms)
+✔ filtro: linha Oncologia (0.502976ms)
+✔ filtro: município Vitória (0.336446ms)
+✔ filtro: região São Mateus (0.644869ms)
+✔ filtro: RUE + Validado (0.8913ms)
+✔ filtro: São Mateus + RUE (0.201312ms)
+✔ filtro: Vitória município + Oncologia (0.111858ms)
+✔ filtro: Vitória região + UTI (0.178247ms)
+✔ subconjunto vazio preserva zero e percentual NA (0.098789ms)
+✔ percentual usa registros como denominador (0.105058ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 72.879697

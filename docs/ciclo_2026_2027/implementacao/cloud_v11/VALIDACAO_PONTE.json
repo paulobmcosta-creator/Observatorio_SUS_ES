@@ -1,0 +1,8 @@
+{
+  "checkpoint": "CP-CLOUD-000",
+  "utc": "2026-11-16T20:31:46.162017+00:00",
+  "ponte_sha256": "850ad09dcbecc2ed688641d7f817afd65b092d96079395040caaed27c9bcb5ec",
+  "zip_integridade": "OK",
+  "caminhos": "OK",
+  "proxima": "conferir manifesto, HEAD remoto e achados antes de alterar código"
+}

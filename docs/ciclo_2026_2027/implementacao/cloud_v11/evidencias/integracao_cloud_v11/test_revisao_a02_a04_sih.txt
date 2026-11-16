@@ -1,0 +1,2 @@
+OK SIH sintético: S03/S04/perdas; ignorado != fora ES; denominador zero indefinido; produção bloqueada
+OK A02/A03/A04: flags recusadas; versão/vigência selecionadas; OD identificável reconciliada e divulgação bloqueada

@@ -1,0 +1,16 @@
+{
+  "sha": "954d89f0a6f9bbaa72ff4afa53b61ab1971873ec",
+  "escopo": "conector filtra runs pull_request; primeira pagina; consulta nao comprova sucesso",
+  "workflow_runs": [
+    {
+      "id": 43924505446,
+      "name": "validar-pipeline-cnes-r",
+      "status": "in_progress",
+      "conclusion": null,
+      "run_number": 148,
+      "jobs_url": "https://api.github.com/repos/paulobmcosta-creator/Observatorio_SUS_ES/actions/runs/43924505446/jobs",
+      "logs_url": "https://api.github.com/repos/paulobmcosta-creator/Observatorio_SUS_ES/actions/runs/43924505446/logs",
+      "workflow_id": 262089220
+    }
+  ]
+}

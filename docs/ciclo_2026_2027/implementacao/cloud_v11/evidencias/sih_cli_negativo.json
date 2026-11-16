@@ -1,0 +1,11 @@
+{
+  "comando": [
+    "/workspace/.setup-observatorio/bin/Rscript",
+    "scripts/executar_percurso_sih_validado.R"
+  ],
+  "exit_code": 1,
+  "esperado": "rejeitar sem provas/argumentos",
+  "stderr": "Error: Informe ACEITE.csv SHA_ACEITE PYTHON SAIDA_NOVA [MAPA VERSAO SHA_MAPA PROVAS_ATOS.csv].\nExecution halted\n",
+  "resultado": "APROVADO_REJEICAO",
+  "limite": "não demonstra cálculo empírico positivo"
+}

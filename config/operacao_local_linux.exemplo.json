@@ -1,0 +1,9 @@
+{
+  "data_root": "/caminho/escolhido/Observatorio SUS ES/dados",
+  "cache": "/caminho/escolhido/Observatorio SUS ES/cache",
+  "temporarios": "/caminho/escolhido/Observatorio SUS ES/temporarios",
+  "saida": "/caminho/escolhido/Observatorio SUS ES/saida",
+  "backup": "/caminho/escolhido/Observatorio SUS ES/backup",
+  "margem_livre_bytes": 1073741824,
+  "concorrencia_max": 1
+}

@@ -1,11 +1,12 @@
 # Reutiliza preparadores/contratos existentes; não reimplementa regras em Python.
 # Uso: Rscript scripts/conferir_paridade_parquet_r.R CSV_RESTITUIDO SAIDA_NOVA REFERENCIA EVIDENCIAS
+source("src/extract/preparar_cache_cnes.R")
 source("src/transform/preparar_estabelecimentos_cnes.R")
 source("src/transform/preparar_habilitacoes_cnes.R")
 source("src/validation/conferir_contrato_snapshot_cnes.R")
 args <- commandArgs(trailingOnly = TRUE)
 stopifnot(length(args) == 4L, !dir.exists(args[2]), dir.exists(args[3]), dir.exists(args[4]))
-est <- preparar_estabelecimentos_cnes("data_raw/cnes", dir_interim = args[2], arquivo_estabelecimentos = args[1])
+est <- preparar_estabelecimentos_cnes("data_raw/cnes", dir_interim = args[2], arquivo_estabelecimentos = args[1], manifesto_estabelecimentos = "metadata/cnes/fontes/tbEstabelecimento202601.csv")
 hab <- preparar_habilitacoes_cnes(dir_interim = args[2])
 est <- ler_snapshot_cnes(file.path(args[2], "estabelecimentos/cnes_estabelecimentos_es_202601.csv"))
 hab <- ler_snapshot_cnes(file.path(args[2], "habilitacoes/cnes_habilitacoes_es_202601.csv"))

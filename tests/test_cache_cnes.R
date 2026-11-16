@@ -5,7 +5,7 @@ local({
   on.exit(unlink(tmp, recursive = TRUE))
   fonte <- "tests/fixtures/cnes/202601/tbEstabelecimento202601.csv"
   manifesto <- file.path(tmp, "manifesto.csv")
-  m <- data.frame(sha256_csv = sha256_fonte_cnes(fonte), bytes_csv = file.info(fonte)$size)
+  m <- data.frame(competencia = "202601", sha256_csv = sha256_fonte_cnes(fonte), bytes_csv = file.info(fonte)$size)
   write.csv(m, manifesto, row.names = FALSE)
   falha <- function(expr, texto) {
     e <- tryCatch({force(expr); NULL}, error = identity)
@@ -21,7 +21,7 @@ local({
   falha(ler_csv_cnes(prefixo), "ponteiro Git LFS")
   dados <- ler_csv_cnes(prefixo, arquivo = cache)
   stopifnot(identical(dados$co_cnes, c("0000001", "0000002")))
-  est <- preparar_estabelecimentos_cnes("tests/fixtures/cnes", dir_interim = file.path(tmp, "saida"), arquivo_estabelecimentos = cache)
+  est <- preparar_estabelecimentos_cnes("tests/fixtures/cnes", dir_interim = file.path(tmp, "saida"), arquivo_estabelecimentos = cache, manifesto_estabelecimentos = manifesto)
   stopifnot(nrow(est) == 1L, est$co_unidade == "0001", est$cnes == "0000001", est$uf == "ES")
   message("OK: seleção explícita ignora ponteiro; transformação preserva zeros e separa as chaves")
   falha(ler_csv_cnes(prefixo, arquivo = file.path(tmp, "ausente.csv")), "não encontrado")

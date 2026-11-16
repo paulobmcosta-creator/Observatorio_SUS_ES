@@ -1,0 +1,1 @@
+Testes de metadados CNES executados com sucesso.

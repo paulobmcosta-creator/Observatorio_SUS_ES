@@ -1,0 +1,1 @@
+Testes unitários de validar_pipeline_cnes executados com sucesso.

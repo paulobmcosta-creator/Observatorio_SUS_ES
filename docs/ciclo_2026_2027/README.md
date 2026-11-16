@@ -25,3 +25,8 @@ O relatório encerrado e o acervo externo continuam sem acesso disponível; prod
 Branch: `feat/ciclo-2026-2027-transicao`. Base da revisão: `937056af0af34b81d27ec38b608f5356488b46a7`; base histórica: `6478f93a50d03270a78959730221f2ea5a643658`. As entregas anteriores já foram enviadas ao GitHub; [registro de publicação](publicacao/estado_publicacao.md). O SHA final e a comparação imutável desta revisão são identificados no encerramento e na orientação de [passagem](segunda_revisao_chatgpt.md).
 
 **O relatório 2025–2026 não recebeu alteração.** Não houve implantação de painel, merge, escrita remota no relatório, mudança de permissões ou comunicação a terceiros. As versões documentais anteriores e suas evidências permanecem no histórico Git.
+
+
+## Implementação autorizada em 16/11/2026
+
+O mandato integrado v1.0 substitui o ponto de parada REV01 pela execução incremental. Consulte o [relatório parcial](implementacao/RELATORIO_PARCIAL_2026_2027.md), a [retomada](implementacao/RETOMADA.md) e o [guia local](implementacao/GUIA_OPERACAO_LOCAL.md). O plano canônico mantém 52 IDs e a fila derivada; resultados reais, fixtures, bloqueios e gates humanos permanecem distintos.

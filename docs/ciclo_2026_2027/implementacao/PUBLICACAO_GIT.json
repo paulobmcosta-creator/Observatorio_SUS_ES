@@ -1,0 +1,17 @@
+{
+  "utc": "2026-11-16T18:03:38.837000+00:00",
+  "branch": "feat/implementacao-2026-2027-autonomia",
+  "base_pr": "feat/ciclo-2026-2027-transicao",
+  "sha_enviado": "954d89f0a6f9bbaa72ff4afa53b61ab1971873ec",
+  "push": "SUCESSO_NORMAL",
+  "permissao_push": "confirmada pelo conector GitHub",
+  "pr": "DRAFT_ABERTO",
+  "ci": "SUCESSO_R_E_PYTHON_NO_SHA_CONSULTADO",
+  "merge": "NAO_REALIZADO",
+  "implantacao": "NAO_REALIZADA",
+  "pr_url": "https://github.com/paulobmcosta-creator/Observatorio_SUS_ES/pull/82",
+  "pr_numero": 82,
+  "sha_consultado_ci": "954d89f0a6f9bbaa72ff4afa53b61ab1971873ec",
+  "evidencia_ci": "evidencias/ci_954d89f_concluido.json",
+  "observacao": "Novo commit de checkpoint/documentação terá SHA distinto; não extrapolar os checks deste SHA."
+}

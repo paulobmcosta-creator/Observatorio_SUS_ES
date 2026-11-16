@@ -3,7 +3,12 @@ source("src/transform/preparar_habilitacoes_cnes.R")
 local({
   tmp <- tempfile("sem_descarte_"); dir.create(tmp); on.exit(unlink(tmp, recursive = TRUE))
   fixture <- "tests/fixtures/cnes/202601/tbEstabelecimento202601.csv"
-  linhas <- readLines(fixture)
+  # Alias da fixture declara competência para alcançar os controles de chave A08.
+  dados <- read.csv(fixture, sep = ";", colClasses = "character")
+  dados$COMPETENCIA <- "202601"
+  fixture_temporal <- file.path(tmp, "fixture_temporal.csv")
+  write.table(dados, fixture_temporal, sep = ";", row.names = FALSE)
+  linhas <- readLines(fixture_temporal)
   alterado <- file.path(tmp,"duplicado.csv")
   writeLines(c(linhas, linhas[2]),alterado)
   falha <- function(expr, texto) {

@@ -1,0 +1,15 @@
+{
+  "utc": "2026-11-16T20:45:27.804010+00:00",
+  "hipotese": "A10 isolamento de rede por namespace de processo",
+  "comando": [
+    "/usr/bin/unshare",
+    "--net",
+    "--",
+    "true"
+  ],
+  "exit_code": 1,
+  "stderr": "unshare: unshare failed: Operation not permitted\n",
+  "resultado": "INDISPONIVEL_SEM_PRIVILEGIOS_ADICIONAIS",
+  "errata": "rede_durante_comando=False da prova anterior não demonstra isolamento; preservar histórico e corrigir interpretação",
+  "segundo_operador": "PENDENTE"
+}

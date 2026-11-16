@@ -1,0 +1,16 @@
+OK: caso sintético completo atende ao contrato
+OK: fixture histórica não é presumida equivalente ao contrato atual
+OK: zeros à esquerda preservados no CSV
+OK: não inventar co_unidade nem usar cnes como chave substituta
+OK: identificador numérico não é silenciosamente convertido
+OK: código público longo é reprovado
+OK: chave duplicada bloqueia relação muitos-para-um
+OK: habilitação órfã é detectada
+OK: município divergente não é convertido
+OK: ausência e competência incorreta não viram zeros
+OK: divergência da classificação é detectada sem reclassificar
+OK: chave composta da classificação inclui tipo
+OK: base vazia não passa por ausência de violações
+OK: CSV malformado não cria campos falsos
+OK: schema real de habilitações é CSV retangular e legível
+15 cenários de contrato executados com sucesso.

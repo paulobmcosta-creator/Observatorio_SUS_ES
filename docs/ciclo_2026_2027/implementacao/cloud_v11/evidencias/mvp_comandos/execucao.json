@@ -1,0 +1,57 @@
+{
+  "testes": [
+    {
+      "id": "node_testes",
+      "comando": [
+        "npm",
+        "test"
+      ],
+      "exit_code": 0,
+      "esperado": 0,
+      "aprovado_no_criterio": true,
+      "segundos": 1.0561166740008048,
+      "log": "node_testes.txt"
+    },
+    {
+      "id": "build",
+      "comando": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exit_code": 0,
+      "esperado": 0,
+      "aprovado_no_criterio": true,
+      "segundos": 0.7802096759987762,
+      "log": "build.txt"
+    },
+    {
+      "id": "baseline_canonica",
+      "comando": [
+        "node",
+        "scripts/check_baseline.mjs",
+        "config/baseline_canonical_202601.json"
+      ],
+      "exit_code": 0,
+      "esperado": 0,
+      "aprovado_no_criterio": true,
+      "segundos": 0.04645841199999268,
+      "log": "baseline_canonica.txt"
+    },
+    {
+      "id": "baseline_alternativa",
+      "comando": [
+        "node",
+        "scripts/check_baseline.mjs",
+        "config/baseline_requested_202601.json"
+      ],
+      "exit_code": 1,
+      "esperado": 1,
+      "aprovado_no_criterio": true,
+      "segundos": 0.05705774599846336,
+      "log": "baseline_alternativa.txt"
+    }
+  ],
+  "resultado": "APROVADO",
+  "escopo": "23 testes Node locais com JSON autorizado; baseline alternativa é controle negativo esperado"
+}

@@ -1,0 +1,14 @@
+{
+  "entradas": 69,
+  "divergencias": [],
+  "sem_hash": [
+    {
+      "arquivo": "15_MANIFESTO_ARQUIVOS.csv",
+      "versao": "CP09",
+      "tamanho_bytes": "NA",
+      "sha256": "NA (autorrefer\u00eancia)",
+      "data": "2026-11-16T16:26:58.648641+00:00",
+      "condicao": "corrente"
+    }
+  ]
+}

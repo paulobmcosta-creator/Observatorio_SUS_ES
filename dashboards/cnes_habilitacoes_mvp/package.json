@@ -1,0 +1,26 @@
+{
+  "name": "mvp-observatorio-sus-es-cnes",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "process": "python scripts/process_data.py --competencia 202601",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test --test-isolation=none tests/*.test.mjs",
+    "test:baseline:canonical": "node scripts/check_baseline.mjs config/baseline_canonical_202601.json",
+    "test:baseline:requested": "node scripts/check_baseline.mjs config/baseline_requested_202601.json",
+    "audit:hardcoding": "node scripts/audit_hardcoding.mjs",
+    "verify": "npm run process && npm test && npm run test:baseline:canonical && npm run audit:hardcoding && npm run build",
+    "test:contract": "node --test --test-isolation=none tests/contract.synthetic.test.mjs"
+  },
+  "dependencies": {
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "6.1.1",
+    "vite": "8.2.2"
+  }
+}

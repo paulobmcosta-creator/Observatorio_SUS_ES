@@ -1,0 +1,416 @@
+{
+  "utc": "2026-11-16T21:22:52.930372+00:00",
+  "sha": "92ffe551f20e0ef85b62bef48fe2dc7c67e9300c",
+  "runs": [
+    {
+      "conclusion": "success",
+      "databaseId": 43959089174,
+      "event": "pull_request",
+      "headSha": "92ffe551f20e0ef85b62bef48fe2dc7c67e9300c",
+      "name": "validar-pipeline-cnes-r",
+      "status": "completed",
+      "url": "https://github.com/paulobmcosta-creator/Observatorio_SUS_ES/actions/runs/43959089174"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 43959089246,
+      "event": "pull_request",
+      "headSha": "92ffe551f20e0ef85b62bef48fe2dc7c67e9300c",
+      "name": "validar-serializacao-python",
+      "status": "completed",
+      "url": "https://github.com/paulobmcosta-creator/Observatorio_SUS_ES/actions/runs/43959089246"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 43959078055,
+      "event": "push",
+      "headSha": "92ffe551f20e0ef85b62bef48fe2dc7c67e9300c",
+      "name": "validar-pipeline-cnes-r",
+      "status": "completed",
+      "url": "https://github.com/paulobmcosta-creator/Observatorio_SUS_ES/actions/runs/43959078055"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 43959078053,
+      "event": "push",
+      "headSha": "92ffe551f20e0ef85b62bef48fe2dc7c67e9300c",
+      "name": "validar-serializacao-python",
+      "status": "completed",
+      "url": "https://github.com/paulobmcosta-creator/Observatorio_SUS_ES/actions/runs/43959078053"
+    }
+  ],
+  "jobs_pr": {
+    "43959089174": {
+      "jobs": [
+        {
+          "completedAt": "2026-11-16T21:21:30Z",
+          "conclusion": "success",
+          "databaseId": 133621346717,
+          "name": "teste-cnes-r",
+          "startedAt": "2026-11-16T21:20:33Z",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Checkout do repositório",
+              "number": 2,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Configurar R",
+              "number": 3,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verificar R e Rscript",
+              "number": 4,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Exibir sessão R",
+              "number": 5,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Preparar dependências do pipeline",
+              "number": 6,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Executar teste estrutural do repositório",
+              "number": 7,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Executar teste de metadados CNES",
+              "number": 8,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Executar teste de classificação de habilitações CNES",
+              "number": 9,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Executar teste de leitura CNES",
+              "number": 10,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Executar teste de padronização CNES",
+              "number": 11,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Executar teste de validação CNES",
+              "number": 12,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Executar teste de orquestração CNES",
+              "number": 13,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Executar teste de integração CNES",
+              "number": 14,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Executar teste de indicadores de oferta CNES",
+              "number": 15,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Conferir proteção contra divergências de contrato dos snapshots",
+              "number": 16,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Validar cache comprimido e identificadores CNES sem Git LFS",
+              "number": 17,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Validar contrato de correspondência territorial",
+              "number": 18,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Validar fila de revisão sem alterar classificação",
+              "number": 19,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verificar preparadores sem descarte implícito",
+              "number": 20,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Conferir ponte RUE e percurso SIH sintético",
+              "number": 21,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verificar proveniência temporal CNES (R22)",
+              "number": 22,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verificar vínculo de competência de alias CNES (A08)",
+              "number": 23,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verificar classificação territorial congelada",
+              "number": 24,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verificar separação de escopos e códigos preliminares dos dossiês",
+              "number": 25,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Checkout do repositório",
+              "number": 50,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 51,
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/paulobmcosta-creator/Observatorio_SUS_ES/actions/runs/43959089174/job/133621346717"
+        }
+      ]
+    },
+    "43959089246": {
+      "jobs": [
+        {
+          "completedAt": "2026-11-16T21:21:10Z",
+          "conclusion": "success",
+          "databaseId": 133621346796,
+          "name": "contraprova-r-sql",
+          "startedAt": "2026-11-16T21:20:33Z",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/setup-python@v5",
+              "number": 3,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run r-lib/actions/setup-r@v2",
+              "number": 4,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run python -m pip install pytest==9.1.1 duckdb==1.5.6",
+              "number": 5,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Exigir R e executar contraprova independente",
+              "number": 6,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/setup-python@v5",
+              "number": 11,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 12,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 13,
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/paulobmcosta-creator/Observatorio_SUS_ES/actions/runs/43959089246/job/133621346796"
+        },
+        {
+          "completedAt": "2026-11-16T21:20:42Z",
+          "conclusion": "success",
+          "databaseId": 133621347414,
+          "name": "mvp-contrato-e-build",
+          "startedAt": "2026-11-16T21:20:33Z",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/setup-node@v4",
+              "number": 3,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run npm ci --ignore-scripts --no-audit --no-fund",
+              "number": 4,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run npm run test:contract",
+              "number": 5,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run npm run build",
+              "number": 6,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/setup-node@v4",
+              "number": 11,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 12,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 13,
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/paulobmcosta-creator/Observatorio_SUS_ES/actions/runs/43959089246/job/133621347414"
+        },
+        {
+          "completedAt": "2026-11-16T21:20:46Z",
+          "conclusion": "success",
+          "databaseId": 133621347443,
+          "name": "preservar-campos-csv-parquet",
+          "startedAt": "2026-11-16T21:20:33Z",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/setup-python@v5",
+              "number": 3,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Instalar bibliotecas da serialização validada",
+              "number": 4,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Testar integridade sem dados oficiais ou rede DATASUS",
+              "number": 5,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/setup-python@v5",
+              "number": 9,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 10,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 11,
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/paulobmcosta-creator/Observatorio_SUS_ES/actions/runs/43959089246/job/133621347443"
+        }
+      ]
+    }
+  },
+  "resultado": "SUCESSO",
+  "escopo": "Python explícito; contraprova R/SQL; seis sintéticos Node/build; pipeline R. 17 Node com dados e QA são locais."
+}

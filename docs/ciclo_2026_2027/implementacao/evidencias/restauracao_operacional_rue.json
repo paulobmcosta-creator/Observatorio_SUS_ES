@@ -1,0 +1,29 @@
+{
+  "tipo": "ensaio_pelo_agente; nao_segundo_operador",
+  "snapshot_id": "65d88261463327222dc01870c4c21e2ea74c5f981ac32f466745fd01889e3a59",
+  "diretorio_inicial": "vazio_verificado",
+  "ambiente_restaurado": "venv stdlib sem pip/system-site-packages",
+  "dependencia_host": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "comando": [
+    "/workspace/Observatorio_SUS_ES/.cache/implementacao/restaurado_rue_v1/ambiente/bin/python",
+    "-I",
+    "/workspace/Observatorio_SUS_ES/.cache/implementacao/restaurado_rue_v1/versoes/65d88261463327222dc01870c4c21e2ea74c5f981ac32f466745fd01889e3a59/objetos/sentinela.py",
+    "/workspace/Observatorio_SUS_ES/.cache/implementacao/restaurado_rue_v1/versoes/65d88261463327222dc01870c4c21e2ea74c5f981ac32f466745fd01889e3a59/objetos/estabelecimentos.csv",
+    "/workspace/Observatorio_SUS_ES/.cache/implementacao/restaurado_rue_v1/versoes/65d88261463327222dc01870c4c21e2ea74c5f981ac32f466745fd01889e3a59/objetos/referencia.csv",
+    "/workspace/Observatorio_SUS_ES/.cache/implementacao/restaurado_rue_v1/sentinela.json"
+  ],
+  "exit_code": 0,
+  "stdout": "Sentinela RUE: 78/78; uma dimensão histórica, sem homologação institucional.\n",
+  "segundos": 0.3527335190000258,
+  "resultado": {
+    "celulas": 78,
+    "dimensoes_verificadas": 1,
+    "divergencias": 0,
+    "escopo": "RUE_historica_202601_papel_municipal_legado"
+  },
+  "sha256_resultado": "8d7fdc81edfb2ad1ea8d8ea94ac9f1448f50ee67dc8730f26b6ae4f9435cf643",
+  "rede_durante_comando": false,
+  "ia_durante_comando": false,
+  "preparo_assistido_por_ia": true,
+  "limites": "Host CPython preexistente; sem reconstrução OS/R/Arrow; não demonstra atualização nem operador humano."
+}

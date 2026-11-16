@@ -1,0 +1,239 @@
+{
+  "utc": "2026-11-16T21:11:47.232176+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "plataforma": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "pacotes": {
+    "pytest": "9.1.1",
+    "pyarrow": "19.0.1",
+    "duckdb": "1.5.6",
+    "pysus": "2.0.4",
+    "pandas": "2.3.3",
+    "dbfread": "2.0.7"
+  },
+  "testes": [
+    {
+      "id": "python_integracao",
+      "comando": [
+        "/workspace/Observatorio_SUS_ES/.venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/python",
+        "-q"
+      ],
+      "exit_code": 0,
+      "segundos": 5.852655325999876,
+      "log": "python_integracao.txt"
+    },
+    {
+      "id": "test_estrutura_repositorio",
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_estrutura_repositorio.R"
+      ],
+      "exit_code": 0,
+      "segundos": 0.1290296009992744,
+      "log": "test_estrutura_repositorio.txt"
+    },
+    {
+      "id": "test_metadata_cnes",
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_metadata_cnes.R"
+      ],
+      "exit_code": 0,
+      "segundos": 0.16970072199910646,
+      "log": "test_metadata_cnes.txt"
+    },
+    {
+      "id": "test_classificacao_habilitacoes_cnes",
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_classificacao_habilitacoes_cnes.R"
+      ],
+      "exit_code": 0,
+      "segundos": 0.1869567369994911,
+      "log": "test_classificacao_habilitacoes_cnes.txt"
+    },
+    {
+      "id": "test_ler_arquivos_cnes",
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_ler_arquivos_cnes.R"
+      ],
+      "exit_code": 0,
+      "segundos": 0.20542061799824296,
+      "log": "test_ler_arquivos_cnes.txt"
+    },
+    {
+      "id": "test_padronizar_cnes_interim",
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_padronizar_cnes_interim.R"
+      ],
+      "exit_code": 0,
+      "segundos": 0.19715797400021984,
+      "log": "test_padronizar_cnes_interim.txt"
+    },
+    {
+      "id": "test_validar_pipeline_cnes",
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_validar_pipeline_cnes.R"
+      ],
+      "exit_code": 0,
+      "segundos": 0.1700885730006121,
+      "log": "test_validar_pipeline_cnes.txt"
+    },
+    {
+      "id": "test_executar_pipeline_piloto_cnes",
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_executar_pipeline_piloto_cnes.R"
+      ],
+      "exit_code": 0,
+      "segundos": 0.21088554999914777,
+      "log": "test_executar_pipeline_piloto_cnes.txt"
+    },
+    {
+      "id": "teste_pipeline_piloto_cnes",
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/teste_pipeline_piloto_cnes.R"
+      ],
+      "exit_code": 0,
+      "segundos": 0.2502291510008945,
+      "log": "teste_pipeline_piloto_cnes.txt"
+    },
+    {
+      "id": "test_indicadores_cnes_oferta",
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_indicadores_cnes_oferta.R"
+      ],
+      "exit_code": 0,
+      "segundos": 0.2092444419995445,
+      "log": "test_indicadores_cnes_oferta.txt"
+    },
+    {
+      "id": "test_conferir_contrato_snapshot_cnes",
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_conferir_contrato_snapshot_cnes.R"
+      ],
+      "exit_code": 0,
+      "segundos": 0.732891481000479,
+      "log": "test_conferir_contrato_snapshot_cnes.txt"
+    },
+    {
+      "id": "test_cache_cnes",
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_cache_cnes.R"
+      ],
+      "exit_code": 0,
+      "segundos": 0.46375564099980693,
+      "log": "test_cache_cnes.txt"
+    },
+    {
+      "id": "test_correspondencia_territorial",
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_correspondencia_territorial.R"
+      ],
+      "exit_code": 0,
+      "segundos": 0.20061292399986996,
+      "log": "test_correspondencia_territorial.txt"
+    },
+    {
+      "id": "test_fila_revisao_habilitacoes",
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_fila_revisao_habilitacoes.R"
+      ],
+      "exit_code": 0,
+      "segundos": 0.17928706200109445,
+      "log": "test_fila_revisao_habilitacoes.txt"
+    },
+    {
+      "id": "test_preparadores_sem_descarte",
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_preparadores_sem_descarte.R"
+      ],
+      "exit_code": 0,
+      "segundos": 0.44766205300038564,
+      "log": "test_preparadores_sem_descarte.txt"
+    },
+    {
+      "id": "test_dimensao_rue",
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_dimensao_rue.R"
+      ],
+      "exit_code": 0,
+      "segundos": 0.20635281300019415,
+      "log": "test_dimensao_rue.txt"
+    },
+    {
+      "id": "test_percurso_sih",
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_percurso_sih.R"
+      ],
+      "exit_code": 0,
+      "segundos": 0.34970906899980037,
+      "log": "test_percurso_sih.txt"
+    },
+    {
+      "id": "test_proveniencia_temporal_cnes",
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_proveniencia_temporal_cnes.R"
+      ],
+      "exit_code": 0,
+      "segundos": 0.32425378500010993,
+      "log": "test_proveniencia_temporal_cnes.txt"
+    },
+    {
+      "id": "test_revisao_a08_cnes",
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_revisao_a08_cnes.R"
+      ],
+      "exit_code": 0,
+      "segundos": 0.3611726719991566,
+      "log": "test_revisao_a08_cnes.txt"
+    },
+    {
+      "id": "test_territorio_congelado",
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_territorio_congelado.R"
+      ],
+      "exit_code": 0,
+      "segundos": 0.31033517899959406,
+      "log": "test_territorio_congelado.txt"
+    },
+    {
+      "id": "test_configuracao_dossies",
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_configuracao_dossies.R"
+      ],
+      "exit_code": 0,
+      "segundos": 0.1690391730007832,
+      "log": "test_configuracao_dossies.txt"
+    },
+    {
+      "id": "test_revisao_a02_a04_sih",
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_revisao_a02_a04_sih.R"
+      ],
+      "exit_code": 0,
+      "segundos": 0.5043372560012358,
+      "log": "test_revisao_a02_a04_sih.txt"
+    }
+  ],
+  "resultado": "APROVADO"
+}

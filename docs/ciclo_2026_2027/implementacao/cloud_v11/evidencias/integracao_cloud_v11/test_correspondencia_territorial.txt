@@ -1,0 +1,5 @@
+OK: correspondência explícita preserva zeros e papel territorial
+OK: lacunas e código de sete dígitos não viram região nem código convertido
+OK: correspondência vazia explícita; tipos e datas inválidos rejeitados
+OK: mudança temporal respeitada; sobreposição inclusive nos extremos rejeitada
+OK: cardinalidade, identidade regional, proveniência mínima e intervalo conferidos

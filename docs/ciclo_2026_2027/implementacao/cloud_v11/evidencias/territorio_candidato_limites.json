@@ -1,0 +1,13 @@
+{
+  "linhas_candidatas": 156,
+  "empiricamente_aplicavel": false,
+  "campos_propositalmente_vazios": [
+    "cod_municipio_cnes",
+    "regiao_id",
+    "vigencia_inicio",
+    "vigencia_fim",
+    "ato_referencia",
+    "sha256_fonte"
+  ],
+  "motivo": "Originais integrais, eficácia e catálogo municipal não recebidos; código derivado não é correspondência oficial."
+}
