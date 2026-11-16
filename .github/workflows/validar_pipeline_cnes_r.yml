@@ -113,6 +113,9 @@ jobs:
       - name: Verificar proveniência temporal CNES (R22)
         run: Rscript tests/test_proveniencia_temporal_cnes.R
 
+      - name: Verificar vínculo de competência de alias CNES (A08)
+        run: Rscript tests/test_revisao_a08_cnes.R
+
       - name: Verificar classificação territorial congelada
         run: Rscript tests/test_territorio_congelado.R
 

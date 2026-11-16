@@ -82,7 +82,7 @@ def _preparar_registro(checkpoint, unidade, proxima, estados=(), bloqueios=(), m
     estado["commits_confirmados"] = subprocess.check_output(
         ["git", "log", "--format=%H %s", estado["base"] + "..HEAD"], cwd=RAIZ, text=True).splitlines()
     comandos = []
-    for prova in sorted((DOC / "evidencias").glob("*/execucao.json")):
+    for prova in sorted(DOC.rglob("execucao.json")):
         for registro in json.loads(prova.read_text()).get("testes", []):
             comandos.append({"comando": registro["comando"], "exit_code": registro["exit_code"],
                              "evidencia": str(prova.relative_to(RAIZ))})

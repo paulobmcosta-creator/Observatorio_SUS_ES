@@ -55,8 +55,9 @@ if __name__ == "__main__":
             # Workflow já existente define o conjunto abrangente; sem reaquisição.
             import re
             workflow = Path(".github/workflows/validar_pipeline_cnes_r.yml").read_text()
-            arquivos = re.findall(r"run: Rscript (tests/\S+\.R)", workflow)
+            arquivos = re.findall(r"Rscript (tests/\S+\.R)", workflow)
             arquivos += ["tests/test_dimensao_rue.R", "tests/test_percurso_sih.R"]
+            arquivos += ["tests/test_revisao_a02_a04_sih.R", "tests/test_revisao_a08_cnes.R"]
             arquivos = list(dict.fromkeys(arquivos))
         comandos += [(Path(f).stem, [args.rscript, f]) for f in arquivos]
     resultado = executar(args.destino, comandos)

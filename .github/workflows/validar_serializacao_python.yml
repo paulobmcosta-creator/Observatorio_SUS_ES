@@ -7,6 +7,13 @@ on:
       - 'scripts/ensaiar_restauracao_operacional.py'
       - 'scripts/executar_sentinela_rue_sem_dependencias.py'
       - 'tests/python/**'
+      - 'scripts/registrar_checkpoint_implementacao.py'
+      - 'scripts/preparar_aceite_sih.py'
+      - 'scripts/diagnosticar_ambiente_local.py'
+      - 'scripts/adquirir_lote_controlado.py'
+      - 'src/indicators/calcular_percurso_sih.R'
+      - 'src/validation/validar_vinculos_sih.R'
+      - 'dashboards/cnes_habilitacoes_mvp/**'
       - '.github/workflows/validar_serializacao_python.yml'
   pull_request:
     paths:
@@ -14,6 +21,13 @@ on:
       - 'scripts/ensaiar_restauracao_operacional.py'
       - 'scripts/executar_sentinela_rue_sem_dependencias.py'
       - 'tests/python/**'
+      - 'scripts/registrar_checkpoint_implementacao.py'
+      - 'scripts/preparar_aceite_sih.py'
+      - 'scripts/diagnosticar_ambiente_local.py'
+      - 'scripts/adquirir_lote_controlado.py'
+      - 'src/indicators/calcular_percurso_sih.R'
+      - 'src/validation/validar_vinculos_sih.R'
+      - 'dashboards/cnes_habilitacoes_mvp/**'
       - '.github/workflows/validar_serializacao_python.yml'
 
 permissions:
@@ -32,4 +46,39 @@ jobs:
       - name: Testar integridade sem dados oficiais ou rede DATASUS
         env:
           PYTHONPATH: python
-        run: python -m pytest tests/python/test_converter_csv_parquet.py tests/python/test_custodia.py tests/python/test_qualidade_partes_csv.py tests/python/test_inventario_sih_rd.py -q
+        run: python -m pytest tests/python/test_converter_csv_parquet.py tests/python/test_custodia.py tests/python/test_qualidade_partes_csv.py tests/python/test_inventario_sih_rd.py tests/python/test_revisao_*.py tests/python/test_operacao_local.py tests/python/test_lote_controlado.py -q
+
+  contraprova-r-sql:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.3'
+      - run: python -m pip install pytest==9.1.1 duckdb==1.5.6
+      - name: Exigir R e executar contraprova independente
+        env:
+          PYTHONPATH: python
+        run: |
+          python -c "import shutil; assert shutil.which('Rscript'), 'Rscript obrigatório; não aceitar skip'"
+          python -m pytest tests/python/test_contraprova_sih_sql.py -q
+          Rscript tests/test_revisao_a02_a04_sih.R
+
+  mvp-contrato-e-build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: dashboards/cnes_habilitacoes_mvp
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: dashboards/cnes_habilitacoes_mvp/package-lock.json
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm run test:contract
+      - run: npm run build
