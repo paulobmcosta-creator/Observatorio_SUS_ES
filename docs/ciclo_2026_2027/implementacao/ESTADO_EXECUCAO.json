@@ -3,7 +3,7 @@
   "mandato_versao": "1.0 + continuidade cloud v1.1",
   "zip_sha256": "7de4bc9ec44b5891758565a858466f91bd681e51f8584c39ee29d0056da11372",
   "base": "68aa9d084cb7cf3d90c141776ed9f44f378e1372",
-  "checkpoint": "CP-IMP-013",
+  "checkpoint": "CP-IMP-014",
   "tentativas": [
     {
       "problema": "refs_git",
@@ -34,12 +34,12 @@
     "integridade ZIP e 68 hashes verificados"
   ],
   "instrucao_retomada": "Usar RETOMADA.md e a mesma fila; avançar automaticamente; não reabrir investigação encerrada.",
-  "timestamp": "2026-11-16T20:36:34.408675+00:00",
-  "ultima_unidade_confirmada": "Ponte validada 8/8; HEAD remoto confirmado; A01 corrigido e 27 testes aprovados; A07 journal/lock testados",
+  "timestamp": "2026-11-16T20:43:49.161194+00:00",
+  "ultima_unidade_confirmada": "A02 recusa flags/fixture e exige provas vinculadas; A03 domínio temporal corrigido; A04 OD identificável reconciliada; testes R e SQL aprovados",
   "proximas": [
-    "A02 vincular aceite SIH a dataset/manifests/evidências e A03/A04 território/matriz"
+    "Concluir FTP/esquema/competência e integrar cópia seletiva do MVP V2 com build/testes"
   ],
-  "head_observado": "cd8f43436496bc28f890d77b5a1a868b95a73a56",
+  "head_observado": "312ef5c9714cd7e791dbe39f46ba3dd9718fb86b",
   "branch": "feat/implementacao-2026-2027-autonomia",
   "tarefas": {
     "R01": {
@@ -356,6 +356,7 @@
     }
   },
   "commits_confirmados": [
+    "312ef5c9714cd7e791dbe39f46ba3dd9718fb86b fix(custodia): distinguir promoção incerta A01 e recuperar checkpoints A07",
     "cd8f43436496bc28f890d77b5a1a868b95a73a56 chore(ciclo): selar CP-IMP-012 e registrar PR draft e CI por SHA",
     "954d89f0a6f9bbaa72ff4afa53b61ab1971873ec docs(ciclo): consolidar R11 R13 R14 R26 R33 R37 e pendências dos 52 IDs",
     "d457d073d48afa6184fb5ea1ec9a1b44d3cca2d5 feat(custodia): implementar R08 R16 R19 e ensaiar recuperação REV-A03",
@@ -569,6 +570,7 @@
     "docs/ciclo_2026_2027/README.md",
     "docs/ciclo_2026_2027/implementacao/ACERVO_RECUPERADO_IMPLEMENTACAO.csv",
     "docs/ciclo_2026_2027/implementacao/APROPRIACAO_TECNOLOGICA.csv",
+    "docs/ciclo_2026_2027/implementacao/CHECKPOINT_INTEGRIDADE.json",
     "docs/ciclo_2026_2027/implementacao/CONTRATO_CUSTODIA.md",
     "docs/ciclo_2026_2027/implementacao/DECISOES_R15.md",
     "docs/ciclo_2026_2027/implementacao/ESTADO_EXECUCAO.anterior.json",
@@ -591,7 +593,9 @@
     "docs/ciclo_2026_2027/implementacao/RETOMADA.md",
     "docs/ciclo_2026_2027/implementacao/ROTEIRO_APRESENTACAO.md",
     "docs/ciclo_2026_2027/implementacao/VALIDACAO_PACOTE.json",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/A01_A07.md",
     "docs/ciclo_2026_2027/implementacao/cloud_v11/REFERENCIAS_PONTE.csv",
+    "docs/ciclo_2026_2027/implementacao/cloud_v11/REVISAO_A01_A10.csv",
     "docs/ciclo_2026_2027/implementacao/cloud_v11/VALIDACAO_PONTE.json",
     "docs/ciclo_2026_2027/implementacao/evidencias/acessos_oficiais.json",
     "docs/ciclo_2026_2027/implementacao/evidencias/ci_954d89f_concluido.json",
@@ -632,6 +636,7 @@
     "docs/ciclo_2026_2027/tarefas_operacionais.csv",
     "python/observatorio_sus/extract/adquirir_objetos.py",
     "python/observatorio_sus/extract/inventariar_sih_rd.py",
+    "python/observatorio_sus/io/aceite_sih.py",
     "python/observatorio_sus/io/checkpoints.py",
     "python/observatorio_sus/io/custodia.py",
     "python/observatorio_sus/io/manifestos.py",
@@ -641,6 +646,7 @@
     "scripts/ensaiar_restauracao_operacional.py",
     "scripts/executar_sentinela_rue_sem_dependencias.py",
     "scripts/inventariar_sih_rd.py",
+    "scripts/preparar_aceite_sih.py",
     "scripts/registrar_checkpoint_implementacao.py",
     "scripts/reproduzir_ponte_rue.R",
     "scripts/restaurar_snapshot.py",
@@ -648,16 +654,21 @@
     "src/indicators/calcular_percurso_sih.R",
     "src/indicators/reproduzir_dimensao_rue.R",
     "src/transform/preparar_estabelecimentos_cnes.R",
+    "src/validation/validar_vinculos_sih.R",
     "tests/fixtures/sih/rd_sintetico.csv",
     "tests/python/test_contraprova_sih_sql.py",
     "tests/python/test_custodia.py",
     "tests/python/test_inventario_sih_rd.py",
     "tests/python/test_qualidade_partes_csv.py",
     "tests/python/test_revisao_a01_promocao.py",
+    "tests/python/test_revisao_a02_aceite.py",
+    "tests/python/test_revisao_a05_ftp.py",
+    "tests/python/test_revisao_a06_esquemas.py",
     "tests/python/test_revisao_a07_checkpoint.py",
     "tests/test_dimensao_rue.R",
     "tests/test_percurso_sih.R",
-    "tests/test_proveniencia_temporal_cnes.R"
+    "tests/test_proveniencia_temporal_cnes.R",
+    "tests/test_revisao_a02_a04_sih.R"
   ],
   "publicacao_git": {
     "pr": "https://github.com/paulobmcosta-creator/Observatorio_SUS_ES/pull/82",

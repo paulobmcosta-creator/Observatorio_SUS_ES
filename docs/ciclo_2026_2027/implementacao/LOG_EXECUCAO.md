@@ -27,3 +27,5 @@
 - 2026-11-16T18:03:38.902180+00:00 — **CP-IMP-012**: Implementação elegível consolidada; PR draft82; CI R/Python aprovado em 954d89f; bloqueios por fonte/artefato/gate humano registrados. Próxima: R24: receber layout/DEF/CNV RD202401 e um DBC oficial com manifesto por meio legítimo; validar IDENT e dois leitores antes de S03; não repetir 403 sem nova evidência.
 
 - 2026-11-16T20:36:34.408675+00:00 — **CP-IMP-013**: Ponte validada 8/8; HEAD remoto confirmado; A01 corrigido e 27 testes aprovados; A07 journal/lock testados. Próxima: A02 vincular aceite SIH a dataset/manifests/evidências e A03/A04 território/matriz.
+
+- 2026-11-16T20:43:49.161194+00:00 — **CP-IMP-014**: A02 recusa flags/fixture e exige provas vinculadas; A03 domínio temporal corrigido; A04 OD identificável reconciliada; testes R e SQL aprovados. Próxima: Concluir FTP/esquema/competência e integrar cópia seletiva do MVP V2 com build/testes.
