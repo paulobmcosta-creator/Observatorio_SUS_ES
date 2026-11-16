@@ -105,6 +105,9 @@ jobs:
       - name: Verificar preparadores sem descarte implícito
         run: Rscript tests/test_preparadores_sem_descarte.R
 
+      - name: Verificar proveniência temporal CNES (R22)
+        run: Rscript tests/test_proveniencia_temporal_cnes.R
+
       - name: Verificar classificação territorial congelada
         run: Rscript tests/test_territorio_congelado.R
 

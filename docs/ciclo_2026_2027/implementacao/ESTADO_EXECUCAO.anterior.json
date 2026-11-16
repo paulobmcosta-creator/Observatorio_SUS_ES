@@ -1,0 +1,237 @@
+{
+  "run_id": "SUSES-IMP-20261116",
+  "mandato_versao": "1.0",
+  "zip_sha256": "7de4bc9ec44b5891758565a858466f91bd681e51f8584c39ee29d0056da11372",
+  "base": "68aa9d084cb7cf3d90c141776ed9f44f378e1372",
+  "checkpoint": "CP-IMP-002",
+  "tentativas": [
+    {
+      "problema": "refs_git",
+      "fonte": "github.com",
+      "comando": "git ls-remote --heads origin",
+      "erro": "proxy indisponível no sandbox padrão",
+      "resolucao": "permissão de rede da ferramenta; consulta bem-sucedida; refs inalteradas"
+    }
+  ],
+  "evidencias": [
+    "integridade ZIP e 68 hashes verificados"
+  ],
+  "instrucao_retomada": "Usar RETOMADA.md e a mesma fila; avançar automaticamente; não reabrir investigação encerrada.",
+  "timestamp": "2026-11-16T17:34:49.313479+00:00",
+  "ultima_unidade_confirmada": "R22 implementada; testes temporal/cache/sem-descarte aprovados em R 4.5.0; pré-consulta documental",
+  "proximas": [
+    "RUE recuperar tabela sentinela; SIH layout e território por fonte oficial"
+  ],
+  "head_observado": "68aa9d084cb7cf3d90c141776ed9f44f378e1372",
+  "branch": "feat/implementacao-2026-2027-autonomia",
+  "tarefas": {
+    "R01": {
+      "estado": "PARCIAL",
+      "bloqueio": ""
+    },
+    "R02": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R03": {
+      "estado": "CONCLUIDA",
+      "bloqueio": ""
+    },
+    "R04": {
+      "estado": "CONCLUIDA",
+      "bloqueio": ""
+    },
+    "R05": {
+      "estado": "CONCLUIDA",
+      "bloqueio": ""
+    },
+    "R06": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R07": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R08": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R09": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R10": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R11": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R12": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R13": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R14": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R15": {
+      "estado": "PARCIAL",
+      "bloqueio": ""
+    },
+    "R16": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R17": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R18": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R19": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R20": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R21": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "T01": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "T02": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "T03": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "T04": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "T05": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "T06": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "T07": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "T08": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "T09": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "T10": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R22": {
+      "estado": "CONCLUIDA",
+      "bloqueio": ""
+    },
+    "R23": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R24": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R25": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R26": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R27": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R28": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R29": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R30": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R31": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R32": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R33": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R34": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R35": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R36": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R37": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "R38": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "REV01": {
+      "estado": "CONCLUIDA",
+      "bloqueio": ""
+    },
+    "REV-A01": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "REV-A02": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    },
+    "REV-A03": {
+      "estado": "PENDENTE",
+      "bloqueio": ""
+    }
+  }
+}

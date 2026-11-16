@@ -1,0 +1,5 @@
+id,tarefas,escopo,arquivo,resultado,limitacao
+IMP001,R01|REV01,integridade,VALIDACAO_PACOTE.json,68 hashes conferidos,manifesto autorreferente excluído
+IMP002,R22,sintetico_R,tests/test_proveniencia_temporal_cnes.R,APROVADO; R 4.5.0,não é atualização real CNES
+IMP003,R28|REV-A01,contraprova_R_dados_historicos,evidencias/rue_resultado_real.csv,78/78; zero divergências,uma de cinco dimensões; sem localização física
+IMP004,R06|R24|R08,acesso_oficial,evidencias/acessos_oficiais.json,proxy CONNECT 403 em três hosts,sem layout nem catálogo oficial novo; não repetir

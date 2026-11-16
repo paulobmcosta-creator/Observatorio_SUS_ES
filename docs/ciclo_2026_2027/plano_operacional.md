@@ -1,8 +1,8 @@
-# Plano operacional integral — revisão de 22/10/2026
+# Plano operacional integral — execução autorizada em 16/11/2026
 
-Este é o planejamento vigente para O1–O6, atualizado sobre as rodadas anteriores. Não substitui o projeto, D1, D2 ou o relatório encerrado. **A execução desta rodada termina na entrega à segunda revisão no ChatGPT com o coordenador (REV01).** O plano abaixo é proposta de execução posterior; aquisição ampla, migração, recálculo em massa, implantação do painel e divulgação de resultados não foram realizados.
+O mandato integrado v1.0 de 16/11/2026 autoriza a passagem da REV01 à implementação incremental. A fonte operacional única continua [tarefas_operacionais.csv](tarefas_operacionais.csv), agora com **52 IDs**: 49 anteriores e REV-A01–A03. O delta CP09 foi incorporado preservando objetivos, planos formativos e evidências históricas. A [fila de implementação](implementacao/FILA_IMPLEMENTACAO.csv) é gerada desse CSV; não é editável separadamente.
 
-A fonte operacional única é [tarefas_operacionais.csv](tarefas_operacionais.csv), agora com **49 tarefas**. IDs anteriores R01–R21 e T01–T10 foram preservados; R22–R38 detalham correções e frentes antes insuficientes; REV01 marca a revisão requerida. Os IDs T01–T10 deste plano designam tarefas cardiovasculares; T01–T06 da matriz de indicadores designam controles técnicos, em domínio distinto. [Inventário](inventario_transicao.csv) registra decisões por 25 produtos/componentes; [matriz](matriz_indicadores_preliminar.csv) e [avaliação](avaliacao_preliminar.csv) registram os candidatos. Não há plano temático paralelo substituindo a agenda institucional.
+As [decisões R15](implementacao/DECISOES_R15.md), [estado](implementacao/ESTADO_EXECUCAO.json) e [retomada](implementacao/RETOMADA.md) regem a continuidade. As seções abaixo preservam a avaliação de outubro como linha de base; referências a autorização futura daquela rodada não revogam o mandato posterior. Não há homologação sanitária, autorização de divulgação ou merge.
 
 ## Objetivos, entregas e critérios de conclusão
 

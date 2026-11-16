@@ -1,0 +1,20 @@
+[
+  {
+    "id": "sih_notas",
+    "url": "https://tabnet.datasus.gov.br/cgi/sih/mrdescr.htm",
+    "utc": "2026-11-16T17:35:10.053285+00:00",
+    "erro": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "id": "pdr_2024",
+    "url": "https://saude.es.gov.br/Media/3%20fase%20inquerito/PLANO%20PDR%20SA%C3%9ADE%202024.pdf",
+    "utc": "2026-11-16T17:35:10.071590+00:00",
+    "erro": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "id": "sih_catalogo",
+    "url": "https://ftp.datasus.gov.br/dissemin/publicos/SIHSUS/200801_/Dados/",
+    "utc": "2026-11-16T17:35:10.075829+00:00",
+    "erro": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+  }
+]

@@ -52,6 +52,9 @@ ler_csv_cnes <- function(caminho_base_sem_ext, arquivo = NULL) {
   }
 
   names(dados) <- normalizar_nome_coluna(names(dados))
+  attr(dados, "arquivo_lido") <- arquivo
+  attr(dados, "arquivo_origem") <- sub("\\.(csv(\\.gz)?|zip)$", "",
+    basename(if (grepl("\\.zip$", arquivo)) membro_csv else arquivo), ignore.case = TRUE)
   dados
 }
 
@@ -68,6 +71,8 @@ agregar_unicos <- function(x) {
 }
 
 preparar_estabelecimentos_cnes <- function(dir_raw, competencia = "202601", uf_interesse = "ES", dir_interim = file.path("data_interim", "cnes"), arquivo_estabelecimentos = NULL) {
+  if (length(competencia) != 1L || is.na(competencia) ||
+      !grepl("^[0-9]{4}(0[1-9]|1[0-2])$", competencia)) stop("Competência CNES inválida.")
   base <- file.path(dir_raw, competencia)
 
   tb_municipio <- ler_csv_cnes(file.path(base, paste0("tbMunicipio", competencia)))
@@ -85,6 +90,15 @@ preparar_estabelecimentos_cnes <- function(dir_raw, competencia = "202601", uf_i
   if (length(municipios_es) == 0) stop("Não foi possível identificar municípios da UF de interesse em tbMunicipio.")
 
   tb_estab <- ler_csv_cnes(file.path(base, paste0("tbEstabelecimento", competencia)), arquivo = arquivo_estabelecimentos)
+  origem_efetiva <- attr(tb_estab, "arquivo_origem")
+  if (grepl("^tbEstabelecimento[0-9]{6}$", origem_efetiva) &&
+      origem_efetiva != paste0("tbEstabelecimento", competencia)) {
+    stop("Competência do nome da fonte diverge do contrato solicitado.")
+  }
+  if ("competencia" %in% names(tb_estab) &&
+      any(is.na(tb_estab$competencia) | tb_estab$competencia != competencia)) {
+    stop("Competência dos registros diverge do contrato solicitado.")
+  }
   n_registros_fonte <- nrow(tb_estab)
   col_co_unidade <- primeira_coluna_existente(tb_estab, c("co_unidade"))
   col_cnes_publico <- primeira_coluna_existente(tb_estab, c("co_cnes", "cnes"))
@@ -231,7 +245,7 @@ preparar_estabelecimentos_cnes <- function(dir_raw, competencia = "202601", uf_i
   out$atende_sus[which(criterio_nao %in% TRUE)] <- "Não"
 
   out$fonte <- "CNES"
-  out$arquivo_origem <- "tbEstabelecimento202601"
+  out$arquivo_origem <- origem_efetiva
   out$data_processamento <- as.character(Sys.Date())
 
   out$nome_estabelecimento <- ifelse(is.na(out$nome_estabelecimento) | trimws(out$nome_estabelecimento)=="", out$razao_social, out$nome_estabelecimento)
