@@ -70,7 +70,10 @@ agregar_unicos <- function(x) {
   paste(vals, collapse = " | ")
 }
 
-preparar_estabelecimentos_cnes <- function(dir_raw, competencia = "202601", uf_interesse = "ES", dir_interim = file.path("data_interim", "cnes"), arquivo_estabelecimentos = NULL) {
+preparar_estabelecimentos_cnes <- function(dir_raw, competencia = "202601", uf_interesse = "ES", dir_interim = file.path("data_interim", "cnes"), arquivo_estabelecimentos = NULL, manifesto_estabelecimentos = NULL) {
+  if (length(uf_interesse) != 1L || is.na(uf_interesse) || toupper(uf_interesse) != "ES") {
+    stop("Preparador restrito ao escopo ES; outra UF requer contrato próprio.")
+  }
   if (length(competencia) != 1L || is.na(competencia) ||
       !grepl("^[0-9]{4}(0[1-9]|1[0-2])$", competencia)) stop("Competência CNES inválida.")
   base <- file.path(dir_raw, competencia)
@@ -98,6 +101,28 @@ preparar_estabelecimentos_cnes <- function(dir_raw, competencia = "202601", uf_i
   if ("competencia" %in% names(tb_estab) &&
       any(is.na(tb_estab$competencia) | tb_estab$competencia != competencia)) {
     stop("Competência dos registros diverge do contrato solicitado.")
+  }
+  if (!grepl("^tbEstabelecimento[0-9]{6}$", origem_efetiva) && !"competencia" %in% names(tb_estab)) {
+    if (is.null(manifesto_estabelecimentos)) stop("Nome não canônico exige evidência de competência e hash em manifesto.")
+    m <- read.csv(manifesto_estabelecimentos, colClasses = "character", check.names = FALSE)
+    if (nrow(m) != 1L || !all(c("competencia", "sha256_csv") %in% names(m)) ||
+        is.na(m$competencia) || m$competencia != competencia || !grepl("^[0-9a-f]{64}$", m$sha256_csv)) stop("Manifesto de competência inválido/divergente.")
+    if (!exists("sha256_fonte_cnes", mode = "function")) stop("Carregue o verificador de SHA-256 para a fonte não canônica.")
+    fonte_hash <- attr(tb_estab, "arquivo_lido")
+    if (grepl("\\.gz$", fonte_hash)) {
+      original <- tempfile(fileext = ".csv")
+      entrada <- gzfile(fonte_hash, "rb"); saida_hash <- file(original, "wb")
+      tryCatch({
+        repeat {
+          bloco <- readBin(entrada, "raw", n = 1024 * 1024)
+          if (!length(bloco)) break
+          writeBin(bloco, saida_hash)
+        }
+      }, finally = {close(entrada); close(saida_hash)})
+      on.exit(unlink(original), add = TRUE)
+      fonte_hash <- original
+    }
+    if (sha256_fonte_cnes(fonte_hash) != m$sha256_csv) stop("Hash da fonte diverge do manifesto de competência.")
   }
   n_registros_fonte <- nrow(tb_estab)
   col_co_unidade <- primeira_coluna_existente(tb_estab, c("co_unidade"))

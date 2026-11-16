@@ -2,7 +2,8 @@
 
 Não instala pacotes externos; requer CPython 3.12 com venv já disponível no host.
 Separa criação do snapshot (assistida pelo agente) do comando de restauração e
-execução (subprocesso sem IA/rede). Não é aceite por segundo operador humano.
+execução (subprocesso sem assistência de IA durante o comando). Ausência de
+chamadas de rede no código não prova isolamento. Não é aceite por segundo operador.
 """
 import argparse
 import hashlib
@@ -31,7 +32,7 @@ def preparar(destino, estabelecimentos, referencia):
     return adquirir_conjunto(destino, esperados, ArquivosLocais(fontes))["conteudo_id"]
 
 
-def restaurar_e_executar(snapshot, vazio, identidade):
+def restaurar_e_executar(snapshot, vazio, identidade, exigir_isolamento_rede=False):
     """Restaurar, criar venv sem pip e executar código sentinela em subprocesso isolado."""
     inicio = time.monotonic()
     vazio = Path(vazio)
@@ -40,13 +41,20 @@ def restaurar_e_executar(snapshot, vazio, identidade):
     versao = restaurar_snapshot(snapshot, vazio, identidade)
     ambiente = vazio / "ambiente"
     venv.EnvBuilder(with_pip=False, system_site_packages=False).create(ambiente)
-    python = ambiente / "bin/python"
+    python = ambiente / ("Scripts/python.exe" if sys.platform == "win32" else "bin/python")
     objetos = versao / "objetos"
     resultado = vazio / "sentinela.json"
     comando = [str(python.resolve()), "-I", str((objetos / "sentinela.py").resolve()),
                str((objetos / "estabelecimentos.csv").resolve()), str((objetos / "referencia.csv").resolve()), str(resultado.resolve())]
     # Invocar o link do venv preserva seu sys.prefix; resolve() seria o runtime host.
     comando[0] = str(python.absolute())
+    prefixo = []
+    if exigir_isolamento_rede:
+        unshare = shutil.which("unshare")
+        if not unshare:
+            raise RuntimeError("Isolamento de rede exigido, mas unshare não está disponível.")
+        prefixo = [unshare, "--net", "--"]
+    comando = prefixo + comando
     proc = subprocess.run(comando, capture_output=True, text=True, timeout=30, cwd=vazio,
                           env={"PATH": str(ambiente / "bin"), "LANG": "C.UTF-8"})
     if proc.returncode:
@@ -58,7 +66,9 @@ def restaurar_e_executar(snapshot, vazio, identidade):
                     diretorio_inicial="vazio_verificado", ambiente_restaurado="venv stdlib sem pip/system-site-packages",
                     dependencia_host=sys.version, comando=comando, exit_code=proc.returncode,
                     stdout=proc.stdout, segundos=time.monotonic() - inicio, resultado=dados,
-                    sha256_resultado=sha256_arquivo(resultado), rede_durante_comando=False,
+                    sha256_resultado=sha256_arquivo(resultado), rede_durante_comando="NAO_MEDIDA",
+                    isolamento_rede_imposto=bool(prefixo),
+                    dependencia_rede="nao_identificada_por_inspecao_do_codigo; nao_equivale_a_isolamento",
                     ia_durante_comando=False, preparo_assistido_por_ia=True,
                     limites="Host CPython preexistente; sem reconstrução OS/R/Arrow; não demonstra atualização nem operador humano.")
     (vazio / "ensaio.json").write_text(json.dumps(registro, ensure_ascii=False, indent=2) + "\n")
@@ -71,7 +81,8 @@ if __name__ == "__main__":
     p.add_argument("--vazio", required=True, type=Path)
     p.add_argument("--estabelecimentos", required=True)
     p.add_argument("--referencia", required=True)
+    p.add_argument("--exigir-isolamento-rede", action="store_true")
     args = p.parse_args()
     id = preparar(args.cache, args.estabelecimentos, args.referencia)
-    r = restaurar_e_executar(args.cache / "versoes" / id, args.vazio, id)
+    r = restaurar_e_executar(args.cache / "versoes" / id, args.vazio, id, args.exigir_isolamento_rede)
     print(json.dumps({k: r[k] for k in ["tipo", "snapshot_id", "segundos", "exit_code", "resultado"]}, ensure_ascii=False))

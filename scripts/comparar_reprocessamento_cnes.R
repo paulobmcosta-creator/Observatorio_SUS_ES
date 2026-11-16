@@ -26,7 +26,7 @@ insumos <- insumos[!file.info(insumos)$isdir]
 hashes <- vapply(insumos, sha256_fonte_cnes, character(1))
 inicio <- format(Sys.time(), tz = "UTC", usetz = TRUE)
 cache <- preparar_cache_cnes(fonte, manifesto)
-est <- preparar_estabelecimentos_cnes("data_raw/cnes", dir_interim = saida, arquivo_estabelecimentos = cache)
+est <- preparar_estabelecimentos_cnes("data_raw/cnes", dir_interim = saida, arquivo_estabelecimentos = cache, manifesto_estabelecimentos = manifesto)
 hab <- preparar_habilitacoes_cnes(dir_interim = saida)
 n_fonte <- c(attr(est, "n_registros_fonte"), attr(hab, "n_registros_fonte"))
 n_recorte <- c(attr(est, "n_registros_recorte"), attr(hab, "n_registros_recorte"))

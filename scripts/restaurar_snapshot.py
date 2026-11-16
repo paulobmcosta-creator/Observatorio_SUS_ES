@@ -11,9 +11,10 @@ if __name__ == "__main__":
     p.add_argument("--conteudo-id", required=True)
     p.add_argument("--destino-vazio", required=True, type=Path)
     p.add_argument("--sentinela-rue", action="store_true")
+    p.add_argument("--exigir-isolamento-rede", action="store_true")
     a = p.parse_args()
     if a.sentinela_rue:
-        resultado = restaurar_e_executar(a.fonte, a.destino_vazio, a.conteudo_id)
+        resultado = restaurar_e_executar(a.fonte, a.destino_vazio, a.conteudo_id, a.exigir_isolamento_rede)
         print(json.dumps({k: resultado[k] for k in ["tipo", "snapshot_id", "segundos", "exit_code", "resultado"]}, ensure_ascii=False))
     else:
         print(restaurar_snapshot(a.fonte, a.destino_vazio, a.conteudo_id))
