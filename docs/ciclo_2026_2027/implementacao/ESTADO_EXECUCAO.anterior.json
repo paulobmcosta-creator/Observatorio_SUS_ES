@@ -3,7 +3,7 @@
   "mandato_versao": "1.0",
   "zip_sha256": "7de4bc9ec44b5891758565a858466f91bd681e51f8584c39ee29d0056da11372",
   "base": "68aa9d084cb7cf3d90c141776ed9f44f378e1372",
-  "checkpoint": "CP-IMP-008",
+  "checkpoint": "CP-IMP-011",
   "tentativas": [
     {
       "problema": "refs_git",
@@ -11,230 +11,353 @@
       "comando": "git ls-remote --heads origin",
       "erro": "proxy indisponível no sandbox padrão",
       "resolucao": "permissão de rede da ferramenta; consulta bem-sucedida; refs inalteradas"
+    },
+    {
+      "problema": "fontes_SIH_PDR_catalogo",
+      "fonte": "tabnet.datasus.gov.br|saude.es.gov.br|ftp.datasus.gov.br",
+      "versao": "202401/PDR2024",
+      "comando": "urllib.request.urlopen por URI oficial; timeout20; sem retries",
+      "erro": "Tunnel connection failed:403 Forbidden",
+      "tentativas_por_host": 1,
+      "proxima_tentativa": "somente com nova evidência de acesso legítimo ou arquivos oficiais recebidos"
+    },
+    {
+      "problema": "planilha_oncologia",
+      "fonte": "Google Drive metadados e relacionamentos DOCX",
+      "versao": "relatorio SHA630c8a24",
+      "comando": "leitura do DOCX recuperado; busca curta e consulta à pasta do acervo",
+      "erro": "cadeia original não recuperada; pais não retornados",
+      "resultado": "aritmética delimitada aprovada; não repetir busca ampla sem nova pista"
     }
   ],
   "evidencias": [
     "integridade ZIP e 68 hashes verificados"
   ],
   "instrucao_retomada": "Usar RETOMADA.md e a mesma fila; avançar automaticamente; não reabrir investigação encerrada.",
-  "timestamp": "2026-11-16T17:53:09.156418+00:00",
-  "ultima_unidade_confirmada": "Integração aprovada: 99 testes Python e 19 scripts R; guia, licenças e contrato documentados; antes de commit",
+  "timestamp": "2026-11-16T18:02:39.801987+00:00",
+  "ultima_unidade_confirmada": "PR draft #82 aberto para transição; CI remoto 954d89f em execução; 52 IDs classificados com parte restante",
   "proximas": [
-    "Consolidar frentes temáticas e produtos de comunicação; preservar branch remota sem dados"
+    "Conferir resultado CI do SHA exato e gerar pacote recuperável; depois retomar R24 com insumos oficiais legítimos"
   ],
-  "head_observado": "230961eb35fc8abb62f090606d9deab2d16f7458",
+  "head_observado": "954d89f0a6f9bbaa72ff4afa53b61ab1971873ec",
   "branch": "feat/implementacao-2026-2027-autonomia",
   "tarefas": {
     "R01": {
       "estado": "PARCIAL",
-      "bloqueio": ""
+      "bloqueio": "Parte do acervo externo e cadeias originais ausentes",
+      "evidencia": "FRENTES_TEMATICAS.md",
+      "parte_restante": "Parte do acervo externo e cadeias originais ausentes"
     },
     "R02": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "PARCIAL",
+      "bloqueio": "Validação sanitária de candidatos e S03/S04 reais",
+      "evidencia": "FICHA_RUE.md;R24_CONTRATO_SIH_PENDENTE.md",
+      "parte_restante": "Validação sanitária de candidatos e S03/S04 reais"
     },
     "R03": {
       "estado": "CONCLUIDA",
-      "bloqueio": ""
+      "bloqueio": "",
+      "evidencia": "../primeiro_incremento.md",
+      "parte_restante": "Nenhuma no escopo histórico delimitado"
     },
     "R04": {
       "estado": "CONCLUIDA",
-      "bloqueio": ""
+      "bloqueio": "",
+      "evidencia": "../rodada_02_armazenamento_cnes.md",
+      "parte_restante": "Nenhuma no escopo histórico delimitado"
     },
     "R05": {
       "estado": "CONCLUIDA",
-      "bloqueio": ""
+      "bloqueio": "",
+      "evidencia": "../rodada_02_armazenamento_cnes.md",
+      "parte_restante": "Nenhuma no escopo histórico delimitado"
     },
     "R06": {
       "estado": "BLOQUEADA",
-      "bloqueio": "Atos e eficácia PDR indisponíveis; CONNECT 403; sem tabela oficial validada"
+      "bloqueio": "Ato/eficácia/composição municipal oficiais; CONNECT 403",
+      "evidencia": "evidencias/acessos_oficiais.json",
+      "parte_restante": "Ato/eficácia/composição municipal oficiais; CONNECT 403"
     },
     "R07": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "BLOQUEADA",
+      "bloqueio": "Linha prioritária, ato e vigência por modalidade não resolvidos",
+      "evidencia": "FRENTES_TEMATICAS.md",
+      "parte_restante": "Linha prioritária, ato e vigência por modalidade não resolvidos"
     },
     "R08": {
       "estado": "PARCIAL",
-      "bloqueio": ""
+      "bloqueio": "Aquisição DBC oficial e catálogo real das 27 UFs",
+      "evidencia": "CONTRATO_CUSTODIA.md",
+      "parte_restante": "Aquisição DBC oficial e catálogo real das 27 UFs"
     },
     "R09": {
       "estado": "PARCIAL",
-      "bloqueio": "Executor e contraprova sintéticos prontos; sem DBC oficial/layout/coorte/cobertura para resultado real"
+      "bloqueio": "Layout/coorte/conversão/cobertura real; S04 também território",
+      "evidencia": "evidencias/integracao_v1/execucao.json",
+      "parte_restante": "Layout/coorte/conversão/cobertura real; S04 também território"
     },
     "R10": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "BLOQUEADA",
+      "bloqueio": "ZIPs MVP v1/v2 não disponíveis localmente",
+      "evidencia": "REQUISITOS_PAINEL.md",
+      "parte_restante": "ZIPs MVP v1/v2 não disponíveis localmente"
     },
     "R11": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "PARCIAL",
+      "bloqueio": "Segundo leitor/operador humano e configuração institucional",
+      "evidencia": "GUIA_OPERACAO_LOCAL.md",
+      "parte_restante": "Segundo leitor/operador humano e configuração institucional"
     },
     "R12": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "BLOQUEADA",
+      "bloqueio": "Expansão por família requer layout e primeiro recorte real aprovado",
+      "evidencia": "CONTRATO_CUSTODIA.md",
+      "parte_restante": "Expansão por família requer layout e primeiro recorte real aprovado"
     },
     "R13": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "PARCIAL",
+      "bloqueio": "Revisão científica/autoria; apresentação final e divulgação autorizada",
+      "evidencia": "NOTA_TECNICA_2026_2027_RASCUNHO.md;RESUMO_CIENTIFICO_RASCUNHO.md;ROTEIRO_APRESENTACAO.md",
+      "parte_restante": "Revisão científica/autoria; apresentação final e divulgação autorizada"
     },
     "R14": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "PARCIAL",
+      "bloqueio": "Objetivos O1–O6 ainda incompletos; relatório final institucional",
+      "evidencia": "RELATORIO_PARCIAL_2026_2027.md",
+      "parte_restante": "Objetivos O1–O6 ainda incompletos; relatório final institucional"
     },
     "R15": {
       "estado": "PARCIAL",
-      "bloqueio": ""
+      "bloqueio": "Pessoas P1–P3, custódia e decisões reservadas",
+      "evidencia": "DECISOES_R15.md",
+      "parte_restante": "Pessoas P1–P3, custódia e decisões reservadas"
     },
     "R16": {
       "estado": "PARCIAL",
-      "bloqueio": ""
+      "bloqueio": "Proveniência/linhagem de primeiro lote DBC oficial real",
+      "evidencia": "CONTRATO_CUSTODIA.md",
+      "parte_restante": "Proveniência/linhagem de primeiro lote DBC oficial real"
     },
     "R17": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "BLOQUEADA",
+      "bloqueio": "Pacote histórico válido por competência/indicador",
+      "evidencia": "FRENTES_TEMATICAS.md",
+      "parte_restante": "Pacote histórico válido por competência/indicador"
     },
     "R18": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "BLOQUEADA",
+      "bloqueio": "Série harmonizada e padrão Brasil 2010 com estratos/fontes congelados",
+      "evidencia": "FRENTES_TEMATICAS.md",
+      "parte_restante": "Série harmonizada e padrão Brasil 2010 com estratos/fontes congelados"
     },
     "R19": {
       "estado": "PARCIAL",
-      "bloqueio": ""
+      "bloqueio": "Dois leitores sobre DBC oficial; cobertura real por família",
+      "evidencia": "evidencias/verificacao_custodia/execucao.json",
+      "parte_restante": "Dois leitores sobre DBC oficial; cobertura real por família"
     },
     "R20": {
       "estado": "PARCIAL",
-      "bloqueio": ""
+      "bloqueio": "Limiares por finalidade após dados; pequenas células e divulgação",
+      "evidencia": "CONTRATO_CUSTODIA.md",
+      "parte_restante": "Limiares por finalidade após dados; pequenas células e divulgação"
     },
     "R21": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "BLOQUEADA",
+      "bloqueio": "Enquadramento ético/jurídico institucional por desenho",
+      "evidencia": "FRENTES_TEMATICAS.md",
+      "parte_restante": "Enquadramento ético/jurídico institucional por desenho"
     },
     "T01": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "PARCIAL",
+      "bloqueio": "Território retrospectivo, Noroeste 1 e denominadores oficiais",
+      "evidencia": "FRENTES_TEMATICAS.md",
+      "parte_restante": "Território retrospectivo, Noroeste 1 e denominadores oficiais"
     },
     "T02": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "BLOQUEADA",
+      "bloqueio": "Definição CID IAM documentada; não bloqueia G0–G5 por si só",
+      "evidencia": "FRENTES_TEMATICAS.md",
+      "parte_restante": "Definição CID IAM documentada; não bloqueia G0–G5 por si só"
     },
     "T03": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "BLOQUEADA",
+      "bloqueio": "SIGTAP por competência e relações CBO aprovadas",
+      "evidencia": "FRENTES_TEMATICAS.md",
+      "parte_restante": "SIGTAP por competência e relações CBO aprovadas"
     },
     "T04": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "BLOQUEADA",
+      "bloqueio": "Normas, CNES histórico, localização e atributos elegíveis",
+      "evidencia": "FRENTES_TEMATICAS.md",
+      "parte_restante": "Normas, CNES histórico, localização e atributos elegíveis"
     },
     "T05": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "PARCIAL",
+      "bloqueio": "Geografia D2 e coorte/cobertura reais",
+      "evidencia": "evidencias/integracao_v1/execucao.json",
+      "parte_restante": "Geografia D2 e coorte/cobertura reais"
     },
     "T06": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "BLOQUEADA",
+      "bloqueio": "RAW SIM/SIH, layout, coorte, temporalidade e fontes válidas",
+      "evidencia": "FRENTES_TEMATICAS.md",
+      "parte_restante": "RAW SIM/SIH, layout, coorte, temporalidade e fontes válidas"
     },
     "T07": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "BLOQUEADA",
+      "bloqueio": "SIA/CNES temáticos por competência com paridade real",
+      "evidencia": "FRENTES_TEMATICAS.md",
+      "parte_restante": "SIA/CNES temáticos por competência com paridade real"
     },
     "T08": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "BLOQUEADA",
+      "bloqueio": "Indicadores temáticos e denominadores válidos",
+      "evidencia": "FRENTES_TEMATICAS.md",
+      "parte_restante": "Indicadores temáticos e denominadores válidos"
     },
     "T09": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "BLOQUEADA",
+      "bloqueio": "Séries anuais centrais elegíveis de 2014–2024",
+      "evidencia": "FRENTES_TEMATICAS.md",
+      "parte_restante": "Séries anuais centrais elegíveis de 2014–2024"
     },
     "T10": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "PARCIAL",
+      "bloqueio": "Resultados empíricos centrais e relatório da discente",
+      "evidencia": "FRENTES_TEMATICAS.md",
+      "parte_restante": "Resultados empíricos centrais e relatório da discente"
     },
     "R22": {
       "estado": "CONCLUIDA",
-      "bloqueio": ""
+      "bloqueio": "",
+      "evidencia": "evidencias/integracao_v1/test_proveniencia_temporal_cnes.txt",
+      "parte_restante": "Nenhuma no escopo delimitado; snapshot histórico preservado"
     },
     "R23": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "BLOQUEADA",
+      "bloqueio": "Fonte oficial de localização física e cardinalidade no consumidor",
+      "evidencia": "FRENTES_TEMATICAS.md",
+      "parte_restante": "Fonte oficial de localização física e cardinalidade no consumidor"
     },
     "R24": {
       "estado": "BLOQUEADA",
-      "bloqueio": "Layout/DEF/CNV 202401 e perfil IDENT não adquiridos; CONNECT 403"
+      "bloqueio": "Layout/DEF/CNV 202401, domínio IDENT real e documentação",
+      "evidencia": "R24_CONTRATO_SIH_PENDENTE.md",
+      "parte_restante": "Layout/DEF/CNV 202401, domínio IDENT real e documentação"
     },
     "R25": {
       "estado": "BLOQUEADA",
-      "bloqueio": "202402 depende do primeiro percurso real aprovado; não expandir agora"
+      "bloqueio": "Primeiro percurso real aprovado antes de 202402",
+      "evidencia": "GUIA_OPERACAO_LOCAL.md",
+      "parte_restante": "Primeiro percurso real aprovado antes de 202402"
     },
     "R26": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "PARCIAL",
+      "bloqueio": "Planilha/consulta/filtros de origem e edição de extratos",
+      "evidencia": "FRENTES_TEMATICAS.md",
+      "parte_restante": "Planilha/consulta/filtros de origem e edição de extratos"
     },
     "R27": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "BLOQUEADA",
+      "bloqueio": "R26 e normas/recorte válidos para oferta/produção/fluxo",
+      "evidencia": "FRENTES_TEMATICAS.md",
+      "parte_restante": "R26 e normas/recorte válidos para oferta/produção/fluxo"
     },
     "R28": {
-      "estado": "PARCIAL",
-      "bloqueio": ""
+      "estado": "CONCLUIDA",
+      "bloqueio": "",
+      "evidencia": "FICHA_RUE.md;evidencias/rue_resultado_real.csv",
+      "parte_restante": "Quatro dimensões mantêm status histórico, fora do novo ensaio delimitado"
     },
     "R29": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "BLOQUEADA",
+      "bloqueio": "Utilização/fluxos reais de R09 ou fonte gestora válida",
+      "evidencia": "FRENTES_TEMATICAS.md",
+      "parte_restante": "Utilização/fluxos reais de R09 ou fonte gestora válida"
     },
     "R30": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "PARCIAL",
+      "bloqueio": "PF/CBO/layout e governança; começar por vínculos",
+      "evidencia": "FRENTES_TEMATICAS.md",
+      "parte_restante": "PF/CBO/layout e governança; começar por vínculos"
     },
     "R31": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "PARCIAL",
+      "bloqueio": "Série comparável ES e célula real; lista/versão e denominador",
+      "evidencia": "FRENTES_TEMATICAS.md",
+      "parte_restante": "Série comparável ES e célula real; lista/versão e denominador"
     },
     "R32": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "BLOQUEADA",
+      "bloqueio": "Pergunta elegível, layout e localização validados",
+      "evidencia": "FRENTES_TEMATICAS.md",
+      "parte_restante": "Pergunta elegível, layout e localização validados"
     },
     "R33": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "PARCIAL",
+      "bloqueio": "Pactuação humana e contratos de dados válidos",
+      "evidencia": "REQUISITOS_PAINEL.md",
+      "parte_restante": "Pactuação humana e contratos de dados válidos"
     },
     "R34": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "BLOQUEADA",
+      "bloqueio": "ZIPs MVP e fonte/semântica; baseline divergente",
+      "evidencia": "REQUISITOS_PAINEL.md",
+      "parte_restante": "ZIPs MVP e fonte/semântica; baseline divergente"
     },
     "R35": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "BLOQUEADA",
+      "bloqueio": "Build/browser/código disponível e usabilidade humana real",
+      "evidencia": "REQUISITOS_PAINEL.md",
+      "parte_restante": "Build/browser/código disponível e usabilidade humana real"
     },
     "R36": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "PARCIAL",
+      "bloqueio": "Atualização real e retorno de interface/dados do painel",
+      "evidencia": "evidencias/restauracao_operacional_rue.json",
+      "parte_restante": "Atualização real e retorno de interface/dados do painel"
     },
     "R37": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "PARCIAL",
+      "bloqueio": "Revisão final da peça e registro de autoria institucional",
+      "evidencia": "NOTA_TECNICA_2026_2027_RASCUNHO.md",
+      "parte_restante": "Revisão final da peça e registro de autoria institucional"
     },
     "R38": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "BLOQUEADA",
+      "bloqueio": "Maturidade científica, autoria e decisões de cooperação/divulgação",
+      "evidencia": "RESUMO_CIENTIFICO_RASCUNHO.md",
+      "parte_restante": "Maturidade científica, autoria e decisões de cooperação/divulgação"
     },
     "REV01": {
       "estado": "CONCLUIDA",
-      "bloqueio": ""
+      "bloqueio": "",
+      "evidencia": "DECISOES_R15.md;VALIDACAO_PACOTE.json",
+      "parte_restante": "Nenhuma no escopo histórico delimitado"
     },
     "REV-A01": {
       "estado": "CONCLUIDA",
-      "bloqueio": ""
+      "bloqueio": "",
+      "evidencia": "FICHA_RUE.md",
+      "parte_restante": "Sem pendência no escopo; nenhuma homologação sanitária inferida"
     },
     "REV-A02": {
       "estado": "PARCIAL",
-      "bloqueio": ""
+      "bloqueio": "Transporte oficial/DBC real e cobertura nacional",
+      "evidencia": "CONTRATO_CUSTODIA.md",
+      "parte_restante": "Transporte oficial/DBC real e cobertura nacional"
     },
     "REV-A03": {
       "estado": "PARCIAL",
-      "bloqueio": "Ensaio pelo agente aprovado no escopo stdlib; segundo operador humano e ambiente institucional ainda pendentes"
+      "bloqueio": "Segundo operador humano e ambiente/custódia institucionais",
+      "evidencia": "evidencias/restauracao_operacional_rue.json",
+      "parte_restante": "Segundo operador humano e ambiente/custódia institucionais"
     }
   },
   "commits_confirmados": [
+    "954d89f0a6f9bbaa72ff4afa53b61ab1971873ec docs(ciclo): consolidar R11 R13 R14 R26 R33 R37 e pendências dos 52 IDs",
+    "d457d073d48afa6184fb5ea1ec9a1b44d3cca2d5 feat(custodia): implementar R08 R16 R19 e ensaiar recuperação REV-A03",
     "230961eb35fc8abb62f090606d9deab2d16f7458 feat(ciclo): integrar CP09, corrigir R22 e reproduzir ponte RUE R28"
   ],
   "comandos_verificados": [
@@ -442,6 +565,8 @@
   "arquivos_implementacao": [
     ".github/workflows/validar_pipeline_cnes_r.yml",
     ".github/workflows/validar_serializacao_python.yml",
+    "docs/ciclo_2026_2027/README.md",
+    "docs/ciclo_2026_2027/implementacao/ACERVO_RECUPERADO_IMPLEMENTACAO.csv",
     "docs/ciclo_2026_2027/implementacao/APROPRIACAO_TECNOLOGICA.csv",
     "docs/ciclo_2026_2027/implementacao/CONTRATO_CUSTODIA.md",
     "docs/ciclo_2026_2027/implementacao/DECISOES_R15.md",
@@ -450,12 +575,20 @@
     "docs/ciclo_2026_2027/implementacao/EVIDENCIAS_IMPLEMENTACAO.csv",
     "docs/ciclo_2026_2027/implementacao/FICHA_RUE.md",
     "docs/ciclo_2026_2027/implementacao/FILA_IMPLEMENTACAO.csv",
+    "docs/ciclo_2026_2027/implementacao/FRENTES_TEMATICAS.md",
     "docs/ciclo_2026_2027/implementacao/GUIA_OPERACAO_LOCAL.md",
     "docs/ciclo_2026_2027/implementacao/LOG_EXECUCAO.md",
     "docs/ciclo_2026_2027/implementacao/MANIFESTO_ENTREGAS.csv",
+    "docs/ciclo_2026_2027/implementacao/NOTA_TECNICA_2026_2027_RASCUNHO.md",
+    "docs/ciclo_2026_2027/implementacao/PR_DRAFT.md",
+    "docs/ciclo_2026_2027/implementacao/PUBLICACAO_GIT.json",
     "docs/ciclo_2026_2027/implementacao/R24_CONTRATO_SIH_PENDENTE.md",
     "docs/ciclo_2026_2027/implementacao/REFERENCIAS_WORK.csv",
+    "docs/ciclo_2026_2027/implementacao/RELATORIO_PARCIAL_2026_2027.md",
+    "docs/ciclo_2026_2027/implementacao/REQUISITOS_PAINEL.md",
+    "docs/ciclo_2026_2027/implementacao/RESUMO_CIENTIFICO_RASCUNHO.md",
     "docs/ciclo_2026_2027/implementacao/RETOMADA.md",
+    "docs/ciclo_2026_2027/implementacao/ROTEIRO_APRESENTACAO.md",
     "docs/ciclo_2026_2027/implementacao/VALIDACAO_PACOTE.json",
     "docs/ciclo_2026_2027/implementacao/evidencias/acessos_oficiais.json",
     "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/execucao.json",
@@ -479,6 +612,7 @@
     "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/test_validar_pipeline_cnes.txt",
     "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/teste_pipeline_piloto_cnes.txt",
     "docs/ciclo_2026_2027/implementacao/evidencias/inventario_rd_202401_pendente.json",
+    "docs/ciclo_2026_2027/implementacao/evidencias/oncologia_conferencia_resumo.json",
     "docs/ciclo_2026_2027/implementacao/evidencias/restauracao_operacional_rue.json",
     "docs/ciclo_2026_2027/implementacao/evidencias/rue_insumos.csv",
     "docs/ciclo_2026_2027/implementacao/evidencias/rue_resultado_real.csv",
@@ -488,6 +622,7 @@
     "docs/ciclo_2026_2027/implementacao/evidencias/verificacao_custodia/test_dimensao_rue.txt",
     "docs/ciclo_2026_2027/implementacao/evidencias/verificacao_custodia/test_preparadores_sem_descarte.txt",
     "docs/ciclo_2026_2027/implementacao/evidencias/verificacao_custodia/test_proveniencia_temporal_cnes.txt",
+    "docs/ciclo_2026_2027/inventario_transicao.csv",
     "docs/ciclo_2026_2027/plano_operacional.md",
     "docs/ciclo_2026_2027/tarefas_operacionais.csv",
     "python/observatorio_sus/extract/adquirir_objetos.py",
@@ -496,6 +631,7 @@
     "python/observatorio_sus/io/manifestos.py",
     "python/observatorio_sus/transform/validar_partes_csv.py",
     "requirements-implementacao.txt",
+    "scripts/conferir_celula_oncologia.py",
     "scripts/ensaiar_restauracao_operacional.py",
     "scripts/executar_sentinela_rue_sem_dependencias.py",
     "scripts/inventariar_sih_rd.py",
@@ -514,5 +650,15 @@
     "tests/test_dimensao_rue.R",
     "tests/test_percurso_sih.R",
     "tests/test_proveniencia_temporal_cnes.R"
-  ]
+  ],
+  "publicacao_git": {
+    "pr": "https://github.com/paulobmcosta-creator/Observatorio_SUS_ES/pull/82",
+    "draft": true,
+    "merge": false,
+    "ci_sha": "954d89f0a6f9bbaa72ff4afa53b61ab1971873ec",
+    "ci": "sucesso R/Python observado; não extrapolar HEAD posterior"
+  },
+  "status_global": "PARCIAL_COM_BLOQUEIOS",
+  "motivo_interrupcao": "Unidades críticas remanescentes dependem de fontes oficiais negadas, artefatos externos ausentes ou gates humanos/institucionais; preparações independentes entregues.",
+  "pacote_previsto": "/workspace/entregas/Observatorio_SUS_ES_Implementacao_CPIMP012.zip"
 }

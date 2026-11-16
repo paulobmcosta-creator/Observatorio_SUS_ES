@@ -3,7 +3,7 @@
   "mandato_versao": "1.0",
   "zip_sha256": "7de4bc9ec44b5891758565a858466f91bd681e51f8584c39ee29d0056da11372",
   "base": "68aa9d084cb7cf3d90c141776ed9f44f378e1372",
-  "checkpoint": "CP-IMP-009",
+  "checkpoint": "CP-IMP-012",
   "tentativas": [
     {
       "problema": "refs_git",
@@ -11,18 +11,35 @@
       "comando": "git ls-remote --heads origin",
       "erro": "proxy indisponível no sandbox padrão",
       "resolucao": "permissão de rede da ferramenta; consulta bem-sucedida; refs inalteradas"
+    },
+    {
+      "problema": "fontes_SIH_PDR_catalogo",
+      "fonte": "tabnet.datasus.gov.br|saude.es.gov.br|ftp.datasus.gov.br",
+      "versao": "202401/PDR2024",
+      "comando": "urllib.request.urlopen por URI oficial; timeout20; sem retries",
+      "erro": "Tunnel connection failed:403 Forbidden",
+      "tentativas_por_host": 1,
+      "proxima_tentativa": "somente com nova evidência de acesso legítimo ou arquivos oficiais recebidos"
+    },
+    {
+      "problema": "planilha_oncologia",
+      "fonte": "Google Drive metadados e relacionamentos DOCX",
+      "versao": "relatorio SHA630c8a24",
+      "comando": "leitura do DOCX recuperado; busca curta e consulta à pasta do acervo",
+      "erro": "cadeia original não recuperada; pais não retornados",
+      "resultado": "aritmética delimitada aprovada; não repetir busca ampla sem nova pista"
     }
   ],
   "evidencias": [
     "integridade ZIP e 68 hashes verificados"
   ],
   "instrucao_retomada": "Usar RETOMADA.md e a mesma fila; avançar automaticamente; não reabrir investigação encerrada.",
-  "timestamp": "2026-11-16T18:00:01.908763+00:00",
-  "ultima_unidade_confirmada": "Frentes e O1–O6 registradas nos 52 IDs; rascunhos O6 e requisitos MVP prontos; recuperação por CLI e célula oncológica conferidas",
+  "timestamp": "2026-11-16T18:03:38.902180+00:00",
+  "ultima_unidade_confirmada": "Implementação elegível consolidada; PR draft82; CI R/Python aprovado em 954d89f; bloqueios por fonte/artefato/gate humano registrados",
   "proximas": [
-    "Revisar materiais publicáveis, commitar R11 R13 R14 R26 R33 R37 e enviar branch/PR draft autorizados"
+    "R24: receber layout/DEF/CNV RD202401 e um DBC oficial com manifesto por meio legítimo; validar IDENT e dois leitores antes de S03; não repetir 403 sem nova evidência"
   ],
-  "head_observado": "d457d073d48afa6184fb5ea1ec9a1b44d3cca2d5",
+  "head_observado": "954d89f0a6f9bbaa72ff4afa53b61ab1971873ec",
   "branch": "feat/implementacao-2026-2027-autonomia",
   "tarefas": {
     "R01": {
@@ -339,6 +356,7 @@
     }
   },
   "commits_confirmados": [
+    "954d89f0a6f9bbaa72ff4afa53b61ab1971873ec docs(ciclo): consolidar R11 R13 R14 R26 R33 R37 e pendências dos 52 IDs",
     "d457d073d48afa6184fb5ea1ec9a1b44d3cca2d5 feat(custodia): implementar R08 R16 R19 e ensaiar recuperação REV-A03",
     "230961eb35fc8abb62f090606d9deab2d16f7458 feat(ciclo): integrar CP09, corrigir R22 e reproduzir ponte RUE R28"
   ],
@@ -563,6 +581,7 @@
     "docs/ciclo_2026_2027/implementacao/MANIFESTO_ENTREGAS.csv",
     "docs/ciclo_2026_2027/implementacao/NOTA_TECNICA_2026_2027_RASCUNHO.md",
     "docs/ciclo_2026_2027/implementacao/PR_DRAFT.md",
+    "docs/ciclo_2026_2027/implementacao/PUBLICACAO_GIT.json",
     "docs/ciclo_2026_2027/implementacao/R24_CONTRATO_SIH_PENDENTE.md",
     "docs/ciclo_2026_2027/implementacao/REFERENCIAS_WORK.csv",
     "docs/ciclo_2026_2027/implementacao/RELATORIO_PARCIAL_2026_2027.md",
@@ -572,6 +591,8 @@
     "docs/ciclo_2026_2027/implementacao/ROTEIRO_APRESENTACAO.md",
     "docs/ciclo_2026_2027/implementacao/VALIDACAO_PACOTE.json",
     "docs/ciclo_2026_2027/implementacao/evidencias/acessos_oficiais.json",
+    "docs/ciclo_2026_2027/implementacao/evidencias/ci_954d89f_concluido.json",
+    "docs/ciclo_2026_2027/implementacao/evidencias/ci_954d89f_primeira_consulta.json",
     "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/execucao.json",
     "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/python_integracao.txt",
     "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/test_cache_cnes.txt",
@@ -631,5 +652,15 @@
     "tests/test_dimensao_rue.R",
     "tests/test_percurso_sih.R",
     "tests/test_proveniencia_temporal_cnes.R"
-  ]
+  ],
+  "publicacao_git": {
+    "pr": "https://github.com/paulobmcosta-creator/Observatorio_SUS_ES/pull/82",
+    "draft": true,
+    "merge": false,
+    "ci_sha": "954d89f0a6f9bbaa72ff4afa53b61ab1971873ec",
+    "ci": "sucesso R/Python observado; não extrapolar HEAD posterior"
+  },
+  "status_global": "PARCIAL_COM_BLOQUEIOS",
+  "motivo_interrupcao": "Unidades críticas remanescentes dependem de fontes oficiais negadas, artefatos externos ausentes ou gates humanos/institucionais; preparações independentes entregues.",
+  "pacote_previsto": "/workspace/entregas/Observatorio_SUS_ES_Implementacao_CPIMP012.zip"
 }

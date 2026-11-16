@@ -1,0 +1,26 @@
+{
+  "sha": "954d89f0a6f9bbaa72ff4afa53b61ab1971873ec",
+  "escopo": "runs pull_request retornados para o SHA; nao extrapolar para HEAD posterior",
+  "workflow_runs": [
+    {
+      "id": 43924505561,
+      "name": "validar-serializacao-python",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 3,
+      "jobs_url": "https://api.github.com/repos/paulobmcosta-creator/Observatorio_SUS_ES/actions/runs/43924505561/jobs",
+      "logs_url": "https://api.github.com/repos/paulobmcosta-creator/Observatorio_SUS_ES/actions/runs/43924505561/logs",
+      "workflow_id": 393353891
+    },
+    {
+      "id": 43924505446,
+      "name": "validar-pipeline-cnes-r",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 148,
+      "jobs_url": "https://api.github.com/repos/paulobmcosta-creator/Observatorio_SUS_ES/actions/runs/43924505446/jobs",
+      "logs_url": "https://api.github.com/repos/paulobmcosta-creator/Observatorio_SUS_ES/actions/runs/43924505446/logs",
+      "workflow_id": 262089220
+    }
+  ]
+}

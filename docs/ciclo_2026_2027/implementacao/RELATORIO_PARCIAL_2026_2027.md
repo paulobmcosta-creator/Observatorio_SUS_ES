@@ -43,6 +43,6 @@ Alternativas materiais: receber arquivos oficiais e seus manifestos por meio ins
 
 ## Continuidade e recuperação
 
-Estado, último checkpoint, commits e próxima unidade exata: `ESTADO_EXECUCAO.json` e `RETOMADA.md`. Manifesto de entregas inclui hashes de código, testes, configs e documentos modificados, exceto autorreferência. Branch de trabalho: `feat/implementacao-2026-2027-autonomia`; destino autorizado do PR draft: `feat/ciclo-2026-2027-transicao`. Sem merge ou implantação. A publicação Git, URL real e checks exatos serão registrados separadamente.
+Estado, último checkpoint, commits e próxima unidade exata: `ESTADO_EXECUCAO.json` e `RETOMADA.md`. Manifesto de entregas inclui hashes de código, testes, configs e documentos modificados, exceto autorreferência. Branch de trabalho: `feat/implementacao-2026-2027-autonomia`; destino autorizado do PR draft: `feat/ciclo-2026-2027-transicao`. Sem merge ou implantação. O PR draft real é https://github.com/paulobmcosta-creator/Observatorio_SUS_ES/pull/82. Os workflows R e Python retornaram sucesso para o SHA `954d89f0a6f9bbaa72ff4afa53b61ab1971873ec` (evidência `ci_954d89f_concluido.json`). Um checkpoint/documentação posterior terá outro HEAD, sem extrapolação desse sucesso.
 
 O checkpoint final é ponto de recuperação, não declaração de conclusão científica. A suspensão é justificada quando todas as unidades críticas elegíveis dependem de fontes, artefatos ou atos humanos ausentes, após concluir as preparações independentes. A retomada usa os mesmos 52 IDs, sem reiniciar a investigação CP09.

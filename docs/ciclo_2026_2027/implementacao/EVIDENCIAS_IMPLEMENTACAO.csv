@@ -9,3 +9,4 @@ IMP007,R09|R20,sintetico_R_SQL,evidencias/integracao_v1/execucao.json,99 testes 
 IMP008,R08,inventario_pendente,evidencias/inventario_rd_202401_pendente.json,27 UFs esperadas não consultadas,nenhuma cobertura real ou volume nacional inferido
 IMP009,R26,aritmetica_documento_historico,evidencias/oncologia_conferencia_resumo.json,uma célula conferida,consulta/planilha original não reconstruída
 IMP010,R37|R13,reuso_documental,ACERVO_RECUPERADO_IMPLEMENTACAO.csv,diretrizes e template obtidos em bytes; rascunhos novos,originais fora de Git; revisão humana e divulgação pendentes
+IMP011,R19|R36,CI_remoto_SHA_exato,evidencias/ci_954d89f_concluido.json,R e Python success em 954d89f,não extrapolar para commit posterior de checkpoint
