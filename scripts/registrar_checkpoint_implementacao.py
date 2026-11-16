@@ -65,6 +65,17 @@ def registrar(checkpoint, unidade, proxima, estados=(), bloqueios=()):
                   head_observado=subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=RAIZ, text=True).strip(),
                   branch=subprocess.check_output(["git", "branch", "--show-current"], cwd=RAIZ, text=True).strip(),
                   tarefas={r["id"]: {"estado": r["estado_execucao"], "bloqueio": r["bloqueio_execucao"]} for r in plano})
+    estado["commits_confirmados"] = subprocess.check_output(
+        ["git", "log", "--format=%H %s", estado["base"] + "..HEAD"], cwd=RAIZ, text=True).splitlines()
+    comandos = []
+    for prova in sorted((DOC / "evidencias").glob("*/execucao.json")):
+        for registro in json.loads(prova.read_text()).get("testes", []):
+            comandos.append({"comando": registro["comando"], "exit_code": registro["exit_code"],
+                             "evidencia": str(prova.relative_to(RAIZ))})
+    estado["comandos_verificados"] = comandos
+    alterados = subprocess.check_output(["git", "diff", "--name-only", estado["base"]], cwd=RAIZ, text=True).splitlines()
+    novos = subprocess.check_output(["git", "ls-files", "--others", "--exclude-standard"], cwd=RAIZ, text=True).splitlines()
+    estado["arquivos_implementacao"] = sorted(set(alterados + novos))
     atomico(caminho, json.dumps(estado, ensure_ascii=False, indent=2) + "\n")
     assert json.loads(caminho.read_text())["checkpoint"] == checkpoint
     log = DOC / "LOG_EXECUCAO.md"
@@ -88,8 +99,8 @@ Gate científico/humano não é substituído por teste sintético.
 Checkpoint: `python scripts/registrar_checkpoint_implementacao.py --checkpoint CP-IMP-NNN --unidade 'resultado comprovado' --proxima 'ação concreta'`.
 Atualize estados com `--estado ID=PARCIAL` e bloqueio com `--bloqueio 'ID=motivo'`.
 """)
-    alvos = [PLANO, RAIZ / "scripts/registrar_checkpoint_implementacao.py"]
-    alvos += sorted(p for p in DOC.rglob("*") if p.is_file() and p.name != "MANIFESTO_ENTREGAS.csv")
+    alvos = sorted({RAIZ / nome for nome in estado["arquivos_implementacao"]
+                    if (RAIZ / nome).is_file() and Path(nome).name != "MANIFESTO_ENTREGAS.csv"})
     atomico(DOC / "MANIFESTO_ENTREGAS.csv", serializar_csv([
         {"arquivo": str(p.relative_to(RAIZ)), "bytes": p.stat().st_size,
          "sha256": hashlib.sha256(p.read_bytes()).hexdigest()} for p in alvos],

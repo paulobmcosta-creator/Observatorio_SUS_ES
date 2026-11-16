@@ -3,7 +3,7 @@
   "mandato_versao": "1.0",
   "zip_sha256": "7de4bc9ec44b5891758565a858466f91bd681e51f8584c39ee29d0056da11372",
   "base": "68aa9d084cb7cf3d90c141776ed9f44f378e1372",
-  "checkpoint": "CP-IMP-003",
+  "checkpoint": "CP-IMP-008",
   "tentativas": [
     {
       "problema": "refs_git",
@@ -17,12 +17,12 @@
     "integridade ZIP e 68 hashes verificados"
   ],
   "instrucao_retomada": "Usar RETOMADA.md e a mesma fila; avançar automaticamente; não reabrir investigação encerrada.",
-  "timestamp": "2026-11-16T17:37:16.537091+00:00",
-  "ultima_unidade_confirmada": "RUE real 78/78 em R; fontes oficiais SIH/PDR/catalogo bloqueadas por CONNECT 403; antes de commit",
+  "timestamp": "2026-11-16T17:53:09.156418+00:00",
+  "ultima_unidade_confirmada": "Integração aprovada: 99 testes Python e 19 scripts R; guia, licenças e contrato documentados; antes de commit",
   "proximas": [
-    "Implementar fronteiras de custódia multipartes e testes adversariais R08/R16/R19/REV-A02"
+    "Consolidar frentes temáticas e produtos de comunicação; preservar branch remota sem dados"
   ],
-  "head_observado": "68aa9d084cb7cf3d90c141776ed9f44f378e1372",
+  "head_observado": "230961eb35fc8abb62f090606d9deab2d16f7458",
   "branch": "feat/implementacao-2026-2027-autonomia",
   "tarefas": {
     "R01": {
@@ -54,12 +54,12 @@
       "bloqueio": ""
     },
     "R08": {
-      "estado": "PENDENTE",
+      "estado": "PARCIAL",
       "bloqueio": ""
     },
     "R09": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "PARCIAL",
+      "bloqueio": "Executor e contraprova sintéticos prontos; sem DBC oficial/layout/coorte/cobertura para resultado real"
     },
     "R10": {
       "estado": "PENDENTE",
@@ -86,7 +86,7 @@
       "bloqueio": ""
     },
     "R16": {
-      "estado": "PENDENTE",
+      "estado": "PARCIAL",
       "bloqueio": ""
     },
     "R17": {
@@ -98,11 +98,11 @@
       "bloqueio": ""
     },
     "R19": {
-      "estado": "PENDENTE",
+      "estado": "PARCIAL",
       "bloqueio": ""
     },
     "R20": {
-      "estado": "PENDENTE",
+      "estado": "PARCIAL",
       "bloqueio": ""
     },
     "R21": {
@@ -162,8 +162,8 @@
       "bloqueio": "Layout/DEF/CNV 202401 e perfil IDENT não adquiridos; CONNECT 403"
     },
     "R25": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "BLOQUEADA",
+      "bloqueio": "202402 depende do primeiro percurso real aprovado; não expandir agora"
     },
     "R26": {
       "estado": "PENDENTE",
@@ -226,12 +226,293 @@
       "bloqueio": ""
     },
     "REV-A02": {
-      "estado": "PENDENTE",
+      "estado": "PARCIAL",
       "bloqueio": ""
     },
     "REV-A03": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "PARCIAL",
+      "bloqueio": "Ensaio pelo agente aprovado no escopo stdlib; segundo operador humano e ambiente institucional ainda pendentes"
     }
-  }
+  },
+  "commits_confirmados": [
+    "230961eb35fc8abb62f090606d9deab2d16f7458 feat(ciclo): integrar CP09, corrigir R22 e reproduzir ponte RUE R28"
+  ],
+  "comandos_verificados": [
+    {
+      "comando": [
+        "/workspace/Observatorio_SUS_ES/.venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/python",
+        "-q"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_estrutura_repositorio.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_metadata_cnes.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_classificacao_habilitacoes_cnes.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_ler_arquivos_cnes.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_padronizar_cnes_interim.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_validar_pipeline_cnes.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_executar_pipeline_piloto_cnes.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/teste_pipeline_piloto_cnes.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_indicadores_cnes_oferta.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_conferir_contrato_snapshot_cnes.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_cache_cnes.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_correspondencia_territorial.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_fila_revisao_habilitacoes.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_preparadores_sem_descarte.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_proveniencia_temporal_cnes.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_territorio_congelado.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_configuracao_dossies.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_dimensao_rue.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/Observatorio_SUS_ES/.venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/python/test_custodia.py",
+        "tests/python/test_qualidade_partes_csv.py",
+        "tests/python/test_converter_csv_parquet.py",
+        "-q"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/verificacao_custodia/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_proveniencia_temporal_cnes.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/verificacao_custodia/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_cache_cnes.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/verificacao_custodia/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_preparadores_sem_descarte.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/verificacao_custodia/execucao.json"
+    },
+    {
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_dimensao_rue.R"
+      ],
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/verificacao_custodia/execucao.json"
+    }
+  ],
+  "arquivos_implementacao": [
+    ".github/workflows/validar_pipeline_cnes_r.yml",
+    ".github/workflows/validar_serializacao_python.yml",
+    "docs/ciclo_2026_2027/implementacao/APROPRIACAO_TECNOLOGICA.csv",
+    "docs/ciclo_2026_2027/implementacao/CONTRATO_CUSTODIA.md",
+    "docs/ciclo_2026_2027/implementacao/DECISOES_R15.md",
+    "docs/ciclo_2026_2027/implementacao/ESTADO_EXECUCAO.anterior.json",
+    "docs/ciclo_2026_2027/implementacao/ESTADO_EXECUCAO.json",
+    "docs/ciclo_2026_2027/implementacao/EVIDENCIAS_IMPLEMENTACAO.csv",
+    "docs/ciclo_2026_2027/implementacao/FICHA_RUE.md",
+    "docs/ciclo_2026_2027/implementacao/FILA_IMPLEMENTACAO.csv",
+    "docs/ciclo_2026_2027/implementacao/GUIA_OPERACAO_LOCAL.md",
+    "docs/ciclo_2026_2027/implementacao/LOG_EXECUCAO.md",
+    "docs/ciclo_2026_2027/implementacao/MANIFESTO_ENTREGAS.csv",
+    "docs/ciclo_2026_2027/implementacao/R24_CONTRATO_SIH_PENDENTE.md",
+    "docs/ciclo_2026_2027/implementacao/REFERENCIAS_WORK.csv",
+    "docs/ciclo_2026_2027/implementacao/RETOMADA.md",
+    "docs/ciclo_2026_2027/implementacao/VALIDACAO_PACOTE.json",
+    "docs/ciclo_2026_2027/implementacao/evidencias/acessos_oficiais.json",
+    "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/execucao.json",
+    "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/python_integracao.txt",
+    "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/test_cache_cnes.txt",
+    "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/test_classificacao_habilitacoes_cnes.txt",
+    "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/test_conferir_contrato_snapshot_cnes.txt",
+    "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/test_configuracao_dossies.txt",
+    "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/test_correspondencia_territorial.txt",
+    "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/test_dimensao_rue.txt",
+    "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/test_estrutura_repositorio.txt",
+    "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/test_executar_pipeline_piloto_cnes.txt",
+    "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/test_fila_revisao_habilitacoes.txt",
+    "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/test_indicadores_cnes_oferta.txt",
+    "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/test_ler_arquivos_cnes.txt",
+    "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/test_metadata_cnes.txt",
+    "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/test_padronizar_cnes_interim.txt",
+    "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/test_preparadores_sem_descarte.txt",
+    "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/test_proveniencia_temporal_cnes.txt",
+    "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/test_territorio_congelado.txt",
+    "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/test_validar_pipeline_cnes.txt",
+    "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/teste_pipeline_piloto_cnes.txt",
+    "docs/ciclo_2026_2027/implementacao/evidencias/inventario_rd_202401_pendente.json",
+    "docs/ciclo_2026_2027/implementacao/evidencias/restauracao_operacional_rue.json",
+    "docs/ciclo_2026_2027/implementacao/evidencias/rue_insumos.csv",
+    "docs/ciclo_2026_2027/implementacao/evidencias/rue_resultado_real.csv",
+    "docs/ciclo_2026_2027/implementacao/evidencias/verificacao_custodia/execucao.json",
+    "docs/ciclo_2026_2027/implementacao/evidencias/verificacao_custodia/python_direcionado.txt",
+    "docs/ciclo_2026_2027/implementacao/evidencias/verificacao_custodia/test_cache_cnes.txt",
+    "docs/ciclo_2026_2027/implementacao/evidencias/verificacao_custodia/test_dimensao_rue.txt",
+    "docs/ciclo_2026_2027/implementacao/evidencias/verificacao_custodia/test_preparadores_sem_descarte.txt",
+    "docs/ciclo_2026_2027/implementacao/evidencias/verificacao_custodia/test_proveniencia_temporal_cnes.txt",
+    "docs/ciclo_2026_2027/plano_operacional.md",
+    "docs/ciclo_2026_2027/tarefas_operacionais.csv",
+    "python/observatorio_sus/extract/adquirir_objetos.py",
+    "python/observatorio_sus/extract/inventariar_sih_rd.py",
+    "python/observatorio_sus/io/custodia.py",
+    "python/observatorio_sus/io/manifestos.py",
+    "python/observatorio_sus/transform/validar_partes_csv.py",
+    "requirements-implementacao.txt",
+    "scripts/ensaiar_restauracao_operacional.py",
+    "scripts/executar_sentinela_rue_sem_dependencias.py",
+    "scripts/inventariar_sih_rd.py",
+    "scripts/registrar_checkpoint_implementacao.py",
+    "scripts/reproduzir_ponte_rue.R",
+    "scripts/restaurar_snapshot.py",
+    "scripts/verificar_ambiente_e_testes.py",
+    "src/indicators/calcular_percurso_sih.R",
+    "src/indicators/reproduzir_dimensao_rue.R",
+    "src/transform/preparar_estabelecimentos_cnes.R",
+    "tests/fixtures/sih/rd_sintetico.csv",
+    "tests/python/test_contraprova_sih_sql.py",
+    "tests/python/test_custodia.py",
+    "tests/python/test_inventario_sih_rd.py",
+    "tests/python/test_qualidade_partes_csv.py",
+    "tests/test_dimensao_rue.R",
+    "tests/test_percurso_sih.R",
+    "tests/test_proveniencia_temporal_cnes.R"
+  ]
 }

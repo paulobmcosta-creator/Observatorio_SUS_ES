@@ -1,0 +1,2 @@
+OK: chave composta; contagens reconciliadas; zero apenas na base; status interno não vira parecer documental
+OK: duplicidade, código sem classificação e perda de tipo rejeitados; base vazia explícita

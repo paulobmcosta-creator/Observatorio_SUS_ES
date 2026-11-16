@@ -1,0 +1,147 @@
+{
+  "sistema": "SIH",
+  "familia": "RD",
+  "competencia": "202401",
+  "evidencia_catalogo": null,
+  "objetos": [],
+  "cobertura": [
+    {
+      "uf": "AC",
+      "objetos_observados": 0,
+      "status": "esperado_nao_consultado"
+    },
+    {
+      "uf": "AL",
+      "objetos_observados": 0,
+      "status": "esperado_nao_consultado"
+    },
+    {
+      "uf": "AP",
+      "objetos_observados": 0,
+      "status": "esperado_nao_consultado"
+    },
+    {
+      "uf": "AM",
+      "objetos_observados": 0,
+      "status": "esperado_nao_consultado"
+    },
+    {
+      "uf": "BA",
+      "objetos_observados": 0,
+      "status": "esperado_nao_consultado"
+    },
+    {
+      "uf": "CE",
+      "objetos_observados": 0,
+      "status": "esperado_nao_consultado"
+    },
+    {
+      "uf": "DF",
+      "objetos_observados": 0,
+      "status": "esperado_nao_consultado"
+    },
+    {
+      "uf": "ES",
+      "objetos_observados": 0,
+      "status": "esperado_nao_consultado"
+    },
+    {
+      "uf": "GO",
+      "objetos_observados": 0,
+      "status": "esperado_nao_consultado"
+    },
+    {
+      "uf": "MA",
+      "objetos_observados": 0,
+      "status": "esperado_nao_consultado"
+    },
+    {
+      "uf": "MT",
+      "objetos_observados": 0,
+      "status": "esperado_nao_consultado"
+    },
+    {
+      "uf": "MS",
+      "objetos_observados": 0,
+      "status": "esperado_nao_consultado"
+    },
+    {
+      "uf": "MG",
+      "objetos_observados": 0,
+      "status": "esperado_nao_consultado"
+    },
+    {
+      "uf": "PA",
+      "objetos_observados": 0,
+      "status": "esperado_nao_consultado"
+    },
+    {
+      "uf": "PB",
+      "objetos_observados": 0,
+      "status": "esperado_nao_consultado"
+    },
+    {
+      "uf": "PR",
+      "objetos_observados": 0,
+      "status": "esperado_nao_consultado"
+    },
+    {
+      "uf": "PE",
+      "objetos_observados": 0,
+      "status": "esperado_nao_consultado"
+    },
+    {
+      "uf": "PI",
+      "objetos_observados": 0,
+      "status": "esperado_nao_consultado"
+    },
+    {
+      "uf": "RJ",
+      "objetos_observados": 0,
+      "status": "esperado_nao_consultado"
+    },
+    {
+      "uf": "RN",
+      "objetos_observados": 0,
+      "status": "esperado_nao_consultado"
+    },
+    {
+      "uf": "RS",
+      "objetos_observados": 0,
+      "status": "esperado_nao_consultado"
+    },
+    {
+      "uf": "RO",
+      "objetos_observados": 0,
+      "status": "esperado_nao_consultado"
+    },
+    {
+      "uf": "RR",
+      "objetos_observados": 0,
+      "status": "esperado_nao_consultado"
+    },
+    {
+      "uf": "SC",
+      "objetos_observados": 0,
+      "status": "esperado_nao_consultado"
+    },
+    {
+      "uf": "SP",
+      "objetos_observados": 0,
+      "status": "esperado_nao_consultado"
+    },
+    {
+      "uf": "SE",
+      "objetos_observados": 0,
+      "status": "esperado_nao_consultado"
+    },
+    {
+      "uf": "TO",
+      "objetos_observados": 0,
+      "status": "esperado_nao_consultado"
+    }
+  ],
+  "conflito_revisoes": false,
+  "bytes_observados": 0,
+  "estado": "PENDENTE"
+}

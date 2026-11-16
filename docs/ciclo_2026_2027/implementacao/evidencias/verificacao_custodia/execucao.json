@@ -1,0 +1,71 @@
+{
+  "utc": "2026-11-16T17:44:36.046741+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "plataforma": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "pacotes": {
+    "pytest": "9.1.1",
+    "pyarrow": "19.0.1",
+    "duckdb": "1.5.6",
+    "pysus": "2.0.4",
+    "pandas": "2.3.3",
+    "dbfread": "2.0.7"
+  },
+  "testes": [
+    {
+      "id": "python_direcionado",
+      "comando": [
+        "/workspace/Observatorio_SUS_ES/.venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/python/test_custodia.py",
+        "tests/python/test_qualidade_partes_csv.py",
+        "tests/python/test_converter_csv_parquet.py",
+        "-q"
+      ],
+      "exit_code": 0,
+      "segundos": 1.825625632000083,
+      "log": "python_direcionado.txt"
+    },
+    {
+      "id": "test_proveniencia_temporal_cnes",
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_proveniencia_temporal_cnes.R"
+      ],
+      "exit_code": 0,
+      "segundos": 0.38158165100003316,
+      "log": "test_proveniencia_temporal_cnes.txt"
+    },
+    {
+      "id": "test_cache_cnes",
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_cache_cnes.R"
+      ],
+      "exit_code": 0,
+      "segundos": 0.5245052259999738,
+      "log": "test_cache_cnes.txt"
+    },
+    {
+      "id": "test_preparadores_sem_descarte",
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_preparadores_sem_descarte.R"
+      ],
+      "exit_code": 0,
+      "segundos": 0.4337141559999509,
+      "log": "test_preparadores_sem_descarte.txt"
+    },
+    {
+      "id": "test_dimensao_rue",
+      "comando": [
+        "/workspace/.setup-observatorio/bin/Rscript",
+        "tests/test_dimensao_rue.R"
+      ],
+      "exit_code": 0,
+      "segundos": 0.21123681299991404,
+      "log": "test_dimensao_rue.txt"
+    }
+  ],
+  "resultado": "APROVADO"
+}

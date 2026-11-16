@@ -105,6 +105,11 @@ jobs:
       - name: Verificar preparadores sem descarte implícito
         run: Rscript tests/test_preparadores_sem_descarte.R
 
+      - name: Conferir ponte RUE e percurso SIH sintético
+        run: |
+          Rscript tests/test_dimensao_rue.R
+          Rscript tests/test_percurso_sih.R
+
       - name: Verificar proveniência temporal CNES (R22)
         run: Rscript tests/test_proveniencia_temporal_cnes.R
 

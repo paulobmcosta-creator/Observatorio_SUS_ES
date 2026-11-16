@@ -1,12 +1,12 @@
-# Retomada — CP-IMP-003
+# Retomada — CP-IMP-008
 
 Leia `ESTADO_EXECUCAO.json`, `LOG_EXECUCAO.md` e a fila derivada do plano canônico.
-Confira `git status`, `git log -5 --oneline` e o HEAD observado `68aa9d084cb7cf3d90c141776ed9f44f378e1372`.
+Confira `git status`, `git log -5 --oneline` e o HEAD observado `230961eb35fc8abb62f090606d9deab2d16f7458`.
 Branch: `feat/implementacao-2026-2027-autonomia`. Não recriar branch nem repetir frentes concluídas.
 
-Última unidade confirmada: RUE real 78/78 em R; fontes oficiais SIH/PDR/catalogo bloqueadas por CONNECT 403; antes de commit.
+Última unidade confirmada: Integração aprovada: 99 testes Python e 19 scripts R; guia, licenças e contrato documentados; antes de commit.
 
-Próxima unidade exata: **Implementar fronteiras de custódia multipartes e testes adversariais R08/R16/R19/REV-A02**.
+Próxima unidade exata: **Consolidar frentes temáticas e produtos de comunicação; preservar branch remota sem dados**.
 
 Insumos originais e cache autorizado: `/workspace/.cache/observatorio-mandato-cp09/`.
 O ZIP anexado permanece intacto fora da árvore Git. O estado registra seu SHA-256.

@@ -3,13 +3,17 @@ name: validar-serializacao-python
 on:
   push:
     paths:
-      - 'python/observatorio_sus/transform/converter_csv_parquet.py'
-      - 'tests/python/test_converter_csv_parquet.py'
+      - 'python/observatorio_sus/**'
+      - 'scripts/ensaiar_restauracao_operacional.py'
+      - 'scripts/executar_sentinela_rue_sem_dependencias.py'
+      - 'tests/python/**'
       - '.github/workflows/validar_serializacao_python.yml'
   pull_request:
     paths:
-      - 'python/observatorio_sus/transform/converter_csv_parquet.py'
-      - 'tests/python/test_converter_csv_parquet.py'
+      - 'python/observatorio_sus/**'
+      - 'scripts/ensaiar_restauracao_operacional.py'
+      - 'scripts/executar_sentinela_rue_sem_dependencias.py'
+      - 'tests/python/**'
       - '.github/workflows/validar_serializacao_python.yml'
 
 permissions:
@@ -24,8 +28,8 @@ jobs:
         with:
           python-version: '3.12'
       - name: Instalar bibliotecas da serialização validada
-        run: python -m pip install numpy==1.26.4 pyarrow==19.0.1 pytest==9.1.1
+        run: python -m pip install numpy==1.26.4 pyarrow==19.0.1 pytest==9.1.1 duckdb==1.5.6
       - name: Testar integridade sem dados oficiais ou rede DATASUS
         env:
           PYTHONPATH: python
-        run: python -m pytest tests/python/test_converter_csv_parquet.py -q
+        run: python -m pytest tests/python/test_converter_csv_parquet.py tests/python/test_custodia.py tests/python/test_qualidade_partes_csv.py tests/python/test_inventario_sih_rd.py -q

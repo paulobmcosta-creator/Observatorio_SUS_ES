@@ -3,3 +3,7 @@ IMP001,R01|REV01,integridade,VALIDACAO_PACOTE.json,68 hashes conferidos,manifest
 IMP002,R22,sintetico_R,tests/test_proveniencia_temporal_cnes.R,APROVADO; R 4.5.0,não é atualização real CNES
 IMP003,R28|REV-A01,contraprova_R_dados_historicos,evidencias/rue_resultado_real.csv,78/78; zero divergências,uma de cinco dimensões; sem localização física
 IMP004,R06|R24|R08,acesso_oficial,evidencias/acessos_oficiais.json,proxy CONNECT 403 em três hosts,sem layout nem catálogo oficial novo; não repetir
+IMP005,R08|R16|R19|REV-A02,sintetico,evidencias/verificacao_custodia/execucao.json,45 testes direcionados e 4 scripts R aprovados,sem DBC real; sem teste de queda de energia
+IMP006,REV-A03|R11,restauracao_operacional_real_RUE,evidencias/restauracao_operacional_rue.json,diretorio vazio; venv stdlib; sentinela real 78/78,agente; host CPython preexistente; sem segundo operador
+IMP007,R09|R20,sintetico_R_SQL,evidencias/integracao_v1/execucao.json,99 testes Python e 19 scripts R aprovados,inclui contraprova R/SQL sintética; CI remoto não observado
+IMP008,R08,inventario_pendente,evidencias/inventario_rd_202401_pendente.json,27 UFs esperadas não consultadas,nenhuma cobertura real ou volume nacional inferido

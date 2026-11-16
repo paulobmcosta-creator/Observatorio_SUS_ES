@@ -1,0 +1,6 @@
+# Incremento de custódia/qualidade: ambiente observado; não altera POC/PySUS.
+# Custódia, inventário e sentinela de recuperação usam somente stdlib Python 3.12.
+numpy==1.26.4
+pyarrow==19.0.1
+pytest==9.1.1
+duckdb==1.5.6

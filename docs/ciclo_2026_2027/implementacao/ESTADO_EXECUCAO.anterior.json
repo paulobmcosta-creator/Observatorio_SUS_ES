@@ -3,7 +3,7 @@
   "mandato_versao": "1.0",
   "zip_sha256": "7de4bc9ec44b5891758565a858466f91bd681e51f8584c39ee29d0056da11372",
   "base": "68aa9d084cb7cf3d90c141776ed9f44f378e1372",
-  "checkpoint": "CP-IMP-002",
+  "checkpoint": "CP-IMP-007",
   "tentativas": [
     {
       "problema": "refs_git",
@@ -17,12 +17,12 @@
     "integridade ZIP e 68 hashes verificados"
   ],
   "instrucao_retomada": "Usar RETOMADA.md e a mesma fila; avançar automaticamente; não reabrir investigação encerrada.",
-  "timestamp": "2026-11-16T17:34:49.313479+00:00",
-  "ultima_unidade_confirmada": "R22 implementada; testes temporal/cache/sem-descarte aprovados em R 4.5.0; pré-consulta documental",
+  "timestamp": "2026-11-16T17:48:41.262587+00:00",
+  "ultima_unidade_confirmada": "SIH sintético R/SQL conciliado; inventário preserva partes/revisões e não simula consulta oficial; CI ampliado proporcionalmente",
   "proximas": [
-    "RUE recuperar tabela sentinela; SIH layout e território por fonte oficial"
+    "Documentar interface/ambiente e executar integração; recuperar célula oncológica e modelos de comunicação"
   ],
-  "head_observado": "68aa9d084cb7cf3d90c141776ed9f44f378e1372",
+  "head_observado": "230961eb35fc8abb62f090606d9deab2d16f7458",
   "branch": "feat/implementacao-2026-2027-autonomia",
   "tarefas": {
     "R01": {
@@ -46,20 +46,20 @@
       "bloqueio": ""
     },
     "R06": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "BLOQUEADA",
+      "bloqueio": "Atos e eficácia PDR indisponíveis; CONNECT 403; sem tabela oficial validada"
     },
     "R07": {
       "estado": "PENDENTE",
       "bloqueio": ""
     },
     "R08": {
-      "estado": "PENDENTE",
+      "estado": "PARCIAL",
       "bloqueio": ""
     },
     "R09": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "PARCIAL",
+      "bloqueio": "Executor e contraprova sintéticos prontos; sem DBC oficial/layout/coorte/cobertura para resultado real"
     },
     "R10": {
       "estado": "PENDENTE",
@@ -86,7 +86,7 @@
       "bloqueio": ""
     },
     "R16": {
-      "estado": "PENDENTE",
+      "estado": "PARCIAL",
       "bloqueio": ""
     },
     "R17": {
@@ -98,11 +98,11 @@
       "bloqueio": ""
     },
     "R19": {
-      "estado": "PENDENTE",
+      "estado": "PARCIAL",
       "bloqueio": ""
     },
     "R20": {
-      "estado": "PENDENTE",
+      "estado": "PARCIAL",
       "bloqueio": ""
     },
     "R21": {
@@ -158,12 +158,12 @@
       "bloqueio": ""
     },
     "R24": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "BLOQUEADA",
+      "bloqueio": "Layout/DEF/CNV 202401 e perfil IDENT não adquiridos; CONNECT 403"
     },
     "R25": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "BLOQUEADA",
+      "bloqueio": "202402 depende do primeiro percurso real aprovado; não expandir agora"
     },
     "R26": {
       "estado": "PENDENTE",
@@ -174,7 +174,7 @@
       "bloqueio": ""
     },
     "R28": {
-      "estado": "PENDENTE",
+      "estado": "PARCIAL",
       "bloqueio": ""
     },
     "R29": {
@@ -222,16 +222,16 @@
       "bloqueio": ""
     },
     "REV-A01": {
-      "estado": "PENDENTE",
+      "estado": "CONCLUIDA",
       "bloqueio": ""
     },
     "REV-A02": {
-      "estado": "PENDENTE",
+      "estado": "PARCIAL",
       "bloqueio": ""
     },
     "REV-A03": {
-      "estado": "PENDENTE",
-      "bloqueio": ""
+      "estado": "PARCIAL",
+      "bloqueio": "Ensaio pelo agente aprovado no escopo stdlib; segundo operador humano e ambiente institucional ainda pendentes"
     }
   }
 }

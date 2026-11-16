@@ -1,0 +1,5 @@
+OK: importação CSV, reimportação gzip e reutilização idêntica; caminhos com espaços e aspas
+OK: seleção explícita ignora ponteiro; transformação preserva zeros e separa as chaves
+
+gzip: /tmp/RtmpVhTwMI/cache cnes '6d51875fb43/cache/ad4492419e7f322c5b4606036acdad3e03ff33f0387929607695d74eb5782b19.csv.gz: not in gzip format
+OK: fonte ausente, hash/tamanho divergentes e cache corrompido rejeitados sem substituição

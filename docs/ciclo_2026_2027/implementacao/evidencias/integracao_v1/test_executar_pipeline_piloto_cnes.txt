@@ -1,0 +1,1 @@
+Testes unitários de executar_pipeline_piloto_cnes executados com sucesso.

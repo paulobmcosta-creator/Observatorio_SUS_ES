@@ -1,0 +1,2 @@
+OK: duplicidade e chave ausente não descartam estabelecimento silenciosamente
+OK: habilitações idênticas exigem auditoria antes da escrita; eventos não são apagados

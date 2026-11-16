@@ -1,0 +1,2 @@
+OK: escolhas TCC isoladas; tabela central compartilhada; Noroeste 1 não é quinta região; referências pendentes explícitas
+OK: zeros SIGTAP preservados; candidatos sem vigência não promovidos; consulta exige CBO; EX01–EX07 por análise
