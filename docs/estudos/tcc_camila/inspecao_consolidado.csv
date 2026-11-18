@@ -1,0 +1,114 @@
+membro,bytes,sha256,duplicado_em_checkpoint,inspecao_direta
+0/00_LEIA_ME.md,478,519842721669fb0b297b7e1b16f577c966393d5600e9373e5813493f8f94eedc,nao,5 linhas; 68 palavras
+0/BLOQUEIOS_COM_PROXIMA_ACAO.md,162,2bd546ab1df3ef65574ce7818f8163f64c5b6539569e474a086106e9cd92a946,nao,1 linhas; 18 palavras
+0/CID_CIRCULATORIO.csv,486,c875b47757b6baeda5171a0507b0d631d1035d1257f1fa51bf2e304805c6f64d,nao,"6 registros; grupo, inicio, fim, regra"
+0/ESTADO.json,82,51fb5dac7d3a1ac60230a4d0ffa38686ca3b61ffdbc139b15bff6693a58f8c42,nao,"2 entradas; estado_canonico, estado"
+0/INVENTARIO_FONTE_PERIODO.csv,90832,b80a1c095588f174662435b2b0d1e8e032b2c986b7a0abd49ae685a1f2e4c455,nao,"1210 registros; fonte, escopo, ano, competencia, estado, evidencia, objeto_ou_sha256"
+0/MATRIZ_INDICADOR_FONTE.csv,5087,fefed452004753261dddb7cd0ac50c78baf7d85bb0c28fd364641a3a53bbc08b,nao,"22 registros; produto, titulo_no_tcc, fontes, regra_de_integracao, arquivo, estado, aceite_pendente"
+0/REFERENCIAS_SHA256.csv,710,1702fea4fcb245fada286c0d8fce9edead3b7199bc4f1215d006f0cd2428d68c,nao,"6 registros; arquivo, sha256"
+0/SIH_RD_PILOTO_REUSO.csv,11723,cbb174d4ea001adf65186c668dab327cea4d491055fb764e206c062bbb10399d,nao,"27 registros; uf, competencia, arquivo, parte, url_oficial_catalogo, url_efetiva_envelope, status, bytes, sha256, crc32_envelope, revisao, checksum_oficial, campos_cabecalho, prova, observacao"
+0/TERRITORIO_FIXO_PDR_ES_2024.csv,6561,c00de5d48f4d53521b6d4148d1d38ab5dc22e9710ff37f110fd2d44de771580d,nao,"78 registros; ibge7, datasus6, nome, regiao_pdr_2024, macro_pdr_2024, anos_aplicados, noroeste_1"
+00_LEIA_ME.md,1553,a3981be141fd70656b7cb345530f2f14900c071fac36eb6b79608d97deb75c32,nao,14 linhas; 208 palavras
+1B_Populacao_Originais/00_LEIA_ME.md,216,0540207f96324ef810269c7e989abc8d82583f0caff77f5bc5f90a4ebbe690f1,nao,1 linhas; 35 palavras
+1B_Populacao_Originais/POPSBR16.zip,3409272,57d89d81737579674a90217d1f1e091d747bcc558e7578cea6d4f068bd00a7ce,nao,1 membros verificados; pop16.dbf
+1B_Populacao_Originais/POPSBR16.zip.proveniencia.json,705,275ae3cf5f0014456defce6a54ade5f412c22b3457cd7a2086948d674b77dcf7,nao,"6 entradas; arquivo, url_catalogo, url_efetiva, bytes, sha256, transferencia"
+1B_Populacao_Originais/POPSBR18.zip,3383109,65ee675288065175a663678861dd33b51e91cbaad33bcfb3553be3d7837dd703,nao,1 membros verificados; pop18.dbf
+1B_Populacao_Originais/POPSBR18.zip.proveniencia.json,705,2c87d535291a70f913b4cce35c977dbacf33d95b024fc7f65ff5595d17582efe,nao,"6 entradas; arquivo, url_catalogo, url_efetiva, bytes, sha256, transferencia"
+1B_Populacao_Originais/POPSBR19.zip,3373777,c7358931ef4ca2047ab0fd4e70c6a6f8b93eec5d7610dcfd72aa141e372716e7,nao,1 membros verificados; pop19.dbf
+1B_Populacao_Originais/POPSBR19.zip.proveniencia.json,705,335deb2fffeaaa1a3534b0daafcec24097a81d418cbb1bc218706ca9f6652971,nao,"6 entradas; arquivo, url_catalogo, url_efetiva, bytes, sha256, transferencia"
+1B_Populacao_Originais/POPSBR20.zip,3373160,02d0a48edebf15d5e74d50b1fffe8ec9a9f49758d346b8eede1eb4920488b1d3,nao,1 membros verificados; pop20.dbf
+1B_Populacao_Originais/POPSBR20.zip.proveniencia.json,705,370640558f8d01a3647f3415e2757f4bfd39427b609c5139e1bae89b15cba725,nao,"6 entradas; arquivo, url_catalogo, url_efetiva, bytes, sha256, transferencia"
+1B_Populacao_Originais/POPSBR21.zip,3378457,de6142870d23386bf5f1f0cf1fb8291a5093693debdb2e8c14bdf9cf49c41b21,nao,1 membros verificados; pop21.dbf
+1B_Populacao_Originais/POPSBR21.zip.proveniencia.json,705,71e317b1dcc9f77f2e1188f63753820af3d745a826e74ebcda303928b2c4b5a3,nao,"6 entradas; arquivo, url_catalogo, url_efetiva, bytes, sha256, transferencia"
+1B_Populacao_Originais/POPSBR22.zip,3378657,8619497c4adcb87133aab68666ed6604209b812047e9b51e3608db00a2c8e731,nao,1 membros verificados; POP22.dbf
+1B_Populacao_Originais/POPSBR22.zip.proveniencia.json,705,fa0f25218c6ea5eaa3037dc4b36c29cdcdf421b44919e0e27e94e477cd945514,nao,"6 entradas; arquivo, url_catalogo, url_efetiva, bytes, sha256, transferencia"
+1B_Populacao_Originais/POPSBR23.zip,3360669,c49b35794dc235bad8a4a0dbc530a82aeae589e03a366a3c17a8325e6c24d5f4,nao,1 membros verificados; POP23.dbf
+1B_Populacao_Originais/POPSBR23.zip.proveniencia.json,705,4d590c467ea66461eed71d9b1614a7f3f3ed90a7879ca8bd6fdeed58c091dc7f,nao,"6 entradas; arquivo, url_catalogo, url_efetiva, bytes, sha256, transferencia"
+1_SIM_Populacao/00_LEIA_ME.md,537,01aaa9201c7ab3af4db9b8f4b0c3f504dd157c4bdbdd9ae570c9b3daf5bac381,nao,5 linhas; 62 palavras
+1_SIM_Populacao/COBERTURA_SIM_POP.csv,671,5c3cc22b998106f6547f160dd463ce3f7d15e93126d2c8404b91f51ed721872f,nao,"11 registros; ano, SIM, populacao, taxas_gerais_e_prematuras, padronizacao_geral_80a84_85mais"
+1_SIM_Populacao/CONTRATO_POPULACAO.md,1381,18a05f2a95bd67c51a7d7377c2f8a1648bc77f1908453a3caf69a62b77ee2da0,nao,5 linhas; 208 palavras
+1_SIM_Populacao/CONTRATO_SIM.md,1628,199f79f972bb2663cde944507fcf8f14b8ec8d7515c4c7c4a552ae423bf2d87b,nao,5 linhas; 242 palavras
+1_SIM_Populacao/CONTROLES_POPULACAO.csv,791,2a505fdd795addfefb48b3876a2d9a27af0fe4beadce99ae02b45675e19f97a5,sim,"7 registros; ano, chaves, municipios, idade_min, idade_max, total_es, total_es_30_69, sha256_zip_fonte"
+1_SIM_Populacao/CONTROLES_QUALIDADE_SIM.csv,4048,0536fa4d099f2df8548dcf88c3f1f4df12c109a6bf96570981c24fb3a476e058,nao,"110 registros; ano, controle, valor"
+1_SIM_Populacao/DIC_SIM.pdf,635539,2177e17cf20b6f665334f8bcc84fc2e703e79364412161ebfd1992b2d2268e31,nao,9 páginas; 2939 palavras extraídas
+1_SIM_Populacao/MORTALIDADE_SIM_G0_G5_PROVISORIA.csv,14698,d358b24c94170a91bd4ca17409020883a0f5f2f760d03ce98f3557ecf3724640,sim,"330 registros; ano, territorio, grupo, obitos, populacao, taxa_bruta_100mil, status"
+1_SIM_Populacao/PADRAO_BRASIL_CENSO_2010.csv,806,6c2996f07ddc47b3d9e8d84adadc956f5db1f52ef41d28a4dd0073952b65e3c2,sim,"18 registros; idade_inicio, populacao, peso_total, peso_30_69"
+1_SIM_Populacao/POPULACAO_ES_IDADE_ORIGEM.csv,3332708,1e2dae2a5f5a4cfbd059f48245c1f0dc6cdce6ba1c39e6b7f17ef642734a5a39,sim,"88452 registros; ano, ibge7, regiao_pdr_2024, sexo, idade_codigo, habitantes, observacao"
+1_SIM_Populacao/POP_DENOMINADORES.csv,15172,4100a7625e18367d631f2af51b7c1b3ea56b5ce1d2221e7983e7030aa8203aae,sim,"665 registros; ano, territorio, faixa, habitantes"
+1_SIM_Populacao/PREMATURA_SIM_30_69.csv,2785,05def4c82f312eba3f33ed22cca7517c5cd537988b16f1b283a221196bb7e091,sim,"55 registros; ano, territorio, obitos_g0_30_69, pop_30_69, taxa_100mil, taxa_padronizada_100mil, status"
+1_SIM_Populacao/PROVENIENCIA_SIM.csv,3140,53110838c07f64648dc8291ba439e4606357afd314e3bf255fb2c464156fa2d9,sim,"11 registros; ano, url, membro, bytes, sha256, etag, last_modified, content_length"
+1_SIM_Populacao/censo2010.pdf,187917,75d59b972000cc81f094a6f12a13ce3aa26c0e23289aa656001c22ce2a328049,nao,17 páginas; 14433 palavras extraídas
+1_SIM_Populacao/proveniencia_pop/POPSBR16.zip.proveniencia.json,705,275ae3cf5f0014456defce6a54ade5f412c22b3457cd7a2086948d674b77dcf7,nao,"6 entradas; arquivo, url_catalogo, url_efetiva, bytes, sha256, transferencia"
+1_SIM_Populacao/proveniencia_pop/POPSBR18.zip.proveniencia.json,705,2c87d535291a70f913b4cce35c977dbacf33d95b024fc7f65ff5595d17582efe,nao,"6 entradas; arquivo, url_catalogo, url_efetiva, bytes, sha256, transferencia"
+1_SIM_Populacao/proveniencia_pop/POPSBR19.zip.proveniencia.json,705,335deb2fffeaaa1a3534b0daafcec24097a81d418cbb1bc218706ca9f6652971,nao,"6 entradas; arquivo, url_catalogo, url_efetiva, bytes, sha256, transferencia"
+1_SIM_Populacao/proveniencia_pop/POPSBR20.zip.proveniencia.json,705,370640558f8d01a3647f3415e2757f4bfd39427b609c5139e1bae89b15cba725,nao,"6 entradas; arquivo, url_catalogo, url_efetiva, bytes, sha256, transferencia"
+1_SIM_Populacao/proveniencia_pop/POPSBR21.zip.proveniencia.json,705,71e317b1dcc9f77f2e1188f63753820af3d745a826e74ebcda303928b2c4b5a3,nao,"6 entradas; arquivo, url_catalogo, url_efetiva, bytes, sha256, transferencia"
+1_SIM_Populacao/proveniencia_pop/POPSBR22.zip.proveniencia.json,705,fa0f25218c6ea5eaa3037dc4b36c29cdcdf421b44919e0e27e94e477cd945514,nao,"6 entradas; arquivo, url_catalogo, url_efetiva, bytes, sha256, transferencia"
+1_SIM_Populacao/proveniencia_pop/POPSBR23.zip.proveniencia.json,705,4d590c467ea66461eed71d9b1614a7f3f3ed90a7879ca8bd6fdeed58c091dc7f,nao,"6 entradas; arquivo, url_catalogo, url_efetiva, bytes, sha256, transferencia"
+2_SIH/COBERTURA_ES_RD.csv,5634,2ce4880da840734b58cce523be8d8b8d18d6f1dea977e07050cde63585a82ced,sim,"132 registros; competencia, arquivo, status, fonte"
+2_SIH/CONTRATO_SIH.md,1947,f3f1cd917ccc5c35b2a03849e9e1b9db6abc505fe7e3cf6c2343ec77ac46d742,nao,9 linhas; 267 palavras
+2_SIH/CONTROLES_SIH_PILOTO.csv,1094,23ef54d2a94b035183269f7de4f76755bec97a5608ab481ee3f9fd7c96dc424b,sim,"28 registros; arquivo, controle, valor"
+2_SIH/IDENT.CNV,196,85fe489e20e61abff994fc22d836ca208d7e9fee947bb5dbc76193d883c53828,sim,4 linhas; 12 palavras
+2_SIH/PROVENIENCIA_RDES2401.json,937,024b980074d588f617bed89d809b1e63c873fcf65449d86da5d5e6a9c8174731,sim,"6 entradas; lote, observacao_utc, url_efetiva_zip, header_zip, envelope_sha256, arquivos"
+2_SIH/RD2008.DEF,33581,15376fb2e56917b4122fa475b15f1e270e9daa4238f518d75e6bb6044372c652,sim,532 linhas; 2975 palavras
+2_SIH/RDES1401.dbc,1386485,5f1480b018d20ddf6131c2eeb4b51c57cca45776b9fdf26d501d04d8c9fc7540,nao,"cabeçalho dBASE: 18386 registros, 3649 bytes de cabeçalho, 702 bytes por registro"
+2_SIH/RDES1401.dbc.json,5694,9a204328e9d9b6fe33b93d1178a9f0504a925ceb2ff6e10e3ae48b23428db6d9,sim,"6 entradas; origem, envelope_url, transferencia, bytes, sha256, campos"
+2_SIH/RDES1412.dbc,1430452,6b0a5d36261d708948b21b1c5fa97e3273d066979d953a7460331fcfbae9659d,nao,"cabeçalho dBASE: 17894 registros, 3649 bytes de cabeçalho, 702 bytes por registro"
+2_SIH/RDES1412.dbc.json,5694,98007011ade2d3ab78d677198b140715dc266dbca5feb79effb6d1ad22a815c4,sim,"6 entradas; origem, envelope_url, transferencia, bytes, sha256, campos"
+2_SIH/RDES2401.dbc,1766641,f09f13ab377bbc0ccfda21e34389ef5a4e26b1627f4a8f8e29be7e0d20f1d59c,nao,"cabeçalho dBASE: 22835 registros, 3649 bytes de cabeçalho, 702 bytes por registro"
+2_SIH/RDES2412.dbc,1977091,71acefac537a0b722a1499a6fb3da085cc5422dd2e565a52f55782c5540389f9,nao,"cabeçalho dBASE: 25526 registros, 3649 bytes de cabeçalho, 702 bytes por registro"
+2_SIH/RDES2412.dbc.json,5694,0ae96da87ddbbbfadeb830fbfe57435b2fe806671478f6e6854ee7fe84b2e3e9,sim,"6 entradas; origem, envelope_url, transferencia, bytes, sha256, campos"
+2_SIH/sih_es_2014_catalogo.json,3685,35f848d647903e5816b680805e76a1fafcd90cbaaeea4428e412d653fe0d526d,sim,12 entradas; lista
+2_SIH/sih_es_202412_catalogo.json,308,7aefb35ab7db04bace509781f93b2b539329153b7142fe3dcce88ead234bece4,sim,1 entradas; lista
+3_SIA_SIGTAP_CNES/AC1_040603_202401.csv,941,c55e653e03844869328d5042a1d46091af9250fc61ebdd18b18e9899c02f2c82,nao,"15 registros; codigo, descricao"
+3_SIA_SIGTAP_CNES/AC1_040603_202412.csv,1026,93b20105f7063eef1b11bca0d3c635176dbce16934e7dad07ea6c0d03c9ce09b,nao,"16 registros; codigo, descricao"
+3_SIA_SIGTAP_CNES/COBERTURA_SIGTAP.csv,14737,8333deac62df52f5f68d66921db0137d0550bf9682802f341c9d440227c8add1,nao,"132 registros; competencia, estado, arquivos_localizados, origem"
+3_SIA_SIGTAP_CNES/CONTRATO_SIA_CNES.md,2023,385dc7b487aefa820b263ef077c0ad21f60e104f15ac70d0472f9cb4344035cc,nao,7 linhas; 296 palavras
+3_SIA_SIGTAP_CNES/DELTA_AC1_202401_202412.csv,150,d7f2e218b605ef6428cd46bd063ab1d3e45bd0c82928a8dc528a0e641f2ea7e6,nao,"1 registros; codigo, descricao_202401, descricao_202412, observacao"
+3_SIA_SIGTAP_CNES/TabelaUnificada_202401_v2401021944.zip,2014162,828090dc36a876c4325896bae78668ac1a5d7fb0d99874944e0b3c969719a2e2,nao,"87 membros verificados; tb_detalhe_layout.txt, rl_procedimento_sia_sih.txt, tb_sia_sih.txt, tb_habilitacao.txt"
+3_SIA_SIGTAP_CNES/TabelaUnificada_202412_v2412091312.zip,2057719,f54f1b63549ab41fde9bda14aa8750ec929362b920690112e45a513a7485406d,nao,"87 membros verificados; tb_detalhe_layout.txt, rl_procedimento_sia_sih.txt, tb_sia_sih.txt, tb_habilitacao.txt"
+3_SIA_SIGTAP_CNES/VALIDACAO_CANDIDATOS_202401.csv,8973,f04429c17c00f1668a7f0c589efa813f0cb8ee0d863ec020d35a953156391ec0,nao,"60 registros; codigo, rotulo_tcc, descricao_sigtap, status, consulta_cbo_relacao"
+3_SIA_SIGTAP_CNES/VALIDACAO_CANDIDATOS_202412.csv,8973,f04429c17c00f1668a7f0c589efa813f0cb8ee0d863ec020d35a953156391ec0,nao,"60 registros; codigo, rotulo_tcc, descricao_sigtap, status, consulta_cbo_relacao"
+3_SIA_SIGTAP_CNES/classificacao_habilitacoes_cnes.csv,217625,5d3cdb16845ddd95b6402588d9d76615ba780c91cd68f1cc9792eefb46df4ce7,sim,556 registros; codigo_habilitacao;tipo_habilitacao;descricao_habilitacao;origem_habilitacao;linha_cuidado;sublinha_cuidado;componente_rede;nivel_complexidade;usar_observatorio;prioridade;fonte_cnes;fonte_normativa;criterio_classificacao;status_validacao;observacao
+3_SIA_SIGTAP_CNES/cnes_min_catalogo.json,619,1461466862e5bd0faa17bc5b42323903b93f9ec41dde1fc4d45dd2bef6fc07b6,nao,2 entradas; lista
+3_SIA_SIGTAP_CNES/dicionario_estabelecimentos_cnes.csv,2717,60ffacd35187c6a8712e8ca3180e84226cdda552c9d273f3d0255630d2aed761,nao,"18 registros; nome_campo, descricao, fonte_original, transformacao_aplicada, observacao_metodologica"
+3_SIA_SIGTAP_CNES/dicionario_habilitacoes_cnes.csv,3842,91176f6ca60ccf387fdb449869fc7d0b64aa9fb73aa52d7d8c27107b945e7eb9,nao,"32 registros; nome_campo, descricao, fonte_original, transformacao_aplicada, observacao_metodologica"
+3_SIA_SIGTAP_CNES/sia_piloto_catalogo.json,308,9c052df860ae13ba1fa78b78d449da499093af804e10f4f1c8297d6bc9475b39,nao,1 entradas; lista
+4_Devolucao/ENTREGA_CAMILA.md,1206,1cd6a6867cd6ca95884bd06dbb45518cc61ffee267c624160323d48dd6bb345f,nao,7 linhas; 154 palavras
+4_Devolucao/ESTADO.json,82,51fb5dac7d3a1ac60230a4d0ffa38686ca3b61ffdbc139b15bff6693a58f8c42,nao,"2 entradas; estado_canonico, estado"
+4_Devolucao/NOROESTE_1_MAPA_CONFERIDO.csv,549,1c465e5dc8ed949fa2be028b24a50c9ae633611b9ca840f70c97887c2dfd130b,nao,"5 registros; ibge7, municipio, referencia_cartografica, regiao_cib_259_2024, estado"
+4_Devolucao/mapa-034.png,743504,675588a576096cd880e673b2a9e875a77981bbab6d0c5f8aae6b52abd526128d,nao,"PNG íntegro; dimensões (1132, 1600)"
+Auditoria/COMPARACAO_SIM_SESA.csv,2486,c58e172f7e8d99035462ec7b37f20768642ccbb020110ab75cea15244ce235f8,sim,"10 registros; ano, indicador, valor_tcc, valor_referencia, diferenca, status, recorte_documental, url"
+Auditoria/CONTROLES_DA_REVISAO.csv,1556,04db06343532650e239ddb15c611144ccc58af97e729f4ed261d5d97e85a6ef6,nao,"11 registros; item, resultado, metodo_limite"
+Auditoria/PACOTES_ANTERIORES.csv,1266,f08127eef45cfafeeb53380ffc2a6e962f750a330d35a04110aeaa05ae274321,nao,"6 registros; arquivo, bytes, sha256, referencia"
+Auditoria/manifestos_anteriores/Pacote_0.csv,871,f1f08534398fe780e4e9d9490a7f06c3be2273d6e495818681c06ede3ebf2568,nao,"9 registros; arquivo, bytes, sha256"
+Auditoria/manifestos_anteriores/Pacote_1B_Populacao_Originais.csv,1422,c7f865b70576d6221f3f7805fc323093ba5e689a2e2bdcfebcbf595f82986528,nao,"15 registros; arquivo, bytes, sha256"
+Auditoria/manifestos_anteriores/Pacote_1_SIM_Populacao.csv,2427,268ad25d65cd35d822e1219d82b3db2fd5e12267824e98f4f43dcf2f2d1552b8,nao,"24 registros; arquivo, bytes, sha256"
+Auditoria/manifestos_anteriores/Pacote_2_SIH.csv,1200,75d738421714072003669ee97b4c1835acb01ed87c91c842b86a1f17e76f9e66,nao,"13 registros; arquivo, bytes, sha256"
+Auditoria/manifestos_anteriores/Pacote_3_SIA_SIGTAP_CNES.csv,1333,c369de0ac4ab47cd85640e1b0b89fbc4a4942af01939b52a3b4bcde4a28336aa,nao,"13 registros; arquivo, bytes, sha256"
+Auditoria/manifestos_anteriores/Pacote_4_Devolucao.csv,568,2592fb4990be06251b837ae301789a2cee7767bd1e54cbeb8958e0963eec8636,nao,"6 registros; arquivo, bytes, sha256"
+Auditoria/scripts_anteriores/pop_processar.py,3249,6e97fb8af839b43d305616c30e2fcc343c1ad7450dcdeb66b2ad0ea90f790d69,nao,write
+Auditoria/scripts_anteriores/sih_checks.py,1978,6afa9a377b9493c370ef570ee36573903f0bb3fccdc47e68da202d8b1981a4f9,nao,
+ESTADO.json,1187,bbbb4db8c6217053d8f18e700aa16b023618fb94d72edd4c0557e4a41a75dc47,nao,"18 entradas; versao, data, escopo, metodologia, sim_anos, sim_validacao_documental_estadual, sim_2024_diferenca_G0_vs_RAG, pop_anos"
+MANIFESTO_SHA256.csv,12553,0be26dd878e6fd841db2605d7ea388b43407fdac3e099812f965651b6d6b031d,nao,"112 registros; arquivo, bytes, sha256"
+O_QUE_FALTOU.md,3041,ba8afbadfeb40aa6a257a53ef68938c45b37366fcf5e3ae21ce7e5bd4b827d3d,nao,19 linhas; 457 palavras
+REVISAO_TECNICA.md,4512,289878769f6ca8af960aae4c22299670210e8917bb2842bc58100916000b93d1,nao,32 linhas; 609 palavras
+Referencias/CIB_259_2024.pdf,1231982,cc4dedb5dba7bdb18d6ac60c200426fe3a1e1ad031ab8c4ebceba0099d631896,nao,10 páginas; 1206 palavras extraídas
+Referencias/Dossie_1_Metodologico_Tecnico_Observatorio_SUS_ES_2026_2027_v1_0-1(1).docx,63204,5b75930bf35fd07fc799ace6d7c3a5a0cc0f80f358a406819a38948e60c24e96,nao,655 parágrafos; 23 tabelas
+Referencias/Dossie_2_Drive.docx,73625,6798e3b9b5ea4553196192130ff600a63e304cafc42b5ad2006dcab9977c5931,nao,1108 parágrafos; 51 tabelas
+Referencias/Nota_Alinhamento_Estrategico_Observatorio_TCC_Camila(1).docx,43526,6caa7765df17854254c0c5ae80328eb0842cdad3e36f53a2b24e62504191c9bb,nao,177 parágrafos; 5 tabelas
+Referencias/Plano_Caminho_Critico_TCC_Camila_Observatorio_SUS_ES_2026-11-17.md,17279,a82d9b25a1c261e6898aef0c050858d625a3f2c81059876d2f2c4584abd8de57,nao,137 linhas; 2258 palavras
+Referencias/Prompt_Work_Prioridade_TCC_Camila_Cardiovascular_2014_2024_v1_0.md,17516,ce84771ad82045a4e791e3120b906146fd376229a02292f54bd5f1b52b6489a9,nao,109 linhas; 2181 palavras
+Referencias/TCC 2-1(1).docx,108989,6e48dc018150d6c9073a2873b7d8851dda12bd26c69d357a42e1164312448cc8,nao,999 parágrafos; 26 tabelas
+Reproducao/LEIA_ME.md,1677,7a2eec9b488e0bc9717270a927375989f16445eca8903e9b836836736e880ca9,nao,24 linhas; 205 palavras
+Reproducao/decodificador_sih/LICENSE_microdatasus.md,1079,191f126d1fac8630eb1392a45007e5315fb2b37fdc88d63ff06d3634691e24e9,sim,21 linhas; 170 palavras
+Reproducao/decodificador_sih/blast.c,17090,aa8585c21138827e6b5439d5049b23aa4c1664adcc5c31b5a71527a65ecdc3f4,sim,419 linhas; 2698 palavras
+Reproducao/decodificador_sih/blast.h,3933,2b99276c3b40fd231a09df942a95a7cf007858e6bdf0a051fe29719316cc58a7,sim,84 linhas; 663 palavras
+Reproducao/decodificador_sih/dbc2dbf.c,5806,a140211d2ff789fa6a0b02bc859c93b10c6e976d81f23c92b64b74ccbdaf406b,sim,208 linhas; 734 palavras
+Reproducao/publicar_agregados_sim.py,4172,31daf7cb8f167e0cc7503f83a6adb3c9914969e93e5d75f607fbd47804e72596,nao,"rows, write, rate, main"
+Reproducao/reprocessar_populacao.py,6312,a0762893995b313d26fdcf500918f4586ab116eabae3f91d8c0ca43a89c8c39c,nao,"rows, save, read_population, census_weights, main"
+Reproducao/reproduzir_sih_piloto.py,4803,47a0dd6fbdccb0965d8005f4998e0cd256f76e4195779133764580b433eead6b,sim,"controls, check_source, main"
+Reproducao/sim_agregar.py,4489,663e7985349d00d0b79a07da4fe9c2bb60dfefca64fe2ce43b255dfc55c40f7e,nao,agrupar
+Resultados_Provisorios/Figura_1_Obitos_Circulatorios_Provisoria.png,146413,0b9cae37d23e17ea4b326141db40c243868f027688fba2c02725d287a4b15027,nao,"PNG íntegro; dimensões (2185, 1127)"
+Resultados_Provisorios/Figura_1_Obitos_Circulatorios_Provisoria.svg,73060,44f8b9889775ab4d28f98538a11240835ab933777d78fa0e2ae7fafd8e06e28e,nao,SVG válido; viewBox 0 0 684 352.8
+Resultados_Provisorios/Tabela_1_Obitos_Circulatorios_Provisoria.csv,551,973278d923f213ba468d2703497f9b0e23ac6636b7ba786e89530fbe36a78ffe,nao,"11 registros; ano, ES, Central, Norte, Metropolitana, Sul, diferenca_ES_menos_regioes, estado"
