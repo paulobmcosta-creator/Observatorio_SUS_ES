@@ -1,1 +1,7 @@
 data_raw/cnes/202601/tbEstabelecimento202601.csv filter=lfs diff=lfs merge=lfs -text
+
+# Preservar bytes dos CSV identificados por hash, inclusive os finais CRLF.
+metadata/territorio/pdr_es_2024_tcc_v1.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
+config/estudos/edicoes_sim_camila.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
+config/estudos/tcc_cardiovascular.csv whitespace=trailing-space,space-before-tab,cr-at-eol
+docs/estudos/tcc_camila/inspecao_consolidado.csv whitespace=trailing-space,space-before-tab,cr-at-eol

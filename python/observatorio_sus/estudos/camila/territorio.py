@@ -31,6 +31,10 @@ def gerar(cadastro, ato, destino):
     reg = {r["datasus6"]:r["regiao_pdr_2024"] for r in municipios}
     if any(not re.fullmatch(r"32[0-9]{5}", r["ibge7"]) or r["ibge7"][:6] != r["datasus6"] for r in municipios):
         raise ValueError("Códigos IBGE incompatíveis")
+    for codigo in (r["ibge7"] for r in municipios):
+        soma = sum(sum(map(int, str(int(digito)*(1+i%2)))) for i,digito in enumerate(codigo[:6]))
+        if (-soma)%10 != int(codigo[-1]):
+            raise ValueError(f"Dígito verificador IBGE inválido: {codigo}")
     if (len(municipios)!=78 or len(reg)!=78 or len({r["ibge7"] for r in municipios})!=78 or reg["320330"]!="Central" or
             Counter(reg.values())!={"Central":15,"Norte":14,"Metropolitana":23,"Sul":26}):
         raise ValueError("Domínio territorial incompatível")

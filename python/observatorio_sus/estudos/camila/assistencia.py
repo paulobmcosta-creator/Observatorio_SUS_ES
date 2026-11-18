@@ -11,7 +11,9 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 
 from observatorio_sus.io.custodia import sha256_arquivo
-from . import sim, territorio
+from observatorio_sus.extract import envelope_datasus
+from observatorio_sus.io.custodia import escrever_json
+from . import proveniencia, sim, territorio
 from .lote import executar, ler, salvar
 from .sim import GRUPOS, causa
 from .territorio import TABELA, mapa
@@ -137,7 +139,7 @@ def sih(tabelas,out,mapa,ident,cid_min,cid_max):
             r=a['MUNIC_RES']
             origem=mapa.get(r,'RES_ES_SEM_MUNICIPIO' if r.startswith('32') else 'RES_OUTRA_UF_OU_INDETERMINADA')
             dest=mapa.get(a['MUNIC_MOV'],'ATENDIMENTO_SEM_REGIAO')
-            detalhado[c, str(i.year) if i else 'IGNORADO', situacao(r,mapa),situacao(a['MUNIC_MOV'],mapa)] += 1
+            detalhado[c, str(i.year) if i else 'IGNORADO', r, situacao(r,mapa), a['MUNIC_MOV'], situacao(a['MUNIC_MOV'],mapa)] += 1
             flows[c,origem,dest]+=1
             groups=['G0',*(g for g,(lo,hi) in GRUPOS.items() if lo<=int(diag[1:3])<=hi)]
             for g in groups:
@@ -153,10 +155,36 @@ def sih(tabelas,out,mapa,ident,cid_min,cid_max):
     salvar(out/'SIH_PILOTO_QA.csv',['competencia_processamento','controle','valor'],[(*k,v) for k,v in sorted(qa.items())])
 
     salvar(out/"SIH_ADMISSAO_ORIGEM_DESTINO.csv",
-           ["competencia","ano_admissao","residencia","atendimento","aih"],
+           ["competencia","ano_admissao","municipio_residencia_original","residencia","municipio_atendimento_original","atendimento","aih"],
            [(*k,v) for k,v in sorted(detalhado.items())])
     if sum(detalhado.values()) != sum(flows.values()):
         raise ValueError("Balanço entre tipos de fluxo")
+
+
+def registrar_cobertura_sih(out,acervo,competencias,ident,filtro_padrao):
+    periodos={mes:"DBC_reprocessado" for mes in competencias}
+    medida=f"aih_ident{ident}"
+    contagens={(r["competencia_processamento"],r["atendimento"],r["grupo"]):int(r[medida])
+               for r in ler(out/"SIH_PILOTO_PRODUCAO.csv")}
+    if filtro_padrao:
+        periodos["202411"]="derivado_CP04"
+        for r in ler(acervo/"CP04/Resultados/SIH_PILOTO_PRODUCAO.csv"):
+            contagens[r["competencia_processamento"],r["atendimento"],r["grupo"]]=int(r["aih_ident1"])
+    linhas=[]
+    for ano in range(2014,2025):
+        for mes in range(1,13):
+            c=f"{ano}{mes:02d}"
+            for t in ("ES",*territorio.PAGINAS):
+                for g in ("G0",*GRUPOS):
+                    if c in periodos:
+                        valor=contagens.get((c,t,g),0)
+                        estado="zero_observado" if valor==0 else "observado"
+                    else:
+                        valor=""
+                        estado="sem_cobertura_para_este_filtro"
+                    linhas.append((c,t,g,valor,periodos.get(c,""),estado))
+    salvar(out/"SIH_COBERTURA_PRODUCAO.csv",
+           ["competencia","atendimento","grupo","aih","origem_evidencia","estado"],linhas)
 
 
 def conferir_quinto_mes_e_lt(acervo):
@@ -189,11 +217,14 @@ def processar(acervo,saida,ident="1",cid_min="I00",cid_max="I99"):
         for r in refs:
             if sha256_arquivo(entradas[r['membro']])!=r['sha256']:
                 raise ValueError(f"Edição divergente: {r['membro']}")
+        escrever_json(stage/"proveniencia.json",proveniencia.conferir(acervo,[entradas[r["membro"]] for r in refs]))
         with TemporaryDirectory(dir=stage) as temp:
             dbcs={p.stem:ativos(p,r['sha256'],Path(temp)) for r in refs
                   if (p:=entradas[r['membro']]).suffix==".dbc"}
             hb=cnes({fam:dbcs[fam+"ES2412"] for fam in ("HB","ST")},stage,mapa(),"202412")
             sih({k:v for k,v in dbcs.items() if k.startswith("RD")},stage,mapa(),ident,cid_min,cid_max)
+            registrar_cobertura_sih(stage,acervo,{"20"+k[-4:] for k in dbcs if k.startswith("RD")},
+                                    ident,(ident,cid_min,cid_max)==("1","I00","I99"))
             for d in Path(temp).iterdir():
                 (stage/(d.name+"_perfil.json")).write_bytes((d/"perfil.json").read_bytes())
         for p in stage.glob("*.csv"):
@@ -204,7 +235,7 @@ def processar(acervo,saida,ident="1",cid_min="I00",cid_max="I99"):
         return dict(cnes=hb, estoque_hb_estabelecimentos=estoque_medio({"202412":hb["HB_estabelecimentos_distintos"]}),
                     fontes_dbc=len(dbcs),controle_derivados=conferir_quinto_mes_e_lt(acervo))
     return executar(saida,entradas,dict(ident=ident,cid_min=cid_min,cid_max=cid_max,uf_atendimento="ES"),
-                    calcular,[LEITOR,Path(sim.__file__),Path(territorio.__file__)])
+                    calcular,[LEITOR,Path(sim.__file__),Path(territorio.__file__),Path(proveniencia.__file__),Path(envelope_datasus.__file__)])
 
 
 if __name__=="__main__":

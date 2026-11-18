@@ -6,7 +6,7 @@ from pathlib import Path
 from unittest.mock import patch
 from zipfile import ZipFile
 
-from observatorio_sus.estudos.camila import sim
+from observatorio_sus.estudos.camila import populacao, sim
 from observatorio_sus.estudos.camila.lote import executar
 from observatorio_sus.io.custodia import sha256_arquivo
 
@@ -42,6 +42,30 @@ class CamilaP0(unittest.TestCase):
                 z.write_bytes(b"outra edicao")
                 with self.assertRaises(ValueError):
                     sim.diagnosticar(z,2022,dst)
+
+    def test_margem_municipal_fora_dos_sete_anos_impede_promocao(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            base=Path(tmp)
+            dem=base/"dem.csv"
+            municipios=populacao.mapa()
+            campos=["co_anomes","co_ibge","co_uf","sg_granularidade","sg_categoria","ds_item_categoria","vl_indicador_calculado_mun"]
+            with dem.open("w",newline="") as stream:
+                w=csv.writer(stream)
+                w.writerow(campos)
+                for ano in range(2014,2025):
+                    for municipio in municipios:
+                        chave=[str(ano)+"12",municipio,"32","MN"]
+                        w.writerows([*chave,"Idade",idade,1] for idade in populacao.IDADES)
+                        w.writerow([*chave,"PESSOA1","Feminino",41])
+                        w.writerow([*chave,"PESSOA1","Masculino",40])
+                        w.writerow([*chave,"TC","Total",82 if (ano,municipio)==(2014,"320010") else 81])
+            def calcular(stage):
+                return populacao.conferir({"dem":dem},stage,municipios)
+            with self.assertRaisesRegex(ValueError,"divergência entre total municipal"):
+                executar(base/"validado",{"dem":dem},{},calcular)
+            self.assertFalse((base/"validado").exists())
+            self.assertFalse(list(base.rglob("MORTALIDADE*.csv")))
+            self.assertEqual(len(list(base.rglob("RIPSA_DEM101_QA_TOTAIS.csv"))),1)
 
     def test_interrupcao_e_retomada(self):
         with tempfile.TemporaryDirectory() as tmp:
