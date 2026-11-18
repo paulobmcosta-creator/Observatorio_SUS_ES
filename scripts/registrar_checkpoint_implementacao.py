@@ -51,7 +51,7 @@ def _preparar_registro(checkpoint, unidade, proxima, estados=(), bloqueios=(), m
     caminho = DOC / "ESTADO_EXECUCAO.json"
     estado = json.loads(caminho.read_text())
     if metadados:
-        permitidos = {"status_global", "motivo_interrupcao", "publicacao_git", "pacote_previsto", "tentativas", "continuidade_cloud", "mandato_versao"}
+        permitidos = {"status_global", "motivo_interrupcao", "publicacao_git", "pacote_previsto", "tentativas", "continuidade_cloud", "mandato_versao", "guia_insumos"}
         if set(metadados) - permitidos:
             raise ValueError("Metadados não podem substituir tarefas/identidade de checkpoint.")
         estado.update(metadados)
@@ -94,6 +94,10 @@ def _preparar_registro(checkpoint, unidade, proxima, estados=(), bloqueios=(), m
     assert json.loads(escritas[str(caminho.relative_to(RAIZ))])["checkpoint"] == checkpoint
     log = DOC / "LOG_EXECUCAO.md"
     guardar(log, log.read_text() + f"\n- {estado['timestamp']} — **{checkpoint}**: {unidade}. Próxima: {proxima}.\n")
+    guia_insumos = estado.get("guia_insumos", (
+        "Insumos originais e cache autorizado: `/workspace/.cache/observatorio-mandato-cp09/`.\n"
+        "O ZIP anexado permanece intacto fora da árvore Git. O estado registra seu SHA-256."
+    ))
     guardar(DOC / "RETOMADA.md", f"""# Retomada — {checkpoint}
 
 Leia `ESTADO_EXECUCAO.json`, `LOG_EXECUCAO.md` e a fila derivada do plano canônico.
@@ -104,8 +108,7 @@ Branch: `{estado['branch']}`. Não recriar branch nem repetir frentes concluída
 
 Próxima unidade exata: **{proxima}**.
 
-Insumos originais e cache autorizado: `/workspace/.cache/observatorio-mandato-cp09/`.
-O ZIP anexado permanece intacto fora da árvore Git. O estado registra seu SHA-256.
+{guia_insumos}
 Não promover staging incompleto. Aprovação funcional está em `DECISOES_R15.md`.
 Gate científico/humano não é substituído por teste sintético.
 

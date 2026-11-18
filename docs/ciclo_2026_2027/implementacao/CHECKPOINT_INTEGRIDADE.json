@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "checkpoint": "CP-IMP-024",
+  "checkpoint": "CP-TCC-001",
   "sha256": {
-    "docs/ciclo_2026_2027/tarefas_operacionais.csv": "3eaf882e2761e0c10b28aca968b0e49dbf68fd1f14ef2e1f959734d286635b8d",
-    "docs/ciclo_2026_2027/implementacao/FILA_IMPLEMENTACAO.csv": "3775da2dff39578efa7ffd1cea08f65eef734718ddcf8bab07876860352394b9",
-    "docs/ciclo_2026_2027/implementacao/ESTADO_EXECUCAO.anterior.json": "8be8e68387e29d08aeb35611c17951e4f5ed6fc892f9bb346d907bfa16864102",
-    "docs/ciclo_2026_2027/implementacao/ESTADO_EXECUCAO.json": "2c350e99f8672a7f4844fe484c6121161aec833ea121a835082664d29cdd70c6",
-    "docs/ciclo_2026_2027/implementacao/LOG_EXECUCAO.md": "2eb67ba793639e98a8864f4edbff651a453cf3587fd6aa8dcb25d76d47d81b3a",
-    "docs/ciclo_2026_2027/implementacao/RETOMADA.md": "133948b13afa7b1ac2178d2bf6e12174ff8ce3e3b62257b2fac91dd22ec0f04f"
+    "docs/ciclo_2026_2027/tarefas_operacionais.csv": "1bd0cd5a7aca3a1b0038f3c9919b1bf0362ea0941b2d835b495ae3eab5278536",
+    "docs/ciclo_2026_2027/implementacao/FILA_IMPLEMENTACAO.csv": "0ce0670486c7d872e31937d1e9f3234cfd865ce2ba8ffb8397f14299969717a4",
+    "docs/ciclo_2026_2027/implementacao/ESTADO_EXECUCAO.anterior.json": "2c350e99f8672a7f4844fe484c6121161aec833ea121a835082664d29cdd70c6",
+    "docs/ciclo_2026_2027/implementacao/ESTADO_EXECUCAO.json": "77e175b4049babf3050462bf9d17a01af6509d6c768d838f5cd5bfe11a300ecc",
+    "docs/ciclo_2026_2027/implementacao/LOG_EXECUCAO.md": "498c0cdec6d880cb4511e753b5569a614eb54cc30967d0c71e3f7b8b586818a4",
+    "docs/ciclo_2026_2027/implementacao/RETOMADA.md": "f0235fad4100259dc1152032a69994ba5b65307a60e19f7f26596cfc4008b2f3"
   }
 }
