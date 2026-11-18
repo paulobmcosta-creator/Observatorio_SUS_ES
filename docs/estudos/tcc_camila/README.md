@@ -80,3 +80,27 @@ Os dois ZIP SIGTAP do consolidado (202401 e 202412) vieram do espelho identifica
 | Divulgação | Código, parâmetros, hashes e testes disponíveis para revisão | Séries, microdados e células pequenas ficam na camada analítica autorizada; divulgação requer decisão própria |
 
 Para retomar, manter a edição validada e criar um novo lote quando mudar uma entrada, revisão do método, população padrão ou contrato territorial. O recibo acompanha os derivados. A reprodução por um segundo operador pode partir de um checkout limpo do commit informado, ambiente fixado e originais com os hashes declarados. Comparar `regressoes.json` e os hashes dos CSV, preservando os logs de eventuais divergências. A execução automatizada em outra máquina de CI usa os contratos públicos e dados de teste. A reprodução empírica independente por outra equipe depende de acesso autorizado aos insumos.
+
+### Aquisição anual direta e comparação com os checkpoints
+
+Em um ambiente com acesso HTTPS ao endereço federal registrado em `edicoes_sim_camila.csv`, os comandos abaixo buscam cópias locais por tamanho e SHA-256 antes do GET. A transferência usa o cliente HTTPS institucional com revisão por HEAD, limite individual de bytes e promoção após verificação do hash e do membro ZIP. Preservar os diretórios de recibos e os originais em custódia externa. O domínio exigido pelas 11 edições é `s3.sa-east-1.amazonaws.com`. Uma recusa na abertura do túnel pelo proxy deixa o resultado da leitura do original em aberto.
+
+```bash
+export PYTHONPATH="$PWD/python"
+export RAIZ_SIM=/dados/tcc/continuacao_sim
+export ACERVO=/dados/tcc/acervo
+python scripts/obter_edicoes_sim_camila.py "$RAIZ_SIM/custodia" --custodia /dados --anos 2022 2023 2024 --adquirir
+python scripts/confrontar_sim_camila.py "$ACERVO" "$RAIZ_SIM/comparacao-2022-24-v1" --custodia /dados --anos 2022 2023 2024
+python scripts/obter_edicoes_sim_camila.py "$RAIZ_SIM/custodia" --custodia /dados --anos 2014 2015 2016 2017 2018 2019 2020 2021 --adquirir
+python scripts/confrontar_sim_camila.py "$ACERVO" "$RAIZ_SIM/comparacao-2014-21-v1" --custodia /dados --anos 2014 2015 2016 2017 2018 2019 2020 2021
+```
+
+A aquisição devolve código 1 quando há impedimento. Cada ano tem um manifesto próprio. A comparação pode ser executada sobre os materiais já disponíveis. O recibo informa quantos originais foram relidos e quantos pares efetivamente puderam ser comparados. Depois que a custódia receber novas edições, usar outro destino de comparação. As semânticas das saídas são as seguintes.
+
+- `cobertura.csv` identifica a fonte mais detalhada para cada ano e a disponibilidade de mês, município, subcategoria, região e idade. A ausência de suporte deixa as células de resultado original vazias.
+- `confronto_anual.csv` preserva as contagens do consolidado e do CP02. As colunas seguintes mostram, quando disponíveis, a reconstrução desde o cubo CP02, a leitura do original, os desvios de contagem e a taxa bruta frente ao CP03.
+- `qa.csv`, `edicoes.csv` e `regra_historica_divulgacao.csv` permitem verificar filtros, hashes dos membros entre etapas e a regra histórica que retinha um grupo inteiro quando uma das regiões tinha de 1 a 9 óbitos. As contagens analíticas são conservadas.
+- `i50_por_idade.csv` detalha G0 e I50 por região e quinquênio, com o resíduo estadual explícito. Para cada ZIP presente, o subdiretório do ano conserva as leituras independentes por mês, município, região, faixa etária e causa básica normalizada. A coluna de diferença por idade exige ambas as fontes.
+- `prematura_desde_original.csv` recebe linhas apenas para anos com dupla leitura do ZIP. Aplica os denominadores e pesos da edição já conferida no P0, incluindo a renormalização do padrão entre 30 e 69 anos. As diferenças com as taxas e contagens anteriores ficam disponíveis nos arquivos privados.
+
+O SHA registrado pelo Work permite identificar a edição exata. ETags e datas de atualização ajudam a rastrear a distribuição. Uma análise do efeito de revisões de um mesmo ano exigiria duas edições distintas desse ano.
