@@ -10,6 +10,7 @@ from pathlib import Path
 from observatorio_sus.io.operacao_local import ler_configuracao, preflight
 from observatorio_sus.io.custodia import adquirir_conjunto, validar_versao, retornar_versao
 from observatorio_sus.io.manifestos import criar_identidade_conjunto
+from observatorio_sus.extract.envelope_datasus import EnvelopeMensal
 from observatorio_sus.extract.adquirir_objetos import FTPOficial, ArquivosLocais
 
 
@@ -32,18 +33,37 @@ def executar_lote(config, plano, adquirir=False, adaptador=None):
         id, _ = criar_identidade_conjunto(objetos)
         if (raiz / "versoes" / id).exists():
             validar_versao(raiz / "versoes" / id, id)
+            if plano.get("transporte") == "envelope_datasus":
+                # Uma versão pode sobreviver a uma interrupção anterior à escrita do recibo.
+                completos = []
+                for arquivo in (raiz/"recibos").glob("*.json"):
+                    r = json.loads(arquivo.read_text())
+                    if r.get("conteudo_id")==id and r.get("validados")==len(objetos):
+                        completos.append(r)
+                if not any({(v.get("id"),v.get("sha256"),v.get("uri_oficial")) for v in r["objetos"]
+                            if v.get("transporte")=="envelope_https_datasus" and v.get("sha256_envelope")}
+                           == {(v["id"],v["sha256"],v["uri_oficial"]) for v in objetos} for r in completos):
+                    raise ValueError("Versão presente sem recibo do envelope; reconciliar a custódia antes de promover")
             return {"preflight": exame, "aquisicao": "CACHE_VALIDADO_SEM_NOVA_CONSULTA", "conteudo_id": id}
     if exame["estado"] != "APTO_NOS_LIMITES_DECLARADOS":
         return {"preflight": exame, "aquisicao": "NAO_INICIADA"}
-    if plano.get("transporte") not in ("ftp", "snapshot"):
-        raise ValueError("Transporte explícito obrigatório: ftp ou snapshot autorizado.")
+    if plano.get("transporte") not in ("ftp", "snapshot", "envelope_datasus"):
+        raise ValueError("Transporte explícito obrigatório: ftp, snapshot ou envelope_datasus.")
     # Uma partição é o limite conservador; não há conexão paralela oculta.
     def antes_objeto(objeto):
         restantes = [o for o in objetos if o["id"] >= objeto["id"]]
         if preflight(config, restantes, limite_derivados_bytes=plano["limite_derivados_bytes"],
                      limite_temporarios_bytes=plano["limite_temporarios_bytes"], backup_novo_bytes=plano.get("backup_novo_bytes", 0))["estado"] != "APTO_NOS_LIMITES_DECLARADOS":
             raise RuntimeError("Espaço mudou antes de iniciar lote; nenhuma aquisição iniciada.")
-    cliente = adaptador or (ArquivosLocais(plano["arquivos_snapshot"]) if plano.get("transporte") == "snapshot" else FTPOficial())
+    if plano["transporte"] == "envelope_datasus":
+        limite=plano["limite_envelope_bytes"]
+        if limite > plano["limite_temporarios_bytes"]:
+            raise ValueError("Envelope excede temporários reservados no preflight")
+        cliente=adaptador or EnvelopeMensal(config["temporarios"],limite)
+    elif plano["transporte"] == "snapshot":
+        cliente=adaptador or ArquivosLocais(plano["arquivos_snapshot"])
+    else:
+        cliente=adaptador or FTPOficial()
     return {"preflight": exame, "aquisicao": "CONCLUIDA_INTEGRIDADE_NAO_HOMOLOGA_CIENCIA", **adquirir_conjunto(raiz, objetos, cliente, antes_objeto=antes_objeto)}
 
 

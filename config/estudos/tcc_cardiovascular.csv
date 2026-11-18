@@ -21,14 +21,14 @@ tcc_cardiovascular,recorte_focal_regiao_pai,ES,conferida,Mandato pós-auditoria 
 tcc_cardiovascular,recorte_focal_municipios_ref,metadata/territorio/pdr_es_2024_tcc_v1.csv,conferida,Mandato pós-auditoria §3.2
 tcc_cardiovascular,comparacoes_focais,Norte:ES,conferida,Mandato pós-auditoria §3.2
 tcc_cardiovascular,conjuntos_focais,sobrepostos_nao_somaveis_nao_independentes,consolidada,complemento §7
-tcc_cardiovascular,populacao_fonte_versao,,pendente_fonte_oficial,D2 Q25
+tcc_cardiovascular,populacao_fonte_versao,RIPSA DEM.1.01 municipal dezembro; SHA-256 do extrato ES 4d8f803af27f7f1b5a828317be0b9d3b8d27e60d44ece017b8aa949c85b7edde,margens_conferidas,CP03; config/estudos/fontes_taxas_camila.csv
 tcc_cardiovascular,populacao_denominador,residente_total;estratos_compativeis,consolidada,D2 §8
 tcc_cardiovascular,subtrair_ANS,nao,consolidada,D2 §8
 tcc_cardiovascular,mortalidade_campo,causa_basica,consolidada,D2 §11
 tcc_cardiovascular,mortalidade_territorio,residencia,consolidada,D2 §11
 tcc_cardiovascular,padronizacao_metodo,direto,consolidada,D2 §11.1
 tcc_cardiovascular,padronizacao_padrao,Brasil_Censo_2010,consolidada,D2 §11.1
-tcc_cardiovascular,padrao_pesos_fonte_hash,,pendente_fonte_oficial,D2 §11.1
+tcc_cardiovascular,padrao_pesos_fonte_hash,6c2996f07ddc47b3d9e8d84adadc956f5db1f52ef41d28a4dd0073952b65e3c2,reproduzido,Brasil Censo 2010; POPSVS/CP03
 tcc_cardiovascular,estratos_calculo,0-4;5-9;10-14;15-19;20-24;25-29;30-34;35-39;40-44;45-49;50-54;55-59;60-64;65-69;70-74;75-79;80-84;85+,consolidada,D2 §11.1
 tcc_cardiovascular,faixas_apresentacao,<30;30-39;40-49;50-59;60-69;70-79;80+,consolidada,D2 Q12
 tcc_cardiovascular,mortalidade_prematura_idades,30-69,consolidada,D2 §11.1

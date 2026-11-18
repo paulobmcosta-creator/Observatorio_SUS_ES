@@ -7,7 +7,7 @@ import os
 import tempfile
 from pathlib import Path
 
-from observatorio_sus.io.custodia import escrever_json, escritor_unico, sha256_arquivo
+from observatorio_sus.io.custodia import escrever_json, escritor_unico, sha256_arquivo, sincronizar_diretorio
 from observatorio_sus.io.manifestos import json_canonico
 
 
@@ -55,7 +55,8 @@ def executar(destino, entradas, parametros, calcular, dependencias=()):
         if destino.exists():
             recibo = json.loads((destino / "recibo.json").read_text())
             if (recibo["id"] != identidade or recibo["contrato"] != contrato or
-                    recibo["saidas"] != produtos(destino)):
+                    recibo["saidas"] != produtos(destino) or
+                    recibo["controles"] != json.loads((destino/"controles.json").read_text())):
                 raise ValueError("Destino já contém outra versão ou cache incompleto")
             return recibo
         staging = Path(tempfile.mkdtemp(prefix=".pendente-", dir=destino.parent))
@@ -63,10 +64,14 @@ def executar(destino, entradas, parametros, calcular, dependencias=()):
             controles = calcular(staging)
             if hashes(entradas) != contrato["entradas"]:
                 raise ValueError("Insumo mudou durante a execução")
+            escrever_json(staging/"controles.json", controles)
             recibo = dict(id=identidade, contrato=contrato, saidas=produtos(staging), controles=controles)
             escrever_json(staging / "recibo.json", recibo)
+            sincronizar_diretorio(staging)
             os.rename(staging, destino)
+            sincronizar_diretorio(destino.parent)
             return recibo
         except Exception as exc:
-            escrever_json(staging / "FALHA.json", {"tipo": type(exc).__name__, "motivo": str(exc)})
+            if staging.is_dir():
+                escrever_json(staging / "FALHA.json", {"tipo": type(exc).__name__, "motivo": str(exc)})
             raise

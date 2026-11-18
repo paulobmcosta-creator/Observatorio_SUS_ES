@@ -1,7 +1,6 @@
 """Auditoria da causa básica em uma edição anual do SIM identificada por hash."""
 import argparse
 import csv
-import hashlib
 import io
 import json
 import platform
@@ -72,6 +71,11 @@ def leitor_csv(stream, ano, regioes):
             qa["outro_ano"] += 1
             continue
         normal = causa(cid)
+        antigo = cid.upper().replace(".", "")
+        if re.fullmatch(r"I50[A-Z0-9]?",antigo) and normal=="INVALIDA":
+            qa["I50_apenas_apos_retirada_irrestrita_de_pontos"] += 1
+        if normal.startswith("I50"):
+            qa["I50_com_ponto" if "." in cid else "I50_sem_ponto"] += 1
         qa["elegiveis"] += 1
         if normal in ("INVALIDA","AUSENTE"):
             qa[normal] += 1
@@ -98,6 +102,11 @@ def leitor_pandas(stream, ano, regioes):
         qa["elegiveis"] += len(b)
         cod = b.CAUSABAS.str.upper()
         valido = cod.str.fullmatch(r"(?:[A-Z][0-9]{2}|[A-Z][0-9]{2}\.?[0-9A-Z])")
+        legado_i50 = cod.str.replace(".", "",regex=False).str.fullmatch(r"I50[A-Z0-9]?")
+        ponto = cod.str.contains(".",regex=False)
+        qa["I50_apenas_apos_retirada_irrestrita_de_pontos"] += int((legado_i50 & ~valido).sum())
+        qa["I50_com_ponto"] += int((legado_i50 & valido & ponto).sum())
+        qa["I50_sem_ponto"] += int((legado_i50 & valido & ~ponto).sum())
         qa["AUSENTE"] += int(cod.eq("").sum())
         qa["INVALIDA"] += int((cod.ne("") & ~valido).sum())
         b = b.loc[valido & cod.str.startswith("I")].copy()

@@ -10,7 +10,8 @@ source("src/validation/validar_correspondencia_territorial.R")
 source("src/transform/territorializar_municipios.R")
 cad <- ler_territorio_congelado(valor(tcc,"territorio_tabela_central"), valor(tcc,"territorio_versao"),
                                 valor(tcc,"territorio_sha256"))
-stopifnot(nrow(cad)==78, identical(as.integer(table(cad$regiao_nome)), c(15L,23L,14L,26L)),
+stopifnot(setequal(strsplit(valor(tcc,"regioes_principais"),";",fixed=TRUE)[[1]],unique(cad$regiao_nome)),
+          nrow(cad)==78, identical(as.integer(table(cad$regiao_nome)), c(15L,23L,14L,26L)),
           valor(tcc,"recorte_focal")=="Norte", valor(tcc,"recorte_focal_nivel")=="regiao",
           valor(tcc,"comparacoes_focais")=="Norte:ES", cad$regiao_nome[cad$cod_municipio_cnes=="320330"]=="Central")
 for (ano in 2014:2024) {

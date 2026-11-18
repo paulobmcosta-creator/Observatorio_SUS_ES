@@ -32,7 +32,8 @@ class CamilaP0(unittest.TestCase):
                 self.assertEqual(resultado["controles"]["G0"],5)
                 self.assertEqual(resultado["controles"]["subcategorias"],dict(I500=1,I501=1,I509=1,I50=1))
                 self.assertEqual(resultado["controles"]["qa"],dict(origem=11,res_es_tipo2=9,elegiveis=7,
-                        INVALIDA=1,AUSENTE=1,data_invalida=1,outro_ano=1))
+                        INVALIDA=1,AUSENTE=1,data_invalida=1,outro_ano=1,I50_com_ponto=2,I50_sem_ponto=2,
+                        I50_apenas_apos_retirada_irrestrita_de_pontos=1))
                 with (dst/"csv.csv").open() as f:
                     self.assertTrue(any(r["regiao"]=="RES_ES_IGNORADO" for r in csv.DictReader(f)))
                 (dst/"dupla_leitura.json").write_text("{}")
@@ -52,6 +53,15 @@ class CamilaP0(unittest.TestCase):
                 (stage/"arquivo").write_text("ok")
                 return {"linhas":1}
             with patch("observatorio_sus.estudos.camila.lote.os.rename",side_effect=OSError("interrupcao")):
+                with self.assertRaises(OSError):
+                    executar(dst,{"entrada":entrada},{},calcular)
+            self.assertFalse(dst.exists())
+            from observatorio_sus.io.custodia import escrever_json
+            def falhar_no_recibo(path,valor):
+                if path.name=="recibo.json":
+                    raise OSError("falha entre arquivo e recibo")
+                escrever_json(path,valor)
+            with patch("observatorio_sus.estudos.camila.lote.escrever_json",side_effect=falhar_no_recibo):
                 with self.assertRaises(OSError):
                     executar(dst,{"entrada":entrada},{},calcular)
             self.assertFalse(dst.exists())
