@@ -14,7 +14,7 @@ from observatorio_sus.extract.envelope_datasus import FAMILIAS, consulta
 from observatorio_sus.io.custodia import sha256_arquivo, escrever_json
 
 
-def obter(v, nome, reserva=2_000_000_000, fator=25):
+def obter(v, nome, reserva=2_000_000_000, fator=25, cliente=None):
     familia,uf,comp=nome[:2],nome[2:4],"20"+nome[4:]
     raiz=v/"originais-assistencia"/familia/uf/comp
     path=raiz/(nome+".dbc")
@@ -28,7 +28,7 @@ def obter(v, nome, reserva=2_000_000_000, fator=25):
             raise ValueError("Edição local incompatível")
         return path
     livre=shutil.disk_usage(v).free
-    cliente=FTPOficial(timeout=25)
+    cliente=cliente or FTPOficial(timeout=25)
     with tempfile.TemporaryDirectory(dir=raiz) as tmp:
         stage=Path(tmp)/path.name
         with cliente.abrir(obj) as (stream,meta):
