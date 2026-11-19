@@ -6,12 +6,17 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import pandas as pd
-from observatorio_sus.estudos.camila.lote import executar
+from observatorio_sus.estudos.camila.lote import executar, produtos
+import json
 
 
 def sintetizar(v,destino):
     entradas={str(a):v/"estratos"/str(a)/"insuficiencia.csv" for a in range(2014,2025)}
     entradas["taxas"]=v/"taxas-ed2/indicadores.csv"
+    anterior=v.parent/"continuacao-nacional/analise-v2"
+    if produtos(anterior)!=json.loads((anterior/"recibo.json").read_text())["saidas"]:
+        raise ValueError("Checkpoint de regressão alterado")
+    entradas["regressao"]=anterior/"geografia_anual.csv"
     def medir(stage):
         tab=[]
         for ano in range(2014,2025):
@@ -31,7 +36,10 @@ def sintetizar(v,destino):
                 tab.append(dict(ano=ano,territorio=reg,**vals.to_dict()))
         tab=pd.DataFrame(tab)
         es=tab.loc[tab.territorio.eq("ES")].set_index("ano")
-        if es.loc[2022:2024,["i50_final","i50_original","mencao_atestado"]].values.tolist()!=[[292,330,2889],[75,398,2948],[9,436,3040]]:
+        referencia=pd.read_csv(entradas["regressao"]).query("territorio=='ES'").set_index("ano").sort_index()
+        observado=es.loc[2022:2024,["i50_final","i50_original","mencao_atestado"]]
+        ref=referencia[["I50","I50_original","mencao_atestado"]]
+        if not observado.index.equals(ref.index) or observado.values.tolist()!=ref.values.tolist():
             raise ValueError("Regressão I50 ES")
         tab.to_csv(stage/"sensibilidade_i50.csv",index=False)
         fig,ax=plt.subplots(figsize=(9,5))
