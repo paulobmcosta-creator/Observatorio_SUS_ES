@@ -172,7 +172,7 @@ if __name__=="__main__":
     for nome in a.nomes:
         arq=a.v/"originais-assistencia"/nome[:2]/"ES"/("20"+nome[4:])/(nome+".dbc")
         if not arq.exists() and nome in ("STES2412","HBES2412"):
-            arq=next((a.v.parent/"acervo/consolidado").rglob(nome+".dbc"))
+            arq=a.v.parent/"acervo/CP01/CNES"/(nome+".dbc")
         if not arq.exists():
             print(nome,"original_ausente",flush=True)
             continue

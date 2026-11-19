@@ -23,11 +23,14 @@ def consolidar(v,saida):
     if len(esperado)!=132*27:
         raise ValueError("Inventário oficial sem 27 UFs em 132 competências")
     inputs={"catalogo":fonte}
-    for p in (v/"sih").glob("RD*/*/recibo.json"):
-        rec=json.loads(p.read_text())
-        if produtos(p.parent)!=rec["saidas"]:
-            raise ValueError("Recibo RD inválido")
-        inputs[p.parent.parent.name]=p.parent/"fluxos.csv"
+    for raiz in ("sih","sih-residentes"):
+        for p in (v/raiz).glob("RD*/*/recibo.json"):
+            rec=json.loads(p.read_text())
+            if produtos(p.parent)!=rec["saidas"]:
+                raise ValueError("Recibo RD inválido")
+            # Em competências de regressão os dois leitores cobrem os mesmos residentes.
+            # Priorizar a tabela que contém todo o atendimento da UF.
+            inputs.setdefault(p.parent.parent.name,p.parent/"fluxos.csv")
     acervo=v.parent/"acervo/CP04/Resultados"
     inputs["novembro"]=acervo/"SIH_PILOTO_FLUXOS.csv"
     inputs["producao_novembro"]=acervo/"SIH_PILOTO_PRODUCAO.csv"

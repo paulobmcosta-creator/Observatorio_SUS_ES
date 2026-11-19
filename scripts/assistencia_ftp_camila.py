@@ -14,7 +14,7 @@ from observatorio_sus.extract.envelope_datasus import FAMILIAS, consulta
 from observatorio_sus.io.custodia import sha256_arquivo, escrever_json
 
 
-def obter(v, nome):
+def obter(v, nome, reserva=2_000_000_000, fator=25):
     familia,uf,comp=nome[:2],nome[2:4],"20"+nome[4:]
     raiz=v/"originais-assistencia"/familia/uf/comp
     path=raiz/(nome+".dbc")
@@ -33,7 +33,7 @@ def obter(v, nome):
         stage=Path(tmp)/path.name
         with cliente.abrir(obj) as (stream,meta):
             size=int(meta["headers"]["Content-Length"])
-            if not 0<size<=250_000_000 or livre<2_000_000_000+25*size:
+            if not 0<size<=250_000_000 or livre<reserva+fator*size:
                 raise OSError("Tamanho fora do orçamento de processamento")
             with stage.open("xb") as out:
                 while bloco:=stream.read(1<<20):
