@@ -45,3 +45,12 @@ O Doppler vascular é um indicador contextual da produção vascular. A consulta
 ## Como relacionar os cinco sistemas
 
 Acompanhe um território em T10 e consulte as séries individuais antes de formular uma pergunta conjunta. O óbito tem ano de ocorrência, a AIH tem admissão e processamento, o estabelecimento tem competência cadastral e o procedimento tem produção, movimento e edição do SIGTAP. Os cinco sistemas permitem descrever dimensões diferentes da atenção. As agregações por território não acompanham a trajetória de uma pessoa e não demonstram o efeito de um serviço sobre um óbito. A leitura, a seleção dos resultados e a discussão científica cabem à estudante.
+
+
+## Como ler a edição corretiva
+
+Em F11, o código 116 identifica o serviço de atenção cardiovascular/cardiologia. As tabelas T17 e T19 descrevem cinco outras classes. Em T17, 122/003 identifica cadastro para exame eletrocardiográfico, 122/007 para tele-ECG e 126/004 para fisioterapia cardiovascular e pneumo-funcional em conjunto. A classe 140/014 descreve o cadastro de pronto-socorro cardiovascular. Em T19, 162/005 é uma série provisória de UCO. Para verificar se os mesmos estabelecimentos aparecem em duas classes, escolha um mês, um território e um par em T18. A contagem de CNES de um período inteiro tem significado diferente do estoque de um único mês.
+
+Presença no cadastro da competência, marcação de vínculo SUS e produção aprovada positiva são três observações distintas. O funcionamento efetivo de cada estabelecimento, incluindo abertura, continuidade de operação e disponibilidade ao longo do mês, permanece **não mensurável** com as fontes e os campos validados. O código ATIVIDAD, os atributos de atendimento e a data de atualização não demonstram esse funcionamento. Um mês sem registro de produção específica pode ter outras formas de atendimento.
+
+Em B02, compare taxas dentro da mesma faixa conhecida de idade e sexo. Para a contagem de óbitos com idade ignorada, consulte a coluna idade_ignorada de B01. T08 apresenta a taxa bruta municipal. No catálogo histórico, use id para acompanhar a série e chave_historica para citar a definição e a edição aplicável.

@@ -22,18 +22,34 @@ def iniciar():
                          "figure.facecolor": "white", "axes.titlelocation": "left"})
 
 
-def finalizar(fig, arquivo, titulo, unidade, fonte, nota):
-    fig.suptitle(titulo, x=0.085, y=0.98, ha="left", fontsize=15, weight="semibold", color="#16384a")
-    fig.text(0.085, 0.905, unidade, color="#385b66")
-    rodape = "\n".join(textwrap.wrap(f"Fonte: {fonte}. {nota}", 112))
-    fig.text(0.085, 0.025, rodape, fontsize=8, color="#384a54", va="bottom")
-    fig.subplots_adjust(left=0.10, right=0.95, top=0.84, bottom=0.25)
+def finalizar(fig, arquivo, titulo, unidade, fonte, nota, referencia=None):
+    if referencia:
+        fig.set_size_inches(11, 7.4)
+        fig.text(0.085, 0.974, f"{arquivo.stem}   ·   {referencia['periodo']}   ·   {referencia['territorio']}",
+                 fontsize=10, weight="bold", color="#385b66")
+        fig.suptitle(titulo, x=0.085, y=0.942, ha="left", fontsize=15, weight="semibold", color="#16384a")
+        fig.text(0.085, 0.867, unidade, color="#385b66")
+        rodape = "\n".join(textwrap.wrap(f"Fonte: {fonte}. {nota}", 115))
+        fig.text(0.085, 0.071, rodape, fontsize=8, color="#384a54", va="bottom")
+        fig.text(0.085, 0.028, f"{referencia['status']}  ·  Tabela {arquivo.stem}.csv  ·  Observatório SUS-ES / TCC Camila v3.2.1",
+                 fontsize=8, color="#384a54")
+        fig.subplots_adjust(left=0.10, right=0.95, top=0.80, bottom=0.36)
+    else:
+        cabecalho_original(fig, titulo, unidade, fonte, nota)
     for ext in ("svg", "png"):
         fig.savefig(arquivo.with_suffix("."+ext), dpi=160, metadata={"Date": None} if ext=="svg" else {})
     plt.close(fig)
 
 
-def linhas(tabela, arquivo, titulo, unidade, fonte, nota, eixo="Ano", idades=False):
+def cabecalho_original(fig, titulo, unidade, fonte, nota):
+    fig.suptitle(titulo, x=0.085, y=0.98, ha="left", fontsize=15, weight="semibold", color="#16384a")
+    fig.text(0.085, 0.905, unidade, color="#385b66")
+    rodape = "\n".join(textwrap.wrap(f"Fonte: {fonte}. {nota}", 112))
+    fig.text(0.085, 0.025, rodape, fontsize=8, color="#384a54", va="bottom")
+    fig.subplots_adjust(left=0.10, right=0.95, top=0.84, bottom=0.25)
+
+
+def linhas(tabela, arquivo, titulo, unidade, fonte, nota, eixo="Ano", idades=False, referencia=None):
     """A lacuna em valor interrompe a linha e permanece ausente no CSV."""
     fig, ax = plt.subplots(figsize=(10, 5.6))
     for i, (nome, grupo) in enumerate(tabela.groupby("serie", sort=False)):
@@ -51,10 +67,10 @@ def linhas(tabela, arquivo, titulo, unidade, fonte, nota, eixo="Ano", idades=Fal
     ax.grid(axis="y", alpha=0.22)
     ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.26 if idades else -0.16),
               ncol=min(4, tabela.serie.nunique()), frameon=False, fontsize=8)
-    finalizar(fig, arquivo, titulo, unidade, fonte, nota)
+    finalizar(fig, arquivo, titulo, unidade, fonte, nota, referencia)
 
 
-def mapa(tabela, malha, arquivo, titulo, unidade, fonte, nota):
+def mapa(tabela, malha, arquivo, titulo, unidade, fonte, nota, referencia=None):
     geometria = json.loads(malha.read_text(encoding="utf-8"))["features"]
     figuras = tabela.painel.drop_duplicates().to_list()
     fig, axs = plt.subplots(1, len(figuras), figsize=(10, 6), squeeze=False)
@@ -93,12 +109,12 @@ def mapa(tabela, malha, arquivo, titulo, unidade, fonte, nota):
         ax.set_aspect(1 / np.cos(np.deg2rad(np.mean(ax.get_ylim()))))
         ax.set_axis_off()
         ax.set_title(painel, fontsize=10, loc="center")
-    cax = fig.add_axes([0.22, 0.145, 0.56, 0.021])
+    cax = fig.add_axes([0.22, 0.245 if referencia else 0.145, 0.56, 0.021])
     fig.colorbar(colecao, cax=cax, orientation="horizontal")
-    finalizar(fig, arquivo, titulo, unidade, fonte, nota)
+    finalizar(fig, arquivo, titulo, unidade, fonte, nota, referencia)
 
 
-def fluxo(tabela, arquivo, titulo, unidade, fonte, nota):
+def fluxo(tabela, arquivo, titulo, unidade, fonte, nota, referencia=None):
     matriz = tabela.pivot(index="origem", columns="destino", values="aih").reindex(index=REGIOES,columns=REGIOES)
     fig, ax = plt.subplots(figsize=(9,6))
     cores = ax.imshow(np.log1p(matriz.to_numpy()), cmap="Blues")
@@ -109,4 +125,4 @@ def fluxo(tabela, arquivo, titulo, unidade, fonte, nota):
     for (i,j), valor in np.ndenumerate(matriz.to_numpy()):
         ax.text(j,i,f"{int(valor):,}".replace(",","."),ha="center",va="center",
                 color="white" if cores.norm(np.log1p(valor))>0.63 else "#142f42")
-    finalizar(fig, arquivo, titulo, unidade, fonte, nota)
+    finalizar(fig, arquivo, titulo, unidade, fonte, nota, referencia)
