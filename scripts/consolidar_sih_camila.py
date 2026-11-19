@@ -40,7 +40,7 @@ def consolidar(v,saida):
         completo={}
         for (mes,uf),nomes in sorted(esperado.items()):
             locais=nomes&inputs.keys()
-            anterior=mes=="202411" and uf=="ES" and nomes=={"RDES2411"}
+            anterior=mes=="202411" and uf=="ES" and nomes=={"RDES2411"} and not locais
             completo[mes,uf]=locais==nomes or anterior
             cobertura.append((mes,uf,len(nomes),len(locais),anterior,completo[mes,uf]))
         salvar(stage/"cobertura.csv",["competencia","uf","objetos_catalogados","dbc_reprocessados","checkpoint_agregado","completo_fluxo_regional"],cobertura)
@@ -73,7 +73,8 @@ def consolidar(v,saida):
                             grupos[mes,esc,grupo]+=n
                             sexoidade[mes,esc,grupo,r["sexo_sih"],r["unidade_idade"],r["idade"]]+=n
         # O checkpoint anterior de novembro conserva fluxos regionais e grupos por atendimento.
-        for r in ler(inputs["novembro"]):
+        usa_cp04 = "RDES2411" not in inputs
+        for r in ler(inputs["novembro"]) if usa_cp04 else ():
             if r["competencia_processamento"]!="202411":
                 continue
             orig,dest=r["origem_residencia"],r["destino_atendimento"]
@@ -83,7 +84,7 @@ def consolidar(v,saida):
             indic["202411","atendimento_ES"]+=n
             if local:
                 indic["202411","residentes_observados"]+=n
-        for r in ler(inputs["producao_novembro"]):
+        for r in ler(inputs["producao_novembro"]) if usa_cp04 else ():
             if r["competencia_processamento"]=="202411" and r["atendimento"]=="ES":
                 grupos["202411","atendimento_ES",r["grupo"]]=int(r["aih_ident1"])
         salvar(stage/"fluxos.csv",["competencia","uf_arquivo","uf_res_ibge","regiao_res","uf_at_ibge","regiao_at","aih"],((*k,n) for k,n in sorted(geos.items())))
@@ -95,7 +96,7 @@ def consolidar(v,saida):
             nuf=sum(ok for (m,_),ok in completo.items() if m==mes)
             if completo[mes,"ES"] and indic[mes,"atendimento_ES"]!=grupos[mes,"atendimento_ES","G0"]:
                 raise ValueError(f"Atendimento G0 divergente {mes}")
-            series.append((mes,nuf,indic.get((mes,"atendimento_ES")),indic.get((mes,"atracao_observada"),0) if mes!="202411" and completo[mes,"ES"] else None,
+            series.append((mes,nuf,indic.get((mes,"atendimento_ES")),indic.get((mes,"atracao_observada"),0) if (mes!="202411" or not usa_cp04) and completo[mes,"ES"] else None,
                            indic.get((mes,"residentes_observados")),indic[mes,"evasao_observada"] if nuf>1 else None,
                            indic[mes,"residentes_observados"] if nuf==27 else None,indic[mes,"evasao_observada"] if nuf==27 else None))
         salvar(stage/"serie.csv",["competencia","ufs_fluxo","atendimento_es","atracao_plausivel","residentes_observados","evasao_observada",
@@ -103,7 +104,7 @@ def consolidar(v,saida):
         return dict(meses_atendimento_ES=sum(completo[m,"ES"] for m in meses),
                     meses_27_ufs=[r[0] for r in series if r[1]==27],bytes_catalogo=sum(tamanhos.values()),
                     bytes_pendentes=sum(n for k,n in tamanhos.items() if k not in inputs and k!="RDES2411"))
-    return executar(saida,inputs,{"ident":"1","territorio":"PDR 2024","novembro_2024":"CP04 agregado"},medir)
+    return executar(saida,inputs,{"ident":"1","territorio":"PDR 2024","novembro_2024":"RD conferido" if "RDES2411" in inputs else "CP04 agregado"},medir)
 
 
 if __name__=="__main__":
