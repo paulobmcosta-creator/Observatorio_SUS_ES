@@ -104,3 +104,5 @@ A aquisição devolve código 1 quando há impedimento. Cada ano tem um manifest
 - `prematura_desde_original.csv` recebe linhas apenas para anos com dupla leitura do ZIP. Aplica os denominadores e pesos da edição já conferida no P0, incluindo a renormalização do padrão entre 30 e 69 anos. As diferenças com as taxas e contagens anteriores ficam disponíveis nos arquivos privados.
 
 O SHA registrado pelo Work permite identificar a edição exata. ETags e datas de atualização ajudam a rastrear a distribuição. Uma análise do efeito de revisões de um mesmo ano exigiria duas edições distintas desse ano.
+
+A comparação nacional de I50, as matrizes de causas e a reconstituição histórica têm comandos próprios. [Protocolo de investigação e reprodução](investigacao_i50.md)
