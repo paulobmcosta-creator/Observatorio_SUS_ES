@@ -4,3 +4,5 @@ pandas==2.2.3
 Pillow==12.3.0
 dbfread==2.0.7
 pyreaddbc==2.0.4
+matplotlib==3.10.7
+duckdb==1.4.2

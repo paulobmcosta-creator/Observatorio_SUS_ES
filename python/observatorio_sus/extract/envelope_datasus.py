@@ -13,7 +13,7 @@ from .adquirir_objetos import HTTPSOficial
 
 PORTAL="https://datasus.saude.gov.br/wp-content"
 FAMILIAS={"RD":("SIHSUS","SIHSUS/200801_/Dados"),"PA":("SIASUS","SIASUS/200801_/Dados"),
-          **{f:("CNES","CNES/200508_/Dados/"+f) for f in ("ST","HB","LT","EQ","PF","SR")}}
+          **{f:("CNES","CNES/200508_/Dados/"+f) for f in ("ST","HB","LT","EQ","PF","SR","EP")}}
 UFS=set("AC AL AP AM BA CE DF ES GO MA MT MS MG PA PB PR PE PI RJ RN RS RO RR SC SP SE TO".split())
 
 
