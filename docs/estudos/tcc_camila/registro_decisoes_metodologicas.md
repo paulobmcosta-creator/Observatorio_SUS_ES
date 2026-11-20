@@ -216,3 +216,15 @@ As propostas de uso das classes SR se restringem à leitura cadastral. A incorpo
 | TCC-MOD-041 · Integração e cartografia | T29 vincula quatro dimensões em formatos amplo e longo. As figuras adicionais têm CSV próprio. M02 usa a união das geometrias municipais por Região de Saúde. | Referenciar as matrizes, a unidade geográfica e temporal dos mapas e as escalas por modalidade. A interpretação científica cabe à estudante. |
 
 As definições clínicas permanecem as homologadas no catálogo histórico. Os recibos privados dos checkpoints A, B e C registram quais implementações entraram na edição e os respectivos confrontos quantitativos.
+
+## Saneamento documental v3.3.1
+
+| Decisão técnica | Validação e consequência metodológica | Incorporação futura ao manuscrito |
+|---|---|---|
+| TCC-MOD-042 · Conservar a edição federal anual do SIM e o estado de PEN-004 | Os relatórios de gestão, os metadados do recurso e o recibo de aquisição datam objetos distintos. Uma nova tabulação publicada para o mesmo ano reforça a necessidade de obter as consultas históricas e os filtros antes de atribuir a diferença. | Identificar edição, residência, período, causa, corte estadual e alcance do confronto na metodologia e nas notas. |
+| TCC-MOD-043 · Manter quatro definições da insuficiência cardíaca e PEN-005 | Os pares original/final documentam entradas e saídas. O cronograma do Ofício nº 208/2024 e a versão registrada na declaração não identificam o mecanismo de uma alteração individual. | Identificar o campo utilizado em cada tabela e orientar comparações dentro da mesma definição. |
+| TCC-MOD-044 · Qualificar a leitura de taxas municipais | Conferir eventos, denominador e disponibilidade antes da leitura. Zero em uma faixa de população positiva é uma taxa etária definida. A precisão da taxa direta depende da distribuição dos eventos, denominadores e pesos. | Acompanhar as taxas de contagens e população. Reservar eventual agregação de períodos ou modelagem à decisão documentada. |
+| TCC-MOD-045 · Distinguir cadastro, vínculo SUS, produção observada e funcionamento | A condição cadastrada e os estoques têm competência própria. A produção aprovada descreve registros por prestador e instrumento, dentro da janela de movimento. Funcionamento continuado e acesso individual permanecem indeterminados. | Explicitar unidades, período, localização e significado dos campos intencionalmente vazios do comparador residual. |
+| TCC-MOD-046 · Distinguir reprodução local e contraprova executada na integração contínua | Registrar ambiente, revisão e resultado da contraprova sintética de AIHs no R e SQL. Os recibos privados identificam os commits e o conteúdo revisado para sincronização. A edição documental conserva o vínculo com os manifestos da base quantitativa. | Atualizar o apêndice de reprodução e separar a validação do pacote da validação externa dos desfechos. |
+
+O registro cumulativo preserva as decisões anteriores. O manual e o roteiro da edição complementar retomam a diferença entre o aprofundamento homologado na Região Norte e a redação sobre Noroeste 1, cuja revisão cabe à estudante e ao orientador.
