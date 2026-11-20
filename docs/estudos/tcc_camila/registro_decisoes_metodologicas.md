@@ -204,3 +204,15 @@ O diretório oficial é `ftp://ftp.datasus.gov.br/dissemin/publicos/SIHSUS/20080
 | TCC-MOD-036 | Vincular revisões do script SIGTAP aos recibos, arquivos e parâmetros usados em cada execução. Documentar o escopo do confronto de comportamento e a liberação da conexão SQLite antes da limpeza do banco temporário. | Apêndice de reprodutibilidade e controle de qualidade. A documentação da correção técnica não altera os critérios científicos. |
 
 As propostas de uso das classes SR se restringem à leitura cadastral. A incorporação clínica de novos conjuntos a totais específicos depende de homologação própria. A redação e a interpretação do manuscrito continuam a cargo da estudante.
+
+## Complementação quantitativa v3.3
+
+| Decisão | Implementação e verificação | Consequência para o manuscrito |
+|---|---|---|
+| TCC-MOD-037 · Comparação territorial adotada no mandato | T20 preserva o residual estadual no SIM e SIH. T25 e T29 identificam também a soma de municípios conhecidos das outras três regiões. A padronização direta agrega os estratos antes de aplicar os pesos de 2022 e 2010. | Definir os dois comparadores em metodologia, tabelas e legendas. Rever o território focal dos objetivos e da seção territorial segundo a decisão sobre a Região Norte. |
+| TCC-MOD-038 · Produção e capacidade localizadas | T21–T23 usam a população anual do território. A produção observa local do prestador, elegibilidade mensal, instrumento e janela de movimento. A capacidade distingue média de 12 estoques, média dos meses válidos e dezembro. A implementação conserva as situações de ausência e vigência. | Identificar a unidade de cada numerador e a localização dos prestadores. Descrever vínculos, horas, estoques e procedimentos nas unidades originais. |
+| TCC-MOD-039 · Utilização e fluxos hospitalares | T24, T28, T30 e T31 reutilizam as AIHs principais por residência em qualquer UF de atendimento. Os grupos específicos integram G0. A origem e o destino são confrontados com as margens preexistentes. | Explicitar ano de processamento, residência, destino, evasão e atração e os denominadores próprios. |
+| TCC-MOD-040 · Granularidade municipal | T26 apresenta contagens e taxas por sexo ou por faixa etária, com 80+ e controle da distribuição dos eventos. A edição adota taxas municipais descritivas e documenta a instabilidade da padronização irrestrita. T27 mantém os conceitos de I50 separados. | Informar a instabilidade das células pequenas e a elegibilidade dos denominadores. Explicar os campos de I50 nas tabelas e na discussão metodológica. |
+| TCC-MOD-041 · Integração e cartografia | T29 vincula quatro dimensões em formatos amplo e longo. As figuras adicionais têm CSV próprio. M02 usa a união das geometrias municipais por Região de Saúde. | Referenciar as matrizes, a unidade geográfica e temporal dos mapas e as escalas por modalidade. A interpretação científica cabe à estudante. |
+
+As definições clínicas permanecem as homologadas no catálogo histórico. Os recibos privados dos checkpoints A, B e C registram quais implementações entraram na edição e os respectivos confrontos quantitativos.
