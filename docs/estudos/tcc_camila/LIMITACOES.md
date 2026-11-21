@@ -6,4 +6,4 @@ Um estrato municipal com zero eventos pode ter denominador válido e taxa calcul
 
 Cadastro CNES documenta estrutura declarada. Vínculo SUS e produção positiva não medem escala, abertura diária ou capacidade operacional. O PA localizado descreve o prestador. Inferências por residência dependem da presença e validação desse campo por instrumento. As janelas de produção e de movimento devem ser declaradas, especialmente no fim de 2024. As unidades são procedimentos e AIHs, com possibilidade de múltiplos registros por pessoa.
 
-As interseções e complementos podem revelar grupos muito pequenos de prestadores mesmo em agregados estaduais. A liberação dos candidatos requer avaliação conjunta de vinculação, utilidade e termos das fontes. O recorte acadêmico detalhado fica sob custódia.
+As interseções e complementos podem revelar grupos muito pequenos de prestadores mesmo em agregados estaduais. A [avaliação de divulgação conjunta](NOTA_RISCO_DIVULGACAO.md) acompanha os 13 arquivos detalhados da v3.5.1. Os microdados originais e os documentos privados de custódia permanecem fora da seleção.

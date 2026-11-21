@@ -1,6 +1,6 @@
 # Divulgação integral das interseções de estabelecimentos
 
-**Decisão técnica v3.4.3.** Os 24 padrões estaduais de 2024 podem ser apresentados integralmente na candidata. A decisão metodológica foi homologada pela coordenação. A autorização para divulgação pública cabe à coordenação do Observatório SUS-ES após apreciar direitos de uso e a avaliação contextual conjunta. Os números e desenhos da v3.4.2 conservam seus hashes.
+**Decisão técnica v3.4.3.** Na v3.4.3, a coordenação homologou a apresentação integral dos 24 padrões estaduais de 2024. A autorização para divulgação pública cabe à coordenação do Observatório SUS-ES após apreciar direitos de uso e a avaliação contextual conjunta. Os números e desenhos da v3.4.2 conservam seus hashes.
 
 | Figura | Menor célula exclusiva anual | Tripla anual | Tripla na mesma competência | SHA-256 do SVG |
 |---|---:|---:|---:|---|
@@ -16,4 +16,4 @@ Uma supressão isolada pode ser revertida por marginais, resumo, união, complem
 
 Fontes primárias: MS/DATASUS, CNES, SIA/PA, SIH/RD e SIGTAP nas edições de referência. Créditos de elaboração: Observatório SUS-ES. O [manifesto](MANIFESTO_PUBLICO.csv) identifica os hashes dos 17 artefatos. A [tabela de padrões](../../../resultados_publicos/tcc_camila/dados/particoes_es.csv) e o [resumo](../../../resultados_publicos/tcc_camila/dados/resumo_intersecoes.csv) sustentam os desenhos. O [roteiro de reprodução](COMO_REPRODUZIR.md) indica o comando reproduzir-com-agregados. Os insumos históricos são identificados em [fontes_agregadas.json](../../../scripts/estudos/tcc_camila/fontes_agregadas.json).
 
-Fundamento documental: [LGPD, arts. 5º, 12 e 13](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm), [Decreto 8.777/2016](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/decreto/d8777.htm) e [regimes da coleção](LICENSE-DATA.md). As fichas dos sistemas relacionados e as condições de cada fonte foram examinadas separadamente. A evidência disponível fundamenta a preservação integral das contagens na revisão. A publicação dos derivados mistos aguarda apreciação de reuso e titularidade.
+Fundamento documental: [LGPD, arts. 5º, 12 e 13](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm), [Decreto 8.777/2016](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/decreto/d8777.htm) e [regimes da coleção](LICENSE-DATA.md). As fichas dos sistemas relacionados e as condições de cada fonte foram examinadas separadamente. A evidência disponível fundamenta a preservação integral das contagens na revisão. Na preparação da v3.4.3, a apreciação do reuso e da titularidade dos derivados mistos ficou pendente. As condições documentadas para a v3.5.1 constam em [fontes e direitos](FONTES_E_DIREITOS.md).

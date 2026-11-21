@@ -1,6 +1,6 @@
 # Deliberação de divulgação integral e interpretação dos dados — v3.5.1
 
-**Escopo:** 318 arquivos originais, incluindo 13 de maior granularidade, disponíveis nesta candidata local sem mudanças de conteúdo.
+**Escopo:** 318 arquivos originais, incluindo 13 de maior granularidade, incluídos na v3.5.1 com os bytes originais.
 
 ## Decisão do responsável pela pesquisa
 
@@ -16,6 +16,6 @@ Em 21/11/2026 foi determinada a inclusão integral dos 13 originais que a prévi
 
 ## Condições editoriais
 
-Acesse o [catálogo integral dos 318](CATALOGO_RESULTADOS_318.csv) e a [matriz de 13 originais restaurados](MATRIZ_ABERTURA_INTEGRAL_13.csv). Os hashes dos originais são preservados. Os produtos de terceiros e a geometria cartográfica devem ser creditados segundo [fontes e direitos](FONTES_E_DIREITOS.md). A inclusão nesta candidata não altera automaticamente licenças de terceiros nem comprova competência patrimonial de licenciamento; essa questão foi expressamente postergada.
+Acesse o [catálogo integral dos 318](CATALOGO_RESULTADOS_318.csv) e a [matriz de 13 originais restaurados](MATRIZ_ABERTURA_INTEGRAL_13.csv). Os hashes dos originais são preservados. Os produtos de terceiros e a geometria cartográfica devem ser creditados segundo [fontes e direitos](FONTES_E_DIREITOS.md). As licenças de terceiros continuam aplicáveis. A comprovação da competência patrimonial para relicenciamento ficou fora do escopo da preparação.
 
-**Status:** inclusão local aprovada pelo pesquisador; sem push, merge, GitHub Release ou declaração de revisão jurídico-institucional concluída.
+Em 21/11/2026, o pesquisador aprovou a inclusão dos 13 arquivos na edição. A decisão abrangeu o conteúdo científico. A autorização de envio remoto e a competência para relicenciamento têm registros próprios quando formalizadas.

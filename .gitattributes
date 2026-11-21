@@ -12,3 +12,6 @@ docs/estudos/tcc_camila/documentacao_de_origem/** -text whitespace=trailing-spac
 docs/estudos/tcc_camila/MANIFESTO_PUBLICO.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
 # SVGs científicos gerados mantêm espaços nos atributos de caminho e hashes homologados.
 resultados_publicos/**/*.svg -text whitespace=-trailing-space,space-before-tab,cr-at-eol
+
+# Cópia histórica conferida pelo identificador do objeto Git da base da PR 83.
+docs/estudos/tcc_camila/README_BASE_PR83_8308611.md -text
