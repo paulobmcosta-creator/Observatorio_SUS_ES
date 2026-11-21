@@ -9,3 +9,7 @@ As [instruções de reprodução](COMO_REPRODUZIR.md) distinguem os testes, a re
 ## Referência histórica
 
 O [README metodológico da base 8308611 da PR 83](README_BASE_PR83_8308611.md) preserva integralmente os comandos, fontes e pendências daquela edição. Alguns critérios e pendências foram revistos desde então. Para trabalhar com a v3.5.1, use a metodologia acima e o [registro de decisões](registro_decisoes_metodologicas.md).
+
+## Orientações acadêmicas para a estudante (21/11/2026)
+
+O [guia de leitura da Camila](GUIA_ACADEMICO_CAMILA_2026.md) e a [matriz de perguntas e resultados](MATRIZ_ORIENTADORA_CAMILA_2026.md) apresentam os indicadores em linguagem acadêmica mais direta, distinguindo os arquivos científicos dos textos de orientação. A regressão de Prais–Winsten permanece pendente. A revisão não altera o conteúdo dos 318 resultados originais nem substitui a redação do TCC pela estudante.
