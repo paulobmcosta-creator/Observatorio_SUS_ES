@@ -1,0 +1,37 @@
+name: Testar contrato cardiovascular do ES
+on:
+  push:
+    branches: ['feat/tcc-camila-cardiovascular-2014-2024']
+  pull_request:
+    paths:
+      - 'python/observatorio_sus/estudos/camila/**'
+      - 'tests/python/test_camila*.py'
+      - 'config/estudos/**'
+      - 'scripts/estudos/tcc_camila/**'
+      - 'scripts/integracao_estabelecimentos/**'
+      - 'resultados_publicos/observatorio_sus_es/**'
+      - 'resultados_publicos/tcc_camila/**'
+      - 'docs/estudos/tcc_camila/**'
+      - 'metadata/territorio/pdr_es_2024_tcc_v1.csv'
+      - 'python/observatorio_sus/extract/envelope_datasus.py'
+      - 'scripts/adquirir_lote_controlado.py'
+      - '.github/workflows/testar_tcc_camila.yml'
+jobs:
+  contrato:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r config/estudos/requirements-reproducao-camila.txt
+      - run: python scripts/estudos/tcc_camila/reproduzir.py validar-pacote
+      - run: PYTHONPATH=python python -m pytest -q scripts/integracao_estabelecimentos scripts/estudos/tcc_camila/test_reproducao.py
+      - run: python scripts/estudos/tcc_camila/reproduzir.py reproduzir-com-agregados --saida "$RUNNER_TEMP/regenerado"
+      - run: PYTHONPATH=python python -m unittest discover -s tests/python -p 'test_camila*.py' -v
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.3'
+      - run: Rscript tests/test_configuracao_dossies.R
+
+      - run: PYTHONPATH=python python -m pytest -q -rs tests/python/test_contraprova_sih_sql.py

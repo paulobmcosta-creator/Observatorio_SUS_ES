@@ -1,0 +1,97 @@
+conjunto,nome,fonte,criterio,limite
+ST,Cadastro no CNES,C_cadastro_producao_integrada,cadastrado::BOOL,Presença observada no recorte homologado.
+SUS,Vínculo SUS,C_cadastro_producao_integrada,VINC_SUS='1',Presença observada no recorte homologado.
+COMP,Recurso composto v3.4,C_cadastro_producao_integrada,recurso_especifico::BOOL,"União deduplicada de SR116, SR140/014, LT02/LT32 existentes, habilitações do catálogo e vínculos CBO 225120/225210/225203. Equipamentos têm conjuntos próprios."
+SERV34,Serviço no algoritmo v3.4,C_cadastro_producao_integrada,servico::BOOL,Inclui SR116 e SR140/014 no algoritmo legado. A série SR_CARD isola SR116.
+ESTH,Estrutura hospitalar v3.4,C_cadastro_producao_integrada,estrutura_hosp::BOOL,Presença observada no recorte homologado.
+HAB,Habilitação cardiovascular selecionada,C_cadastro_producao_integrada,habilitacao::BOOL,Presença observada no recorte homologado.
+PA,Produção PA específica,C_cadastro_producao_integrada,tem_pa::BOOL,Presença observada no recorte homologado.
+SIH,AIHs cardiovasculares,C_cadastro_producao_integrada,tem_sih::BOOL,Presença observada no recorte homologado.
+CTX,Produção PA contextual,C_cadastro_producao_integrada,contextuais::BIGINT>0,Presença observada no recorte homologado.
+SR_CARD,Estabelecimentos com serviço cardiovascular classificado,recursos_vigentes,id='SR_CARD' AND valor::DOUBLE>0,Validado. Estoque cadastral mensal.
+SR_CARD_SUS,Estabelecimentos com serviço cardiovascular ambulatorial SUS,recursos_vigentes,id='SR_CARD_SUS' AND valor::DOUBLE>0,Validado. Estoque cadastral mensal.
+HB_0801,Estabelecimentos com habilitação 0801,recursos_vigentes,id='HB_0801' AND valor::DOUBLE>0,Validado. Título e vigência na edição mensal. Habilitações diferentes podem coexistir.
+HB_0802,Estabelecimentos com habilitação 0802,recursos_vigentes,id='HB_0802' AND valor::DOUBLE>0,Validado. Título e vigência na edição mensal. Habilitações diferentes podem coexistir.
+HB_0803,Estabelecimentos com habilitação 0803,recursos_vigentes,id='HB_0803' AND valor::DOUBLE>0,Validado. Título e vigência na edição mensal. Habilitações diferentes podem coexistir.
+HB_0804,Estabelecimentos com habilitação 0804,recursos_vigentes,id='HB_0804' AND valor::DOUBLE>0,Validado. Título e vigência na edição mensal. Habilitações diferentes podem coexistir.
+HB_0805,Estabelecimentos com habilitação 0805,recursos_vigentes,id='HB_0805' AND valor::DOUBLE>0,Validado. Título e vigência na edição mensal. Habilitações diferentes podem coexistir.
+HB_0806,Estabelecimentos com habilitação 0806,recursos_vigentes,id='HB_0806' AND valor::DOUBLE>0,Validado. Título e vigência na edição mensal. Habilitações diferentes podem coexistir.
+HB_0807,Estabelecimentos com habilitação 0807,recursos_vigentes,id='HB_0807' AND valor::DOUBLE>0,Validado. Título e vigência na edição mensal. Habilitações diferentes podem coexistir.
+HB_0815,Estabelecimentos com habilitação 0815,recursos_vigentes,id='HB_0815' AND valor::DOUBLE>0,Validado. Título e vigência na edição mensal. Habilitações diferentes podem coexistir.
+HB_2411,Estabelecimentos com habilitação 2411,recursos_vigentes,id='HB_2411' AND valor::DOUBLE>0,Validado. Título e vigência na edição mensal. Habilitações diferentes podem coexistir.
+HB_2608,Estabelecimentos com habilitação 2608,recursos_vigentes,id='HB_2608' AND valor::DOUBLE>0,Validado. Título e vigência na edição mensal. Habilitações diferentes podem coexistir.
+HB_2609,Estabelecimentos com habilitação 2609,recursos_vigentes,id='HB_2609' AND valor::DOUBLE>0,Validado. Título e vigência na edição mensal. Habilitações diferentes podem coexistir.
+LT_02_QT_EXIST,cirúrgico • CARDIOLOGIA • QT_EXIST,recursos_vigentes,id='LT_02_QT_EXIST' AND valor::DOUBLE>0,Validado. Domínio LFCES001 do SCNES 2009 e conversão TabWin. UTI e UCO em revisão de continuidade histórica; cirurgia e clínica geral são contexto.
+LT_02_QT_SUS,cirúrgico • CARDIOLOGIA • QT_SUS,recursos_vigentes,id='LT_02_QT_SUS' AND valor::DOUBLE>0,Validado. Domínio LFCES001 do SCNES 2009 e conversão TabWin. UTI e UCO em revisão de continuidade histórica; cirurgia e clínica geral são contexto.
+LT_32_QT_EXIST,clínico • CARDIOLOGIA • QT_EXIST,recursos_vigentes,id='LT_32_QT_EXIST' AND valor::DOUBLE>0,Validado. Domínio LFCES001 do SCNES 2009 e conversão TabWin. UTI e UCO em revisão de continuidade histórica; cirurgia e clínica geral são contexto.
+LT_32_QT_SUS,clínico • CARDIOLOGIA • QT_SUS,recursos_vigentes,id='LT_32_QT_SUS' AND valor::DOUBLE>0,Validado. Domínio LFCES001 do SCNES 2009 e conversão TabWin. UTI e UCO em revisão de continuidade histórica; cirurgia e clínica geral são contexto.
+LT_85_QT_EXIST,complementar • UTI CORONARIANA TIPO II - UCO TIPO II • QT_EXIST,recursos_vigentes,id='LT_85_QT_EXIST' AND valor::DOUBLE>0,Provisório. Domínio LFCES001 do SCNES 2009 e conversão TabWin. UTI e UCO em revisão de continuidade histórica; cirurgia e clínica geral são contexto.
+LT_85_QT_SUS,complementar • UTI CORONARIANA TIPO II - UCO TIPO II • QT_SUS,recursos_vigentes,id='LT_85_QT_SUS' AND valor::DOUBLE>0,Provisório. Domínio LFCES001 do SCNES 2009 e conversão TabWin. UTI e UCO em revisão de continuidade histórica; cirurgia e clínica geral são contexto.
+LT_86_QT_EXIST,complementar • UTI CORONARIANA TIPO III - UCO TIPO III • QT_EXIST,recursos_vigentes,id='LT_86_QT_EXIST' AND valor::DOUBLE>0,Provisório. Domínio LFCES001 do SCNES 2009 e conversão TabWin. UTI e UCO em revisão de continuidade histórica; cirurgia e clínica geral são contexto.
+LT_86_QT_SUS,complementar • UTI CORONARIANA TIPO III - UCO TIPO III • QT_SUS,recursos_vigentes,id='LT_86_QT_SUS' AND valor::DOUBLE>0,Provisório. Domínio LFCES001 do SCNES 2009 e conversão TabWin. UTI e UCO em revisão de continuidade histórica; cirurgia e clínica geral são contexto.
+EQ_101_QT_USO,101-Gama Camara • QT_USO,recursos_vigentes,id='EQ_101_QT_USO' AND valor::DOUBLE>0,Validado. Conversão oficial até 202507. Equipamento compartilhável entre especialidades.
+EQ_110_QT_USO,110-Raio X para Hemodinamica • QT_USO,recursos_vigentes,id='EQ_110_QT_USO' AND valor::DOUBLE>0,Validado. Conversão oficial até 202507. Equipamento compartilhável entre especialidades.
+EQ_113_QT_USO,113-Ultrassom Doppler Colorido • QT_USO,recursos_vigentes,id='EQ_113_QT_USO' AND valor::DOUBLE>0,Validado. Conversão oficial até 202507. Equipamento compartilhável entre especialidades.
+EQ_441_QT_USO,441-Eletrocardiografo • QT_USO,recursos_vigentes,id='EQ_441_QT_USO' AND valor::DOUBLE>0,Validado. Conversão oficial até 202507. Equipamento compartilhável entre especialidades.
+EQ_441_SUS,441-Eletrocardiografo • em uso com indicação SUS,recursos_vigentes,id='EQ_441_SUS' AND valor::DOUBLE>0,Validado. Indicação cadastral SUS do registro; uso efetivo e exclusividade não mensurados.
+EQ_551_QT_USO,551-Bomba/Balao Intra-Aortico • QT_USO,recursos_vigentes,id='EQ_551_QT_USO' AND valor::DOUBLE>0,Validado. Conversão oficial até 202507. Equipamento compartilhável entre especialidades.
+EQ_556_QT_USO,556-DESFIBRILADOR CONVENCIONAL • QT_USO,recursos_vigentes,id='EQ_556_QT_USO' AND valor::DOUBLE>0,Validado. Conversão oficial até 202507. Equipamento compartilhável entre especialidades.
+EQ_559_QT_USO,559-Marcapasso Temporario • QT_USO,recursos_vigentes,id='EQ_559_QT_USO' AND valor::DOUBLE>0,Validado. Conversão oficial até 202507. Equipamento compartilhável entre especialidades.
+EQ_565_QT_USO,565-MONITOR MULTIPARAMETRO • QT_USO,recursos_vigentes,id='EQ_565_QT_USO' AND valor::DOUBLE>0,Validado. Conversão oficial até 202507. Equipamento compartilhável entre especialidades.
+EQ_566_QT_USO,566-DESFIBRILADOR EXTERNO AUTOMATICO • QT_USO,recursos_vigentes,id='EQ_566_QT_USO' AND valor::DOUBLE>0,Validado. Conversão oficial até 202507. Equipamento compartilhável entre especialidades.
+EQ_676_QT_USO,676-Equipamento de Circulacao Extracorporea • QT_USO,recursos_vigentes,id='EQ_676_QT_USO' AND valor::DOUBLE>0,Validado. Conversão oficial até 202507. Equipamento compartilhável entre especialidades.
+PF_225120_vinculos,CBO 225120 • vinculos,recursos_vigentes,id='PF_225120_vinculos' AND valor::DOUBLE>0,Validado. Preservar múltiplos vínculos. Pessoas distintas e postos contratuais não foram contados.
+PF_225120_vinculos_sus,CBO 225120 • vinculos_sus,recursos_vigentes,id='PF_225120_vinculos_sus' AND valor::DOUBLE>0,Validado. Preservar múltiplos vínculos. Pessoas distintas e postos contratuais não foram contados.
+PF_225210_vinculos,CBO 225210 • vinculos,recursos_vigentes,id='PF_225210_vinculos' AND valor::DOUBLE>0,Validado. Preservar múltiplos vínculos. Pessoas distintas e postos contratuais não foram contados.
+PF_225210_vinculos_sus,CBO 225210 • vinculos_sus,recursos_vigentes,id='PF_225210_vinculos_sus' AND valor::DOUBLE>0,Validado. Preservar múltiplos vínculos. Pessoas distintas e postos contratuais não foram contados.
+PF_225203_vinculos,CBO 225203 • vinculos,recursos_vigentes,id='PF_225203_vinculos' AND valor::DOUBLE>0,Validado. Preservar múltiplos vínculos. Pessoas distintas e postos contratuais não foram contados.
+PF_225203_vinculos_sus,CBO 225203 • vinculos_sus,recursos_vigentes,id='PF_225203_vinculos_sus' AND valor::DOUBLE>0,Validado. Preservar múltiplos vínculos. Pessoas distintas e postos contratuais não foram contados.
+SR122_003,Exame Eletrocardiográfico,servicos_e_classes,SERV_ESP='122' AND CLASS_SR='003',Classificação específica do serviço no cadastro.
+SR122_007,Exame Eletrocardiografico por Telemedicina,servicos_e_classes,SERV_ESP='122' AND CLASS_SR='007',Classificação específica do serviço no cadastro.
+SR140_014,Pronto Socorro Cardiovascular,servicos_e_classes,SERV_ESP='140' AND CLASS_SR='014',Classificação específica do serviço no cadastro.
+SR126_004,Assistência fisioterapêutica cardiovasculares e pneumo-funcionais,servicos_e_classes,SERV_ESP='126' AND CLASS_SR='004',Contextual composto
+SR162_005,DOENÇA CORONARIANA (UCO),servicos_e_classes,SERV_ESP='162' AND CLASS_SR='005',Provisório para inferência longitudinal
+SR116_001,Eletrofisiologia,servicos_e_classes,SERV_ESP='116' AND CLASS_SR='001',Presença observada no recorte homologado.
+SR116_001_SUS,Eletrofisiologia (ambulatório SUS),servicos_e_classes,SERV_ESP='116' AND CLASS_SR='001' AND AMB_SUS='1',Presença observada no recorte homologado.
+SR116_002,Cirurgia cardiovascular (adulto),servicos_e_classes,SERV_ESP='116' AND CLASS_SR='002',Presença observada no recorte homologado.
+SR116_002_SUS,Cirurgia cardiovascular (adulto) (ambulatório SUS),servicos_e_classes,SERV_ESP='116' AND CLASS_SR='002' AND AMB_SUS='1',Presença observada no recorte homologado.
+SR116_003,Cirurgia cardiovascular (Pediátrico),servicos_e_classes,SERV_ESP='116' AND CLASS_SR='003',Presença observada no recorte homologado.
+SR116_003_SUS,Cirurgia cardiovascular (Pediátrico) (ambulatório SUS),servicos_e_classes,SERV_ESP='116' AND CLASS_SR='003' AND AMB_SUS='1',Presença observada no recorte homologado.
+SR116_004,Cirurgia vascular,servicos_e_classes,SERV_ESP='116' AND CLASS_SR='004',Presença observada no recorte homologado.
+SR116_004_SUS,Cirurgia vascular (ambulatório SUS),servicos_e_classes,SERV_ESP='116' AND CLASS_SR='004' AND AMB_SUS='1',Presença observada no recorte homologado.
+SR116_005,Cardiologia intervencionista (hemodinâmica),servicos_e_classes,SERV_ESP='116' AND CLASS_SR='005',Presença observada no recorte homologado.
+SR116_005_SUS,Cardiologia intervencionista (hemodinâmica) (ambulatório SUS),servicos_e_classes,SERV_ESP='116' AND CLASS_SR='005' AND AMB_SUS='1',Presença observada no recorte homologado.
+SR116_006,Cardiologia Endovascular Extracardíaco,servicos_e_classes,SERV_ESP='116' AND CLASS_SR='006',Presença observada no recorte homologado.
+SR116_006_SUS,Cardiologia Endovascular Extracardíaco (ambulatório SUS),servicos_e_classes,SERV_ESP='116' AND CLASS_SR='006' AND AMB_SUS='1',Presença observada no recorte homologado.
+SR116_007,Cardiologia Clínica,servicos_e_classes,SERV_ESP='116' AND CLASS_SR='007',Presença observada no recorte homologado.
+SR116_007_SUS,Cardiologia Clínica (ambulatório SUS),servicos_e_classes,SERV_ESP='116' AND CLASS_SR='007' AND AMB_SUS='1',Presença observada no recorte homologado.
+SR116_008,Serviço de Atenção Cardiovascular/Cardiologia Angiologia,servicos_e_classes,SERV_ESP='116' AND CLASS_SR='008',Presença observada no recorte homologado.
+SR116_008_SUS,Serviço de Atenção Cardiovascular/Cardiologia Angiologia (ambulatório SUS),servicos_e_classes,SERV_ESP='116' AND CLASS_SR='008' AND AMB_SUS='1',Presença observada no recorte homologado.
+ECG,ECG aprovado,PA_detalhe_janela_original,classe='A' AND codigo='0211020036' AND aprovadas::BIGINT>0,Presença observada no recorte homologado.
+OUTRO_PA,Específicos além do ECG,PA_detalhe_janela_original,classe='A' AND codigo<>'0211020036' AND aprovadas::BIGINT>0,Presença observada no recorte homologado.
+ECO,Ecocardiografia transtorácica aprovada,PA_detalhe_janela_original,classe='A' AND codigo='0205010032' AND aprovadas::BIGINT>0,Presença observada no recorte homologado.
+CAT,Cateterismo cardíaco aprovado,PA_detalhe_janela_original,classe='A' AND codigo='0211020010' AND aprovadas::BIGINT>0,Presença observada no recorte homologado.
+FISIO,Fisioterapia cardiovascular específica,PA_detalhe_janela_original,classe='A' AND grupo_clinico='fisioterapia_especifica' AND aprovadas::BIGINT>0,Presença observada no recorte homologado.
+DOP,Doppler vascular contextual,PA_detalhe_janela_original,classe='B' AND grupo_clinico='doppler_contextual' AND aprovadas::BIGINT>0,Presença observada no recorte homologado.
+CONS,Consulta por CBO contextual,PA_detalhe_janela_original,classe='B' AND grupo_clinico='consulta_cbo' AND aprovadas::BIGINT>0,Presença observada no recorte homologado.
+P0205010032,ECOCARDIOGRAFIA TRANSTORACICA,PA_detalhe_janela_original,codigo='0205010032' AND aprovadas::BIGINT>0,"Código oficial, elegibilidade por competência e instrumento."
+P0205010040,ULTRASSONOGRAFIA DOPPLER COLORIDO DE VASOS,PA_detalhe_janela_original,codigo='0205010040' AND aprovadas::BIGINT>0,"Código oficial, elegibilidade por competência e instrumento."
+P0208010025,CINTILOGRAFIA DE MIOCARDIO P/ AVALIACAO DA PERFUSAO EM SITUACAO DE ESTRESSE (MINIMO 3 PROJECOES),PA_detalhe_janela_original,codigo='0208010025' AND aprovadas::BIGINT>0,"Código oficial, elegibilidade por competência e instrumento."
+P0208010033,CINTILOGRAFIA DE MIOCARDIO P/ AVALIACAO DA PERFUSAO EM SITUACAO DE REPOUSO (MINIMO 3 PROJECOES),PA_detalhe_janela_original,codigo='0208010033' AND aprovadas::BIGINT>0,"Código oficial, elegibilidade por competência e instrumento."
+P0211020010,CATETERISMO CARDIACO,PA_detalhe_janela_original,codigo='0211020010' AND aprovadas::BIGINT>0,"Código oficial, elegibilidade por competência e instrumento."
+P0211020036,ELETROCARDIOGRAMA,PA_detalhe_janela_original,codigo='0211020036' AND aprovadas::BIGINT>0,"Código oficial, elegibilidade por competência e instrumento."
+P0211020044,MONITORAMENTO PELO SISTEMA HOLTER 24 HS (3 CANAIS),PA_detalhe_janela_original,codigo='0211020044' AND aprovadas::BIGINT>0,"Código oficial, elegibilidade por competência e instrumento."
+P0211020052,MONITORIZACAO AMBULATORIAL DE PRESSAO ARTERIAL (M.A.P.A),PA_detalhe_janela_original,codigo='0211020052' AND aprovadas::BIGINT>0,"Código oficial, elegibilidade por competência e instrumento."
+P0211020060,TESTE DE ESFORCO / TESTE ERGOMETRICO,PA_detalhe_janela_original,codigo='0211020060' AND aprovadas::BIGINT>0,"Código oficial, elegibilidade por competência e instrumento."
+P0301010072,CONSULTA MEDICA EM ATENÇÃO ESPECIALIZADA,PA_detalhe_janela_original,codigo='0301010072' AND aprovadas::BIGINT>0,"Código oficial, elegibilidade por competência e instrumento."
+P0302040030,ATENDIMENTO FISIOTERAPÊUTICO EM PACIENTE COM TRANSTORNO CLÍNICO CARDIOVASCULAR,PA_detalhe_janela_original,codigo='0302040030' AND aprovadas::BIGINT>0,"Código oficial, elegibilidade por competência e instrumento."
+P0302040048,ATENDIMENTO FISIOTERAPÊUTICO EM PACIENTE PRÉ/PÓS CIRURGIA CARDIOVASCULAR,PA_detalhe_janela_original,codigo='0302040048' AND aprovadas::BIGINT>0,"Código oficial, elegibilidade por competência e instrumento."
+P0302040064,ATENDIMENTO FISIOTERAPÊUTICO EM PACIENTE COM SÍNDROME CORONARIANA AGUDA,PA_detalhe_janela_original,codigo='0302040064' AND aprovadas::BIGINT>0,"Código oficial, elegibilidade por competência e instrumento."
+INSTR_C,PA específico no instrumento C,PA_detalhe_janela_original,classe='A' AND instrumento='C' AND aprovadas::BIGINT>0,Presença observada no recorte homologado.
+INSTR_I,PA específico no instrumento I,PA_detalhe_janela_original,classe='A' AND instrumento='I' AND aprovadas::BIGINT>0,Presença observada no recorte homologado.
+INSTR_P,PA específico no instrumento P,PA_detalhe_janela_original,classe='A' AND instrumento='P' AND aprovadas::BIGINT>0,Presença observada no recorte homologado.
+INSTR_S,PA específico no instrumento S,PA_detalhe_janela_original,classe='A' AND instrumento='S' AND aprovadas::BIGINT>0,Presença observada no recorte homologado.
+LEITOS,Leito clínico ou cirúrgico de cardiologia,pertencimento_mensal,LT_02_QT_EXIST OR LT_32_QT_EXIST,Presença na mesma competência administrativa.
+PROF,Vínculo profissional do catálogo,pertencimento_mensal,PF_225120_vinculos OR PF_225210_vinculos OR PF_225203_vinculos,Presença na mesma competência administrativa.
+ECG_SERV,Exame eletrocardiográfico convencional ou por telemedicina,pertencimento_mensal,SR122_003 OR SR122_007,Presença na mesma competência administrativa.
+PA_SIH_MES,Produção nos dois sistemas no mês,pertencimento_mensal,PA AND SIH,Presença na mesma competência administrativa.

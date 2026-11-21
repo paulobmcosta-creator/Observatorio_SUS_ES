@@ -1,0 +1,60 @@
+{
+  "escopo": "Integração do TCC; hashes e procedimentos; laudos analíticos na entrega reservada",
+  "base": "cf2bf830cf964bab52bcc8c0ecb4ce40b33070a2",
+  "testes": [
+    {
+      "comando": "python -m observatorio_sus.estudos.camila.pacotes PACOTES ACERVO (execução e reuso)",
+      "exit_code": 0
+    },
+    {
+      "comando": "python -m unittest discover -s tests/python -p 'test_camila*.py' -v",
+      "exit_code": 0,
+      "testes": 6
+    },
+    {
+      "comando": "python -m pytest tests/python -q",
+      "exit_code": 0,
+      "testes": 122
+    },
+    {
+      "comando": "Rscript tests/test_configuracao_dossies.R",
+      "exit_code": 0
+    },
+    {
+      "comando": "python scripts/verificar_pilotos_camila.py ACERVO SAIDA",
+      "exit_code": 0,
+      "comparacoes_por_hash": 15
+    },
+    {
+      "comando": "python scripts/diagnosticar_ruptura_i50.py ACERVO SAIDA --custodia /workspace",
+      "exit_code": 0,
+      "originais_2022_a_2024_encontrados": 0
+    },
+    {
+      "comando": "python -m observatorio_sus.estudos.camila.populacao ACERVO SAIDA --dem COPIA_ADULTERADA",
+      "exit_code": 1,
+      "esperado": 1,
+      "destino_promovido": false
+    }
+  ],
+  "r": {
+    "arquivos_distintos": 23,
+    "sucesso": 23,
+    "observacao": "Dois testes históricos de 202601 precisaram do objeto Git LFS local conferido em checkout de dados separado. Os demais 21 passaram diretamente."
+  },
+  "edicoes": {
+    "populacao_e_assistencia": "Python 3.12.14, pandas 2.2.3, numpy 1.26.4, dbfread 2.0.7, pyreaddbc 2.0.4",
+    "suite_institucional": "Python 3.12.14, pandas 2.3.3, pytest 9.1.1",
+    "R": "Rscript (R) version 4.5.0 (2025-04-11)"
+  },
+  "provas": {
+    "regressoes.json": "3d5b13e0e9320fbd043459e16e09af6592bb990a999b016e9e8fcdcf790671e8",
+    "diagnostico.csv": "5c8db84214e8a34fe2a488e5bbf5d8376d2c5bfef7f23651f06fb8e5eb7a2f10"
+  },
+  "pilotos": {
+    "assistencia": "86688ce1bedb21a7c6b250e039ed17b9e85f1a228654a880dba76e92c30be003",
+    "popsvs": "be79872fea1708f0266e6dfa701c0c610d2a2a7400ac899931dfe77272d9aef6",
+    "sigtap": "08f9ac1fb842a470d80977d72511acbe7c5548986678e923ff69fa22c74ce213",
+    "taxas": "bbfa2f03935ebb21d00515a628bed2b7cdb38660903e3630c4e9aff4af1c66c2"
+  }
+}

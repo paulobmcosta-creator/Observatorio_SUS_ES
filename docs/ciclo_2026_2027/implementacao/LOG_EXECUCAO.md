@@ -49,3 +49,5 @@
 - 2026-11-16T21:20:16.112213+00:00 — **CP-IMP-023**: V2 candidata em c97bee0 e CI R SQL Node em 564b7af; provas integradas e plano de 52 IDs consolidados. Próxima: Conferir CI por SHA publicado; resolver falhas reais; gerar ZIP novo com recibo final.
 
 - 2026-11-16T21:22:53.244170+00:00 — **CP-IMP-024**: A01–A10 implementados com limites; V2 e preparo local testados; quatro runs CI success no SHA 92ffe55; servidor QA encerrado. Próxima: Receber do Work lote oficial e documentos com origem/hash/inventário; validar custódia e preflight e executar perfil/segunda leitura independente antes de aceite nacional; ou conferir atos territoriais recebidos antes de promover mapa.
+
+- 2026-11-18T22:36:06.517231+00:00 — **CP-TCC-001**: Cadastro e barreira populacional integrados; POPSVS, pilotos CNES e SIH e domínios SIGTAP conferidos; investigação I50 executável. Próxima: Restaurar as edições federais do SIM por hash, primeiro 2022; executar a dupla leitura. Prosseguir por competência com cobertura e edição verificadas..

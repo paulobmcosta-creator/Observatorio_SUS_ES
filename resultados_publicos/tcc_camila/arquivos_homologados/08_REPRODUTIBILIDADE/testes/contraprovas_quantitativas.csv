@@ -1,0 +1,41 @@
+controle,casos,divergencias
+Unicidade T20,66,0
+Unicidade T21,12012,0
+Unicidade T22,5544,0
+Unicidade T23,66528,0
+Unicidade T24,1848,0
+Unicidade T25,4312,0
+Unicidade T26,103020,0
+Unicidade T27,510,0
+Unicidade T28,10806,0
+Unicidade T29,77,0
+Unicidade T30,33264,0
+Unicidade T31,77,0
+Unicidade T29_longa,3927,0
+Cobertura SIH,132,0
+Comparador PA e SR,66,0
+"Grades municipais de produção, oferta e mortalidade",33,0
+Validade municipal 320405,132,0
+T21 aprovadas_12_meses_por_100mil,12012,0
+T22 aprovadas_por_100mil,5544,0
+T23 media_anual_12_meses_por_100mil,66528,0
+T23 estoque_dezembro_por_100mil,66528,0
+T24 bruta_100mil,1848,0
+T25 bruta_100mil,4312,0
+T26 taxa_100mil,103020,0
+T27 taxa_100mil,510,0
+T30 taxa_100mil,33264,0
+T31 evasao_pct,77,0
+T31 atracao_pct,77,0
+Vigência e parcialidade PA,12012,0
+Vigência CNES,66528,0
+Quantidades PA por classe e código,924,0
+Média e dezembro municipal contra T15,61776,0
+G0 municipal e óbitos indeterminados,858,0
+G0 por município na matriz origem e destino,858,0
+Pares de origem e destino anuais contra T11,537,0
+I50 por conceito contra as contagens de B03,444,0
+Padrões diretos SIM estritos,616,0
+Taxas SIH por grupo diante das 27 UFs,396,0
+Padronização SIH em todos os grupos,3696,0
+Células comuns das matrizes longa e ampla,3927,0

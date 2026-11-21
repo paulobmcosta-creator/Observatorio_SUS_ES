@@ -1,0 +1,16 @@
+status,produto,justificativa
+Validado,ST/SR/HB,"Contagem de CNES, serviços classificados e habilitações por código vigente; domínios ausentes ficam vazios."
+Validado,LT 02 e 32; 03 e 33 contextuais,"Códigos e títulos no domínio LFCES001, manual SCNES 2009, e na conversão oficial. Estoques cadastrados e SUS."
+Provisório,LT UCO e UTI longitudinal,Conservar códigos e contagens. A Portaria SAES/MS 1.202/2023 confirma a nomenclatura UCO em parte do intervalo; a continuidade completa do significado requer revisão.
+Validado,EQ/PF/EP,"Equipamentos pela tabela aplicável até 202507, vínculos e horas pelos três CBO, equipes identificáveis ativas ao fim do mês."
+Validado,PA A específico e B contextual,Aplicar as duas homologações que constam do registro. Subtotais por modalidade clínica e tabela por instrumento/complexidade.
+Provisório,"Intervenções AC, fisioterapia vascular periférica e reabilitação pós-COVID",Preservar quantidades observadas e normas. Análise fora dos produtos específicos definitivos.
+Exploratório,Correspondências de serviço e habilitação,Verificação parcial das alternativas por CNES/mês da produção. Sem juízo individual sobre conformidade.
+Não utilizável,"Pacientes únicos, profissionais distintos, postos contratuais, demanda atendida",Essas contagens não são identificadas pelos indicadores implementados. A projeção exclui identificadores pessoais.
+Não utilizável,Equivalência entre códigos sucessores,Mudanças de atributos estão enumeradas. Nenhuma equivalência substantiva entre códigos diferentes foi presumida.
+Contextual,CNES/SR 122/003,Capacidade diagnóstica cadastrada para eletrocardiografia. O mesmo estabelecimento pode oferecer outros serviços.
+Contextual,CNES/SR 122/007,Cadastro de eletrocardiografia por telemedicina. A modalidade possui série própria.
+Contextual composto,CNES/SR 126/004,A classificação combina fisioterapia cardiovascular e pneumo-funcional. A parcela exclusivamente cardiovascular permanece indeterminada.
+Específico de urgência,CNES/SR 140/014,O título delimita pronto-socorro cardiovascular. A medida conta estabelecimentos com essa classificação de urgência.
+Provisório,CNES/SR 162/005,A classificação cadastral identifica UCO. A continuidade de seu significado assistencial carece de homologação para uso longitudinal definitivo.
+Não utilizável,Estabelecimentos em funcionamento efetivo,"Os campos ST validados, vínculo SUS e produção aprovada em PA não comprovam abertura e continuidade de funcionamento."

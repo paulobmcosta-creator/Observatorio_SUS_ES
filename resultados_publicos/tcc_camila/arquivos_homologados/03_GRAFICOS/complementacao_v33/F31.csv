@@ -1,0 +1,265 @@
+ano,painel,serie,valor
+2014,G0 · Circulatórias,Central,722.4575631647264
+2014,G1 · Isquêmicas,Central,222.77451878087803
+2014,G2 · Insuficiência cardíaca,Central,117.12264673032612
+2014,G3 · Cerebrovasculares,Central,72.64823963856998
+2014,G4 · Hipertensivas,Central,71.8432729943753
+2014,"G5 · Artérias, arteríolas e capilares",Central,41.25454051497741
+2014,G0 · Circulatórias,Metropolitana,505.7109374262505
+2014,G1 · Isquêmicas,Metropolitana,114.04343540003534
+2014,G2 · Insuficiência cardíaca,Metropolitana,60.28074374120906
+2014,G3 · Cerebrovasculares,Metropolitana,90.75825623676442
+2014,G4 · Hipertensivas,Metropolitana,19.01473124722702
+2014,"G5 · Artérias, arteríolas e capilares",Metropolitana,49.8518604093966
+2014,G0 · Circulatórias,Norte,689.3649916092196
+2014,G1 · Isquêmicas,Norte,99.31944165839003
+2014,G2 · Insuficiência cardíaca,Norte,137.2369624885636
+2014,G3 · Cerebrovasculares,Norte,100.54258749162145
+2014,G4 · Hipertensivas,Norte,162.18913748648424
+2014,"G5 · Artérias, arteríolas e capilares",Norte,56.99859582858345
+2014,G0 · Circulatórias,Sul,1017.432880621912
+2014,G1 · Isquêmicas,Sul,213.672959822552
+2014,G2 · Insuficiência cardíaca,Sul,185.79602218702863
+2014,G3 · Cerebrovasculares,Sul,166.6588812156153
+2014,G4 · Hipertensivas,Sul,118.74068571239135
+2014,"G5 · Artérias, arteríolas e capilares",Sul,45.50721711312461
+2015,G0 · Circulatórias,Central,691.8181347212204
+2015,G1 · Isquêmicas,Central,212.00878322101917
+2015,G2 · Insuficiência cardíaca,Central,94.846034598877
+2015,G3 · Cerebrovasculares,Central,81.2966010847517
+2015,G4 · Hipertensivas,Central,56.58881055899384
+2015,"G5 · Artérias, arteríolas e capilares",Central,66.55162931938007
+2015,G0 · Circulatórias,Metropolitana,520.01378178602
+2015,G1 · Isquêmicas,Metropolitana,104.42899716194664
+2015,G2 · Insuficiência cardíaca,Metropolitana,55.233704281233685
+2015,G3 · Cerebrovasculares,Metropolitana,102.43099338971552
+2015,G4 · Hipertensivas,Metropolitana,18.29283453687161
+2015,"G5 · Artérias, arteríolas e capilares",Metropolitana,56.876507382845936
+2015,G0 · Circulatórias,Norte,663.1911885454979
+2015,G1 · Isquêmicas,Norte,100.57185057063592
+2015,G2 · Insuficiência cardíaca,Norte,130.20896595618566
+2015,G3 · Cerebrovasculares,Norte,95.7133070648081
+2015,G4 · Hipertensivas,Norte,136.5250725137618
+2015,"G5 · Artérias, arteríolas e capilares",Norte,62.67521122517891
+2015,G0 · Circulatórias,Sul,951.7068623152514
+2015,G1 · Isquêmicas,Sul,190.19173301929
+2015,G2 · Insuficiência cardíaca,Sul,169.54148978037418
+2015,G3 · Cerebrovasculares,Sul,170.43932644293574
+2015,G4 · Hipertensivas,Sul,100.70734565065474
+2015,"G5 · Artérias, arteríolas e capilares",Sul,49.530655884645945
+2016,G0 · Circulatórias,Central,700.868136468841
+2016,G1 · Isquêmicas,Central,202.6178382690986
+2016,G2 · Insuficiência cardíaca,Central,93.60707148104557
+2016,G3 · Cerebrovasculares,Central,75.43861034970338
+2016,G4 · Hipertensivas,Central,50.16075138435775
+2016,"G5 · Artérias, arteríolas e capilares",Central,86.89264019337563
+2016,G0 · Circulatórias,Metropolitana,556.5832574628864
+2016,G1 · Isquêmicas,Metropolitana,118.39301564613965
+2016,G2 · Insuficiência cardíaca,Metropolitana,69.71008855990722
+2016,G3 · Cerebrovasculares,Metropolitana,104.03835635200258
+2016,G4 · Hipertensivas,Metropolitana,16.022784839021494
+2016,"G5 · Artérias, arteríolas e capilares",Metropolitana,54.25797824939882
+2016,G0 · Circulatórias,Norte,777.0675720381241
+2016,G1 · Isquêmicas,Norte,144.88519056024688
+2016,G2 · Insuficiência cardíaca,Norte,132.8114246802263
+2016,G3 · Cerebrovasculares,Norte,140.53863484343947
+2016,G4 · Hipertensivas,Norte,134.7432272210296
+2016,"G5 · Artérias, arteríolas e capilares",Norte,96.831602357765
+2016,G0 · Circulatórias,Sul,868.5680970773576
+2016,G1 · Isquêmicas,Sul,186.8016318371851
+2016,G2 · Insuficiência cardíaca,Sul,161.07178923540724
+2016,G3 · Cerebrovasculares,Sul,157.05614906056329
+2016,G4 · Hipertensivas,Sul,80.75898573852828
+2016,"G5 · Artérias, arteríolas e capilares",Sul,57.70623658664636
+2017,G0 · Circulatórias,Central,737.8649904902189
+2017,G1 · Isquêmicas,Central,195.09252204094983
+2017,G2 · Insuficiência cardíaca,Central,93.2369884452732
+2017,G3 · Cerebrovasculares,Central,78.35041045821279
+2017,G4 · Hipertensivas,Central,35.84531278463235
+2017,"G5 · Artérias, arteríolas e capilares",Central,117.91736773961024
+2017,G0 · Circulatórias,Metropolitana,550.1199124118035
+2017,G1 · Isquêmicas,Metropolitana,132.46845782211255
+2017,G2 · Insuficiência cardíaca,Metropolitana,64.30085850335408
+2017,G3 · Cerebrovasculares,Metropolitana,112.43960932883806
+2017,G4 · Hipertensivas,Metropolitana,16.553126412012094
+2017,"G5 · Artérias, arteríolas e capilares",Metropolitana,60.390671161933895
+2017,G0 · Circulatórias,Norte,801.1030480349555
+2017,G1 · Isquêmicas,Norte,153.49470695482356
+2017,G2 · Insuficiência cardíaca,Norte,105.9329667716388
+2017,G3 · Cerebrovasculares,Norte,119.86519369398584
+2017,G4 · Hipertensivas,Norte,141.72437731353037
+2017,"G5 · Artérias, arteríolas e capilares",Norte,128.99320443621323
+2017,G0 · Circulatórias,Sul,924.3494866450802
+2017,G1 · Isquêmicas,Sul,212.7083632254161
+2017,G2 · Insuficiência cardíaca,Sul,178.8347782611461
+2017,G3 · Cerebrovasculares,Sul,160.49274972154137
+2017,G4 · Hipertensivas,Sul,77.9536212933201
+2017,"G5 · Artérias, arteríolas e capilares",Sul,71.14932038346673
+2018,G0 · Circulatórias,Central,638.2027712458946
+2018,G1 · Isquêmicas,Central,170.0448918514488
+2018,G2 · Insuficiência cardíaca,Central,79.87251491536622
+2018,G3 · Cerebrovasculares,Central,70.1556639524263
+2018,G4 · Hipertensivas,Central,29.150552888819792
+2018,"G5 · Artérias, arteríolas e capilares",Central,100.86091299531648
+2018,G0 · Circulatórias,Metropolitana,556.3480987281259
+2018,G1 · Isquêmicas,Metropolitana,138.69983531545608
+2018,G2 · Insuficiência cardíaca,Metropolitana,60.91779367453034
+2018,G3 · Cerebrovasculares,Metropolitana,117.27535703161702
+2018,G4 · Hipertensivas,Metropolitana,10.540154978997128
+2018,"G5 · Artérias, arteríolas e capilares",Metropolitana,51.06597534722282
+2018,G0 · Circulatórias,Norte,738.673160426619
+2018,G1 · Isquêmicas,Norte,143.3852786334427
+2018,G2 · Insuficiência cardíaca,Norte,98.21891586390824
+2018,G3 · Cerebrovasculares,Norte,106.1051061887476
+2018,G4 · Hipertensivas,Norte,120.92158498087
+2018,"G5 · Artérias, arteríolas e capilares",Norte,108.25588536824924
+2018,G0 · Circulatórias,Sul,981.8259933024548
+2018,G1 · Isquêmicas,Sul,208.78331852183177
+2018,G2 · Insuficiência cardíaca,Sul,169.93991042474678
+2018,G3 · Cerebrovasculares,Sul,187.448870892751
+2018,G4 · Hipertensivas,Sul,62.67913579302349
+2018,"G5 · Artérias, arteríolas e capilares",Sul,73.12565842519408
+2019,G0 · Circulatórias,Central,734.4719898214905
+2019,G1 · Isquêmicas,Central,188.91930446851987
+2019,G2 · Insuficiência cardíaca,Central,89.25473262135174
+2019,G3 · Cerebrovasculares,Central,89.44750742182981
+2019,G4 · Hipertensivas,Central,25.44627366310676
+2019,"G5 · Artérias, arteríolas e capilares",Central,94.07410263330378
+2019,G0 · Circulatórias,Metropolitana,555.568337035702
+2019,G1 · Isquêmicas,Metropolitana,140.7667013470828
+2019,G2 · Insuficiência cardíaca,Metropolitana,61.223289901863794
+2019,G3 · Cerebrovasculares,Metropolitana,106.51233455439072
+2019,G4 · Hipertensivas,Metropolitana,10.8216531907261
+2019,"G5 · Artérias, arteríolas e capilares",Metropolitana,40.55989699831199
+2019,G0 · Circulatórias,Norte,783.0533374855287
+2019,G1 · Isquêmicas,Norte,140.73089732587522
+2019,G2 · Insuficiência cardíaca,Norte,102.93324078058104
+2019,G3 · Cerebrovasculares,Norte,103.40868300127656
+2019,G4 · Hipertensivas,Norte,106.974499656493
+2019,"G5 · Artérias, arteríolas e capilares",Norte,104.12184633231983
+2019,G0 · Circulatórias,Sul,894.1243258586431
+2019,G1 · Isquêmicas,Sul,206.4489320547448
+2019,G2 · Insuficiência cardíaca,Sul,147.045483143174
+2019,G3 · Cerebrovasculares,Sul,169.87045366092042
+2019,G4 · Hipertensivas,Sul,59.988704565871984
+2019,"G5 · Artérias, arteríolas e capilares",Sul,62.914982837377934
+2020,G0 · Circulatórias,Central,621.3711104521584
+2020,G1 · Isquêmicas,Central,178.87376486230545
+2020,G2 · Insuficiência cardíaca,Central,71.74081478434711
+2020,G3 · Cerebrovasculares,Central,75.18437389399577
+2020,G4 · Hipertensivas,Central,23.148369570416
+2020,"G5 · Artérias, arteríolas e capilares",Central,96.80227274901236
+2020,G0 · Circulatórias,Metropolitana,496.09586233593103
+2020,G1 · Isquêmicas,Metropolitana,141.28938489094293
+2020,G2 · Insuficiência cardíaca,Metropolitana,60.618929400476254
+2020,G3 · Cerebrovasculares,Metropolitana,117.86075967000676
+2020,G4 · Hipertensivas,Metropolitana,8.61160278391167
+2020,"G5 · Artérias, arteríolas e capilares",Metropolitana,41.91824296286415
+2020,G0 · Circulatórias,Norte,850.5444809218804
+2020,G1 · Isquêmicas,Norte,138.6037446663576
+2020,G2 · Insuficiência cardíaca,Norte,120.15478206571616
+2020,G3 · Cerebrovasculares,Norte,127.72358723521008
+2020,G4 · Hipertensivas,Norte,197.9715602145756
+2020,"G5 · Artérias, arteríolas e capilares",Norte,125.35833561974324
+2020,G0 · Circulatórias,Sul,753.3471990359019
+2020,G1 · Isquêmicas,Sul,178.4396572677774
+2020,G2 · Insuficiência cardíaca,Sul,114.6904159274132
+2020,G3 · Cerebrovasculares,Sul,143.94520476168992
+2020,G4 · Hipertensivas,Sul,35.3677297847226
+2020,"G5 · Artérias, arteríolas e capilares",Sul,71.31764442186861
+2021,G0 · Circulatórias,Central,865.6576831396344
+2021,G1 · Isquêmicas,Central,256.42780293266725
+2021,G2 · Insuficiência cardíaca,Central,102.0768941251611
+2021,G3 · Cerebrovasculares,Central,133.44130293456814
+2021,G4 · Hipertensivas,Central,16.347510046115186
+2021,"G5 · Artérias, arteríolas e capilares",Central,117.28388021457056
+2021,G0 · Circulatórias,Metropolitana,606.192859213143
+2021,G1 · Isquêmicas,Metropolitana,159.2863569120143
+2021,G2 · Insuficiência cardíaca,Metropolitana,79.66412065386568
+2021,G3 · Cerebrovasculares,Metropolitana,127.5379849584758
+2021,G4 · Hipertensivas,Metropolitana,10.219792554964892
+2021,"G5 · Artérias, arteríolas e capilares",Metropolitana,70.57520678326165
+2021,G0 · Circulatórias,Norte,987.189397081558
+2021,G1 · Isquêmicas,Norte,193.0074280758644
+2021,G2 · Insuficiência cardíaca,Norte,107.69767354172166
+2021,G3 · Cerebrovasculares,Norte,216.80932091550093
+2021,G4 · Hipertensivas,Norte,152.23784925153652
+2021,"G5 · Artérias, arteríolas e capilares",Norte,163.78530221334037
+2021,G0 · Circulatórias,Sul,840.623717566672
+2021,G1 · Isquêmicas,Sul,226.505821431627
+2021,G2 · Insuficiência cardíaca,Sul,104.84232323627803
+2021,G3 · Cerebrovasculares,Sul,181.9877118416721
+2021,G4 · Hipertensivas,Sul,28.56699540462901
+2021,"G5 · Artérias, arteríolas e capilares",Sul,81.78571273203433
+2022,G0 · Circulatórias,Central,818.0032553769488
+2022,G1 · Isquêmicas,Central,217.78131504373584
+2022,G2 · Insuficiência cardíaca,Central,121.55675831000188
+2022,G3 · Cerebrovasculares,Central,119.47724922538286
+2022,G4 · Hipertensivas,Central,16.825118957371956
+2022,"G5 · Artérias, arteríolas e capilares",Central,111.15921288690684
+2022,G0 · Circulatórias,Metropolitana,660.1375082023385
+2022,G1 · Isquêmicas,Metropolitana,171.24070921431368
+2022,G2 · Insuficiência cardíaca,Metropolitana,93.72913029846116
+2022,G3 · Cerebrovasculares,Metropolitana,121.67321883464834
+2022,G4 · Hipertensivas,Metropolitana,10.8532843868227
+2022,"G5 · Artérias, arteríolas e capilares",Metropolitana,67.57313076086929
+2022,G0 · Circulatórias,Norte,724.4639953378638
+2022,G1 · Isquêmicas,Norte,156.5011420353608
+2022,G2 · Insuficiência cardíaca,Norte,84.59521191100583
+2022,G3 · Cerebrovasculares,Norte,129.2426848640367
+2022,G4 · Hipertensivas,Norte,72.14091682410776
+2022,"G5 · Artérias, arteríolas e capilares",Norte,140.287059752418
+2022,G0 · Circulatórias,Sul,963.8742365352582
+2022,G1 · Isquêmicas,Sul,253.909864889876
+2022,G2 · Insuficiência cardíaca,Sul,119.43596150286878
+2022,G3 · Cerebrovasculares,Sul,203.87978900610773
+2022,G4 · Hipertensivas,Sul,28.919119007958543
+2022,"G5 · Artérias, arteríolas e capilares",Sul,88.34790856931335
+2023,G0 · Circulatórias,Central,836.168173360648
+2023,G1 · Isquêmicas,Central,207.11560508955588
+2023,G2 · Insuficiência cardíaca,Central,117.08985659781608
+2023,G3 · Cerebrovasculares,Central,98.67122747006972
+2023,G4 · Hipertensivas,Central,12.404382881951625
+2023,"G5 · Artérias, arteríolas e capilares",Central,116.71396620745392
+2023,G0 · Circulatórias,Metropolitana,657.7261361746486
+2023,G1 · Isquêmicas,Metropolitana,157.35410699171385
+2023,G2 · Insuficiência cardíaca,Metropolitana,93.84296860717474
+2023,G3 · Cerebrovasculares,Metropolitana,125.28902932778476
+2023,G4 · Hipertensivas,Metropolitana,8.955111780016235
+2023,"G5 · Artérias, arteríolas e capilares",Metropolitana,59.59069774351817
+2023,G0 · Circulatórias,Norte,955.1536841809404
+2023,G1 · Isquêmicas,Norte,183.86357088818983
+2023,G2 · Insuficiência cardíaca,Norte,122.49764022232269
+2023,G3 · Cerebrovasculares,Norte,205.88035517289032
+2023,G4 · Hipertensivas,Norte,63.239699541160846
+2023,"G5 · Artérias, arteríolas e capilares",Norte,184.0977919976016
+2023,G0 · Circulatórias,Sul,849.6023659155961
+2023,G1 · Isquêmicas,Sul,212.5807446523332
+2023,G2 · Insuficiência cardíaca,Sul,119.47758462154864
+2023,G3 · Cerebrovasculares,Sul,156.66119961836353
+2023,G4 · Hipertensivas,Sul,25.221444280785292
+2023,"G5 · Artérias, arteríolas e capilares",Sul,59.37848596390595
+2024,G0 · Circulatórias,Central,937.7036811546024
+2024,G1 · Isquêmicas,Central,225.04141322272375
+2024,G2 · Insuficiência cardíaca,Central,129.04864442896442
+2024,G3 · Cerebrovasculares,Central,124.56649180046205
+2024,G4 · Hipertensivas,Central,15.687534199758336
+2024,"G5 · Artérias, arteríolas e capilares",Central,125.87378631710855
+2024,G0 · Circulatórias,Metropolitana,692.5550941707011
+2024,G1 · Isquêmicas,Metropolitana,155.7532243129022
+2024,G2 · Insuficiência cardíaca,Metropolitana,81.95167022090911
+2024,G3 · Cerebrovasculares,Metropolitana,139.24821526791152
+2024,G4 · Hipertensivas,Metropolitana,8.928267920119033
+2024,"G5 · Artérias, arteríolas e capilares",Metropolitana,45.4194913917982
+2024,G0 · Circulatórias,Norte,981.8771661629304
+2024,G1 · Isquêmicas,Norte,212.8528584598509
+2024,G2 · Insuficiência cardíaca,Norte,110.39408119683054
+2024,G3 · Cerebrovasculares,Norte,178.77772980290106
+2024,G4 · Hipertensivas,Norte,43.64417163595626
+2024,"G5 · Artérias, arteríolas e capilares",Norte,193.24798991749617
+2024,G0 · Circulatórias,Sul,831.7014201951405
+2024,G1 · Isquêmicas,Sul,216.3600967087997
+2024,G2 · Insuficiência cardíaca,Sul,119.01958870046114
+2024,G3 · Cerebrovasculares,Sul,125.7673820284728
+2024,G4 · Hipertensivas,Sul,17.515548638668587
+2024,"G5 · Artérias, arteríolas e capilares",Sul,74.94357696217216

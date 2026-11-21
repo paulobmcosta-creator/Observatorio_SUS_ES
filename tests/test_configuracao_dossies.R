@@ -4,12 +4,22 @@ tcc <- ler("config/estudos/tcc_cardiovascular.csv")
 valor <- function(d,k) {stopifnot(sum(d$chave==k)==1L);d$valor[d$chave==k]}
 stopifnot(valor(comum,"periodo_empirico")=="definido_por_estudo",valor(comum,"filtro_cid")=="definido_por_estudo",
   valor(tcc,"ano_inicio")=="2014",valor(tcc,"ano_fim")=="2024",valor(tcc,"cid_iam")=="",
-  valor(comum,"territorio_tabela_central")==valor(tcc,"territorio_tabela_central"))
-regioes <- strsplit(valor(tcc,"regioes_principais"),";",fixed=TRUE)[[1]]
-stopifnot(setequal(regioes,c("Norte","Central","Metropolitana","Sul")),!valor(tcc,"recorte_focal") %in% regioes,
-  valor(tcc,"recorte_focal_nivel")=="subregional",valor(tcc,"territorio_modo")=="retrospectivo_congelado",
-  valor(tcc,"territorio_sha256")=="",valor(tcc,"territorio_versao")=="")
-message("OK: escolhas TCC isoladas; tabela central compartilhada; Noroeste 1 não é quinta região; referências pendentes explícitas")
+  valor(comum,"territorio_tabela_central")!=valor(tcc,"territorio_tabela_central"))
+source("src/extract/preparar_cache_cnes.R")
+source("src/validation/validar_correspondencia_territorial.R")
+source("src/transform/territorializar_municipios.R")
+cad <- ler_territorio_congelado(valor(tcc,"territorio_tabela_central"), valor(tcc,"territorio_versao"),
+                                valor(tcc,"territorio_sha256"))
+stopifnot(setequal(strsplit(valor(tcc,"regioes_principais"),";",fixed=TRUE)[[1]],unique(cad$regiao_nome)),
+          nrow(cad)==78, identical(as.integer(table(cad$regiao_nome)), c(15L,23L,14L,26L)),
+          valor(tcc,"recorte_focal")=="Norte", valor(tcc,"recorte_focal_nivel")=="regiao",
+          valor(tcc,"comparacoes_focais")=="Norte:ES", cad$regiao_nome[cad$cod_municipio_cnes=="320330"]=="Central")
+for (ano in 2014:2024) {
+  reg <- territorializar_municipios(c(cad$cod_municipio_ibge,"329999"), paste0(ano,"-01-01"), cad,
+    valor(tcc,"territorio_versao"),"residencia",valor(tcc,"territorio_modo"),valor(tcc,"territorio_data_classificacao"))
+  stopifnot(identical(reg$regiao_id[1:78],cad$regiao_id),is.na(reg$regiao_id[79]))
+}
+message("OK: 78 municípios nas quatro regiões, classificação fixa nos 11 anos")
 candidatos <- ler("metadata/estudos/tcc_cardiovascular/candidatos_codigos.csv")
 sigtap <- candidatos[candidatos$dominio=="SIGTAP",]
 stopifnot(all(grepl("^[0-9]{10}$",sigtap$codigo_normalizado)),all(candidatos$habilitado_selecao_final=="nao"),

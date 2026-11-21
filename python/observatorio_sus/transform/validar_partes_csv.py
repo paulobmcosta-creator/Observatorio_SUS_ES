@@ -6,6 +6,7 @@ Referências CP09 M04/M12; E052/E056/E057. Não implementa leitor DBC.
 """
 import csv
 import hashlib
+from contextlib import closing
 from pathlib import Path
 import sqlite3
 import tempfile
@@ -55,7 +56,7 @@ def validar_partes_csv(partes, campos_obrigatorios, campos_aprovados, *, encodin
     resumo, total, sobrepostas, potenciais = [], 0, 0, 0
     dominios = set()
     with tempfile.TemporaryDirectory(prefix="observatorio_sobreposicao_", dir=dir_temporario) as temporario:
-        with sqlite3.connect(Path(temporario) / "linhas.sqlite") as banco:
+        with closing(sqlite3.connect(Path(temporario) / "linhas.sqlite")) as banco, banco:
             banco.execute("CREATE TABLE linhas (hash TEXT PRIMARY KEY, parte TEXT NOT NULL)")
             banco.execute("CREATE TABLE projecoes (hash TEXT, parte TEXT, schema TEXT, UNIQUE(hash, parte, schema))")
             for parte, arquivo in sorted(partes.items()):

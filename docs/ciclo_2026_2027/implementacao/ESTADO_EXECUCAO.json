@@ -1,9 +1,9 @@
 {
   "run_id": "SUSES-IMP-20261116",
-  "mandato_versao": "1.0 + continuidade cloud v1.1",
+  "mandato_versao": "TCC Camila pós-auditoria v1.0 (18/11/2026), sobre a implementação da PR 82",
   "zip_sha256": "7de4bc9ec44b5891758565a858466f91bd681e51f8584c39ee29d0056da11372",
   "base": "68aa9d084cb7cf3d90c141776ed9f44f378e1372",
-  "checkpoint": "CP-IMP-024",
+  "checkpoint": "CP-TCC-001",
   "tentativas": [
     {
       "problema": "refs_git",
@@ -50,13 +50,13 @@
     "integridade ZIP e 68 hashes verificados"
   ],
   "instrucao_retomada": "Usar RETOMADA.md e a mesma fila; avançar automaticamente; não reabrir investigação encerrada.",
-  "timestamp": "2026-11-16T21:22:53.244170+00:00",
-  "ultima_unidade_confirmada": "A01–A10 implementados com limites; V2 e preparo local testados; quatro runs CI success no SHA 92ffe55; servidor QA encerrado",
+  "timestamp": "2026-11-18T22:36:06.517231+00:00",
+  "ultima_unidade_confirmada": "Cadastro e barreira populacional integrados; POPSVS, pilotos CNES e SIH e domínios SIGTAP conferidos; investigação I50 executável",
   "proximas": [
-    "Receber do Work lote oficial e documentos com origem/hash/inventário; validar custódia e preflight e executar perfil/segunda leitura independente antes de aceite nacional; ou conferir atos territoriais recebidos antes de promover mapa"
+    "Restaurar as edições federais do SIM por hash, primeiro 2022; executar a dupla leitura. Prosseguir por competência com cobertura e edição verificadas."
   ],
-  "head_observado": "92ffe551f20e0ef85b62bef48fe2dc7c67e9300c",
-  "branch": "feat/implementacao-2026-2027-autonomia",
+  "head_observado": "d3c5c2c86e93c9c66fbc3f8062590d8359aa370e",
+  "branch": "feat/tcc-camila-cardiovascular-2014-2024",
   "tarefas": {
     "R01": {
       "estado": "PARCIAL",
@@ -186,9 +186,9 @@
     },
     "T01": {
       "estado": "PARCIAL",
-      "bloqueio": "Território retrospectivo, Noroeste 1 e denominadores oficiais",
-      "evidencia": "FRENTES_TEMATICAS.md",
-      "parte_restante": "Território retrospectivo, Noroeste 1 e denominadores oficiais"
+      "bloqueio": "Completar estratos terminais para padronização geral",
+      "evidencia": "docs/estudos/tcc_camila/README.md",
+      "parte_restante": "Completar estratos terminais para padronização geral"
     },
     "T02": {
       "estado": "BLOQUEADA",
@@ -197,34 +197,34 @@
       "parte_restante": "Definição CID IAM documentada; não bloqueia G0–G5 por si só"
     },
     "T03": {
-      "estado": "BLOQUEADA",
-      "bloqueio": "SIGTAP por competência e relações CBO aprovadas",
-      "evidencia": "FRENTES_TEMATICAS.md",
-      "parte_restante": "SIGTAP por competência e relações CBO aprovadas"
+      "estado": "PARCIAL",
+      "bloqueio": "Conferir origem primária e vigência das demais competências e seleção semântica",
+      "evidencia": "docs/estudos/tcc_camila/README.md",
+      "parte_restante": "Conferir origem primária e vigência das demais competências e seleção semântica"
     },
     "T04": {
-      "estado": "BLOQUEADA",
-      "bloqueio": "Normas, CNES histórico, localização e atributos elegíveis",
-      "evidencia": "FRENTES_TEMATICAS.md",
-      "parte_restante": "Normas, CNES histórico, localização e atributos elegíveis"
+      "estado": "PARCIAL",
+      "bloqueio": "Identificar LT por hash; classificar códigos por vigência; obter EQ",
+      "evidencia": "docs/estudos/tcc_camila/README.md",
+      "parte_restante": "Identificar LT por hash; classificar códigos por vigência; obter EQ"
     },
     "T05": {
       "estado": "PARCIAL",
-      "bloqueio": "Geografia D2 e coorte/cobertura reais",
-      "evidencia": "evidencias/integracao_v1/execucao.json",
-      "parte_restante": "Geografia D2 e coorte/cobertura reais"
+      "bloqueio": "Cobrir atendimento de residentes do ES nas demais UFs antes de medir evasão",
+      "evidencia": "docs/estudos/tcc_camila/README.md",
+      "parte_restante": "Cobrir atendimento de residentes do ES nas demais UFs antes de medir evasão"
     },
     "T06": {
-      "estado": "BLOQUEADA",
-      "bloqueio": "RAW SIM/SIH, layout, coorte, temporalidade e fontes válidas",
-      "evidencia": "FRENTES_TEMATICAS.md",
-      "parte_restante": "RAW SIM/SIH, layout, coorte, temporalidade e fontes válidas"
+      "estado": "PARCIAL",
+      "bloqueio": "Restaurar SIM 2022–24 por hash; estender competências SIH",
+      "evidencia": "docs/estudos/tcc_camila/README.md",
+      "parte_restante": "Restaurar SIM 2022–24 por hash; estender competências SIH"
     },
     "T07": {
-      "estado": "BLOQUEADA",
-      "bloqueio": "SIA/CNES temáticos por competência com paridade real",
-      "evidencia": "FRENTES_TEMATICAS.md",
-      "parte_restante": "SIA/CNES temáticos por competência com paridade real"
+      "estado": "PARCIAL",
+      "bloqueio": "Obter PA e edições oficiais SIGTAP; ampliar CNES por competência",
+      "evidencia": "docs/estudos/tcc_camila/README.md",
+      "parte_restante": "Obter PA e edições oficiais SIGTAP; ampliar CNES por competência"
     },
     "T08": {
       "estado": "BLOQUEADA",
@@ -372,6 +372,10 @@
     }
   },
   "commits_confirmados": [
+    "d3c5c2c86e93c9c66fbc3f8062590d8359aa370e Documenta a migração do Work e vincula as provas aos pilotos e à fila do TCC",
+    "7b5c1e7a8d3895aefe0bcd6379b686b0e3a9b626 Reproduz POPSVS, CNES e SIH e vincula domínios mensais à custódia",
+    "c1e16b380bdb6a5b3230b39cd9ce89ce0d045acc Integra cadastro PDR, barreira de denominadores e diagnóstico de dupla leitura do SIM",
+    "cf2bf830cf964bab52bcc8c0ecb4ce40b33070a2 docs(ciclo): selar CP-IMP-024 com CI comprovado e retomada condicionada",
     "92ffe551f20e0ef85b62bef48fe2dc7c67e9300c docs(ciclo): consolidar CP-IMP-023 evidências cloud e operação local",
     "564b7af05fec57f3a71f31d7c1015f893aec3c37 test(ci): explicitar contraprova R SQL e contrato sintético do MVP",
     "c97bee0194a616bbdaf611810e5d09460d766c84 feat(painel): integrar V2 candidata com contrato filtros e exportação testados",
@@ -756,6 +760,41 @@
       "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/integracao_v1/execucao.json"
     },
     {
+      "comando": "python -m observatorio_sus.estudos.camila.pacotes PACOTES ACERVO (execução e reuso)",
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/tcc_camila/execucao.json"
+    },
+    {
+      "comando": "python -m unittest discover -s tests/python -p 'test_camila*.py' -v",
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/tcc_camila/execucao.json"
+    },
+    {
+      "comando": "python -m pytest tests/python -q",
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/tcc_camila/execucao.json"
+    },
+    {
+      "comando": "Rscript tests/test_configuracao_dossies.R",
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/tcc_camila/execucao.json"
+    },
+    {
+      "comando": "python scripts/verificar_pilotos_camila.py ACERVO SAIDA",
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/tcc_camila/execucao.json"
+    },
+    {
+      "comando": "python scripts/diagnosticar_ruptura_i50.py ACERVO SAIDA --custodia /workspace",
+      "exit_code": 0,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/tcc_camila/execucao.json"
+    },
+    {
+      "comando": "python -m observatorio_sus.estudos.camila.populacao ACERVO SAIDA --dem COPIA_ADULTERADA",
+      "exit_code": 1,
+      "evidencia": "docs/ciclo_2026_2027/implementacao/evidencias/tcc_camila/execucao.json"
+    },
+    {
       "comando": [
         "/workspace/Observatorio_SUS_ES/.venv/bin/python",
         "-m",
@@ -802,8 +841,19 @@
     }
   ],
   "arquivos_implementacao": [
+    ".gitattributes",
+    ".github/workflows/testar_tcc_camila.yml",
     ".github/workflows/validar_pipeline_cnes_r.yml",
     ".github/workflows/validar_serializacao_python.yml",
+    "README.md",
+    "config/estudos/edicoes_sim_camila.csv",
+    "config/estudos/fontes_taxas_camila.csv",
+    "config/estudos/insumos_camila.csv",
+    "config/estudos/pilotos_assistenciais_camila.csv",
+    "config/estudos/popsvs_camila.csv",
+    "config/estudos/requirements-camila.txt",
+    "config/estudos/sigtap_camila.csv",
+    "config/estudos/tcc_cardiovascular.csv",
     "config/operacao_local_linux.exemplo.json",
     "config/operacao_local_windows.exemplo.json",
     "dashboards/cnes_habilitacoes_mvp/.gitignore",
@@ -930,6 +980,7 @@
     "docs/ciclo_2026_2027/implementacao/evidencias/restauracao_operacional_rue.json",
     "docs/ciclo_2026_2027/implementacao/evidencias/rue_insumos.csv",
     "docs/ciclo_2026_2027/implementacao/evidencias/rue_resultado_real.csv",
+    "docs/ciclo_2026_2027/implementacao/evidencias/tcc_camila/execucao.json",
     "docs/ciclo_2026_2027/implementacao/evidencias/verificacao_custodia/execucao.json",
     "docs/ciclo_2026_2027/implementacao/evidencias/verificacao_custodia/python_direcionado.txt",
     "docs/ciclo_2026_2027/implementacao/evidencias/verificacao_custodia/test_cache_cnes.txt",
@@ -939,7 +990,24 @@
     "docs/ciclo_2026_2027/inventario_transicao.csv",
     "docs/ciclo_2026_2027/plano_operacional.md",
     "docs/ciclo_2026_2027/tarefas_operacionais.csv",
+    "docs/estudos/tcc_camila/README.md",
+    "docs/estudos/tcc_camila/inspecao_consolidado.csv",
+    "docs/estudos/tcc_camila/migracao_scripts.csv",
+    "metadata/territorio/pdr_es_2024_tcc_v1.csv",
+    "python/observatorio_sus/estudos/__init__.py",
+    "python/observatorio_sus/estudos/camila/__init__.py",
+    "python/observatorio_sus/estudos/camila/assistencia.py",
+    "python/observatorio_sus/estudos/camila/inspecao.py",
+    "python/observatorio_sus/estudos/camila/lote.py",
+    "python/observatorio_sus/estudos/camila/pacotes.py",
+    "python/observatorio_sus/estudos/camila/popsvs.py",
+    "python/observatorio_sus/estudos/camila/populacao.py",
+    "python/observatorio_sus/estudos/camila/proveniencia.py",
+    "python/observatorio_sus/estudos/camila/sigtap.py",
+    "python/observatorio_sus/estudos/camila/sim.py",
+    "python/observatorio_sus/estudos/camila/territorio.py",
     "python/observatorio_sus/extract/adquirir_objetos.py",
+    "python/observatorio_sus/extract/envelope_datasus.py",
     "python/observatorio_sus/extract/inventariar_sih_rd.py",
     "python/observatorio_sus/io/aceite_sih.py",
     "python/observatorio_sus/io/checkpoints.py",
@@ -953,6 +1021,7 @@
     "scripts/conferir_celula_oncologia.py",
     "scripts/conferir_paridade_parquet_r.R",
     "scripts/diagnosticar_ambiente_local.py",
+    "scripts/diagnosticar_ruptura_i50.py",
     "scripts/ensaiar_restauracao_operacional.py",
     "scripts/executar_percurso_sih_validado.R",
     "scripts/executar_sentinela_rue_sem_dependencias.py",
@@ -964,11 +1033,14 @@
     "scripts/reproduzir_ponte_rue.R",
     "scripts/restaurar_snapshot.py",
     "scripts/verificar_ambiente_e_testes.py",
+    "scripts/verificar_pilotos_camila.py",
     "src/indicators/calcular_percurso_sih.R",
     "src/indicators/reproduzir_dimensao_rue.R",
     "src/transform/preparar_estabelecimentos_cnes.R",
     "src/validation/validar_vinculos_sih.R",
     "tests/fixtures/sih/rd_sintetico.csv",
+    "tests/python/test_camila_p0.py",
+    "tests/python/test_camila_p1.py",
     "tests/python/test_contraprova_sih_sql.py",
     "tests/python/test_custodia.py",
     "tests/python/test_inventario_sih_rd.py",
@@ -981,6 +1053,7 @@
     "tests/python/test_revisao_a06_esquemas.py",
     "tests/python/test_revisao_a07_checkpoint.py",
     "tests/test_cache_cnes.R",
+    "tests/test_configuracao_dossies.R",
     "tests/test_dimensao_rue.R",
     "tests/test_percurso_sih.R",
     "tests/test_preparadores_sem_descarte.R",
@@ -989,20 +1062,21 @@
     "tests/test_revisao_a08_cnes.R"
   ],
   "publicacao_git": {
-    "branch": "feat/implementacao-2026-2027-autonomia",
-    "pr": 82,
+    "branch": "feat/tcc-camila-cardiovascular-2014-2024",
+    "base": "feat/implementacao-2026-2027-autonomia",
+    "pr": 83,
     "draft": true,
-    "sha_ci_comprovado": "92ffe551f20e0ef85b62bef48fe2dc7c67e9300c",
-    "resultado_ci": "SUCESSO_4_RUNS",
-    "nota": "HEAD do commit final e CI final no recibo externo do ZIP; não autorreferente"
+    "ci_intermediario_confirmado": "7b5c1e7a8d3895aefe0bcd6379b686b0e3a9b626",
+    "nota": "CI e HEAD finais no recibo externo da entrega."
   },
-  "status_global": "INTERROMPIDA_SEGURA_POR_INSUMOS_E_ACEITES",
-  "motivo_interrupcao": "Unidades cloud independentes implementadas/testadas; restante depende de insumos oficiais/revisão documental e participação humana já especificados na fila. Sem novas tentativas aos hosts negados.",
-  "pacote_previsto": "Observatorio_SUS_ES_Cloud_v11_CPIMP024.zip",
+  "status_global": "TCC_P0_IMPLEMENTADO_P1_PILOTOS_VERIFICADOS",
+  "motivo_interrupcao": "Diagnóstico empírico I50, expansão assistencial e padronização geral dependem das edições e estratos discriminados no guia.",
+  "pacote_previsto": "Implementacao_TCC_Camila_Provas.zip",
   "continuidade_cloud": {
     "ponte_sha256": "850ad09dcbecc2ed688641d7f817afd65b092d96079395040caaed27c9bcb5ec",
     "head_retomada": "cd8f43436496bc28f890d77b5a1a868b95a73a56",
     "protocolo": "Work cuida de aquisição; Codex implementa sem repetir acessos negados",
     "mvp_v2_sha256": "8fa73c6a9b00efeda20cfaaffe56e96dc038326af16f3b9a8fa7eb97efc749b1"
-  }
+  },
+  "guia_insumos": "Para o TCC, usar os quatro checkpoints e os dois volumes externos. Os comandos, hashes e condições de retomada estão em `docs/estudos/tcc_camila/README.md` e `config/estudos/`."
 }

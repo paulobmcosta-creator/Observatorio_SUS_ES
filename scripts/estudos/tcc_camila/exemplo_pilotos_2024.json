@@ -1,0 +1,47 @@
+{
+  "originais": {
+    "ST": {
+      "path": "originais/STES2412.dbc",
+      "bytes": 445505,
+      "sha256": "78b7a20f925ab87663a6d4e64cb40e9b6c7fd941d745f17a259670389dc4f839",
+      "url": "acervo Work com origem descrita no manifesto"
+    },
+    "EQ": {
+      "path": "originais/EQES2412.dbc",
+      "bytes": 245100,
+      "sha256": "5ebfa75646756896c9dfd1827d3fda7a7e92c8f01e84ee4797f0c0a70cc49fcd",
+      "url": "ftp://ftp.datasus.gov.br/dissemin/publicos/CNES/200508_/Dados/EQ/EQES2412.dbc"
+    },
+    "PA": {
+      "path": "originais/PAES2412.dbc",
+      "bytes": 26771043,
+      "sha256": "feecee7c8ad0a267a6affc80a992d2a0f470b472af79c90101dc967c5bac6c35",
+      "url": "ftp://ftp.datasus.gov.br/dissemin/publicos/SIASUS/200801_/Dados/PAES2412.dbc"
+    },
+    "SIGTAP": {
+      "path": "originais/TabelaUnificada_202412_v2501172121.zip",
+      "bytes": 2057719,
+      "sha256": "9e5eb87364c0b8b9149b53b254cdd145c20dbd6c92d7c8b90704bf39978b5df9",
+      "url": "ftp://ftp2.datasus.gov.br/pub/sistemas/tup/downloads/TabelaUnificada_202412_v2501172121.zip"
+    },
+    "SR": {
+      "path": "originais/SRES2412.dbc",
+      "bytes": 242345,
+      "sha256": "51491dead458db778daf3bc6455f887bff7786ac2d42f6acc41f84aee8c3bc75",
+      "url": "ftp://ftp.datasus.gov.br/dissemin/publicos/CNES/200508_/Dados/SR/SRES2412.dbc"
+    },
+    "RD": {
+      "path": "originais/RDES2412.dbc",
+      "bytes": 1977091,
+      "sha256": "71acefac537a0b722a1499a6fb3da085cc5422dd2e565a52f55782c5540389f9",
+      "url": "ftp://ftp.datasus.gov.br/dissemin/publicos/SIHSUS/200801_/Dados/RDES2412.dbc"
+    },
+    "SIM": {
+      "path": "originais/Mortalidade_Geral_2024_csv.zip",
+      "bytes": 95388395,
+      "sha256": "a68437fc88d7e3be42466aa14d8d766b9855c360f121afc1392ac9f1ff7a795d",
+      "url": "https://s3.sa-east-1.amazonaws.com/ckan.saude.gov.br/SIM/csv/Mortalidade_Geral_2024_csv.zip",
+      "membro": "Mortalidade_Geral_2024.csv"
+    }
+  }
+}

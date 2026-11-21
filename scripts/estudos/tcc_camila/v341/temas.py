@@ -1,0 +1,22 @@
+# A ordem das colunas define os bits dos padrões impressos.
+TEMAS={
+"V01":("Cadastro composto e produção",["COMP","PA","SIH"]),
+"V02":("Serviço cardiovascular especializado e produção",["SR_CARD","PA","SIH"]),
+"V02S":("SR116 ambulatorial SUS e produção",["SR_CARD_SUS","PA","SIH"]),
+"V03":("Estrutura convencional e produção de ECG",["EQ_441_QT_USO","SR122_003","ECG"]),
+"V03T":("ECG por telemedicina",["EQ_441_QT_USO","SR122_007","ECG"]),
+"V03U":("ECG convencional ou por telemedicina",["EQ_441_QT_USO","ECG_SERV","ECG"]),
+"H01":("Habilitações, leitos e produção hospitalar",["HAB","LEITOS","SIH"]),
+"F01":("Fisioterapia cardiovascular",["SR126_004","FISIO"]),
+"F02":("Modalidades de fisioterapia aprovada",["P0302040030","P0302040048","P0302040064"]),
+"D01":("Ecocardiografia e ultrassom compartilhável",["EQ_113_QT_USO","ECO"]),
+"D02":("Hemodinâmica e cateterismo",["EQ_110_QT_USO","SR116_005","CAT"]),
+"P01":("ECG e demais procedimentos específicos",["ECG","OUTRO_PA"]),
+"P02":("Específicos e contextuais",["PA","DOP","CONS"]),
+"P03":("Produção ambulatorial e hospitalar",["PA","SIH"]),
+"E01":("Cadastro, vínculo SUS e produção",["ST","SUS","PA","SIH"]),
+"U01":("Perfil dos serviços especializados",["SR_CARD","PROF","SUS","PA","SIH"]),
+"U02":("Equipamento, serviços e produção de ECG",["EQ_441_QT_USO","SR122_003","SR122_007","ECG"]),
+"U03":("Habilitações e leitos por tipo",["HAB","LT_32_QT_EXIST","LT_02_QT_EXIST","SIH"]),
+"U04":("Instrumentos do PA específico",["INSTR_C","INSTR_I","INSTR_P","INSTR_S"]),
+}

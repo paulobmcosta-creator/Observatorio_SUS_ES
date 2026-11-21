@@ -1,15 +1,14 @@
-# Retomada — CP-IMP-024
+# Retomada — CP-TCC-001
 
 Leia `ESTADO_EXECUCAO.json`, `LOG_EXECUCAO.md` e a fila derivada do plano canônico.
-Confira `git status`, `git log -5 --oneline` e o HEAD observado `92ffe551f20e0ef85b62bef48fe2dc7c67e9300c`.
-Branch: `feat/implementacao-2026-2027-autonomia`. Não recriar branch nem repetir frentes concluídas.
+Confira `git status`, `git log -5 --oneline` e o HEAD observado `d3c5c2c86e93c9c66fbc3f8062590d8359aa370e`.
+Branch: `feat/tcc-camila-cardiovascular-2014-2024`. Não recriar branch nem repetir frentes concluídas.
 
-Última unidade confirmada: A01–A10 implementados com limites; V2 e preparo local testados; quatro runs CI success no SHA 92ffe55; servidor QA encerrado.
+Última unidade confirmada: Cadastro e barreira populacional integrados; POPSVS, pilotos CNES e SIH e domínios SIGTAP conferidos; investigação I50 executável.
 
-Próxima unidade exata: **Receber do Work lote oficial e documentos com origem/hash/inventário; validar custódia e preflight e executar perfil/segunda leitura independente antes de aceite nacional; ou conferir atos territoriais recebidos antes de promover mapa**.
+Próxima unidade exata: **Restaurar as edições federais do SIM por hash, primeiro 2022; executar a dupla leitura. Prosseguir por competência com cobertura e edição verificadas.**.
 
-Insumos originais e cache autorizado: `/workspace/.cache/observatorio-mandato-cp09/`.
-O ZIP anexado permanece intacto fora da árvore Git. O estado registra seu SHA-256.
+Para o TCC, usar os quatro checkpoints e os dois volumes externos. Os comandos, hashes e condições de retomada estão em `docs/estudos/tcc_camila/README.md` e `config/estudos/`.
 Não promover staging incompleto. Aprovação funcional está em `DECISOES_R15.md`.
 Gate científico/humano não é substituído por teste sintético.
 

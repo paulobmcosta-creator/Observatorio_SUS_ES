@@ -1,0 +1,11 @@
+medida,criterio,nota,apurado,igual
+produtores_ecg,ECG,176,176,True
+somente_ecg,ECG AND NOT OUTRO_PA,122,122,True
+demais_especificos,OUTRO_PA,86,86,True
+ECG_e_demais,ECG AND OUTRO_PA,54,54,True
+demais_sem_ECG,OUTRO_PA AND NOT ECG,32,32,True
+ECG_com_servico,ECG AND SR122_003,146,146,True
+ECG_com_equipamento,ECG AND EQ_441_QT_USO,159,159,True
+PA_sem_SR116,PA AND NOT SR_CARD,176,176,True
+PA_sem_composto,PA AND NOT COMP,97,97,True
+PA_sem_composto_com_equipamento,PA AND NOT COMP AND EQ_441_QT_USO,71,71,True

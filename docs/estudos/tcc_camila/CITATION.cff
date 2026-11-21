@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Ao citar este material técnico, indique a versão e o commit consultado. A referência ao TCC está em CITACAO.md."
+title: "Observatório SUS-ES: código e dados derivados do estudo cardiovascular, Espírito Santo, 2014–2024"
+type: software
+authors:
+  - family-names: Costa
+    given-names: Paulo Borges Mathias
+    affiliation: Instituto Federal do Espírito Santo
+version: "3.5.1-preview"
+repository-code: "https://github.com/paulobmcosta-creator/Observatorio_SUS_ES"
+abstract: "Material técnico desenvolvido por Paulo Borges Mathias Costa no Observatório SUS-ES; estudo acadêmico de Camila Moreira dos Santos. O identificador 3.5.1-preview registra a edição preparada em 21/11/2026. As condições de reutilização constam em FONTES_E_DIREITOS.md."

@@ -1,0 +1,42 @@
+{
+  "T29": {
+    "caminho": "02_TABELAS/cruzamentos_integrados/T29.csv",
+    "bytes": 49384,
+    "sha256": "6f8d0816b6e121b4735dad235375f93aa0d94910c90b656bb126151b0b6278f2"
+  },
+  "dicionario": {
+    "caminho": "09_COMPLEMENTO_v34/dicionario_indicadores_v34.csv",
+    "bytes": 109970,
+    "sha256": "02e2a57bdbf6d8d74258a33569f747e6d3356a30ac18d40902faeeabe0ba868a"
+  },
+  "I50": {
+    "caminho": "09_COMPLEMENTO_v34/SIM/balanco_anual.csv",
+    "bytes": 563,
+    "sha256": "d64170074121ea23ddf329584f19db6f322a89a864147a6c90c23065219bbe7f"
+  },
+  "PA": {
+    "caminho": "09_COMPLEMENTO_v34/SIA/serie_2024_codigo_mes.csv",
+    "bytes": 24511,
+    "sha256": "ec34f54c1ad08434502a4787fe126225e494c9d3b41c0bdba5eb90d00a0afaaa"
+  },
+  "V01": {
+    "caminho": "10_SOBREPOSICOES_v341/01_materiais/V01_tabela.csv",
+    "bytes": 812,
+    "sha256": "e066fa468f59b04c68d3b8036e354bdd98ecca53b5bbf7036528001921bb9189"
+  },
+  "V02": {
+    "caminho": "10_SOBREPOSICOES_v341/01_materiais/V02_tabela.csv",
+    "bytes": 814,
+    "sha256": "e4dc1bc4775fdf2cd5bef11939f05ddb16eb3e38c4981554349f5a232c78923b"
+  },
+  "V03": {
+    "caminho": "10_SOBREPOSICOES_v341/01_materiais/V03_tabela.csv",
+    "bytes": 825,
+    "sha256": "b6762da46daeaf3f374e16bf7e28b4e8e8ec894764aea34f60d5719e57a9d437"
+  },
+  "T01": {
+    "caminho": "10_SOBREPOSICOES_v341/01_materiais/T01_tabela.csv",
+    "bytes": 1559,
+    "sha256": "d64b72053b4ec41bbc54e63f10272defc774361c30eb55e22e0a95e01106c946"
+  }
+}

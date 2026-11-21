@@ -1,0 +1,22 @@
+{
+  "host": "NOTEBOOK-001",
+  "referencias": {
+    "ENTREGA_TCC_CAMILA_2014_2024_v3.4": {
+      "sha256": "29a884dc06e17e8f161cb28ccca57949696da1dffbc57565bbff0e5905dec2d3",
+      "bytes": 41246379,
+      "arquivos_conferidos": 487
+    },
+    "DOSSIÊ_METODOLÓGICO_OBSERVATORIO_SUS_ES_v3.4": {
+      "sha256": "baec0df11a67810a422425b2041c029691735f7e462551f7fd58524ef9ba8494",
+      "bytes": 29018152,
+      "arquivos_conferidos": 363
+    },
+    "Quadro_Denominadores_CNES_SIA_SIH_2024.csv": "ee48e387817a5fc9eb540f460752ecfff696c3f0f2be172dee416ddd46c70d2d",
+    "Mandato_Complementar_v3.4.1_CNES_SIA_SIH_Venn_UpSet.md": "506282741b7323b173d432d9f1a6749256c9b9e2ccbed40448e80b0d5b10b515",
+    "Nota_Analitica_Cadastro_Producao_Cardiovascular_ES_2024.md": "675fbe3a50be985691aab6c0a86d0922eeaaaffe91c09eaab5572b1f5dd07dfd",
+    "dominio_SIGTAP_servicos": "c79d64295875f5983d6add65295a4f7c92e476a8bbe0bd8abfec34e6f8f6cddd",
+    "estoques_incluindo_UCO_provisorios": "5b2626b3be06317a4c4ab3930c62bc6edd59cfb47fea9d41fa63eb08d5144cd1"
+  },
+  "municipios": 78,
+  "nao_cadastrados": 0
+}

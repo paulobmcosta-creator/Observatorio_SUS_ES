@@ -1,0 +1,126 @@
+﻿ano,regiao,universo,estabelecimentos,com_PA_especifico_ano,com_SIH_cardiovascular_ano,com_PA_ou_SIH_ano,com_PA_e_SIH_ano,com_PA_mes_coincidente,com_SIH_mes_coincidente,porcentagem_com_PA_ano
+2024,ES,CNES cadastrados,9536,208,70,221,57,208,70,2.18
+2024,ES,Vinculo SUS,2092,208,70,221,57,208,70,9.94
+2024,ES,Recurso cardiovascular selecionado (algoritmo v3.4),618,111,56,120,47,110,56,17.96
+2024,ES,Servico SR116 (agregado v3.4),143,32,22,35,19,32,22,22.38
+2024,ES,SIA/PA especifico observado,208,208,57,208,57,208,56,100.0
+2024,ES,SIA contextual observado,140,114,45,117,42,113,43,81.43
+2024,ES,Estrutura hospitalar cardiologica (algoritmo),34,15,18,18,15,15,18,44.12
+2024,ES,Habilitacao cardiovascular (algoritmo),9,8,9,9,8,8,9,88.89
+2024,ES,SIH AIH cardiovascular observado,70,57,70,70,57,56,70,81.43
+2024,ES,SR116 (todos os estabelecimentos),143,32,22,35,19,32,22,22.38
+2024,ES,SR116 ambulatorial SUS,52,28,18,31,15,28,18,53.85
+2024,ES,HB_0801,7,7,7,7,7,7,7,100.0
+2024,ES,LT_02_QT_EXIST,12,4,5,5,4,4,5,33.33
+2024,ES,LT_02_QT_SUS,4,4,4,4,4,4,4,100.0
+2024,ES,LT_32_QT_EXIST,29,12,15,15,12,12,15,41.38
+2024,ES,LT_32_QT_SUS,15,12,15,15,12,12,15,80.0
+2024,ES,PF_225120_vinculos,528,103,49,112,40,102,49,19.51
+2024,ES,PF_225120_vinculos_sus,175,102,47,110,39,101,47,58.29
+2024,ES,EQ_441_QT_USO,692,172,67,183,56,172,67,24.86
+2024,ES,EQ_441_SUS,366,172,67,183,56,172,67,46.99
+2024,ES,SR 122/003,469,157,63,165,55,157,62,33.48
+2024,ES,SR 122/007,11,7,5,7,5,7,5,63.64
+2024,ES,SR 140/014,8,6,6,6,6,6,6,75.0
+2024,ES,SR 126/004,401,72,34,76,30,72,34,17.96
+2024,ES,SR 162/005,3,1,1,1,1,1,1,33.33
+2024,Norte,CNES cadastrados,942,28,11,32,7,28,11,2.97
+2024,Norte,Vinculo SUS,313,28,11,32,7,28,11,8.95
+2024,Norte,Recurso cardiovascular selecionado (algoritmo v3.4),57,11,7,14,4,10,7,19.3
+2024,Norte,Servico SR116 (agregado v3.4),13,1,0,1,0,1,0,7.69
+2024,Norte,SIA/PA especifico observado,28,28,7,28,7,28,7,100.0
+2024,Norte,SIA contextual observado,16,13,3,13,3,13,3,81.25
+2024,Norte,Estrutura hospitalar cardiologica (algoritmo),2,0,0,0,0,0,0,0.0
+2024,Norte,Habilitacao cardiovascular (algoritmo),0,0,0,0,0,0,0,
+2024,Norte,SIH AIH cardiovascular observado,11,7,11,11,7,7,11,63.64
+2024,Norte,SR116 (todos os estabelecimentos),13,1,0,1,0,1,0,7.69
+2024,Norte,SR116 ambulatorial SUS,8,1,0,1,0,1,0,12.5
+2024,Norte,HB_0801,0,0,0,0,0,0,0,
+2024,Norte,LT_02_QT_EXIST,1,0,0,0,0,0,0,0.0
+2024,Norte,LT_02_QT_SUS,0,0,0,0,0,0,0,
+2024,Norte,LT_32_QT_EXIST,2,0,0,0,0,0,0,0.0
+2024,Norte,LT_32_QT_SUS,0,0,0,0,0,0,0,
+2024,Norte,PF_225120_vinculos,50,11,7,14,4,10,7,22.0
+2024,Norte,PF_225120_vinculos_sus,16,11,6,13,4,10,6,68.75
+2024,Norte,EQ_441_QT_USO,76,16,9,19,6,16,9,21.05
+2024,Norte,EQ_441_SUS,54,16,9,19,6,16,9,29.63
+2024,Norte,SR 122/003,50,12,7,14,5,12,7,24.0
+2024,Norte,SR 122/007,0,0,0,0,0,0,0,
+2024,Norte,SR 140/014,0,0,0,0,0,0,0,
+2024,Norte,SR 126/004,40,9,2,9,2,9,2,22.5
+2024,Norte,SR 162/005,0,0,0,0,0,0,0,
+2024,Central,CNES cadastrados,1708,34,9,34,9,34,9,1.99
+2024,Central,Vinculo SUS,418,34,9,34,9,34,9,8.13
+2024,Central,Recurso cardiovascular selecionado (algoritmo v3.4),121,23,7,23,7,23,7,19.01
+2024,Central,Servico SR116 (agregado v3.4),37,9,5,9,5,9,5,24.32
+2024,Central,SIA/PA especifico observado,34,34,9,34,9,34,9,100.0
+2024,Central,SIA contextual observado,25,25,6,25,6,24,6,100.0
+2024,Central,Estrutura hospitalar cardiologica (algoritmo),11,5,5,5,5,5,5,45.45
+2024,Central,Habilitacao cardiovascular (algoritmo),2,2,2,2,2,2,2,100.0
+2024,Central,SIH AIH cardiovascular observado,9,9,9,9,9,9,9,100.0
+2024,Central,SR116 (todos os estabelecimentos),37,9,5,9,5,9,5,24.32
+2024,Central,SR116 ambulatorial SUS,17,7,3,7,3,7,3,41.18
+2024,Central,HB_0801,2,2,2,2,2,2,2,100.0
+2024,Central,LT_02_QT_EXIST,4,1,1,1,1,1,1,25.0
+2024,Central,LT_02_QT_SUS,1,1,1,1,1,1,1,100.0
+2024,Central,LT_32_QT_EXIST,9,5,5,5,5,5,5,55.56
+2024,Central,LT_32_QT_SUS,5,5,5,5,5,5,5,100.0
+2024,Central,PF_225120_vinculos,102,23,7,23,7,23,7,22.55
+2024,Central,PF_225120_vinculos_sus,45,22,6,22,6,22,6,48.89
+2024,Central,EQ_441_QT_USO,115,28,9,28,9,28,9,24.35
+2024,Central,EQ_441_SUS,73,28,9,28,9,28,9,38.36
+2024,Central,SR 122/003,64,26,9,26,9,26,8,40.62
+2024,Central,SR 122/007,3,1,1,1,1,1,1,33.33
+2024,Central,SR 140/014,3,2,2,2,2,2,2,66.67
+2024,Central,SR 126/004,56,13,5,13,5,13,5,23.21
+2024,Central,SR 162/005,2,1,1,1,1,1,1,50.0
+2024,Metropolitana,CNES cadastrados,5005,93,32,100,25,93,32,1.86
+2024,Metropolitana,Vinculo SUS,804,93,32,100,25,93,32,11.57
+2024,Metropolitana,Recurso cardiovascular selecionado (algoritmo v3.4),331,47,28,51,24,47,28,14.2
+2024,Metropolitana,Servico SR116 (agregado v3.4),78,15,11,16,10,15,11,19.23
+2024,Metropolitana,SIA/PA especifico observado,93,93,25,93,25,93,24,100.0
+2024,Metropolitana,SIA contextual observado,57,44,23,46,21,44,22,77.19
+2024,Metropolitana,Estrutura hospitalar cardiologica (algoritmo),17,8,9,9,8,8,9,47.06
+2024,Metropolitana,Habilitacao cardiovascular (algoritmo),6,5,6,6,5,5,6,83.33
+2024,Metropolitana,SIH AIH cardiovascular observado,32,25,32,32,25,24,32,78.12
+2024,Metropolitana,SR116 (todos os estabelecimentos),78,15,11,16,10,15,11,19.23
+2024,Metropolitana,SR116 ambulatorial SUS,18,14,10,15,9,14,10,77.78
+2024,Metropolitana,HB_0801,4,4,4,4,4,4,4,100.0
+2024,Metropolitana,LT_02_QT_EXIST,6,2,3,3,2,2,3,33.33
+2024,Metropolitana,LT_02_QT_SUS,2,2,2,2,2,2,2,100.0
+2024,Metropolitana,LT_32_QT_EXIST,14,5,6,6,5,5,6,35.71
+2024,Metropolitana,LT_32_QT_SUS,6,5,6,6,5,5,6,83.33
+2024,Metropolitana,PF_225120_vinculos,274,40,22,44,18,40,22,14.6
+2024,Metropolitana,PF_225120_vinculos_sus,72,40,22,44,18,40,22,55.56
+2024,Metropolitana,EQ_441_QT_USO,365,81,31,87,25,81,31,22.19
+2024,Metropolitana,EQ_441_SUS,161,81,31,87,25,81,31,50.31
+2024,Metropolitana,SR 122/003,262,74,29,78,25,74,29,28.24
+2024,Metropolitana,SR 122/007,6,4,3,4,3,4,3,66.67
+2024,Metropolitana,SR 140/014,4,3,3,3,3,3,3,75.0
+2024,Metropolitana,SR 126/004,196,28,18,30,16,28,18,14.29
+2024,Metropolitana,SR 162/005,0,0,0,0,0,0,0,
+2024,Sul,CNES cadastrados,1881,53,18,55,16,53,18,2.82
+2024,Sul,Vinculo SUS,557,53,18,55,16,53,18,9.52
+2024,Sul,Recurso cardiovascular selecionado (algoritmo v3.4),109,30,14,32,12,30,14,27.52
+2024,Sul,Servico SR116 (agregado v3.4),15,7,6,9,4,7,6,46.67
+2024,Sul,SIA/PA especifico observado,53,53,16,53,16,53,16,100.0
+2024,Sul,SIA contextual observado,42,32,13,33,12,32,12,76.19
+2024,Sul,Estrutura hospitalar cardiologica (algoritmo),4,2,4,4,2,2,4,50.0
+2024,Sul,Habilitacao cardiovascular (algoritmo),1,1,1,1,1,1,1,100.0
+2024,Sul,SIH AIH cardiovascular observado,18,16,18,18,16,16,18,88.89
+2024,Sul,SR116 (todos os estabelecimentos),15,7,6,9,4,7,6,46.67
+2024,Sul,SR116 ambulatorial SUS,9,6,5,8,3,6,5,66.67
+2024,Sul,HB_0801,1,1,1,1,1,1,1,100.0
+2024,Sul,LT_02_QT_EXIST,1,1,1,1,1,1,1,100.0
+2024,Sul,LT_02_QT_SUS,1,1,1,1,1,1,1,100.0
+2024,Sul,LT_32_QT_EXIST,4,2,4,4,2,2,4,50.0
+2024,Sul,LT_32_QT_SUS,4,2,4,4,2,2,4,50.0
+2024,Sul,PF_225120_vinculos,102,29,13,31,11,29,13,28.43
+2024,Sul,PF_225120_vinculos_sus,42,29,13,31,11,29,13,69.05
+2024,Sul,EQ_441_QT_USO,136,47,18,49,16,47,18,34.56
+2024,Sul,EQ_441_SUS,78,47,18,49,16,47,18,60.26
+2024,Sul,SR 122/003,93,45,18,47,16,45,18,48.39
+2024,Sul,SR 122/007,2,2,1,2,1,2,1,100.0
+2024,Sul,SR 140/014,1,1,1,1,1,1,1,100.0
+2024,Sul,SR 126/004,109,22,9,24,7,22,9,20.18
+2024,Sul,SR 162/005,1,0,0,0,0,0,0,0.0

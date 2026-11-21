@@ -97,3 +97,7 @@ Este projeto está licenciado sob a [Licença MIT](LICENSE). Ao reutilizar ou ad
 ## Contato
 
 Para dúvidas ou sugestões gerais, utilize a área de _Issues_ do GitHub. Para assuntos específicos, entre em contato com o Pesquisador Principal através da instituição responsável.
+
+## Estudo cardiovascular do Espírito Santo, 2014–2024
+
+A [documentação do TCC da Camila](docs/estudos/tcc_camila/README.md) reúne os métodos, a cobertura das fontes, os comandos de reprodução e os 318 resultados científicos da v3.5.1. O [histórico das edições](docs/estudos/tcc_camila/HISTORICO_VERSOES.md) registra os pilotos de reprodução selecionada da v3.4.3.

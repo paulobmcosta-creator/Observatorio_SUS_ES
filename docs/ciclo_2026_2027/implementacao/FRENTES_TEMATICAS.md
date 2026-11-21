@@ -24,7 +24,7 @@ O texto fonte diferencia registros do Painel de Oncologia, internações SIH, ó
 
 ## D2/TCC cardiovascular
 
-Texto integral D2 preservado foi conferido. Mantêm-se Camila Moreira dos Santos e orientação documental; não se inventa participação atual. Janela 2014–2024, quatro regiões retrospectivas e Noroeste 1 focal (composição ainda sem fonte congelada); nenhum desses critérios vira filtro do Observatório inteiro.
+Texto integral D2 preservado foi conferido. Mantêm-se Camila Moreira dos Santos e orientação documental; não se inventa participação atual. Janela 2014–2024, quatro regiões retrospectivas e aprofundamento da Região Norte, segundo o cadastro fixado no Anexo III da CIB/SUS-ES 259/2024; nenhum desses critérios vira filtro do Observatório inteiro.
 
 Os configs existentes mantêm G0–G5/AC sobrepostos, causa básica SIM, diagnóstico principal SIH, população total harmonizada, padrão Brasil 2010 e prematura 30–69. IAM permanece pendente e não bloqueia G0–G5 por si só. T03/T04 dependem de SIGTAP/CNES por competência, não fetch corrente. T06/T07 precisam de bases válidas; T08/T10 de integração territorial/temporal; T09 somente de séries elegíveis, sem log de zero com constante artificial. Não foi iniciada aquisição irrestrita 2014–2024, nem inferida mortalidade de óbitos hospitalares. A infraestrutura comum desenvolvida é reaproveitável; faltam fontes/documentação para resultados empíricos.
 

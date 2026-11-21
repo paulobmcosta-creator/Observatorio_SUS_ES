@@ -1,0 +1,17 @@
+origem,destino,aih
+Central,Central,38268
+Central,Metropolitana,3657
+Central,Norte,431
+Central,Sul,30
+Metropolitana,Central,4623
+Metropolitana,Metropolitana,141512
+Metropolitana,Norte,98
+Metropolitana,Sul,1988
+Norte,Central,10538
+Norte,Metropolitana,3342
+Norte,Norte,23347
+Norte,Sul,24
+Sul,Central,403
+Sul,Metropolitana,6612
+Sul,Norte,11
+Sul,Sul,59451

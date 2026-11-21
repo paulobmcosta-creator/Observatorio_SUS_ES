@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="792pt" height="460.8pt" viewBox="0 0 792 460.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title>Equipamento, serviço e produção de ECG</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Equipamento, serviço e produção de ECG</dc:title>
+    <dc:date>2026-11-20T16:44:48.260984</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.7, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 460.8 
+L 792 460.8 
+L 792 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 173.449644 302.02389 
+C 193.448951 302.02389 212.631831 294.078081 226.773477 279.936436 
+C 240.915123 265.79479 248.860932 246.61191 248.860932 226.612603 
+C 248.860932 206.613295 240.915123 187.430416 226.773477 173.28877 
+C 212.631831 159.147124 193.448951 151.201315 173.449644 151.201315 
+C 153.450337 151.201315 134.267457 159.147124 120.125811 173.28877 
+C 105.984165 187.430416 98.038356 206.613295 98.038356 226.612603 
+C 98.038356 246.61191 105.984165 265.79479 120.125811 279.936436 
+C 134.267457 294.078081 153.450337 302.02389 173.449644 302.02389 
+z
+" clip-path="url(#p33f10b1b86)" style="fill: #236789; fill-opacity: 0.133333; stroke: #236789; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 270.070356 302.02389 
+C 290.069663 302.02389 309.252543 294.078081 323.394189 279.936436 
+C 337.535835 265.79479 345.481644 246.61191 345.481644 226.612603 
+C 345.481644 206.613295 337.535835 187.430416 323.394189 173.28877 
+C 309.252543 159.147124 290.069663 151.201315 270.070356 151.201315 
+C 250.071049 151.201315 230.888169 159.147124 216.746523 173.28877 
+C 202.604877 187.430416 194.659068 206.613295 194.659068 226.612603 
+C 194.659068 246.61191 202.604877 265.79479 216.746523 279.936436 
+C 230.888169 294.078081 250.071049 302.02389 270.070356 302.02389 
+z
+" clip-path="url(#p33f10b1b86)" style="fill: #aa572e; fill-opacity: 0.133333; stroke: #aa572e; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 221.76 376.256877 
+C 241.759307 376.256877 260.942187 368.311068 275.083833 354.169422 
+C 289.225479 340.027776 297.171288 320.844896 297.171288 300.845589 
+C 297.171288 280.846282 289.225479 261.663402 275.083833 247.521756 
+C 260.942187 233.38011 241.759307 225.434301 221.76 225.434301 
+C 201.760693 225.434301 182.577813 233.38011 168.436167 247.521756 
+C 154.294521 261.663402 146.348712 280.846282 146.348712 300.845589 
+C 146.348712 320.844896 154.294521 340.027776 168.436167 354.169422 
+C 182.577813 368.311068 201.760693 376.256877 221.76 376.256877 
+z
+" clip-path="url(#p33f10b1b86)" style="fill: #277565; fill-opacity: 0.133333; stroke: #277565; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #183447" x="140.457205" y="223.681857" transform="rotate(-0 140.457205 223.681857)">214</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #183447" x="303.062795" y="223.681857" transform="rotate(-0 303.062795 223.681857)">4</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #183447" x="221.76" y="340.333693" transform="rotate(-0 221.76 340.333693)">15</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #183447" x="221.76" y="198.937528" transform="rotate(-0 221.76 198.937528)">319</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #183447" x="182.286904" y="284.953528" transform="rotate(-0 182.286904 284.953528)">15</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #183447" x="261.233096" y="284.953528" transform="rotate(-0 261.233096 284.953528)">2</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #183447" x="221.76" y="255.495994" transform="rotate(-0 221.76 255.495994)">144</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #236789" x="129.852493" y="162.134248" transform="rotate(-0 129.852493 162.134248)">A</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #aa572e" x="313.667507" y="162.134248" transform="rotate(-0 313.667507 162.134248)">B</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #277565" x="221.76" y="387.18981" transform="rotate(-0 221.76 387.18981)">C</text>
+   </g>
+  </g>
+  <g id="text_11">
+   <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #277565" x="43.56" y="31.038438" transform="rotate(-0 43.56 31.038438)">V03    /    Espírito Santo    /    2024</text>
+  </g>
+  <g id="text_12">
+   <text style="font-weight: 700; font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #183447" x="43.56" y="73.15625" transform="rotate(-0 43.56 73.15625)">Equipamento, serviço e produção de ECG</text>
+  </g>
+  <g id="text_13">
+   <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #58656d" x="43.56" y="105.166359" transform="rotate(-0 43.56 105.166359)">Quantos prestadores com ECG aprovado têm equipamento e serviço convencional cadastrados?</text>
+  </g>
+  <g id="text_14">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #236789" x="419.76" y="148.572175" transform="rotate(-0 419.76 148.572175)">A   Eletrocardiógrafo em uso</text>
+  </g>
+  <g id="text_15">
+   <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #236789" x="741.312" y="148.648112" transform="rotate(-0 741.312 148.648112)">692</text>
+  </g>
+  <g id="text_16">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #aa572e" x="419.76" y="177.402575" transform="rotate(-0 419.76 177.402575)">B   Serviço de ECG convencional</text>
+  </g>
+  <g id="text_17">
+   <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #aa572e" x="741.312" y="177.678512" transform="rotate(-0 741.312 177.678512)">469</text>
+  </g>
+  <g id="text_18">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #277565" x="419.76" y="206.432975" transform="rotate(-0 419.76 206.432975)">C   ECG aprovado</text>
+  </g>
+  <g id="text_19">
+   <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #277565" x="741.312" y="206.708912" transform="rotate(-0 741.312 206.708912)">176</text>
+  </g>
+  <g id="text_20">
+   <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #183447" x="419.76" y="244.224" transform="rotate(-0 419.76 244.224)">Interseções inclusivas</text>
+  </g>
+  <g id="text_21">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #183447" x="419.76" y="267.719375" transform="rotate(-0 419.76 267.719375)">A ∩ B</text>
+  </g>
+  <g id="text_22">
+   <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #183447" x="741.312" y="267.995313" transform="rotate(-0 741.312 267.995313)">463</text>
+  </g>
+  <g id="text_23">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #183447" x="419.76" y="287.533775" transform="rotate(-0 419.76 287.533775)">A ∩ C</text>
+  </g>
+  <g id="text_24">
+   <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #183447" x="741.312" y="287.809713" transform="rotate(-0 741.312 287.809713)">159</text>
+  </g>
+  <g id="text_25">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #183447" x="419.76" y="307.348175" transform="rotate(-0 419.76 307.348175)">B ∩ C</text>
+  </g>
+  <g id="text_26">
+   <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #183447" x="741.312" y="307.624113" transform="rotate(-0 741.312 307.624113)">146</text>
+  </g>
+  <g id="text_27">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #183447" x="419.76" y="327.162575" transform="rotate(-0 419.76 327.162575)">A ∩ B ∩ C</text>
+  </g>
+  <g id="text_28">
+   <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #183447" x="741.312" y="327.438513" transform="rotate(-0 741.312 327.438513)">144</text>
+  </g>
+  <g id="text_29">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #183447" x="419.76" y="361.261775" transform="rotate(-0 419.76 361.261775)">União de A, B e C</text>
+  </g>
+  <g id="text_30">
+   <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #183447" x="741.312" y="361.537712" transform="rotate(-0 741.312 361.537712)">713</text>
+  </g>
+  <g id="text_31">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #183447" x="419.76" y="381.736975" transform="rotate(-0 419.76 381.736975)">Fora dos três conjuntos</text>
+  </g>
+  <g id="text_32">
+   <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #183447" x="741.312" y="381.812913" transform="rotate(-0 741.312 381.812913)">8.823</text>
+  </g>
+  <g id="text_33">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #183447" x="419.76" y="401.812175" transform="rotate(-0 419.76 401.812175)">Universo cadastral do ano</text>
+  </g>
+  <g id="text_34">
+   <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #183447" x="741.312" y="402.088113" transform="rotate(-0 741.312 402.088113)">9.536</text>
+  </g>
+  <g id="text_35">
+   <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #58656d" x="43.56" y="426.24" transform="rotate(-0 43.56 426.24)">Venn esquemático. Os números nos círculos são exclusivos. O pertencimento anual admite meses diferentes.</text>
+  </g>
+  <g id="text_36">
+   <text style="font-size: 7.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #58656d" x="43.56" y="443.2896" transform="rotate(-0 43.56 443.2896)">Fonte: CNES, SIA/PA e SIH/RD · v3.4  |  CNES distintos  |  Tabela V03  |  figuras.py  |  contagens conferidas</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p33f10b1b86">
+   <rect x="83.309589" y="138.24" width="276.900822" height="258.048"/>
+  </clipPath>
+ </defs>
+</svg>

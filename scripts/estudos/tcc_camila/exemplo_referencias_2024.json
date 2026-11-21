@@ -1,0 +1,18 @@
+{
+  "T29": {
+    "caminho": "referencias/T29.csv",
+    "sha256": "6f8d0816b6e121b4735dad235375f93aa0d94910c90b656bb126151b0b6278f2"
+  },
+  "fluxo": {
+    "caminho": "referencias/fluxos.csv",
+    "sha256": "231116865a28b3ce1dd883b9cdbebd2d360c021cecac57a706e1693c801edbcd"
+  },
+  "mensal": {
+    "caminho": "referencias/serie_mensal.csv",
+    "sha256": "3ea1d252c240ff2013d8161d9a9960edd48258cf958e41b5570d78776e6a6dbf"
+  },
+  "intersecoes": {
+    "caminho": "referencias/intersecoes_mensais.csv.gz",
+    "sha256": "9129df6f755f5430b7b3493eaf4d4e96844c0e0f872079b7e52328caad53d481"
+  }
+}

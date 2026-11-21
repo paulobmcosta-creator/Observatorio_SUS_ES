@@ -1,0 +1,121 @@
+codigo,descricao,classe,grupo_clinico,status,regra
+0205010032,ECOCARDIOGRAFIA TRANSTORACICA,A,exames_especificos,Validado no escopo homologado; elegibilidade mensal no PA,Total específico apenas em competência e instrumento elegíveis
+0205010040,ULTRASSONOGRAFIA DOPPLER COLORIDO DE VASOS,B,doppler_contextual,Validado no escopo homologado; elegibilidade mensal no PA,Produção vascular contextual; fora do total específico
+0205010040,ULTRASSONOGRAFIA DOPPLER COLORIDO DE VASOS ( ATE 3 VASOS ),B,doppler_contextual,Validado no escopo homologado; elegibilidade mensal no PA,Produção vascular contextual; fora do total específico
+0208010025,CINTILOGRAFIA DE MIOCARDIO P/ AVALIACAO DA PERFUSAO EM SITUACAO DE ESTRESSE (MINIMO 3 PROJECOES),A,exames_especificos,Validado no escopo homologado; elegibilidade mensal no PA,Total específico apenas em competência e instrumento elegíveis
+0208010033,CINTILOGRAFIA DE MIOCARDIO P/ AVALIACAO DA PERFUSAO EM SITUACAO DE REPOUSO (MINIMO 3 PROJECOES),A,exames_especificos,Validado no escopo homologado; elegibilidade mensal no PA,Total específico apenas em competência e instrumento elegíveis
+0211020010,CATETERISMO CARDIACO,A,exames_especificos,Validado no escopo homologado; elegibilidade mensal no PA,Total específico apenas em competência e instrumento elegíveis
+0211020036,ELETROCARDIOGRAMA,A,exames_especificos,Validado no escopo homologado; elegibilidade mensal no PA,Total específico apenas em competência e instrumento elegíveis
+0211020044,MONITORAMENTO PELO SISTEMA HOLTER 24 HS (3 CANAIS),A,exames_especificos,Validado no escopo homologado; elegibilidade mensal no PA,Total específico apenas em competência e instrumento elegíveis
+0211020052,MONITORIZACAO AMBULATORIAL DE PRESSAO ARTERIAL,A,exames_especificos,Validado no escopo homologado; elegibilidade mensal no PA,Total específico apenas em competência e instrumento elegíveis
+0211020052,MONITORIZACAO AMBULATORIAL DE PRESSAO ARTERIAL (M.A.P.A),A,exames_especificos,Validado no escopo homologado; elegibilidade mensal no PA,Total específico apenas em competência e instrumento elegíveis
+0211020060,TESTE DE ESFORCO / TESTE ERGOMETRICO,A,exames_especificos,Validado no escopo homologado; elegibilidade mensal no PA,Total específico apenas em competência e instrumento elegíveis
+0301010072,CONSULTA MEDICA EM ATENÇÃO ESPECIALIZADA,B,consulta_cbo,Validado no escopo homologado; elegibilidade mensal no PA,CBO do recorte pertinência e compatibilidade no mês; motivo clínico desconhecido
+0301070229,REABILITAÇÃO CARDIORRESPIRATÓRIA DE PACIENTES PÓS COVID-19,D,reabilitacao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0302040030,ATENDIMENTO FISIOTERAPÊUTICO EM PACIENTE COM TRANSTORNO CLÍNICO CARDIOVASCULAR,A,fisioterapia_especifica,Validado no escopo homologado; elegibilidade mensal no PA,Total específico apenas em competência e instrumento elegíveis
+0302040048,ATENDIMENTO FISIOTERAPÊUTICO EM PACIENTE PRÉ/PÓS CIRURGIA CARDIOVASCULAR,A,fisioterapia_especifica,Validado no escopo homologado; elegibilidade mensal no PA,Total específico apenas em competência e instrumento elegíveis
+0302040056,ATENDIMENTO FISIOTERAPÊUTICO NAS DISFUNÇÕES VASCULARES PERIFÉRICAS,D,reabilitacao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0302040064,ATENDIMENTO FISIOTERAPÊUTICO EM PACIENTE COM SÍNDROME CORONARIANA AGUDA,A,fisioterapia_especifica,Validado no escopo homologado; elegibilidade mensal no PA,Total específico apenas em competência e instrumento elegíveis
+0406010617,IMPLANTE DE MARCAPASSO CARDIACO MULTI-SITIO ENDOCAVITARIO C/ REVERSAO P/ EPIMIOCARDICO (POR TORACOTOMIA),D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406010617,IMPLANTE DE MARCAPASSO CARDÍACO MULTI-SITIO ENDOCAVITÁRIO C/ REVERSÃO P/ EPIMIOCÁRDICO (POR TORACOTOMIA),D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406010625,IMPLANTE DE MARCAPASSO CARDIACO MULTI-SITIO EPIMIOCARDICO POR TORACOTOMIA P/IMPLANTE DE ELETRODO,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406010625,IMPLANTE DE MARCAPASSO CARDÍACO MULTI-SITIO EPIMIOCÁRDICO POR TORACOTOMIA P/IMPLANTE DE ELETRODO,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406010633,IMPLANTE DE MARCAPASSO CARDIACO MULTI-SITIO TRANSVENOSO,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406010633,IMPLANTE DE MARCAPASSO CARDÍACO MULTI-SITIO TRANSVENOSO,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406010641,IMPLANTE DE MARCAPASSO DE CAMARA DUPLA EPIMIOCARDICO,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406010641,IMPLANTE DE MARCAPASSO DE CÂMARA DUPLA EPIMIOCÁRDICO,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406010650,IMPLANTE DE MARCAPASSO DE CAMARA DUPLA TRANSVENOSO,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406010650,IMPLANTE DE MARCAPASSO DE CÂMARA DUPLA TRANSVENOSO,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406010668,IMPLANTE DE MARCAPASSO DE CAMARA UNICA EPIMIOCARDICO,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406010668,IMPLANTE DE MARCAPASSO DE CÂMARA ÚNICA EPIMIOCÁRDICO,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406010676,IMPLANTE DE MARCAPASSO DE CAMARA UNICA TRANSVENOSO,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406010676,IMPLANTE DE MARCAPASSO DE CÂMARA ÚNICA TRANSVENOSO,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406010684,IMPLANTE DE MARCAPASSO TEMPORARIO TRANSVENOSO,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406010684,IMPLANTE DE MARCAPASSO TEMPORÁRIO TRANSVENOSO,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406010927,REVASCULARIZACAO MIOCARDICA C/ USO DE EXTRACORPOREA,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406010927,REVASCULARIZAÇÃO MIOCÁRDICA C/ USO DE EXTRACÓRPOREA,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406010927,REVASCULARIZAÇÃO MIOCÁRDICA COM USO DE EXTRACÓRPOREA,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406010935,REVASCULARIZACAO MIOCARDICA C/ USO DE EXTRACORPOREA (C/ 2 OU MAIS ENXERTOS),D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406010935,REVASCULARIZAÇÃO MIOCÁRDICA C/ USO DE EXTRACÓRPOREA (C/ 2 OU MAIS ENXERTOS),D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406010943,REVASCULARIZACAO MIOCARDICA S/ USO DE EXTRACORPOREA,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406010943,REVASCULARIZAÇÃO MIOCÁRDICA S/ USO DE EXTRACORPÓREA,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406010951,REVASCULARIZACAO MIOCARDICA S/ USO DE EXTRACORPOREA (C/ 2 OU MAIS ENXERTOS),D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406010951,REVASCULARIZAÇÃO MIOCÁRDICA S/ USO DE EXTRACORPÓREA (C/ 2 OU MAIS ENXERTOS),D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406020043,ANEURISMECTOMIA DE AORTA ABDOMINAL INFRA-RENAL,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406020051,ANEURISMECTOMIA TORACO-ABDOMINAL,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406020124,EMBOLECTOMIA ARTERIAL,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406020302,PLASTIA ARTERIAL C/ REMENDO (QUALQUER TECNICA),D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406020302,PLASTIA ARTERIAL COM REMENDO (QUALQUER TÉCNICA),D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406020310,PONTE AXILO-BIFEMURAL,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406020329,PONTE AXILO-FEMURAL,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406020337,PONTE DE RAMOS DOS TRONCOS SUPRA-AORTICOS,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406020345,PONTE FEMORO-FEMURAL CRUZADA,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406020353,PONTE-TROMBOENDARTERECTOMIA AORTO-FEMURAL,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406020361,PONTE-TROMBOENDARTERECTOMIA AORTO-ILIACA,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406020361,PONTE-TROMBOENDARTERECTOMIA AORTO-ILÍACA,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406020370,PONTE-TROMBOENDARTERECTOMIA DE CAROTIDA,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406020370,PONTE-TROMBOENDARTERECTOMIA DE CARÓTIDA,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406020388,PONTE-TROMBOENDARTERECTOMIA ILIACO-FEMURAL,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406020418,REVASCULARIZACAO DE ARTERIAS VISCERAIS,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406020418,REVASCULARIZAÇÃO DE ARTÉRIAS VISCERAIS,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406020426,REVASCULARIZACAO DO MEMBRO SUPERIOR,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406020426,REVASCULARIZAÇÃO DO MEMBRO SUPERIOR,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406020434,REVASCULARIZACAO POR PONTE / TROMBOENDARTERECTOMIA DE OUTRAS ARTERIAS DISTAIS,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406020434,REVASCULARIZAÇÃO POR PONTE / TROMBOENDARTERECTOMIA DE OUTRAS ARTERIAS DISTAIS,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406020442,REVASCULARIZACAO POR PONTE / TROMBOENDARTERECTOMIA FEMURO-POPLITEA DISTAL,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406020442,REVASCULARIZAÇÃO POR PONTE / TROMBOENDARTERECTOMIA FEMURO-POPLÍTEA DISTAL,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406020450,REVASCULARIZACAO POR PONTE / TROMBOENDARTERECTOMIA FEMURO-POPLITEA PROXIMAL,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406020450,REVASCULARIZAÇÃO POR PONTE / TROMBOENDARTERECTOMIA FEMURO-POPLÍTEA PROXIMAL,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406020485,TRATAMENTO CIRURGICO DE ANEURISMAS DAS ARTERIAS VISCERAIS,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406020582,TROCA DE AORTA DESCENDENTE (INCLUI ABDOMINAL),D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406030014,ANGIOPLASTIA CORONARIANA,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406030022,ANGIOPLASTIA CORONARIANA C/ IMPLANTE DE DOIS STENTS,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406030030,ANGIOPLASTIA CORONARIANA C/ IMPLANTE DE STENT,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406030030,ANGIOPLASTIA CORONARIANA COM IMPLANTE DE STENT,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406030049,ANGIOPLASTIA CORONARIANA PRIMÁRIA,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406030057,ANGIOPLASTIA COM IMPLANTE DE DUPLO STENT EM AORTA/ARTERIA PULMONAR E RAMOS,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406030065,ANGIOPLASTIA EM ENXERTO CORONARIANO,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406030073,ANGIOPLASTIA EM ENXERTO CORONARIANO (C/ IMPLANTE DE STENT),D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406030073,ANGIOPLASTIA EM ENXERTO CORONARIANO (C/ IMPLANTE DE stent),D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406030073,ANGIOPLASTIA EM ENXERTO CORONARIANO (COM IMPLANTE DE STENT),D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406030081,ATRIOSEPTOSTOMIA C/ CATETER BALAO,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406030081,ATRIOSEPTOSTOMIA COM CATETER BALÃO,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406030090,FECHAMENTO PERCUTANEO DO CANAL ARTERIAL / FISTULAS ARTERIOVENOSAS C/ LIBERACAO DE COILS,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406030090,FECHAMENTO PERCUTÂNEO DO CANAL ARTERIAL / FISTULAS ARTERIOVENOSAS COM LIBERAÇÃO DE COILS,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406030103,RETIRADA DE CORPO ESTRANHO DE SISTEMA CARDIOVASCULAR POR TECNICAS HEMODINAMICAS,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406030103,RETIRADA DE CORPO ESTRANHO DE SISTEMA CARDIOVASCULAR POR TÉCNICAS HEMODINÂMICAS,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406030111,VALVULOPLASTIA AORTICA PERCUTANEA,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406030111,VALVULOPLASTIA AÓRTICA PERCUTÂNEA,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406030120,VALVULOPLASTIA MITRAL PERCUTANEA,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406030120,VALVULOPLASTIA MITRAL PERCUTÂNEA,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406030138,VALVULOPLASTIA PULMONAR PERCUTANEA,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406030138,VALVULOPLASTIA PULMONAR PERCUTÂNEA,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406030146,VALVULOPLASTIA TRICUSPIDE PERCUTANEA,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406030154,FECHAMENTO PERCUTÂNEO DE COMUNICAÇÃO INTERATRIAL SEPTAL.,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406030162,"IMPLANTE PERCUTÂNEO DE VÁLVULA AÓRTICA (TAVI), POR VIA TRANSFEMORAL",D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406040052,ANGIOPLASTIA INTRALUMINAL DE VASOS DAS EXTREMIDADES (SEM STENT),D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406040060,ANGIOPLASTIA INTRALUMINAL DE VASOS DAS EXTREMIDADES (C/ STENT NAO RECOBERTO),D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406040060,ANGIOPLASTIA INTRALUMINAL DE VASOS DAS EXTREMIDADES (COM STENT NÃO RECOBERTO),D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406040079,ANGIOPLASTIA INTRALUMINAL DE VASOS DAS EXTREMIDADES (C/ STENT RECOBERTO),D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406040079,ANGIOPLASTIA INTRALUMINAL DE VASOS DAS EXTREMIDADES (COM STENT RECOBERTO),D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406040087,ANGIOPLASTIA INTRALUMINAL DE VASOS DO PESCOCO / TRONCOS SUPRA-AORTICOS (SEM STENT),D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406040087,ANGIOPLASTIA INTRALUMINAL DE VASOS DO PESCOÇO / TRONCOS SUPRA-AÓRTICOS (SEM STENT),D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406040095,ANGIOPLASTIA INTRALUMINAL DE VASOS DO PESCOCO OU TRONCOS SUPRA-AORTICOS (C/ STENT NAO RECOBERTO),D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406040095,ANGIOPLASTIA INTRALUMINAL DE VASOS DO PESCOÇO OU TRONCOS SUPRA-AÓRTICOS (COM STENT NÃO RECOBERTO),D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406040109,ANGIOPLASTIA INTRALUMINAL DE VASOS VISCERAIS C/ STENT NAO RECOBERTO,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406040109,ANGIOPLASTIA INTRALUMINAL DE VASOS VISCERAIS COM STENT NÃO RECOBERTO,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406040117,ANGIOPLASTIA INTRALUMINAL DE VASOS VISCERAIS C/ STENT RECOBERTO,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406040117,ANGIOPLASTIA INTRALUMINAL DE VASOS VISCERAIS COM STENT RECOBERTO,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406040125,ANGIOPLASTIA INTRALUMINAL DE VASOS VISCERAIS / RENAIS,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406040133,ANGIOPLASTIA INTRALUMINAL DOS VASOS DO PESCOCO / TRONCOS SUPRA-AORTICOS (C/ STENT RECOBERTO),D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406040133,ANGIOPLASTIA INTRALUMINAL DOS VASOS DO PESCOÇO / TRONCOS SUPRA-AÓRTICOS (COM STENT RECOBERTO),D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406040150,CORRECAO ENDOVASCULAR DE ANEURISMA / DISSECCAO DA AORTA ABDOMINAL C/ ENDOPROTESE RETA / CONICA,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406040150,CORREÇÃO ENDOVASCULAR DE ANEURISMA / DISSECÇÃO DA AORTA ABDOMINAL COM ENDOPRÓTESE RETA / CÔNICA,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406040168,CORRECAO ENDOVASCULAR DE ANEURISMA / DISSECCAO DA AORTA ABDOMINAL E ILIACAS C/ ENDOPROTESE BIFURCADA,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406040168,CORREÇÃO ENDOVASCULAR DE ANEURISMA / DISSECÇÃO DA AORTA ABDOMINAL E ILÍACAS COM ENDOPRÓTESE BIFURCADA,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406040176,CORRECAO ENDOVASCULAR DE ANEURISMA / DISSECCAO DA AORTA TORACICA C/ ENDOPROTESE RETA OU CONICA,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406040176,CORREÇÃO ENDOVASCULAR DE ANEURISMA / DISSECÇÃO DA AORTA TORÁCICA COM ENDOPRÓTESE RETA OU CÔNICA,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406040184,CORRECAO ENDOVASCULAR DE ANEURISMA / DISSECCAO DAS ILIACAS C/ ENDOPROTESE TUBULAR,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406040184,CORREÇÃO ENDOVASCULAR DE ANEURISMA / DISSECÇÃO DAS ILÍACAS COM ENDOPRÓTESE TUBULAR,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406040281,RECONSTRUCAO DA BIFURCACAO AORTO-ILIACA C/ ANGIOPLASTIA E STENTS,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas
+0406040281,RECONSTRUÇÃO DA BIFURCAÇÃO AORTO-ILÍACA COM ANGIOPLASTIA E STENTS,D,intervencao_em_revisao,Provisório,Fora do total específico e das séries definitivas

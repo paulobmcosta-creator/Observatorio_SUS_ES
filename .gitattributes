@@ -1,1 +1,17 @@
 data_raw/cnes/202601/tbEstabelecimento202601.csv filter=lfs diff=lfs merge=lfs -text
+
+# Preservar bytes dos CSV identificados por hash, inclusive os finais CRLF.
+metadata/territorio/pdr_es_2024_tcc_v1.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
+config/estudos/edicoes_sim_camila.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
+config/estudos/tcc_cardiovascular.csv whitespace=trailing-space,space-before-tab,cr-at-eol
+docs/estudos/tcc_camila/inspecao_consolidado.csv whitespace=trailing-space,space-before-tab,cr-at-eol
+
+# Arquivos certificados por SHA-256 conservam os bytes de origem em qualquer checkout.
+resultados_publicos/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+docs/estudos/tcc_camila/documentacao_de_origem/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+docs/estudos/tcc_camila/MANIFESTO_PUBLICO.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
+# SVGs científicos gerados mantêm espaços nos atributos de caminho e hashes homologados.
+resultados_publicos/**/*.svg -text whitespace=-trailing-space,space-before-tab,cr-at-eol
+
+# Cópia histórica conferida pelo identificador do objeto Git da base da PR 83.
+docs/estudos/tcc_camila/README_BASE_PR83_8308611.md -text

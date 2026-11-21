@@ -1,0 +1,11 @@
+# Checkpoint da Etapa 1
+
+O catálogo identifica para cada indicador o campo, a unidade, os códigos, o filtro, o território, o status e o leitor. A tabela de situações de uso delimita o que pode integrar o material acadêmico. O diretório etapa1 guarda as tabelas por estabelecimento, os resíduos, o confronto com os agregados anteriores e as versões dos atributos do SIGTAP.
+
+ST representa estabelecimentos cadastrados. SR contém serviços e classificações. A identificação de atuação clínica real exige evidência adicional. HB considera o intervalo de vigência e a existência no SIGTAP mensal. LT conserva os campos de quantidade e compara os tipos cirúrgico, clínico e complementar. EQ distingue existência, uso e a marcação SUS. PF preserva contagens de registros de vínculo e horas por modalidade e CBO. EP usa o identificador de equipe e o estado na competência. Recursos e pessoal gerais são contexto.
+
+No SIA, o arquivo PA reúne registros de diferentes instrumentos. Segundo o informe técnico de julho de 2019, página 3, P e S representam procedimentos APAC principal e secundário, C e I identificam BPA consolidado e individualizado, A e B identificam RAAS. Antes de somar a produção, verifica-se a presença do instrumento na relação histórica. A soma cobre procedimentos registrados nos movimentos disponíveis. Uma APAC exclusiva sem evidência observada não gera zero. Outras bases APAC só devem ser incorporadas diante de lacuna material e reconciliação, para evitar dupla contagem.
+
+A exposição territorial da oferta usa os habitantes do município ou da região. A produção usa a localização do prestador. As médias de estoques levam o número de competências válidas. Regras mensais ausentes ficam documentadas. O estoque registrado mede capacidade cadastrada, não produtividade nem acesso. Comparações normativas de serviços e habilitações medem correspondência descritiva entre sistemas.
+
+Referências de domínios: Manual de Operação SCNES, fevereiro de 2009, tabela LFCES001; TAB_CNES / Equipamento.def e Leitos_Especialidade.def; Portaria SAES/MS 1.202, de dezembro de 2023; Informe Técnico SIA/SUS de julho de 2019; edições locais SIGTAP. O catálogo registra as mudanças de configuração sem atribuir equivalência automática entre procedimentos. Os recibos de cada competência documentam os campos efetivamente lidos e a verificação do original.

@@ -8,27 +8,27 @@ tcc_cardiovascular,granularidade_preservada,SIH;SIA;CNES;SIGTAP:mensal,consolida
 tcc_cardiovascular,apresentacao_principal,anual,consolidada,D2 Q5
 tcc_cardiovascular,cid_universo,I00-I99,consolidada,D2 Q9
 tcc_cardiovascular,cid_iam,,pendente_metodologica,D2 Q10/Q25
-tcc_cardiovascular,territorio_tabela_central,metadata/territorio/correspondencia_municipio_regiao_v2.csv,pendente_fonte_oficial,D1 §7; D2 §6
-tcc_cardiovascular,territorio_versao,,pendente_fonte_oficial,D2 §6/Q25
-tcc_cardiovascular,territorio_sha256,,pendente_fonte_oficial,D2 §6; complemento §7
-tcc_cardiovascular,territorio_data_classificacao,,pendente_fonte_oficial,D2 §6
+tcc_cardiovascular,territorio_tabela_central,metadata/territorio/pdr_es_2024_tcc_v1.csv,conferida,Mandato pós-auditoria §3.2
+tcc_cardiovascular,territorio_versao,PDR_ES_2024_CIB259_TCC_v1,conferida,Mandato pós-auditoria §3.2
+tcc_cardiovascular,territorio_sha256,681c0031cf830dffdaa18085bddffba472c7c07e8cc1ce85e5f2c5a7cbfd692e,conferida,Mandato pós-auditoria §3.2
+tcc_cardiovascular,territorio_data_classificacao,2024-12-20,conferida,Mandato pós-auditoria §3.2
 tcc_cardiovascular,territorio_modo,retrospectivo_congelado,consolidada,D2 §6.1
-tcc_cardiovascular,referencia_territorial_documental,PDR ES 2024; nao_consultado,referencia_a_verificar,D2 §6.1/referências
+tcc_cardiovascular,referencia_territorial_documental,CIB/SUS-ES 259/2024 Anexo III pp. 6–9,conferida,Mandato pós-auditoria §3.2
 tcc_cardiovascular,regioes_principais,Norte;Central;Metropolitana;Sul,consolidada,D2 §6.1
-tcc_cardiovascular,recorte_focal,Noroeste 1,consolidada,D2 §6.2
-tcc_cardiovascular,recorte_focal_nivel,subregional,consolidada,D2 Q6
-tcc_cardiovascular,recorte_focal_regiao_pai,Norte,consolidada,D2 §6.2
-tcc_cardiovascular,recorte_focal_municipios_ref,,pendente_fonte_oficial,D2 Q25
-tcc_cardiovascular,comparacoes_focais,Noroeste 1:Norte;Noroeste 1:ES,consolidada,D2 Q18
+tcc_cardiovascular,recorte_focal,Norte,conferida,Mandato pós-auditoria §3.2
+tcc_cardiovascular,recorte_focal_nivel,regiao,conferida,Mandato pós-auditoria §3.2
+tcc_cardiovascular,recorte_focal_regiao_pai,ES,conferida,Mandato pós-auditoria §3.2
+tcc_cardiovascular,recorte_focal_municipios_ref,metadata/territorio/pdr_es_2024_tcc_v1.csv,conferida,Mandato pós-auditoria §3.2
+tcc_cardiovascular,comparacoes_focais,Norte:ES,conferida,Mandato pós-auditoria §3.2
 tcc_cardiovascular,conjuntos_focais,sobrepostos_nao_somaveis_nao_independentes,consolidada,complemento §7
-tcc_cardiovascular,populacao_fonte_versao,,pendente_fonte_oficial,D2 Q25
+tcc_cardiovascular,populacao_fonte_versao,RIPSA DEM.1.01 municipal dezembro; SHA-256 do extrato ES 4d8f803af27f7f1b5a828317be0b9d3b8d27e60d44ece017b8aa949c85b7edde,margens_conferidas,CP03; config/estudos/fontes_taxas_camila.csv
 tcc_cardiovascular,populacao_denominador,residente_total;estratos_compativeis,consolidada,D2 §8
 tcc_cardiovascular,subtrair_ANS,nao,consolidada,D2 §8
 tcc_cardiovascular,mortalidade_campo,causa_basica,consolidada,D2 §11
 tcc_cardiovascular,mortalidade_territorio,residencia,consolidada,D2 §11
 tcc_cardiovascular,padronizacao_metodo,direto,consolidada,D2 §11.1
 tcc_cardiovascular,padronizacao_padrao,Brasil_Censo_2010,consolidada,D2 §11.1
-tcc_cardiovascular,padrao_pesos_fonte_hash,,pendente_fonte_oficial,D2 §11.1
+tcc_cardiovascular,padrao_pesos_fonte_hash,6c2996f07ddc47b3d9e8d84adadc956f5db1f52ef41d28a4dd0073952b65e3c2,reproduzido,Brasil Censo 2010; POPSVS/CP03
 tcc_cardiovascular,estratos_calculo,0-4;5-9;10-14;15-19;20-24;25-29;30-34;35-39;40-44;45-49;50-54;55-59;60-64;65-69;70-74;75-79;80-84;85+,consolidada,D2 §11.1
 tcc_cardiovascular,faixas_apresentacao,<30;30-39;40-49;50-59;60-69;70-79;80+,consolidada,D2 Q12
 tcc_cardiovascular,mortalidade_prematura_idades,30-69,consolidada,D2 §11.1
