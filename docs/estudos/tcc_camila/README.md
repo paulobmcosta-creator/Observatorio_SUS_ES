@@ -13,3 +13,7 @@ O [README metodológico da base 8308611 da PR 83](README_BASE_PR83_8308611.md) p
 ## Orientações acadêmicas para a estudante (21/11/2026)
 
 O [guia de leitura da Camila](GUIA_ACADEMICO_CAMILA_2026.md) e a [matriz de perguntas e resultados](MATRIZ_ORIENTADORA_CAMILA_2026.md) apresentam os indicadores em linguagem acadêmica mais direta, distinguindo os arquivos científicos dos textos de orientação. A regressão de Prais–Winsten permanece pendente. A revisão não altera o conteúdo dos 318 resultados originais nem substitui a redação do TCC pela estudante.
+
+## Decisões metodológicas atuais
+
+As [decisões de 21/11/2026](DECISOES_ORIENTADOR_2026-11-21.md) confirmam a **Região Norte** como território focal entre as quatro Regiões de Saúde e o **Censo Brasil 2022** como padrão etário principal, com 2010 para sensibilidade. A decisão sobre execução de **Prais–Winsten** permanece adiada. O manuscrito original não foi alterado.

@@ -4,6 +4,8 @@
 
 Este texto acompanha a revisão editorial de 21 de novembro de 2026 dos materiais destinados à estudante Camila Moreira dos Santos. A finalidade é facilitar a seleção e interpretação das tabelas e figuras, sem substituir a autoria acadêmica da estudante nem reescrever seu TCC.
 
+Consulte primeiro as [decisões metodológicas do orientador](DECISOES_ORIENTADOR_2026-11-21.md): território e padrão etário estão definidos; somente a deliberação sobre Prais–Winsten permanece adiada.
+
 ## Como começar
 
 Parta dos seis objetivos do manuscrito: mortalidade e internações; produção ambulatorial e alta complexidade; capacidade instalada; fluxos assistenciais; comparação regional; integração das dimensões para a gestão. Para cada objetivo, escolha indicadores que efetivamente respondam à pergunta e verifique a unidade, o período, o território, o numerador e o denominador antes de interpretar um valor.
@@ -34,11 +36,11 @@ CNES registra capacidade cadastrada, e SIA/SIH registram produção administrati
 
 Não há necessidade de inserir todos os produtos no TCC. Escolha poucas figuras e tabelas, apresente a pergunta antes de cada elemento, coloque título acima e fonte abaixo e explique seu significado no texto. Declare fonte, período, território, universo e unidade. A análise e a discussão serão redigidas pela Camila e relacionadas à literatura de Administração Pública, regionalização, planejamento e avaliação em saúde. Evite relações causais não demonstradas.
 
-## Pendências que permanecem
+## Decisões consolidadas e pendências
 
-**Prais–Winsten não foi executado nem homologado.** Não há estimativas de variação percentual anual, intervalos de confiança ou significância estatística a inserir. A análise foi mantida pendente por decisão da orientação.
+**Prais–Winsten não foi executado nem homologado.** Não há estimativas de variação percentual anual, intervalos de confiança ou significância estatística a inserir. O orientador adiou a decisão de executar ou não esse procedimento.
 
-**Território:** os resultados homologados aprofundam a Região Norte; o manuscrito recente menciona Noroeste 1. Sua equivalência não está estabelecida, e a harmonização exige decisão acadêmica.
+**Território:** os resultados homologados aprofundam a Região Norte; o manuscrito recente menciona Noroeste 1. Em 21/11/2026, o orientador definiu a **Região Norte** como recorte focal (alternativa A); Noroeste 1 poderá ser discutido historicamente, mas não constituirá agregado quantitativo focal. A adequação do manuscrito será feita pelo orientador.
 
 **SIM 2024:** a edição federal adotada identificou 7.990 óbitos de residentes por causa básica final I00–I99; documentos estaduais registram valores de outros cortes, como 7.248 e 8.062. Não se comprovou a causa da diferença por conciliação individual.
 

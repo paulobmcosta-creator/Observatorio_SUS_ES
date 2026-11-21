@@ -12,4 +12,4 @@ Esta matriz não é uma estrutura obrigatória de capítulos. Seu uso depende da
 | Como diferem as quatro Regiões de Saúde? | T20, T29 e mapas | Territórios e denominadores comparáveis |
 | O que a integração pode contribuir para a gestão? | Matriz de carga, oferta, produção e fluxo | Evitar conclusão causal sem desenho apropriado |
 
-**Pendente:** regressão de Prais–Winsten; compatibilização territorial Região Norte versus Noroeste 1; redação do manuscrito quanto à população-padrão 2022/2010. A estudante elaborará o capítulo de Resultados e a Discussão.
+**Decisões do orientador de 21/11/2026:** quatro Regiões de Saúde com foco na **Região Norte**; **Brasil/Censo 2022** como padrão etário principal e **Brasil/Censo 2010** para sensibilidade. **Prais–Winsten:** decisão de execução adiada, sem resultados inferenciais homologados. As atualizações do objetivo e da metodologia no manuscrito caberão ao orientador; Camila elaborará seus capítulos de Resultados e Discussão. Veja [decisões completas](DECISOES_ORIENTADOR_2026-11-21.md).
