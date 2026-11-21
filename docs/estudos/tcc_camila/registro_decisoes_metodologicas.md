@@ -228,3 +228,35 @@ As definições clínicas permanecem as homologadas no catálogo histórico. Os 
 | TCC-MOD-046 · Distinguir reprodução local e contraprova executada na integração contínua | Registrar ambiente, revisão e resultado da contraprova sintética de AIHs no R e SQL. Os recibos privados identificam os commits e o conteúdo revisado para sincronização. A edição documental conserva o vínculo com os manifestos da base quantitativa. | Atualizar o apêndice de reprodução e separar a validação do pacote da validação externa dos desfechos. |
 
 O registro cumulativo preserva as decisões anteriores. O manual e o roteiro da edição complementar retomam a diferença entre o aprofundamento homologado na Região Norte e a redação sobre Noroeste 1, cuja revisão cabe à estudante e ao orientador.
+
+## Edição v3.4 — aprofundamento quantitativo e investigação institucional
+
+| Decisão | Validação e consequência | Incorporação futura ao manuscrito |
+|---|---|---|
+| TCC-MOD-047 · Manter a edição federal do SIM e documentar os cortes dos RAGs | A comparação de margens depende das consultas históricas dos órgãos responsáveis. O expediente de reconciliação fica no dossiê institucional. | Identificar versão, ano de ocorrência, residência e códigos nas notas de mortalidade. |
+| TCC-MOD-048 · Medir entradas, permanências e saídas de I50 por pareamento | Confrontar as margens mensais e anuais com a série de referência, mantendo separados os conceitos ampliado e de menção. A atribuição de um mecanismo permanece sujeita a evidência externa. | Expor as quatro definições e a cautela ao comparar a série antes e depois da mudança. |
+| TCC-MOD-049 · Priorizar as quatro Regiões de Saúde para comparações longitudinais | Preservar contagens, populações e taxas observadas dos municípios. Comparações anuais de pequenas contagens exigem contexto sobre denominadores, composição etária e precisão. | Incluir o diagnóstico por estrato nas notas e manter o aprofundamento da Região Norte no TCC. |
+| TCC-MOD-050 · Integrar os sistemas após reduzir cada fonte a uma linha por CNES e competência | Medir produção e cadastro separadamente, auditar chaves, territórios e relógios distintos e informar o denominador das proporções. Distinguir coexistência anual de coexistência no mesmo mês. | Descrever a abrangência dos prestadores, os recursos considerados e os limites para inferir funcionamento. |
+| TCC-MOD-051 · Estender a observação da produção de 2024 como análise de sensibilidade | Manter a janela inicial como referência, quantificar os movimentos adicionais, confrontar assinaturas entre movimentos e preservar cenários de sobreposição. | Identificar a janela de movimento, a competência de produção e a unidade em cada tabela. |
+| TCC-MOD-052 · Classificar a disponibilidade da residência por instrumento | Exigir elegibilidade mensal e código territorial válido. Separar a produção por prestador da origem identificável e registrar a abrangência territorial da fonte. | Limitar os fluxos ambulatoriais ao subconjunto identificado, distinguindo procedimentos e pessoas. |
+
+## Edição complementar v3.4.1 — universos cadastrais e sobreposições
+
+| Decisão | Verificação e consequência metodológica | Incorporação futura ao TCC |
+|---|---|---|
+| TCC-MOD-053 · Qualificar o denominador por modalidade | Distinguir SR116 e suas classes, indicação ambulatorial SUS, equipamentos em uso, habilitações, leitos, vínculos e produção específica. O indicador composto conserva a seleção da v3.4. Equipamento compartilhável e classificação composta exigem identificação. | Nas tabelas de oferta e produção, nomear a fonte, o critério e o denominador de cada proporção. |
+| TCC-MOD-054 · Distinguir interseções inclusivas e exclusivas | Construir os padrões após deduplicação por CNES, competência e território. Conservar a combinação exterior e validar as margens contra as fontes e a nota independente. | Nas figuras de sobreposição, identificar a ordem dos conjuntos, a tabela de apoio e o caráter esquemático da área. |
+| TCC-MOD-055 · Diferenciar pertencimento anual e coincidência administrativa | Preservar competência cadastral, de produção no PA e de processamento no SIH. A análise anual da oferta utiliza a mesma janela congelada da matriz de referência. | Explicitar o período e o significado das duas direções da proporção. Para o Norte, informar também numerador e denominador. |
+| TCC-MOD-056 · Preservar domínios parciais e provisórios | Conferir o domínio histórico dos códigos e usar o inventário completo de estoques para as séries provisórias de UCO. A disponibilidade de ecocardiógrafo dedicado permanece indeterminada no catálogo validado. | Distinguir estoque cadastrado, produção observada e funcionamento operacional em legenda, metodologia e discussão posterior. |
+
+## Edição candidata v3.4.3 — deliberações de ciência aberta
+
+| Decisão e responsável | Validação | Consequência para utilização e futura revisão do manuscrito |
+|---|---|---|
+| A coordenação homologou a preparação integral dos padrões estaduais V01–V03. | Avaliação conjunta de 24 células, dos complementos e dos denominadores, sem supressão. | Incluir na metodologia o nível administrativo da unidade e a distinção entre ano e competência. |
+| Revisão de direitos por edição e componente. | Identificação de licença do conjunto SIM e lacunas para partições DBC históricas e titularidade do código legado. | Revisar atribuições de tabelas e figuras na futura versão acadêmica. |
+| Três pilotos oficiais delimitados e teste independente R/SQL. | Comparações por ano/competência e confronto de todas as chaves regionais e padrões selecionados. | Descrever o alcance do Nível III-Piloto. O Nível III-Integral é projeto posterior da plataforma. |
+
+## Candidata v3.5.1
+
+A coordenação incluiu os 318 resultados originais, com os 13 arquivos detalhados e seus suplementos. O inventário integral e os critérios de interpretação constam em [Resultados completos](RESULTADOS_COMPLETOS.md). O manifesto de 17 arquivos conserva sua função na reprodução selecionada. A decisão de divulgação preserva a atribuição das fontes e a distinção entre autoria técnica e acadêmica.

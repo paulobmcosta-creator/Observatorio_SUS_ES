@@ -5,3 +5,10 @@ metadata/territorio/pdr_es_2024_tcc_v1.csv -text whitespace=trailing-space,space
 config/estudos/edicoes_sim_camila.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
 config/estudos/tcc_cardiovascular.csv whitespace=trailing-space,space-before-tab,cr-at-eol
 docs/estudos/tcc_camila/inspecao_consolidado.csv whitespace=trailing-space,space-before-tab,cr-at-eol
+
+# Arquivos certificados por SHA-256 conservam os bytes de origem em qualquer checkout.
+resultados_publicos/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+docs/estudos/tcc_camila/documentacao_de_origem/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+docs/estudos/tcc_camila/MANIFESTO_PUBLICO.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
+# SVGs científicos gerados mantêm espaços nos atributos de caminho e hashes homologados.
+resultados_publicos/**/*.svg -text whitespace=-trailing-space,space-before-tab,cr-at-eol

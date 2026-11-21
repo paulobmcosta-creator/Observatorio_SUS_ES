@@ -1,0 +1,1001 @@
+universo,regiao,medida,independente,calculado,igual
+CNES cadastrados,ES,estabelecimentos,9536.0,9536.0,True
+CNES cadastrados,ES,com_PA_especifico_ano,208.0,208.0,True
+CNES cadastrados,ES,com_SIH_cardiovascular_ano,70.0,70.0,True
+CNES cadastrados,ES,com_PA_ou_SIH_ano,221.0,221.0,True
+CNES cadastrados,ES,com_PA_e_SIH_ano,57.0,57.0,True
+CNES cadastrados,ES,com_PA_mes_coincidente,208.0,208.0,True
+CNES cadastrados,ES,com_SIH_mes_coincidente,70.0,70.0,True
+CNES cadastrados,ES,porcentagem_com_PA_ano,2.18,2.18,True
+CNES cadastrados,Metropolitana,estabelecimentos,5005.0,5005.0,True
+CNES cadastrados,Metropolitana,com_PA_especifico_ano,93.0,93.0,True
+CNES cadastrados,Metropolitana,com_SIH_cardiovascular_ano,32.0,32.0,True
+CNES cadastrados,Metropolitana,com_PA_ou_SIH_ano,100.0,100.0,True
+CNES cadastrados,Metropolitana,com_PA_e_SIH_ano,25.0,25.0,True
+CNES cadastrados,Metropolitana,com_PA_mes_coincidente,93.0,93.0,True
+CNES cadastrados,Metropolitana,com_SIH_mes_coincidente,32.0,32.0,True
+CNES cadastrados,Metropolitana,porcentagem_com_PA_ano,1.86,1.86,True
+CNES cadastrados,Sul,estabelecimentos,1881.0,1881.0,True
+CNES cadastrados,Sul,com_PA_especifico_ano,53.0,53.0,True
+CNES cadastrados,Sul,com_SIH_cardiovascular_ano,18.0,18.0,True
+CNES cadastrados,Sul,com_PA_ou_SIH_ano,55.0,55.0,True
+CNES cadastrados,Sul,com_PA_e_SIH_ano,16.0,16.0,True
+CNES cadastrados,Sul,com_PA_mes_coincidente,53.0,53.0,True
+CNES cadastrados,Sul,com_SIH_mes_coincidente,18.0,18.0,True
+CNES cadastrados,Sul,porcentagem_com_PA_ano,2.82,2.82,True
+CNES cadastrados,Norte,estabelecimentos,942.0,942.0,True
+CNES cadastrados,Norte,com_PA_especifico_ano,28.0,28.0,True
+CNES cadastrados,Norte,com_SIH_cardiovascular_ano,11.0,11.0,True
+CNES cadastrados,Norte,com_PA_ou_SIH_ano,32.0,32.0,True
+CNES cadastrados,Norte,com_PA_e_SIH_ano,7.0,7.0,True
+CNES cadastrados,Norte,com_PA_mes_coincidente,28.0,28.0,True
+CNES cadastrados,Norte,com_SIH_mes_coincidente,11.0,11.0,True
+CNES cadastrados,Norte,porcentagem_com_PA_ano,2.97,2.97,True
+CNES cadastrados,Central,estabelecimentos,1708.0,1708.0,True
+CNES cadastrados,Central,com_PA_especifico_ano,34.0,34.0,True
+CNES cadastrados,Central,com_SIH_cardiovascular_ano,9.0,9.0,True
+CNES cadastrados,Central,com_PA_ou_SIH_ano,34.0,34.0,True
+CNES cadastrados,Central,com_PA_e_SIH_ano,9.0,9.0,True
+CNES cadastrados,Central,com_PA_mes_coincidente,34.0,34.0,True
+CNES cadastrados,Central,com_SIH_mes_coincidente,9.0,9.0,True
+CNES cadastrados,Central,porcentagem_com_PA_ano,1.99,1.99,True
+Vinculo SUS,ES,estabelecimentos,2092.0,2092.0,True
+Vinculo SUS,ES,com_PA_especifico_ano,208.0,208.0,True
+Vinculo SUS,ES,com_SIH_cardiovascular_ano,70.0,70.0,True
+Vinculo SUS,ES,com_PA_ou_SIH_ano,221.0,221.0,True
+Vinculo SUS,ES,com_PA_e_SIH_ano,57.0,57.0,True
+Vinculo SUS,ES,com_PA_mes_coincidente,208.0,208.0,True
+Vinculo SUS,ES,com_SIH_mes_coincidente,70.0,70.0,True
+Vinculo SUS,ES,porcentagem_com_PA_ano,9.94,9.94,True
+Vinculo SUS,Metropolitana,estabelecimentos,804.0,804.0,True
+Vinculo SUS,Metropolitana,com_PA_especifico_ano,93.0,93.0,True
+Vinculo SUS,Metropolitana,com_SIH_cardiovascular_ano,32.0,32.0,True
+Vinculo SUS,Metropolitana,com_PA_ou_SIH_ano,100.0,100.0,True
+Vinculo SUS,Metropolitana,com_PA_e_SIH_ano,25.0,25.0,True
+Vinculo SUS,Metropolitana,com_PA_mes_coincidente,93.0,93.0,True
+Vinculo SUS,Metropolitana,com_SIH_mes_coincidente,32.0,32.0,True
+Vinculo SUS,Metropolitana,porcentagem_com_PA_ano,11.57,11.57,True
+Vinculo SUS,Norte,estabelecimentos,313.0,313.0,True
+Vinculo SUS,Norte,com_PA_especifico_ano,28.0,28.0,True
+Vinculo SUS,Norte,com_SIH_cardiovascular_ano,11.0,11.0,True
+Vinculo SUS,Norte,com_PA_ou_SIH_ano,32.0,32.0,True
+Vinculo SUS,Norte,com_PA_e_SIH_ano,7.0,7.0,True
+Vinculo SUS,Norte,com_PA_mes_coincidente,28.0,28.0,True
+Vinculo SUS,Norte,com_SIH_mes_coincidente,11.0,11.0,True
+Vinculo SUS,Norte,porcentagem_com_PA_ano,8.95,8.95,True
+Vinculo SUS,Central,estabelecimentos,418.0,418.0,True
+Vinculo SUS,Central,com_PA_especifico_ano,34.0,34.0,True
+Vinculo SUS,Central,com_SIH_cardiovascular_ano,9.0,9.0,True
+Vinculo SUS,Central,com_PA_ou_SIH_ano,34.0,34.0,True
+Vinculo SUS,Central,com_PA_e_SIH_ano,9.0,9.0,True
+Vinculo SUS,Central,com_PA_mes_coincidente,34.0,34.0,True
+Vinculo SUS,Central,com_SIH_mes_coincidente,9.0,9.0,True
+Vinculo SUS,Central,porcentagem_com_PA_ano,8.13,8.13,True
+Vinculo SUS,Sul,estabelecimentos,557.0,557.0,True
+Vinculo SUS,Sul,com_PA_especifico_ano,53.0,53.0,True
+Vinculo SUS,Sul,com_SIH_cardiovascular_ano,18.0,18.0,True
+Vinculo SUS,Sul,com_PA_ou_SIH_ano,55.0,55.0,True
+Vinculo SUS,Sul,com_PA_e_SIH_ano,16.0,16.0,True
+Vinculo SUS,Sul,com_PA_mes_coincidente,53.0,53.0,True
+Vinculo SUS,Sul,com_SIH_mes_coincidente,18.0,18.0,True
+Vinculo SUS,Sul,porcentagem_com_PA_ano,9.52,9.52,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Metropolitana,estabelecimentos,331.0,331.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Metropolitana,com_PA_especifico_ano,47.0,47.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Metropolitana,com_SIH_cardiovascular_ano,28.0,28.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Metropolitana,com_PA_ou_SIH_ano,51.0,51.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Metropolitana,com_PA_e_SIH_ano,24.0,24.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Metropolitana,com_PA_mes_coincidente,47.0,47.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Metropolitana,com_SIH_mes_coincidente,28.0,28.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Metropolitana,porcentagem_com_PA_ano,14.2,14.2,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Norte,estabelecimentos,57.0,57.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Norte,com_PA_especifico_ano,11.0,11.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Norte,com_SIH_cardiovascular_ano,7.0,7.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Norte,com_PA_ou_SIH_ano,14.0,14.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Norte,com_PA_e_SIH_ano,4.0,4.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Norte,com_PA_mes_coincidente,10.0,10.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Norte,com_SIH_mes_coincidente,7.0,7.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Norte,porcentagem_com_PA_ano,19.3,19.3,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Central,estabelecimentos,121.0,121.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Central,com_PA_especifico_ano,23.0,23.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Central,com_SIH_cardiovascular_ano,7.0,7.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Central,com_PA_ou_SIH_ano,23.0,23.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Central,com_PA_e_SIH_ano,7.0,7.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Central,com_PA_mes_coincidente,23.0,23.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Central,com_SIH_mes_coincidente,7.0,7.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Central,porcentagem_com_PA_ano,19.01,19.01,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Sul,estabelecimentos,109.0,109.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Sul,com_PA_especifico_ano,30.0,30.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Sul,com_SIH_cardiovascular_ano,14.0,14.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Sul,com_PA_ou_SIH_ano,32.0,32.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Sul,com_PA_e_SIH_ano,12.0,12.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Sul,com_PA_mes_coincidente,30.0,30.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Sul,com_SIH_mes_coincidente,14.0,14.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),Sul,porcentagem_com_PA_ano,27.52,27.52,True
+Recurso cardiovascular selecionado (algoritmo v3.4),ES,estabelecimentos,618.0,618.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),ES,com_PA_especifico_ano,111.0,111.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),ES,com_SIH_cardiovascular_ano,56.0,56.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),ES,com_PA_ou_SIH_ano,120.0,120.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),ES,com_PA_e_SIH_ano,47.0,47.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),ES,com_PA_mes_coincidente,110.0,110.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),ES,com_SIH_mes_coincidente,56.0,56.0,True
+Recurso cardiovascular selecionado (algoritmo v3.4),ES,porcentagem_com_PA_ano,17.96,17.96,True
+Servico SR116 (agregado v3.4),ES,estabelecimentos,143.0,143.0,True
+Servico SR116 (agregado v3.4),ES,com_PA_especifico_ano,32.0,32.0,True
+Servico SR116 (agregado v3.4),ES,com_SIH_cardiovascular_ano,22.0,22.0,True
+Servico SR116 (agregado v3.4),ES,com_PA_ou_SIH_ano,35.0,35.0,True
+Servico SR116 (agregado v3.4),ES,com_PA_e_SIH_ano,19.0,19.0,True
+Servico SR116 (agregado v3.4),ES,com_PA_mes_coincidente,32.0,32.0,True
+Servico SR116 (agregado v3.4),ES,com_SIH_mes_coincidente,22.0,22.0,True
+Servico SR116 (agregado v3.4),ES,porcentagem_com_PA_ano,22.38,22.38,True
+Servico SR116 (agregado v3.4),Metropolitana,estabelecimentos,78.0,78.0,True
+Servico SR116 (agregado v3.4),Metropolitana,com_PA_especifico_ano,15.0,15.0,True
+Servico SR116 (agregado v3.4),Metropolitana,com_SIH_cardiovascular_ano,11.0,11.0,True
+Servico SR116 (agregado v3.4),Metropolitana,com_PA_ou_SIH_ano,16.0,16.0,True
+Servico SR116 (agregado v3.4),Metropolitana,com_PA_e_SIH_ano,10.0,10.0,True
+Servico SR116 (agregado v3.4),Metropolitana,com_PA_mes_coincidente,15.0,15.0,True
+Servico SR116 (agregado v3.4),Metropolitana,com_SIH_mes_coincidente,11.0,11.0,True
+Servico SR116 (agregado v3.4),Metropolitana,porcentagem_com_PA_ano,19.23,19.23,True
+Servico SR116 (agregado v3.4),Central,estabelecimentos,37.0,37.0,True
+Servico SR116 (agregado v3.4),Central,com_PA_especifico_ano,9.0,9.0,True
+Servico SR116 (agregado v3.4),Central,com_SIH_cardiovascular_ano,5.0,5.0,True
+Servico SR116 (agregado v3.4),Central,com_PA_ou_SIH_ano,9.0,9.0,True
+Servico SR116 (agregado v3.4),Central,com_PA_e_SIH_ano,5.0,5.0,True
+Servico SR116 (agregado v3.4),Central,com_PA_mes_coincidente,9.0,9.0,True
+Servico SR116 (agregado v3.4),Central,com_SIH_mes_coincidente,5.0,5.0,True
+Servico SR116 (agregado v3.4),Central,porcentagem_com_PA_ano,24.32,24.32,True
+Servico SR116 (agregado v3.4),Sul,estabelecimentos,15.0,15.0,True
+Servico SR116 (agregado v3.4),Sul,com_PA_especifico_ano,7.0,7.0,True
+Servico SR116 (agregado v3.4),Sul,com_SIH_cardiovascular_ano,6.0,6.0,True
+Servico SR116 (agregado v3.4),Sul,com_PA_ou_SIH_ano,9.0,9.0,True
+Servico SR116 (agregado v3.4),Sul,com_PA_e_SIH_ano,4.0,4.0,True
+Servico SR116 (agregado v3.4),Sul,com_PA_mes_coincidente,7.0,7.0,True
+Servico SR116 (agregado v3.4),Sul,com_SIH_mes_coincidente,6.0,6.0,True
+Servico SR116 (agregado v3.4),Sul,porcentagem_com_PA_ano,46.67,46.67,True
+Servico SR116 (agregado v3.4),Norte,estabelecimentos,13.0,13.0,True
+Servico SR116 (agregado v3.4),Norte,com_PA_especifico_ano,1.0,1.0,True
+Servico SR116 (agregado v3.4),Norte,com_SIH_cardiovascular_ano,0.0,0.0,True
+Servico SR116 (agregado v3.4),Norte,com_PA_ou_SIH_ano,1.0,1.0,True
+Servico SR116 (agregado v3.4),Norte,com_PA_e_SIH_ano,0.0,0.0,True
+Servico SR116 (agregado v3.4),Norte,com_PA_mes_coincidente,1.0,1.0,True
+Servico SR116 (agregado v3.4),Norte,com_SIH_mes_coincidente,0.0,0.0,True
+Servico SR116 (agregado v3.4),Norte,porcentagem_com_PA_ano,7.69,7.69,True
+SIA/PA especifico observado,ES,estabelecimentos,208.0,208.0,True
+SIA/PA especifico observado,ES,com_PA_especifico_ano,208.0,208.0,True
+SIA/PA especifico observado,ES,com_SIH_cardiovascular_ano,57.0,57.0,True
+SIA/PA especifico observado,ES,com_PA_ou_SIH_ano,208.0,208.0,True
+SIA/PA especifico observado,ES,com_PA_e_SIH_ano,57.0,57.0,True
+SIA/PA especifico observado,ES,com_PA_mes_coincidente,208.0,208.0,True
+SIA/PA especifico observado,ES,com_SIH_mes_coincidente,56.0,56.0,True
+SIA/PA especifico observado,ES,porcentagem_com_PA_ano,100.0,100.0,True
+SIA/PA especifico observado,Metropolitana,estabelecimentos,93.0,93.0,True
+SIA/PA especifico observado,Metropolitana,com_PA_especifico_ano,93.0,93.0,True
+SIA/PA especifico observado,Metropolitana,com_SIH_cardiovascular_ano,25.0,25.0,True
+SIA/PA especifico observado,Metropolitana,com_PA_ou_SIH_ano,93.0,93.0,True
+SIA/PA especifico observado,Metropolitana,com_PA_e_SIH_ano,25.0,25.0,True
+SIA/PA especifico observado,Metropolitana,com_PA_mes_coincidente,93.0,93.0,True
+SIA/PA especifico observado,Metropolitana,com_SIH_mes_coincidente,24.0,24.0,True
+SIA/PA especifico observado,Metropolitana,porcentagem_com_PA_ano,100.0,100.0,True
+SIA/PA especifico observado,Norte,estabelecimentos,28.0,28.0,True
+SIA/PA especifico observado,Norte,com_PA_especifico_ano,28.0,28.0,True
+SIA/PA especifico observado,Norte,com_SIH_cardiovascular_ano,7.0,7.0,True
+SIA/PA especifico observado,Norte,com_PA_ou_SIH_ano,28.0,28.0,True
+SIA/PA especifico observado,Norte,com_PA_e_SIH_ano,7.0,7.0,True
+SIA/PA especifico observado,Norte,com_PA_mes_coincidente,28.0,28.0,True
+SIA/PA especifico observado,Norte,com_SIH_mes_coincidente,7.0,7.0,True
+SIA/PA especifico observado,Norte,porcentagem_com_PA_ano,100.0,100.0,True
+SIA/PA especifico observado,Central,estabelecimentos,34.0,34.0,True
+SIA/PA especifico observado,Central,com_PA_especifico_ano,34.0,34.0,True
+SIA/PA especifico observado,Central,com_SIH_cardiovascular_ano,9.0,9.0,True
+SIA/PA especifico observado,Central,com_PA_ou_SIH_ano,34.0,34.0,True
+SIA/PA especifico observado,Central,com_PA_e_SIH_ano,9.0,9.0,True
+SIA/PA especifico observado,Central,com_PA_mes_coincidente,34.0,34.0,True
+SIA/PA especifico observado,Central,com_SIH_mes_coincidente,9.0,9.0,True
+SIA/PA especifico observado,Central,porcentagem_com_PA_ano,100.0,100.0,True
+SIA/PA especifico observado,Sul,estabelecimentos,53.0,53.0,True
+SIA/PA especifico observado,Sul,com_PA_especifico_ano,53.0,53.0,True
+SIA/PA especifico observado,Sul,com_SIH_cardiovascular_ano,16.0,16.0,True
+SIA/PA especifico observado,Sul,com_PA_ou_SIH_ano,53.0,53.0,True
+SIA/PA especifico observado,Sul,com_PA_e_SIH_ano,16.0,16.0,True
+SIA/PA especifico observado,Sul,com_PA_mes_coincidente,53.0,53.0,True
+SIA/PA especifico observado,Sul,com_SIH_mes_coincidente,16.0,16.0,True
+SIA/PA especifico observado,Sul,porcentagem_com_PA_ano,100.0,100.0,True
+SIA contextual observado,ES,estabelecimentos,140.0,140.0,True
+SIA contextual observado,ES,com_PA_especifico_ano,114.0,114.0,True
+SIA contextual observado,ES,com_SIH_cardiovascular_ano,45.0,45.0,True
+SIA contextual observado,ES,com_PA_ou_SIH_ano,117.0,117.0,True
+SIA contextual observado,ES,com_PA_e_SIH_ano,42.0,42.0,True
+SIA contextual observado,ES,com_PA_mes_coincidente,113.0,113.0,True
+SIA contextual observado,ES,com_SIH_mes_coincidente,43.0,43.0,True
+SIA contextual observado,ES,porcentagem_com_PA_ano,81.43,81.43,True
+SIA contextual observado,Metropolitana,estabelecimentos,57.0,57.0,True
+SIA contextual observado,Metropolitana,com_PA_especifico_ano,44.0,44.0,True
+SIA contextual observado,Metropolitana,com_SIH_cardiovascular_ano,23.0,23.0,True
+SIA contextual observado,Metropolitana,com_PA_ou_SIH_ano,46.0,46.0,True
+SIA contextual observado,Metropolitana,com_PA_e_SIH_ano,21.0,21.0,True
+SIA contextual observado,Metropolitana,com_PA_mes_coincidente,44.0,44.0,True
+SIA contextual observado,Metropolitana,com_SIH_mes_coincidente,22.0,22.0,True
+SIA contextual observado,Metropolitana,porcentagem_com_PA_ano,77.19,77.19,True
+SIA contextual observado,Norte,estabelecimentos,16.0,16.0,True
+SIA contextual observado,Norte,com_PA_especifico_ano,13.0,13.0,True
+SIA contextual observado,Norte,com_SIH_cardiovascular_ano,3.0,3.0,True
+SIA contextual observado,Norte,com_PA_ou_SIH_ano,13.0,13.0,True
+SIA contextual observado,Norte,com_PA_e_SIH_ano,3.0,3.0,True
+SIA contextual observado,Norte,com_PA_mes_coincidente,13.0,13.0,True
+SIA contextual observado,Norte,com_SIH_mes_coincidente,3.0,3.0,True
+SIA contextual observado,Norte,porcentagem_com_PA_ano,81.25,81.25,True
+SIA contextual observado,Central,estabelecimentos,25.0,25.0,True
+SIA contextual observado,Central,com_PA_especifico_ano,25.0,25.0,True
+SIA contextual observado,Central,com_SIH_cardiovascular_ano,6.0,6.0,True
+SIA contextual observado,Central,com_PA_ou_SIH_ano,25.0,25.0,True
+SIA contextual observado,Central,com_PA_e_SIH_ano,6.0,6.0,True
+SIA contextual observado,Central,com_PA_mes_coincidente,24.0,24.0,True
+SIA contextual observado,Central,com_SIH_mes_coincidente,6.0,6.0,True
+SIA contextual observado,Central,porcentagem_com_PA_ano,100.0,100.0,True
+SIA contextual observado,Sul,estabelecimentos,42.0,42.0,True
+SIA contextual observado,Sul,com_PA_especifico_ano,32.0,32.0,True
+SIA contextual observado,Sul,com_SIH_cardiovascular_ano,13.0,13.0,True
+SIA contextual observado,Sul,com_PA_ou_SIH_ano,33.0,33.0,True
+SIA contextual observado,Sul,com_PA_e_SIH_ano,12.0,12.0,True
+SIA contextual observado,Sul,com_PA_mes_coincidente,32.0,32.0,True
+SIA contextual observado,Sul,com_SIH_mes_coincidente,12.0,12.0,True
+SIA contextual observado,Sul,porcentagem_com_PA_ano,76.19,76.19,True
+Estrutura hospitalar cardiologica (algoritmo),Metropolitana,estabelecimentos,17.0,17.0,True
+Estrutura hospitalar cardiologica (algoritmo),Metropolitana,com_PA_especifico_ano,8.0,8.0,True
+Estrutura hospitalar cardiologica (algoritmo),Metropolitana,com_SIH_cardiovascular_ano,9.0,9.0,True
+Estrutura hospitalar cardiologica (algoritmo),Metropolitana,com_PA_ou_SIH_ano,9.0,9.0,True
+Estrutura hospitalar cardiologica (algoritmo),Metropolitana,com_PA_e_SIH_ano,8.0,8.0,True
+Estrutura hospitalar cardiologica (algoritmo),Metropolitana,com_PA_mes_coincidente,8.0,8.0,True
+Estrutura hospitalar cardiologica (algoritmo),Metropolitana,com_SIH_mes_coincidente,9.0,9.0,True
+Estrutura hospitalar cardiologica (algoritmo),Metropolitana,porcentagem_com_PA_ano,47.06,47.06,True
+Estrutura hospitalar cardiologica (algoritmo),Sul,estabelecimentos,4.0,4.0,True
+Estrutura hospitalar cardiologica (algoritmo),Sul,com_PA_especifico_ano,2.0,2.0,True
+Estrutura hospitalar cardiologica (algoritmo),Sul,com_SIH_cardiovascular_ano,4.0,4.0,True
+Estrutura hospitalar cardiologica (algoritmo),Sul,com_PA_ou_SIH_ano,4.0,4.0,True
+Estrutura hospitalar cardiologica (algoritmo),Sul,com_PA_e_SIH_ano,2.0,2.0,True
+Estrutura hospitalar cardiologica (algoritmo),Sul,com_PA_mes_coincidente,2.0,2.0,True
+Estrutura hospitalar cardiologica (algoritmo),Sul,com_SIH_mes_coincidente,4.0,4.0,True
+Estrutura hospitalar cardiologica (algoritmo),Sul,porcentagem_com_PA_ano,50.0,50.0,True
+Estrutura hospitalar cardiologica (algoritmo),Norte,estabelecimentos,2.0,2.0,True
+Estrutura hospitalar cardiologica (algoritmo),Norte,com_PA_especifico_ano,0.0,0.0,True
+Estrutura hospitalar cardiologica (algoritmo),Norte,com_SIH_cardiovascular_ano,0.0,0.0,True
+Estrutura hospitalar cardiologica (algoritmo),Norte,com_PA_ou_SIH_ano,0.0,0.0,True
+Estrutura hospitalar cardiologica (algoritmo),Norte,com_PA_e_SIH_ano,0.0,0.0,True
+Estrutura hospitalar cardiologica (algoritmo),Norte,com_PA_mes_coincidente,0.0,0.0,True
+Estrutura hospitalar cardiologica (algoritmo),Norte,com_SIH_mes_coincidente,0.0,0.0,True
+Estrutura hospitalar cardiologica (algoritmo),Norte,porcentagem_com_PA_ano,0.0,0.0,True
+Estrutura hospitalar cardiologica (algoritmo),Central,estabelecimentos,11.0,11.0,True
+Estrutura hospitalar cardiologica (algoritmo),Central,com_PA_especifico_ano,5.0,5.0,True
+Estrutura hospitalar cardiologica (algoritmo),Central,com_SIH_cardiovascular_ano,5.0,5.0,True
+Estrutura hospitalar cardiologica (algoritmo),Central,com_PA_ou_SIH_ano,5.0,5.0,True
+Estrutura hospitalar cardiologica (algoritmo),Central,com_PA_e_SIH_ano,5.0,5.0,True
+Estrutura hospitalar cardiologica (algoritmo),Central,com_PA_mes_coincidente,5.0,5.0,True
+Estrutura hospitalar cardiologica (algoritmo),Central,com_SIH_mes_coincidente,5.0,5.0,True
+Estrutura hospitalar cardiologica (algoritmo),Central,porcentagem_com_PA_ano,45.45,45.45,True
+Estrutura hospitalar cardiologica (algoritmo),ES,estabelecimentos,34.0,34.0,True
+Estrutura hospitalar cardiologica (algoritmo),ES,com_PA_especifico_ano,15.0,15.0,True
+Estrutura hospitalar cardiologica (algoritmo),ES,com_SIH_cardiovascular_ano,18.0,18.0,True
+Estrutura hospitalar cardiologica (algoritmo),ES,com_PA_ou_SIH_ano,18.0,18.0,True
+Estrutura hospitalar cardiologica (algoritmo),ES,com_PA_e_SIH_ano,15.0,15.0,True
+Estrutura hospitalar cardiologica (algoritmo),ES,com_PA_mes_coincidente,15.0,15.0,True
+Estrutura hospitalar cardiologica (algoritmo),ES,com_SIH_mes_coincidente,18.0,18.0,True
+Estrutura hospitalar cardiologica (algoritmo),ES,porcentagem_com_PA_ano,44.12,44.12,True
+Habilitacao cardiovascular (algoritmo),ES,estabelecimentos,9.0,9.0,True
+Habilitacao cardiovascular (algoritmo),ES,com_PA_especifico_ano,8.0,8.0,True
+Habilitacao cardiovascular (algoritmo),ES,com_SIH_cardiovascular_ano,9.0,9.0,True
+Habilitacao cardiovascular (algoritmo),ES,com_PA_ou_SIH_ano,9.0,9.0,True
+Habilitacao cardiovascular (algoritmo),ES,com_PA_e_SIH_ano,8.0,8.0,True
+Habilitacao cardiovascular (algoritmo),ES,com_PA_mes_coincidente,8.0,8.0,True
+Habilitacao cardiovascular (algoritmo),ES,com_SIH_mes_coincidente,9.0,9.0,True
+Habilitacao cardiovascular (algoritmo),ES,porcentagem_com_PA_ano,88.89,88.89,True
+Habilitacao cardiovascular (algoritmo),Metropolitana,estabelecimentos,6.0,6.0,True
+Habilitacao cardiovascular (algoritmo),Metropolitana,com_PA_especifico_ano,5.0,5.0,True
+Habilitacao cardiovascular (algoritmo),Metropolitana,com_SIH_cardiovascular_ano,6.0,6.0,True
+Habilitacao cardiovascular (algoritmo),Metropolitana,com_PA_ou_SIH_ano,6.0,6.0,True
+Habilitacao cardiovascular (algoritmo),Metropolitana,com_PA_e_SIH_ano,5.0,5.0,True
+Habilitacao cardiovascular (algoritmo),Metropolitana,com_PA_mes_coincidente,5.0,5.0,True
+Habilitacao cardiovascular (algoritmo),Metropolitana,com_SIH_mes_coincidente,6.0,6.0,True
+Habilitacao cardiovascular (algoritmo),Metropolitana,porcentagem_com_PA_ano,83.33,83.33,True
+Habilitacao cardiovascular (algoritmo),Norte,estabelecimentos,0.0,0.0,True
+Habilitacao cardiovascular (algoritmo),Norte,com_PA_especifico_ano,0.0,0.0,True
+Habilitacao cardiovascular (algoritmo),Norte,com_SIH_cardiovascular_ano,0.0,0.0,True
+Habilitacao cardiovascular (algoritmo),Norte,com_PA_ou_SIH_ano,0.0,0.0,True
+Habilitacao cardiovascular (algoritmo),Norte,com_PA_e_SIH_ano,0.0,0.0,True
+Habilitacao cardiovascular (algoritmo),Norte,com_PA_mes_coincidente,0.0,0.0,True
+Habilitacao cardiovascular (algoritmo),Norte,com_SIH_mes_coincidente,0.0,0.0,True
+Habilitacao cardiovascular (algoritmo),Norte,porcentagem_com_PA_ano,,,True
+Habilitacao cardiovascular (algoritmo),Central,estabelecimentos,2.0,2.0,True
+Habilitacao cardiovascular (algoritmo),Central,com_PA_especifico_ano,2.0,2.0,True
+Habilitacao cardiovascular (algoritmo),Central,com_SIH_cardiovascular_ano,2.0,2.0,True
+Habilitacao cardiovascular (algoritmo),Central,com_PA_ou_SIH_ano,2.0,2.0,True
+Habilitacao cardiovascular (algoritmo),Central,com_PA_e_SIH_ano,2.0,2.0,True
+Habilitacao cardiovascular (algoritmo),Central,com_PA_mes_coincidente,2.0,2.0,True
+Habilitacao cardiovascular (algoritmo),Central,com_SIH_mes_coincidente,2.0,2.0,True
+Habilitacao cardiovascular (algoritmo),Central,porcentagem_com_PA_ano,100.0,100.0,True
+Habilitacao cardiovascular (algoritmo),Sul,estabelecimentos,1.0,1.0,True
+Habilitacao cardiovascular (algoritmo),Sul,com_PA_especifico_ano,1.0,1.0,True
+Habilitacao cardiovascular (algoritmo),Sul,com_SIH_cardiovascular_ano,1.0,1.0,True
+Habilitacao cardiovascular (algoritmo),Sul,com_PA_ou_SIH_ano,1.0,1.0,True
+Habilitacao cardiovascular (algoritmo),Sul,com_PA_e_SIH_ano,1.0,1.0,True
+Habilitacao cardiovascular (algoritmo),Sul,com_PA_mes_coincidente,1.0,1.0,True
+Habilitacao cardiovascular (algoritmo),Sul,com_SIH_mes_coincidente,1.0,1.0,True
+Habilitacao cardiovascular (algoritmo),Sul,porcentagem_com_PA_ano,100.0,100.0,True
+SIH AIH cardiovascular observado,ES,estabelecimentos,70.0,70.0,True
+SIH AIH cardiovascular observado,ES,com_PA_especifico_ano,57.0,57.0,True
+SIH AIH cardiovascular observado,ES,com_SIH_cardiovascular_ano,70.0,70.0,True
+SIH AIH cardiovascular observado,ES,com_PA_ou_SIH_ano,70.0,70.0,True
+SIH AIH cardiovascular observado,ES,com_PA_e_SIH_ano,57.0,57.0,True
+SIH AIH cardiovascular observado,ES,com_PA_mes_coincidente,56.0,56.0,True
+SIH AIH cardiovascular observado,ES,com_SIH_mes_coincidente,70.0,70.0,True
+SIH AIH cardiovascular observado,ES,porcentagem_com_PA_ano,81.43,81.43,True
+SIH AIH cardiovascular observado,Metropolitana,estabelecimentos,32.0,32.0,True
+SIH AIH cardiovascular observado,Metropolitana,com_PA_especifico_ano,25.0,25.0,True
+SIH AIH cardiovascular observado,Metropolitana,com_SIH_cardiovascular_ano,32.0,32.0,True
+SIH AIH cardiovascular observado,Metropolitana,com_PA_ou_SIH_ano,32.0,32.0,True
+SIH AIH cardiovascular observado,Metropolitana,com_PA_e_SIH_ano,25.0,25.0,True
+SIH AIH cardiovascular observado,Metropolitana,com_PA_mes_coincidente,24.0,24.0,True
+SIH AIH cardiovascular observado,Metropolitana,com_SIH_mes_coincidente,32.0,32.0,True
+SIH AIH cardiovascular observado,Metropolitana,porcentagem_com_PA_ano,78.12,78.12,True
+SIH AIH cardiovascular observado,Central,estabelecimentos,9.0,9.0,True
+SIH AIH cardiovascular observado,Central,com_PA_especifico_ano,9.0,9.0,True
+SIH AIH cardiovascular observado,Central,com_SIH_cardiovascular_ano,9.0,9.0,True
+SIH AIH cardiovascular observado,Central,com_PA_ou_SIH_ano,9.0,9.0,True
+SIH AIH cardiovascular observado,Central,com_PA_e_SIH_ano,9.0,9.0,True
+SIH AIH cardiovascular observado,Central,com_PA_mes_coincidente,9.0,9.0,True
+SIH AIH cardiovascular observado,Central,com_SIH_mes_coincidente,9.0,9.0,True
+SIH AIH cardiovascular observado,Central,porcentagem_com_PA_ano,100.0,100.0,True
+SIH AIH cardiovascular observado,Sul,estabelecimentos,18.0,18.0,True
+SIH AIH cardiovascular observado,Sul,com_PA_especifico_ano,16.0,16.0,True
+SIH AIH cardiovascular observado,Sul,com_SIH_cardiovascular_ano,18.0,18.0,True
+SIH AIH cardiovascular observado,Sul,com_PA_ou_SIH_ano,18.0,18.0,True
+SIH AIH cardiovascular observado,Sul,com_PA_e_SIH_ano,16.0,16.0,True
+SIH AIH cardiovascular observado,Sul,com_PA_mes_coincidente,16.0,16.0,True
+SIH AIH cardiovascular observado,Sul,com_SIH_mes_coincidente,18.0,18.0,True
+SIH AIH cardiovascular observado,Sul,porcentagem_com_PA_ano,88.89,88.89,True
+SIH AIH cardiovascular observado,Norte,estabelecimentos,11.0,11.0,True
+SIH AIH cardiovascular observado,Norte,com_PA_especifico_ano,7.0,7.0,True
+SIH AIH cardiovascular observado,Norte,com_SIH_cardiovascular_ano,11.0,11.0,True
+SIH AIH cardiovascular observado,Norte,com_PA_ou_SIH_ano,11.0,11.0,True
+SIH AIH cardiovascular observado,Norte,com_PA_e_SIH_ano,7.0,7.0,True
+SIH AIH cardiovascular observado,Norte,com_PA_mes_coincidente,7.0,7.0,True
+SIH AIH cardiovascular observado,Norte,com_SIH_mes_coincidente,11.0,11.0,True
+SIH AIH cardiovascular observado,Norte,porcentagem_com_PA_ano,63.64,63.64,True
+SR116 (todos os estabelecimentos),Metropolitana,estabelecimentos,78.0,78.0,True
+SR116 (todos os estabelecimentos),Metropolitana,com_PA_especifico_ano,15.0,15.0,True
+SR116 (todos os estabelecimentos),Metropolitana,com_SIH_cardiovascular_ano,11.0,11.0,True
+SR116 (todos os estabelecimentos),Metropolitana,com_PA_ou_SIH_ano,16.0,16.0,True
+SR116 (todos os estabelecimentos),Metropolitana,com_PA_e_SIH_ano,10.0,10.0,True
+SR116 (todos os estabelecimentos),Metropolitana,com_PA_mes_coincidente,15.0,15.0,True
+SR116 (todos os estabelecimentos),Metropolitana,com_SIH_mes_coincidente,11.0,11.0,True
+SR116 (todos os estabelecimentos),Metropolitana,porcentagem_com_PA_ano,19.23,19.23,True
+SR116 (todos os estabelecimentos),Central,estabelecimentos,37.0,37.0,True
+SR116 (todos os estabelecimentos),Central,com_PA_especifico_ano,9.0,9.0,True
+SR116 (todos os estabelecimentos),Central,com_SIH_cardiovascular_ano,5.0,5.0,True
+SR116 (todos os estabelecimentos),Central,com_PA_ou_SIH_ano,9.0,9.0,True
+SR116 (todos os estabelecimentos),Central,com_PA_e_SIH_ano,5.0,5.0,True
+SR116 (todos os estabelecimentos),Central,com_PA_mes_coincidente,9.0,9.0,True
+SR116 (todos os estabelecimentos),Central,com_SIH_mes_coincidente,5.0,5.0,True
+SR116 (todos os estabelecimentos),Central,porcentagem_com_PA_ano,24.32,24.32,True
+SR116 (todos os estabelecimentos),Sul,estabelecimentos,15.0,15.0,True
+SR116 (todos os estabelecimentos),Sul,com_PA_especifico_ano,7.0,7.0,True
+SR116 (todos os estabelecimentos),Sul,com_SIH_cardiovascular_ano,6.0,6.0,True
+SR116 (todos os estabelecimentos),Sul,com_PA_ou_SIH_ano,9.0,9.0,True
+SR116 (todos os estabelecimentos),Sul,com_PA_e_SIH_ano,4.0,4.0,True
+SR116 (todos os estabelecimentos),Sul,com_PA_mes_coincidente,7.0,7.0,True
+SR116 (todos os estabelecimentos),Sul,com_SIH_mes_coincidente,6.0,6.0,True
+SR116 (todos os estabelecimentos),Sul,porcentagem_com_PA_ano,46.67,46.67,True
+SR116 (todos os estabelecimentos),Norte,estabelecimentos,13.0,13.0,True
+SR116 (todos os estabelecimentos),Norte,com_PA_especifico_ano,1.0,1.0,True
+SR116 (todos os estabelecimentos),Norte,com_SIH_cardiovascular_ano,0.0,0.0,True
+SR116 (todos os estabelecimentos),Norte,com_PA_ou_SIH_ano,1.0,1.0,True
+SR116 (todos os estabelecimentos),Norte,com_PA_e_SIH_ano,0.0,0.0,True
+SR116 (todos os estabelecimentos),Norte,com_PA_mes_coincidente,1.0,1.0,True
+SR116 (todos os estabelecimentos),Norte,com_SIH_mes_coincidente,0.0,0.0,True
+SR116 (todos os estabelecimentos),Norte,porcentagem_com_PA_ano,7.69,7.69,True
+SR116 (todos os estabelecimentos),ES,estabelecimentos,143.0,143.0,True
+SR116 (todos os estabelecimentos),ES,com_PA_especifico_ano,32.0,32.0,True
+SR116 (todos os estabelecimentos),ES,com_SIH_cardiovascular_ano,22.0,22.0,True
+SR116 (todos os estabelecimentos),ES,com_PA_ou_SIH_ano,35.0,35.0,True
+SR116 (todos os estabelecimentos),ES,com_PA_e_SIH_ano,19.0,19.0,True
+SR116 (todos os estabelecimentos),ES,com_PA_mes_coincidente,32.0,32.0,True
+SR116 (todos os estabelecimentos),ES,com_SIH_mes_coincidente,22.0,22.0,True
+SR116 (todos os estabelecimentos),ES,porcentagem_com_PA_ano,22.38,22.38,True
+SR116 ambulatorial SUS,ES,estabelecimentos,52.0,52.0,True
+SR116 ambulatorial SUS,ES,com_PA_especifico_ano,28.0,28.0,True
+SR116 ambulatorial SUS,ES,com_SIH_cardiovascular_ano,18.0,18.0,True
+SR116 ambulatorial SUS,ES,com_PA_ou_SIH_ano,31.0,31.0,True
+SR116 ambulatorial SUS,ES,com_PA_e_SIH_ano,15.0,15.0,True
+SR116 ambulatorial SUS,ES,com_PA_mes_coincidente,28.0,28.0,True
+SR116 ambulatorial SUS,ES,com_SIH_mes_coincidente,18.0,18.0,True
+SR116 ambulatorial SUS,ES,porcentagem_com_PA_ano,53.85,53.85,True
+SR116 ambulatorial SUS,Metropolitana,estabelecimentos,18.0,18.0,True
+SR116 ambulatorial SUS,Metropolitana,com_PA_especifico_ano,14.0,14.0,True
+SR116 ambulatorial SUS,Metropolitana,com_SIH_cardiovascular_ano,10.0,10.0,True
+SR116 ambulatorial SUS,Metropolitana,com_PA_ou_SIH_ano,15.0,15.0,True
+SR116 ambulatorial SUS,Metropolitana,com_PA_e_SIH_ano,9.0,9.0,True
+SR116 ambulatorial SUS,Metropolitana,com_PA_mes_coincidente,14.0,14.0,True
+SR116 ambulatorial SUS,Metropolitana,com_SIH_mes_coincidente,10.0,10.0,True
+SR116 ambulatorial SUS,Metropolitana,porcentagem_com_PA_ano,77.78,77.78,True
+SR116 ambulatorial SUS,Central,estabelecimentos,17.0,17.0,True
+SR116 ambulatorial SUS,Central,com_PA_especifico_ano,7.0,7.0,True
+SR116 ambulatorial SUS,Central,com_SIH_cardiovascular_ano,3.0,3.0,True
+SR116 ambulatorial SUS,Central,com_PA_ou_SIH_ano,7.0,7.0,True
+SR116 ambulatorial SUS,Central,com_PA_e_SIH_ano,3.0,3.0,True
+SR116 ambulatorial SUS,Central,com_PA_mes_coincidente,7.0,7.0,True
+SR116 ambulatorial SUS,Central,com_SIH_mes_coincidente,3.0,3.0,True
+SR116 ambulatorial SUS,Central,porcentagem_com_PA_ano,41.18,41.18,True
+SR116 ambulatorial SUS,Sul,estabelecimentos,9.0,9.0,True
+SR116 ambulatorial SUS,Sul,com_PA_especifico_ano,6.0,6.0,True
+SR116 ambulatorial SUS,Sul,com_SIH_cardiovascular_ano,5.0,5.0,True
+SR116 ambulatorial SUS,Sul,com_PA_ou_SIH_ano,8.0,8.0,True
+SR116 ambulatorial SUS,Sul,com_PA_e_SIH_ano,3.0,3.0,True
+SR116 ambulatorial SUS,Sul,com_PA_mes_coincidente,6.0,6.0,True
+SR116 ambulatorial SUS,Sul,com_SIH_mes_coincidente,5.0,5.0,True
+SR116 ambulatorial SUS,Sul,porcentagem_com_PA_ano,66.67,66.67,True
+SR116 ambulatorial SUS,Norte,estabelecimentos,8.0,8.0,True
+SR116 ambulatorial SUS,Norte,com_PA_especifico_ano,1.0,1.0,True
+SR116 ambulatorial SUS,Norte,com_SIH_cardiovascular_ano,0.0,0.0,True
+SR116 ambulatorial SUS,Norte,com_PA_ou_SIH_ano,1.0,1.0,True
+SR116 ambulatorial SUS,Norte,com_PA_e_SIH_ano,0.0,0.0,True
+SR116 ambulatorial SUS,Norte,com_PA_mes_coincidente,1.0,1.0,True
+SR116 ambulatorial SUS,Norte,com_SIH_mes_coincidente,0.0,0.0,True
+SR116 ambulatorial SUS,Norte,porcentagem_com_PA_ano,12.5,12.5,True
+HB_0801,ES,estabelecimentos,7.0,7.0,True
+HB_0801,ES,com_PA_especifico_ano,7.0,7.0,True
+HB_0801,ES,com_SIH_cardiovascular_ano,7.0,7.0,True
+HB_0801,ES,com_PA_ou_SIH_ano,7.0,7.0,True
+HB_0801,ES,com_PA_e_SIH_ano,7.0,7.0,True
+HB_0801,ES,com_PA_mes_coincidente,7.0,7.0,True
+HB_0801,ES,com_SIH_mes_coincidente,7.0,7.0,True
+HB_0801,ES,porcentagem_com_PA_ano,100.0,100.0,True
+HB_0801,Metropolitana,estabelecimentos,4.0,4.0,True
+HB_0801,Metropolitana,com_PA_especifico_ano,4.0,4.0,True
+HB_0801,Metropolitana,com_SIH_cardiovascular_ano,4.0,4.0,True
+HB_0801,Metropolitana,com_PA_ou_SIH_ano,4.0,4.0,True
+HB_0801,Metropolitana,com_PA_e_SIH_ano,4.0,4.0,True
+HB_0801,Metropolitana,com_PA_mes_coincidente,4.0,4.0,True
+HB_0801,Metropolitana,com_SIH_mes_coincidente,4.0,4.0,True
+HB_0801,Metropolitana,porcentagem_com_PA_ano,100.0,100.0,True
+HB_0801,Norte,estabelecimentos,0.0,0.0,True
+HB_0801,Norte,com_PA_especifico_ano,0.0,0.0,True
+HB_0801,Norte,com_SIH_cardiovascular_ano,0.0,0.0,True
+HB_0801,Norte,com_PA_ou_SIH_ano,0.0,0.0,True
+HB_0801,Norte,com_PA_e_SIH_ano,0.0,0.0,True
+HB_0801,Norte,com_PA_mes_coincidente,0.0,0.0,True
+HB_0801,Norte,com_SIH_mes_coincidente,0.0,0.0,True
+HB_0801,Norte,porcentagem_com_PA_ano,,,True
+HB_0801,Central,estabelecimentos,2.0,2.0,True
+HB_0801,Central,com_PA_especifico_ano,2.0,2.0,True
+HB_0801,Central,com_SIH_cardiovascular_ano,2.0,2.0,True
+HB_0801,Central,com_PA_ou_SIH_ano,2.0,2.0,True
+HB_0801,Central,com_PA_e_SIH_ano,2.0,2.0,True
+HB_0801,Central,com_PA_mes_coincidente,2.0,2.0,True
+HB_0801,Central,com_SIH_mes_coincidente,2.0,2.0,True
+HB_0801,Central,porcentagem_com_PA_ano,100.0,100.0,True
+HB_0801,Sul,estabelecimentos,1.0,1.0,True
+HB_0801,Sul,com_PA_especifico_ano,1.0,1.0,True
+HB_0801,Sul,com_SIH_cardiovascular_ano,1.0,1.0,True
+HB_0801,Sul,com_PA_ou_SIH_ano,1.0,1.0,True
+HB_0801,Sul,com_PA_e_SIH_ano,1.0,1.0,True
+HB_0801,Sul,com_PA_mes_coincidente,1.0,1.0,True
+HB_0801,Sul,com_SIH_mes_coincidente,1.0,1.0,True
+HB_0801,Sul,porcentagem_com_PA_ano,100.0,100.0,True
+LT_02_QT_EXIST,ES,estabelecimentos,12.0,12.0,True
+LT_02_QT_EXIST,ES,com_PA_especifico_ano,4.0,4.0,True
+LT_02_QT_EXIST,ES,com_SIH_cardiovascular_ano,5.0,5.0,True
+LT_02_QT_EXIST,ES,com_PA_ou_SIH_ano,5.0,5.0,True
+LT_02_QT_EXIST,ES,com_PA_e_SIH_ano,4.0,4.0,True
+LT_02_QT_EXIST,ES,com_PA_mes_coincidente,4.0,4.0,True
+LT_02_QT_EXIST,ES,com_SIH_mes_coincidente,5.0,5.0,True
+LT_02_QT_EXIST,ES,porcentagem_com_PA_ano,33.33,33.33,True
+LT_02_QT_EXIST,Metropolitana,estabelecimentos,6.0,6.0,True
+LT_02_QT_EXIST,Metropolitana,com_PA_especifico_ano,2.0,2.0,True
+LT_02_QT_EXIST,Metropolitana,com_SIH_cardiovascular_ano,3.0,3.0,True
+LT_02_QT_EXIST,Metropolitana,com_PA_ou_SIH_ano,3.0,3.0,True
+LT_02_QT_EXIST,Metropolitana,com_PA_e_SIH_ano,2.0,2.0,True
+LT_02_QT_EXIST,Metropolitana,com_PA_mes_coincidente,2.0,2.0,True
+LT_02_QT_EXIST,Metropolitana,com_SIH_mes_coincidente,3.0,3.0,True
+LT_02_QT_EXIST,Metropolitana,porcentagem_com_PA_ano,33.33,33.33,True
+LT_02_QT_EXIST,Central,estabelecimentos,4.0,4.0,True
+LT_02_QT_EXIST,Central,com_PA_especifico_ano,1.0,1.0,True
+LT_02_QT_EXIST,Central,com_SIH_cardiovascular_ano,1.0,1.0,True
+LT_02_QT_EXIST,Central,com_PA_ou_SIH_ano,1.0,1.0,True
+LT_02_QT_EXIST,Central,com_PA_e_SIH_ano,1.0,1.0,True
+LT_02_QT_EXIST,Central,com_PA_mes_coincidente,1.0,1.0,True
+LT_02_QT_EXIST,Central,com_SIH_mes_coincidente,1.0,1.0,True
+LT_02_QT_EXIST,Central,porcentagem_com_PA_ano,25.0,25.0,True
+LT_02_QT_EXIST,Sul,estabelecimentos,1.0,1.0,True
+LT_02_QT_EXIST,Sul,com_PA_especifico_ano,1.0,1.0,True
+LT_02_QT_EXIST,Sul,com_SIH_cardiovascular_ano,1.0,1.0,True
+LT_02_QT_EXIST,Sul,com_PA_ou_SIH_ano,1.0,1.0,True
+LT_02_QT_EXIST,Sul,com_PA_e_SIH_ano,1.0,1.0,True
+LT_02_QT_EXIST,Sul,com_PA_mes_coincidente,1.0,1.0,True
+LT_02_QT_EXIST,Sul,com_SIH_mes_coincidente,1.0,1.0,True
+LT_02_QT_EXIST,Sul,porcentagem_com_PA_ano,100.0,100.0,True
+LT_02_QT_EXIST,Norte,estabelecimentos,1.0,1.0,True
+LT_02_QT_EXIST,Norte,com_PA_especifico_ano,0.0,0.0,True
+LT_02_QT_EXIST,Norte,com_SIH_cardiovascular_ano,0.0,0.0,True
+LT_02_QT_EXIST,Norte,com_PA_ou_SIH_ano,0.0,0.0,True
+LT_02_QT_EXIST,Norte,com_PA_e_SIH_ano,0.0,0.0,True
+LT_02_QT_EXIST,Norte,com_PA_mes_coincidente,0.0,0.0,True
+LT_02_QT_EXIST,Norte,com_SIH_mes_coincidente,0.0,0.0,True
+LT_02_QT_EXIST,Norte,porcentagem_com_PA_ano,0.0,0.0,True
+LT_02_QT_SUS,ES,estabelecimentos,4.0,4.0,True
+LT_02_QT_SUS,ES,com_PA_especifico_ano,4.0,4.0,True
+LT_02_QT_SUS,ES,com_SIH_cardiovascular_ano,4.0,4.0,True
+LT_02_QT_SUS,ES,com_PA_ou_SIH_ano,4.0,4.0,True
+LT_02_QT_SUS,ES,com_PA_e_SIH_ano,4.0,4.0,True
+LT_02_QT_SUS,ES,com_PA_mes_coincidente,4.0,4.0,True
+LT_02_QT_SUS,ES,com_SIH_mes_coincidente,4.0,4.0,True
+LT_02_QT_SUS,ES,porcentagem_com_PA_ano,100.0,100.0,True
+LT_02_QT_SUS,Metropolitana,estabelecimentos,2.0,2.0,True
+LT_02_QT_SUS,Metropolitana,com_PA_especifico_ano,2.0,2.0,True
+LT_02_QT_SUS,Metropolitana,com_SIH_cardiovascular_ano,2.0,2.0,True
+LT_02_QT_SUS,Metropolitana,com_PA_ou_SIH_ano,2.0,2.0,True
+LT_02_QT_SUS,Metropolitana,com_PA_e_SIH_ano,2.0,2.0,True
+LT_02_QT_SUS,Metropolitana,com_PA_mes_coincidente,2.0,2.0,True
+LT_02_QT_SUS,Metropolitana,com_SIH_mes_coincidente,2.0,2.0,True
+LT_02_QT_SUS,Metropolitana,porcentagem_com_PA_ano,100.0,100.0,True
+LT_02_QT_SUS,Norte,estabelecimentos,0.0,0.0,True
+LT_02_QT_SUS,Norte,com_PA_especifico_ano,0.0,0.0,True
+LT_02_QT_SUS,Norte,com_SIH_cardiovascular_ano,0.0,0.0,True
+LT_02_QT_SUS,Norte,com_PA_ou_SIH_ano,0.0,0.0,True
+LT_02_QT_SUS,Norte,com_PA_e_SIH_ano,0.0,0.0,True
+LT_02_QT_SUS,Norte,com_PA_mes_coincidente,0.0,0.0,True
+LT_02_QT_SUS,Norte,com_SIH_mes_coincidente,0.0,0.0,True
+LT_02_QT_SUS,Norte,porcentagem_com_PA_ano,,,True
+LT_02_QT_SUS,Central,estabelecimentos,1.0,1.0,True
+LT_02_QT_SUS,Central,com_PA_especifico_ano,1.0,1.0,True
+LT_02_QT_SUS,Central,com_SIH_cardiovascular_ano,1.0,1.0,True
+LT_02_QT_SUS,Central,com_PA_ou_SIH_ano,1.0,1.0,True
+LT_02_QT_SUS,Central,com_PA_e_SIH_ano,1.0,1.0,True
+LT_02_QT_SUS,Central,com_PA_mes_coincidente,1.0,1.0,True
+LT_02_QT_SUS,Central,com_SIH_mes_coincidente,1.0,1.0,True
+LT_02_QT_SUS,Central,porcentagem_com_PA_ano,100.0,100.0,True
+LT_02_QT_SUS,Sul,estabelecimentos,1.0,1.0,True
+LT_02_QT_SUS,Sul,com_PA_especifico_ano,1.0,1.0,True
+LT_02_QT_SUS,Sul,com_SIH_cardiovascular_ano,1.0,1.0,True
+LT_02_QT_SUS,Sul,com_PA_ou_SIH_ano,1.0,1.0,True
+LT_02_QT_SUS,Sul,com_PA_e_SIH_ano,1.0,1.0,True
+LT_02_QT_SUS,Sul,com_PA_mes_coincidente,1.0,1.0,True
+LT_02_QT_SUS,Sul,com_SIH_mes_coincidente,1.0,1.0,True
+LT_02_QT_SUS,Sul,porcentagem_com_PA_ano,100.0,100.0,True
+LT_32_QT_EXIST,ES,estabelecimentos,29.0,29.0,True
+LT_32_QT_EXIST,ES,com_PA_especifico_ano,12.0,12.0,True
+LT_32_QT_EXIST,ES,com_SIH_cardiovascular_ano,15.0,15.0,True
+LT_32_QT_EXIST,ES,com_PA_ou_SIH_ano,15.0,15.0,True
+LT_32_QT_EXIST,ES,com_PA_e_SIH_ano,12.0,12.0,True
+LT_32_QT_EXIST,ES,com_PA_mes_coincidente,12.0,12.0,True
+LT_32_QT_EXIST,ES,com_SIH_mes_coincidente,15.0,15.0,True
+LT_32_QT_EXIST,ES,porcentagem_com_PA_ano,41.38,41.38,True
+LT_32_QT_EXIST,Metropolitana,estabelecimentos,14.0,14.0,True
+LT_32_QT_EXIST,Metropolitana,com_PA_especifico_ano,5.0,5.0,True
+LT_32_QT_EXIST,Metropolitana,com_SIH_cardiovascular_ano,6.0,6.0,True
+LT_32_QT_EXIST,Metropolitana,com_PA_ou_SIH_ano,6.0,6.0,True
+LT_32_QT_EXIST,Metropolitana,com_PA_e_SIH_ano,5.0,5.0,True
+LT_32_QT_EXIST,Metropolitana,com_PA_mes_coincidente,5.0,5.0,True
+LT_32_QT_EXIST,Metropolitana,com_SIH_mes_coincidente,6.0,6.0,True
+LT_32_QT_EXIST,Metropolitana,porcentagem_com_PA_ano,35.71,35.71,True
+LT_32_QT_EXIST,Norte,estabelecimentos,2.0,2.0,True
+LT_32_QT_EXIST,Norte,com_PA_especifico_ano,0.0,0.0,True
+LT_32_QT_EXIST,Norte,com_SIH_cardiovascular_ano,0.0,0.0,True
+LT_32_QT_EXIST,Norte,com_PA_ou_SIH_ano,0.0,0.0,True
+LT_32_QT_EXIST,Norte,com_PA_e_SIH_ano,0.0,0.0,True
+LT_32_QT_EXIST,Norte,com_PA_mes_coincidente,0.0,0.0,True
+LT_32_QT_EXIST,Norte,com_SIH_mes_coincidente,0.0,0.0,True
+LT_32_QT_EXIST,Norte,porcentagem_com_PA_ano,0.0,0.0,True
+LT_32_QT_EXIST,Central,estabelecimentos,9.0,9.0,True
+LT_32_QT_EXIST,Central,com_PA_especifico_ano,5.0,5.0,True
+LT_32_QT_EXIST,Central,com_SIH_cardiovascular_ano,5.0,5.0,True
+LT_32_QT_EXIST,Central,com_PA_ou_SIH_ano,5.0,5.0,True
+LT_32_QT_EXIST,Central,com_PA_e_SIH_ano,5.0,5.0,True
+LT_32_QT_EXIST,Central,com_PA_mes_coincidente,5.0,5.0,True
+LT_32_QT_EXIST,Central,com_SIH_mes_coincidente,5.0,5.0,True
+LT_32_QT_EXIST,Central,porcentagem_com_PA_ano,55.56,55.56,True
+LT_32_QT_EXIST,Sul,estabelecimentos,4.0,4.0,True
+LT_32_QT_EXIST,Sul,com_PA_especifico_ano,2.0,2.0,True
+LT_32_QT_EXIST,Sul,com_SIH_cardiovascular_ano,4.0,4.0,True
+LT_32_QT_EXIST,Sul,com_PA_ou_SIH_ano,4.0,4.0,True
+LT_32_QT_EXIST,Sul,com_PA_e_SIH_ano,2.0,2.0,True
+LT_32_QT_EXIST,Sul,com_PA_mes_coincidente,2.0,2.0,True
+LT_32_QT_EXIST,Sul,com_SIH_mes_coincidente,4.0,4.0,True
+LT_32_QT_EXIST,Sul,porcentagem_com_PA_ano,50.0,50.0,True
+LT_32_QT_SUS,ES,estabelecimentos,15.0,15.0,True
+LT_32_QT_SUS,ES,com_PA_especifico_ano,12.0,12.0,True
+LT_32_QT_SUS,ES,com_SIH_cardiovascular_ano,15.0,15.0,True
+LT_32_QT_SUS,ES,com_PA_ou_SIH_ano,15.0,15.0,True
+LT_32_QT_SUS,ES,com_PA_e_SIH_ano,12.0,12.0,True
+LT_32_QT_SUS,ES,com_PA_mes_coincidente,12.0,12.0,True
+LT_32_QT_SUS,ES,com_SIH_mes_coincidente,15.0,15.0,True
+LT_32_QT_SUS,ES,porcentagem_com_PA_ano,80.0,80.0,True
+LT_32_QT_SUS,Metropolitana,estabelecimentos,6.0,6.0,True
+LT_32_QT_SUS,Metropolitana,com_PA_especifico_ano,5.0,5.0,True
+LT_32_QT_SUS,Metropolitana,com_SIH_cardiovascular_ano,6.0,6.0,True
+LT_32_QT_SUS,Metropolitana,com_PA_ou_SIH_ano,6.0,6.0,True
+LT_32_QT_SUS,Metropolitana,com_PA_e_SIH_ano,5.0,5.0,True
+LT_32_QT_SUS,Metropolitana,com_PA_mes_coincidente,5.0,5.0,True
+LT_32_QT_SUS,Metropolitana,com_SIH_mes_coincidente,6.0,6.0,True
+LT_32_QT_SUS,Metropolitana,porcentagem_com_PA_ano,83.33,83.33,True
+LT_32_QT_SUS,Norte,estabelecimentos,0.0,0.0,True
+LT_32_QT_SUS,Norte,com_PA_especifico_ano,0.0,0.0,True
+LT_32_QT_SUS,Norte,com_SIH_cardiovascular_ano,0.0,0.0,True
+LT_32_QT_SUS,Norte,com_PA_ou_SIH_ano,0.0,0.0,True
+LT_32_QT_SUS,Norte,com_PA_e_SIH_ano,0.0,0.0,True
+LT_32_QT_SUS,Norte,com_PA_mes_coincidente,0.0,0.0,True
+LT_32_QT_SUS,Norte,com_SIH_mes_coincidente,0.0,0.0,True
+LT_32_QT_SUS,Norte,porcentagem_com_PA_ano,,,True
+LT_32_QT_SUS,Central,estabelecimentos,5.0,5.0,True
+LT_32_QT_SUS,Central,com_PA_especifico_ano,5.0,5.0,True
+LT_32_QT_SUS,Central,com_SIH_cardiovascular_ano,5.0,5.0,True
+LT_32_QT_SUS,Central,com_PA_ou_SIH_ano,5.0,5.0,True
+LT_32_QT_SUS,Central,com_PA_e_SIH_ano,5.0,5.0,True
+LT_32_QT_SUS,Central,com_PA_mes_coincidente,5.0,5.0,True
+LT_32_QT_SUS,Central,com_SIH_mes_coincidente,5.0,5.0,True
+LT_32_QT_SUS,Central,porcentagem_com_PA_ano,100.0,100.0,True
+LT_32_QT_SUS,Sul,estabelecimentos,4.0,4.0,True
+LT_32_QT_SUS,Sul,com_PA_especifico_ano,2.0,2.0,True
+LT_32_QT_SUS,Sul,com_SIH_cardiovascular_ano,4.0,4.0,True
+LT_32_QT_SUS,Sul,com_PA_ou_SIH_ano,4.0,4.0,True
+LT_32_QT_SUS,Sul,com_PA_e_SIH_ano,2.0,2.0,True
+LT_32_QT_SUS,Sul,com_PA_mes_coincidente,2.0,2.0,True
+LT_32_QT_SUS,Sul,com_SIH_mes_coincidente,4.0,4.0,True
+LT_32_QT_SUS,Sul,porcentagem_com_PA_ano,50.0,50.0,True
+PF_225120_vinculos,ES,estabelecimentos,528.0,528.0,True
+PF_225120_vinculos,ES,com_PA_especifico_ano,103.0,103.0,True
+PF_225120_vinculos,ES,com_SIH_cardiovascular_ano,49.0,49.0,True
+PF_225120_vinculos,ES,com_PA_ou_SIH_ano,112.0,112.0,True
+PF_225120_vinculos,ES,com_PA_e_SIH_ano,40.0,40.0,True
+PF_225120_vinculos,ES,com_PA_mes_coincidente,102.0,102.0,True
+PF_225120_vinculos,ES,com_SIH_mes_coincidente,49.0,49.0,True
+PF_225120_vinculos,ES,porcentagem_com_PA_ano,19.51,19.51,True
+PF_225120_vinculos,Metropolitana,estabelecimentos,274.0,274.0,True
+PF_225120_vinculos,Metropolitana,com_PA_especifico_ano,40.0,40.0,True
+PF_225120_vinculos,Metropolitana,com_SIH_cardiovascular_ano,22.0,22.0,True
+PF_225120_vinculos,Metropolitana,com_PA_ou_SIH_ano,44.0,44.0,True
+PF_225120_vinculos,Metropolitana,com_PA_e_SIH_ano,18.0,18.0,True
+PF_225120_vinculos,Metropolitana,com_PA_mes_coincidente,40.0,40.0,True
+PF_225120_vinculos,Metropolitana,com_SIH_mes_coincidente,22.0,22.0,True
+PF_225120_vinculos,Metropolitana,porcentagem_com_PA_ano,14.6,14.6,True
+PF_225120_vinculos,Sul,estabelecimentos,102.0,102.0,True
+PF_225120_vinculos,Sul,com_PA_especifico_ano,29.0,29.0,True
+PF_225120_vinculos,Sul,com_SIH_cardiovascular_ano,13.0,13.0,True
+PF_225120_vinculos,Sul,com_PA_ou_SIH_ano,31.0,31.0,True
+PF_225120_vinculos,Sul,com_PA_e_SIH_ano,11.0,11.0,True
+PF_225120_vinculos,Sul,com_PA_mes_coincidente,29.0,29.0,True
+PF_225120_vinculos,Sul,com_SIH_mes_coincidente,13.0,13.0,True
+PF_225120_vinculos,Sul,porcentagem_com_PA_ano,28.43,28.43,True
+PF_225120_vinculos,Norte,estabelecimentos,50.0,50.0,True
+PF_225120_vinculos,Norte,com_PA_especifico_ano,11.0,11.0,True
+PF_225120_vinculos,Norte,com_SIH_cardiovascular_ano,7.0,7.0,True
+PF_225120_vinculos,Norte,com_PA_ou_SIH_ano,14.0,14.0,True
+PF_225120_vinculos,Norte,com_PA_e_SIH_ano,4.0,4.0,True
+PF_225120_vinculos,Norte,com_PA_mes_coincidente,10.0,10.0,True
+PF_225120_vinculos,Norte,com_SIH_mes_coincidente,7.0,7.0,True
+PF_225120_vinculos,Norte,porcentagem_com_PA_ano,22.0,22.0,True
+PF_225120_vinculos,Central,estabelecimentos,102.0,102.0,True
+PF_225120_vinculos,Central,com_PA_especifico_ano,23.0,23.0,True
+PF_225120_vinculos,Central,com_SIH_cardiovascular_ano,7.0,7.0,True
+PF_225120_vinculos,Central,com_PA_ou_SIH_ano,23.0,23.0,True
+PF_225120_vinculos,Central,com_PA_e_SIH_ano,7.0,7.0,True
+PF_225120_vinculos,Central,com_PA_mes_coincidente,23.0,23.0,True
+PF_225120_vinculos,Central,com_SIH_mes_coincidente,7.0,7.0,True
+PF_225120_vinculos,Central,porcentagem_com_PA_ano,22.55,22.55,True
+PF_225120_vinculos_sus,ES,estabelecimentos,175.0,175.0,True
+PF_225120_vinculos_sus,ES,com_PA_especifico_ano,102.0,102.0,True
+PF_225120_vinculos_sus,ES,com_SIH_cardiovascular_ano,47.0,47.0,True
+PF_225120_vinculos_sus,ES,com_PA_ou_SIH_ano,110.0,110.0,True
+PF_225120_vinculos_sus,ES,com_PA_e_SIH_ano,39.0,39.0,True
+PF_225120_vinculos_sus,ES,com_PA_mes_coincidente,101.0,101.0,True
+PF_225120_vinculos_sus,ES,com_SIH_mes_coincidente,47.0,47.0,True
+PF_225120_vinculos_sus,ES,porcentagem_com_PA_ano,58.29,58.29,True
+PF_225120_vinculos_sus,Metropolitana,estabelecimentos,72.0,72.0,True
+PF_225120_vinculos_sus,Metropolitana,com_PA_especifico_ano,40.0,40.0,True
+PF_225120_vinculos_sus,Metropolitana,com_SIH_cardiovascular_ano,22.0,22.0,True
+PF_225120_vinculos_sus,Metropolitana,com_PA_ou_SIH_ano,44.0,44.0,True
+PF_225120_vinculos_sus,Metropolitana,com_PA_e_SIH_ano,18.0,18.0,True
+PF_225120_vinculos_sus,Metropolitana,com_PA_mes_coincidente,40.0,40.0,True
+PF_225120_vinculos_sus,Metropolitana,com_SIH_mes_coincidente,22.0,22.0,True
+PF_225120_vinculos_sus,Metropolitana,porcentagem_com_PA_ano,55.56,55.56,True
+PF_225120_vinculos_sus,Central,estabelecimentos,45.0,45.0,True
+PF_225120_vinculos_sus,Central,com_PA_especifico_ano,22.0,22.0,True
+PF_225120_vinculos_sus,Central,com_SIH_cardiovascular_ano,6.0,6.0,True
+PF_225120_vinculos_sus,Central,com_PA_ou_SIH_ano,22.0,22.0,True
+PF_225120_vinculos_sus,Central,com_PA_e_SIH_ano,6.0,6.0,True
+PF_225120_vinculos_sus,Central,com_PA_mes_coincidente,22.0,22.0,True
+PF_225120_vinculos_sus,Central,com_SIH_mes_coincidente,6.0,6.0,True
+PF_225120_vinculos_sus,Central,porcentagem_com_PA_ano,48.89,48.89,True
+PF_225120_vinculos_sus,Sul,estabelecimentos,42.0,42.0,True
+PF_225120_vinculos_sus,Sul,com_PA_especifico_ano,29.0,29.0,True
+PF_225120_vinculos_sus,Sul,com_SIH_cardiovascular_ano,13.0,13.0,True
+PF_225120_vinculos_sus,Sul,com_PA_ou_SIH_ano,31.0,31.0,True
+PF_225120_vinculos_sus,Sul,com_PA_e_SIH_ano,11.0,11.0,True
+PF_225120_vinculos_sus,Sul,com_PA_mes_coincidente,29.0,29.0,True
+PF_225120_vinculos_sus,Sul,com_SIH_mes_coincidente,13.0,13.0,True
+PF_225120_vinculos_sus,Sul,porcentagem_com_PA_ano,69.05,69.05,True
+PF_225120_vinculos_sus,Norte,estabelecimentos,16.0,16.0,True
+PF_225120_vinculos_sus,Norte,com_PA_especifico_ano,11.0,11.0,True
+PF_225120_vinculos_sus,Norte,com_SIH_cardiovascular_ano,6.0,6.0,True
+PF_225120_vinculos_sus,Norte,com_PA_ou_SIH_ano,13.0,13.0,True
+PF_225120_vinculos_sus,Norte,com_PA_e_SIH_ano,4.0,4.0,True
+PF_225120_vinculos_sus,Norte,com_PA_mes_coincidente,10.0,10.0,True
+PF_225120_vinculos_sus,Norte,com_SIH_mes_coincidente,6.0,6.0,True
+PF_225120_vinculos_sus,Norte,porcentagem_com_PA_ano,68.75,68.75,True
+EQ_441_QT_USO,ES,estabelecimentos,692.0,692.0,True
+EQ_441_QT_USO,ES,com_PA_especifico_ano,172.0,172.0,True
+EQ_441_QT_USO,ES,com_SIH_cardiovascular_ano,67.0,67.0,True
+EQ_441_QT_USO,ES,com_PA_ou_SIH_ano,183.0,183.0,True
+EQ_441_QT_USO,ES,com_PA_e_SIH_ano,56.0,56.0,True
+EQ_441_QT_USO,ES,com_PA_mes_coincidente,172.0,172.0,True
+EQ_441_QT_USO,ES,com_SIH_mes_coincidente,67.0,67.0,True
+EQ_441_QT_USO,ES,porcentagem_com_PA_ano,24.86,24.86,True
+EQ_441_QT_USO,Metropolitana,estabelecimentos,365.0,365.0,True
+EQ_441_QT_USO,Metropolitana,com_PA_especifico_ano,81.0,81.0,True
+EQ_441_QT_USO,Metropolitana,com_SIH_cardiovascular_ano,31.0,31.0,True
+EQ_441_QT_USO,Metropolitana,com_PA_ou_SIH_ano,87.0,87.0,True
+EQ_441_QT_USO,Metropolitana,com_PA_e_SIH_ano,25.0,25.0,True
+EQ_441_QT_USO,Metropolitana,com_PA_mes_coincidente,81.0,81.0,True
+EQ_441_QT_USO,Metropolitana,com_SIH_mes_coincidente,31.0,31.0,True
+EQ_441_QT_USO,Metropolitana,porcentagem_com_PA_ano,22.19,22.19,True
+EQ_441_QT_USO,Norte,estabelecimentos,76.0,76.0,True
+EQ_441_QT_USO,Norte,com_PA_especifico_ano,16.0,16.0,True
+EQ_441_QT_USO,Norte,com_SIH_cardiovascular_ano,9.0,9.0,True
+EQ_441_QT_USO,Norte,com_PA_ou_SIH_ano,19.0,19.0,True
+EQ_441_QT_USO,Norte,com_PA_e_SIH_ano,6.0,6.0,True
+EQ_441_QT_USO,Norte,com_PA_mes_coincidente,16.0,16.0,True
+EQ_441_QT_USO,Norte,com_SIH_mes_coincidente,9.0,9.0,True
+EQ_441_QT_USO,Norte,porcentagem_com_PA_ano,21.05,21.05,True
+EQ_441_QT_USO,Central,estabelecimentos,115.0,115.0,True
+EQ_441_QT_USO,Central,com_PA_especifico_ano,28.0,28.0,True
+EQ_441_QT_USO,Central,com_SIH_cardiovascular_ano,9.0,9.0,True
+EQ_441_QT_USO,Central,com_PA_ou_SIH_ano,28.0,28.0,True
+EQ_441_QT_USO,Central,com_PA_e_SIH_ano,9.0,9.0,True
+EQ_441_QT_USO,Central,com_PA_mes_coincidente,28.0,28.0,True
+EQ_441_QT_USO,Central,com_SIH_mes_coincidente,9.0,9.0,True
+EQ_441_QT_USO,Central,porcentagem_com_PA_ano,24.35,24.35,True
+EQ_441_QT_USO,Sul,estabelecimentos,136.0,136.0,True
+EQ_441_QT_USO,Sul,com_PA_especifico_ano,47.0,47.0,True
+EQ_441_QT_USO,Sul,com_SIH_cardiovascular_ano,18.0,18.0,True
+EQ_441_QT_USO,Sul,com_PA_ou_SIH_ano,49.0,49.0,True
+EQ_441_QT_USO,Sul,com_PA_e_SIH_ano,16.0,16.0,True
+EQ_441_QT_USO,Sul,com_PA_mes_coincidente,47.0,47.0,True
+EQ_441_QT_USO,Sul,com_SIH_mes_coincidente,18.0,18.0,True
+EQ_441_QT_USO,Sul,porcentagem_com_PA_ano,34.56,34.56,True
+EQ_441_SUS,ES,estabelecimentos,366.0,366.0,True
+EQ_441_SUS,ES,com_PA_especifico_ano,172.0,172.0,True
+EQ_441_SUS,ES,com_SIH_cardiovascular_ano,67.0,67.0,True
+EQ_441_SUS,ES,com_PA_ou_SIH_ano,183.0,183.0,True
+EQ_441_SUS,ES,com_PA_e_SIH_ano,56.0,56.0,True
+EQ_441_SUS,ES,com_PA_mes_coincidente,172.0,172.0,True
+EQ_441_SUS,ES,com_SIH_mes_coincidente,67.0,67.0,True
+EQ_441_SUS,ES,porcentagem_com_PA_ano,46.99,46.99,True
+EQ_441_SUS,Metropolitana,estabelecimentos,161.0,161.0,True
+EQ_441_SUS,Metropolitana,com_PA_especifico_ano,81.0,81.0,True
+EQ_441_SUS,Metropolitana,com_SIH_cardiovascular_ano,31.0,31.0,True
+EQ_441_SUS,Metropolitana,com_PA_ou_SIH_ano,87.0,87.0,True
+EQ_441_SUS,Metropolitana,com_PA_e_SIH_ano,25.0,25.0,True
+EQ_441_SUS,Metropolitana,com_PA_mes_coincidente,81.0,81.0,True
+EQ_441_SUS,Metropolitana,com_SIH_mes_coincidente,31.0,31.0,True
+EQ_441_SUS,Metropolitana,porcentagem_com_PA_ano,50.31,50.31,True
+EQ_441_SUS,Norte,estabelecimentos,54.0,54.0,True
+EQ_441_SUS,Norte,com_PA_especifico_ano,16.0,16.0,True
+EQ_441_SUS,Norte,com_SIH_cardiovascular_ano,9.0,9.0,True
+EQ_441_SUS,Norte,com_PA_ou_SIH_ano,19.0,19.0,True
+EQ_441_SUS,Norte,com_PA_e_SIH_ano,6.0,6.0,True
+EQ_441_SUS,Norte,com_PA_mes_coincidente,16.0,16.0,True
+EQ_441_SUS,Norte,com_SIH_mes_coincidente,9.0,9.0,True
+EQ_441_SUS,Norte,porcentagem_com_PA_ano,29.63,29.63,True
+EQ_441_SUS,Central,estabelecimentos,73.0,73.0,True
+EQ_441_SUS,Central,com_PA_especifico_ano,28.0,28.0,True
+EQ_441_SUS,Central,com_SIH_cardiovascular_ano,9.0,9.0,True
+EQ_441_SUS,Central,com_PA_ou_SIH_ano,28.0,28.0,True
+EQ_441_SUS,Central,com_PA_e_SIH_ano,9.0,9.0,True
+EQ_441_SUS,Central,com_PA_mes_coincidente,28.0,28.0,True
+EQ_441_SUS,Central,com_SIH_mes_coincidente,9.0,9.0,True
+EQ_441_SUS,Central,porcentagem_com_PA_ano,38.36,38.36,True
+EQ_441_SUS,Sul,estabelecimentos,78.0,78.0,True
+EQ_441_SUS,Sul,com_PA_especifico_ano,47.0,47.0,True
+EQ_441_SUS,Sul,com_SIH_cardiovascular_ano,18.0,18.0,True
+EQ_441_SUS,Sul,com_PA_ou_SIH_ano,49.0,49.0,True
+EQ_441_SUS,Sul,com_PA_e_SIH_ano,16.0,16.0,True
+EQ_441_SUS,Sul,com_PA_mes_coincidente,47.0,47.0,True
+EQ_441_SUS,Sul,com_SIH_mes_coincidente,18.0,18.0,True
+EQ_441_SUS,Sul,porcentagem_com_PA_ano,60.26,60.26,True
+SR 122/003,ES,estabelecimentos,469.0,469.0,True
+SR 122/003,ES,com_PA_especifico_ano,157.0,157.0,True
+SR 122/003,ES,com_SIH_cardiovascular_ano,63.0,63.0,True
+SR 122/003,ES,com_PA_ou_SIH_ano,165.0,165.0,True
+SR 122/003,ES,com_PA_e_SIH_ano,55.0,55.0,True
+SR 122/003,ES,com_PA_mes_coincidente,157.0,157.0,True
+SR 122/003,ES,com_SIH_mes_coincidente,62.0,62.0,True
+SR 122/003,ES,porcentagem_com_PA_ano,33.48,33.48,True
+SR 122/003,Metropolitana,estabelecimentos,262.0,262.0,True
+SR 122/003,Metropolitana,com_PA_especifico_ano,74.0,74.0,True
+SR 122/003,Metropolitana,com_SIH_cardiovascular_ano,29.0,29.0,True
+SR 122/003,Metropolitana,com_PA_ou_SIH_ano,78.0,78.0,True
+SR 122/003,Metropolitana,com_PA_e_SIH_ano,25.0,25.0,True
+SR 122/003,Metropolitana,com_PA_mes_coincidente,74.0,74.0,True
+SR 122/003,Metropolitana,com_SIH_mes_coincidente,29.0,29.0,True
+SR 122/003,Metropolitana,porcentagem_com_PA_ano,28.24,28.24,True
+SR 122/003,Sul,estabelecimentos,93.0,93.0,True
+SR 122/003,Sul,com_PA_especifico_ano,45.0,45.0,True
+SR 122/003,Sul,com_SIH_cardiovascular_ano,18.0,18.0,True
+SR 122/003,Sul,com_PA_ou_SIH_ano,47.0,47.0,True
+SR 122/003,Sul,com_PA_e_SIH_ano,16.0,16.0,True
+SR 122/003,Sul,com_PA_mes_coincidente,45.0,45.0,True
+SR 122/003,Sul,com_SIH_mes_coincidente,18.0,18.0,True
+SR 122/003,Sul,porcentagem_com_PA_ano,48.39,48.39,True
+SR 122/003,Norte,estabelecimentos,50.0,50.0,True
+SR 122/003,Norte,com_PA_especifico_ano,12.0,12.0,True
+SR 122/003,Norte,com_SIH_cardiovascular_ano,7.0,7.0,True
+SR 122/003,Norte,com_PA_ou_SIH_ano,14.0,14.0,True
+SR 122/003,Norte,com_PA_e_SIH_ano,5.0,5.0,True
+SR 122/003,Norte,com_PA_mes_coincidente,12.0,12.0,True
+SR 122/003,Norte,com_SIH_mes_coincidente,7.0,7.0,True
+SR 122/003,Norte,porcentagem_com_PA_ano,24.0,24.0,True
+SR 122/003,Central,estabelecimentos,64.0,64.0,True
+SR 122/003,Central,com_PA_especifico_ano,26.0,26.0,True
+SR 122/003,Central,com_SIH_cardiovascular_ano,9.0,9.0,True
+SR 122/003,Central,com_PA_ou_SIH_ano,26.0,26.0,True
+SR 122/003,Central,com_PA_e_SIH_ano,9.0,9.0,True
+SR 122/003,Central,com_PA_mes_coincidente,26.0,26.0,True
+SR 122/003,Central,com_SIH_mes_coincidente,8.0,8.0,True
+SR 122/003,Central,porcentagem_com_PA_ano,40.62,40.62,True
+SR 122/007,ES,estabelecimentos,11.0,11.0,True
+SR 122/007,ES,com_PA_especifico_ano,7.0,7.0,True
+SR 122/007,ES,com_SIH_cardiovascular_ano,5.0,5.0,True
+SR 122/007,ES,com_PA_ou_SIH_ano,7.0,7.0,True
+SR 122/007,ES,com_PA_e_SIH_ano,5.0,5.0,True
+SR 122/007,ES,com_PA_mes_coincidente,7.0,7.0,True
+SR 122/007,ES,com_SIH_mes_coincidente,5.0,5.0,True
+SR 122/007,ES,porcentagem_com_PA_ano,63.64,63.64,True
+SR 122/007,Metropolitana,estabelecimentos,6.0,6.0,True
+SR 122/007,Metropolitana,com_PA_especifico_ano,4.0,4.0,True
+SR 122/007,Metropolitana,com_SIH_cardiovascular_ano,3.0,3.0,True
+SR 122/007,Metropolitana,com_PA_ou_SIH_ano,4.0,4.0,True
+SR 122/007,Metropolitana,com_PA_e_SIH_ano,3.0,3.0,True
+SR 122/007,Metropolitana,com_PA_mes_coincidente,4.0,4.0,True
+SR 122/007,Metropolitana,com_SIH_mes_coincidente,3.0,3.0,True
+SR 122/007,Metropolitana,porcentagem_com_PA_ano,66.67,66.67,True
+SR 122/007,Central,estabelecimentos,3.0,3.0,True
+SR 122/007,Central,com_PA_especifico_ano,1.0,1.0,True
+SR 122/007,Central,com_SIH_cardiovascular_ano,1.0,1.0,True
+SR 122/007,Central,com_PA_ou_SIH_ano,1.0,1.0,True
+SR 122/007,Central,com_PA_e_SIH_ano,1.0,1.0,True
+SR 122/007,Central,com_PA_mes_coincidente,1.0,1.0,True
+SR 122/007,Central,com_SIH_mes_coincidente,1.0,1.0,True
+SR 122/007,Central,porcentagem_com_PA_ano,33.33,33.33,True
+SR 122/007,Sul,estabelecimentos,2.0,2.0,True
+SR 122/007,Sul,com_PA_especifico_ano,2.0,2.0,True
+SR 122/007,Sul,com_SIH_cardiovascular_ano,1.0,1.0,True
+SR 122/007,Sul,com_PA_ou_SIH_ano,2.0,2.0,True
+SR 122/007,Sul,com_PA_e_SIH_ano,1.0,1.0,True
+SR 122/007,Sul,com_PA_mes_coincidente,2.0,2.0,True
+SR 122/007,Sul,com_SIH_mes_coincidente,1.0,1.0,True
+SR 122/007,Sul,porcentagem_com_PA_ano,100.0,100.0,True
+SR 122/007,Norte,estabelecimentos,0.0,0.0,True
+SR 122/007,Norte,com_PA_especifico_ano,0.0,0.0,True
+SR 122/007,Norte,com_SIH_cardiovascular_ano,0.0,0.0,True
+SR 122/007,Norte,com_PA_ou_SIH_ano,0.0,0.0,True
+SR 122/007,Norte,com_PA_e_SIH_ano,0.0,0.0,True
+SR 122/007,Norte,com_PA_mes_coincidente,0.0,0.0,True
+SR 122/007,Norte,com_SIH_mes_coincidente,0.0,0.0,True
+SR 122/007,Norte,porcentagem_com_PA_ano,,,True
+SR 140/014,ES,estabelecimentos,8.0,8.0,True
+SR 140/014,ES,com_PA_especifico_ano,6.0,6.0,True
+SR 140/014,ES,com_SIH_cardiovascular_ano,6.0,6.0,True
+SR 140/014,ES,com_PA_ou_SIH_ano,6.0,6.0,True
+SR 140/014,ES,com_PA_e_SIH_ano,6.0,6.0,True
+SR 140/014,ES,com_PA_mes_coincidente,6.0,6.0,True
+SR 140/014,ES,com_SIH_mes_coincidente,6.0,6.0,True
+SR 140/014,ES,porcentagem_com_PA_ano,75.0,75.0,True
+SR 140/014,Metropolitana,estabelecimentos,4.0,4.0,True
+SR 140/014,Metropolitana,com_PA_especifico_ano,3.0,3.0,True
+SR 140/014,Metropolitana,com_SIH_cardiovascular_ano,3.0,3.0,True
+SR 140/014,Metropolitana,com_PA_ou_SIH_ano,3.0,3.0,True
+SR 140/014,Metropolitana,com_PA_e_SIH_ano,3.0,3.0,True
+SR 140/014,Metropolitana,com_PA_mes_coincidente,3.0,3.0,True
+SR 140/014,Metropolitana,com_SIH_mes_coincidente,3.0,3.0,True
+SR 140/014,Metropolitana,porcentagem_com_PA_ano,75.0,75.0,True
+SR 140/014,Norte,estabelecimentos,0.0,0.0,True
+SR 140/014,Norte,com_PA_especifico_ano,0.0,0.0,True
+SR 140/014,Norte,com_SIH_cardiovascular_ano,0.0,0.0,True
+SR 140/014,Norte,com_PA_ou_SIH_ano,0.0,0.0,True
+SR 140/014,Norte,com_PA_e_SIH_ano,0.0,0.0,True
+SR 140/014,Norte,com_PA_mes_coincidente,0.0,0.0,True
+SR 140/014,Norte,com_SIH_mes_coincidente,0.0,0.0,True
+SR 140/014,Norte,porcentagem_com_PA_ano,,,True
+SR 140/014,Central,estabelecimentos,3.0,3.0,True
+SR 140/014,Central,com_PA_especifico_ano,2.0,2.0,True
+SR 140/014,Central,com_SIH_cardiovascular_ano,2.0,2.0,True
+SR 140/014,Central,com_PA_ou_SIH_ano,2.0,2.0,True
+SR 140/014,Central,com_PA_e_SIH_ano,2.0,2.0,True
+SR 140/014,Central,com_PA_mes_coincidente,2.0,2.0,True
+SR 140/014,Central,com_SIH_mes_coincidente,2.0,2.0,True
+SR 140/014,Central,porcentagem_com_PA_ano,66.67,66.67,True
+SR 140/014,Sul,estabelecimentos,1.0,1.0,True
+SR 140/014,Sul,com_PA_especifico_ano,1.0,1.0,True
+SR 140/014,Sul,com_SIH_cardiovascular_ano,1.0,1.0,True
+SR 140/014,Sul,com_PA_ou_SIH_ano,1.0,1.0,True
+SR 140/014,Sul,com_PA_e_SIH_ano,1.0,1.0,True
+SR 140/014,Sul,com_PA_mes_coincidente,1.0,1.0,True
+SR 140/014,Sul,com_SIH_mes_coincidente,1.0,1.0,True
+SR 140/014,Sul,porcentagem_com_PA_ano,100.0,100.0,True
+SR 126/004,ES,estabelecimentos,401.0,401.0,True
+SR 126/004,ES,com_PA_especifico_ano,72.0,72.0,True
+SR 126/004,ES,com_SIH_cardiovascular_ano,34.0,34.0,True
+SR 126/004,ES,com_PA_ou_SIH_ano,76.0,76.0,True
+SR 126/004,ES,com_PA_e_SIH_ano,30.0,30.0,True
+SR 126/004,ES,com_PA_mes_coincidente,72.0,72.0,True
+SR 126/004,ES,com_SIH_mes_coincidente,34.0,34.0,True
+SR 126/004,ES,porcentagem_com_PA_ano,17.96,17.96,True
+SR 126/004,Metropolitana,estabelecimentos,196.0,196.0,True
+SR 126/004,Metropolitana,com_PA_especifico_ano,28.0,28.0,True
+SR 126/004,Metropolitana,com_SIH_cardiovascular_ano,18.0,18.0,True
+SR 126/004,Metropolitana,com_PA_ou_SIH_ano,30.0,30.0,True
+SR 126/004,Metropolitana,com_PA_e_SIH_ano,16.0,16.0,True
+SR 126/004,Metropolitana,com_PA_mes_coincidente,28.0,28.0,True
+SR 126/004,Metropolitana,com_SIH_mes_coincidente,18.0,18.0,True
+SR 126/004,Metropolitana,porcentagem_com_PA_ano,14.29,14.29,True
+SR 126/004,Norte,estabelecimentos,40.0,40.0,True
+SR 126/004,Norte,com_PA_especifico_ano,9.0,9.0,True
+SR 126/004,Norte,com_SIH_cardiovascular_ano,2.0,2.0,True
+SR 126/004,Norte,com_PA_ou_SIH_ano,9.0,9.0,True
+SR 126/004,Norte,com_PA_e_SIH_ano,2.0,2.0,True
+SR 126/004,Norte,com_PA_mes_coincidente,9.0,9.0,True
+SR 126/004,Norte,com_SIH_mes_coincidente,2.0,2.0,True
+SR 126/004,Norte,porcentagem_com_PA_ano,22.5,22.5,True
+SR 126/004,Central,estabelecimentos,56.0,56.0,True
+SR 126/004,Central,com_PA_especifico_ano,13.0,13.0,True
+SR 126/004,Central,com_SIH_cardiovascular_ano,5.0,5.0,True
+SR 126/004,Central,com_PA_ou_SIH_ano,13.0,13.0,True
+SR 126/004,Central,com_PA_e_SIH_ano,5.0,5.0,True
+SR 126/004,Central,com_PA_mes_coincidente,13.0,13.0,True
+SR 126/004,Central,com_SIH_mes_coincidente,5.0,5.0,True
+SR 126/004,Central,porcentagem_com_PA_ano,23.21,23.21,True
+SR 126/004,Sul,estabelecimentos,109.0,109.0,True
+SR 126/004,Sul,com_PA_especifico_ano,22.0,22.0,True
+SR 126/004,Sul,com_SIH_cardiovascular_ano,9.0,9.0,True
+SR 126/004,Sul,com_PA_ou_SIH_ano,24.0,24.0,True
+SR 126/004,Sul,com_PA_e_SIH_ano,7.0,7.0,True
+SR 126/004,Sul,com_PA_mes_coincidente,22.0,22.0,True
+SR 126/004,Sul,com_SIH_mes_coincidente,9.0,9.0,True
+SR 126/004,Sul,porcentagem_com_PA_ano,20.18,20.18,True
+SR 162/005,ES,estabelecimentos,3.0,3.0,True
+SR 162/005,ES,com_PA_especifico_ano,1.0,1.0,True
+SR 162/005,ES,com_SIH_cardiovascular_ano,1.0,1.0,True
+SR 162/005,ES,com_PA_ou_SIH_ano,1.0,1.0,True
+SR 162/005,ES,com_PA_e_SIH_ano,1.0,1.0,True
+SR 162/005,ES,com_PA_mes_coincidente,1.0,1.0,True
+SR 162/005,ES,com_SIH_mes_coincidente,1.0,1.0,True
+SR 162/005,ES,porcentagem_com_PA_ano,33.33,33.33,True
+SR 162/005,Metropolitana,estabelecimentos,0.0,0.0,True
+SR 162/005,Metropolitana,com_PA_especifico_ano,0.0,0.0,True
+SR 162/005,Metropolitana,com_SIH_cardiovascular_ano,0.0,0.0,True
+SR 162/005,Metropolitana,com_PA_ou_SIH_ano,0.0,0.0,True
+SR 162/005,Metropolitana,com_PA_e_SIH_ano,0.0,0.0,True
+SR 162/005,Metropolitana,com_PA_mes_coincidente,0.0,0.0,True
+SR 162/005,Metropolitana,com_SIH_mes_coincidente,0.0,0.0,True
+SR 162/005,Metropolitana,porcentagem_com_PA_ano,,,True
+SR 162/005,Norte,estabelecimentos,0.0,0.0,True
+SR 162/005,Norte,com_PA_especifico_ano,0.0,0.0,True
+SR 162/005,Norte,com_SIH_cardiovascular_ano,0.0,0.0,True
+SR 162/005,Norte,com_PA_ou_SIH_ano,0.0,0.0,True
+SR 162/005,Norte,com_PA_e_SIH_ano,0.0,0.0,True
+SR 162/005,Norte,com_PA_mes_coincidente,0.0,0.0,True
+SR 162/005,Norte,com_SIH_mes_coincidente,0.0,0.0,True
+SR 162/005,Norte,porcentagem_com_PA_ano,,,True
+SR 162/005,Central,estabelecimentos,2.0,2.0,True
+SR 162/005,Central,com_PA_especifico_ano,1.0,1.0,True
+SR 162/005,Central,com_SIH_cardiovascular_ano,1.0,1.0,True
+SR 162/005,Central,com_PA_ou_SIH_ano,1.0,1.0,True
+SR 162/005,Central,com_PA_e_SIH_ano,1.0,1.0,True
+SR 162/005,Central,com_PA_mes_coincidente,1.0,1.0,True
+SR 162/005,Central,com_SIH_mes_coincidente,1.0,1.0,True
+SR 162/005,Central,porcentagem_com_PA_ano,50.0,50.0,True
+SR 162/005,Sul,estabelecimentos,1.0,1.0,True
+SR 162/005,Sul,com_PA_especifico_ano,0.0,0.0,True
+SR 162/005,Sul,com_SIH_cardiovascular_ano,0.0,0.0,True
+SR 162/005,Sul,com_PA_ou_SIH_ano,0.0,0.0,True
+SR 162/005,Sul,com_PA_e_SIH_ano,0.0,0.0,True
+SR 162/005,Sul,com_PA_mes_coincidente,0.0,0.0,True
+SR 162/005,Sul,com_SIH_mes_coincidente,0.0,0.0,True
+SR 162/005,Sul,porcentagem_com_PA_ano,0.0,0.0,True

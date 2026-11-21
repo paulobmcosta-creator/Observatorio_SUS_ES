@@ -101,3 +101,7 @@ Para dúvidas ou sugestões gerais, utilize a área de _Issues_ do GitHub. Para 
 ## Estudo cardiovascular do Espírito Santo
 
 Métodos, comandos de reprodução e cobertura das fontes do TCC da Camila para 2014–2024. [Documentação do estudo](docs/estudos/tcc_camila/README.md)
+
+## Estudo cardiovascular do Espírito Santo, 2014–2024
+
+A [página do estudo](docs/estudos/tcc_camila/README.md) reúne os 318 resultados científicos da candidata v3.5.1, os métodos e as instruções de reprodução.

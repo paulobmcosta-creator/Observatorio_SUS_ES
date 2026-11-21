@@ -1,0 +1,205 @@
+idade_inicio,painel,valor,serie
+0,G0 · Circulatórias,121.04818763963506,M
+0,G1 · Isquêmicas,1.4944220696251242,M
+0,G2 · Insuficiência cardíaca,15.691431731063805,M
+0,G3 · Cerebrovasculares,4.4832662088753725,M
+0,G4 · Hipertensivas,0.0,M
+0,"G5 · Artérias, arteríolas e capilares",4.4832662088753725,M
+5,G0 · Circulatórias,74.50008355149558,M
+5,G1 · Isquêmicas,0.6962624630980895,M
+5,G2 · Insuficiência cardíaca,4.177574778588537,M
+5,G3 · Cerebrovasculares,3.481312315490447,M
+5,G4 · Hipertensivas,1.392524926196179,M
+5,"G5 · Artérias, arteríolas e capilares",3.481312315490447,M
+10,G0 · Circulatórias,42.75879762261085,M
+10,G1 · Isquêmicas,0.7126466270435142,M
+10,G2 · Insuficiência cardíaca,2.850586508174057,M
+10,G3 · Cerebrovasculares,6.413819643391628,M
+10,G4 · Hipertensivas,2.850586508174057,M
+10,"G5 · Artérias, arteríolas e capilares",3.5632331352175712,M
+15,G0 · Circulatórias,61.60905865607274,M
+15,G1 · Isquêmicas,0.708150099495089,M
+15,G2 · Insuficiência cardíaca,1.416300198990178,M
+15,G3 · Cerebrovasculares,11.330401591921424,M
+15,G4 · Hipertensivas,2.832600397980356,M
+15,"G5 · Artérias, arteríolas e capilares",8.497801193941068,M
+20,G0 · Circulatórias,85.51633829728954,M
+20,G1 · Isquêmicas,2.672385571790298,M
+20,G2 · Insuficiência cardíaca,4.008578357685447,M
+20,G3 · Cerebrovasculares,10.021445894213617,M
+20,G4 · Hipertensivas,2.672385571790298,M
+20,"G5 · Artérias, arteríolas e capilares",14.030024251899064,M
+25,G0 · Circulatórias,111.83671839114892,M
+25,G1 · Isquêmicas,9.98542128492401,M
+25,G2 · Insuficiência cardíaca,7.322642275610941,M
+25,G3 · Cerebrovasculares,15.31097930355015,M
+25,G4 · Hipertensivas,1.9970842569848024,M
+25,"G5 · Artérias, arteríolas e capilares",9.319726532595745,M
+30,G0 · Circulatórias,152.46960638767405,M
+30,G1 · Isquêmicas,18.724337626556466,M
+30,G2 · Insuficiência cardíaca,17.386884938945286,M
+30,G3 · Cerebrovasculares,14.711979563722933,M
+30,G4 · Hipertensivas,0.0,M
+30,"G5 · Artérias, arteríolas e capilares",17.386884938945286,M
+35,G0 · Circulatórias,237.1188487471068,M
+35,G1 · Isquêmicas,42.14048505585187,M
+35,G2 · Insuficiência cardíaca,19.49783636912549,M
+35,G3 · Cerebrovasculares,25.158498540807084,M
+35,G4 · Hipertensivas,4.40273724464124,M
+35,"G5 · Artérias, arteríolas e capilares",24.529536077286902,M
+40,G0 · Circulatórias,349.01103245493744,M
+40,G1 · Isquêmicas,70.41992513250065,M
+40,G2 · Insuficiência cardíaca,38.29855577381614,M
+40,G3 · Cerebrovasculares,59.30098958526371,M
+40,G4 · Hipertensivas,5.559467773618472,M
+40,"G5 · Artérias, arteríolas e capilares",16.678403320855416,M
+45,G0 · Circulatórias,633.7830241708825,M
+45,G1 · Isquêmicas,174.95784148397976,M
+45,G2 · Insuficiência cardíaca,70.96683530073075,M
+45,G3 · Cerebrovasculares,99.7751545812254,M
+45,G4 · Hipertensivas,16.160764474423832,M
+45,"G5 · Artérias, arteríolas e capilares",50.5902192242833,M
+50,G0 · Circulatórias,1015.5257470012704,M
+50,G1 · Isquêmicas,331.63391575508587,M
+50,G2 · Insuficiência cardíaca,112.19455856390964,M
+50,G3 · Cerebrovasculares,177.36639772971012,M
+50,G4 · Hipertensivas,16.49919978881024,M
+50,"G5 · Artérias, arteríolas e capilares",74.24639904964609,M
+55,G0 · Circulatórias,1602.0746550524536,M
+55,G1 · Isquêmicas,584.6262277602581,M
+55,G2 · Insuficiência cardíaca,175.29750878746532,M
+55,G3 · Cerebrovasculares,279.2109804913752,M
+55,G4 · Hipertensivas,26.2042667775077,M
+55,"G5 · Artérias, arteríolas e capilares",159.03279147728813,M
+60,G0 · Circulatórias,2332.541327536525,M
+60,G1 · Isquêmicas,850.3109044032152,M
+60,G2 · Insuficiência cardíaca,265.9117334816238,M
+60,G3 · Cerebrovasculares,389.26242353773824,M
+60,G4 · Hipertensivas,36.39856427885344,M
+60,"G5 · Artérias, arteríolas e capilares",269.9560184014964,M
+65,G0 · Circulatórias,3127.8541669273213,M
+65,G1 · Isquêmicas,1123.5252167602937,M
+65,G2 · Insuficiência cardíaca,397.8630500331553,M
+65,G3 · Cerebrovasculares,580.5297333817108,M
+65,G4 · Hipertensivas,42.53881667021157,M
+65,"G5 · Artérias, arteríolas e capilares",386.6027750322169,M
+70,G0 · Circulatórias,3620.0451403583015,M
+70,G1 · Isquêmicas,1128.5089575398504,M
+70,G2 · Insuficiência cardíaca,514.8822118775568,M
+70,G3 · Cerebrovasculares,754.690365354775,M
+70,G4 · Hipertensivas,56.42544787699252,M
+70,"G5 · Artérias, arteríolas e capilares",504.3024404006207,M
+75,G0 · Circulatórias,4374.226596448819,M
+75,G1 · Isquêmicas,1139.6011396011395,M
+75,G2 · Insuficiência cardíaca,779.8785576563355,M
+75,G3 · Cerebrovasculares,1064.7788425566202,M
+75,G4 · Hipertensivas,71.94451638896084,M
+75,"G5 · Artérias, arteríolas e capilares",558.2894471783361,M
+80,G0 · Circulatórias,4913.907659249626,M
+80,G1 · Isquêmicas,924.5384376148604,M
+80,G2 · Insuficiência cardíaca,1097.0058525827703,M
+80,G3 · Cerebrovasculares,1187.4805620741326,M
+80,G4 · Hipertensivas,93.30204416296758,M
+80,"G5 · Artérias, arteríolas e capilares",633.3229664395375,M
+0,G0 · Circulatórias,70.49921275879086,F
+0,G1 · Isquêmicas,1.5666491724175746,F
+0,G2 · Insuficiência cardíaca,10.966544206923023,F
+0,G3 · Cerebrovasculares,3.133298344835149,F
+0,G4 · Hipertensivas,0.0,F
+0,"G5 · Artérias, arteríolas e capilares",2.349973758626362,F
+5,G0 · Circulatórias,68.67780610940228,F
+5,G1 · Isquêmicas,0.0,F
+5,G2 · Insuficiência cardíaca,0.0,F
+5,G3 · Cerebrovasculares,1.4612299172213252,F
+5,G4 · Hipertensivas,1.4612299172213252,F
+5,"G5 · Artérias, arteríolas e capilares",2.191844875831988,F
+10,G0 · Circulatórias,35.85112819019024,F
+10,G1 · Isquêmicas,1.493797007924593,F
+10,G2 · Insuficiência cardíaca,0.7468985039622965,F
+10,G3 · Cerebrovasculares,2.24069551188689,F
+10,G4 · Hipertensivas,0.7468985039622965,F
+10,"G5 · Artérias, arteríolas e capilares",0.0,F
+15,G0 · Circulatórias,66.13367820821821,F
+15,G1 · Isquêmicas,0.7348186467579801,F
+15,G2 · Insuficiência cardíaca,4.408911880547881,F
+15,G3 · Cerebrovasculares,5.878549174063841,F
+15,G4 · Hipertensivas,1.4696372935159605,F
+15,"G5 · Artérias, arteríolas e capilares",3.674093233789901,F
+20,G0 · Circulatórias,136.42843987257584,F
+20,G1 · Isquêmicas,4.092853196177275,F
+20,G2 · Insuficiência cardíaca,5.457137594903034,F
+20,G3 · Cerebrovasculares,14.324986186620462,F
+20,G4 · Hipertensivas,0.6821421993628792,F
+20,"G5 · Artérias, arteríolas e capilares",2.728568797451517,F
+25,G0 · Circulatórias,200.95636660277623,F
+25,G1 · Isquêmicas,4.642556324156547,F
+25,G2 · Insuficiência cardíaca,7.295445652246002,F
+25,G3 · Cerebrovasculares,24.539226284827464,F
+25,G4 · Hipertensivas,2.652889328089455,F
+25,"G5 · Artérias, arteríolas e capilares",11.274779644380184,F
+30,G0 · Circulatórias,253.5294310327885,F
+30,G1 · Isquêmicas,9.171607324183563,F
+30,G2 · Insuficiência cardíaca,9.171607324183563,F
+30,G3 · Cerebrovasculares,28.169936781420944,F
+30,G4 · Hipertensivas,4.585803662091782,F
+30,"G5 · Artérias, arteríolas e capilares",7.2062628975728,F
+35,G0 · Circulatórias,386.0720382278621,F
+35,G1 · Isquêmicas,14.684197967462264,F
+35,G2 · Insuficiência cardíaca,25.08550486108137,F
+35,G3 · Cerebrovasculares,50.78285130414033,F
+35,G4 · Hipertensivas,8.56578214768632,F
+35,"G5 · Artérias, arteríolas e capilares",18.967089041305425,F
+40,G0 · Circulatórias,545.3180127777248,F
+40,G1 · Isquêmicas,36.354534185181656,F
+40,G2 · Insuficiência cardíaca,26.81891866119958,F
+40,G3 · Cerebrovasculares,73.90102031086107,F
+40,G4 · Hipertensivas,18.475255077715268,F
+40,"G5 · Artérias, arteríolas e capilares",22.647086869457425,F
+45,G0 · Circulatórias,794.8372285474032,F
+45,G1 · Isquêmicas,86.09068218523511,F
+45,G2 · Insuficiência cardíaca,59.3958970115188,F
+45,G3 · Cerebrovasculares,100.10544440143616,F
+45,G4 · Hipertensivas,13.347392586858158,F
+45,"G5 · Artérias, arteríolas e capilares",36.03795998451702,F
+50,G0 · Circulatórias,1048.7693013300718,F
+50,G1 · Isquêmicas,163.583549915915,F
+50,G2 · Insuficiência cardíaca,74.14768384039138,F
+50,G3 · Cerebrovasculares,147.53095856902615,F
+50,G4 · Hipertensivas,23.696682464454977,F
+50,"G5 · Artérias, arteríolas e capilares",61.91713805228558,F
+55,G0 · Circulatórias,1318.3845492859773,F
+55,G1 · Isquêmicas,262.694872948975,F
+55,G2 · Insuficiência cardíaca,101.47714718278162,F
+55,G3 · Cerebrovasculares,195.5890175539097,F
+55,G4 · Hipertensivas,24.55092270551168,F
+55,"G5 · Artérias, arteríolas e capilares",101.47714718278162,F
+60,G0 · Circulatórias,1738.1789481236997,F
+60,G1 · Isquêmicas,426.9211451531893,F
+60,G2 · Insuficiência cardíaca,186.5537777139987,F
+60,G3 · Cerebrovasculares,270.8617349501328,F
+60,G4 · Hipertensivas,34.08194015928822,F
+60,"G5 · Artérias, arteríolas e capilares",151.57494439262396,F
+65,G0 · Circulatórias,2178.42767834204,F
+65,G1 · Isquêmicas,506.3372441551769,F
+65,G2 · Insuficiência cardíaca,265.4791470411921,F
+65,G3 · Cerebrovasculares,325.42605121178383,F
+65,G4 · Hipertensivas,46.03065855956153,F
+65,"G5 · Artérias, arteríolas e capilares",242.9990579772202,F
+70,G0 · Circulatórias,2619.77469645388,F
+70,G1 · Isquêmicas,664.8061834280621,F
+70,G2 · Insuficiência cardíaca,426.64484738680034,F
+70,G3 · Cerebrovasculares,527.4616092692977,F
+70,G4 · Hipertensivas,39.450037258368525,F
+70,"G5 · Artérias, arteríolas e capilares",324.3669730132523,F
+75,G0 · Circulatórias,2900.749732238486,F
+75,G1 · Isquêmicas,640.3962870403427,F
+75,G2 · Insuficiência cardíaca,455.1945733666548,F
+75,G3 · Cerebrovasculares,711.799357372367,F
+75,G4 · Hipertensivas,75.86576222777579,F
+75,"G5 · Artérias, arteríolas e capilares",296.7690110674759,F
+80,G0 · Circulatórias,3608.752158664032,F
+80,G1 · Isquêmicas,573.2699531770194,F
+80,G2 · Insuficiência cardíaca,818.9570759671705,F
+80,G3 · Cerebrovasculares,980.9681496911109,F
+80,G4 · Hipertensivas,108.60082963912478,F
+80,"G5 · Artérias, arteríolas e capilares",423.72126973953607,F

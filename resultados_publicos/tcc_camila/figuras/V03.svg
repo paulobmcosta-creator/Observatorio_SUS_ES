@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="576pt" height="338.4pt" viewBox="0 0 576 338.4" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Observatório SUS-ES</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 338.4 
+L 576 338.4 
+L 576 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 126.206137 205.728658 
+C 144.302608 205.728658 161.660331 198.538853 174.456469 185.742716 
+C 187.252607 172.946578 194.442411 155.588855 194.442411 137.492384 
+C 194.442411 119.395912 187.252607 102.038189 174.456469 89.242052 
+C 161.660331 76.445914 144.302608 69.25611 126.206137 69.25611 
+C 108.109666 69.25611 90.751943 76.445914 77.955805 89.242052 
+C 65.159667 102.038189 57.969863 119.395912 57.969863 137.492384 
+C 57.969863 155.588855 65.159667 172.946578 77.955805 185.742716 
+C 90.751943 198.538853 108.109666 205.728658 126.206137 205.728658 
+z
+" clip-path="url(#p53a4fa8dd7)" style="fill: #236789; fill-opacity: 0.133333; stroke: #236789; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 213.633863 205.728658 
+C 231.730334 205.728658 249.088057 198.538853 261.884195 185.742716 
+C 274.680333 172.946578 281.870137 155.588855 281.870137 137.492384 
+C 281.870137 119.395912 274.680333 102.038189 261.884195 89.242052 
+C 249.088057 76.445914 231.730334 69.25611 213.633863 69.25611 
+C 195.537392 69.25611 178.179669 76.445914 165.383531 89.242052 
+C 152.587393 102.038189 145.397589 119.395912 145.397589 137.492384 
+C 145.397589 155.588855 152.587393 172.946578 165.383531 185.742716 
+C 178.179669 198.538853 195.537392 205.728658 213.633863 205.728658 
+z
+" clip-path="url(#p53a4fa8dd7)" style="fill: #aa572e; fill-opacity: 0.133333; stroke: #aa572e; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 169.92 272.89874 
+C 188.016471 272.89874 205.374194 265.708935 218.170332 252.912798 
+C 230.96647 240.11666 238.156274 222.758937 238.156274 204.662466 
+C 238.156274 186.565994 230.96647 169.208271 218.170332 156.412134 
+C 205.374194 143.615996 188.016471 136.426192 169.92 136.426192 
+C 151.823529 136.426192 134.465806 143.615996 121.669668 156.412134 
+C 108.87353 169.208271 101.683726 186.565994 101.683726 204.662466 
+C 101.683726 222.758937 108.87353 240.11666 121.669668 252.912798 
+C 134.465806 265.708935 151.823529 272.89874 169.92 272.89874 
+z
+" clip-path="url(#p53a4fa8dd7)" style="fill: #277565; fill-opacity: 0.133333; stroke: #277565; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #183447" x="96.352767" y="135.234295" transform="rotate(-0 96.352767 135.234295)">214</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #183447" x="243.487233" y="135.234295" transform="rotate(-0 243.487233 135.234295)">4</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #183447" x="169.92" y="240.787282" transform="rotate(-0 169.92 240.787282)">15</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #183447" x="169.92" y="112.844268" transform="rotate(-0 169.92 112.844268)">319</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #183447" x="134.202575" y="190.676268" transform="rotate(-0 134.202575 190.676268)">15</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #183447" x="205.637425" y="190.676268" transform="rotate(-0 205.637425 190.676268)">2</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #183447" x="169.92" y="164.021473" transform="rotate(-0 169.92 164.021473)">144</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #236789" x="86.757041" y="79.516385" transform="rotate(-0 86.757041 79.516385)">A</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #aa572e" x="253.082959" y="79.516385" transform="rotate(-0 253.082959 79.516385)">B</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #277565" x="169.92" y="283.159015" transform="rotate(-0 169.92 283.159015)">C</text>
+   </g>
+  </g>
+  <g id="text_11">
+   <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle" x="288" y="26.518125" transform="rotate(-0 288 26.518125)">V03 · Cadastro e produção no Espírito Santo, 2024</text>
+  </g>
+  <g id="text_12">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(316.8 71.525938)">A   Eletrocardiógrafo em uso</text>
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(316.8 86.522969)">B   Serviço de ECG</text>
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(316.8 101.52)">C   ECG aprovado</text>
+  </g>
+  <g id="text_13">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(316.8 184.077625)">Universo   9,536</text>
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(316.8 198.314813)">Fora da união   8,823</text>
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(316.8 213.192)">Tripla na mesma competência   143</text>
+  </g>
+  <g id="text_14">
+   <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #475967" x="51.84" y="329.94" transform="rotate(-0 51.84 329.94)">CNES, SIA e SIH · estabelecimentos distintos · regiões do desenho mostram contagens exclusivas anuais</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p53a4fa8dd7">
+   <rect x="44.642466" y="57.528" width="250.555068" height="233.496"/>
+  </clipPath>
+ </defs>
+</svg>

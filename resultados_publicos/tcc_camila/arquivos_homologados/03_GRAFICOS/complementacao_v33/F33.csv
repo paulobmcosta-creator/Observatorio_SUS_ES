@@ -1,0 +1,133 @@
+ano,painel,serie,valor
+2014,Evasão interestadual,Central,84
+2014,Evasão interestadual,Norte,27
+2014,Evasão interestadual,Metropolitana,66
+2014,Evasão interestadual,Sul,68
+2015,Evasão interestadual,Central,108
+2015,Evasão interestadual,Norte,54
+2015,Evasão interestadual,Metropolitana,80
+2015,Evasão interestadual,Sul,79
+2016,Evasão interestadual,Central,81
+2016,Evasão interestadual,Norte,47
+2016,Evasão interestadual,Metropolitana,86
+2016,Evasão interestadual,Sul,80
+2017,Evasão interestadual,Central,69
+2017,Evasão interestadual,Norte,44
+2017,Evasão interestadual,Metropolitana,78
+2017,Evasão interestadual,Sul,108
+2018,Evasão interestadual,Central,93
+2018,Evasão interestadual,Norte,36
+2018,Evasão interestadual,Metropolitana,90
+2018,Evasão interestadual,Sul,76
+2019,Evasão interestadual,Central,71
+2019,Evasão interestadual,Norte,34
+2019,Evasão interestadual,Metropolitana,100
+2019,Evasão interestadual,Sul,78
+2020,Evasão interestadual,Central,46
+2020,Evasão interestadual,Norte,28
+2020,Evasão interestadual,Metropolitana,83
+2020,Evasão interestadual,Sul,70
+2021,Evasão interestadual,Central,34
+2021,Evasão interestadual,Norte,15
+2021,Evasão interestadual,Metropolitana,90
+2021,Evasão interestadual,Sul,55
+2022,Evasão interestadual,Central,31
+2022,Evasão interestadual,Norte,24
+2022,Evasão interestadual,Metropolitana,122
+2022,Evasão interestadual,Sul,69
+2023,Evasão interestadual,Central,40
+2023,Evasão interestadual,Norte,36
+2023,Evasão interestadual,Metropolitana,106
+2023,Evasão interestadual,Sul,60
+2024,Evasão interestadual,Central,28
+2024,Evasão interestadual,Norte,43
+2024,Evasão interestadual,Metropolitana,101
+2024,Evasão interestadual,Sul,92
+2014,Atração interestadual,Central,122
+2014,Atração interestadual,Norte,21
+2014,Atração interestadual,Metropolitana,107
+2014,Atração interestadual,Sul,69
+2015,Atração interestadual,Central,119
+2015,Atração interestadual,Norte,24
+2015,Atração interestadual,Metropolitana,111
+2015,Atração interestadual,Sul,63
+2016,Atração interestadual,Central,208
+2016,Atração interestadual,Norte,44
+2016,Atração interestadual,Metropolitana,142
+2016,Atração interestadual,Sul,62
+2017,Atração interestadual,Central,293
+2017,Atração interestadual,Norte,49
+2017,Atração interestadual,Metropolitana,97
+2017,Atração interestadual,Sul,65
+2018,Atração interestadual,Central,230
+2018,Atração interestadual,Norte,50
+2018,Atração interestadual,Metropolitana,111
+2018,Atração interestadual,Sul,51
+2019,Atração interestadual,Central,160
+2019,Atração interestadual,Norte,56
+2019,Atração interestadual,Metropolitana,122
+2019,Atração interestadual,Sul,59
+2020,Atração interestadual,Central,152
+2020,Atração interestadual,Norte,52
+2020,Atração interestadual,Metropolitana,118
+2020,Atração interestadual,Sul,30
+2021,Atração interestadual,Central,255
+2021,Atração interestadual,Norte,68
+2021,Atração interestadual,Metropolitana,127
+2021,Atração interestadual,Sul,33
+2022,Atração interestadual,Central,191
+2022,Atração interestadual,Norte,38
+2022,Atração interestadual,Metropolitana,104
+2022,Atração interestadual,Sul,40
+2023,Atração interestadual,Central,182
+2023,Atração interestadual,Norte,61
+2023,Atração interestadual,Metropolitana,139
+2023,Atração interestadual,Sul,34
+2024,Atração interestadual,Central,205
+2024,Atração interestadual,Norte,64
+2024,Atração interestadual,Metropolitana,122
+2024,Atração interestadual,Sul,31
+2014,"Entre regiões conhecidas do ES, por residência",Central,261
+2014,"Entre regiões conhecidas do ES, por residência",Norte,569
+2014,"Entre regiões conhecidas do ES, por residência",Metropolitana,363
+2014,"Entre regiões conhecidas do ES, por residência",Sul,463
+2015,"Entre regiões conhecidas do ES, por residência",Central,230
+2015,"Entre regiões conhecidas do ES, por residência",Norte,741
+2015,"Entre regiões conhecidas do ES, por residência",Metropolitana,493
+2015,"Entre regiões conhecidas do ES, por residência",Sul,573
+2016,"Entre regiões conhecidas do ES, por residência",Central,240
+2016,"Entre regiões conhecidas do ES, por residência",Norte,976
+2016,"Entre regiões conhecidas do ES, por residência",Metropolitana,678
+2016,"Entre regiões conhecidas do ES, por residência",Sul,621
+2017,"Entre regiões conhecidas do ES, por residência",Central,299
+2017,"Entre regiões conhecidas do ES, por residência",Norte,1307
+2017,"Entre regiões conhecidas do ES, por residência",Metropolitana,688
+2017,"Entre regiões conhecidas do ES, por residência",Sul,806
+2018,"Entre regiões conhecidas do ES, por residência",Central,271
+2018,"Entre regiões conhecidas do ES, por residência",Norte,1169
+2018,"Entre regiões conhecidas do ES, por residência",Metropolitana,712
+2018,"Entre regiões conhecidas do ES, por residência",Sul,662
+2019,"Entre regiões conhecidas do ES, por residência",Central,462
+2019,"Entre regiões conhecidas do ES, por residência",Norte,1369
+2019,"Entre regiões conhecidas do ES, por residência",Metropolitana,662
+2019,"Entre regiões conhecidas do ES, por residência",Sul,659
+2020,"Entre regiões conhecidas do ES, por residência",Central,358
+2020,"Entre regiões conhecidas do ES, por residência",Norte,1062
+2020,"Entre regiões conhecidas do ES, por residência",Metropolitana,595
+2020,"Entre regiões conhecidas do ES, por residência",Sul,759
+2021,"Entre regiões conhecidas do ES, por residência",Central,524
+2021,"Entre regiões conhecidas do ES, por residência",Norte,1508
+2021,"Entre regiões conhecidas do ES, por residência",Metropolitana,779
+2021,"Entre regiões conhecidas do ES, por residência",Sul,807
+2022,"Entre regiões conhecidas do ES, por residência",Central,461
+2022,"Entre regiões conhecidas do ES, por residência",Norte,1570
+2022,"Entre regiões conhecidas do ES, por residência",Metropolitana,608
+2022,"Entre regiões conhecidas do ES, por residência",Sul,662
+2023,"Entre regiões conhecidas do ES, por residência",Central,571
+2023,"Entre regiões conhecidas do ES, por residência",Norte,1701
+2023,"Entre regiões conhecidas do ES, por residência",Metropolitana,603
+2023,"Entre regiões conhecidas do ES, por residência",Sul,444
+2024,"Entre regiões conhecidas do ES, por residência",Central,441
+2024,"Entre regiões conhecidas do ES, por residência",Norte,1932
+2024,"Entre regiões conhecidas do ES, por residência",Metropolitana,528
+2024,"Entre regiões conhecidas do ES, por residência",Sul,570

@@ -1,0 +1,108 @@
+tema,titulo,posicao,conjunto,definicao
+V01,Cadastro composto e produção,1,COMP,Recurso composto v3.4
+V01,Cadastro composto e produção,2,PA,Produção PA específica
+V01,Cadastro composto e produção,3,SIH,AIHs cardiovasculares
+V02,Serviço cardiovascular especializado e produção,1,SR_CARD,Estabelecimentos com serviço cardiovascular classificado
+V02,Serviço cardiovascular especializado e produção,2,PA,Produção PA específica
+V02,Serviço cardiovascular especializado e produção,3,SIH,AIHs cardiovasculares
+V02S,SR116 ambulatorial SUS e produção,1,SR_CARD_SUS,Estabelecimentos com serviço cardiovascular ambulatorial SUS
+V02S,SR116 ambulatorial SUS e produção,2,PA,Produção PA específica
+V02S,SR116 ambulatorial SUS e produção,3,SIH,AIHs cardiovasculares
+V03,Estrutura convencional e produção de ECG,1,EQ_441_QT_USO,441-Eletrocardiografo • QT_USO
+V03,Estrutura convencional e produção de ECG,2,SR122_003,Exame Eletrocardiográfico
+V03,Estrutura convencional e produção de ECG,3,ECG,ECG aprovado
+V03T,ECG por telemedicina,1,EQ_441_QT_USO,441-Eletrocardiografo • QT_USO
+V03T,ECG por telemedicina,2,SR122_007,Exame Eletrocardiografico por Telemedicina
+V03T,ECG por telemedicina,3,ECG,ECG aprovado
+V03U,ECG convencional ou por telemedicina,1,EQ_441_QT_USO,441-Eletrocardiografo • QT_USO
+V03U,ECG convencional ou por telemedicina,2,ECG_SERV,Exame eletrocardiográfico convencional ou por telemedicina
+V03U,ECG convencional ou por telemedicina,3,ECG,ECG aprovado
+H01,"Habilitações, leitos e produção hospitalar",1,HAB,Habilitação cardiovascular selecionada
+H01,"Habilitações, leitos e produção hospitalar",2,LEITOS,Leito clínico ou cirúrgico de cardiologia
+H01,"Habilitações, leitos e produção hospitalar",3,SIH,AIHs cardiovasculares
+F01,Fisioterapia cardiovascular,1,SR126_004,Assistência fisioterapêutica cardiovasculares e pneumo-funcionais
+F01,Fisioterapia cardiovascular,2,FISIO,Fisioterapia cardiovascular específica
+F02,Modalidades de fisioterapia aprovada,1,P0302040030,ATENDIMENTO FISIOTERAPÊUTICO EM PACIENTE COM TRANSTORNO CLÍNICO CARDIOVASCULAR
+F02,Modalidades de fisioterapia aprovada,2,P0302040048,ATENDIMENTO FISIOTERAPÊUTICO EM PACIENTE PRÉ/PÓS CIRURGIA CARDIOVASCULAR
+F02,Modalidades de fisioterapia aprovada,3,P0302040064,ATENDIMENTO FISIOTERAPÊUTICO EM PACIENTE COM SÍNDROME CORONARIANA AGUDA
+D01,Ecocardiografia e ultrassom compartilhável,1,EQ_113_QT_USO,113-Ultrassom Doppler Colorido • QT_USO
+D01,Ecocardiografia e ultrassom compartilhável,2,ECO,Ecocardiografia transtorácica aprovada
+D02,Hemodinâmica e cateterismo,1,EQ_110_QT_USO,110-Raio X para Hemodinamica • QT_USO
+D02,Hemodinâmica e cateterismo,2,SR116_005,Cardiologia intervencionista (hemodinâmica)
+D02,Hemodinâmica e cateterismo,3,CAT,Cateterismo cardíaco aprovado
+P01,ECG e demais procedimentos específicos,1,ECG,ECG aprovado
+P01,ECG e demais procedimentos específicos,2,OUTRO_PA,Específicos além do ECG
+P02,Específicos e contextuais,1,PA,Produção PA específica
+P02,Específicos e contextuais,2,DOP,Doppler vascular contextual
+P02,Específicos e contextuais,3,CONS,Consulta por CBO contextual
+P03,Produção ambulatorial e hospitalar,1,PA,Produção PA específica
+P03,Produção ambulatorial e hospitalar,2,SIH,AIHs cardiovasculares
+E01,"Cadastro, vínculo SUS e produção",1,ST,Cadastro no CNES
+E01,"Cadastro, vínculo SUS e produção",2,SUS,Vínculo SUS
+E01,"Cadastro, vínculo SUS e produção",3,PA,Produção PA específica
+E01,"Cadastro, vínculo SUS e produção",4,SIH,AIHs cardiovasculares
+U01,Perfil dos serviços especializados,1,SR_CARD,Estabelecimentos com serviço cardiovascular classificado
+U01,Perfil dos serviços especializados,2,PROF,Vínculo profissional do catálogo
+U01,Perfil dos serviços especializados,3,SUS,Vínculo SUS
+U01,Perfil dos serviços especializados,4,PA,Produção PA específica
+U01,Perfil dos serviços especializados,5,SIH,AIHs cardiovasculares
+U02,"Equipamento, serviços e produção de ECG",1,EQ_441_QT_USO,441-Eletrocardiografo • QT_USO
+U02,"Equipamento, serviços e produção de ECG",2,SR122_003,Exame Eletrocardiográfico
+U02,"Equipamento, serviços e produção de ECG",3,SR122_007,Exame Eletrocardiografico por Telemedicina
+U02,"Equipamento, serviços e produção de ECG",4,ECG,ECG aprovado
+U03,Habilitações e leitos por tipo,1,HAB,Habilitação cardiovascular selecionada
+U03,Habilitações e leitos por tipo,2,LT_32_QT_EXIST,clínico • CARDIOLOGIA • QT_EXIST
+U03,Habilitações e leitos por tipo,3,LT_02_QT_EXIST,cirúrgico • CARDIOLOGIA • QT_EXIST
+U03,Habilitações e leitos por tipo,4,SIH,AIHs cardiovasculares
+U04,Instrumentos do PA específico,1,INSTR_C,PA específico no instrumento C
+U04,Instrumentos do PA específico,2,INSTR_I,PA específico no instrumento I
+U04,Instrumentos do PA específico,3,INSTR_P,PA específico no instrumento P
+U04,Instrumentos do PA específico,4,INSTR_S,PA específico no instrumento S
+SR116_001,Classificação SR116 e produção,1,SR116_001,Eletrofisiologia
+SR116_001,Classificação SR116 e produção,2,PA,Produção PA específica
+SR116_001,Classificação SR116 e produção,3,SIH,AIHs cardiovasculares
+SR116_001_SUS,Classificação SR116 e produção,1,SR116_001_SUS,Eletrofisiologia (ambulatório SUS)
+SR116_001_SUS,Classificação SR116 e produção,2,PA,Produção PA específica
+SR116_001_SUS,Classificação SR116 e produção,3,SIH,AIHs cardiovasculares
+SR116_002,Classificação SR116 e produção,1,SR116_002,Cirurgia cardiovascular (adulto)
+SR116_002,Classificação SR116 e produção,2,PA,Produção PA específica
+SR116_002,Classificação SR116 e produção,3,SIH,AIHs cardiovasculares
+SR116_002_SUS,Classificação SR116 e produção,1,SR116_002_SUS,Cirurgia cardiovascular (adulto) (ambulatório SUS)
+SR116_002_SUS,Classificação SR116 e produção,2,PA,Produção PA específica
+SR116_002_SUS,Classificação SR116 e produção,3,SIH,AIHs cardiovasculares
+SR116_003,Classificação SR116 e produção,1,SR116_003,Cirurgia cardiovascular (Pediátrico)
+SR116_003,Classificação SR116 e produção,2,PA,Produção PA específica
+SR116_003,Classificação SR116 e produção,3,SIH,AIHs cardiovasculares
+SR116_003_SUS,Classificação SR116 e produção,1,SR116_003_SUS,Cirurgia cardiovascular (Pediátrico) (ambulatório SUS)
+SR116_003_SUS,Classificação SR116 e produção,2,PA,Produção PA específica
+SR116_003_SUS,Classificação SR116 e produção,3,SIH,AIHs cardiovasculares
+SR116_004,Classificação SR116 e produção,1,SR116_004,Cirurgia vascular
+SR116_004,Classificação SR116 e produção,2,PA,Produção PA específica
+SR116_004,Classificação SR116 e produção,3,SIH,AIHs cardiovasculares
+SR116_004_SUS,Classificação SR116 e produção,1,SR116_004_SUS,Cirurgia vascular (ambulatório SUS)
+SR116_004_SUS,Classificação SR116 e produção,2,PA,Produção PA específica
+SR116_004_SUS,Classificação SR116 e produção,3,SIH,AIHs cardiovasculares
+SR116_005,Classificação SR116 e produção,1,SR116_005,Cardiologia intervencionista (hemodinâmica)
+SR116_005,Classificação SR116 e produção,2,PA,Produção PA específica
+SR116_005,Classificação SR116 e produção,3,SIH,AIHs cardiovasculares
+SR116_005_SUS,Classificação SR116 e produção,1,SR116_005_SUS,Cardiologia intervencionista (hemodinâmica) (ambulatório SUS)
+SR116_005_SUS,Classificação SR116 e produção,2,PA,Produção PA específica
+SR116_005_SUS,Classificação SR116 e produção,3,SIH,AIHs cardiovasculares
+SR116_006,Classificação SR116 e produção,1,SR116_006,Cardiologia Endovascular Extracardíaco
+SR116_006,Classificação SR116 e produção,2,PA,Produção PA específica
+SR116_006,Classificação SR116 e produção,3,SIH,AIHs cardiovasculares
+SR116_006_SUS,Classificação SR116 e produção,1,SR116_006_SUS,Cardiologia Endovascular Extracardíaco (ambulatório SUS)
+SR116_006_SUS,Classificação SR116 e produção,2,PA,Produção PA específica
+SR116_006_SUS,Classificação SR116 e produção,3,SIH,AIHs cardiovasculares
+SR116_007,Classificação SR116 e produção,1,SR116_007,Cardiologia Clínica
+SR116_007,Classificação SR116 e produção,2,PA,Produção PA específica
+SR116_007,Classificação SR116 e produção,3,SIH,AIHs cardiovasculares
+SR116_007_SUS,Classificação SR116 e produção,1,SR116_007_SUS,Cardiologia Clínica (ambulatório SUS)
+SR116_007_SUS,Classificação SR116 e produção,2,PA,Produção PA específica
+SR116_007_SUS,Classificação SR116 e produção,3,SIH,AIHs cardiovasculares
+SR116_008,Classificação SR116 e produção,1,SR116_008,Serviço de Atenção Cardiovascular/Cardiologia Angiologia
+SR116_008,Classificação SR116 e produção,2,PA,Produção PA específica
+SR116_008,Classificação SR116 e produção,3,SIH,AIHs cardiovasculares
+SR116_008_SUS,Classificação SR116 e produção,1,SR116_008_SUS,Serviço de Atenção Cardiovascular/Cardiologia Angiologia (ambulatório SUS)
+SR116_008_SUS,Classificação SR116 e produção,2,PA,Produção PA específica
+SR116_008_SUS,Classificação SR116 e produção,3,SIH,AIHs cardiovasculares

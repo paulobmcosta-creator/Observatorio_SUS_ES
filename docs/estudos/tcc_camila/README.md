@@ -1,3 +1,17 @@
+# Estudo cardiovascular no Espírito Santo, 2014–2024
+
+Repositório de **prévia local para revisão de acesso aberto**, ligado ao Observatório SUS-ES/Ifes. A autoria acadêmica do TCC pertence a Camila Moreira dos Santos; o desenvolvimento técnico foi realizado por Paulo Borges Mathias Costa, conforme declaração do responsável.
+
+Acesse o [índice de 318 resultados originais integrais](RESULTADOS_COMPLETOS.md), a [documentação de fontes e direitos](FONTES_E_DIREITOS.md), os [limites de divulgação](NOTA_RISCO_DIVULGACAO.md), a [metodologia](METODOLOGIA.md) e as [instruções de reprodução](COMO_REPRODUZIR.md).
+
+**Limites de reprodução:** Nível I (testes), Nível II (agregados) e Nível III-Piloto (SIM 2024, SIH 202412, CNES×SIA 202412) foram documentados; a série 2014–2024 desde todos os originais é projeto futuro do Observatório. Não equiparar cadastro com funcionamento real nem AIH com pacientes.
+
+**Abertura integral dos dados:** o responsável deliberou pela inclusão dos 13 originais detalhados sem modificação; consulte [o registro da decisão](MATRIZ_ABERTURA_INTEGRAL_13.csv) e [a nota de risco](NOTA_RISCO_DIVULGACAO.md).
+
+**Publicação:** nenhum push, merge, release ou licenciamento patrimonial foi realizado por esta preparação. Ver também a pasta de evidências fora da árvore pública.
+
+## Implementação e protocolos da branch
+
 # Atenção cardiovascular especializada no Espírito Santo, 2014–2024
 
 O módulo do TCC da Camila integra o cadastro territorial do Observatório, o perfilador institucional de DBC e a custódia de objetos. A unidade geográfica de aprofundamento é a Região Norte, contida no estado do Espírito Santo. A linha de base de software é a implementação da PR 82 no commit `cf2bf830cf964bab52bcc8c0ecb4ce40b33070a2`. O código e as provas do TCC têm ramificação própria.
